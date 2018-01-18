@@ -15,13 +15,13 @@ ms.assetid: 0a788a2a-9b4f-4bfc-b1b5-83eeb1ea9ab2
 caps.latest.revision: "8"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6034b36372b5a9c148cf712699817cf4eea551f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 397cb416c9c59482cf97be8e7554f5f2af7c2d7a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="complete-the-post-installation-steps"></a>Ausführen der Schritte nach der Installation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Nach der Installation von Distributed Replay müssen Sie die Distributed Replay Controller und Client-Dienstkonten ändern.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  **Erteilen Sie jedem Client Berechtigungen für den Zielserver**: Wenn Sie die Installation des Clientdiensts auf den Clientcomputern abgeschlossen haben, müssen Sie der sysadmin-Rolle für die Zielinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]manuell die Clientdienstkonten hinzufügen.  
   
-## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Sie müssen über Administratorberechtigungen verfügen, um eine der Distributed Replay-Funktionen zu installieren. Nur bei einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung mit sysadmin-Berechtigungen können der sysadmin-Serverrolle des Testservers die Clientdienstkonten hinzugefügt werden. Weitere Informationen zu Sicherheitsüberlegungen für Distributed Replay finden Sie unter [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
   

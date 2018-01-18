@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: client configuration [SQL Server], SQL Server Native Client
 ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cf17f207796d7752f28776c05f1168fb683f0a4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f168a96e5ac6a52084f9c3db49a8e1df209ec7f3
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0-Konfiguration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dieser Abschnitt enthält die F1-Hilfethemen für die **SQL Server Native Client-Konfiguration** Dialogfelder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client handelt es sich um die Netzwerkbibliothek, die von Clientcomputern zum Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet wird (ab [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
     -   [Erstellen einer gültigen Verbindungszeichenfolge mithilfe des Shared Memory-Protokolls](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)  
   
-    -   [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
+    -   [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von TCP / IP-](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   
     -   [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von Named Pipes](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   

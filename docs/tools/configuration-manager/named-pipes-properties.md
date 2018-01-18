@@ -18,24 +18,24 @@ helpviewer_keywords:
 - Named Pipes [SQL Server], listening on pipes
 ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6122004c46c36f21d2b301e70be91b26fa06c701
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 72fecdede46024eae399d9a762b0f8cdf7bb3a6b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="named-pipes-properties"></a>Named Pipes-Eigenschaften
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Verwenden der **Protokoll**Seite auf die **Named Pipes-Eigenschaften** Dialogfeld zum Anzeigen oder Ändern der named pipe, welche [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überwacht, bei Verwendung des Named Pipes-Protokolls.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss neu gestartet werden, um das Protokoll zu aktivieren oder zu deaktivieren oder die Named Pipe zu ändern.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]muss neu gestartet werden, um zu aktivieren oder deaktivieren Sie das Protokoll oder die named Pipe zu ändern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Enabled**  
- Mögliche Werte sind **Yes** und **No**.  
+ Mögliche Werte sind **Ja** und **Nein**.  
   
  **Pipename**  
  Gibt die Named Pipe an, an der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelauscht wird. Standardmäßig lauscht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] folgende: `\\.\pipe\sql\query` nach der Standardinstanz und `\\.\pipe\MSSQL$<instancename>\sql\query` nach einer benannten Instanz. Dieses Feld ist auf 2047 Zeichen begrenzt.  

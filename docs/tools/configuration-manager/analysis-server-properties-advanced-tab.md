@@ -13,20 +13,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f4415e35-8f50-4cb7-813e-bdfafbdee275
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75abb271d1017eb5204bedddce07946c1c69412e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0bbb714bd15f302b55bab6d446aa353e905eee0e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="analysis-server-properties-advanced-tab"></a>Analysis-Server-Eigenschaften (Registerkarte Erweitert)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dieser Dienst ist im Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Wenn Eigenschaften vom Benutzer definiert wurden, werden sie mit den entsprechenden Werten auf dieser Registerkarte angezeigt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Gruppiert**  
  Zeigt an, ob dieser Dienst als Ressource eines gruppierten Servers installiert ist.  
   

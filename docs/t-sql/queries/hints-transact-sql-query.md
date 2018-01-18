@@ -60,11 +60,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c678854df4be6f4d228ad3c02edd8ee29bc9d0e8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: b394e34eaf3a8389f4aae97e2676e07ece301c2d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="hints-transact-sql---query"></a>Hinweise (Transact-SQL) - Abfrage
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -158,7 +158,7 @@ ms.lasthandoff: 01/02/2018
   
  Dieser Abfragehinweis lässt die direkte Verwendung von indizierten Sichten und Indizes für indizierte Sichten im Abfrageplan praktisch nicht zu.  
   
- Die indizierte Sicht wird nicht erweitert werden, nur, wenn die Sicht direkt, in der SELECT-Teil der Abfrage und WITH (NOEXPAND) oder WITH verwiesen wird (NOEXPAND, INDEX ( *Index_value* [ **,***.. ...n*])) angegeben ist. Weitere Informationen zum Abfragehinweis WITH (NOEXPAND) finden Sie unter [FROM](../../t-sql/queries/from-transact-sql.md).  
+ Die indizierte Sicht wird nicht erweitert werden, nur, wenn die Sicht direkt, in der SELECT-Teil der Abfrage und WITH (NOEXPAND) oder WITH verwiesen wird (NOEXPAND, INDEX ( *Index_value* [**, ***.. ...n* ])) angegeben ist. Weitere Informationen zum Abfragehinweis WITH (NOEXPAND) finden Sie unter [FROM](../../t-sql/queries/from-transact-sql.md).  
   
  Der Hinweis wirkt sich nur auf die Sichten im SELECT-Teil von Anweisungen aus, einschließlich der Sichten in den Anweisungen INSERT, UPDATE, MERGE und DELETE.  
   
@@ -185,7 +185,7 @@ ms.lasthandoff: 01/02/2018
   
  Verhindert, dass die Abfrage mit einem nicht gruppierten Arbeitsspeicher optimierter columnstore-Index. Wenn die Abfrage den Abfragehinweis, der die Verwendung des columnstore-Indexes verhindert, und einen Indexhinweis, der die Verwendung eines columnstore-Index angibt, enthält, besteht ein Konflikt zwischen den Hinweisen, und die Abfrage gibt einen Fehler zurück.  
   
- MAX_GRANT_PERCENT = *Prozent*  
+ MAX_GRANT_PERCENT = *percent*  
  Die maximale Größe der arbeitsspeicherzuweisung in Prozent. Die Abfrage definitiv nicht dieses Limit überschritten wird. Die tatsächliche Grenze kann niedriger, wenn die Ressourcenkontrolle festlegen niedriger als diese ist. Gültige Werte liegen zwischen 0,0 und 100,0.  
   
 **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -201,7 +201,7 @@ ms.lasthandoff: 01/02/2018
  Überschreibt die **Max. Grad an Parallelität** Konfigurationsoption von **Sp_configure** und die Ressourcenkontrolle für die Abfrage, die Sie diese Option angeben. Der MAXDOP-Abfragehinweis kann den mit sp_configure konfigurierten Wert überschreiten. Wenn MAXDOP den mit der Ressourcenkontrolle konfigurierten Wert überschreitet die [!INCLUDE[ssDE](../../includes/ssde-md.md)] verwendet den Resource Governor MAXDOP-Wert, in der beschriebenen [ALTER WORKLOAD GROUP &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-workload-group-transact-sql.md). Alle semantischen Regeln, die verwendet wird, mit der **Max. Grad an Parallelität** Konfigurationsoption gelten, wenn Sie die MAXDOP-Abfragehinweis verwenden. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 > [!WARNING]  
->  Wenn MAXDOP auf 0 (Null) festgelegt wird, wählt der Server den maximalen Grad an Parallelität aus.  
+> Wenn MAXDOP auf 0 (Null) festgelegt wird, wählt der Server den maximalen Grad an Parallelität aus.  
   
  MAXRECURSION *Anzahl*  
  Gibt die maximale Anzahl der für diese Abfrage zulässigen Rekursionen an. *Anzahl* ist eine nicht negative ganze Zahl zwischen 0 und 32767 liegen. Wenn 0 angegeben wird, wird keine Beschränkung angewendet. Wenn diese Option nicht angegeben wird, beträgt das Standardlimit für den Server 100.  
@@ -240,7 +240,7 @@ ms.lasthandoff: 01/02/2018
  Gibt die Parametrisierungsregeln an, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageoptimierer bei der Kompilierung auf die Abfrage anwendet.  
   
 > [!IMPORTANT]  
->  Der PARAMETERIZATION-Abfragehinweis kann nur innerhalb einer Planhinweisliste angegeben werden. Er kann nicht direkt innerhalb einer Abfrage angegeben werden.  
+> Der PARAMETERIZATION-Abfragehinweis kann nur innerhalb einer Planhinweisliste angegeben werden. Er kann nicht direkt innerhalb einer Abfrage angegeben werden.  
   
  Mit SIMPLE wird der Abfrageoptimierer angewiesen, einfache Parametrisierung auszuführen. Mit FORCED wird der Optimierer angewiesen, erzwungene Parametrisierung auszuführen. Mit dem PARAMETERIZATION-Abfragehinweis wird die aktuelle Einstellung der Option PARAMETERIZATION database SET innerhalb einer Planhinweisliste überschrieben. Weitere Informationen finden Sie unter [angeben des Abfrageparametrisierungsverhaltens von Planhinweislisten mithilfe von](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
   
@@ -254,31 +254,30 @@ ms.lasthandoff: 01/02/2018
   
  Ist eine solche Vorgehensweise nicht möglich, gibt der Abfrageoptimierer einen Fehler zurück, statt die Fehlererkennung auf die Abfrageausführung zu verschieben. Die Zeilen können Spalten variabler Länge aufweisen. [!INCLUDE[ssDE](../../includes/ssde-md.md)] läßt die Definition von Zeilen zu, deren maximale potenzielle Größe von [!INCLUDE[ssDE](../../includes/ssde-md.md)] nicht mehr verarbeitet werden kann. Trotz der maximalen potenziellen Größe speichert eine Anwendung im Allgemeinen Zeilen, deren tatsächliche Größe innerhalb der Höchstwerte liegen, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] verarbeiten kann. Wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine Zeile ermittelt, die zu lang ist, wird ein Ausführungsfehler zurückgegeben.  
  
- MIT Hinweis ( **"***Hint_name***"** )  
- **Gilt für**: gilt für SQL Server (ab 2016 SP1) und Azure SQL-Datenbank.
+<a name="use_hint"></a>MIT Hinweis ( **"***Hint_name***"** )  
+ **Gilt für**: betrifft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
  
  Stellt eine oder mehrere zusätzliche Hinweise an, die der Abfrageprozessor wie angegeben mit einem Hinweis Namen **innerhalb einfacher Anführungszeichen**. 
-  **Gilt für**: beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
  Die folgenden Hinweis Namen werden unterstützt:
  
-*  "DISABLE_OPTIMIZED_NESTED_LOOP"  
+*  'DISABLE_OPTIMIZED_NESTED_LOOP'  
  Weist den Abfrageprozessor nicht um einen Sortiervorgang (Batch Sortierung) für optimierte nested Loops-Joins zu verwenden, wenn einen Abfrageplan generieren. Dies entspricht dem [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
 *  "FORCE_LEGACY_CARDINALITY_ESTIMATION"  
  Zwingt den Abfrageoptimierer verwendet [Kardinalitätsschätzung](../../relational-databases/performance/cardinality-estimation-sql-server.md) Modell [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und früheren Versionen. Dies entspricht dem [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 oder [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) festlegen LEGACY_CARDINALITY_ESTIMATION = ON.
 *  "ENABLE_QUERY_OPTIMIZER_HOTFIXES"  
  Ermöglicht das Abfragen Hotfixes für Abfrageoptimierer (Änderungen in SQL Server kumulative Updates und Service Packs freigegeben). Dies entspricht dem [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 oder [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) festlegen QUERY_OPTIMIZER_HOTFIXES = ON.
-*  "DISABLE_PARAMETER_SNIFFING"  
+*  'DISABLE_PARAMETER_SNIFFING'  
  Weist der Abfrageoptimierer verwendet durchschnittliche datenverteilung beim Kompilieren einer Abfrage mit einem oder mehreren Parametern, den Abfrageplan auf den Wert des Parameters, der zuerst verwendet wurde, wenn die Abfrage kompiliert wurde unabhängige vornehmen. Dies entspricht dem [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 oder [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) festlegen PARAMETER_SNIFFING = OFF.
-*  "ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES"  
+*  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'  
  Bewirkt, dass SQL Server zum Generieren eines Plans verwenden das minimale Selektivität beim Schätzen der AND-Prädikate für die Filter für die Korrelation zu berücksichtigen. Dies entspricht dem [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 bei Verwendung mit kardinalitätsschätzungsmodell von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und frühere Versionen, und wirkt sich ähnlich wie beim [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 wird verwendet, mit der Kardinalität schätzmodell von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder höher.
 *  "DISABLE_OPTIMIZER_ROWGOAL"  
  Bewirkt, dass SQL Server einen Plan erzeugen, der keine Zeile Ziel Anpassungen mit Abfragen verwendet, die nach-oben, OPTION (FAST N) enthalten, oder vorhandene Schlüsselwörter verwendet. Dies entspricht dem [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
-*  "ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS"  
+*  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
  Ermöglicht die automatisch generierte schnelle Statistiken (Histogramm Änderung) für alle führenden Indexspalte, die für die Kardinalität Schätzung erforderlich ist. Zum Zeitpunkt der Kompilierung Abfrage berücksichtigen tatsächliche maximalen oder minimalen Wert dieser Spalte wird verwendete, um die Schätzung der Kardinalität Histogramm angepasst werden. Dies entspricht dem [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
-*  "ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS"  
+*  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'  
  Bewirkt, dass SQL Server zum Generieren eines Abfrageplans mithilfe der einfachen Containment Annahme anstelle der Standardeinstellung Base Containment Annahme für Joins, unter der Abfrageoptimierer [Kardinalitätsschätzung](../../relational-databases/performance/cardinality-estimation-sql-server.md) Modell [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder höher. Dies entspricht dem [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
-*  "FORCE_DEFAULT_CARDINALITY_ESTIMATION"  
+*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'  
  Zwingt den Abfrageoptimierer verwendet [Schätzung der Kardinalität](../../relational-databases/performance/cardinality-estimation-sql-server.md) Modell, das den aktuellen Kompatibilitätsgrad der Datenbank entspricht. Verwenden Sie zum Überschreiben dieser Hinweis [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) festlegen LEGACY_CARDINALITY_ESTIMATION = ON oder [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
  
 > [!TIP]
@@ -291,7 +290,7 @@ ms.lasthandoff: 01/02/2018
  USE PLAN N**"***Xml_plan***"**  
  Zwingt den Abfrageoptimierer, einen vorhandenen Abfrageplan für eine Abfrage verwenden, indem angegeben wird **"***Xml_plan***"**. USE PLAN kann nicht für die Anweisungen INSERT, UPDATE, MERGE oder DELETE angegeben werden.  
   
-TABELLENHINWEIS **(***Exposed_object_name* [ **,** \<Table_hint > [[**,** ]...  *n*  ]] **)** Wendet den angegebenen Tabellenhinweis auf die Tabelle oder Sicht, die entspricht *Exposed_object_name*. Es wird empfohlen, einen Tabellenhinweis als Abfragehinweis nur im Rahmen einer [Planhinweisliste](../../relational-databases/performance/plan-guides.md).  
+TABELLENHINWEIS  **(*** Exposed_object_name* [ **,** \<Table_hint > [[**,**]...  *n*  ]] **)** Wendet den angegebenen Tabellenhinweis auf die Tabelle oder Sicht, die entspricht *Exposed_object_name*. Es wird empfohlen, einen Tabellenhinweis als Abfragehinweis nur im Rahmen einer [Planhinweisliste](../../relational-databases/performance/plan-guides.md).  
   
  *Exposed_object_name* kann eine der folgenden Verweise:  
   
@@ -301,7 +300,7 @@ TABELLENHINWEIS **(***Exposed_object_name* [ **,** \<Table_hint > [[**,** ]...  
   
  Wenn *Exposed_object_name* wird angegeben, ohne dass auch einen Tabellenhinweis alle Indizes in der Abfrage angegeben wird, als Teil eines tabellenhinweises für das Objekt werden ignoriert und die Indexverwendung wird vom Abfrageoptimierer bestimmt. Sie können diese Vorgehensweise verwenden, um die Auswirkung eines INDEX-Tabellenhinweises zu eliminieren, wenn Sie die ursprüngliche Abfrage nicht ändern können. Siehe Beispiel J.  
   
-**\<Table_hint >:: =** {[NOEXPAND] {INDEX ( *Index_value* [,... *n* ] ) | INDEX = ( *Index_value* ) | FORCESEEK [**(***Index_value***(***Index_column_name* [**,**...] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALISIERBARE | MOMENTAUFNAHME | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK} ist der Tabellenhinweis, gelten für die Tabelle oder Sicht, die entspricht *Exposed_object_name* als Abfragehinweis. Eine Beschreibung dieser Hinweise finden Sie in [Tabellenhinweise &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } Is the table hint to apply to the table or view that corresponds to *exposed_object_name* as a query hint. Eine Beschreibung dieser Hinweise finden Sie in [Tabellenhinweise &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Andere Tabellenhinweise als INDEX, FORCESCAN und FORCESEEK sind als Abfragehinweise nicht zulässig, es sei denn, die Abfrage enthält bereits eine WITH-Klausel, die einen Tabellenhinweis angibt. Weitere Informationen finden Sie in den Hinweisen.  
   
@@ -554,9 +553,9 @@ GO
 ```  
     
 ## <a name="see-also"></a>Siehe auch  
- [Tabellenhinweise &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [Sp_control_plan_guide &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
+ [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
  [Ablaufverfolgungsflags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   

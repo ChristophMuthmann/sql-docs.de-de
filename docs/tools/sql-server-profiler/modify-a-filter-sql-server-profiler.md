@@ -17,15 +17,15 @@ helpviewer_keywords:
 - filters [SQL Server], traces
 ms.assetid: 8b317813-4918-4485-b930-77b1951aa00c
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d8d48e66b041d09dbcbbe47ec7702656e250bdf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 00c0ae3a725e90e0a0827e6b49dde9041099eab4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>Ändern eines Filters (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Sie hinzufügen können ablaufverfolgungsvorlagen, die Ablaufverfolgungsdefinitionen, um die Anzahl der Ereignisse zu beschränken, die von einer Ablaufverfolgung gesammelten enthalten Filter. Durch die Beschränkung der gesammelten Ereignisse können die bei der Ablaufverfolgung entstehenden Leistungseinbußen reduziert werden. Wenn Sie Filter für eine Ablaufverfolgungsvorlage einrichten und feststellen, dass bei der Ablaufverfolgung nicht die von Ihnen benötigten Informationen gesammelt werden, können Sie den Filter bearbeiten.  

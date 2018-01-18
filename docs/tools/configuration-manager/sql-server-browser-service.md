@@ -21,18 +21,18 @@ helpviewer_keywords:
 - SQL Server Browser service
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
 caps.latest.revision: "61"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d4d3619e88d1211daa32de1c3286fedcfd9eb53a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 98a5f763d57c6cfb3a6c11d308fbe71e53ded7f4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="sql-server-browser-service"></a>SQL Server Browser Service
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browserprogramm wird als Windows-Dienst ausgeführt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser lauscht auf eingehende Anforderungen für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcen und stellt Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen zur Verfügung, die auf dem Computer installiert sind. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser unterstützt folgende Aktionen:  
+# <a name="sql-server-browser-service"></a>SQL Server-Browserdienst
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browserprogramm wird als Windows-Dienst ausgeführt. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser achtet auf eingehende Anforderungen für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressourcen und stellt Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen zur Verfügung, die auf dem Computer installiert sind. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser unterstützt die folgenden Aktionen:  
   
 -   Durchsuchen einer Liste verfügbarer Server  
   
@@ -40,9 +40,9 @@ ms.lasthandoff: 12/21/2017
   
 -   Herstellen einer Verbindung mit den Endpunkten einer dedizierten Administratorverbindung (DAC, dedicated administrator connection)  
   
- Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -, [!INCLUDE[ssAS](../../includes/ssas-md.md)]- und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst (sqlbrowser) stellt für jede Instanz den Instanzennamen und die Versionsnummer bereit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser wird mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -, [!INCLUDE[ssAS](../../includes/ssas-md.md)]- und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst (sqlbrowser) stellt für jede Instanz den Instanzennamen und die Versionsnummer bereit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser kann während des Setups oder mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers konfiguriert werden. In den folgenden Situationen wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst standardmäßig gestartet:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser kann so konfiguriert werden, während des Setups oder mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. In den folgenden Situationen wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst standardmäßig gestartet:  
   
 -   Beim Ausführen eines Upgrades für eine Installation.  
   
@@ -53,14 +53,14 @@ ms.lasthandoff: 12/21/2017
 -   Beim Installieren einer benannten Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="background"></a>Hintergrund  
- Vor [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]konnte lediglich eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Computer installiert werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lauschte auf eingehende Anforderungen an Port 1433, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch die Internet Assigned Numbers Authority (IANA) zugewiesen wurde. Da ein Port nur von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz verwendet werden kann, wurde mit Einführung der Unterstützung mehrerer [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] -Instanzen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol (SSRP) zum Lauschen an UDP-Port 1434 entwickelt. Dieser Listenerdienst reagierte auf Clientanforderungen mit den Namen der installierten Instanzen und den von der Instanz verwendeten Ports bzw. Named Pipes. Aufgrund der begrenzten Funktionsweise des SSRP-Systems wurde der [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Browserdienst in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Ersatz für SSRP eingeführt.  
+ Vor [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]konnte lediglich eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Computer installiert werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lauschte auf eingehende Anforderungen an Port 1433, zugewiesene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch die offizielle Internet zugewiesen Numbers Authority (IANA). Da ein Port nur von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz verwendet werden kann, wurde mit Einführung der Unterstützung mehrerer [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] -Instanzen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol (SSRP) zum Lauschen an UDP-Port 1434 entwickelt. Dieser Listenerdienst reagierte auf Clientanforderungen mit den Namen der installierten Instanzen und den von der Instanz verwendeten Ports bzw. Named Pipes. Aufgrund der begrenzten Funktionsweise des SSRP-Systems wurde der [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Browserdienst in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Ersatz für SSRP eingeführt.  
   
 ## <a name="how-sql-server-browser-works"></a>Funktionsweise von SQL Server-Browser  
  Wenn die Protokolle TCP/IP oder VIA für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktiviert sind und eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gestartet wird, wird dem Server ein TCP/IP-Port zugewiesen. Wenn das Named Pipes-Protokoll aktiviert ist, lauscht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an einer speziell benannten Pipe. Dieser Port oder "Pipe" wird von der betreffenden Instanz zum Datenaustausch mit Clientanwendungen verwendet. Bei der Installation werden der TCP-Port 1433 und die Pipe `\sql\query` der Standardinstanz zugewiesen, sie können jedoch zu einem späteren Zeitpunkt vom Serveradministrator mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager geändert werden. Da ein Port oder eine Pipe von nur jeweils einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden kann, werden den benannten Instanzen einschließlich [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]unterschiedliche Portnummern und Pipenamen zugewiesen. Wenn diese Funktion aktiviert ist, werden die beiden benannten Instanzen und [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] standardmäßig für die Verwendung dynamischer Ports konfiguriert, sodass beim Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein verfügbarer Port zugewiesen wird. Bei Bedarf kann einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ein bestimmter Port zugewiesen werden. Beim Verbindungsaufbau können Clients einen bestimmten Port angeben. Wenn der Port jedoch dynamisch zugewiesen wird, kann sich die Portnummer bei jedem Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ändern, sodass die richtige Portnummer dem Client unbekannt bleibt.  
   
- Beim Starten beansprucht der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser UDP-Port 1434. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser liest die Registrierung, identifiziert alle Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Computer und notiert die verwendeten Ports und Named Pipes. Wenn ein Server über zwei oder mehr Netzwerkkarten verfügt, gibt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser den ersten gefundenen aktivierten Port für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zurück. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser unterstützt ipv6 und ipv4.  
+ Beim Starten beansprucht der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser UDP-Port 1434. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser liest die Registrierung, identifiziert alle Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Computer und notiert die verwendeten Ports und Named Pipes. Wenn ein Server über zwei oder mehr Netzwerkkarten verfügt, gibt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser den ersten gefundenen aktivierten Port für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zurück. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser unterstützt ipv6 und ipv4.  
   
- Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcen anfordern, sendet die Clientnetzwerkbibliothek über den Port 1434 eine UDP-Nachricht an den Server. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser antwortet mit dem TCP/IP-Port oder der Named Pipe der angeforderten Instanz. Anschließend wird die Verbindung durch die Netzwerkbibliothek der Clientanwendung vollständig abgeschlossen, indem über den Port oder die Named Pipe der gewünschten Instanz eine Anforderung an den Server gesendet wird.  
+ Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcen anfordern, sendet die Clientnetzwerkbibliothek über den Port 1434 eine UDP-Nachricht an den Server. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser antwortet mit dem TCP/IP-Port oder der Named Pipe der angeforderten Instanz. Anschließend wird die Verbindung durch die Netzwerkbibliothek der Clientanwendung vollständig abgeschlossen, indem über den Port oder die Named Pipe der gewünschten Instanz eine Anforderung an den Server gesendet wird.  
   
  Weitere Informationen zum Starten und Beenden des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdiensts finden Sie unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 12/21/2017
 -   Die Ports, die Sie für die einzelnen Instanzen auswählen, können auf dem Server durch andere Dienste oder Anwendungen verwendet werden, sodass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht verfügbar ist.  
   
 ## <a name="clustering"></a>Clustering  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser handelt es sich nicht um eine gruppierte Ressource, und ein Failover von einem Clusterknoten auf einen anderen wird nicht unterstützt. In einem Cluster sollte der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser deshalb auf jedem Knoten des Clusters installiert und aktiviert werden. In Clustern lauscht auf jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser IP_ANY.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser ist keine gruppierte Ressource und Failover von einem Clusterknoten zum anderen wird nicht unterstützt. In einem Cluster sollte der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser deshalb auf jedem Knoten des Clusters installiert und aktiviert werden. In Clustern lauscht auf jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser IP_ANY.  
   
 > [!NOTE]  
 >  Wenn Sie bei der Überwachung von IP_ANY die Überwachung bestimmter IP-Adressen aktivieren, muss der Benutzer für jede IP-Adresse den gleichen TCP-Port konfigurieren, da der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser die erste gefundene Kombination aus IP-Adresse und Port zurückgibt.  
@@ -98,16 +98,16 @@ ms.lasthandoff: 12/21/2017
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst wird deinstalliert, wenn die letzte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt wird.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser kann zur Problembehandlung mit dem Schalter **-c** von der Eingabeaufforderung aus gestartet werden.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser gestartet werden kann, von der Befehlszeile aus, für die Problembehandlung mithilfe der **- C** wechseln:  
   
 ```  
 <drive>\<path>\sqlbrowser.exe -c  
 ```  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="account-privileges"></a>Kontoberechtigungen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser lauscht an einem UDP-Port und akzeptiert nicht authentifizierte Anforderungen mithilfe von SSRP ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser sollte im Sicherheitskontext eines Benutzers mit geringen Zugriffsrechten ausgeführt werden, um die Anfälligkeit gegenüber böswilligen Angriffen zu verringern. Das Anmeldekonto kann mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers geändert werden. Für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser gelten die folgenden Mindestbenutzerrechte:  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser lauscht an einem UDP-Port und akzeptiert nicht authentifizierte Anforderungen mithilfe von SSRP ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser sollte im Sicherheitskontext eines Benutzers mit geringen Berechtigungen, die Anfälligkeit gegenüber böswilligen Angriffen zu verringern, ausgeführt werden. Das Anmeldekonto kann mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers geändert werden. Für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser gelten die folgenden Mindestbenutzerrechte:  
   
 -   Zugriff vom Netzwerk auf diesen Computer verweigern  
   

@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: FeatureSet element
 ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f921dbdf63afe4748f80eeae63ecd559c909b7cf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 73bfa6884ff978c962215924287be551e29ec07e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="featureset-element-dta"></a>FeatureSet-Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Enthält die physischen Entwurfsstrukturen (Indizes oder indizierte Sichten), die der Datenbankoptimierungsratgeber während der Analyse verwenden soll.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|**string**, keine maximale Länge.|  
 |**Zulässige Werte**|**IDX_IV**<br /> Indizes und indizierte Sichten.<br /><br /> **IDX**<br /> Nur Indizes.<br /><br /> **IV**<br /> Nur indizierte Sichten.<br /><br /> **NCL_IDX**<br /> Nur nicht gruppierte Indizes.<br /><br /> Verwenden Sie einen dieser Werte mit diesem Element.|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
-|**Übergeordnetes Element**|[TuningOptions-Element &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**Übergeordnetes Element**|[TuningOptions-Element &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**Untergeordnete Elemente**|Keine.|  
   
 ## <a name="example"></a>Beispiel  

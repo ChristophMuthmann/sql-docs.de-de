@@ -14,18 +14,18 @@ ms.topic: article
 helpviewer_keywords: MSSQLSERVER property protocols
 ms.assetid: 4d38e6e9-f95f-4e79-ae45-89f631037528
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ed0d315ee6b469fddcf3f6e10d8016f43653eda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: db816ac16fa53afeb3c7f8f5434d3123f5a4dc00
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>Protokolle für MSSQLSERVER-Eigenschaften (Registerkarte Flags)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Wenn ein Zertifikat auf dem Server installiert ist, verwenden Sie die **Flags** Registerkarte die **Protokolle für MSSQLSERVER-Eigenschaften** (Dialogfeld), anzeigen oder die protokollverschlüsselung anzugeben und instanzoptionen auszublenden. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss neu gestartet werden, um die **ForceEncryption** -Einstellung zu aktivieren oder zu deaktivieren.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Wenn ein Zertifikat auf dem Server installiert ist, verwenden Sie die **Flags** Registerkarte die **Protokolle für MSSQLSERVER-Eigenschaften** (Dialogfeld), anzeigen oder die protokollverschlüsselung anzugeben und instanzoptionen auszublenden. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss neu gestartet werden, um zu aktivieren oder Deaktivieren der **ForceEncryption** Einstellung.  
   
  Zum Verschlüsseln von Verbindungen sollten Sie [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] mit einem Zertifikat bereitstellen. Wenn kein Zertifikat installiert ist, generiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein selbstsigniertes Zertifikat, sobald die Instanz gestartet wird. Dieses selbstsignierte Zertifikat kann anstelle eines Zertifikats von einer vertrauenswürdigen Zertifizierungsstelle verwendet werden. Es ermöglicht jedoch keine Authentifizierung und verhindert auch keine Nichtanerkennung.  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="cluster-servers"></a>Clusterserver  
  Wenn Sie die Verschlüsselung bei einem Failovercluster verwenden möchten, müssen Sie das Serverzertifikat mit dem vollgekennzeichneten DNS-Namen des virtuellen Servers auf allen Knoten im Failovercluster installieren. Angenommen, Sie haben einen Cluster mit zwei Knoten mit Knoten benannte "test1.  *\<Ihr Unternehmen >*.com "und" test2. *\<Ihr Unternehmen >*.com "und einem virtuellen Server mit dem Namen"Virtsql "verfügen, müssen Sie installieren ein Zertifikat für" Virtsql. *\<Ihr Unternehmen >*.com "auf beiden Knoten. Sie können dann das Kontrollkästchen **ForceEncryption** in **SQL Server-Konfigurations-Manager** aktivieren, um den Failovercluster für die Verschlüsselung zu konfigurieren.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **ForceEncryption**  
  Erzwingen Sie die Protokollverschlüsselung. Die Verschlüsselung ist eine Methode, sensible Informationen vertraulich zu behandeln, indem Daten in eine nicht lesbare Form geändert werden. Durch die Verschlüsselung wird die Sicherheit von Daten sichergestellt, selbst wenn die Übertragungspakete während des Übertragungsvorgangs angezeigt werden. Für die Benutzung von Channelbindung, setzen Sie **Verschlüsselung erzwingen** auf **Ein** , und konfigurieren Sie **Erweiterten Schutz** auf der Registerkarte **Erweitert** .  
   

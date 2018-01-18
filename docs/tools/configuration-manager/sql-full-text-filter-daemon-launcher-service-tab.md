@@ -13,22 +13,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6aad7ebe-c4be-4d37-8536-61502f51faa2
 caps.latest.revision: "8"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ed0ccaed0106d331812d56f3aa5c29e0d70c4d0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ff041f428b3b5558e0378f54785da88115c9f7c0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>Startprogramm für SQL-Volltextfilterdaemon (Registerkarte Dienst)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], SQL Volltext-Filter-Startprogramm (FDHOST-Startprogramm) Inanspruchnahme von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Full-Text. Dieser Dienst muss ausgeführt werden, wenn Sie die Volltextsuche verwenden. Informationen über die Prozesse des Filterdaemonhosts finden Sie unter „Architektur der Volltextsuche“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
  Verwenden Sie im Startprogramm für SQL-Volltextfilterdaemon die Registerkarte **Dienst**im Dialogfeld **Eigenschaften des SQL Full-text Filter Daemon-Programmstarters** (SQL-Volltextfilterdaemon-LauncherProperties), um die folgenden Optionen anzuzeigen oder anzugeben.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Binärpfad**  
  Führt den Speicherort der Programmdateien auf, die von diesem Dienst verwendet werden.  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/21/2017
  Zeigt die Prozess-ID von Windows an.  
   
  **SQL-Diensttyp**  
- Zeigt den für aufrufende Prozesse bereitgestellten Diensttyp an. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden mehrere Dienste installiert.  
+ Zeigt den für aufrufende Prozesse bereitgestellten Diensttyp an. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert mehrere Dienste.  
   
  **Startmodus**  
  Richten Sie den Dienst mit den folgenden Auswahlmöglichkeiten ein:  

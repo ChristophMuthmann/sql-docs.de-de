@@ -13,20 +13,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d326c1a962efbfc66a4e69ac1c4c6508006b33c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 23e82062abc0441e70fd8e97b3c2adcb37eeb83e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;Dienstname&gt; Eigenschaften (Registerkarte Dienst)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dieser Dienst ist die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] Dienst. Die ausgegrauten Eigenschaftswerte können nicht mithilfe dieser Anwendung geändert werden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Binärpfad**  
  Zeigt den Speicherort der Programmdateien an, die von diesem Dienst verwendet werden.  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/21/2017
  Zeigt die Prozess-ID von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows an.  
   
  **SQL-Diensttyp**  
- Der für aufrufende Prozesse bereitgestellte Diensttyp. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden mehrere Dienste installiert.  
+ Der für aufrufende Prozesse bereitgestellte Diensttyp. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert mehrere Dienste.  
   
  **Startmodus**  
  Richten Sie den Dienst mit den folgenden Auswahlmöglichkeiten ein:  

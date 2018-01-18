@@ -22,15 +22,15 @@ helpviewer_keywords:
 - traces [SQL Server], events
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
 caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e75f8ec80a1564b788cefdd226b2f7b7338a7734
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b15547e2d5d49a9709d118f69ea8d4590e5ff1c0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Anzeigen und Analysieren von Ablaufverfolgungen mit SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Verwenden [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] aufgezeichneten Ereignisdaten in einer Ablaufverfolgung anzeigen. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt Daten je nach definierten Ablaufverfolgungseigenschaften an. Eine Möglichkeit, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten zu analysieren, besteht darin, die Daten in ein anderes Programm wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder den Optimierungsratgeber von [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu kopieren. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Wenn bei der Ablaufverfolgung die **Text** -Datenspalte einbezogen wird, kann der Optimierungsratgeber eine Ablaufverfolgungsdatei mit SQL-Batch- und RPC-Ereignissen verwenden. Verwenden Sie die im Lieferumfang von [!INCLUDE[ssDE](../../includes/ssde-md.md)] enthaltene vordefinierte Optimierungsvorlage, um sicherzustellen, dass für den Optimierungsratgeber von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]die richtigen Ereignisse und Spalten aufgezeichnet werden.  

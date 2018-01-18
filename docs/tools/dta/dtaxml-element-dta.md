@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: DTAXML element
 ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a652a6e44909984906fcbcbe2b962cc7de374fbb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4eeed88249de7d3d04bee44262d72e113a8e04ec
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML-Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Das Stammelement einer Datenbank-Engine Tuning Advisor XML-Eingabe- oder-Ausgabedatei **DTAXML** enthält alle Elemente, die beschreiben, und die Optimierung-Ausgabe, die der Datenbankoptimierungsratgeber generiert.  
@@ -41,14 +41,14 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-attributes"></a>Elementattribute  
   
-|attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
 |**xmlns:xsi**|Erforderlich. Identifiziert den XML-Schemainstanzennamespace. Attribute aus diesem Namespace dienen zum Verweisen auf das Schema, das zum Überprüfen der XML-Datei des Datenbankoptimierungsratgebers verwendet wird.<br /><br /> Erforderlicher Wert: [http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
 |**xmlns**|Erforderlich. Identifiziert den Namespace des Datenbankoptimierungsratgebers.<br /><br /> Wenn Sie die XML-Datei des Datenbankoptimierungsratgebers mit dem XML-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]bearbeiten, wird dieser Wert von der F1-Hilfe und der dynamischen Hilfe verwendet, um mögliche Referenzthemen in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation zu ermitteln.<br /><br /> Erforderlicher Wert:<br /><br /> für das[XML-Schema des Datenbankoptimierungsratgebers](http://go.microsoft.com/fwlink/?LinkId=43100) |  
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
-|**Übergeordnetes Element**|InclusionThresholdSetting|  
+|**Übergeordnetes Element**|Keine|  
 |**Untergeordnete Elemente**|[DTAInput-Element &#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)<br /><br /> **DTAOutput**-Element (weitere Informationen finden Sie im Thema zum [XML-Schema für den Datenbankoptimierungsratgeber](http://schemas.microsoft.com/sqlserver/))|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/21/2017
  Beispiele für typische **DTAXML**-Elemente finden Sie unter [Beispiele für XML-Eingabedateien &#40;DTA&#41;](../../tools/dta/xml-input-file-samples-dta.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)   
- [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
+ [XML-Eingabedateireferenz &#40; Database Engine Tuning Advisor &#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)   
+ [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
   
   

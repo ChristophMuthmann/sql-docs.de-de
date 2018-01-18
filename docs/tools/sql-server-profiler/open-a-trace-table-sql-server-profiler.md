@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: opening trace tables
 ms.assetid: 8f7cc6b9-c717-4995-9af9-cacc6501aee2
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 735eb00f7fc986b88672cbe72b1643a094b555b1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f251fd08716dcacef95f5af1f5dffcb2788243c3
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>Öffnen einer Ablaufverfolgungstabelle (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In diesem Thema wird beschrieben, wie zum Öffnen einer vorhandenen Ablaufverfolgungstabelle mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

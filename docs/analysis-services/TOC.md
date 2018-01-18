@@ -19,7 +19,7 @@
 ## [Analysis Services samples (Beispiele für Analysis Services)](analysis-services-samples.md)
 
 # Lernprogramme
-## [Tabular Modeling (Adventure Works Tutorial) (Tabellenmodellierung (Adventure Works-Lernprogramm))](tabular-modeling-adventure-works-tutorial.md)  
+## [Tabellarische Modellierung (Kompatibilitätsgrad 1200)](tabular-modeling-adventure-works-tutorial.md)  
 ### [Lesson 1: Create a New Tabular Model Project (Lektion 1: Erstellen eines neuen Tabellenmodellprojekts)](lesson-1-create-a-new-tabular-model-project.md)  
 ### [Lesson 2: Add Data (Lektion 2: Hinzufügen von Daten)](lesson-2-add-data.md)  
 ### [Lesson 3: Mark as Date Table (Lektion 3: Markieren als Datumstabelle)](lesson-3-mark-as-date-table.md)  
@@ -36,7 +36,7 @@
 ### [Supplemental Lesson - Implement dynamic security by using row filters (Ergänzende Lektion: Implementieren von dynamischer Sicherheit mithilfe von Zeilenfiltern)](supplemental-lesson-implement-dynamic-security-by-using-row-filters.md)  
 ### [Supplemental Lesson - Configure reporting properties for Power View reports (Ergänzende Lektion: Konfigurieren von Berichterstellungseigenschaften für Power View-Berichte)](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)  
 
-## [Multidimensional modeling (Adventure Works Tutorial) (Mehrdimensionale Modellierung (Adventure Works-Lernprogramm))](multidimensional-modeling-adventure-works-tutorial.md)  
+## [Multidimensional modeling (Mehrdimensionale Modellierung)](multidimensional-modeling-adventure-works-tutorial.md)  
 ### [Tutorial scenario (Tutorialszenario)](analysis-services-tutorial-scenario.md)  
 ### [Install sample data and projects for the Analysis Services Multidimensional modeling tutorial (Installieren von Beispieldaten und -projekten für das Analysis Services-Tutorial zur mehrdimensionalen Modellierung)](install-sample-data-and-projects.md)  
 ### [Lesson 1: Defining a data source view within an Analysis Services project (Lektion 1: Definieren einer Datenquellensicht innerhalb eines Analysis Services-Projekts)](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)  

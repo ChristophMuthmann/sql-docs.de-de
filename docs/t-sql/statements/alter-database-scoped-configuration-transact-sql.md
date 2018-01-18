@@ -1,5 +1,5 @@
 ---
-title: ALTER ausgelegte DATENBANKKONFIGURATION (Transact-SQL) | Microsoft Docs
+title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/04/2018
 ms.prod: sql-non-specified
@@ -28,30 +28,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cc17063b8f74e296562a460677121c5ef1c85016
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 9638d94c2bd6f461650b15f96c7a75c95eaeb861
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER ausgelegte DATENBANKKONFIGURATION (Transact-SQL)
+# <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Diese Anweisung ermöglicht es, mehrere Konfigurationseinstellungen der Datenbank an die **einzelne Datenbank** Ebene. Diese Anweisung steht in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] und in SQL Server, die mit beginnt [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Diese Einstellungen sind:  
+  Diese Anweisung ermöglicht es, mehrere Konfigurationseinstellungen der Datenbank an die **einzelne Datenbank** Ebene. Diese Anweisung steht in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Diese Einstellungen sind:  
   
 - Löschen des Prozedurcaches.  
-  
 - Legen Sie den MAXDOP-Parameter auf einen beliebigen Wert (1,2,...), für die primäre Datenbank basierend auf was am besten für diese bestimmte Datenbank, und legen Sie einen anderen Wert (z. B. 0) für alle verwendeten sekundären Datenbanken (z. B. für Berichtsabfragen).  
-  
 - Festlegen des Kardinalitätsschätzungsmodells für den Abfrageoptimierer unabhängig von der Datenbank auf den Kompatibilitätsgrad.  
-  
 - Aktivieren oder Deaktivieren der Parameterermittlung auf Datenbankebene.
-  
 - Aktivieren oder Deaktivieren der Abfrageoptimierungs-Hotfixes auf Datenbankebene.
-
 - Aktivieren oder Deaktivieren der Identitäts-Cache auf Datenbankebene.
-
-- Aktivieren Sie oder deaktivieren Sie einen Stub des kompilierten Plans im Cache gespeichert werden, wenn ein Batch zum ersten Mal kompiliert wird. 
+- Aktivieren Sie oder deaktivieren Sie einen Stub des kompilierten Plans im Cache gespeichert werden, wenn ein Batch zum ersten Mal kompiliert wird.    
   
  ![Symbol "Verknüpfung"](../../database-engine/configure-windows/media/topic-link.gif "Linksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -84,7 +78,7 @@ FÜR SEKUNDÄRE OBJEKTE
 Gibt die Einstellungen für die sekundären Datenbanken (alle sekundäre Datenbanken müssen die identische Werte haben).  
   
 MAXDOP  **=**  {\<Wert > | PRIMÄRE}  
-**\<Wert >**  
+**\<value>**  
   
 Gibt die Standard-MAXDOP festlegen, die für Anweisungen verwendet werden soll. 0 ist der Standardwert und gibt an, dass die Serverkonfiguration stattdessen verwendet werden soll. Der MAXDOP im Datenbankbereich überschreibt (es sei denn, es auf 0 festgelegt ist) die **Max. Grad an Parallelität** auf Serverebene von Sp_configure festgelegt. Abfragehinweise können weiterhin die Datenbank überschreiben MAXDOP begrenzt, um bestimmte Abfragen optimieren, die andere Einstellung benötigen. All diese Einstellungen werden durch die MAXDOP, legen Sie für die Arbeitsauslastungsgruppe begrenzt.   
 
@@ -163,6 +157,8 @@ in der Datenbank. Diese Berechtigung kann von einem Benutzer mit CONTROL-Berecht
  Für Namensabfragen mit 3 Teilen die Einstellungen für die aktuelle datenbankverbindung für die Abfrage wird berücksichtigt, außer für SQL-Module (z. B. Prozeduren, Funktionen und Trigger), die im aktuellen Datenbankkontext kompiliert werden, und verwendet daher die Optionen von der Datenbank, in denen sie sich befinden.  
   
  Das Ereignis ALTER_DATABASE_SCOPED_CONFIGURATION wird als ein DDL-Ereignis hinzugefügt, die zum Auslösen eines DDL-Triggers verwendet werden kann. Dies ist ein untergeordnetes Element der Gruppe "ALTER_DATABASE_EVENTS Trigger".  
+ 
+ Datenbankweit gültige Konfiguration wie die Einstellungen mit der Datenbank übernommen. Dies bedeutet, dass bei eine bestimmte Datenbank wiederhergestellt oder angefügt wird, die vorhandenen Konfigurationseinstellungen bleiben.
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
 **MAXDOP**  
@@ -183,7 +179,7 @@ in der Datenbank. Diese Berechtigung kann von einem Benutzer mit CONTROL-Berecht
   
  Wenn "QueryTraceOn" Hinweis verwendet wird, um die ältere Abfrageoptimierer oder Hotfixes für Abfrageoptimierer zu aktivieren, wäre es eine OR-Bedingung zwischen den Abfragehinweis und die datenbankweite Konfiguration festlegen, d. h., wenn entweder aktiviert ist, gelten die Optionen.  
   
-**Geodr aktiv**  
+**GeoDR**  
   
  Lesbare sekundäre Datenbanken, z. B. AlwaysOn-Verfügbarkeitsgruppen und GeoReplication, verwenden Sie den sekundären Wert durch Überprüfen des Zustands der Datenbank. Obwohl Recompile findet kein Failover statt und technisch das neue primäre hat Abfragen, die die Einstellungen für die sekundären verwenden, ist die Vorstellung, dass die Einstellung zwischen primären und sekundären nur unterschiedlich sein, wenn die arbeitsauslastung besteht aus verschiedenen und daher die zwischengespeicherte Abfragen verwenden die optimalen Einstellungen an, während Sie neue Abfragen die neuen Einstellungen auswählen, die für sie geeignet sind.  
   
@@ -311,8 +307,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 * [SQL Server Query Optimizer Hotfix Trace Flag 4199 Wartungsmodell](https://support.microsoft.com/en-us/kb/974006)
 
 ## <a name="more-information"></a>Weitere Informationen  
- [Sys. database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
- [Sys.Configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+ [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [Datenbanken und Dateikatalogsichten](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [Serverkonfigurationsoptionen für den](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
  

@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: 25fc141818d0e0d638cf463990da8d44955fef17
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: e75ae9a6f3c48f0ece0c95be9f3836c8205a1b8c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-always-on-availability-group-for-sql-server-on-linux"></a>Konfigurieren von Always On-verfügbarkeitsgruppe für SQL Server on Linux
 
@@ -33,7 +33,7 @@ Konfigurationen, die hohe Verfügbarkeit und Datenschutz gewährleisten erforder
 
 Alle Server müssen entweder physisch oder virtuell sein, und virtuelle Server muss auf die gleiche Virtualisierungsplattform. Diese Anforderung ist, da die Agents Zäune plattformspezifisch sind. Finden Sie unter [Richtlinien für einen Gastcluster](https://access.redhat.com/articles/29440#guest_policies).
 
-## <a name="roadmap"></a>Roadmap für die
+## <a name="roadmap"></a>Roadmap
 
 Die Schritte zum Erstellen einer verfügbarkeitsgruppe auf Linux-Servern zwecks hoher Verfügbarkeit unterscheiden sich von den Schritten in einem Windows Server-Failovercluster. Die folgende Liste beschreibt auf hoher Ebene die Schritte aus: 
 
@@ -92,7 +92,7 @@ Führen Sie **nur eine** der folgenden Skripts:
 
 - [Erstellen Sie die verfügbarkeitsgruppe mit drei synchronen Replikaten](#threeSynch).
 - [Erstellen Sie die verfügbarkeitsgruppe ein Replikat für die Konfiguration mit zwei synchronen Replikaten](#configOnly)
-- [Erstellen Sie die verfügbarkeitsgruppe mit drei synchronen Replikaten](#readScale).
+- [Erstellen Sie die verfügbarkeitsgruppe mit zwei synchronen Replikaten](#readScale).
 
 <a name="threeSynch"></a>
 

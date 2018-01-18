@@ -15,26 +15,26 @@ dev_langs: XML
 helpviewer_keywords: sample applications [DTA]
 ms.assetid: 1ed28805-a9ae-43ca-92da-101ba0c0c43a
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af23e30458051ee42f961d76f8ff74149d458a27
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e4d9d8aaf26114afae1bcf35ab1ea0288e6893d1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="xml-input-file-samples-dta"></a>Beispiele für XML-Eingabedateien (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dieser Abschnitt enthält XML-beispieleingabedateien, die mit der **Dta** -Befehlszeilentool. Dieses Tool ist eine der Benutzeroberflächen des Datenbankoptimierungsratgebers. Dabei handelt es sich um ein Tool, mit dem Sie Datenbanken zur Verbesserung der Abfrageleistung optimieren können. Der Datenbankoptimierungsratgeber analysiert die Auswirkungen einer Arbeitsauslastung auf eine oder mehrere Datenbanken. Eine Arbeitsauslastung ist ein Satz von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die für zu optimierende Datenbanken ausgeführt werden. Wenn der Datenbankoptimierungsratgeber die Analyse der Auswirkungen der Arbeitsauslastung beendet hat, erstellt er eine Empfehlung zum Hinzufügen von Indizes, indizierten Sichten oder Partitionierungsstrategien, mit denen sich die Abfrageleistung Ihrer Datenbanken verbessern lässt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Beispiel für eine einfache XML-Eingabedatei &#40;DTA&#41;](../../tools/dta/simple-xml-input-file-sample-dta.md)  
+-   [Beispiel für einfache XML-Eingabedatei &#40; DTA &#41;](../../tools/dta/simple-xml-input-file-sample-dta.md)  
   
--   [Beispiel für eine XML-Eingabedatei mit Inlinearbeitsauslastung &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md)  
+-   [Beispiel für die XML-Eingabedatei mit Inlinearbeitsauslastung &#40; DTA &#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md)  
   
--   [Beispiel für eine XML-Eingabedatei mit benutzerdefinierter Konfiguration &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)  
+-   [Beispiel für die XML-Eingabedatei mit der benutzerdefinierten Konfiguration &#40; DTA &#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbankoptimierungsratgeber](../../relational-databases/performance/database-engine-tuning-advisor.md)  

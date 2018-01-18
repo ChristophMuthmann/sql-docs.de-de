@@ -13,25 +13,25 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 93320cb43be5f499917c16843d39f1aeee9b1336
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f1b29eb621016e256cc0e5633de0e34089432571
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="report-server-properties-log-on-tab"></a>Berichtsserver-Eigenschaften (Registerkarte Anmelden)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Verwenden der **anmelden** auf der Registerkarte die **Berichtsservereigenschaften** (Dialogfeld), um das vom Berichtsserver-Diensts verwendete Konto anzugeben und zu starten und Beenden des Diensts.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Lokales System**  
  Geben Sie ein lokales Systemkonto an, das kein Kennwort erfordert. Das lokale Systemkonto kann sich allerdings einschränkend auf die Zusammenarbeit mit anderen Servern auswirken. Dies hängt von den Privilegien ab, die dem Konto erteilt wurden.  
   
  **Dieses Konto**  
- Geben Sie ein lokales oder ein Domänenbenutzerkonto an, das die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung verwendet. [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt, ein Domänenbenutzerkonto mit minimalen Berechtigungen für Dienste zu verwenden. Informationen zum Auswählen eines Kontos finden Sie in der Onlinedokumentation unter "Einrichten von Windows-Dienstkonten".  
+ Geben Sie ein lokales oder ein Domänenbenutzerkonto an, das die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung verwendet. [!INCLUDE[msCoName](../../includes/msconame-md.md)]verwenden ein Domänenbenutzerkonto mit minimalen Berechtigungen für Dienste wird empfohlen. Informationen zum Auswählen eines Kontos finden Sie in der Onlinedokumentation unter "Einrichten von Windows-Dienstkonten".  
   
  **Kontoname**  
  Geben Sie den Kontonamen des lokalen oder Domänenbenutzers an.  

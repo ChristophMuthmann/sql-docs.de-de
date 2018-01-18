@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Filegroup element [DTA]
 ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be57bc08269af8710ae8702f63a35455c02bb960
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0e7517d17dea7e452e282debd0c9a2c63a92f93b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="filegroup-element-for-index-dta"></a>Filegroup-Element für Index (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Gibt die Dateigruppe an, auf dem der Index für eine benutzerspezifische Konfiguration erstellt werden.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|**string**, unbegrenzte Länge.|  
 |**Standardwert**|Keine.|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
-|**Übergeordnetes Element**|[Index-Element &#40;DTA&#41;](../../tools/dta/index-element-dta.md)|  
+|**Übergeordnetes Element**|[Index-Element &#40; DTA &#41;](../../tools/dta/index-element-dta.md)|  
 |**Untergeordnete Elemente**|Keine.|  
   
 ## <a name="example"></a>Beispiel  

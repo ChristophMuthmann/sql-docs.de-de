@@ -15,13 +15,13 @@ ms.assetid: 7ab77d42-8e84-4396-aa7f-47e2b84d59b2
 caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f3e79179b53e404105c722055a5e3672e8e8cc2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f9363e03e665d8806a7e3cd7a75289deb579da84
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="install-distributed-replay---overview"></a>Install Distributed Replay - Overview
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Verwenden Sie die folgenden Themen zur Installation der Distributed Replay-Funktion.  

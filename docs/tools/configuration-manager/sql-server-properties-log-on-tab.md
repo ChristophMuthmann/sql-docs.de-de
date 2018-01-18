@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 623948bfc41640e1aebe0b492872fbc095c056f6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cb658dd1907f8f78259c82b89f8aaeef3616906d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-properties-log-on-tab"></a>SQL Server-Eigenschaften (Registerkarte Anmelden)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Verwenden der **anmelden** auf der Registerkarte die **SQL Server-Eigenschaften** (Dialogfeld), das von verwendete Konto anzugeben der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst, das Kennwort des Kontos zu ändern und zu starten und beenden Sie den Dienst. Die Kennwortänderung eines Kontos wird sofort wirksam.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/21/2017
 >   
 >  Weitere Informationen über das Auswählen eines Kontos zum Ausführen des Dienstes finden Sie unter "Einrichten von Windows-Dienstkonten" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Integriertes Konto**  
  **Lokales System**  
  -   Geben Sie das lokale Systemkonto an. Dieses Konto erfordert kein Kennwort. Das lokale Systemkonto kann die Zusammenarbeit mit anderen Servern verhindern. Dies hängt von den Privilegien ab, die dem Konto erteilt wurden.  

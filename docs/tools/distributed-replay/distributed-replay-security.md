@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c49b865f8db2b57e95f4c2c5746e1d40090b15d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3779b55923a5fd3ac803060c0ed8990dcffcead8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay-Sicherheit
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Bevor Sie installieren und Verwenden der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Funktion, lesen Sie die wichtigen Sicherheitsinformationen in diesem Thema. In diesem Thema werden die nach der Installation auszuführenden Sicherheitskonfigurationsschritte beschrieben, die erforderlich sind, bevor Sie Distributed Replay verwenden können. Zudem werden in diesem Thema wichtige Überlegungen im Hinblick auf Datenschutz und wichtige Schritte zum Entfernen von Elementen beschrieben.  

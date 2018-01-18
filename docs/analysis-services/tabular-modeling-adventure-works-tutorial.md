@@ -1,7 +1,7 @@
 ---
-title: Tabellenmodellierung (Adventure Works-Lernprogramm) | Microsoft Docs
+title: "Tabellenmodellierung (Kompatibilitätsgrad 1200) | Microsoft Docs"
 ms.custom: 
-ms.date: 04/19/2017
+ms.date: 01/17/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -23,13 +23,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: f8c49a838abe5cc6948c59f3d0d67984122136a0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 20248d68dc0371ef158f287d1f3a8bc9e87360d3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="tabular-modeling-adventure-works-tutorial"></a>Tabellenmodellierung (Adventure Works-Lernprogramm)
+# <a name="tabular-modeling-1200-compatibility-level"></a>Tabellenmodellierung (Kompatibilitätsgrad 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Dieses Lernprogramm enthält Lektionen zum Erstellen einer Analysis Services-Tabellenmodell an die [Kompatibilitätsgrad 1200](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) mit [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt), und die Bereitstellung Ihres Modells in einer Analysis Services Server lokal oder in Azure.  
@@ -66,7 +66,7 @@ Die Lektionen ist, führt Sie durch die Erstellung eines basistabellenmodells, d
   
 Dieses Lernprogramm enthält keine Lektionen oder Informationen zum Verwalten einer Datenbank für Tabellenmodelle unter Verwendung von SQL Server Management Studio oder das Verwenden einer Berichterstellungs-Clientanwendung zur Herstellung einer Verbindung mit einem bereitgestellten Modell zum Durchsuchen von Modelldaten.  
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
 Um dieses Lernprogramm abzuschließen, benötigen Sie die folgenden Voraussetzungen:  
   
 -   Die neueste Version von [! UMFASSEN[SsBIDevStudioFull](../ssdt/download-sql-server-data-tools-ssdt.md).
@@ -87,17 +87,17 @@ Dieses Tutorial umfasst die folgenden Lektionen:
 |----------|------------------------------|  
 |[Lektion 1: Erstellen eines neuen Tabellenmodellprojekts](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)|10 Minuten|  
 |[Lektion 2: Hinzufügen von Daten](../analysis-services/lesson-2-add-data.md)|20 Minuten|  
-|[Lesson 3: Mark as Date Table (Lektion 3: Markieren als Datumstabelle)](../analysis-services/lesson-3-mark-as-date-table.md)|3 Minuten|  
+|[Lektion 3: Markieren Sie als Date-Tabelle](../analysis-services/lesson-3-mark-as-date-table.md)|3 Minuten|  
 |[Lektion 4: Erstellen von Beziehungen](../analysis-services/lesson-4-create-relationships.md)|10 Minuten|  
 |[Lektion 5: Erstellen von berechneten Spalten](../analysis-services/lesson-5-create-calculated-columns.md)|15 Minuten|
 |[Lektion 6: Erstellen von Measures](../analysis-services/lesson-6-create-measures.md)|30 Minuten|  
-|[Lesson 7: Create Key Performance Indicators (Lektion 7: Erstellen von Leistungskennzahlen)](../analysis-services/lesson-7-create-key-performance-indicators.md)|15 Minuten|  
+|[Lektion 7: Erstellen von Leistungskennzahlen](../analysis-services/lesson-7-create-key-performance-indicators.md)|15 Minuten|  
 |[Lektion 8: Erstellen von Perspektiven](../analysis-services/lesson-8-create-perspectives.md)|5 Minuten|  
 |[Lektion 9: Erstellen von Hierarchien](../analysis-services/lesson-9-create-hierarchies.md)|20 Minuten|  
 |[Lektion 10: Erstellen von Partitionen](../analysis-services/lesson-10-create-partitions.md)|15 Minuten|  
 |[Lektion 11: Erstellen von Rollen](../analysis-services/lesson-11-create-roles.md)|15 Minuten|  
-|[Lesson 12: Analyze in Excel (Lektion 12: Analysieren in Excel)](../analysis-services/lesson-12-analyze-in-excel.md)|20 Minuten| 
-|[Lesson 13: Deploy (Lektion 13: Bereitstellen)](../analysis-services/lesson-13-deploy.md)|5 Minuten|  
+|[Lektion 12: In Excel analysieren](../analysis-services/lesson-12-analyze-in-excel.md)|20 Minuten| 
+|[Lektion 13: Bereitstellen](../analysis-services/lesson-13-deploy.md)|5 Minuten|  
   
 ## <a name="supplemental-lessons"></a>Ergänzende Lektionen  
 Dieses Tutorial umfasst außerdem [ergänzende Lektionen](http://msdn.microsoft.com/library/2018456f-b4a6-496c-89fb-043c62d8b82e). Die Themen in diesem Abschnitt sind nicht erforderlich, um das Lernprogramm abzuschließen, aber sie können das Verständnis der erweiterten Funktionen zum Erstellen eines Tabellenmodells erleichtern.  

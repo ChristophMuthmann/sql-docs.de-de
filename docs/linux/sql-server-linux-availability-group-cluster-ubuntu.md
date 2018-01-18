@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 501fd7eac7f7905a03a2861a462d4c1179beb15c
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 797cc24d46fc5a51f514508dd35226d07cda74f4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu-Cluster und die Verfügbarkeitsgruppenressource konfigurieren
 
@@ -32,7 +32,7 @@ Dieses Dokument erläutert, wie Sie einen Cluster mit drei Knoten auf Ubuntu ers
 
 In den folgenden Abschnitten exemplarisch die Schritte zum Einrichten einer Lösung mit Failovercluster. 
 
-## <a name="roadmap"></a>Roadmap für die
+## <a name="roadmap"></a>Roadmap
 
 Die Schritte zum Erstellen einer verfügbarkeitsgruppe auf Linux-Servern zwecks hoher Verfügbarkeit unterscheiden sich von den Schritten in einem Windows Server-Failovercluster. Die folgende Liste beschreibt auf hoher Ebene die Schritte aus: 
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. Erstellen des Clusters an. 
 
    >[!WARNING]
-   >Aufgrund eines bekannten Problems, die Hersteller des clustering untersuchen, beginnend schlägt der Cluster ("Pcs Cluster Start") mit folgenden Fehler fehl. Dies ist, da die Protokolldatei im /etc/corosync/corosync.conf konfigurierten falsch ist. Zur Umgehung dieses Problems die Protokolldatei zu ändern: /var/log/corosync/corosync.log. Alternativ können Sie die /var/log/cluster/corosync.log-Datei erstellen.
+   >Aufgrund eines bekannten Problems, die Hersteller des clustering untersuchen, beginnend schlägt der Cluster ("Pcs Cluster Start") mit folgenden Fehler fehl. Dies ist die Protokolldatei in /etc/corosync/corosync.conf der wird erstellt, wenn die Cluster-Setup-Befehlsoption wird ausgeführt, ist falsch konfiguriert. Zur Umgehung dieses Problems die Protokolldatei zu ändern: /var/log/corosync/corosync.log. Alternativ können Sie die /var/log/cluster/corosync.log-Datei erstellen.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 

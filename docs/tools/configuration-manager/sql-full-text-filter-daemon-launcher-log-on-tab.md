@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 13e260f9-a75f-430b-88a3-959ddcead8fe
 caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 816ec9e88b5786ef9fc5c59b17a2ccb4cfcd4934
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3d1c6b9e4c73f1df1aafc3940a44b51149a7121b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-full-text-filter-daemon-launcher-log-on-tab"></a>Startprogramm für SQL-Volltextfilterdaemon (Registerkarte Anmelden)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], SQL Volltext-Filter-Startprogramm (FDHOST-Startprogramm) Inanspruchnahme von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Volltext-Suchdienst. Dieser Dienst muss ausgeführt werden, wenn Sie die Volltextsuche verwenden. Informationen über die Prozesse des Filterdaemonhosts finden Sie unter "Architektur der Volltextsuche" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 >   
 >  Weitere Informationen über das Auswählen eines Kontos zum Ausführen des Dienstes finden Sie unter "Einrichten von Windows-Dienstkonten" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Integriertes Konto**  
  **Lokales System**  
  Geben Sie das lokale Systemkonto an. Dieses Konto erfordert kein Kennwort. Das lokale Systemkonto kann die Zusammenarbeit mit anderen Servern verhindern. Dies hängt von den Privilegien ab, die dem Konto erteilt wurden.  

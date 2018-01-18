@@ -30,23 +30,23 @@ helpviewer_keywords:
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 caps.latest.revision: "222"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f1b9fd81237093da7296d85efdbe9472da711315
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1598d16877f42d0aef9f4a997e47492bd3fee1c7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="bcp-utility"></a>Hilfsprogramms bcp
+# <a name="bcp-utility"></a>bcp (Hilfsprogramm)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > Inhalt im Zusammenhang mit früheren Versionen von SQL Server, finden Sie unter [Bcp (Hilfsprogramm)](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx).
 
 
-  Mit dem Hilfsprogramm **bcp**( **B**ulk **C**opy**P**rogram) werden Daten per Massenvorgang zwischen einer Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und einer Datendatei in einem benutzerdefinierten Format kopiert. Das Hilfsprogramm **bcp** kann verwendet werden, um große Mengen neuer Zeilen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tabellen zu importieren oder um Daten aus Tabellen in Datendateien zu exportieren. Außer in Verbindung mit der Option **queryout** sind für das Hilfsprogramm keine Kenntnisse von [!INCLUDE[tsql](../includes/tsql-md.md)]erforderlich. Um Daten in eine Tabelle zu importieren, müssen Sie entweder eine für diese Tabelle erstellte Formatdatei verwenden oder die Struktur der Tabelle und die Art der Daten kennen, die in den Tabellenspalten zulässig sind.  
+  Mit dem Hilfsprogramm **bcp**( **B**ulk **C**opy**P**rogram) werden Daten per Massenvorgang zwischen einer Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und einer Datendatei in einem benutzerdefinierten Format kopiert. Das Hilfsprogramm **bcp** kann verwendet werden, um große Mengen neuer Zeilen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tabellen zu importieren oder um Daten aus Tabellen in Datendateien zu exportieren. Außer in Verbindung mit der Option **queryout** sind für das Hilfsprogramm keine Kenntnisse von [!INCLUDE[tsql](../includes/tsql-md.md)] erforderlich. Um Daten in eine Tabelle zu importieren, müssen Sie entweder eine für diese Tabelle erstellte Formatdatei verwenden oder die Struktur der Tabelle und die Art der Daten kennen, die in den Tabellenspalten zulässig sind.  
   
  ![Thema Linksymbol](../database-engine/configure-windows/media/topic-link.gif "Thema Linksymbol") zu den Syntaxkonventionen für die verwendeten die **Bcp** -Syntax finden Sie unter [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41; ](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
@@ -91,7 +91,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 ## <a name="arguments"></a>Argumente  
  ***data_file***<a name="data_file"></a>  
- Der vollständige Pfad der Datendatei. Wenn Daten in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]massenimportiert werden, enthält die Datendatei die Daten, die in die angegebene Tabelle oder Sicht kopiert werden sollen. Beim Massenexportieren aus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]enthält die Datendatei die Daten, die aus der Tabelle oder Sicht kopiert wurden. Der Pfad kann 1 bis 255 Zeichen enthalten. Die Datendatei kann maximal 2^63-1 Zeilen enthalten.  
+ Der vollständige Pfad der Datendatei. Wenn Daten in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] massenimportiert werden, enthält die Datendatei die Daten, die in die angegebene Tabelle oder Sicht kopiert werden sollen. Beim Massenexportieren aus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] enthält die Datendatei die Daten, die aus der Tabelle oder Sicht kopiert wurden. Der Pfad kann 1 bis 255 Zeichen enthalten. Die Datendatei kann maximal 2^63-1 Zeilen enthalten.  
   
  ***database_name***<a name="db_name"></a>  
  Der Name der Datenbank, in der die angegebene Tabelle oder Sicht vorhanden ist. Wenn kein Name angegeben ist, wird diese Datenbank als Standarddatenbank des Benutzers verwendet.  
@@ -123,14 +123,14 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  Der Name der Zielsicht, wenn Daten in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kopiert werden (**in**), oder der Name der Quellsicht, wenn Daten aus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kopiert werden (**out**). Als Zielsichten können nur Sichten verwendet werden, in denen alle Spalten auf dieselbe Tabelle verweisen. Weitere Informationen zu den Einschränkungen beim Kopieren von Daten in Sichten finden Sie unter [INSERT &#40;Transact-SQL&#41;](../t-sql/statements/insert-transact-sql.md).  
   
  **-a** ***packet_size***<a name="a"></a>  
- Gibt an, wie viele Bytes pro Netzwerkpaket an den Server bzw. vom Server gesendet werden. Eine Serverkonfigurationsoption kann mithilfe von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (oder der gespeicherten Systemprozedur **sp_configure** ) festgelegt werden. Die Serverkonfigurationsoption kann jedoch mithilfe dieser Option einzeln überschrieben werden. *packet_size* kann einen Wert von 4096 bis 65535 Bytes annehmen. Der Standardwert ist 4096.  
+ Gibt an, wie viele Bytes pro Netzwerkpaket an den Server bzw. vom Server gesendet werden. Eine Serverkonfigurationsoption kann mithilfe von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (oder der gespeicherten Systemprozedur **sp_configure**) festgelegt werden. Die Serverkonfigurationsoption kann jedoch mithilfe dieser Option einzeln überschrieben werden. *packet_size* kann einen Wert von 4096 bis 65535 Bytes annehmen. Der Standardwert ist 4096.  
   
  Durch einen höheren Wert für die Paketgröße kann die Leistung von Massenkopiervorgängen verbessert werden. Wenn eine größere Paketgröße angefordert, aber nicht erteilt wird, wird die Standardeinstellung verwendet. Die vom Hilfsprogramm **bcp** generierte Leistungsstatistik zeigt die verwendete Paketgröße an.  
   
  **-b** ***batch_size***<a name="b"></a>  
  Gibt die Anzahl von Zeilen pro importierten Datenbatch an. Jeder Batch wird als separate Transaktion importiert und protokolliert, für die erst dann ein Commit ausgeführt wird, nachdem der gesamte Batch importiert wurde. Standardmäßig werden alle Zeilen in der Datendatei als jeweils ein Batch importiert. Um die Zeilen auf mehrere Batches aufzuteilen, geben Sie mit *batch_size* eine Batchgröße an, die kleiner ist als die Anzahl von Zeilen in der Datendatei. Wenn die Transaktion für einen Batch einen Fehler erzeugt, wird nur für die Einfügungen aus dem aktuellen Batch ein Rollback ausgeführt. Auf Batches, die bereits durch Transaktionen importiert wurden, für die ein Commit ausgeführt wurde, wirken sich spätere Fehler nicht aus.  
   
- Verwenden Sie diese Option nicht in Verbindung mit der Option **-h "**ROWS_PER_BATCH **=***bb***"** .  
+ Verwenden Sie diese Option nicht in Verbindung mit der **-h "**ROWS_PER_BATCH  **= ***bb***"** Option.  
  
  **-c**<a name="c"></a>  
  Führt den Vorgang mithilfe eines Zeichendatentyps aus. Diese Option fordert für keines der Felder zu einer Eingabe auf. Es werden folgende Einstellungen verwendet: **char** als Speichertyp, keine Präfixe, **\t** (Tabstoppzeichen) als Feldtrennzeichen und **\r\n** (Zeilenumbruchzeichen) als Zeilenabschlusszeichen. **-c** ist nicht kompatibel mit **-w**.  
@@ -143,15 +143,15 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > [!NOTE]
 > Es wird empfohlen, für jede Spalte in einer Formatdatei einen Sortierungsnamen anzugeben, außer wenn die 65001-Option Priorität vor der Angabe von Sortierung/Codepage haben soll.
   
-|Codepagewert|Description|  
+|Codepagewert|Beschreibung|  
 |---------------------|-----------------|  
-|ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252).|  
+|ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252).|  
 |OEM|Standardcodepage, die vom Client verwendet wird. Die Standardcodepage, die verwendet wird, wenn **-C** nicht angegeben wird.|  
 |RAW|Es erfolgt keine Konvertierung von einer Codepage zu einer anderen. Dies ist die schnellste Option, da keine Konvertierung vorgenommen wird.|  
 |*Codepage*|Bestimmte Codepagenummer, z. B. 850.<br /><br /> In Versionen vor Version 13 ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) wird die Codepage 65001 (UTF-8-Codierung) nicht unterstützt. Ab Version 13 kann die UTF-8-Codierung in frühere Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]importiert werden.|  
   
  **-d** ***database_name***<a name="d"></a>   
- Gibt die Datenbank an, mit der eine Verbindung hergestellt werden soll. bcp.exe stellt standardmäßig eine Verbindung mit der Standarddatenbank des Benutzers her. Wenn **-d** *Datenbankname* und ein dreiteiliger Name (*Datenbankname.schema.table*, passed as the first parameter to bcp.exe) is specified, an error will occur because you cannot specify the database name twice.Wenn *Datenbankname* mit einem Bindestrich (-) oder einem Schrägstrich (/) beginnt, fügen Sie keinen Leerraum zwischen **-d** und dem Datenbanknamen hinzu.  
+ Gibt die Datenbank an, mit der eine Verbindung hergestellt werden soll. bcp.exe stellt standardmäßig eine Verbindung mit der Standarddatenbank des Benutzers her. Wenn **-d** *Datenbankname* und ein dreiteiliger Name (*Datenbankname.Schema.Tabelle*, als erster Parameter an bcp.exe übergeben) angegeben werden, tritt ein Fehler auf, da Sie den Datenbanknamen nicht zweimal angeben können. Wenn *Datenbankname* mit einem Bindestrich (-) oder einem Schrägstrich (/) beginnt, fügen Sie keinen Leerraum zwischen **-d** und dem Datenbanknamen hinzu.  
   
  **-e** ***Fehlerdatei***<a name="e"></a>  
  Gibt den vollständigen Pfad einer Fehlerdatei an, in der alle Zeilen gespeichert werden, die das **bcp** -Hilfsprogramm nicht von der Datei in die Datenbank übertragen kann. Die durch den **bcp** -Befehl generierten Fehlermeldungen werden an die Arbeitsstation des Benutzers gesendet. Wenn diese Option nicht verwendet wird, wird keine Fehlerdatei erstellt.  
@@ -184,7 +184,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 **-h** ***"load hints***[ ,... *n*]**"**<a name="h"></a> : Gibt den oder die Hinweise an, die beim Massenimportieren von Daten in eine Tabelle oder Sicht verwendet werden sollen.  
   
-* **ORDER**importiert werden (***Spalte*[ASC | DESC] [**,**...*n*]**)**  
+* **Reihenfolge**(***Spalte * [ASC | DESC] [**,**... *n*]**)**  
 Die Sortierreihenfolge der Daten in der Datendatei. Die Leistung des Massenkopierens wird verbessert, wenn die zu importierenden Daten entsprechend dem gruppierten Index der Tabelle (falls vorhanden) sortiert sind. Wenn die Datendatei in einer anderen Reihenfolge, d. h. nicht nach einem gruppierten Indexschlüssel sortiert ist, oder wenn es keinen gruppierten Index für die Tabelle gibt, wird die ORDER-Klausel ignoriert. Die angegebenen Spaltennamen müssen gültige Spaltennamen in der Zieltabelle sein. Standardmäßig geht **bcp** davon aus, dass die Datendatei nicht sortiert ist. Beim optimierten Massenimport wird in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auch überprüft, ob die importierten Daten sortiert sind.  
   
 * **ROWS_PER_BATCH** **=** ***bb***  
@@ -197,7 +197,7 @@ Die ungefähre Anzahl von Kilobytes (KB) an Daten pro Batch (als *cc*). In der S
 Gibt an, dass eine Massenupdatesperre auf Tabellenebene für die Dauer des Massenladens aktiviert wird. Andernfalls wird eine Sperre auf Zeilenebene aktiviert. Dieser Hinweis verbessert die Leistung beträchtlich, da weniger Sperrkonflikte für die Tabelle auftreten, wenn diese während des Massenkopiervorgangs gesperrt wird. Eine Tabelle kann gleichzeitig von mehreren Clients geladen werden, wenn die Tabelle keine Indizes aufweist und **TABLOCK** angegeben ist. Standardmäßig wird das Sperrverhalten durch die Tabellenoption **table lock on bulk load**bestimmt.  
   
   > [!NOTE]
-  > Wenn die Zieltabelle ein gruppierter Columnstore-Index ist, ist der TABLOCK-Hinweis zum Laden durch mehrere Clients parallel nicht erforderlich, da jedem parallel ausgeführten Thread eine eigene Zeilengruppe im Index zugewiesen wird, in die er Daten lädt. Details finden Sie in den Grundlagenthemen zum Columnstore-Index.
+  > Wenn die Zieltabelle ein gruppierter Columnstore-Index ist, ist der TABLOCK-Hinweis zum Laden durch mehrere Clients parallel nicht erforderlich, da jedem parallel ausgeführten Thread eine eigene Zeilengruppe im Index zugewiesen wird, in die er Daten lädt. Details finden Sie in den Grundlagenthemen zum Columnstore-Index,
   
   **CHECK_CONSTRAINTS**  
   Gibt an, dass alle Einschränkungen, die für die Zieltabelle oder -sicht gelten, während des Massenimportvorgangs überprüft werden müssen. Ohne den CHECK_CONSTRAINTS-Hinweis werden alle CHECK- und FOREIGN KEY-Einschränkungen ignoriert. Nach dem Vorgang wird die Einschränkung für die Tabelle als nicht vertrauenswürdig markiert.  
@@ -207,7 +207,7 @@ Gibt an, dass eine Massenupdatesperre auf Tabellenebene für die Dauer des Masse
   
   Zu einem bestimmten Zeitpunkt sollten Sie allerdings die Einschränkungen für die gesamte Tabelle überprüfen. Wenn die Tabelle vor dem Massenimportvorgang nicht leer war, überschreitet der Aufwand der erneuten Überprüfung möglicherweise denjenigen der Anwendung von CHECK-Einschränkungen auf die inkrementellen Daten. Daher empfiehlt es sich normalerweise, die Einschränkungsüberprüfung beim inkrementellen Massenimportieren zu aktivieren.  
   
-  Die Deaktivierung von Einschränkungen (das Standardverhalten) kann z. B. erwünscht sein, wenn die Eingabedaten Zeilen enthalten, die Einschränkungen verletzen. Wenn CHECK-Einschränkungen deaktiviert sind, können Sie die Daten importieren und anschließend [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen verwenden, um ungültige Daten zu entfernen.  
+  Die Deaktivierung von Einschränkungen (das Standardverhalten) kann z. B. erwünscht sein, wenn die Eingabedaten Zeilen enthalten, die Einschränkungen verletzen. Wenn CHECK-Einschränkungen deaktiviert sind, können Sie die Daten importieren und anschließend [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen verwenden, um ungültige Daten zu entfernen.  
   
   > [!NOTE]
   > **bcp** erzwingt nun Datenüberprüfungen, die dazu führen können, dass Skripts einen Fehler erzeugen, wenn sie für ungültige Daten in einer Datendatei ausgeführt werden.
@@ -281,7 +281,7 @@ Führt den Massenkopiervorgang mithilfe der systemeigenen (Datenbank-)Datentypen
  Weitere Informationen finden Sie unter [Hinweise](#remarks)weiter unten in diesem Thema.  
   
  **-r** ***Zeilenabschluss***<a name="r"></a>  
- Gibt das Zeilenabschlusszeichen an. Der Standardwert ist **\n** (Zeilenumbruchzeichen). Mit diesem Parameter können Sie das standardmäßige Zeilenabschlusszeichen überschreiben. Weitere Informationen finden Sie unter [Specify Field and Row Terminators &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
+ Gibt das Zeilenabschlusszeichen an. Die Standardeinstellung ist  **\n**  (neue Zeilenumbruchzeichen). Mit diesem Parameter können Sie das standardmäßige Zeilenabschlusszeichen überschreiben. Weitere Informationen finden Sie unter [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
  Wenn Sie das Zeilenabschlusszeichen in Hexadezimalschreibweise in einem bcp.exe-Befehl angeben, wird der Wert bei 0x00 abgeschnitten. Wenn Sie 0x410041 angeben, wird z. B. 0x41 verwendet.  
   
@@ -290,7 +290,7 @@ Führt den Massenkopiervorgang mithilfe der systemeigenen (Datenbank-)Datentypen
  **-R**<a name="R"></a>  
  Gibt an, dass beim Massenkopieren von Währungs-, Datums- und Zeitdaten in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] das Länderformat verwendet wird, das durch die Gebietsschemaeinstellung des Clientcomputers definiert wird. Standardmäßig werden Ländereinstellungen ignoriert.  
   
- **-S** ***Server_name*** [\\***Instance_name***]<a name="S"> </a> gibt die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für die Verbindung. Wenn kein Server angegeben wird, stellt das Hilfsprogramm **bcp** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf dem lokalen Computer her. Diese Option ist erforderlich, wenn **bcp** von einem Remotecomputer im Netzwerk oder von einer lokalen benannten Instanz ausgeführt wird. Um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einem Server herzustellen, geben Sie lediglich *Servername*an. Um eine Verbindung mit der benannten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]herzustellen, geben Sie *Servername***\\***Instanzname*an.  
+ **-S** ***Server_name*** [\\***Instance_name***]<a name="S"> </a> gibt die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für die Verbindung. Wenn kein Server angegeben wird, stellt das Hilfsprogramm **bcp** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf dem lokalen Computer her. Diese Option ist erforderlich, wenn **bcp** von einem Remotecomputer im Netzwerk oder von einer lokalen benannten Instanz ausgeführt wird. Um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einem Server herzustellen, geben Sie lediglich *Servername* an. Verbindung mit einer benannten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], geben Sie *Server_name***\\***Instance_name*.  
   
  **-t** ***Feldabschluss***<a name="t"></a>  
  Gibt das Feldabschlusszeichen an. Der Standardwert ist **\t** (Tabstoppzeichen). Mit diesem Parameter können Sie das standardmäßige Feldabschlusszeichen überschreiben. Weitere Informationen finden Sie unter [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
@@ -309,7 +309,7 @@ Führt den Massenkopiervorgang mithilfe der systemeigenen (Datenbank-)Datentypen
  Gibt die Anmelde-ID an, die zum Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verwendet wird.  
   
 > [!IMPORTANT]
-> Wenn das Hilfsprogramm **bcp** die Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mithilfe integrierter Sicherheit über eine vertrauenswürdige Verbindung herstellt, verwenden Sie die Option **-T** (vertrauenswürdige Verbindung) anstelle der Kombination aus *Benutzername* und *Kennwort* . Wenn das Hilfsprogramm **bcp** eine Verbindung mit SQL-Datenbank oder SQL Data Warehouse herstellt, wird die Windows-Authentifizierung oder Azure Active Directory-Authentifizierung nicht unterstützt. Verwenden Sie die Optionen **-U** und **-P** .
+> Wenn das Hilfsprogramm **bcp** die Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mithilfe integrierter Sicherheit über eine vertrauenswürdige Verbindung herstellt, verwenden Sie die Option **-T** (vertrauenswürdige Verbindung) anstelle der Kombination aus *Benutzername* und *Kennwort*. Wenn das Hilfsprogramm **bcp** eine Verbindung mit SQL-Datenbank oder SQL Data Warehouse herstellt, wird die Windows-Authentifizierung oder Azure Active Directory-Authentifizierung nicht unterstützt. Verwenden Sie die Optionen **-U** und **-P** .
   
  **-v**<a name="v"></a>  
  Meldet die Versionsnummer und Copyrightinformationen des **bcp** -Hilfsprogramms.  
@@ -347,7 +347,7 @@ Führt den Massenkopiervorgang mithilfe der systemeigenen (Datenbank-)Datentypen
 Das Hilfsprogramm „bcp“ kann auch separat aus dem [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/en-us/download/details.aspx?id=52676)heruntergeladen werden.  Wählen Sie entweder `ENU\x64\MsSqlCmdLnUtils.msi` oder `ENU\x86\MsSqlCmdLnUtils.msi`aus.
 
   
- XML-Formatdateien werden nur unterstützt, wenn die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tools zusammen mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client installiert werden.  
+ XML-Formatdateien werden nur unterstützt, wenn die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Tools zusammen mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client installiert werden.  
   
  Informationen zum Speicherort und zum Verwenden des Hilfsprogramms **bcp** sowie zu den für Eingabeaufforderungs-Hilfsprogramme geltenden Syntaxkonventionen finden Sie unter [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbankmodul&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   
@@ -356,7 +356,7 @@ Das Hilfsprogramm „bcp“ kann auch separat aus dem [Microsoft SQL Server 2016
  Informationen dazu, wann Zeileneinfügevorgänge, die durch den Massenimport ausgeführt werden, im Transaktionsprotokoll protokolliert werden, finden Sie unter [Voraussetzungen für die minimale Protokollierung beim Massenimport](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 ## <a name="native-data-file-support"></a>Systemeigene Datendateiunterstützung  
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]unterstützt das **bcp** -Hilfsprogramm nur native Datendateien, die mit [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]und [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]kompatibel sind.  
+ In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] unterstützt das **bcp**-Hilfsprogramm nur native Datendateien, die mit [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] und [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] kompatibel sind.  
   
 ## <a name="computed-columns-and-timestamp-columns"></a>Berechnete Spalten und Zeitstempel-Spalten  
  In der zu importierenden Datendatei enthaltene Werte für berechnete oder **timestamp** -Spalten werden ignoriert. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] weist Werte automatisch zu. Wenn die Datendatei keine Werte für die berechneten oder **timestamp** -Spalten der Tabelle enthält, geben Sie mithilfe einer Formatdatei an, dass die berechneten oder **timestamp** -Spalten beim Importieren von Daten ausgelassen werden sollen. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] weist diesen Spalten automatisch Werte zu.  
@@ -364,7 +364,7 @@ Das Hilfsprogramm „bcp“ kann auch separat aus dem [Microsoft SQL Server 2016
  Berechnete und **timestamp** -Spalten werden wie gewohnt aus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in eine Datendatei massenkopiert.  
   
 ## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>Angeben von Bezeichnern mit Leerzeichen oder Anführungszeichen  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Bezeichner können Zeichen wie z.B. eingebettete Leerzeichen und Anführungszeichen enthalten. Diese Bezeichner müssen folgendermaßen behandelt werden:  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Bezeichner können Zeichen wie z. B. eingebettete Leerzeichen und Anführungszeichen enthalten. Diese Bezeichner müssen folgendermaßen behandelt werden:  
   
 -   Wenn Sie an der Eingabeaufforderung einen Bezeichner oder Dateinamen angeben, der ein Leerzeichen oder ein Anführungszeichen enthält, müssen Sie den Bezeichner in Anführungszeichen ("") einschließen.  
   
@@ -378,7 +378,7 @@ Das Hilfsprogramm „bcp“ kann auch separat aus dem [Microsoft SQL Server 2016
   
 -   Bei Besitzer-, Tabellen- oder Sichtnamen, die eingebettete Leerzeichen oder Anführungszeichen enthalten, ist Folgendes möglich:  
   
-    -   Angeben der Option **-q** .  
+    -   Angeben der Option **-q** oder  
   
     -   Einschließen des Besitzer-, Tabellen- oder Sichtnamens in eckige Klammern ([]) innerhalb der Anführungszeichen.  
   
@@ -418,12 +418,12 @@ Das Hilfsprogramm „bcp“ kann auch separat aus dem [Microsoft SQL Server 2016
 -   Mithilfe der Option **-E** importieren Sie Identitätswerte aus einer Datendatei.  
   
 > [!NOTE]
-> ALTER TABLE-Berechtigungen für die Zieltabelle sind erst seit [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]erforderlich. Diese neue Anforderung kann dazu führen, dass **bcp** -Skripts, die keine Trigger und Einschränkungsüberprüfungen erzwingen, einen Fehler erzeugen, wenn das Benutzerkonto nicht über ALTER TABLE-Berechtigungen für die Zieltabelle verfügt.
+> ALTER TABLE-Berechtigungen für die Zieltabelle sind erst seit [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] erforderlich. Diese neue Anforderung kann dazu führen, dass **bcp** -Skripts, die keine Trigger und Einschränkungsüberprüfungen erzwingen, einen Fehler erzeugen, wenn das Benutzerkonto nicht über ALTER TABLE-Berechtigungen für die Zieltabelle verfügt.
   
 ## <a name="character-mode--c-and-native-mode--n-best-practices"></a>Zeichenmodus (-c)- und einheitlicher Modus (-n) – Bewährte Methoden  
  Dieser Abschnitt beinhaltet Empfehlungen für den Zeichenmodus (-c) und den einheitlichen Modus (-n).  
   
--   (Administrator/Benutzer) Wenn möglich, verwenden Sie das einheitliche Format (-n), um das Trennzeichenproblem zu vermeiden. Verwenden Sie das einheitliche Format für Export- und Importvorgänge mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Exportieren Sie Daten aus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit der -c- oder -w-Option, wenn die Daten in eine Nicht-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank importiert werden.  
+-   (Administrator/Benutzer) Wenn möglich, verwenden Sie das einheitliche Format (-n), um das Trennzeichenproblem zu vermeiden. Verwenden Sie das einheitliche Format für Export- und Importvorgänge mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Exportieren Sie Daten aus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit der -c- oder -w-Option, wenn die Daten in eine Nicht-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank importiert werden.  
   
 -   (Administrator) überprüfen Sie Daten, wenn Sie BCP OUT verwenden. Wenn Sie z. B. BCP OUT, BCP IN und dann BCP OUT verwenden, überprüfen Sie, ob die Daten ordnungsgemäß exportiert werden, und ob die Abschlusszeichenwerte nicht als Teil eines Datenwerts verwendet werden. Erwägen Sie, die Standardabschlusszeichen (mithilfe von -t- und -r-Optionen) mit zufälligen Hexadezimalwerten zu überschreiben, um Konflikte zwischen Abschlusszeichenwerten und Datenwerten zu vermeiden.  
   
@@ -613,8 +613,8 @@ bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...
 |Datenformate für Massenimport oder Massenexport (SQL Server)<br />&emsp;&#9679;&emsp;[Verwenden das native Format zum Importieren oder Exportieren von Daten (SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Verwenden des Zeichenformats zum Importieren und Exportieren von Daten (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Verwenden von nativen Unicode-Formaten zum Importieren oder Exportieren von Daten (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Verwenden des Unicode-Zeichenformats zum Importieren und Exportieren von Daten (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[Angeben von Feld- und Zeilenabschlusszeichen (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[Beibehalten von NULL-Werten oder Verwenden von Standardwerten während des Massenimports (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[Beibehalten von Identitätswerten beim Massenimport von Daten (SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />Formatdateien zum Importieren oder Exportieren von Daten (SQL Server)<br />&emsp;&#9679&emsp;[Erstellen einer Formatdatei (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[Massenimport von Daten mithilfe einer Formatdatei (SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Überspringen einer Tabellenspalte mithilfe einer Formatdatei (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[Auslassen eines Datenfelds mithilfe einer Formatdatei (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern (SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[Beispiele für den Massenimport und -export von XML-Dokumenten (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>                                                                                                                                                                                                                  </p>|
 
 ## <a name="see-also"></a>Siehe auch  
- [Vorbereiten von Daten für den Massenexport oder -import &#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](../t-sql/statements/bulk-insert-transact-sql.md)   
+ [Vorbereiten von Daten für den Massenexport oder-Import &#40; SQLServer &#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
+ [BULK INSERT &#40; Transact-SQL &#41;](../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../t-sql/functions/openrowset-transact-sql.md)   
  [SET QUOTED_IDENTIFIER &#40; Transact-SQL &#41;](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

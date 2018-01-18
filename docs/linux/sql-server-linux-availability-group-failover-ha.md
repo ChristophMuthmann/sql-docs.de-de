@@ -15,13 +15,13 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: f80ae6bfb7b6c9b2aea60e3e929b1cc7202dacb2
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 23eedac40aff1fcab50c2e05406d3c87b988e392
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="operate-ha-availability-group-for-sql-server-on-linux"></a>Betreiben Sie HA-verfügbarkeitsgruppe für SQL Server on Linux
+# <a name="operate-always-on-availability-groups-on-linux"></a>Betreiben Sie Always On-Verfügbarkeitsgruppen unter Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
@@ -188,9 +188,9 @@ Wenn Replikate der verfügbarkeitsgruppe für Instanzen von SQL Server unter Lin
 1. Bevor Sie beginnen, Sichern Sie jede Datenbank.
 2. Aktualisieren von SQL Server-Instanzen, sekundäre Replikate gehostet.
 
-    a. Aktualisieren Sie zuerst die asynchronen sekundären Replikate.
+    A. Aktualisieren Sie zuerst die asynchronen sekundären Replikate.
 
-    b. Aktualisieren Sie die synchrone sekundäre Replikate.
+    B. Aktualisieren Sie die synchrone sekundäre Replikate.
 
    >[!NOTE]
    >Wenn eine verfügbarkeitsgruppe nur asynchrone verfügt wird Replikate - um Datenverluste zu vermeiden. ändern ein Replikat, synchrone und warten, bis er synchronisiert wird. Aktualisieren Sie dann dieses Replikat aus.
@@ -202,7 +202,7 @@ Wenn Replikate der verfügbarkeitsgruppe für Instanzen von SQL Server unter Lin
    ```bash
    pcs constraint location ag_cluster-master avoids nodeName1
    ```
-   b. 2. Upgrade von SQL Server auf dem sekundären Replikat
+   b.2. Upgrade von SQL Server auf dem sekundären Replikat
 
    Das folgende Beispiel-Upgrades `mssql-server` und `mssql-server-ha` Pakete.
 
@@ -210,7 +210,7 @@ Wenn Replikate der verfügbarkeitsgruppe für Instanzen von SQL Server unter Lin
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
    ```
-   b. 3. Entfernen der Speicherorteinschränkung
+   b.3. Entfernen der Speicherorteinschränkung
 
    Beenden Sie vor dem Ausführen von Upgrade-Befehls, die Ressource, damit der Cluster nicht werden überwacht und sie unnötig fehl. Im folgenden Beispiel wird eine standorteinschränkung für den Knoten, der sich ergeben, wird für die Ressource beendet werden soll. Update `ag_cluster-master` mit dem Ressourcennamen und `nodeName1` mit dem Knoten, der das Ziel für das Upgrade Replikat hostet.
 
@@ -232,13 +232,13 @@ Wenn Replikate der verfügbarkeitsgruppe für Instanzen von SQL Server unter Lin
    >Die folgenden Schritte gelten nur für Verfügbarkeitsgruppen, die nicht über einen Manager verfügen.  
    Wenn der Cluster Verfügbarkeit Gruppentyp ist `NONE`manuell ein Failover. Führen Sie die folgenden Schritte wie folgt aus:
 
-      a. Der folgende Befehl legt das primäre Replikat zum sekundären Replikat. Ersetzen Sie `AG1` durch den Namen der verfügbarkeitsgruppe. Führen Sie den Transact-SQL-Befehl für die Instanz von SQL Server hostet, die das primäre Replikat.
+      A. Der folgende Befehl legt das primäre Replikat zum sekundären Replikat. Ersetzen Sie `AG1` durch den Namen der verfügbarkeitsgruppe. Führen Sie den Transact-SQL-Befehl für die Instanz von SQL Server hostet, die das primäre Replikat.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      b. Der folgende Befehl legt ein sekundäres Replikat zum primären. Führen den folgenden Transact-SQL-Befehl auf der Zielinstanz von SQL Server - Instanz hostet, die das synchrone sekundäre Replikat.
+      B. Der folgende Befehl legt ein sekundäres Replikat zum primären. Führen den folgenden Transact-SQL-Befehl auf der Zielinstanz von SQL Server - Instanz hostet, die das synchrone sekundäre Replikat.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;

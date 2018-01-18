@@ -17,15 +17,15 @@ helpviewer_keywords:
 - LocalDB, SqlLocalDB Utility
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 96463b7d884bf4744a273085c9b77dd76ac27294
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 18c5c10465a56b6d7081612df2ce079dcdaa77b5
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB-Hilfsprogramm
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Verwenden der **SqlLocalDB** Hilfsprogramm zum Erstellen einer Instanz des [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**. Das Hilfsprogramm **SqlLocalDB** (SqlLocalDB.exe) ist ein einfaches Befehlszeilentool, mit dem Benutzer und Entwickler eine Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**erstellen und verwalten können. Informationen zum Verwenden von **LocalDB**finden Sie unter [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md).  

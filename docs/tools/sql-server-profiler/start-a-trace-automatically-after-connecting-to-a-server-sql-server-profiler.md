@@ -17,15 +17,15 @@ helpviewer_keywords:
 - starting trace automatically
 ms.assetid: d74b848d-e796-49af-a8c5-dd69230f3a78
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d443d87d66cc56b49da10b4bf6157918e1392a90
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 46c8c8dd1403b65723986ff68e492a319c0f827c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>Automatisches Starten einer Ablaufverfolgung nach dem Herstellen einer Verbindung mit einem Server (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In diesem Thema wird beschrieben, wie ablaufverfolgungen automatisch starten, nachdem eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

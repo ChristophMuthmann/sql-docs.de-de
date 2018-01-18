@@ -17,15 +17,15 @@ helpviewer_keywords:
 - tutorials [Database Engine Tuning Advisor]
 ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
 caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a21a71c1ae0239e4725f09b404fe7df8d62da697
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0c6068064e47e571f143070bfd853c6df4e913d4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>Lernprogramm: Datenbankoptimierungsratgeber
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Willkommen Sie beim Lernprogramm Datenbankmodul-Optimierungsratgeber. Der Datenbankoptimierungsratgeber prüft, wie Abfragen in den von Ihnen angegebenen Datenbanken verarbeitet werden. Er gibt dann eine Empfehlung ab, wie Sie die Verarbeitung von Abfragen verbessern können, indem Sie Datenbankstrukturen ändern, wie z. B. Indizes, indizierte Sichten und die Partitionierung.  
@@ -41,7 +41,7 @@ In dieser Lektion machen Sie sich mit der grafischen Benutzeroberfläche des neu
 [Lektion 2: Verwenden des Datenbankoptimierungsratgebers](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
 In dieser Lektion erfahren Sie, wie Sie einfache Optimierungsaufgaben mit der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers ausführen.  
   
-[Lesson 3: Using the dta Command Prompt Utility (Lektion 3: Verwenden des Befehlszeilenprogramms dta)](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+[Lektion 3: Verwenden des Befehlszeilenprogramms dta](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
 In dieser Lektion lernen Sie, wie Sie das Befehlszeilenprogramm **dta** starten und wie Sie einige einfache Optimierungsbefehle ausführen.  
   
 ## <a name="requirements"></a>Anforderungen  
@@ -57,7 +57,7 @@ Wenn Sie die Lektionen in diesem Lernprogramm durchgearbeitet haben, finden Sie 
 -   [dta Utility](../../tools/dta/dta-utility.md) enthält Referenzmaterial zum Eingabeaufforderungs-Hilfsprogramm und der optionalen XML-Datei, mit der Sie die Ausführung des Hilfsprogramms steuern können.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
-[Lesson 1: Basic Navigation in Database Engine Tuning Advisor (Lektion 1: Grundlagen zur Navigation im Datenbankoptimierungsratgeber)](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
+[Lektion 1: Grundlagen zur Navigation im Datenbankoptimierungsratgeber](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
   
   
   

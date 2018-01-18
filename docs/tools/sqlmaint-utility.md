@@ -21,15 +21,15 @@ helpviewer_keywords:
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5eb402990dd9859a957c64d8d6bf47f7d2b3213
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5384932d020b62b3e88d28cc37e3155a4a72f6ee
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint (Hilfsprogramm)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die**Sqlmaint** -Hilfsprogramm führt einen Reihe angegebener Wartungsvorgänge für eine oder mehrere Datenbanken. Verwenden Sie **sqlmaint** , um DBCC-Überprüfungen auszuführen, eine Datenbank und das zugehörige Transaktionsprotokoll zu sichern, Statistiken zu aktualisieren und Indizes neu zu erstellen. Bei allen Datenbankwartungsaktivitäten wird ein Bericht generiert, der an eine festgelegte Textdatei, HTML-Datei oder ein festgelegtes E-Mail-Konto gesendet werden kann. **sqlmaint** führt Datenbankwartungspläne aus, die in früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]erstellt wurden. Verwenden Sie das Hilfsprogramm [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dtexec [, um Wartungspläne von](../integration-services/packages/dtexec-utility.md)über die Eingabeaufforderung auszuführen.  
@@ -85,8 +85,8 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  Gibt an, dass das Syntaxdiagramm für **sqlmaint** zurückgegeben werden soll. Dieser Parameter darf nur alleine verwendet werden.  
   
- **-S** *Servername*[ **\\***Instanzname*]  
- Gibt die Zielinstanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]an. Geben Sie *ervername* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] auf diesem Server herzustellen. Geben Sie *Servername***\\***Instanzname* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] auf diesem Server herzustellen. Wenn kein Server angegeben wird, stellt **sqlmaint** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] auf dem lokalen Computer her.  
+ **-S** *Server_name*[**\\*** Instance_name*]  
+ Gibt die Zielinstanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]an. Geben Sie *server_name* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] auf diesem Server herzustellen. Geben Sie *Server_name***\\***Instance_name* zur Verbindung mit einer benannten Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] auf diesem Server. Wenn kein Server angegeben wird, stellt **sqlmaint** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] auf dem lokalen Computer her.  
   
  **-U** *Anmelde-ID*  
  Gibt die Anmelde-ID an, der beim Verbinden zum Server verwendet werden soll. Wenn dieses Argument nicht angegeben wird, versucht **sqlmaint** , die [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Authentifizierung zu verwenden. Wenn die *Anmelde-ID* Sonderzeichen enthält, muss das Argument in doppelte Anführungszeichen (") eingeschlossen werden. Andernfalls sind die doppelten Anführungszeichen optional.  

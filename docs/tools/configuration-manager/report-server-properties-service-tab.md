@@ -13,20 +13,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 56b9dab3881ea4c78254f9e6db183603a4a53a4a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f286661863d1d6ec065f3b9532530d9e96205821
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="report-server-properties-service-tab"></a>Berichtsserver-Eigenschaften (Registerkarte Dienst)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dieser Dienst ist die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Report Server-Dienst. Die ausgegrauten Eigenschaftswerte können nicht mithilfe dieser Anwendung geändert werden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Binärpfad**  
  Zeigt den Speicherort der Programmdateien an, die von diesem Dienst verwendet werden.  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/21/2017
  Zeigt die Prozess-ID von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows an.  
   
  **SQL-Diensttyp**  
- Der für aufrufende Prozesse bereitgestellte Diensttyp. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden mehrere Dienste installiert.  
+ Der für aufrufende Prozesse bereitgestellte Diensttyp. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert mehrere Dienste.  
   
  **Startmodus**  
  Richten Sie den Dienst mit den folgenden Auswahlmöglichkeiten ein:  

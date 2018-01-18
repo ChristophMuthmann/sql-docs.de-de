@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2edea069c05e7ac0316042250f336f1a8c455af0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6e87461fb2973bec630ed21975a80cdbc17cd1cd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="user-and-workspace-settings"></a>Arbeitsbereichseinstellungen für Benutzerzustand und
 
@@ -47,12 +47,22 @@ Das folgende Beispiel deaktiviert die Zeilennummern im Editor und konfiguriert Z
 
 Abhängig von Ihrer Plattform befindet sich die benutzereinstellungsdatei hier:
 
-* **Windows**`%APPDATA%\sqlops\User\settings.json`
-* **Mac**`$HOME/Library/Application Support/sqlops/User/settings.json`
-* **Linux**`$HOME/.config/sqlops/User/settings.json`
+* **Windows** `%APPDATA%\sqlops\User\settings.json`
+* **Mac** `$HOME/Library/Application Support/sqlops/User/settings.json`
+* **Linux** `$HOME/.config/sqlops/User/settings.json`
 
 Die Einstellungsdatei Arbeitsbereich befindet sich unter dem `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` Ordner des Projekts.
 
+## <a name="hot-exit"></a>Im laufenden Systembetrieb beenden
+
+SQL Operations Studio merken gehen nicht gespeicherte Änderungen auf Dateien, beim Beenden von standardmäßig. Dies ist identisch mit der Hot Exit-Funktion in Visual Studio-Code.
+
+Standardmäßig ist im laufenden Systembetrieb beenden aus. Aktivieren von Hot beenden durch Bearbeiten der `files.hotExit` Einstellung. Weitere Informationen finden Sie unter [Hot beenden (in der Dokumentation zu Visual Studio-Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
+
+
+## <a name="tab-color"></a>Registerkarte "Farbe
+
+Zur Vereinfachung der Arbeit mit Verbindungen identifizieren möglich geöffneten Registerkarten im Editor ihre Farben festgelegt werden, damit die Farbe der Servergruppe übereinstimmt, das die Verbindung zu gehört. Sind standardmäßig registerkartenfarben standardmäßig deaktiviert. Aktivieren Sie Farben durch Bearbeiten der `sql.tabColorMode` Einstellung.
 
 ## <a name="additional-resources"></a>Weitere Ressourcen
 

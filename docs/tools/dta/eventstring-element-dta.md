@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: EventString element
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b51de55832ddd13103fb67f41f937a1efdd0b999
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 93b5886a489f4570dd62249f8620d11b868ee663
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="eventstring-element-dta"></a>EventString-Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Gibt eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript basierende arbeitsauslastung direkt in der XML-Eingabedatei.  
@@ -41,13 +41,13 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-attributes"></a>Elementattribute  
   
-|attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
 |**Weight**|Optional. Gibt den Gewichtungsfaktor der Abfrage (ein Faktor für die Wichtigkeit) für das angegebene Ereignis an. Sie können die Gewichtung mit einem **float** -Datentyp angeben. Beispiel: **Weight**="100.01". Der Mindestwert für **Weight** ist "0".|  
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|**string**, unbegrenzte Länge.|  
 |**Standardwert**|Keine.|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
-|**Übergeordnetes Element**|[Workload-Element &#40;DTA&#41;](../../tools/dta/workload-element-dta.md)|  
+|**Übergeordnetes Element**|[Workload-Element &#40; DTA &#41;](../../tools/dta/workload-element-dta.md)|  
 |**Untergeordnete Elemente**|Keine.|  
   
 ## <a name="example"></a>Beispiel  

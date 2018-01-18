@@ -26,15 +26,15 @@ helpviewer_keywords:
 - starting traces
 ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bce247fa86806a4acd40bdfefd11a167a5c614f0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ef0d4c1015fa70145f8539a4dd10f4f8f6ffc35b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="start-a-trace"></a>Starten einer Ablaufverfolgung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Nachdem Sie eine neue Ablaufverfolgung definiert oder mithilfe eine Vorlage erstellt haben [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], starten, Anhalten oder beenden Sie die Aufzeichnung von Daten mithilfe der neuen Ablaufverfolgungsdefinition oder Vorlage.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/21/2017
 >  Bei vorhandenen Ablaufverfolgungen können Sie die Eigenschaften zwar anzeigen, aber nicht ändern. Um die Eigenschaften zu ändern, müssen Sie die Ablaufverfolgung beenden oder anhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Automatisches Starten einer Ablaufverfolgung nach dem Herstellen einer Verbindung mit einem Server &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [Starten einer Ablaufverfolgungs automatisch nach dem Herstellen einer Verbindung mit einem Server &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
  [Anhalten einer Ablaufverfolgung &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/pause-a-trace-sql-server-profiler.md)   
  [Beenden einer Ablaufverfolgung &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/stop-a-trace-sql-server-profiler.md)   
  [Löschen des Inhalts eines Ablaufverfolgungsfensters &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/clear-a-trace-window-sql-server-profiler.md)   

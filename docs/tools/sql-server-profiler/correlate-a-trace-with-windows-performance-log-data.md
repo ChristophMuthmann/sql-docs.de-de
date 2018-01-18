@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Profiler, correlating trace with log data
 ms.assetid: 1e4412c8-d27c-4aae-9b35-214128d1d00a
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe3b9fbc7a0b1b7eed6b478fff11ef4abb2cde83
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9fc0474e0f3c823b2ca3fa16979e16ff5123f321
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data"></a>Korrelieren einer Ablaufverfolgung mit Windows-Leistungsprotokoll Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], können Sie ein Microsoft Windows-Leistungsprotokoll öffnen, wählen Sie die Leistungsindikatoren, die Sie mit einer Ablaufverfolgung korrelieren möchten und zeigen Sie die ausgewählten Leistungsindikatoren zusammen mit der Ablaufverfolgung in der [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] grafische Benutzeroberfläche. Wenn Sie ein Ereignis im Ablaufverfolgungsfenster auswählen, zeigt ein senkrechter roter Strich im Datenfensterbereich des Systemmonitors von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] an, welche Leistungsprotokolldaten mit dem ausgewählten Ablaufverfolgungsereignis korrelieren.  

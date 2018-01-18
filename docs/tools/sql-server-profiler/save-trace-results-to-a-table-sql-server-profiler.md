@@ -16,15 +16,15 @@ helpviewer_keywords:
 - traces [SQL Server], saving
 ms.assetid: edbecf74-683b-4e43-a1ef-7a3d5f5e27f6
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dad96c512f0cbbd35155568ad2aa63933ccfadc6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f411639ced17e80acca493e7e0cd23de6ed5bc8c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>Speichern von Ablaufverfolgungsergebnissen in einer Tabelle (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In diesem Thema wird beschrieben, wie zum Speichern von Ablaufverfolgungsergebnissen in einer Datenbanktabelle mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

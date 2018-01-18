@@ -29,12 +29,12 @@ helpviewer_keywords:
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 caps.latest.revision: "155"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 44464415177cffc2e09c5218ecd9440801be7d96
-ms.sourcegitcommit: 0c6d858a507bd38b9b06eb7676736de5d38a1c87
+ms.openlocfilehash: 78bad0a1dfd518bb29c8bbdc5f04d0c173756e9f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/17/2018
@@ -704,7 +704,7 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
  **:Serverlist**  
  Listet die lokal konfigurierten Server sowie die Namen der Server auf, die Nachrichten über das Netzwerk senden.  
   
- **: Verbinden***Server_name*[**\\*** Instance_name*] [-l *Timeout*] [-U *User_name* [-P *Kennwort*]]    
+ **: Verbinden***Server_name*[**\\*** Instance_name*] [-l *Timeout*] [-U *User_name* [-P *Kennwort*]]  
  Eine Verbindung mit einer Instanz von SQL Server. Schließt außerdem die aktuelle Verbindung.  
   
  Timeoutoptionen:  

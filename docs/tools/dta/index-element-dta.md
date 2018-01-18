@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18505a8ac88e1524f290d4559537ffe1f6751566
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ca17a222eb07926c89283ce1cc2f47f9412af59d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="index-element-dta"></a>Index-Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Enthält Informationen über einen Index, den für eine benutzerspezifische Konfiguration erstellt oder gelöscht werden sollen.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/21/2017
 |Beziehung|Elemente|  
 |------------------|--------------|  
 |**Übergeordnetes Element**|[Create-Element &#40;DTA&#41;](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** -Element. Weitere Informationen finden Sie im XML-Schema des Datenbankoptimierungsratgebers.|  
-|**Untergeordnete Elemente**|[Name-Element für Index &#40;DTA&#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Column-Element für Index &#40;DTA&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** -Element. Weitere Informationen finden Sie im XML-Schema des Datenbankoptimierungsratgebers.<br /><br /> **PartitionColumn** -Element. Weitere Informationen finden Sie im XML-Schema des Datenbankoptimierungsratgebers.<br /><br /> [Filegroup-Element für Index &#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** -Element. Weitere Informationen finden Sie im XML-Schema des Datenbankoptimierungsratgebers.<br /><br /> **PercentUsage** -Element. Weitere Informationen finden Sie im XML-Schema des Datenbankoptimierungsratgebers.|  
+|**Untergeordnete Elemente**|[Name-Element für Index &#40; DTA &#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Column-Element für Index &#40; DTA &#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** -Element. Weitere Informationen finden Sie im XML-Schema des Datenbankoptimierungsratgebers.<br /><br /> **PartitionColumn** -Element. Weitere Informationen finden Sie im XML-Schema des Datenbankoptimierungsratgebers.<br /><br /> [Filegroup-Element für Index &#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** -Element. Weitere Informationen finden Sie im XML-Schema des Datenbankoptimierungsratgebers.<br /><br /> **PercentUsage** -Element. Weitere Informationen finden Sie im XML-Schema des Datenbankoptimierungsratgebers.|  
   
 ## <a name="example"></a>Beispiel  
  Ein Beispiel für die Verwendung dieses Elements finden Sie unter [Beispiel für eine XML-Eingabedatei mit benutzerdefinierter Konfiguration &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  

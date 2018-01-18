@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Configuration element
 ms.assetid: 1478e56f-57c4-4441-bac9-1ac91453839b
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91a9db60913e57a9619a2363b94ed3bdbda87e52
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e9e3fbf76ffab1eea6baf7ea5cc8d2f6972379a5
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="configuration-element-dta"></a>Configuration-Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Gibt eine vom Benutzer angegebene Konfiguration bestehend aus vorhandenen und hypothetischen physischen Entwurfsstrukturen der Datenbankoptimierungsratgeber beim Optimieren einer arbeitsauslastung analysiert.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  
@@ -60,8 +60,8 @@ ms.lasthandoff: 12/21/2017
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
-|**Übergeordnetes Element**|[DTAInput-Element &#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)|  
-|**Untergeordnete Elemente**|[Server-Element für Konfiguration &#40;DTA&#41;](../../tools/dta/server-element-for-configuration-dta.md)|  
+|**Übergeordnetes Element**|[DTAInput-Element &#40; DTA &#41;](../../tools/dta/dtainput-element-dta.md)|  
+|**Untergeordnete Elemente**|[Server-Element für Konfiguration &#40; DTA &#41;](../../tools/dta/server-element-for-configuration-dta.md)|  
   
 ## <a name="example"></a>Beispiel  
  Ein Beispiel für die Verwendung dieses Elements finden Sie unter [Beispiel für eine XML-Eingabedatei mit benutzerdefinierter Konfiguration &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  

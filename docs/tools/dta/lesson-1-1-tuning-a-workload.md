@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: workloads [SQL Server], tuning
 ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 534f4ab58ee49d3bfce6899bf3858404fb7b3fd0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6acb93ddde56546e170b01c093dff843a2ea5968
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-1---tuning-a-workload"></a>Lektion 1: 1-Optimieren einer Arbeitsauslastung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Der Datenbankmodul-Optimierungsratgeber kann verwendet werden, finden Sie die besten physischen Datenbankentwurf für die abfrageleistung für die Datenbanken und Tabellen, die Sie für die Optimierung auswählen.  
@@ -53,7 +53,7 @@ In dieser Aufgabe wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledb
 ## <a name="summary"></a>Zusammenfassung  
 Sie haben die Arbeitsauslastung für eine einfache SELECT-Anweisung auf der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank optimiert. Der Datenbankoptimierungsratgeber kann auch Ablaufverfolgungsdateien von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] und Tabellen als zu optimierende Arbeitsauslastungen verwenden. In der nächsten Aufgabe wird gezeigt, wie Sie die Optimierungsempfehlungen, die Sie als Ergebnis in dieser Übung erhalten haben, anzeigen und interpretieren.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
 [Anzeigen von Empfehlungen für die Optimierung](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md)  
   
   

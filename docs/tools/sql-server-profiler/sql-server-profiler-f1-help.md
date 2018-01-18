@@ -44,15 +44,15 @@ helpviewer_keywords:
 - Find dialog box
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 927d9d4f805932f4d95e898649e2cac60547d99c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 284333202ee48153b0de4d513502e35edc73acaf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler-Dialogfelder
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ist ein Tool zur Erfassung [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ereignisse von einem Server. Die Ereignisse werden in einer Ablaufverfolgungsdatei gespeichert, die später analysiert oder beim Versuch, ein Problem zu diagnostizieren, zur Wiedergabe einer bestimmten Reihe von Schritten verwendet werden kann. Im folgenden sind die verfügbaren Befehle und Einstellungen in den Dialogfeldern der [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -115,7 +115,7 @@ Die Registerkarte **Ereignisauswahl** im Dialogfeld **Eigenschaften der Ablaufve
 |Filter|Sie können Filter festlegen, indem Sie auf die Spaltenüberschrift klicken und die Filterkriterien eingeben. Gefilterte Datenspalten sind im Dialogfeld **Filter bearbeiten** links neben der Spaltenbezeichnung durch ein Filtersymbol gekennzeichnet.  
 |**Alle Ereignisse anzeigen**|Zeigt alle verfügbaren Ereignisse an. Diese Option ist standardmäßig aktiviert, wenn Sie eine neue Vorlage erstellen, die nicht auf einer vorhandenen Vorlage basiert. Deaktivieren Sie diese Option, um alle nicht ausgewählten Ereignisse im Raster **Ereignisauswahl** auszublenden.  
 |**Alle Spalten anzeigen**|Zeigt alle verfügbaren Datenspalten an. Diese Option ist standardmäßig aktiviert, wenn Sie eine neue Vorlage erstellen, die nicht auf einer vorhandenen Vorlage basiert. Deaktivieren Sie diese Option, um alle nicht ausgewählten Datenspalten im Raster **Ereignisauswahl** auszublenden.  
-|**Spaltenfilter**|Öffnet das Dialogfeld **Filter bearbeiten**, in dem links neben der Datenspaltenbezeichnung ein Filtersymbol angezeigt wird. Mithilfe des Dialogfelds **Filter bearbeiten** können Sie Datenspaltenfilter bearbeiten.  
+|**Spaltenfilter**|Öffnet das Dialogfeld **Filter bearbeiten** , in dem links neben der Datenspaltenbezeichnung ein Filtersymbol angezeigt wird. Mithilfe des Dialogfelds **Filter bearbeiten** können Sie Datenspaltenfilter bearbeiten.  
 |**Spalten organisieren**|Ändert die Reihenfolge der Spalten in der Ablaufverfolgung und gruppiert die Ergebnisse in einer oder mehreren Spalten. 
 ## <a name="trace-file-properties"></a>Eigenschaften der Ablaufverfolgungsdatei 
 ### <a name="general-tab"></a>Registerkarte "Allgemein"
@@ -141,7 +141,7 @@ Mithilfe der Registerkarte **Ereignisauswahl** im Dialogfeld **Eigenschaften der
 |**Alle Ereignisse anzeigen**|Zeigt alle verfügbaren Ereignisse an. Standardmäßig werden nur Zeilen im Raster **Ereignisauswahl** angezeigt, die ausgewählt sind. Deaktivieren Sie dieses Kontrollkästchen, um alle nicht ausgewählten Ereignisse im Raster **Ereignisauswahl** auszublenden. Wenn die Option **Alle Ereignisse anzeigen** aktiviert ist und Sie eine Ablaufverfolgungsdatei oder -tabelle anzeigen, werden alle aufgezeichneten Ereignisse in der Ablaufanzeige des Ablaufverfolgungsfensters angezeigt.  
 |**Alle Spalten anzeigen**|Zeigt alle verfügbaren Datenspalten an. Standardmäßig werden nur ausgewählte Datenspalten angezeigt. Deaktivieren Sie dieses Kontrollkästchen, um alle nicht ausgewählten Datenspalten im Raster **Ereignisauswahl** auszublenden.  
 |**Spaltenfilter**|Öffnet das Dialogfeld **Filter bearbeiten** , durch das ein Filtersymbol auf der linken Seite des Spaltentitels für gefilterte Datenspalten angezeigt wird. Mithilfe des Dialogfelds **Filter bearbeiten** können Sie Datenspaltenfilter bearbeiten.  
-|**Spalten organisieren**|Klicken Sie nach der Auswahl der zu verfolgenden **Ereignisse** und Datenspalten auf **Spalten organisieren**, um eine Reorganisation der Spalten im Raster des Fensters mit den Ablaufverfolgungsergebnissen zu erzwingen.  
+|**Spalten organisieren**|Klicken Sie nach der Auswahl der zu verfolgenden **Ereignisse** und Datenspalten auf **Spalten organisieren** , um eine Reorganisation der Spalten im Raster des Fensters mit den Ablaufverfolgungsergebnissen zu erzwingen.  
 ## <a name="trace-table-properties"></a>Eigenschaften der Ablaufverfolgungstabelle
 ### <a name="events-selection-tab"></a>Registerkarte Ereignisauswahl
 Mithilfe der Registerkarte **Ereignisauswahl** im Dialogfeld **Eigenschaften der Ablaufverfolgungstabelle** können Sie die Ereignisse und Datenspalteneigenschaften der Ablaufverfolgung anzeigen oder Ereignisse bzw. Spalten aus der Ablaufverfolgung entfernen.  
@@ -154,7 +154,7 @@ Mithilfe der Registerkarte **Ereignisauswahl** im Dialogfeld **Eigenschaften der
 |**Alle Ereignisse anzeigen**|Zeigt alle verfügbaren Ereignisse an. Standardmäßig werden nur Zeilen im Raster **Ereignisauswahl** angezeigt, die ausgewählt sind. Deaktivieren Sie dieses Kontrollkästchen, um alle nicht ausgewählten Ereignisse im Raster **Ereignisauswahl** auszublenden. Wenn die Option **Alle Ereignisse anzeigen** aktiviert ist und Sie eine Ablaufverfolgungsdatei oder -tabelle anzeigen, werden alle aufgezeichneten Ereignisse in der Ablaufanzeige des Ablaufverfolgungsfensters angezeigt.  
 |**Alle Spalten anzeigen**|Zeigt alle verfügbaren Datenspalten an. Standardmäßig werden nur ausgewählte Datenspalten angezeigt. Deaktivieren Sie dieses Kontrollkästchen, um alle nicht ausgewählten Datenspalten im Raster **Ereignisauswahl** auszublenden.  
 |**Spaltenfilter**|Öffnet das Dialogfeld **Filter** bearbeiten, in dem links neben der Spaltenbezeichnung ein Filtersymbol angezeigt wird. Mithilfe dieses Dialogfelds können Sie Datenspaltenfilter bearbeiten.  
-|**Spalten organisieren** |Klicken Sie nach der Auswahl der zu verfolgenden **Ereignisse** und Datenspalten auf **Spalten organisieren**, um eine Reorganisation der Spalten im Raster des Fensters mit den Ablaufverfolgungsergebnissen zu erzwingen.  
+|**Spalten organisieren** |Klicken Sie nach der Auswahl der zu verfolgenden **Ereignisse** und Datenspalten auf **Spalten organisieren** , um eine Reorganisation der Spalten im Raster des Fensters mit den Ablaufverfolgungsergebnissen zu erzwingen.  
 ## <a name="performance-counters-limit"></a>Beschränken der Leistungsindikatoren
 Mithilfe des Dialogfelds zum Beschränken der Leistungsindikatoren, können Sie die Informationen aus einer Leistungsprotokolldatei des Systemmonitors beschränken, wenn er mit einer [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Ablaufverfolgung korreliert wird. Mithilfe dieses Dialogfelds können Sie Indikatoren auswählen, die angezeigt und für die Korrelation verwendet werden sollen.  
 Das Dialogfeld zum **Beschränken der Leistungsindikatoren** wird mit den Leistungsobjekten und -indikatoren aufgefüllt, die in der Leistungsprotokolldatei enthalten sind.  
@@ -217,12 +217,12 @@ Zum Anzeigen dieses Fensters öffnen Sie mithilfe von [!INCLUDE[ssSqlProfiler](.
 |---|---
 |**Wiedergabeserver**|Zeigt die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, mit der eine Verbindung für die Wiedergabe hergestellt wird.  
 |**Ändern...**|Öffnet das Dialogfeld **Verbindung mit Server herstellen** , um eine Verbindung mit einem anderen Server herzustellen.  
-|**In Datei speichern** |Speichert die Wiedergabeergebnisse in einer Datei. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt das Standarddialogfeld zum Speichern von Dateien an, in dem Sie einen Speicherort für die Datei angeben können.  
-|**In Tabelle speichern**|Speichert die Wiedergabeergebnisse in einer Tabelle. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] wird ein Dialogfeld zum Auswählen der Tabelle angezeigt, in dem Sie einen Speicherort für die Tabelle angeben können.  
+|**In Datei speichern** |Speichert die Wiedergabeergebnisse in einer Datei. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Zeigt das Standarddialogfeld, in dem Sie den Speicherort zum Speichern der Datei angeben können.  
+|**In Tabelle speichern**|Speichert die Wiedergabeergebnisse in einer Tabelle. In [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] wird ein Dialogfeld zum Auswählen der Tabelle angezeigt, in dem Sie einen Speicherort für die Tabelle angeben können.  
 |**Anzahl von Wiedergabethreads**|Gibt die Anzahl der Threads an, die gleichzeitig verwendet werden können. Bei einer höheren Anzahl werden zwar mehr Ressourcen beansprucht, dafür erfolgt die Wiedergabe schneller und in höherem Maße gleichzeitig.  
 |**Ereignisse in der Reihenfolge wiedergeben, in der ihr Ablauf verfolgt wurde**|Gibt Ereignisse sequenziell wieder. Verwenden Sie diese Option, wenn Sie eine Ablaufverfolgung zum Debuggen wiedergeben.  
 |**Ereignisse mithilfe mehrerer Threads wiedergeben** |Gibt die Ereignisse gleichzeitig wieder. Diese Option ist zwar schneller als die sequenzielle Wiedergabe von Ereignissen, dafür ist kein Debugging verfügbar. Die Ereignisse werden je nach dazugehöriger Systemprozess-ID (SPID) geordnet.  
-|**Wiedergabeergebnisse anzeigen**|Zeigt die Wiedergabeergebnisse in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]an. 
+|**Wiedergabeergebnisse anzeigen**|Zeigt die Wiedergabeergebnisse in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] an. 
 ### <a name="advanced-replay-options"></a>Erweiterte Wiedergabeoptionen
 Mithilfe der Registerkarte **Erweiterte Wiedergabeoptionen** des Dialogfelds **Wiedergabekonfiguration** können Sie angeben, auf welche Weise eine Ablaufverfolgungsdatei wiedergegeben werden soll.  
 Zum Anzeigen dieses Fensters öffnen Sie mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] eine Ablaufverfolgungsdatei oder -tabelle, die die zur Wiedergabe vorgesehenen Ereignisse enthält. Weitere Informationen finden Sie unter [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md). Wenn die Ablaufverfolgungsdatei oder -tabelle geöffnet ist, klicken Sie im Menü **Wiedergeben** auf **Start**, und stellen Sie dann eine Verbindung mit der Instanz von SQL Server her, auf der die Ablaufverfolgung wiedergegeben werden soll. Klicken Sie anschließend auf die Registerkarte **Erweiterte Wiedergabeoptionen** .  
@@ -240,7 +240,7 @@ Zum Anzeigen dieses Fensters öffnen Sie mithilfe von [!INCLUDE[ssSqlProfiler](.
 |**Wartezeit für die Überwachung blockierter Prozesse (Sek.)**|Konfiguriert die Häufigkeit, mit der mithilfe der Überwachung für blockierte Prozesse nach blockierten oder blockierenden Prozessen gesucht wird.  
 ## <a name="find-dialog-box"></a>Suchen (Dialogfeld)
 Mithilfe des Dialogfelds **Suchen** können Sie eine Ablaufverfolgung nach bestimmten Zeichen oder Wörtern durchsuchen. Um einen Suchvorgang abzubrechen, drücken Sie ESC.  
- Um das Dialogfeld in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]zu öffnen, klicken Sie im Menü **Bearbeiten** auf **Suchen**.  
+ Um das Dialogfeld in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zu öffnen, klicken Sie im Menü **Bearbeiten** auf **Suchen**.  
 |Element|Description
 |---|---
 |**Suchen nach**|Geben Sie den Text ein, nach dem gesucht werden soll. Die Suche entspricht jeder Zeichenfolge, die die angegebene Zeichenfolge enthält. Die Suche nach "Completed" entspricht beispielsweise "SQL:BatchCompleted". Platzhalterzeichen (*, ? usw.) werden nicht unterstützt.  

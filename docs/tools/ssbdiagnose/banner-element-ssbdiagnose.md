@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4da84a33034bc664ddefd264d9346034ac69ba49
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 67483820a6f6b9e0033808df7233d1908002fa69
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner-Element (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Identifiziert das Hilfsprogramm generiert die **Ssbdiagnose** XML-Ausgabedatei.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-attributes"></a>Elementattribute  
   
-|attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
 |**title**|Identifiziert das Hilfsprogramm, das die XML-Ausgabedatei von **ssbdiagnose** generiert hat.|  
 |**product**|Identifiziert das Produkt, das die XML-Ausgabedatei von **ssbdiagnose** generiert hat.|  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/21/2017
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
-|**Übergeordnetes Element**|[DiagnosticInformation-Element &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
+|**Übergeordnetes Element**|[DiagnosticInformation-Element &#40; Ssbdiagnose &#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
 |**Untergeordnete Elemente**|Keine.|  
   
 ## <a name="example"></a>Beispiel  
@@ -71,6 +71,6 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [ssbdiagnose-Hilfsprogramm &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
+ [Ssbdiagnose-Hilfsprogramm &#40; Service Broker &#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
   

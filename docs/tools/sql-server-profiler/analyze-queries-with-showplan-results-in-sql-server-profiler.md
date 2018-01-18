@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aaa8f844875745aff792771df4085e59f7808a54
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fc385ac38ff22a0b07231aa1ae81c332eb91c63f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analysieren von Abfragen mit SHOWPLAN-Ergebnissen in SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Sie können Showplan-Ereignisklassen hinzufügen, um eine Ablaufverfolgungsdefinition, die dazu führen, dass [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zu sammeln und Anzeigen von Informationen in der Ablaufverfolgung. Darüber hinaus können Showplanereignisse aus anderen, in dieser Ablaufverfolgung gesammelten Ereignissen extrahiert und in einer separaten XML-Datei gespeichert werden.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="showplan-events"></a>Showplanereignisse  
  Die Showplan-Ablaufverfolgungsereignisse werden in der folgenden Tabelle aufgelistet und beschrieben.  
   
-|Ereignisname|Description|  
+|Ereignisname|Beschreibung|  
 |----------------|-----------------|  
 |**Performance Statistics**|Gibt an, wann ein kompilierter Showplan zum ersten Mal zwischengespeichert wurde, wann er erneut kompiliert wurde und wann er aus dem Plancache entfernt wurde. Die **TextData** -Spalte enthält den Showplan im XML-Format. Weitere Informationen finden Sie unter [Performance Statistics-Ereignisklasse](../../relational-databases/event-classes/performance-statistics-event-class.md).|  
 |**Showplan All**|Zeigt den Abfrageplan mit sämtlichen Kompilierungsdetails für die ausgeführte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung an. Beispielsweise können Kostenschätzungen und Spaltenlisten angezeigt werden. Weitere Informationen finden Sie unter [Showplan All Event Class](../../relational-databases/event-classes/showplan-all-event-class.md).|  

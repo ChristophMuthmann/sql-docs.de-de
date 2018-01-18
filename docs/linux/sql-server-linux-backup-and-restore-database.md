@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.workload: On Demand
-ms.openlocfilehash: bd807454b9b1b946dc396ec53a920fd198c5b5c0
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0b12200da9b4e0967c8057d807d19919fb07f331
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Sichern und Wiederherstellen der SQL Server-Datenbanken unter Linux
 
@@ -59,7 +59,7 @@ BACKUP DATABASE successfully processed 298 pages in 0.064 seconds (36.376 MB/sec
 Wenn Ihre Datenbank in das vollständige Wiederherstellungsmodell ist, können Sie auch Sicherungen des Transaktionsprotokolls für eine detailliertere Wiederherstellungsoptionen vornehmen. Im folgenden Beispiel **Sqlcmd** eine Verbindung mit der lokalen SQL Server-Instanz her und nimmt ein Transaktionsprotokoll sichern.
 
 ```bash
-sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup', NOSKIP, NOREWIND, NOUNLOAD, STATS = 5"
+sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak' WITH NOFORMAT, NOINIT, NAME = N'demodb_LogBackup', NOSKIP, NOREWIND, NOUNLOAD, STATS = 5"
 ```
 
 ## <a name="restore-a-database"></a>Wiederherstellen einer Datenbank
@@ -67,7 +67,7 @@ sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/da
 Im folgenden Beispiel **Sqlcmd** eine Verbindung mit der lokalen Instanz von SQL Server her und stellt die Demodb-Datenbank wieder her. Beachten Sie, dass die `NORECOVERY` Option wird verwendet, um zusätzliche Wiederherstellung von protokollsicherungen für die Datei zu ermöglichen. Wenn Sie nicht beabsichtigen, zusätzliche Protokolldateien wiederhergestellt werden, entfernen die `NORECOVERY` Option.
 
 ```bash
-sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'/var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE, NORECOVERY, STATS = 5"
+sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM DISK = N'/var/opt/mssql/data/demodb.bak' WITH FILE = 1, NOUNLOAD, REPLACE, NORECOVERY, STATS = 5"
 ```
 
 > [!TIP]

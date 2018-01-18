@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: Database Engine [SQL Server], tutorials
 ms.assetid: f34a5acf-1f3b-4484-a770-6470cb925ab0
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70cb8fd744c0f169d151d076606740ad53fa404e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b4adf756444c22146108fead4f607c20c6108dc3
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Lektion 3-1: Starten des Befehlzeilenprogramms Dta und Optimieren einer Arbeitsauslastung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dieser Task führt Sie durch Starten der **Dta** Hilfsprogramm dazugehörige Hilfe anzeigen, und klicken Sie dann zum Optimieren einer arbeitsauslastung von der Befehlszeile aus. Dabei wird die Arbeitsauslastung MyScript.sql verwendet, die Sie in der Übung zur grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers [Optimieren einer Arbeitsauslastung](../../tools/dta/lesson-1-1-tuning-a-workload.md)angelegt haben.  

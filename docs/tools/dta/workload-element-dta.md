@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Workload element
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc428a8f44fb2ca88a3aea2c93f9bdaf43b4e4f1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0f39cc50aa258df595bd7c010d992740a0a68976
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="workload-element-dta"></a>Workload-Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Gibt die arbeitsauslastung für eine optimierungssitzung verwendet werden soll.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/21/2017
 |Beziehung|Elemente|  
 |------------------|--------------|  
 |**Übergeordnetes Element**|[Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
-|**Untergeordnete Elemente**|[File-Element &#40;DTA&#41;](../../tools/dta/file-element-dta.md)<br /><br /> [Database-Element zur Arbeitsauslastung &#40;DTA&#41;](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [EventString-Element &#40;DTA&#41;](../../tools/dta/eventstring-element-dta.md)|  
+|**Untergeordnete Elemente**|[File-Element &#40; DTA &#41;](../../tools/dta/file-element-dta.md)<br /><br /> [Database-Element zur Arbeitsauslastung &#40; DTA &#41;](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [EventString-Element &#40; DTA &#41;](../../tools/dta/eventstring-element-dta.md)|  
   
 ## <a name="remarks"></a>Hinweise  
  Die Arbeitsauslastung besteht aus einer Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die für eine oder mehrere Datenbanken ausgeführt werden, die Sie optimieren möchten. Der Datenbankoptimierungsratgeber kann [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts, Ablaufverfolgungsdateien und Ablaufverfolgungstabellen als Arbeitsauslastung verwenden.  

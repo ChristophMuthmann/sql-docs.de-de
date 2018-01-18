@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: Database Engine [SQL Server], tutorials
 ms.assetid: 43e97ce0-97bc-4a27-9485-5bbeb7190b85
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc759f4beb67d96abad27dc5bdbe0a4e322f330a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 68a4c894fb4defe848b146c59b3ad159ac3da287
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-2---setting-tool-options-and-layout"></a>Lektion 1-2: Festlegen von Optionen und Layout
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Sie können Optionen festlegen, die konfigurieren, welche die grafischen Benutzeroberfläche (GUI) von der Datenbankoptimierungsratgeber beim Starten der Schriftart anzeigt, die verwendet wird, sowie weitere Funktionen, die am besten unterstützen, wie er verwendet werden. Im Folgenden werden die Optionen erläutert, die Sie festlegen können, sowie ihre Verwendung.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/21/2017
     -   Standardmäßig ist **Vor dem Beenden der Sitzungsanalyse fragen** aktiviert, damit nicht eine Optimierungssitzung aus Versehen beendet wird, bevor die Analyse einer Arbeitsauslastung durch den Datenbankoptimierungsratgeber abgeschlossen ist.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
-[Lesson 2: Using Database Engine Tuning Advisor (Lektion 2: Verwenden des Datenbankoptimierungsratgebers)](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[Lektion 2: Verwenden des Datenbankoptimierungsratgebers](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   
