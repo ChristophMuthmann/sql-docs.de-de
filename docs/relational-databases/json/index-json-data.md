@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 835b2c27dfaf8e4003cd009e3c20146af32d2bca
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 559847d392fa744b32fc2aa0cdb70eeb9b2c4ebd
+ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="index-json-data"></a>Indizieren von JSON-Daten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-In SQL Server 2016 ist JSON kein integrierter Datentyp, und SQL Server verfügt nicht über benutzerdefinierte JSON-Indizes. Sie können jedoch Ihre Abfragen über JSON-Dokumente optimieren, indem Sie Standardindizes verwenden. 
+In SQL Server und SQL-Datenbank ist JSON kein integrierter Datentyp, und SQL Server verfügt nicht über benutzerdefinierte JSON-Indizes. Sie können jedoch Ihre Abfragen über JSON-Dokumente optimieren, indem Sie Standardindizes verwenden. 
 
 Datenbankindizes verbessern die Leistung von Filter- und Sortierungsvorgängen. Ohne Indizes muss SQL Server bei jeder Datenabfrage einen vollständigen Tabellenscan durchführen.  
   
@@ -69,7 +69,7 @@ Die Spalte wird nicht permanent berechnet. Sie wird nur berechnet, wenn der Inde
   
 Es ist wichtig, dass Sie die berechnete Spalte mit dem gleichen Ausdruck erstellen, den Sie in Ihren Abfragen verwenden möchten – in diesem Beispiel handelt es sich dabei um den Ausdruck `JSON_VALUE(Info, '$.Customer.Name')`.  
   
-Sie müssen Ihre Abfragen nicht neu schreiben. Falls Sie Ausdrücke mit der `JSON_VALUE`-Funktion verwenden, wie in der Beispielfrage oben dargestellt, sieht SQL Server, dass es eine äquivalent berechnete Spalte mit dem gleichen Ausdruck gibt. Er wendet, falls möglich, einen Index darauf an.
+Sie müssen Ihre Abfragen nicht neu schreiben. Falls Sie wie in der vorherigen Beispielabfrage dargestellt Ausdrücke mit der `JSON_VALUE`-Funktion verwenden, erkennt SQL Server, dass es eine gleichwertig berechnete Spalte mit dem gleichen Ausdruck gibt und wendet dann, falls möglich, einen Index darauf an.
 
 ### <a name="execution-plan-for-this-example"></a>Ausführungsplan für dieses Beispiel
 Hier finden Sie den Ausführungsplan für die Abfrage in diesem Beispiel.  
@@ -79,7 +79,7 @@ Hier finden Sie den Ausführungsplan für die Abfrage in diesem Beispiel.
 Statt eines vollständigen Tabellenscans verwendet SQL Server eine Indexsuche im nicht gruppierten Index, und findet so die Zeilen, die die angegebenen Bedingungen erfüllen. Er verwendet dann eine Schlüsselsuche in der Tabelle `SalesOrderHeader`, um die anderen Spalten abzurufen, auf die die Abfrage verweist – in diesem Beispiel `SalesOrderNumber` und `OrderDate`.  
  
 ### <a name="optimize-the-index-further-with-included-columns"></a>Weiteres Optimieren des Index mit enthaltenen Spalten
-Diese zusätzliche Suche können Sie umgehen, indem Sie die geforderten Spalten dem Index hinzufügen. Sie können diese Spalten als standardmäßig enthaltene Spalten hinzufügen, wie im folgenden Beispiel gezeigt, das eine Erweiterung des oben gezeigten `CREATE INDEX`-Beispiels darstellt.  
+Diese zusätzliche Suche können Sie umgehen, indem Sie die geforderten Spalten dem Index hinzufügen. Sie können diese Spalten als standardmäßig enthaltene Spalten hinzufügen. Dies wird im folgenden Beispiel dargestellt, das eine Erweiterung des vorherigen `CREATE INDEX`-Beispiels darstellt.  
   
 ```sql  
 CREATE INDEX idx_soh_json_CustomerName
@@ -87,12 +87,12 @@ ON Sales.SalesOrderHeader(vCustomerName)
 INCLUDE(SalesOrderNumber,OrderDate)
 ```  
   
-In diesem Fall muss SQL Server keine zusätzlichen Daten aus der Tabelle `SalesOrderHeader` lesen, da alle benötigten Informationen im nicht gruppierten JSON-Index enthalten sind. Das ist eine gute Möglichkeit, JSON- und Spaltendaten in Abfragen zu kombinieren, und um optimale Indizes für Ihre Arbeitsauslastung zu erstellen.  
+In diesem Fall muss SQL Server keine zusätzlichen Daten aus der Tabelle `SalesOrderHeader` lesen, da alle benötigten Informationen im nicht gruppierten JSON-Index enthalten sind. Dieser Index ist eine gute Möglichkeit, um JSON- und Spaltendaten in Abfragen zu kombinieren und optimale Indizes für Ihre Arbeitsauslastung zu erstellen.  
   
 ## <a name="json-indexes-are-collation-aware-indexes"></a>JSON-Indizes sind Indizes mit Sortierungserkennung  
 Eine wichtige Funktion von Indizes für JSON-Daten ist, dass die Indizes über eine Sortierungserkennung verfügen. Das Ergebnis der Funktion `JSON_VALUE`, die Sie beim Erstellen der berechneten Spalte verwenden, ist ein Textwert, der seine Sortierung vom Eingabeausdruck erbt. Die Werte im Index sind daher nach den Sortierungsregeln geordnet, die in den Quellspalten definiert sind.  
   
-Um dies zu demonstrieren, erstellt das folgende Beispiel eine einfache Sammlungstabelle mit einem Primärschlüssel und JSON-Inhalt.  
+Im folgenden Beispiel wird eine einfache Sammlungstabelle mit einem Primärschlüssel und JSON-Inhalten erstellt, um zu demonstrieren, dass die Indizes über eine Sortierungserkennung verfügen.  
   
 ```sql  
 CREATE TABLE JsonCollection
@@ -146,7 +146,7 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  Obwohl die Abfrage eine `ORDER BY`-Klausel hat, verwendet der Ausführungsplan keinen Sort-Operator. Der JSON-Index ist bereits nach den Regeln für serbisches Kyrillisch geordnet. Daher kann SQL Server den nicht gruppierten Index verwenden, in dem die Ergebnisse bereits sortiert sind.  
   
- Falls wir jedoch die Reihenfolge des Ausdrucks `ORDER BY` ändern – falls wir beispielsweise `COLLATE French_100_CI_AS_SC` hinter die `JSON_VALUE`-Funktion platzieren – erhalten wir einen anderen Ausführungsplan für die Abfrage.  
+ Falls Sie jedoch die Sortierung des `ORDER BY`-Ausdrucks ändern, indem Sie beispielsweise `COLLATE French_100_CI_AS_SC` an die `JSON_VALUE`-Funktion anhängen, erhalten Sie einen anderen Ausführungsplan für die Abfrage.  
   
  ![Ausführungsplan](../../relational-databases/json/media/jsonindexblog3.png "Ausführungsplan")  
   

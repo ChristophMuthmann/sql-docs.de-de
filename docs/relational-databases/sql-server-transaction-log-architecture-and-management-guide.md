@@ -18,17 +18,20 @@ helpviewer_keywords:
 - transaction log guidance
 - vlfs
 - virtual log files
+- virtual log size
+- vlf size
+- transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 caps.latest.revision: "3"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d98d7d65ebfa88ca9bdaa620c136f78dfe6c339c
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: dcc274dcde55b2910b96404c2c3a06c647518dc5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,9 +80,10 @@ Das Transaktionsprotokoll in einer Datenbank erstreckt sich über eine oder mehr
 > [!NOTE]
 > Die VLF (Virtual Log File) wird gemäß der folgenden Methode erstellt:
 > - Wenn die nächste Dateivergrößerung weniger als 1/8 der aktuellen physischen Protokollgröße beträgt, wird 1 VLF erstellt, die den Umfang der Dateivergrößerung abdeckt (beginnend mit [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]).
-> - Wenn die Dateivergrößerung unter 64 MB liegt, werden 4 VLFs erstellt, die den Umfang der Dateivergrößerung abdecken. (Beispielsweise werden für eine Vergrößerung von 1 MB vier VLFs von 256 KB erstellt.)
-> - Wenn die Dateivergrößerung zwischen 64 MB und 1 GB beträgt, werden 8 VLFs erstellt, die den Umfang der Dateivergrößerung abdecken. (Beispielsweise werden für eine Vergrößerung von 512 MB acht VLFs von 64 MB erstellt.)
-> - Bei einer Dateivergrößerung von mehr als 1 GB werden 16 VLFs erstellt, die den Umfang der Dateivergrößerung abdecken. (Beispielsweise werden für eine Vergrößerung von 8 GB sechzehn VLFs von 512 MB erstellt.)
+> - Verwenden Sie die Methode, die vor 2014 eingeführt wurde, wenn die nächste Dateivergrößerung mehr als 1/8 der aktuellen Protokollgröße beträgt:
+>    -  Wenn die Dateivergrößerung unter 64 MB liegt, werden 4 VLFs erstellt, die den Umfang der Dateivergrößerung abdecken. (Beispielsweise werden für eine Vergrößerung von 1 MB vier VLFs von 256 KB erstellt.)
+>    -  Wenn die Dateivergrößerung zwischen 64 MB und 1 GB beträgt, werden 8 VLFs erstellt, die den Umfang der Dateivergrößerung abdecken. (Beispielsweise werden für eine Vergrößerung von 512 MB acht VLFs von 64 MB erstellt.)
+>    -  Bei einer Dateivergrößerung von mehr als 1 GB werden 16 VLFs erstellt, die den Umfang der Dateivergrößerung abdecken. (Beispielsweise werden für eine Vergrößerung von 8 GB sechzehn VLFs von 512 MB erstellt.)
 
 Wenn die Protokolldateien durch viele kleine Schritte auf eine beträchtliche Größe anwachsen, enthalten sie zahlreiche virtuelle Protokolldateien. **Hierdurch verlangsamen sich möglicherweise das Starten der Datenbank sowie Protokollsicherungs- und -wiederherstellungsvorgänge.** Es wird empfohlen, den Protokolldateien einen *size*-Wert zuzuweisen, der ungefähr der endgültigen erforderlichen Größe entspricht, und darüber hinaus einen relativ hohen Wert für *growth_increment* festzulegen. Lesen Sie den folgenden Tipp, um die optimale VLF-Verteilung für die aktuelle Größe des Transaktionsprotokolls zu ermitteln.
  - Der mit dem Argument `SIZE` festgelegte *size*-Wert von `ALTER DATABASE` ist die Anfangsgröße der Protokolldatei.

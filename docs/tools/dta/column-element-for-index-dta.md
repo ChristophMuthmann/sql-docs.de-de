@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Column element
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: faec6b1230be64610dfa1b228a390a6e603e03c2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ec9be70ff9d3605159bd47c4a4fd77f5bb1c6111
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="column-element-for-index-dta"></a>Column-Element für Index (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Gibt die Spalten, auf denen der Index für eine benutzerspezifische Konfiguration erstellt wird.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  
@@ -82,8 +82,8 @@ ms.lasthandoff: 12/21/2017
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
-|**Übergeordnetes Element**|[Index-Element &#40;DTA&#41;](../../tools/dta/index-element-dta.md)|  
-|**Untergeordnete Elemente**|[Name-Element für Spalte &#40;DTA&#41;](../../tools/dta/name-element-for-column-dta.md)|  
+|**Übergeordnetes Element**|[Index-Element &#40; DTA &#41;](../../tools/dta/index-element-dta.md)|  
+|**Untergeordnete Elemente**|[Name-Element für Spalte &#40; DTA &#41;](../../tools/dta/name-element-for-column-dta.md)|  
   
 ## <a name="example"></a>Beispiel  
  Ein Beispiel für die Verwendung dieses Elements finden Sie unter [Beispiel für eine XML-Eingabedatei mit benutzerdefinierter Konfiguration &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
