@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STLineFromText (geometry Data Type)
 ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 40fbc8cc01601c3c7a3893be7aa61eb50f8952ab
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9474ce39666d48772fe561d6c5556ebdf5bf5e8c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

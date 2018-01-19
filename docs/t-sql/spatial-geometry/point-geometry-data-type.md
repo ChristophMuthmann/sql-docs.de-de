@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: Point (geometry Data Type)
 ms.assetid: 7a2e593a-4d4c-4214-b0c5-02d1ac46bc66
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d9a12d28b917ab2f6211bef0f07a62301a100bfe
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2632d18c1073ebda8b6aef9fac862b63b3f03405
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="point-geometry-data-type"></a>Point (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Point ( X, Y, SRID )
  *X*  
  Ein **float** -Ausdruck, der die X-Koordinate der zu erstellenden **Point** -Instanz angibt.  
   
- *Y*  
+ *J*  
  Ein **float** -Ausdruck, der die Y-Koordinate der zu erstellenden **Point** -Instanz angibt.  
   
  *SRID*  

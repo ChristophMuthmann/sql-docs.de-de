@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STSymDifference (geometry Data Type)
 ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fb7658a326272749bf80b6fd507d974b70a7df09
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6ca0463a06e093de7ac21234605038675a341af3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STBuffer (geometry Data Type)
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cb93bd550570b94b1a924a20d6243e808209adec
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c7d46b002eec2a8437234c89cf03dd1c29b3fc27
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Abstand*  
+ *distance*  
  Ein Wert vom Typ **float** (**double** in .NET-Framework), der den Abstand zu der geometry-Instanz angibt, um die der Puffer berechnet werden soll.  
   
 ## <a name="return-types"></a>Rückgabetypen  

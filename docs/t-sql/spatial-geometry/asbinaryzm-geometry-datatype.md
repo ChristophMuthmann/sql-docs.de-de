@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: AsBinaryZM geometry
 ms.assetid: 5eae2872-adca-4b8f-8b04-4ee91ced98f1
 caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0c250cae7bce041e858b71b21f0f0a140560604
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: bde7c186a5337bce2d57f39c689f21aa8372794f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="asbinaryzm-geometry-datatype"></a>AsBinaryZM (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

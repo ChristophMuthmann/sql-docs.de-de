@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STIsEmpty method
 ms.assetid: 4cbc66e3-9035-4ecf-8f5a-6301f168c26c
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f8edc41eb64e2f270986e49cd7d4633cb65d45c5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c88befa1182da32871c5d7f3d529ec50b0eaccc8
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stisempty-geography-data-type"></a>STIsEmpty (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

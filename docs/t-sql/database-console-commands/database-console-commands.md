@@ -14,15 +14,15 @@ ms.topic: language-reference
 dev_langs: TSQL
 ms.assetid: 02265d6f-44fb-4e28-af58-115ba1ef6c75
 caps.latest.revision: "5"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1c015bf387a1ead417e51ba1e492412dc626d248
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 482348c64acc6d72e102616e0e0b9ecac8767cb4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="database-console-commands"></a>Database Console Commands (Datenbankkonsolenbefehle)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

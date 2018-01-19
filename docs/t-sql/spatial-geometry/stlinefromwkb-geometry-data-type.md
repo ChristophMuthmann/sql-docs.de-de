@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STLineFromWKB (geometry Data Type)
 ms.assetid: e674c8c4-c67f-4fc1-9873-d9c2ed46c659
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 94ef2360ce423adb2edf085a160ee3b516c605e2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f0ff702515b6e86475cd59982c61f895a32fc872
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stlinefromwkb-geometry-data-type"></a>STLineFromWKB (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]

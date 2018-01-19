@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STIntersects method
 ms.assetid: c9db8b42-83c7-48c6-8963-fce54eb34c05
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d6ac913a6d199e1b72193431ad1198bcbba11b03
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 252deed5ef67690f599f9f1a5827884031a08c4e
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stintersects-geography-data-type"></a>STIntersects (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]

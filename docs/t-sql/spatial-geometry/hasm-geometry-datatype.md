@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: HasM geometry
 ms.assetid: 15540837-c4bf-4d18-b380-13ae31f3226f
 caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 997621503cfe816e427e808a37a7df323bbe8860
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 00033a151755f0dad6f2551db53ebba0e5e6d077
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="hasm-geometry-datatype"></a>HasM (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

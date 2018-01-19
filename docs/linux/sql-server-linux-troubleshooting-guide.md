@@ -3,8 +3,8 @@ title: Problembehandlung bei SQLServer on Linux | Microsoft Docs
 description: "Bietet Tipps zur Problembehandlung für die Verwendung von SQL Server-2017 unter Linux."
 author: annashres
 ms.author: anshrest
-manager: jhubbard
-ms.date: 05/08/2017
+manager: craigg
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,17 +15,17 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: a65ee3607cb2bbe2a1a30135950e611e4456f8ba
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: da16bc7126d39bcdf86152b3ae8b21d7b58805eb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Problembehandlung bei SQLServer on Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Dieses Dokument beschreibt die Behebung von Microsoft SQL Server unter Linux oder auf einem Docker-Container ausgeführt wird. Bei der Problembehandlung SQL Server on Linux Bitte denken Sie daran, überprüfen die unterstützten Funktionen und bekannte Einschränkungen in der [SQL Server on Linux Release Notes](sql-server-linux-release-notes.md).
+Dieses Dokument beschreibt die Behebung von Microsoft SQL Server unter Linux oder auf einem Docker-Container ausgeführt wird. Bei der Problembehandlung SQL Server on Linux Denken Sie daran, überprüfen die unterstützten Funktionen und bekannte Einschränkungen in der [SQL Server on Linux Release Notes](sql-server-linux-release-notes.md).
 
 ## <a id="connection"></a>Problembehandlung bei Verbindungsfehlern
 Wenn Sie Probleme beim Herstellen einer Verbindung mit dem Linux-SQL-Server haben, sind einige Dinge überprüfen. 
@@ -51,7 +51,7 @@ Wenn Sie Probleme beim Herstellen einer Verbindung mit dem Linux-SQL-Server habe
 
 - Stellen Sie sicher, dass der Benutzername und das Kennwort nicht Tippfehler oder zusätzliche Leerzeichen oder falsche Groß-/Kleinschreibung enthalten.
 
-- Versucht, explizit die Anzahl Protokoll und Port mit dem Namen des Servers wie folgt festgelegt: **Tcp:servername 1433**.
+- Versuchen Sie, das Protokoll und Port Anzahl durch den Servernamen, wie im folgenden Beispiel explizit festgelegt: **Tcp:servername 1433**.
 
 - Verbindungsprobleme können auch Verbindungsfehlern und Timeouts führen. Überprüfen die Verbindungsinformationen und die Netzwerkkonnektivität, versuchen Sie es erneut, die Verbindung.
 
@@ -61,7 +61,7 @@ Die folgenden Abschnitte zeigen, wie starten, beenden, neu starten und überprü
 
 ### <a name="manage-the-mssql-server-service-in-red-hat-enterprise-linux-rhel-and-ubuntu"></a>Verwalten des Mssql--Serverdiensts unter Red Hat Enterprise Linux (RHEL) und Ubuntu 
 
-Überprüfen Sie den Status des Status des SQL Server-Dienst mit dem folgenden Befehl ein:
+Überprüfen Sie den Status des SQL Server-Dienst mit dem folgenden Befehl ein:
 
    ```bash
    sudo systemctl status mssql-server
@@ -77,7 +77,7 @@ Sie können beenden, starten oder starten Sie SQL Server-Dienst nach Bedarf mit 
 
 ### <a name="manage-the-execution-of-the-mssql-docker-container"></a>Verwalten Sie die Ausführung der Mssql-Docker-container
 
-Sie erhalten den Status und Container-ID des zuletzt erstellten SQL Server-Docker Containers mithilfe des folgenden Befehls (die ID ist unter der Spalte "CONTAINER-ID"):
+Sie können Status und Container-ID des zuletzt erstellten SQL Server-Docker Containers abrufen, indem Sie den folgenden Befehl ausführen (die ID ist unter den **CONTAINER-ID** Spalte):
 
    ```bash
    sudo docker ps -l
@@ -151,7 +151,7 @@ Starten Sie SQLServer im Einzelbenutzermodus mit SQLCMD
 > [!WARNING]  
 >  Starten Sie SQL Server unter Linux mit dem Benutzer „MSSQL“, um zukünftige Startprobleme zu vermeiden. Beispiel „sudo-u mssql /opt/mssql/bin/sqlservr [STARTOPTIONEN]“ 
 
-Wenn Sie versehentlich SQL Server mit einem anderen Benutzer gestartet haben, müssen Sie den Besitz von SQL Server-Datenbankdateien zurück an den Benutzer "Mssql" vor dem Starten von SQL Server mit Systemd zu ändern. Angenommen, um den Besitz aller Datenbankdateien unter /var/opt/mssql für den Benutzer "Mssql" zu ändern, führen Sie den folgenden Befehl
+Wenn Sie versehentlich SQL Server mit einem anderen Benutzer gestartet haben, müssen Sie den Besitz von SQL Server-Datenbankdateien zurück an den Benutzer "Mssql" vor dem Starten von SQL Server mit Systemd ändern. Angenommen, um den Besitz aller Datenbankdateien unter /var/opt/mssql für den Benutzer "Mssql" zu ändern, führen Sie den folgenden Befehl
 
    ```bash
    chown -R mssql:mssql /var/opt/mssql/
@@ -161,7 +161,7 @@ Wenn Sie versehentlich SQL Server mit einem anderen Benutzer gestartet haben, m�
 
 1. Sie können nicht mit der Remoteinstanz von SQL Server verbinden.
 
-   Finden Sie im Problembehandlungsabschnitt im Thema [Herstellen einer Verbindung mit SQL Server on Linux](#connection).
+   Finden Sie im Abschnitt "Problembehandlung" des Artikels, [Herstellen einer Verbindung mit SQL Server on Linux](#connection).
 
 2. Fehler: Der Hostname muss 15 Zeichen lang sein oder weniger.
 
@@ -169,10 +169,10 @@ Wenn Sie versehentlich SQL Server mit einem anderen Benutzer gestartet haben, m�
 
 3. Das System-Verwaltung (SA)-Kennwort zurücksetzen.
 
-   Wenn Sie die System-Administrator ("SA")-Kennwort vergessen haben oder sie einem anderen Grund zurückgesetzt müssen gehen Sie folgendermaßen vor.
+   Wenn Sie vergessen haben das Systemadministratorkennwort ("SA") oder einem anderen Grund zurücksetzen müssen, gehen Sie folgendermaßen vor.
 
    > [!NOTE]
-   > Diese Schritte wird die SQL Server-Dienst vorübergehend zu beenden.
+   > Beenden Sie die folgenden Schritte aus den SQL Server-Dienst vorübergehend.
 
    Melden Sie sich bei der Host-Terminal, führen Sie die folgenden Befehle ein, und befolgen Sie die Anweisungen zum Zurücksetzen des SA-Kennworts:
 
@@ -207,5 +207,5 @@ Der Support ist über die Community zur Verfügung und überwachten, von dem eng
 - [DBA-Stapel Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): Datenbank-Verwaltung Fragen
 - [Stapelüberlauf](http://stackoverflow.com/questions/tagged/sql-server): Fragen für die Entwicklung
 - [MSDN-Foren](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): technische Fragen
-- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): Melden von Fehlern und Anforderung-Funktion
+- [Übermitteln von Feedback](https://feedback.azure.com/forums/908035-sql-server): Melden von Fehlern und Anforderung-Funktion
 - [Reddit](https://www.reddit.com/r/SQLServer/): Besprechen Sie SQLServer

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - IF keyword
 ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5d4905fee083d43190e4ef5faeac5d41a1594485
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a41cdef6f84eecd7ebb2ed8509f23bde76a06472
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ IF Boolean_expression
  *Boolean_expression*  
  Ein Ausdruck, der TRUE oder FALSE zurückgibt. Wenn die *Boolean_expression* enthält eine SELECT-Anweisung muss die SELECT-Anweisung in Klammern eingeschlossen werden.  
   
- { *Sql_statement* | *Statement_block* }  
+ { *sql_statement* | *statement_block* }  
  Eine beliebige gültige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder -Anweisungsgruppierung, die als Anweisungsblock definiert ist. Um einen Anweisungsblock (Batch) zu definieren, verwenden Sie die Schlüsselwörter BEGIN und END aus den Sprachkonstrukten zur Ablaufsteuerung. Obwohl sämtliche [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem BEGIN...END-Block gültig sind, sollten bestimmte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen nicht in demselben Batch (Anweisungsblock) gruppiert werden.  
   
 ## <a name="result-types"></a>Ergebnistypen  

@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: Reduce method
 ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 65b9276d3feea6e72f5404fa8f4d7eef963dbe78
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e1932373b11b10724bbbb4e05863428012eb23eb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="reduce-geography-data-type-"></a>Reduce (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |||  
 |-|-|  
 |Begriff|Definition|  
-|*Fehlertoleranz*|Ein Wert vom Typ **float**. *tolerance* ist die Toleranz, die für den Douglas-Peucker-Algorithmus angegeben wird. *tolerance* muss eine positive Zahl sein.|  
+|*tolerance*|Ein Wert vom Typ **float**. *tolerance* ist die Toleranz, die für den Douglas-Peucker-Algorithmus angegeben wird. *tolerance* muss eine positive Zahl sein.|  
   
 ## <a name="return-types"></a>Rückgabetypen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  

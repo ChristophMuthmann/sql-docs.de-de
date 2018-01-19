@@ -22,15 +22,15 @@ helpviewer_keywords:
 - BREAK keyword
 ms.assetid: 67c30b8d-3f15-41ad-b9a9-a4ced3b2af9f
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7f37cdbfaf61ff29137348743d44216de7801879
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 025c4d7b72ff26b231a92c4b9492ccbbc987c467
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="break-transact-sql"></a>BREAK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ END
   
 ## <a name="see-also"></a>Siehe auch  
  [Control-of-Flow-Sprache &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
- [WÄHREND &#40; Transact-SQL &#41;](../../t-sql/language-elements/while-transact-sql.md)   
+ [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)   
  [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
   
   

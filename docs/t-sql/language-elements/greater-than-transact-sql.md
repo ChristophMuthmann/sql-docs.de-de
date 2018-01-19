@@ -24,17 +24,17 @@ helpviewer_keywords:
 - '> (greater than operator)'
 ms.assetid: 50a7b098-a3fb-4df6-ae42-1272d6346338
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5ca1c189b4548175fd1038b2c83bed87d768a776
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c4bb915f7165091e98e27f0c5e3765c943030e6c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="gt-greater-than-transact-sql"></a>&gt;(Größer als) (Transact-SQL)
+# <a name="gt-greater-than-transact-sql"></a>&gt; (Greater Than) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Vergleicht zwei Ausdrücke (ein Vergleichsoperator) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Beim Vergleichen von Ausdrücken, die ungleich NULL sind, ist das Ergebnis TRUE, wenn der linke Operand einen höheren Wert als der rechte Operand besitzt; andernfalls ist das Ergebnis FALSE. Wenn einer oder beide Operanden NULL sind, finden Sie im Thema [SET ANSI_NULLS &#40; Transact-SQL &#41; ](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
@@ -102,8 +102,8 @@ TRUE
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [IIF &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
+ [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

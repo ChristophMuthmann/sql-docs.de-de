@@ -23,15 +23,15 @@ helpviewer_keywords:
 - combining expressions
 ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 34014541d124b0226218012d907fd2f99e0b1610
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f85ca8eceabd8e07a376be0b9d958190cb663de0
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ boolean_expression AND boolean_expression
 ||TRUE|FALSE|UNKNOWN|  
 |------|----------|-----------|-------------|  
 |**"TRUE"**|TRUE|FALSE|UNKNOWN|  
-|**"FALSE"**|FALSE|FALSE|FALSE|  
+|**FALSE**|FALSE|FALSE|FALSE|  
 |**UNBEKANNT**|UNKNOWN|FALSE|UNKNOWN|  
   
 ## <a name="examples"></a>Beispiele  
@@ -100,8 +100,8 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [WOBEI &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   

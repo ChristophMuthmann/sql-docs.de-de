@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STMPolyFromWKB method
 ms.assetid: c4d0e649-0abb-4343-a3f0-3a702c8bbbdb
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8f80daaa68a388136ff8eba24acc4d8be7a59538
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e2a2525dec7e95bec1bd23c6e285422b33ce345c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stmpolyfromwkb-geography-data-type"></a>STMPolyFromWKB (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

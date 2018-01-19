@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5eab0444f036b05f23982b6f21455bfc5ab408a8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f2bcc8b02b0228dc403fffc4ef1c6b82557872a4
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -45,19 +45,19 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 
 ## <a name="arguments"></a>Argumente 
 
-*Trennzeichen*  
+*separator*  
 Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) von `NVARCHAR` oder `VARCHAR` Typ, der verwendet wird, als Trennzeichen für verkettet Zeichenfolgen. Sie können literal oder eine Variable sein. 
 
 *expression*  
 Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Typs. Ausdrücke werden in konvertiert `NVARCHAR` oder `VARCHAR` Typen während der Verkettung. Nicht-Zeichenfolgen-Datentypen werden in konvertiert `NVARCHAR` Typ.
 
 
-< Order_clause >   
+<order_clause>   
 Geben Sie optional Reihenfolge von verketteten Ergebnissen mit `WITHIN GROUP` Klausel:
 ```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
-< Order_by_expression_list >   
+<order_by_expression_list>   
  
   Eine Liste der nicht konstant [Ausdrücke](../../t-sql/language-elements/expressions-transact-sql.md) , die zum Sortieren der Ergebnisse verwendet werden kann. Nur ein `order_by_expression` pro Abfrage zulässig ist. Die Standardsortierreihenfolge ist Aufsteigend.   
   
@@ -77,7 +77,7 @@ Der Rückgabetyp ist, richtet sich nach der ersten Argument (Ausdruck). Wenn Ein
 
 ## <a name="remarks"></a>Hinweise  
  
-`STRING_AGG`Aggregat nimmt alle Ausdrücke aus Zeilen und verkettet diese in einer einzelnen Zeichenfolge. Expression-Werte werden implizit in Zeichenfolgentypen konvertiert und dann verkettet. Die implizite Konvertierung in Zeichenfolgen erfolgt basierend auf den vorhandenen Regeln für Datentypkonvertierungen. Weitere Informationen zu datentypkonvertierungen finden Sie unter [CAST und CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
+`STRING_AGG`ist eine Aggregatfunktion, die alle Ausdrücke aus Zeilen und verkettet diese in einer einzigen Zeichenfolge, an. Expression-Werte werden implizit in Zeichenfolgentypen konvertiert und dann verkettet. Die implizite Konvertierung in Zeichenfolgen erfolgt basierend auf den vorhandenen Regeln für Datentypkonvertierungen. Weitere Informationen zu datentypkonvertierungen finden Sie unter [CAST und CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
 Wenn der Eingabeausdruck Typ `VARCHAR`, das Trennzeichen nicht mit Typ `NVARCHAR`. 
 
@@ -115,7 +115,7 @@ FROM Person.Person;
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
  
 
-|CSV | 
+|Csv | 
 |--- |
 |John, n/v, Mike, Peter, n/v, n/v, Alice und Bob |  
 
@@ -151,7 +151,7 @@ GROUP BY a.articleId, title;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|Artikel-ID: |title |Transponder |
+|articleId |title |Transponder |
 |--- |--- |--- |
 |172 |Abrufe geben schließen Wahlergebnisse |Politik, Umfragen, City Rat | 
 |176 |Neue autobahnmeilenleistung erwartet, dass eine Überlastung zu reduzieren. |NULL |
@@ -194,6 +194,15 @@ GROUP BY town;
 
 
 ## <a name="see-also"></a>Siehe auch  
-
-[Zeichenfolgenfunktionen (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
+ [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [Aggregatfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+ [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
 
