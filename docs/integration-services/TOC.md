@@ -75,7 +75,7 @@
 
 # [Katalog und Server](catalog/integration-services-ssis-server-and-catalog.md)
 # [Dienst (Legacy)](../integration-services/service/integration-services-service-ssis-service.md)
-# [Sicherheit](../integration-services/security/security-overview-integration-services.md)
+# [Security](../integration-services/security/security-overview-integration-services.md)
 # [Leistung](../integration-services/performance/monitor-running-packages-and-other-operations.md)
 # [Problembehandlung](../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md)
 # [Systemsichten](../integration-services/system-views/views-integration-services-catalog.md)
@@ -181,5 +181,5 @@
 ### [SSIS-Forum auf MSDN](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
 ### [SSIS-Tag in Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
 ## Geben Sie Feedback
-### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+### [SQL Server-Feedback-forum](https://feedback.azure.com/forums/908035-sql-server)  
 ## [Rufen Sie die Dokumente auf Ihrem PC auf](../sql-server/sql-server-help-installation.md)
