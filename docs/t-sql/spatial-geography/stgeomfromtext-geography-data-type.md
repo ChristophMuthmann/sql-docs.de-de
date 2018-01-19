@@ -20,15 +20,15 @@ helpviewer_keywords:
 - STGeomFromText method
 ms.assetid: 3717987b-77d8-4ccf-a1db-5a8016ac1083
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e781cdd50bd10711d181318cb584f6949828e19d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 488a55f82cabd9700f4bf9f7ee70d519e87b8661
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stgeomfromtext-geography-data-type"></a>STGeomFromText (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

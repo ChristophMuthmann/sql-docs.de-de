@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STExteriorRing (geometry Data Type)
 ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b74f13c6acf0f45ace93966cf7e820dcaa1379c8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9a32fd10081703a0d95444fe506dda7c6f00d799
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stexteriorring-geometry-data-type"></a>STExteriorRing (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

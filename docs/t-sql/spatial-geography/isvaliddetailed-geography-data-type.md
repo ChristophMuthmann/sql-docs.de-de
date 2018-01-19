@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: IsValidDetailed geography
 ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
 caps.latest.revision: "8"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 80f1b3bc5fa9684a87fbf330f50aca4f3e85aea5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 7348f48d77564181f8f83183f32528abdb3f2924
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

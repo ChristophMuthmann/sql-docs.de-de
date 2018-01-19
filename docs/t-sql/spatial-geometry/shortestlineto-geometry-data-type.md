@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: ShortestLineTo method (geometry)
 ms.assetid: 39a2d0e4-4f93-4e94-a27e-6ad9537cfe74
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a2dad1bff4bfb240bf112a4906c57910a6e1c5dc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 53d9b061c8007db287f7738349e21f74d3bbbced
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

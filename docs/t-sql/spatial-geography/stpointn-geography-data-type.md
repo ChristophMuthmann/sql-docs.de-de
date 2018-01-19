@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STPointN method
 ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 90c80d8b9d6ec81c078d9de0db5f26a900c8b5d6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0169852c4b7512ec3001875cba423bc93e53125e
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stpointn-geography-data-type"></a>STPointN (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

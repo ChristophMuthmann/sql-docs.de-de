@@ -14,15 +14,15 @@ ms.topic: language-reference
 dev_langs: TSQL
 ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7e113be00cbfdaf0dd1e0164623aec3516327a23
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 8aa4d64e416871bde0b5562206d2f29021f51cfb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="variables-transact-sql"></a>Variablen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -184,7 +184,7 @@ GO
  [Deklarieren@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
  [SET@local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
  [SELECT @local_variable](../../t-sql/language-elements/select-local-variable-transact-sql.md)  
- [Ausdrücke &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Zusammengesetzte Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   
   

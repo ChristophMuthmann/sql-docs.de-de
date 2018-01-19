@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STNumPoints (geometry Data Type)
 ms.assetid: a19520fc-7f91-4a2c-856f-4d8b99a7e496
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3f14dac25ae563abd3c390c670697c68824baad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2d84f2bbbfafdb7667d1263d026ef76693fde57d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stnumpoints-geometry-data-type"></a>STNumPoints (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

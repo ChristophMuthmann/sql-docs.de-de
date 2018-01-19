@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STIsSimple (geometry Data Type)
 ms.assetid: da8f45d4-4f9c-405d-b883-760eb5344a71
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d4f89a0b23de2e371fa7d88e72bf7adcb75b085c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 52c407fb89544ef7857ffd5ac3dae00a9c4e233c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stissimple-geometry-data-type"></a>STIsSimple (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

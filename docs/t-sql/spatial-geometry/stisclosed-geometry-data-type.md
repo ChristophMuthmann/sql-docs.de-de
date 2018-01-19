@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STIsClosed (geometry Data Type)
 ms.assetid: 14edbb22-df7b-4b8a-b16c-ac477a5d32c1
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1f9feee07b367aac1303e31ece9c86701ddf9cd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cf303061e37d2469aa7d061d3d65b90a9fd690b5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

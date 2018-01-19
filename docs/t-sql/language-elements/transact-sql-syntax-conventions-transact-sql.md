@@ -28,15 +28,15 @@ helpviewer_keywords:
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: dfc99736884d458bdbce890bfcc4f80185115b29
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f7cb61a12af903aa444462a7a67c9c71231b96fa
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL-Syntaxkonventionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,27 +48,27 @@ ms.lasthandoff: 01/09/2018
 |GROSSBUCHSTABEN|[!INCLUDE[tsql](../../includes/tsql-md.md)]-Schlüsselwörter.|  
 |*Kursiv*|Vom Benutzer anzugebende Parameter der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Syntax.|  
 |**Fett**|Datenbanknamen, Tabellennamen, Spaltennamen, Indexnamen, gespeicherte Prozeduren, Hilfsprogramme, Datentypnamen und Text, der wie aufgeführt eingegeben werden muss.|  
-|**"Unterstreichen"**|Gibt den Standardwert an, der verwendet wird, wenn die Klausel mit dem unterstrichenen Wert in der Anweisung ausgelassen wird.|  
+|**underline**|Gibt den Standardwert an, der verwendet wird, wenn die Klausel mit dem unterstrichenen Wert in der Anweisung ausgelassen wird.|  
 |&#124; (Senkrechter Strich)|Trennt in eckigen oder geschweiften Klammern eingeschlossene Syntaxelemente. Sie können nur eines der Elemente verwenden.|  
 |`[ ]` (eckige Klammern)|Optionale Syntaxelemente. Geben Sie die eckigen Klammern nicht ein.|  
 |{ } (geschweifte Klammern)|Erforderliche Syntaxelemente. Geben Sie die geschweiften Klammern nicht ein.|  
 |[**,**...*n*]|Gibt an, das vorherige Element kann wiederholt werden  *n*  -Mal. Die einzelnen Vorkommen werden durch Kommas voneinander getrennt.|  
 |[...*n*]|Gibt an, das vorherige Element kann wiederholt werden  *n*  -Mal. Die einzelnen Vorkommen werden durch Leerzeichen voneinander getrennt.|  
 |;|[!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungsabschlusszeichen.Dieses Abschlusszeichen ist für die meisten Anweisungen in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht zwingend erforderlich, in zukünftigen Versionen kann sich dies jedoch ändern.|  
-|\<Bezeichnung >:: =|Der Name eines Syntaxblockes. Diese Konvention dient zur Gruppierung und Bezeichnung von Abschnitten einer langen Syntax oder einer Syntaxeinheit, die an mehreren Stellen innerhalb einer Anweisung verwendet werden kann. Jeder Standort in der die Syntax kann verwendet werden, wird angegeben, mit der Bezeichnung in spitzen Klammern eingeschlossen: \<Bezeichnung >.<br /><br /> Eine Gruppe ist eine Auflistung von Ausdrücken, z. B. \<gruppierungssatz >; und eine Liste ist eine Auflistung von Sets, z. B. \<Liste zusammengesetzter Elemente >.|  
+|\<label> ::=|Der Name eines Syntaxblockes. Diese Konvention dient zur Gruppierung und Bezeichnung von Abschnitten einer langen Syntax oder einer Syntaxeinheit, die an mehreren Stellen innerhalb einer Anweisung verwendet werden kann. Jeder Standort in der die Syntax kann verwendet werden, wird angegeben, mit der Bezeichnung in spitzen Klammern eingeschlossen: \<Bezeichnung >.<br /><br /> Eine Gruppe ist eine Auflistung von Ausdrücken, z. B. \<gruppierungssatz >; und eine Liste ist eine Auflistung von Sets, z. B. \<Liste zusammengesetzter Elemente >.|  
   
 ## <a name="multipart-names"></a>Mehrteilige Namen  
  Wenn keine anderen Angaben vorliegen, können alle [!INCLUDE[tsql](../../includes/tsql-md.md)]-Referenzen auf den Namen eines Datenbankobjekts aus vier Teilen bestehende Namen im folgenden Format sein:  
   
- *Server_name* **.** [*Database_name*]**.** [*Schema_name*]**.** *Object_name*  
+ *server_name* **.**[*database_name*]**.**[*schema_name*]**.***object_name*  
   
- | *Database_name***.** [*Schema_name*]**.** *Object_name*  
+ | *database_name***.**[*schema_name*]**.***object_name*  
   
- | *Schema_name***.** *Object_name*  
+ | *schema_name***.***object_name*  
   
  *| object_name*  
   
- *Servername*  
+ *server_name*  
  Gibt den Namen eines Verbindungs- oder Remoteservers an.  
   
  *database_name*  
@@ -89,13 +89,13 @@ ms.lasthandoff: 01/09/2018
   
 |Objektverweisformat|Description|  
 |-----------------------------|-----------------|  
-|*Server* **.** *Datenbank* **.** *Schema* **.** *Objekt*|Vierteiliger Name.|  
-|*Server* **.** *Datenbank* **...** *Objekt*|Der Schemaname wird weggelassen.|  
-|*Server* **...** *Schema* **.** *Objekt*|Der Datenbankname wird weggelassen.|  
+|*server* **.** *database* **.** *schema* **.** *Objekt*|Vierteiliger Name.|  
+|*server* **.** *database* **..** *Objekt*|Der Schemaname wird weggelassen.|  
+|*server* **..** *schema* **.** *Objekt*|Der Datenbankname wird weggelassen.|  
 |*Server* **...**  *Objekt*|Der Datenbank- und der Schemaname werden weggelassen.|  
-|*Datenbank* **.** *Schema* **.** *Objekt*|Der Servername wird weggelassen.|  
-|*Datenbank* **...** *Objekt*|Der Server- und der Schemaname werden weggelassen.|  
-|*Schema* **.** *Objekt*|Der Server- und der Datenbankname werden weggelassen.|  
+|*database* **.** *schema* **.** *Objekt*|Der Servername wird weggelassen.|  
+|*database* **..** *Objekt*|Der Server- und der Schemaname werden weggelassen.|  
+|*schema* **.** *Objekt*|Der Server- und der Datenbankname werden weggelassen.|  
 |*Objekt*|Der Server-, der Datenbank- und der Schemaname werden weggelassen.|  
   
 ## <a name="code-example-conventions"></a>Konventionen für Codebeispiele  

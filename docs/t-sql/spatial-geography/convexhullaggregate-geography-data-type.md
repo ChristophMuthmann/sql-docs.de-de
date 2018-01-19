@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: ConvexHullAggregate method (geography)
 ms.assetid: 21784c66-2725-471b-9e2d-a8c2e3695197
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 726bcc637e827c37000112cf66b81dad4e0f691b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bc709bdd7837c60513304695a8ed6a871b21549d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="convexhullaggregate-geography-data-type"></a>ConvexHullAggregate (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

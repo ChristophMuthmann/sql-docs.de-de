@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STCentroid (geometry Data Type)
 ms.assetid: 4dc5a004-7a53-4cce-81dd-9f5e1dd0db78
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 61bde787ab407107ed7747499024ed6d3f0a9c14
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3f84ca957df8b9a98a05a29619a0a5cccfb4b22d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stcentroid-geometry-data-type"></a>STCentroid (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

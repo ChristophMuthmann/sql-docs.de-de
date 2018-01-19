@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: Extended Static Geometry Methods [SQL Server]
 ms.assetid: 04c02af0-5243-4d53-b35a-ddc4113ee8f6
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e987113cb62f4d54f6fa8b7b0a228ccc33a91762
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f72fe98e600e17842059e13d1f9656a51f1d067a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="extended-static-geometry-methods"></a>Erweiterte statische geometry-Methoden
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Analysieren](../../t-sql/spatial-geometry/parse-geometry-data-type.md)  
   
--   [Point](../../t-sql/spatial-geometry/point-geometry-data-type.md)  
+-   [Punkt](../../t-sql/spatial-geometry/point-geometry-data-type.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Statische Geometry-Aggregatmethoden](../../t-sql/spatial-geometry/static-aggregate-geometry-methods.md)   

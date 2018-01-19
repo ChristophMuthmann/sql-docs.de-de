@@ -25,15 +25,15 @@ helpviewer_keywords:
 - data updates [SQL Server], WRITETEXT statement
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 534fa1494ec97efb8258222f512902d15efa1f36
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d8c66e4a785fd1d731bd55730a8439f5e796b01f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ WRITETEXT [BULK]
 > [!IMPORTANT]  
 >  Es wird empfohlen, die BULK-Option nicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-basierten Anwendungen zu verwenden. Diese Option kann in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geändert oder entfernt werden.  
   
- *Tabelle* **.column**  
+ *table* **.column**  
  Der Name der Tabelle und **Text**, **Ntext**, oder **Image** zu aktualisierenden Spalte. Tabellen- und Spaltennamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md). Das Angeben des Datenbank- und des Besitzernamens ist optional.  
   
  *text_ptr*  
@@ -70,7 +70,7 @@ WRITETEXT [BULK]
  WITH LOG  
  Wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignoriert. Die Protokollierung wird durch das für die Datenbank wirksame Wiederherstellungsmodell bestimmt.  
   
- *Daten*  
+ *data*  
  Der tatsächliche **Text**, **Ntext** oder **Image** zum Speichern von Daten. *Daten* kann ein Literal oder ein Parameter sein. Die maximale Länge des Texts, die interaktiv mit WRITETEXT eingefügt werden kann, ist etwa 120 KB **Text**, **Ntext**, und **Image** Daten.  
   
 ## <a name="remarks"></a>Hinweise  

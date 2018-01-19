@@ -38,15 +38,15 @@ helpviewer_keywords:
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 caps.latest.revision: "174"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 92740f196f2bd0c79a84eb43826f764e93930e67
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2ca76e248bc8f3fe0c3b0edff73254e05a6f4f26
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="hints-transact-sql---table"></a>Hinweise (Transact-SQL) - Tabelle
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  NOEXPAND  
  Gibt an, dass indizierte Sichten nicht für den Zugriff auf zugrunde liegende Tabellen erweitert werden, wenn der Abfrageoptimierer die Abfrage verarbeitet. Der Abfrageoptimierer behandelt die Sicht wie eine Tabelle mit einem gruppierten Index. NOEXPAND gilt nur für indizierte Sichten. Weitere Informationen finden Sie in den Hinweisen.  
   
- INDEX **(***Index_value* [**,**... *n* ] ) | INDEX = ( *Index_value***)**  
+ INDEX  **(*** Index_value* [**,**... *n* ] ) | INDEX = ( *Index_value ***)**  
  Mit der INDEX()-Syntax werden die Namen oder IDs der Indizes angegeben, die der Abfrageoptimierer beim Verarbeiten der Anweisung verwenden soll. Die alternative INDEX = Syntax gibt einen einzigen Indexwert an. Pro Tabelle ist nur ein Indexhinweis zulässig.  
   
  Falls ein gruppierter Index vorhanden ist, erzwingt INDEX(0) einen Scan des gruppierten Index, und INDEX(1) erzwingt einen Scan des gruppierten Index oder eine Suche im gruppierten Index. Falls kein gruppierter Index vorhanden ist, erzwingt INDEX(0) einen Tabellenscan, und INDEX(1) wird als Fehler interpretiert.  
@@ -184,7 +184,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  Ein Beispiel für die Verwendung dieses Hinweises in einer INSERT ... Wählen Sie * FROM OPENROWSET(Bulk...)-Anweisung finden Sie unter [beibehalten von NULL-Werten oder verwenden standardmäßig während des Massenimports &#40; SQLServer &#41; ](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
- FORCESEEK [ **(***Index_value***(***Index_column_name* [ **,**... *n* ] **))** ]  
+ FORCESEEK [**(***Index_value***(*** Index_column_name* [ **,**... *n* ] **))** ]  
  Gibt an, dass der Abfrageoptimierer nur einen Indexsuchvorgang als Zugriffspfad auf die in der Tabelle oder Sicht angegebenen Daten verwenden darf. Ab SQL Server 2008 R2 SP1 können auch Indexparameter angegeben werden. Der Abfrageoptimierer berücksichtigt in diesem Fall nur Indexsuchvorgänge über den angegebenen Index mit mindestens den angegebenen Indexspalten.  
   
  *index_value*  
@@ -501,7 +501,7 @@ AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);
   
 ## <a name="see-also"></a>Siehe auch  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Tabellenhinweise &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)  
   
   

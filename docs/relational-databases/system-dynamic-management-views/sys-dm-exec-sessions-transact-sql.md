@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 48af63d80b801b677d9f0f6225f84ba63c09f344
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5e0cd35b044d4a5016442ddae4384aea094cc655
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,6 +109,10 @@ ms.lasthandoff: 01/02/2018
 -   unsuccessful_logons  
   
  Ist diese Option nicht aktiviert, geben diese Spalten NULL-Werte zurück. Weitere Informationen zum Festlegen dieser Serverkonfigurationsoption finden Sie unter [common Criteria-Kompatibilität aktiviert (Serverkonfigurationsoption)](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md).  
+ 
+ 
+ Die Admin-Verbindungen auf Azure SQL-Datenbank werden eine Zeile pro authentifizierter Sitzung angezeigt, während die nichtadministrativen Verbindungen nur Informationen im Zusammenhang mit ihrer Datenbank benutzersitzungen angezeigt werden. 
+ 
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
@@ -117,7 +121,7 @@ ms.lasthandoff: 01/02/2018
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|1:0 oder 1:viele|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|1:0 oder 1:viele|  
 |sys.dm_exec_sessions|[sys.dm_tran_session_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)|session_id|1:0 oder 1:viele|  
-|sys.dm_exec_sessions|[dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(Session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|1:0 oder 1:viele|  
+|sys.dm_exec_sessions|[sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|1:0 oder 1:viele|  
 |sys.dm_exec_sessions|[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|session_id|1:1|  
   
 ## <a name="examples"></a>Beispiele  

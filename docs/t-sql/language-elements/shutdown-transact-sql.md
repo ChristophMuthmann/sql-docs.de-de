@@ -23,15 +23,15 @@ helpviewer_keywords:
 - immediately stopping SQL Server
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 10a6b2c5bf093eaee3eacf183f98ecb644d2fc68
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e4cf8ea2b61d4f1acb69ea489a5116a701264469
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   Mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Managers.  
   
--   Durch Ausführen von **net Stop Mssqlserver** über eine Eingabeaufforderung für eine Standardinstanz oder durch Ausführen **net Stop Mssql$***Instancename* über eine Eingabeaufforderung für eine benannte Instanz.  
+-   Durch Ausführen von **net Stop Mssqlserver** über eine Eingabeaufforderung für eine Standardinstanz oder durch Ausführen **net Stop Mssql$ *** Instancename* über eine Eingabeaufforderung für eine benannte Instanz.  
   
 -   Mithilfe der Dienste in der Systemsteuerung.  
   
@@ -82,9 +82,9 @@ SHUTDOWN [ WITH NOWAIT ]
  Mitglieder der SHUTDOWN-Berechtigungen zugewiesen sind die **Sysadmin** und **Serveradmin** festen Serverrollen, und sie sind nicht übertragbar.  
   
 ## <a name="see-also"></a>Siehe auch  
- [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
- [' sp_lock ' &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [Sp_who &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [PRÜFPUNKT &#40; Transact-SQL &#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
+ [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [sqlservr (Anwendung)](../../tools/sqlservr-application.md)   
  [Starten, Beenden, Anhalten, Fortsetzen und Neustarten des Datenbankmoduls, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   

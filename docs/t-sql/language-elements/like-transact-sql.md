@@ -32,15 +32,15 @@ helpviewer_keywords:
 - NOT LIKE keyword
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d8883f7a71a72a005323458bc96ca1d795d86513
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 993ba7467ada3a69fed043e2d6322efa7538b190
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ match_expression [ NOT ] LIKE pattern
  *match_expression*  
  Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines Zeichendatentyps.  
   
- *Muster*  
+ *pattern*  
  Ist die bestimmte Zeichenfolge von Zeichen im zu suchende *Match_expression*, und Sie können die folgenden gültigen Platzhalterzeichen enthalten. *Muster* kann maximal 8.000 Byte sein.  
   
 |Platzhalter|Description|Beispiel|  
@@ -187,7 +187,7 @@ GO
 |Symbol|Bedeutung|  
 |------------|-------------|  
 |LIKE '5[%]'|5%|  
-|LIKE '[_]n'|_N|  
+|LIKE '[_]n'|_n|  
 |LIKE '[a-cdf]'|a, b, c, d oder f|  
 |LIKE '[-acdf]'|-, a, c, d oder f|  
 |LIKE '[ [ ]'|[|  
@@ -333,7 +333,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. Verwenden von NOT LIKE mit dem Platzhalterzeichen %  
- Das folgende Beispiel findet alle Telefonnummern in der `DimEmployee` Tabelle, die nicht mit beginnen `612`.  zugreifen.  
+ Das folgende Beispiel findet alle Telefonnummern in der `DimEmployee` Tabelle, die nicht mit beginnen `612`.  aus.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -357,8 +357,8 @@ ORDER by LastName;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausdrücke &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [WOBEI &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
  

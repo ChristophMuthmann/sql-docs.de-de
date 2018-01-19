@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: OGC Methods on Geometry Instances [SQL Server]
 ms.assetid: c0c0f441-bf33-410c-9df0-544e3d05b944
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e02b42aab159f3bc8abe08cfa167f5a49862d37e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 673bbc900adbe31c20c078f1331bee8ab27f1bcb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ogc-methods-on-geometry-instances"></a>OGC-Methoden für geomety-Instanzen
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

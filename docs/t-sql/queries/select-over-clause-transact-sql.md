@@ -26,15 +26,15 @@ helpviewer_keywords:
 - OVER clause
 ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 caps.latest.revision: "75"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3bb439adf4e60fec1eeda76d2fefce440b9d8700
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d70183e7c52c4fb9eabed51a8df5acc68625397d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -127,7 +127,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  COLLATE *Collation_name*  
  Gibt an, dass die ORDER BY-Vorgang soll, entsprechend der im angegebenen Sortierung ausgeführt werden *Collation_name*. *Collation_name* kann entweder ein Windows-Sortierungsname oder ein SQL-Sortierungsname sein. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE ist nur für Spalten vom Typ **Char**, **Varchar**, **Nchar**, und **Nvarchar**.  
   
- **ASC** | "DESC"  
+ **ASC** | DESC  
  Gibt an, dass die Werte in der angegebenen Spalte in aufsteigender oder absteigender Reihenfolge sortiert werden sollen. ASC ist die Standardsortierreihenfolge. NULL-Werte werden als die niedrigsten Werte behandelt, die möglich sind.  
   
  ROWS | RANGE  

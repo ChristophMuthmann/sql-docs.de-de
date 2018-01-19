@@ -21,15 +21,15 @@ helpviewer_keywords:
 - UNION operator [SQL Server]
 ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 04f90ae1f5976e29a8281cab3638b63f0525f454
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 329048d4a4f520612ce62bcf6764fa438bcbbe15
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="set-operators---union-transact-sql"></a>Mengenoperatoren Sie - UNION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>Argumente  
-\<Query_specification > | ( \<Query_expression >) ist eine Abfragespezifikation oder ein Abfrageausdruck, der Daten zurückgibt, die mit den Daten aus einer anderen Abfrageangabe oder Abfrageausdruck kombiniert werden. Die Definitionen der Spalten, die Bestandteil eines UNION-Vorgangs sind, müssen nicht identisch, jedoch durch implizite Konvertierung kompatibel sein. Datentypen unterschiedlich sind, das der resultierenden Datentyp bestimmt, in gemäß den Regeln für [Rangfolge der Datentypen](../../t-sql/data-types/data-type-precedence-transact-sql.md). Wenn die Typen identisch sind, diese sich aber in der Genauigkeit, Dezimalstellenanzahl oder Länge unterscheiden, wird das Ergebnis basierend auf denselben Regeln wie für das Kombinieren von Ausdrücken bestimmt. Weitere Informationen finden Sie unter [Genauigkeit, Dezimalstellen und Länge &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+\<query_specification> | ( \<query_expression> ) Is a query specification or query expression that returns data to be combined with the data from another query specification or query expression. Die Definitionen der Spalten, die Bestandteil eines UNION-Vorgangs sind, müssen nicht identisch, jedoch durch implizite Konvertierung kompatibel sein. Datentypen unterschiedlich sind, das der resultierenden Datentyp bestimmt, in gemäß den Regeln für [Rangfolge der Datentypen](../../t-sql/data-types/data-type-precedence-transact-sql.md). Wenn die Typen identisch sind, diese sich aber in der Genauigkeit, Dezimalstellenanzahl oder Länge unterscheiden, wird das Ergebnis basierend auf denselben Regeln wie für das Kombinieren von Ausdrücken bestimmt. Weitere Informationen finden Sie unter [Genauigkeit, Dezimalstellen und Länge &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
  Spalten mit den **Xml** -Datentyp muss äquivalent sein. Alle Spalten müssen entweder einen XML-Schematyp aufweisen oder nicht typisiert sein. Wenn sie typisiert sein, müssen sie derselben XML-Schemaauflistung zugeordnet werden.  
   

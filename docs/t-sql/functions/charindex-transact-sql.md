@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 898016ca9940dfa587e57e18ac1c8516f5c2bc64
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ed2f5334c0c76288ca31cf07857a87f2d1c72033
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,10 +49,10 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
 *expressionToFind*  
 Ist ein Zeichen [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , die die zu suchende Sequenz enthält. *ExpressionToFind* ist auf 8000 Zeichen beschränkt.
   
-*"expressiontosearch"*  
+*expressionToSearch*  
 Der zu suchende Zeichenausdruck.
   
-*"start_location"*  
+*start_location*  
 Ist ein **Ganzzahl** oder **"bigint"** Ausdruck, bei dem die Suche beginnt. Wenn *"start_location"* nicht angegeben wird, ist eine negative Zahl oder 0 ist, die Suche beginnt am Anfang des *"expressiontosearch"*.
   
 ## <a name="return-types"></a>Rückgabetypen
@@ -238,9 +238,11 @@ SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-[+ &#40; Verketten von Zeichenfolgen &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
-[Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md)
+ [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
+ [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)  
+ [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [+ &#40; Verketten von Zeichenfolgen &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
 

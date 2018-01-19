@@ -23,15 +23,15 @@ helpviewer_keywords:
 - WHERE clause
 ms.assetid: a8430421-7bce-4fab-a2d2-56c00a3c6fa4
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 122bf7814a90223319310c49749eb94eea02581a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fba71d6558c6055ad2466a6dadcca20e4c0d8b28
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="where-transact-sql"></a>WHERE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -124,7 +124,7 @@ WHERE EmployeeKey Between 100 AND 200;
   
 ## <a name="see-also"></a>Siehe auch  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [Prädikate &#40; Transact-SQL &#41;](~/t-sql/queries/predicates.md)   
+ [Predicates &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md)   
  [Suchbedingung &#40; Transact-SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   

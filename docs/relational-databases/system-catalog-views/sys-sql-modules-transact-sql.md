@@ -1,7 +1,7 @@
 ---
 title: Sys. sql_modules (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/17/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 496ed3e4d3aad1cea7a0b9c153f4e85da1a46489
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a2ed39676fc1bd477cce716b5c9d86c721df40fe
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Die Objekt-ID des enthaltenen Objekts. Ist innerhalb einer Datenbank eindeutig.|  
-|**Definition**|**nvarchar(max)**|Der SQL-Text, der dieses Modul definiert.<br /><br /> NULL = Verschlüsselt.|  
+|**definition**|**nvarchar(max)**|Der SQL-Text, der dieses Modul definiert. Dieser Wert kann auch mit abgerufen werden die [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) integrierte Funktion.<br /><br /> NULL = Verschlüsselt.|  
 |**uses_ansi_nulls**|**bit**|Das Modul wurde mit SET ANSI_NULLS ON erstellt.<br /><br /> Ist immer = 0 für Regeln und Standardwerte.|  
 |**uses_quoted_identifier**|**bit**|Das Modul wurde mit SET QUOTED_IDENTIFIER ON erstellt.|  
 |**is_schema_bound**|**bit**|Das Modul wurde mit der Option SCHEMABINDING erstellt.<br /><br /> Enthält immer den Wert 1 für systemintern kompilierte gespeicherte Prozeduren.|  

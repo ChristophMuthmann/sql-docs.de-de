@@ -22,15 +22,15 @@ helpviewer_keywords:
 - declaring variables
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 caps.latest.revision: "76"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 182e3443a9baf73fdbda096c11b4320feb53edda
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 70bfea2777f5f96769d4296c8fbb7f2acbd20e4f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="declare-localvariable-transact-sql"></a>Deklarieren Sie @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +95,7 @@ DECLARE
   
  Weitere Informationen zu Systemdatentypen finden Sie unter [Datentypen &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-types-transact-sql.md). Weitere Informationen zu benutzerdefinierten CLR-Typen oder Aliasdatentypen finden Sie unter [CREATE TYPE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-type-transact-sql.md).  
   
- =*Wert*  
+ =*value*  
  Weist der Variablen inline einen Wert zu. Der Wert kann eine Konstante oder ein Ausdruck sein; auf jeden Fall muss er mit dem Typ der Variablendeklaration übereinstimmen oder implizit in diesen Typ konvertiert werden können. Weitere Informationen finden Sie unter [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 @*cursor_variable_name*  
@@ -115,7 +115,7 @@ Definiert die **Tabelle** -Datentyp. Die Tabellendeklaration schließt Spaltende
  *n*  
  Ein Platzhalter, der angibt, dass mehrere Variablen angegeben und ihnen Werte zugewiesen werden können. Beim Deklarieren von **Tabelle** Variablen, die **Tabelle** Variable muss die einzige Variable in der DECLARE-Anweisung deklariert wird.  
   
- *Spaltenname*  
+ *column_name*  
  Der Name der Spalte in der Tabelle.  
   
  *scalar_data_type*  
@@ -138,10 +138,10 @@ Definiert die **Tabelle** -Datentyp. Die Tabellendeklaration schließt Spaltende
  IDENTITY  
  Gibt an, dass es sich bei der neuen Spalte um eine Identitätsspalte handelt. Wenn die Tabelle eine neue Zeile hinzugefügt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen eindeutigen, inkrementellen Wert für die Spalte bereitstellt. Identitätsspalten werden in der Regel in Verbindung mit PRIMARY KEY-Einschränkungen verwendet, um als eindeutiger Zeilenbezeichner für die Tabelle zu dienen. Die IDENTITY-Eigenschaft zugewiesen werden kann **"tinyint"**, **"smallint"**, **Int**, **decimal(p,0)**, oder **numeric(p,0)** Spalten. Es kann nur eine Identitätsspalte pro Tabelle erstellt werden. Gebundene Standardwerte und DEFAULT-Einschränkungen können nicht mit einer Identitätsspalte verwendet werden. Sie müssen entweder den Ausgangswert und den Schrittweitenwert oder keinen von beiden angeben. Wurden Ausgangswert und inkrementeller Wert nicht angegeben, ist der Standardwert (1,1).  
   
- *Startwert*  
+ *seed*  
  Der Wert, der für die erste in die Tabelle geladene Zeile verwendet wird.  
   
- *Inkrement*  
+ *increment*  
  Der Schrittweitenwert, der zum Identitätswert der zuvor geladenen Zeile addiert wird.  
   
  ROWGUIDCOL  
@@ -159,7 +159,7 @@ Definiert die **Tabelle** -Datentyp. Die Tabellendeklaration schließt Spaltende
  CHECK  
  Eine Einschränkung, die Domänenintegrität erzwingt, indem die möglichen Eingabewerte für eine oder mehrere Spalten beschränkt wird.  
   
- *Logical_Expression*  
+ *logical_expression*  
  Ein logischer Ausdruck, der TRUE oder FALSE zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -321,7 +321,7 @@ WHERE LastName LIKE @lastName AND FirstName LIKE @firstName;
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [Table &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)  
   
   

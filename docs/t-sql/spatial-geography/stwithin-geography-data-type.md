@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: STWithin method (geography)
 ms.assetid: 6fc745cc-7976-418a-a89a-c267e64ab3a2
 caps.latest.revision: "7"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10c71c8a10f6f950dd2a70909d061e70e13c1d72
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2fe7e1e315b9465b5df0814dbda78c75ef279e12
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stwithin-geography-data-type"></a>STWithin (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

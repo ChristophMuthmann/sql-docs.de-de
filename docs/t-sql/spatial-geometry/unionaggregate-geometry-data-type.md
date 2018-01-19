@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: UnionAggregate method (geometry)
 ms.assetid: dc7929cc-55ca-4a2c-a4b9-f5452f95bde8
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8883efb9f63f65034386934cf8b9b8b81d7ee6c3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3d009162cbc65186086fc6e62f79992e59277f50
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="unionaggregate-geometry-data-type"></a>UnionAggregate (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

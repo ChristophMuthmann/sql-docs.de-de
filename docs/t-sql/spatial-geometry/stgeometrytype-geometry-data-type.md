@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STGeometryType (geometry Data Type)
 ms.assetid: 224cdc83-aa83-4ad4-bb82-b7481031e910
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9c8059eea9209130deecdc42710e73dbeeaff5f3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 185ac307350a3b17caca6e30cf75ab9795a62dfb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stgeometrytype-geometry-data-type"></a>STGeometryType (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

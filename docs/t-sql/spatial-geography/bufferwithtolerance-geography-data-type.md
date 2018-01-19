@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: BefferWithTolerance method
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fea21e57554a1ff68e83ba8cc85ea004d250ca2c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 07c9278bc7c277a0991f0f55cad18f496c514cde
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,12 +43,12 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Abstand*  
+ *distance*  
  Ist eine **"float"** Ausdruck, der den Abstand zwischen angibt der **Geography** Instanz, die der Puffer berechnet werden soll.  
   
  Der maximale Abstand des Puffers darf 0.999 nicht überschreiten \* *π* * MinorAxis \* MinorAxis / MajorAxis (~0.999 \* 1/2 kugelumfang) oder die vollständige Kugel.  
   
- *Fehlertoleranz*  
+ *tolerance*  
  Ein **float** -Ausdruck, der die Toleranz des Pufferabstands angibt.  
   
  Die *Toleranz* -Wert bezieht sich auf die maximale Variation im idealen Pufferabstand für die zurückgegebene lineare Näherung.  

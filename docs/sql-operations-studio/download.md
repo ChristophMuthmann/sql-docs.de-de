@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0621d5af62b5f5b8b694d47cf16d766215a0c819
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: e8828b5f94c5500aa7ef3bffd48556e599e41124
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>Herunterladen und Installieren von SQL-Vorgänge Studio (Vorschau)
 
@@ -119,7 +119,8 @@ Wenn Sie installiert [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] m
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
-
+## <a name="check-for-updates"></a>Nach Updates suchen
+Um nach aktuellen Updates zu suchen, klicken Sie auf das Zahnradsymbol auf der unteren linken Seite des Fensters, und klicken Sie auf **nach Updates suchen**
 
 ## <a name="next-steps"></a>Nächste Schritte
 

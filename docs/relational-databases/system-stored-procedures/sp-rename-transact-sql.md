@@ -1,7 +1,7 @@
 ---
 title: "\"Sp_rename\" (Transact-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eb402624e8b25f43a1969a91df85cfe5fa85d9af
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 158974d93e031d689318ea22f3bd0ba8189553ee
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,13 +56,13 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
  Anführungszeichen sind nur dann notwendig, wenn ein qualifiziertes Objekt angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. *Object_name* ist **nvarchar(776)**, hat keinen Standardwert.  
   
- [ @newname =] '*New_name*"  
+ [ @newname = ] '*new_name*'  
  Der neue Name für das angegebene Objekt. *New_name* muss ein einteiliger Name sein und müssen den Regeln für Bezeichner entsprechen. *Newname* ist **Sysname**, hat keinen Standardwert.  
   
 > [!NOTE]  
 >  Namen von Triggern können nicht mit # oder ## beginnen.  
   
- [ @objtype =] '*Object_type*"  
+ [ @objtype = ] '*object_type*'  
  Der Typ des Objekts, das umbenannt wird. *Object_type* ist **varchar(13)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
@@ -84,9 +84,9 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
  sp_rename kann zum Umbenennen von primären und sekundären XML-Indizes verwendet werden.  
   
- Umbenennen einer gespeicherten Prozedur, Funktion, Sicht oder Trigger ändert sich nicht auf den Namen des entsprechenden Objektnamens in der definitionsspalte der der [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) -Katalogsicht angezeigt. Daher ist es empfehlenswert, sp_rename nicht zum Umbenennen dieser Objekttypen zu verwenden. Löschen Sie stattdessen das Objekt, und erstellen Sie es neu mit dem neuen Namen.  
+ Umbenennen einer gespeicherten Prozedur, Funktion, Sicht oder Trigger ändert nicht dem Namen des entsprechenden Objekts in der definitionsspalte der der [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) -Katalogsicht oder erhalten hat, mithilfe der [OBJECT_ DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) integrierte Funktion. Daher ist es empfehlenswert, sp_rename nicht zum Umbenennen dieser Objekttypen zu verwenden. Löschen Sie stattdessen das Objekt, und erstellen Sie es neu mit dem neuen Namen.  
   
- Beim Umbenennen eines Objekts, wie z. B. einer Tabelle oder Spalte, werden Verweise auf das Objekt nicht automatisch umbenannt. Sie müssen Objekte, die auf das umbenannte Objekt verweisen, manuell ändern. Wenn Sie z. B. eine Tabellenspalte umbenennen und in einem Trigger auf diese Spalte verwiesen wird, müssen Sie den Trigger ändern, sodass er den neuen Spaltennamen wiedergibt. Verwendung[Sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) für eine Liste der Abhängigkeiten für das Objekt vor dem Umbenennen.  
+ Beim Umbenennen eines Objekts, wie z. B. einer Tabelle oder Spalte, werden Verweise auf das Objekt nicht automatisch umbenannt. Sie müssen Objekte, die auf das umbenannte Objekt verweisen, manuell ändern. Wenn Sie z. B. eine Tabellenspalte umbenennen und in einem Trigger auf diese Spalte verwiesen wird, müssen Sie den Trigger ändern, sodass er den neuen Spaltennamen wiedergibt. Verwenden Sie [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) , um Abhängigkeiten vom Objekt aufzulisten, bevor Sie es umbenennen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Zum Umbenennen von Objekten, Spalten und Indizes ist die ALTER-Berechtigung für das entsprechende Objekt erforderlich. Zum Umbenennen von Benutzertypen ist die CONTROL-Berechtigung für den entsprechenden Typ erforderlich. Zum Umbenennen einer Datenbank ist die Mitgliedschaft in der festen Serverrolle sysadmin oder dbcreator erforderlich.  

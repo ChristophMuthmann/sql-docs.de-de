@@ -40,11 +40,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 15c991ba9e987d5dc7ed39b2b8edb8bf6b428956
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 49cf7311995d2760306e6050e6bae6efc1db41d8
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -166,7 +166,7 @@ DATA_PURITY
  Mit dieser Option gemeldete Überprüfungsfehler können nicht mithilfe der DBCC-Reparaturoptionen behoben werden. Informationen zur manuellen Behebung dieser Fehler finden Sie im Knowledge Base-Artikel 923247: [Problembehandlung bei DBCC-Fehler 2570 in SQL Server 2005 und höheren Versionen](http://support.microsoft.com/kb/923247).  
     
  MAXDOP  
- **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
     
  Überschreibt die **Max. Grad an Parallelität** Konfigurationsoption von **Sp_configure** für die Anweisung. Der MAXDOP kann mit Sp_configure konfigurierten Wert überschreiten. Wenn MAXDOP den mit der Ressourcenkontrolle konfigurierten Wert überschreitet die [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] verwendet den Resource Governor MAXDOP-Wert, in der beschriebenen [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md). Alle semantischen Regeln, die mit der Konfigurationsoption Max. Grad an Parallelität verwendet werden können, stehen beim Verwenden des MAXDOP-Abfragehinweises zur Verfügung. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
  

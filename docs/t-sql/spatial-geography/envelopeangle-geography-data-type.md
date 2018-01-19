@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: EnvelopeAngle method
 ms.assetid: 14a7ba15-168c-4b08-ba3d-951d73092ac7
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 41e560a4fa5ad869d126a1e594b57b96dc0f1558
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0b7eaef8384500d63acee0d5fae1183d4928bcca
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="envelopeangle-geography-data-type"></a>EnvelopeAngle (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - '[ ] (wildcard - character(s) to match)'
 ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e6de8f9b9a1ed36135915e5985312a02c02fba6d
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ff5e5d5a3d7bf653b63ae33ff545b1345d5b1a8c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[\] (Platzhalterzeichen - Zeichen zur Übereinstimmung) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,8 +82,8 @@ EmployeeID      FirstName      LastName      PostalCode
 
   
 ## <a name="see-also"></a>Siehe auch  
- [WIE &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
   [% &#40; Platzhalter - Zeichen &#40; s &#41; Übereinstimmung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
  [&#91; ^ &#93; &#40; Platzhalter - Zeichen &#40; s &#41; Nicht in Übereinstimmung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
  [\_&#40; Platzhalterzeichen - einzelnes zu suchendes Zeichen &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  

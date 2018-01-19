@@ -18,15 +18,15 @@ helpviewer_keywords:
 - bit manipulations
 ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f9441cf26142e70340e23212991665f67fb7bf62
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 17ef615ab6b82cb9407871fcf8ee7a312ce22613
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bitwise-operators-transact-sql"></a>Bitweise Operatoren (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ Die Ganzzahl 75 konvertiert in binäre 0100 1011.
 |Operator|bitweise mathematische Funktionen|
 |---- |---- |
 |AND <br> Wenn Bits an einer beliebigen Position 1 sind, ist das Ergebnis 1. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 0000 1010 =  10 |
-|oder <br> Wenn jedes Bit an einer beliebigen Position 1 ist, ist das Ergebnis 1. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
+|OR <br> Wenn jedes Bit an einer beliebigen Position 1 ist, ist das Ergebnis 1. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
 |NICHT  <br> Kehrt den Bitwert an jedem Standort Bit. |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
   
 Finden Sie unter den folgenden Themen:   
@@ -64,7 +64,7 @@ Finden Sie unter den folgenden Themen:
 |[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**Int**, **"smallint"**, oder **"tinyint"**|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Zusammengesetzte Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   

@@ -40,15 +40,15 @@ helpviewer_keywords:
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 caps.latest.revision: "68"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e718c2d35b1627abee53c3214294372fb23d61a8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 322bca602925cd959ca5de076fcbbdeacd7ba63a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select---order-by-clause-transact-sql"></a>Wählen SIE - ORDER BY-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -106,7 +106,7 @@ ORDER BY order_by_expression
  COLLATE *Collation_name*  
  Gibt an, dass die ORDER BY-Vorgang soll, entsprechend der im angegebenen Sortierung ausgeführt werden *Collation_name*, und nicht gemäß der Sortierung der Spalte in der Tabelle oder Sicht definiert. *Collation_name* kann entweder ein Windows-Sortierungsname oder ein SQL-Sortierungsname sein. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE ist nur für Spalten vom Typ **Char**, **Varchar**, **Nchar**, und **Nvarchar**.  
   
- **ASC** | "DESC"  
+ **ASC** | DESC  
  Gibt an, dass die Werte in der angegebenen Spalte in aufsteigender oder absteigender Reihenfolge sortiert werden sollen. ASC sortiert vom niedrigsten Wert zum höchsten Wert. DESC sortiert vom höchsten Wert zum niedrigsten Wert. ASC ist die Standardsortierreihenfolge. NULL-Werte werden als die niedrigsten Werte behandelt, die möglich sind.  
   
  OFFSET { *Integer_constant* | *Offset_row_count_expression* } {Zeile | ZEILEN}  
@@ -547,14 +547,14 @@ ORDER BY LastName, FirstName;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausdrücke &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [Rangfolge Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
- [Nach oben &#40; Transact-SQL &#41;](../../t-sql/queries/top-transact-sql.md)   
+ [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)   
  [Abfragehinweise (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)   
  [Mit Ausnahme von und INTERSECT &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
- [UNION &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
+ [UNION &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   
   

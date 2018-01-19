@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STLineFromText method
 ms.assetid: 66dfd722-a9bd-45d3-9788-f1946dd23e17
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7f64223420ea81247e4e8456614fe2e9b8b30f05
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 82b7bf3bfa41ea5edb91a161d6b4fce8f6497fe8
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stmlinefromtext-geography-data-type"></a>STMLineFromText (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

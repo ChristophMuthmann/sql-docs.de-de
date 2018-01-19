@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STEndpoint method
 ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef1273869d233c6e576f31a7f86afe752cbfc4b7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4654319a16e866d591e3fc5830bd7bcc18566f75
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stendpoint-geography-data-type"></a>STEndpoint (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STGeomCollFromText (geometry Data Type)
 ms.assetid: 19e757b3-cb2e-4852-87b9-40a815ab707e
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c315862712379ef2e08d25803c5dce2c668b0158
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 18232e3995a555e46f4556b576351c766aa163e8
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stgeomcollfromtext-geometry-data-type"></a>STGeomCollFromText (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STOverlaps (geometry Data Type)
 ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 800073a5f38869967cec42b00c762cd29cdffd09
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e2e6864bef784944d2b08bbf3b043046e99c7173
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

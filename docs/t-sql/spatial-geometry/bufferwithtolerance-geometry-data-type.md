@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: BufferWithTolerance (geometry Data Type)
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a6a932ffe43e978bdc9e06f96cac300d45a035b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d929476cd48275249c5ac78a75ed22d6822fb21a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punktwerte dar
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Abstand*  
+ *distance*  
  Ein **float** -Ausdruck, der den Abstand zu der **geometry** -Instanz angibt, um die der Puffer berechnet werden soll.  
   
- *Fehlertoleranz*  
+ *tolerance*  
  Ein **float** -Ausdruck, der die Toleranz des Pufferabstands angibt.  
   
  *Toleranz* verweist auf die maximale Variation im idealen Pufferabstand für die zurückgegebene lineare Näherung.  

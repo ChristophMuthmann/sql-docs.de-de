@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STLength method
 ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fa8b74ee4f1eec0b9bfb6f85dad0d8c335e15909
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a1b261b3774fdd093185be5cab70561c6f32a11b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stlength-geography-data-type"></a>STLength (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

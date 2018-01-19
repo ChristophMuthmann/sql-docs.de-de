@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STDistance (geometry Data Type)
 ms.assetid: ac815bc7-5342-4cc4-af40-c80a1c4c8b68
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ab98a6ec1465154a6af27ba29ee41025bedc62b9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 056bd18ce7bb77200dea9248ab5064a76cd5c4c2
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stdistance-geometry-data-type"></a>STDistance (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

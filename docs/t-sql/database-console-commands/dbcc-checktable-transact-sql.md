@@ -32,11 +32,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: aeb292cac514b2f9253fa35369ddea190176538e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b86535eabd6b351127bbab1eb03c97234f8b4b39
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -205,7 +205,7 @@ Die Reparatur kann im Rahmen einer Benutzertransaktion ausgeführt werden, damit
 ## <a name="result-sets"></a>Resultsets    
 DBCC CHECKTABLE gibt das folgende Resultset zurück. Das gleiche Resultset wird zurückgegeben, wenn Sie nur den Tabellennamen oder eine der Optionen angeben.
     
-```sql
+```
 DBCC results for 'HumanResources.Employee'.    
 There are 288 rows in 13 pages for object 'Employee'.    
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.    

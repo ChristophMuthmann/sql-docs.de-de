@@ -23,15 +23,15 @@ helpviewer_keywords:
 - FOR clause [Transact-SQL]
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 caps.latest.revision: "54"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0cb4b3936aa78f22958c28351d2dad523a6d9932
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 51924cf8a6715e8966911b33c4c1cf691326322c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -182,7 +182,7 @@ JSON
  XML  
  Gibt an, dass die Ergebnisse einer Abfrage als XLM-Dokument zurückgegeben werden. Einer der folgenden XML-Modi muss angegeben werden: RAW, AUTO oder EXPLICIT. Weitere Informationen zu XML-Daten und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [FOR XML &#40; SQLServer &#41; ](../../relational-databases/xml/for-xml-sql-server.md).  
   
- ROHDATEN [ **("***ElementName***")** ]  
+ RAW [ **('***ElementName***')** ]  
  Verwendet das Abfrageergebnis und wandelt jede Zeile im Resultset in ein XML-Element mit einem generischen Bezeichner \<Zeile / > als Elementtag. Sie können optional einen Namen für das Zeilenelement angeben. Die resultierende XML-Ausgabe verwendet den angegebenen *ElementName* als das für jede Zeile generierte Zeilenelement. Weitere Informationen finden Sie unter [verwenden RAW-Modus mit FOR XML-](../../relational-databases/xml/use-raw-mode-with-for-xml.md) und [verwenden RAW-Modus mit FOR XML-](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
   
  AUTO  
@@ -197,7 +197,7 @@ JSON
 > [!IMPORTANT]  
 >  Die XMLDATA-Direktive ist veraltet. Verwenden Sie XSD-Generierung für RAW- und AUTO-Modus. Es gibt keinen Ersatz für die XMLDATA-Direktive im EXPLICIT-Modus. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- XMLSCHEMA [ **("***TargetNameSpaceURI***")** ]  
+ XMLSCHEMA [ **('***TargetNameSpaceURI***')** ]  
  Gibt das XSD-Inlineschema zurück. Beim Angeben dieser Direktive können Sie optional einen Zielnamespace-URI angeben, der den angegebenen Namespace im Schema zurückgibt. Weitere Informationen finden Sie unter [Generieren eines XSD-Inlineschemas](../../relational-databases/xml/generate-an-inline-xsd-schema.md).  
   
  ELEMENTS  
@@ -209,7 +209,7 @@ JSON
  ABSENT  
  Gibt an, dass dem XML-Ergebnis für NULL-Spaltenwerte keine entsprechenden XML-Elemente hinzugefügt werden. Diese Option kann nur mit der ELEMENTS-Direktive angegeben werden.  
   
- Pfad [ **("***ElementName***")** ]  
+ PATH [ **('***ElementName***')** ]  
  Generiert eine \<Zeile >-elementwrapper für jede Zeile im Resultset. Optional können Sie angeben, den Namen eines Elements, für die \<Zeile >-elementwrapper. Wenn eine leere Zeichenfolge, z. B. FOR XML PATH angegeben wird (**''**)), ein Wrapper-Element wird nicht generiert. Die Verwendung von PATH kann eine einfachere Alternative zu mithilfe der EXPLICIT-Direktive geschriebenen Abfragen darstellen. Weitere Informationen finden Sie unter [Verwenden des PATH-Modus mit FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md).  
   
  BINARY BASE64  

@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: db5499d73b4eab7ff4ba3079469412cc30a111a3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f3aa417b85782fa806961b107658403e51f7afe6
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,23 +54,23 @@ DATEADD (datepart , number , date )
   
 ## <a name="arguments"></a>Argumente  
 *datepart*  
-Ist der Teil des *Datum* , der eine **Ganzzahl***Anzahl* hinzugefügt wird. Die folgende Tabelle enthält alle gültigen *Datepart* Argumente. Benutzerdefinierte Variablenentsprechungen sind nicht gültig.
+Ist der Teil des *Datum* , der eine **Ganzzahl *** Anzahl* hinzugefügt wird. Die folgende Tabelle enthält alle gültigen *Datepart* Argumente. Benutzerdefinierte Variablenentsprechungen sind nicht gültig.
   
 |*datepart*|Abkürzungen|  
 |---|---|
-|**Jahr**|**Yy**, **JJJJ**|  
-|**Quartal**|**Qq**, **q**|  
+|**Jahr**|**yy**, **yyyy**|  
+|**quarter**|**qq**, **q**|  
 |**Monat**|**mm**, **m**|  
-|**DayOfYear**|**dy**, **y**|  
-|**Tag**|**Dd**, **d**|  
-|**Woche**|**wk**, **weltweit**|  
-|**Wochentag**|**DW**, **w**|  
-|**Stunde**|**hh**|  
-|**Minute**|**Mi**,**n**|  
-|**Sekunde**|**ss**, **s**|  
-|**Millisekunde**|**MS**|  
-|**in Mikrosekunden**|**MCS**|  
-|**Nanosekunden**|**Notification Services**|  
+|**dayofyear**|**dy**, **y**|  
+|**Tag**|**dd**, **d**|  
+|**Woche**|**wk**, **ww**|  
+|**Wochentag**|**dw**, **w**|  
+|**hour**|**hh**|  
+|**Minute**|**mi**, **n**|  
+|**second**|**ss**, **s**|  
+|**millisecond**|**ms**|  
+|**microsecond**|**mcs**|  
+|**nanosecond**|**ns**|  
   
 *number*  
 Ist ein Ausdruck, der in aufgelöst werden kann ein [Int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) , hinzugefügt wird eine *Datepart* von *Datum*. Benutzerdefinierte Variablen sind gültig.  
@@ -93,24 +93,24 @@ Jede *Datepart* und zugehörigen Abkürzungen geben denselben Wert zurück.
 Wenn *Datepart* ist **Monat** und *Datum* Monat mehr Tage umfasst als der rückgabemonat und der *Datum* Tag im Monat zurück, nicht vorhanden letzte Tag des rückgabemonats zurückgegeben. Beispiel: Der September hat 30 Tage. Daher geben die beiden folgenden Anweisungen 2006-09-30 00:00:00.000 zurück:
   
 ```sql
-SELECT DATEADD(month, 1, '2006-08-30');
-SELECT DATEADD(month, 1, '2006-08-31');
+SELECT DATEADD(month, 1, '20060830');
+SELECT DATEADD(month, 1, '20060831');
 ```
   
 ## <a name="number-argument"></a>number-Argument  
 Die *Anzahl* Argument darf nicht den Bereich der überschreiten **Int**. In den folgenden Anweisungen, die das Argument für *Anzahl* überschreitet den Bereich der **Int** um 1. Die folgende Fehlermeldung wird zurückgegeben: "`Msg 8115, Level 16, State 2, Line 1. Arithmetic overflow error converting expression to data type int."`
   
 ```sql
-SELECT DATEADD(year,2147483648, '2006-07-31');  
-SELECT DATEADD(year,-2147483649, '2006-07-31');  
+SELECT DATEADD(year,2147483648, '20060731');  
+SELECT DATEADD(year,-2147483649, '20060731');  
 ```  
   
 ## <a name="date-argument"></a>date-Argument  
 Die *Datum* Argument kann nicht auf einen Wert außerhalb des Bereichs seines Datentyps inkrementiert werden. In den folgenden Anweisungen die *Anzahl* -Wert, der hinzugefügt wird die *Datum* Wert überschreitet den Bereich von der *Datum* -Datentyp. Die folgende Fehlermeldung wird zurückgegeben: "`Msg 517, Level 16, State 1, Line 1 Adding a value to a 'datetime' column caused overflow`."
   
 ```sql
-SELECT DATEADD(year,2147483647, '2006-07-31');  
-SELECT DATEADD(year,-2147483647, '2006-07-31');  
+SELECT DATEADD(year,2147483647, '20060731');  
+SELECT DATEADD(year,-2147483647, '20060731');  
 ```  
   
 ## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>Rückgabewerte für ein Datum vom Typ smalldatetime und einen datepart-Wert in Sekunden oder Sekundenbruchteilen  

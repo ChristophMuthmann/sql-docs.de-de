@@ -39,15 +39,15 @@ helpviewer_keywords:
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 caps.latest.revision: "91"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1a739b230d39726367d54a64e7b2327f6a80f9ca
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d30edc04b6b78ae1ccff83028433c4a25e25ca33
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -124,7 +124,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  Allgemeine Tabellenausdrücke können auch mit den Anweisungen SELECT, INSERT, DELETE und CREATE VIEW verwendet werden. Weitere Informationen finden Sie unter [WITH Common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- TOP **(** *Ausdruck***)** [PERCENT]  
+ TOP **(** *Ausdruck ***)** [PERCENT]  
  Gibt die Anzahl oder den Prozentsatz der Zeilen, die aktualisiert werden. *expression* kann eine Anzahl oder ein Prozentsatz der Zeilen sein.  
   
  Die Zeilen, auf die im TOP-Ausdruck für die Anweisung INSERT, UPDATE oder DELETE verwiesen wird, sind nicht auf bestimmte Weise angeordnet.  
@@ -134,7 +134,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *table_alias*  
  Der in der FROM-Klausel angegebene Alias, der die Tabelle oder Sicht darstellt, aus der die Zeilen aktualisiert werden sollen.  
   
- *Servername*  
+ *server_name*  
  Der Name des Servers (mithilfe eines Verbindungsservernamens oder der [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) -Funktion als Servername) auf dem die Tabelle oder Sicht befindet. Wenn *Server_name* angegeben wird, *Database_name* und *Schema_name* erforderlich sind.  
   
  *database_name*  
@@ -149,7 +149,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *rowset_function_limited*  
  Handelt es sich um die [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) oder [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) Funktion, je nach den Funktionen des Anbieters.  
   
- MIT **(** \<Table_Hint_Limited > **)**  
+ WITH **(** \<Table_Hint_Limited> **)**  
  Gibt mindestens einen Tabellenhinweis an, der für eine Zieltabelle zulässig ist. Das WITH-Schlüsselwort und die Klammern sind erforderlich. NOLOCK und READUNCOMMITTED sind nicht zulässig. Informationen zu Tabellenhinweisen finden Sie unter [Tabellenhinweise &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
   
  @*table_variable*  
@@ -184,13 +184,13 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *udt_column_name*  
  Eine benutzerdefinierte Spalte.  
   
- *Property_name* | *Feldname*  
+ *property_name* | *field_name*  
  Member einer öffentlichen Eigenschaft oder öffentlicher Daten eines benutzerdefinierten Typs.  
   
  *keine Variablenargumentlisten verwenden* **(** *Argument* [ **,**... *n*] **)**  
  Ist eine nicht statische, öffentliche Mutatormethode von *Udt_column_name* , die ein oder mehrere Argumente annimmt.  
   
- **.** Schreiben **(***Ausdruck***,***@Offset***,** *@Length***)**  
+ **.** Schreiben **(***Ausdruck***,***@Offset***,***@Length***)**  
  Gibt an, dass ein Abschnitt des Werts der *Column_name* geändert werden soll. *Ausdruck* ersetzt  *@Length*  Einheiten, beginnend  *@Offset*  von *Column_name*. Nur für Spalten vom **varchar(max)**, **nvarchar(max)**, oder **varbinary(max)** kann mit dieser Klausel angegeben werden. *Column_name* darf nicht NULL sein und darf nicht mit einem Tabellennamen oder Tabellenalias qualifiziert werden.  
   
  *Ausdruck* ist der Wert, der in kopiert *Column_name*. *Ausdruck* ausgewertet werden muss, oder werden implizit umgewandelt werden kann die *Column_name* Typ. Wenn *Ausdruck* ist auf NULL gesetzt,  *@Length*  wird ignoriert, und der Wert im *Column_name* wird abgeschnitten, an der angegebenen  *@Offset* .  
@@ -201,15 +201,15 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  Weitere Informationen finden Sie in den Hinweisen.  
   
- **@***Variable*  
+ **@** *variable*  
  Ist eine deklarierte Variable, die auf den Rückgabewert von festgelegt ist *Ausdruck*.  
   
- Legen Sie  **@**  *Variable* = *Spalte* = *Ausdruck* legt die Variable auf denselben fest. Wert der Spalte. Dies unterscheidet sich von SET  **@**  *Variable* = *Spalte*, *Spalte*  =  *Ausdruck*, wodurch die Variable auf den Wert vor dem Update der Spalte.  
+ Legen Sie **@*** Variable* = *Spalte* = *Ausdruck* legt die Variable auf denselben Wert wie die Spalte fest. Dies unterscheidet sich von SET **@*** Variable* = *Spalte*, *Spalte* = *Ausdruck*, welche die die Variable auf den Wert vor dem Update der Spalte.  
   
- \<OUTPUT_Clause >  
+ \<OUTPUT_Clause>  
  Gibt aktualisierte Daten oder Ausdrücke zurück, die darauf als Teil des UPDATE-Vorgangs basieren. Die OUTPUT-Klausel wird nicht in DML-Anweisungen unterstützt, die an Remotetabellen oder -sichten gerichtet sind. Weitere Informationen finden Sie unter [OUTPUT-Klausel &#40; Transact-SQL &#41; ](../../t-sql/queries/output-clause-transact-sql.md).  
   
- VON \<Table_source >  
+ FROM \<table_source>  
  Gibt an, dass eine Tabelle, Sicht oder abgeleitete Tabelle als Quelle die Kriterien für den Updatevorgang bereitstellen soll. Weitere Informationen finden Sie unter [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
  Wenn das Objekt, das aktualisiert wird, mit dem Objekt in der FROM-Klausel identisch ist und nur ein Verweis auf das Objekt in der FROM-Klausel vorhanden ist, kann ein Objektalias angegeben werden. Wenn das Objekt, das aktualisiert wird, mehrmals in der FROM-Klausel vorhanden ist, darf genau ein Verweis auf das Objekt keinen Tabellenalias angeben. Alle anderen Verweise auf das Objekt in der FROM-Klausel müssen einen Objektalias aufweisen.  
@@ -226,7 +226,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
 -   Positionierte Updates verwenden die CURRENT OF-Klausel, um einen Cursor anzugeben. Der Updatevorgang wird an der aktuellen Position des Cursors ausgeführt.  
   
-\<Search_condition >  
+\<search_condition>  
  Bezeichnet die Bedingung, die erfüllt sein muss, damit die Zeilen aktualisiert werden. Die Suchbedingung kann auch die Bedingung sein, auf der ein Join basiert. Es gibt keinen Höchstwert hinsichtlich der Anzahl von Prädikaten in einer Suchbedingung. Weitere Informationen zu Prädikaten und suchbedingungen finden Sie unter [Suchbedingung &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
   
 CURRENT OF  
@@ -237,7 +237,7 @@ CURRENT OF
 GLOBAL  
  Gibt an, dass *Cursor_name* auf einen globalen Cursor verweist.  
   
-*Cursorname*  
+*cursor_name*  
  Der Name des geöffneten Cursors, von dem der Abruf erfolgen soll. Wenn sowohl ein globaler als auch ein lokaler Cursor mit dem Namen *Cursor_name* vorhanden ist, dieses Argument bezieht sich auf den globalen Cursor, wenn GLOBAL angegeben; andernfalls ist, bezieht sich auf den lokalen Cursor. Der Cursor muss Updates zulassen.  
   
 *cursor_variable_name*  
@@ -334,7 +334,7 @@ GO
 >  Die **Ntext**, **Text**, und **Image** Datentypen werden in einer zukünftigen Version von entfernt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vermeiden Sie die Verwendung dieser Datentypen bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen sie aktuell verwendet werden. Verwenden Sie stattdessen [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)und [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
   
 ### <a name="updating-large-value-data-types"></a>Aktualisieren von Datentypen mit umfangreichen Werten  
- Verwenden der **.** Schreiben (*Ausdruck***,**  *@Offset*  **,***@Length*)-Klausel Ausführen ein teilweisen oder vollständigen Updates der **varchar(max)**, **nvarchar(max)**, und **varbinary(max)** Datentypen. Z. B. ein teilweises Update von einer **varchar(max)** Spalte möglicherweise löschen oder ändern Sie nur die ersten 200 Zeichen der Spalte, während ein vollständiges Update würde löschen oder ändern alle Daten in der Spalte. **.** Schreiben von Updates, die neue Daten eingefügt oder angefügt werden minimal protokolliert, wenn das Wiederherstellungsmodell der Datenbank auf Massenprotokolliert oder einfach festgelegt ist. Die minimale Protokollierung wird nicht verwendet, wenn vorhandene Werte aktualisiert werden. Weitere Informationen finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ Verwenden der **.** Schreiben (*Ausdruck ***** *@Offset***,***@Length*)-Klausel zum Ausführen eines teilweisen oder vollständigen Updates der  **varchar(max)**, **nvarchar(max)**, und **varbinary(max)** Datentypen. Z. B. ein teilweises Update von einer **varchar(max)** Spalte möglicherweise löschen oder ändern Sie nur die ersten 200 Zeichen der Spalte, während ein vollständiges Update würde löschen oder ändern alle Daten in der Spalte. **.** Schreiben von Updates, die neue Daten eingefügt oder angefügt werden minimal protokolliert, wenn das Wiederherstellungsmodell der Datenbank auf Massenprotokolliert oder einfach festgelegt ist. Die minimale Protokollierung wird nicht verwendet, wenn vorhandene Werte aktualisiert werden. Weitere Informationen finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] konvertiert ein teilweises Update in ein vollständiges Update, wenn die UPDATE-Anweisung eine dieser Aktionen bewirkt:  
 -   Ändert eine Schlüsselspalte der partitionierten Sicht oder Tabelle.  
@@ -346,7 +346,7 @@ Sie können keine der **.** WRITE-Klausel zum Aktualisieren einer NULL-Spalte, o
   
 Es wird empfohlen, Daten in Blockgrößen einzufügen bzw. zu aktualisieren, die ein Vielfaches von 8.040 Byte sind, um eine optimale Leistung zu erzielen.  
   
-Wenn die geänderte Spalte durch die **.** Schreiben Sie die Klausel in einer OUTPUT-Klausel der vollständige Wert der Spalte verwiesen wird entweder das anfangsimage in **gelöscht.** *Column_name* oder das endimage in **eingefügt.** *Column_name*, an die angegebene Spalte in der Tabellenvariablen zurückgegeben. Finden Sie unter folgenden Beispiel R.  
+Wenn die geänderte Spalte durch die **.** Schreiben Sie die Klausel in einer OUTPUT-Klausel der vollständige Wert der Spalte verwiesen wird entweder das anfangsimage in **gelöscht. *** Column_name* oder das endimage in **eingefügt. *** Column_name*, zurückgegeben auf die angegebene Spalte in der Tabellenvariablen. Finden Sie unter folgenden Beispiel R.  
   
 Um dieselbe Funktionalität von zu erreichen **.** Mit anderen Zeichen- oder Binärdatentypen zu schreiben, verwenden Sie die [haben Zugriff auf Inhalte &#40; Transact-SQL &#41; ](../../t-sql/functions/stuff-transact-sql.md).  
   
@@ -464,7 +464,7 @@ ID     Value
 ## <a name="logging-behavior"></a>Protokollierungsverhalten  
  Die UPDATE-Anweisung wird protokolliert; Allerdings teilaktualisierungen von Datentypen mit umfangreichen Werten die **.** Schreiben Sie die Klausel werden minimal protokolliert. Weitere Informationen finden Sie im vorherigen Abschnitt "Datentypen" unter "Aktualisieren von Datentypen mit umfangreichen Werten".  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Für die Zieltabelle sind UPDATE-Berechtigungen erforderlich. SELECT-Berechtigungen müssen auch für die Tabelle aktualisiert werden, wenn die UPDATE-Anweisung eine WHERE-Klausel enthält, oder wenn *Ausdruck* in der SET-Klausel eine Spalte in der Tabelle verwendet.  
@@ -481,7 +481,7 @@ ID     Value
 |[Angeben von Zielobjekten keine Standardtabellen sind](#TargetObjects)|Sichten • Tabellenvariablen • Tabellenaliase|  
 |[Aktualisieren von Daten basierend auf Daten aus anderen Tabellen](#OtherTables)|FROM|  
 |[Aktualisieren von Zeilen in einer Remotetabelle](#RemoteTables)|Verbindungsserver • OPENQUERY • OPENDATASOURCE|  
-|[Aktualisieren von LOB-Datentypen](#LOBValues)|. • OPENROWSET SCHREIBEN|  
+|[Aktualisieren von LOB-Datentypen](#LOBValues)|.WRITE • OPENROWSET|  
 |[Aktualisieren von benutzerdefinierten Typen](#UDTs)|Benutzerdefinierte Typen|  
 |[Überschreiben das Standardverhalten des Abfrageoptimierers mithilfe von Hinweisen](#TableHints)|Tabellenhinweise • Abfragehinweise|  
 |[Erfassen der Ergebnisse der UPDATE-Anweisung](#CaptureResults)|OUTPUT-Klausel|  
@@ -1036,7 +1036,7 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-#### <a name="ac-using-update-in-a-trycatch-block"></a>STROMVERSORGUNG. Verwenden von UPDATE in einem TRY…CATCH-Block  
+#### <a name="ac-using-update-in-a-trycatch-block"></a>AC. Verwenden von UPDATE in einem TRY…CATCH-Block  
  Im folgenden Beispiel wird eine UPDATE-Anweisung in einem... CATCH-Block, um Ausführungsfehler zu behandeln, die während des Updatevorgangs auftreten können.  
   
 ```sql  
@@ -1221,7 +1221,7 @@ DROP TABLE CTAS_acs
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Cursors &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERT &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
  [Text und Image-Funktionen &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [WITH Common_table_expression &#40; Transact-SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  

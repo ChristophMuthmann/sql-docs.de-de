@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: STOverlaps method (geography)
 ms.assetid: 2babbb9c-59ef-4494-9e6b-528cf296cbd7
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 87738f3cacc1edef51202e6bb242bf5b202fa891
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2a9a580ad47a478e0d3acd340d4c747585c73178
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stoverlaps-geography-data-type"></a>STOverlaps (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

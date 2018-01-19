@@ -26,15 +26,15 @@ helpviewer_keywords:
 - savepoints [SQL Server]
 ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: be1bbb9e63ccb710b42e007c91c1c588a1e8ae1d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c0480f1c295c45f32f4ca3bdaec761a6bd2fa924
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -57,13 +57,13 @@ ROLLBACK { TRAN | TRANSACTION }
  *transaction_name*  
  Der bei BEGIN TRANSACTION der Transaktion zugewiesene Name. *Transaction_name* muss den Regeln für Bezeichner entsprechen, aber nur die ersten 32 Zeichen des Transaktionsnamens verwendet werden. Wenn Transaktionen geschachtelt *Transaction_name* muss der Name der äußersten BEGIN TRANSACTION-Anweisung sein. *Transaction_name* wird immer Groß-/Kleinschreibung beachtet, selbst wenn die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist nicht in der Groß-/Kleinschreibung beachtet.  
   
- **@***Tran_name_variable*  
+ **@** *tran_name_variable*  
  Ist der Name einer benutzerdefinierten Variablen, die einen gültigen Transaktionsnamen enthält. Die Variable muss deklariert werden, mit einem **Char**, **Varchar**, **Nchar**, oder **Nvarchar** -Datentyp.  
   
  *savepoint_name*  
  Ist *Savepoint_name* aus einer SAVE TRANSACTION-Anweisung. *Savepoint_name* muss den Regeln für Bezeichner entsprechen. Verwendung *Savepoint_name* Wann sollte ein bedingtes Rollback nur einen Teil der Transaktion auswirken.  
   
- **@***Savepoint_variable*  
+ **@** *savepoint_variable*  
  Dies ist der Name einer benutzerdefinierten Variablen, die einen gültigen Sicherungspunktnamen enthält. Die Variable muss deklariert werden, mit einem **Char**, **Varchar**, **Nchar**, oder **Nvarchar** -Datentyp.  
   
 ## <a name="error-handling"></a>Fehlerbehandlung  
@@ -141,8 +141,8 @@ value
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [COMMIT WORK &#40; Transact-SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
- [ROLLBACK WORK &#40; Transact-SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)  
   
   

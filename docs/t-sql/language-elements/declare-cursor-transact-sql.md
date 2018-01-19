@@ -26,15 +26,15 @@ helpviewer_keywords:
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0641f87c36d3dbed886dc7bb81aa1f179148a8cd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1f09a8eb025af56d5edee0a3a4d0861b7edb515f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Cursorname*  
+ *cursor_name*  
  Der Name des der [!INCLUDE[tsql](../../includes/tsql-md.md)] Servercursor definiert. *Cursor_name* muss den Regeln für Bezeichner entsprechen.  
   
  INSENSITIVE  
@@ -84,7 +84,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  UPDATE [OF *Column_name* [**,**... *n*]]  
  Definiert aktualisierbare Spalten innerhalb des Cursors. Wenn OF *Column_name* [**,**... *...n*] angegeben wird, können Änderungen nur die Spalten aufgeführt. Wenn UPDATE ohne Spaltenliste angegeben wird, können alle Spalten aktualisiert werden.  
   
- *Cursorname*  
+ *cursor_name*  
  Der Name des der [!INCLUDE[tsql](../../includes/tsql-md.md)] Servercursor definiert. *Cursor_name* muss den Regeln für Bezeichner entsprechen.  
   
  LOCAL  
@@ -256,10 +256,10 @@ DEALLOCATE vendor_cursor;
   
 ## <a name="see-also"></a>Siehe auch  
  [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)   
- [Schließen &#40; Transact-SQL &#41;](../../t-sql/language-elements/close-transact-sql.md)   
+ [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [Cursors &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
- [Aufheben der ZUORDNUNG &#40; Transact-SQL &#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
- [Abrufen von Daten &#40; Transact-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   

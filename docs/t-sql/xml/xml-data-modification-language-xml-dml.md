@@ -23,15 +23,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], XML DML
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: acbedcd828fcacb6b690f0380d83d7dd779f1b2e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5b3315bad83aff77c661edb9e0b3e9e081147d42
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>XML DML (Data Modification Language)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
  XML DML fügt XQuery die folgenden Schlüsselwörter hinzu, für die zwischen Groß- und Kleinschreibung unterschieden wird:  
   
--   **Einfügen**  
+-   **insert**  
   
 -   **Löschen**  
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UPDATETEXT statement
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 97d10776082f3e4aaa80bfc3f09c662838087518
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2561f089f8982bfed4e0b48c673dea17be22de89
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!IMPORTANT]  
 >  Es wird empfohlen, die BULK-Option nicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-basierten Anwendungen zu verwenden. Diese Option kann in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geändert oder entfernt werden.  
   
- *TABLE_NAME* **.** *dest_column_name*  
+ *table_name* **.** *dest_column_name*  
  Der Name der Tabelle und **Text**, **Ntext**, oder **Image** Spalte aktualisiert werden. Tabellen- und Spaltennamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md). Das Angeben des Datenbank- und des Besitzernamens ist optional.  
   
  *dest_text_ptr*  
@@ -79,7 +79,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  *inserted_data*  
  Sind die Daten in den vorhandenen einzufügenden **Text**, **Ntext**, oder **Image** Spalte bei der *Insert_offset* Speicherort. Dies ist eine einzelne **Char**, **Nchar**, **Varchar**, **Nvarchar**, **binäre**,  **Varbinary**, **Text**, **Ntext**, oder **Image** Wert. *Inserted_data* kann ein Literal oder eine Variable sein.  
   
- *TABLE_NAME.src_column_name*  
+ *table_name.src_column_name*  
  Der Name der Tabelle und **Text**, **Ntext**, oder **Image** Spalte, die als Quelle der eingefügten Daten verwendet. Tabellen- und Spaltennamen müssen den Regeln für Bezeichner entsprechen.  
   
  *src_text_ptr*  
@@ -130,7 +130,7 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [READTEXT &#40; Transact-SQL &#41;](../../t-sql/queries/readtext-transact-sql.md)   
- [TEXTPTR &#40; Transact-SQL &#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
+ [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)  
   
   

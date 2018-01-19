@@ -26,15 +26,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 012853c97e01250bf5aee62d95ae7971549f5094
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6dba1b14498cef9e06d9bde5741cb9e37cd31633
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,13 +43,13 @@ ms.lasthandoff: 11/17/2017
   
 [Mit {[XMLNAMESPACES,] [ \<Common_table_expression >]}]
   
- Wählen Sie *Select_list* [INTO *New_table* ]  
+ SELECT *select_list* [ INTO *new_table* ]  
   
- [Aus *Table_source* ] [, in denen *Search_condition* ]  
+ [ FROM *table_source* ] [ WHERE *search_condition* ]  
   
  [GROUP BY *Group_by_expression* ]  
   
- [Müssen *Search_condition* ]  
+ [ HAVING *search_condition* ]  
   
  [ORDER BY *Order_expression* [ASC | "DESC"]]  
   
@@ -269,6 +269,6 @@ ORDER BY OrderDateKey;
   
 ## <a name="see-also"></a>Siehe auch  
  [Wählen Sie die Beispiele &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)  
- [Tabellenhinweise &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)
   
 

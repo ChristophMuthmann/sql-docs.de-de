@@ -32,11 +32,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 09d190a3a27344d60fe3861b87443165f39ac352
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6e9fa0db095ce2f18fa622b2f1f6406f3cd73fa6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```sql
+```
 DBCC CHECKALLOC   
 [  
     ( database_name | database_id | 0   
@@ -66,7 +66,7 @@ DBCC CHECKALLOC
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Database_name* | *Database_id* | 0   
+ *database_name* | *database_id* | 0   
  Der Name oder die ID der Datenbank, für die Zuordnung und Seite Syntax zu überprüfen.
 Erfolgt keine Eingabe, oder wird 0 angegeben, wird die aktuelle Datenbank verwendet.
 Datenbanknamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md).
@@ -107,7 +107,7 @@ DBCC CHECKALLOC überprüft die Zuordnung aller Seiten in der Datenbank, unabhä
 Wird NO_INFOMSGS nicht angegeben, sammelt DBCC CHECKALLOC Informationen zur Speicherplatzverwendung für alle Objekte in der Datenbank. Diese Informationen wird zusammen mit Fehlern gedruckt, die gefunden werden.
   
 > [!NOTE]  
->DBCC CHECKALLOC-Funktionen [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) und [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md). Dies bedeutet, dass Sie DBCC CHECKALLOC nicht gesondert von diesen Anweisungen ausführen müssen.   DBCC CHECKALLOC überprüft keine FILESTREAM-Daten. FILESTREAM speichert BLOBs (Binary Large Objects) im Dateisystem.  
+> DBCC CHECKALLOC-Funktionen [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) und [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md). Dies bedeutet, dass Sie DBCC CHECKALLOC nicht gesondert von diesen Anweisungen ausführen müssen.   DBCC CHECKALLOC überprüft keine FILESTREAM-Daten. FILESTREAM speichert BLOBs (Binary Large Objects) im Dateisystem.  
   
 ## <a name="internal-database-snapshot"></a>Interne Datenbankmomentaufnahme  
 DBCC CHECKALLOC verwendet eine internen Datenbankmomentaufnahme, um die für die Ausführung dieser Überprüfungen erforderliche Transaktionskonsistenz bereitzustellen. Wenn eine Momentaufnahme nicht erstellt werden kann oder TABLOCK angegeben ist, versucht DBCC CHECKALLOC, eine exklusive Sperre (X) für die Datenbank zu erwerben, um die erforderliche Konsistenz zu erhalten.
@@ -160,7 +160,7 @@ DBCC CHECKALLOC meldet außerdem eine Zuordnungszusammenfassung für jeden Index
   
 DBCC CHECKALLOC gibt das folgende Resultset zurück (die tatsächlichen Werte können davon abweichen), außer wenn ESTIMATEONLY oder NO_INFOMSGS angegeben wird.
   
-```sql
+```
 DBCC results for 'master'.  
 ***************************************************************  
 Table sysobjects                Object ID 1.  
@@ -222,7 +222,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 Wenn ESTIMATEONLY angegeben wird, gibt DBCC CHECKALLOC das folgende Resultset zurück.
   
-```sql
+```
 Estimated TEMPDB space needed for CHECKALLOC (KB)   
 -------------------------------------------------   
 34  

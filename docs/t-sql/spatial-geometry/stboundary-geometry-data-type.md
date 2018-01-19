@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STBoundary (geometry Data Type)
 ms.assetid: f0551674-e6e8-4926-9038-df03f2c807d7
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8af92a892be08f0fe51c4cbea77eee4147f235ba
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9ab224de8f9b75be3737488abe885d4d8c69a32c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stboundary-geometry-data-type"></a>STBoundary (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

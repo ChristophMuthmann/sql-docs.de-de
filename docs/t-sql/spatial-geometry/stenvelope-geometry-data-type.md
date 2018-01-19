@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STEnvelope (geometry Data Type)
 ms.assetid: 781d22e9-38df-4c23-836f-6dd0bdef49c5
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d8d9b24c52273b9ef1443e83176e3d6119ff28ae
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8c7f0822ce0ac74d62bc7bb8d3b552fcfa18bc6f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stenvelope-geometry-data-type"></a>STEnvelope (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

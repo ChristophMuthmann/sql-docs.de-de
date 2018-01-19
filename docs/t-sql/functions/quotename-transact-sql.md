@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 650892048daea0a86dc357ebbe2dd08b7eea5184
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 701d229ae745cee4a237f35b69cd00e899d5c6a5
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,14 +47,14 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- "*Character_string*"  
+ '*character_string*'  
  Eine Zeichenfolge von Unicode-Zeichendaten. *Character_string* ist **Sysname** und ist auf 128 Zeichen beschränkt. Eingaben, die größer als 128 Zeichen sind, geben NULL zurück.  
   
- "*Quote_character*"  
+ '*quote_character*'  
  Eine Zeichenfolge mit einem Zeichen, das als Trennzeichen verwendet wird. Kann ein einfaches Anführungszeichen ( **"** ), eine linke oder rechte Klammer ( **[]** ), oder ein doppeltes Anführungszeichen ( **"** ). Wenn *Quote_character* nicht angegeben ist, werden Klammern verwendet werden.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **vom Datentyp nvarchar(258)**  
+ **nvarchar(258)**  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird mit der Zeichenfolge `abc[]def` und den Zeichen `[` und `]` ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Begrenzungsbezeichner erstellt.  
@@ -89,6 +89,16 @@ SELECT QUOTENAME('abc def');
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
+ [PARSENAME &#40;Transact-SQL&#41;](../../t-sql/functions/parsename-transact-sql.md)  
+ [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   

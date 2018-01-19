@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 43d702accc0611030c1c7ad0eda74d456711b694
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 46c7becb151b1942b411aefe337717172f207bb9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,12 +45,12 @@ FORMAT ( value, format [, culture ] )
  *value*  
  Ausdruck eines unterstützten Datentyps, der formatiert werden soll. Eine Liste gültiger Typen finden Sie in der Tabelle im folgenden Abschnitt mit Hinweisen.  
   
- *Format*  
+ *format*  
  **Nvarchar** Formatmuster.  
   
  Das *format* -Argument muss eine gültige .NET Framework-Formatzeichenfolge enthalten, entweder als Standardformatzeichenfolge (z. B. "C" oder "D") oder als ein Muster aus benutzerdefinierten Zeichen für Datumsangaben und numerische Werte (z. B. "MMMM-DD, yyyy (dddd)"). Kombinierte Formatierung wird nicht unterstützt. Ausführliche erläuterungen zu diesen Formatierungsmustern können entnehmen Sie die .NET Framework-Dokumentation zur allgemeinen zeichenfolgenformatierung, benutzerdefinierte Datums- und Zeitformate und benutzerdefinierten Zahlenformaten. Ein guter Ausgangspunkt ist das Thema zu "[Formatierungstypen](http://go.microsoft.com/fwlink/?LinkId=211776)".  
   
- *Kultur*  
+ *culture*  
  Optionales **nvarchar** -Argument, das eine Kultur angibt.  
   
  Wenn das *culture* -Argument nicht angegeben wurde, wird die Sprache der aktuellen Sitzung verwendet. Diese Sprache ist entweder implizit definiert oder wird explizit mit der Anweisung SET LANGUAGE festgelegt. *Kultur* akzeptiert jede von .NET Framework als Argument unterstützte Kultur es gibt keine Beschränkung, die explizit von unterstützten Sprachen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn das *culture* -Argument nicht gültig ist, löst FORMAT einen Fehler aus.  
@@ -83,13 +83,13 @@ FORMAT ( value, format [, culture ] )
 |Numerisch|Numerisch|SqlDecimal|  
 |Numerisch|float|Double|  
 |Numerisch|real|Single|  
-|Numerisch|smallmoney|decimal|  
+|Numerisch|smallmoney|Decimal|  
 |Numerisch|money|decimal|  
-|Datum und Uhrzeit|Datum|DateTime|  
+|Datum und Uhrzeit|Datum|datetime|  
 |Datum und Uhrzeit|Uhrzeit|TimeSpan|  
 |Datum und Uhrzeit|DateTime|DateTime|  
-|Datum und Uhrzeit|smalldatetime|DateTime|  
-|Datum und Uhrzeit|datetime2|DateTime|  
+|Datum und Uhrzeit|smalldatetime|datetime|  
+|Datum und Uhrzeit|datetime2|datetime|  
 |Datum und Uhrzeit|datetimeoffset|datetimeoffset|  
   
 ## <a name="examples"></a>Beispiele  
@@ -212,5 +212,7 @@ SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35
   
 ## <a name="see-also"></a>Siehe auch  
  [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+ [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   

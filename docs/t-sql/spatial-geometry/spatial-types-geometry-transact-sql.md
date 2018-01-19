@@ -18,15 +18,15 @@ helpviewer_keywords:
 - geometry data type [SQL Server], Transact-SQL
 ms.assetid: 3fefdf7b-f931-404c-821c-82c0375eaf51
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 32a064570e66de5e2bde0bb539221c04366d5a73
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 988bfaaa5e1b28fa871836641b12517626aa7ed3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="spatial-types---geometry-transact-sql"></a>Räumliche Typen - Geometrie (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STEndpoint (geometry Data Type)
 ms.assetid: 61773c45-b568-4e0c-94da-1310c42de7f5
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9210d491c3e65d9cf54921e344f4c04afcfe6c29
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4a21e6df17ad412d692ddec777ac6ec11a6328e6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stendpoint-geometry-data-type"></a>STEndpoint (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

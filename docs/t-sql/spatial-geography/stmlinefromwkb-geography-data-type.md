@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STMLineFromWKB method
 ms.assetid: 05ca6d65-4799-4b9a-9672-cfebae95f23e
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b4056744ea6596fc648e6fe7cf3ed9c125191e54
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bd984f8dee29059c1b99545c94db3e7a04879d0e
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stmlinefromwkb-geography-data-type"></a>STMLineFromWKB (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

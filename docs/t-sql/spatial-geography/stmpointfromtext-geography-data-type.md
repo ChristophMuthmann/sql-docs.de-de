@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STMPointFromText method
 ms.assetid: fe91a9f5-8de6-464e-88db-00650eae79b0
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4ca1effa784e492a80f6b40bfebe4379ec490d4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bfa5d4c4dc5a2c34a25b14b338b5f1bdd7346150
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stmpointfromtext-geography-data-type"></a>STMPointFromText (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

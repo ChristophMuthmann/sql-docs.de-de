@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STIsValid (geometry Data Type)
 ms.assetid: 6da39bea-0f67-4660-98fc-d7214f9b2138
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2b2d68cd92401a37a5ed19f4cd23165e6c0b9701
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 686fd143795d5e675096dd5dfc83ae399d1c31e8
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stisvalid-geometry-data-type"></a>STIsValid (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

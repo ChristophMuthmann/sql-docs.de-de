@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bfcb6ae66bc431304e70e2db52801c9788f5f92d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 00debf90f1b79a0e38cb883f31479ae5731f40d3
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ STRING_SPLIT ( string , separator )
  *Zeichenfolge*  
  Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Typs Zeichen (d. h. **Nvarchar**, **Varchar**, **Nchar** oder **Char**).  
   
- *Trennzeichen*  
+ *separator*  
  Ist ein einzelnes Zeichen [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Typs Zeichen (z. B. **nvarchar(1)**, **varchar(1)**, **NCHAR(1)-Wert** oder  **char(1)**), die als Trennzeichen für die verketteten Zeichenfolgen verwendet wird.  
   
 ## <a name="return-types"></a>Rückgabetypen  
@@ -60,7 +60,7 @@ STRING_SPLIT ( string , separator )
 ## <a name="remarks"></a>Hinweise  
  **STRING_SPLIT** akzeptiert eine Zeichenfolge, die geteilt werden sollte und das Trennzeichen, die zum Teilen der Zeichenfolge verwendet werden. Es gibt eine einspaltige Tabelle mit Teilzeichenfolgen zurück. Z. B. die folgende Anweisung `SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');` mit Leerzeichen als Trennzeichen, folgende Ergebnistabelle zurückgegeben:  
   
-|value|  
+|Wert|  
 |-----------|  
 |Lorem|  
 |ipsum|  
@@ -92,10 +92,10 @@ WHERE RTRIM(value) <> '';
 ### <a name="b-split-comma-separated-value-string-in-a-column"></a>B. Teilung durch Kommas getrennte Zeichenfolge in einer Spalte  
  Product-Tabelle enthält die Spalte mit durch Trennzeichen getrennte Liste der Tags, die im folgenden Beispiel gezeigt:  
   
-|"ProductID"|Name|Tags|  
+|ProductId|Name|Tags|  
 |---------------|----------|----------|  
 |1|Komplette Handschuhe|Clothing, Straße, touring bike|  
-|2|LL Kopfhörer|Bike|  
+|2|LL Headset|Bike|  
 |3|HL Mountain Frame|Fahrrad, mountain|  
   
  Folgende Abfrage transformiert jede Liste von Tags und verknüpft sie mit der ursprünglichen Zeile:  
@@ -108,13 +108,13 @@ FROM Product
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|"ProductID"|Name|value|  
+|ProductId|Name|Wert|  
 |---------------|----------|-----------|  
 |1|Komplette Handschuhe|clothing|  
 |1|Komplette Handschuhe|Straße|  
 |1|Komplette Handschuhe|Touring|  
 |1|Komplette Handschuhe|Bike|  
-|2|LL Kopfhörer|Bike|  
+|2|LL Headset|Bike|  
 |3|HL Mountain Frame|Bike|  
 |3|HL Mountain Frame|Mountain|  
   
@@ -171,7 +171,12 @@ WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
+ [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [TEILZEICHENFOLGE &#40; Transact-SQL &#41;](../../t-sql/functions/substring-transact-sql.md)  
   
   

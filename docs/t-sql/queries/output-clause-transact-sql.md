@@ -32,15 +32,15 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 caps.latest.revision: "94"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1c56150f81604473f87ae9c220ac916be30ce3c8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a709097e12b435cbf32f88e13c067135aa3e77ad
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.lasthandoff: 11/17/2017
 *column_list*  
  Ist eine optionale Liste mit Spaltennamen in der Zieltabelle der INTO-Klausel. Es ist analog zu der Liste der Spalten in zulässig der [einfügen](../../t-sql/statements/insert-transact-sql.md) Anweisung.  
   
- *"scalar_expression"*  
+ *scalar_expression*  
  Ist eine beliebige Kombination von Symbolen und Operatoren, die zu genau einem Wert ausgewertet werden. Aggregatfunktionen sind nicht zulässig *"scalar_expression"*.  
   
  Alle Verweise auf Spalten in der Tabelle, die geändert wird, müssen mit dem INSERTED- oder DELETED-Präfix gekennzeichnet werden.  
@@ -137,14 +137,14 @@ DELETE Sales.ShoppingCartItem
     OUTPUT DELETED.*;  
 ```  
   
- *Spaltenname*  
- Ist ein expliziter Spaltenverweis. Alle Verweise auf die Tabelle geändert wird, muss werden richtig gekennzeichnet durch das inserted- oder DELETED-Präfix nach Bedarf, z. B.: INSERTED**.** *Column_name*.  
+ *column_name*  
+ Ist ein expliziter Spaltenverweis. Alle Verweise auf die Tabelle geändert wird, muss werden richtig gekennzeichnet durch das inserted- oder DELETED-Präfix nach Bedarf, z. B.: INSERTED **. *** Column_name*.  
   
  $action  
  Ist verfügbar nur für die MERGE-Anweisung. Gibt eine Spalte vom Typ **nvarchar(10)** in der OUTPUT-Klausel in einer MERGE-Anweisung, die einen von drei Werten für jede Zeile zurückgibt: 'INSERT', 'UPDATE' oder 'DELETE' die Aktion, die für diese Zeile ausgeführt wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Ausgabe \<Dml_select_list >-Klausel und die Ausgabe \<Dml_select_list > INTO {  **@**  *Table_variable*  |   *Output_table* }-Klausel kann in einer einzelnen INSERT-, Update-, DELETE- oder MERGE-Anweisung definiert werden.  
+ Die Ausgabe \<Dml_select_list >-Klausel und die Ausgabe \<Dml_select_list > INTO {**@*** Table_variable* | *Output_table* }-Klausel definiert werden kann in einer einzelnen INSERT-, Update-, DELETE- oder MERGE-Anweisung.  
   
 > [!NOTE]  
 >  Sofern nicht anderweitig angegeben, beziehen sich Verweise auf die OUTPUT-Klausel sowohl auf die OUTPUT- als auch die OUTPUT INTO-Klausel.  
@@ -670,9 +670,9 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
   
 ## <a name="see-also"></a>Siehe auch  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERT &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
- [Table &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   

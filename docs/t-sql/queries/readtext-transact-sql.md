@@ -21,15 +21,15 @@ helpviewer_keywords:
 - reading columns
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 02bf4a96756b8bf3a63a75dec97fe6f58abc8a6d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 17d233bf75593d8b27a458120dbcb2035bc7d2ec
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Tabelle* **.** *Spalte*  
+ *table* **.** *column*  
  Dies ist der Name einer Tabelle und Spalte, aus der gelesen wird. Tabellen- und Spaltennamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md). Die Angabe der Tabellen- und Spaltennamen ist erforderlich, wohingegen die Angabe des Datenbank- und Besitzernamens optional ist.  
   
  *text_ptr*  
- Ein gültiger Textzeiger. *Text_ptr* muss **binary(16)**.  
+ Ein gültiger Textzeiger. *text_ptr* must be **binary(16)**.  
   
- *Offset*  
+ *offset*  
  Ist die Anzahl der Bytes (bei der **Text** oder **Image** Datentypen verwendet werden) oder Zeichen (bei der **Ntext** -Datentyp verwendet wird,) überspringen vor Beginn der Lesen**Text**, **Image**, oder **Ntext** Daten.  
   
- *Größe*  
+ *size*  
  Ist die Anzahl der Bytes (bei der **Text** oder **Image** Datentypen verwendet werden) oder Zeichen (bei der **Ntext** -Datentyp verwendet wird) der zu lesenden Daten. Wenn *Größe* ist 0, 4 KB Daten gelesen wird.  
   
  HOLDLOCK  

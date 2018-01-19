@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: STCurveToLine method (geometry)
 ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8da8776b690752e17b1cc25bb428190f2252d01d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 59e40c95212420ed5f2dd46c46cf11eca623fd29
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: a17c62aeddd0ed898d2a43931965bb7052a58412
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: b6e34da74f96e8941fff67afe24cdbc271381fa7
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-on-linux"></a>SQL Server unter Linux
 
@@ -59,5 +59,5 @@ Wenn Sie bereits mit SQL Server vertraut sind, überprüfen Sie die [Anmerkungen
 - [DBA-Stapel Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): Datenbank-Verwaltung Fragen
 - [Stapelüberlauf](http://stackoverflow.com/questions/tagged/sql-server): Fragen für die Entwicklung
 - [MSDN-Foren](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): technische Fragen
-- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): Melden von Fehlern und Anforderung-Funktion
+- [Übermitteln von Feedback](https://feedback.azure.com/forums/908035-sql-server): Melden von Fehlern und Anforderung-Funktion
 - [Reddit](https://www.reddit.com/r/SQLServer/): Besprechen Sie SQLServer

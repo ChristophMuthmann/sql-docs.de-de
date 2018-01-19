@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STSrid method
 ms.assetid: 6b04f5a7-2e69-4d34-901e-b61ba6ca9c14
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c8069515b1104f4989e717dff6ac30fb8441b12
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7083ade4ec6d177808fcdf4850b793257728a50d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stsrid-geography-data-type"></a>STSrid (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

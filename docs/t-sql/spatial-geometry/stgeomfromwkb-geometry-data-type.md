@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STGeomFromWKB (geometry Data Type)
 ms.assetid: 6546ddb0-4a5f-46e5-ba04-8007486c95ec
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a37a92fd91ad2dbf5b6412f2c8912e06557cc371
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b75620aa7325d1e7a57de0ca52c3b6c7e33cc636
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stgeomfromwkb-geometry-data-type"></a>STGeomFromWKB (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: InstanceOf method
 ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: aa35fb390b51699d4291a51efaea373129273365
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 64fd27cc723257f7b64b826e6b64fc2294728248
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="instanceof-geography-data-type"></a>InstanceOf (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

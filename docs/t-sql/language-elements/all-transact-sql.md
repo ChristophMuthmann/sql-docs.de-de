@@ -23,15 +23,15 @@ helpviewer_keywords:
 - ALL (Transact-SQL)
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b6ea6be0d745ca5ce61a540e9a1e299671d8c7fd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2e65fc9cacbcfe868c072713f282c42c95839e48
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *"scalar_expression"*  
+ *scalar_expression*  
  Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  { = | <> | != | > | >= | !> | < | <= | !< }  
  Ist ein Vergleichsoperator.  
   
- *Unterabfrage*  
+ *subquery*  
  Eine Unterabfrage, die ein Resultset einer Spalte zurückgibt. Der Datentyp der zurückgegebenen Spalte muss den gleichen Datentyp wie der Datentyp des *"scalar_expression"*.  
   
  Ist eine beschränkte SELECT-Anweisung, in der die ORDER BY-Klausel und das INTO-Schlüsselwort nicht zulässig sind.  
@@ -63,7 +63,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Boolean**  
   
 ## <a name="result-value"></a>Ergebniswert  
- Gibt "true" zurück, wenn der angegebene Vergleich "true" ist für alle Paare (*"scalar_expression"***,***X)*Wenn *x* ist ein Wert in der einspaltigen Resultset; Andernfalls wird "false" zurückgegeben.  
+ Gibt "true" zurück, wenn der angegebene Vergleich "true" ist für alle Paare (*"scalar_expression"***,***X)*Wenn *x* ist ein Wert in der einspaltigen Resultset zurück, andernfalls "false".  
   
 ## <a name="remarks"></a>Hinweise  
  ALL erfordert die *"scalar_expression"* zu jedem Wert positiv verglichen, die von der Unterabfrage zurückgegeben wird. Für die Instanz, wenn die Unterabfrage die Werte 2 und 3 zurückgibt *"scalar_expression"* < = ALL (Unterabfrage) für "true" ausgewertet einen *"scalar_expression"* von 2. Wenn die Unterabfrage die Werte 2 und 3 zurückgibt *"scalar_expression"* = ALL (Unterabfrage) als "false" ausgewertet, da einige der Werte der Unterabfrage (der Wert von 3) die Kriterien des Ausdrucks nicht erfüllen.  
@@ -114,13 +114,13 @@ EXECUTE DaysToBuild 49080, 1 ;
  `Some items for this order cannot be manufactured in specified number of days or less.`  
   
 ## <a name="see-also"></a>Siehe auch  
- [Groß-/KLEINSCHREIBUNG &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Ausdrücke &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [WIE &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [WOBEI &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [SOF &#40; Transact-SQL &#41;](../../t-sql/language-elements/in-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  
   
   

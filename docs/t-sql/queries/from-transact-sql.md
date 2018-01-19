@@ -35,15 +35,15 @@ helpviewer_keywords:
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 caps.latest.revision: "97"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cafa4381c52b3b884883f61e6e5f232ac894ee8a
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 9ddc3ee291d4e3b498dd6dfd9bbb49ca4299bea6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -161,7 +161,7 @@ FROM { <table_source> [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Argumente  
-\<Table_source >  
+\<table_source>  
  Gibt eine Tabelle, Sicht, Tabellenvariable oder abgeleitete Tabelle als Quelle mit oder ohne Alias zum Verwenden in der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung an. In einer Anweisung können bis zu 256 Tabellenquellen verwendet werden. Allerdings variiert das Limit in Abhängigkeit vom verfügbaren Arbeitsspeicher und der Komplexität anderer Ausdrücke in der Abfrage. Einzelne Abfragen unterstützen möglicherweise nicht bis zu 256 Tabellenquellen.  
   
 > [!NOTE]  
@@ -176,7 +176,7 @@ FROM { <table_source> [ ,...n ] }
   
  Wenn die Tabelle oder Sicht außerhalb der Instanz von vorhanden ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l, verwenden Sie einen vierteiligen Namen in der Form *Linked_server*. *Katalog*. *Schema*. *Objekt*. Weitere Informationen finden Sie unter [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)erläutert. Ein vierteiliger Name, mit dem Sie erstellt ist, die [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) Funktion als Serverteil des Namens auch zum Angeben der remotequelltabelle verwendet werden kann. Wenn OPENDATASOURCE angegeben wird, *Database_name* und *Schema_name* gelten möglicherweise nicht für alle Datenquellen und unterliegen den Funktionen des OLE DB-Anbieters, der auf das Remoteobjekt zugreift.  
   
- [AS] *Table_alias*  
+ [AS] *table_alias*  
  Ist ein Alias für *Table_source* , entweder zur Vereinfachung oder zur Unterscheidung einer Tabelle oder Sicht in einem selbstjoin oder einer Unterabfrage verwendet werden kann. Ein Alias ist oftmals ein verkürzter Tabellenname, der verwendet wird, um in einem Join auf bestimmte Spalten der beteiligten Tabellen zu verweisen. Falls ein Spaltenname in mehr als einer Tabelle des Joins vorkommt, muss dieser Spaltenname für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch einen Tabellennamen, einen Sichtnamen oder einen Alias gekennzeichnet werden. Falls ein Alias definiert ist, kann der Tabellenname nicht verwendet werden.  
   
  Wenn eine abgeleitete Tabelle, Rowset oder Tabellenwertfunktion oder operatorklausel (z. B. Pivot- oder UNPIVOT) verwendet wird, ist der erforderliche *Table_alias* am Ende der-Klausel wird die verknüpfte Tabellenname für alle Spalten, einschließlich gruppierter Spalten zurückgegeben.  
@@ -206,7 +206,7 @@ FROM { <table_source> [ ,...n ] }
  *user_defined_function*  
  Gibt eine Tabellenwertfunktion an.  
   
- OPENXML \<Openxml_clause >  
+ OPENXML \<openxml_clause>  
 
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
@@ -218,7 +218,7 @@ FROM { <table_source> [ ,...n ] }
   
  *abgeleitete* *_table* können die [!INCLUDE[tsql](../../includes/tsql-md.md)] tabellenwertkonstruktors mehrere Zeilen angeben. Beispiel: `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. Weitere Informationen finden Sie unter [Tabellenwertkonstruktor &#40; Transact-SQL &#41; ](../../t-sql/queries/table-value-constructor-transact-sql.md).  
   
- *Spaltenalias*  
+ *column_alias*  
  Ein optionaler Alias, der einen Spaltennamen im Resultset der abgeleiteten Tabelle ersetzen soll. Geben Sie für jede Spalte in der Auswahlliste einen Spaltenalias an, und schließen Sie die gesamte Liste der Spaltenaliasnamen in Klammern ein.  
   
  *Table_or_view_name* FOR SYSTEM_TIME \<System_time >  
@@ -228,7 +228,7 @@ FROM { <table_source> [ ,...n ] }
   
  Gibt an, dass eine bestimmte Version der Daten aus der angegebenen temporalen Tabelle und ihre verknüpften System versionierte Verlaufstabelle zurückgegeben wird  
   
-\<Tablesample_clause >  
+\<tablesample_clause>  
  Gibt an, dass Beispieldaten aus der Tabelle zurückgegeben werden. Die Beispieldaten können ungefähr sein. Diese Klausel kann für eine primäre oder verknüpfte Tabelle in einer SELECT-, UPDATE- oder DELETE-Anweisung verwendet werden. TABLESAMPLE kann nicht für Sichten angegeben werden.  
   
 > [!NOTE]  
@@ -252,10 +252,10 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  Ist ein konstanter ganzzahliger Ausdruck, der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Generieren einer Zufallszahl verwendet wird. *Repeat_seed* ist **"bigint"**. Wenn *Repeat_seed* nicht angegeben ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist einen Wert, nach dem Zufallsprinzip. Für einen bestimmten *Repeat_seed* Wert, der stichprobenergebnis gilt immer, wenn keine Änderungen auf die Tabelle angewendet wurden. Die *Repeat_seed* Ausdruck muss in eine ganze Zahl größer als 0 (null) ausgewertet.  
   
- \<Joined_table >  
+ \<joined_table>  
  Ein Resultset, das das Produkt von zwei oder mehr Tabellen darstellt. Verwenden Sie für mehrere Joins Klammern, um die natürliche Joinreihenfolge zu ändern.  
   
-\<Join_type >  
+\<join_type>  
  Gibt den Typ der Joinoperation an.  
   
  **INNERE**  
@@ -270,7 +270,7 @@ FROM { <table_source> [ ,...n ] }
  RIGHT [OUTER]  
  Gibt an, dass alle Zeilen der rechten Tabelle, die die angegebene Joinbedingung nicht erfüllen, im Resultset enthalten sind. Die Ausgabespalten der anderen Tabelle werden auf NULL gesetzt. Dies erfolgt zusätzlich zu allen Zeilen, die von INNER JOIN zurückgegeben werden.  
   
-\<Join_hint >  
+\<join_hint>  
  Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)], gibt an, dass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfrage Optimierer verwendet einen Joinhinweis oder Ausführungsalgorithmus pro Join in der FROM-Klausel angegeben. Weitere Informationen finden Sie unter [Join-Abfragehinweise &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-join.md).  
   
  Für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], diese joinhinweise gelten, für innere Joins von zwei verteilungsspalten nicht kompatibel. Sie können die abfrageleistung verbessern, indem Sie den Betrag der datenverschiebung, die bei der Verarbeitung einer Abfrage einschränken. Die zulässige joinhinweise für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] lauten wie folgt:  
@@ -287,7 +287,7 @@ FROM { <table_source> [ ,...n ] }
  JOIN  
  Legt fest, dass die angegebene Joinoperation mit den angegebenen Tabellenquellen oder Sichten durchgeführt werden soll.  
   
- ON \<Search_condition >  
+ ON \<search_condition>  
  Gibt die Bedingung an, auf der der Join basiert. Als Bedingung können beliebige Prädikate angegeben werden, obwohl häufig Spalten- und Vergleichsoperatoren verwendet werden, z. B.:  
   
 ```sql
@@ -307,7 +307,7 @@ ON (p.ProductID = v.ProductID);
  CROSS JOIN  
  Gibt das Kreuzprodukt zweier Tabellen an. Gibt dieselben Zeilen wie die frühere Joinanweisung (die nicht SQL-92-gemäß ist) ohne WHERE-Klausel zurück.  
   
- *Left_table_source* {CROSS | OUTER} übernehmen *Right_table_source*  
+ *left_table_source* { CROSS | OUTER } APPLY *right_table_source*  
  Gibt an, dass die *Right_table_source* der Apply-Operators wird ausgewertet, für jede Zeile des der *Left_table_source*. Diese Funktion ist nützlich, wenn die *Right_table_source* enthält eine Tabellenwertfunktion, die Spaltenwerte aus der *Left_table_source* als eines ihrer Argumente.  
   
  Mit APPLY muss CROSS oder OUTER angegeben werden. Wenn CROSS angegeben wird, werden keine Zeilen erstellt bei der *Right_table_source* wird ausgewertet, für eine bestimmte Zeile von der *Left_table_source* und gibt ein leeres Resultset zurück.  
@@ -322,7 +322,7 @@ ON (p.ProductID = v.ProductID);
  *right_table_source*  
  Eine Tabellenquelle gemäß Definition im vorherigen Argument. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.  
   
- *Table_source* PIVOT \<Pivot_clause >  
+ *table_source* PIVOT \<pivot_clause>  
  Gibt an, dass die *Table_source* pivotiert wird basierend auf den *Pivot_column*. *Table_source* ist eine Tabelle oder ein Tabellenausdruck. Die Ausgabe ist eine Tabelle, die alle Spalten der enthält die *Table_source* mit Ausnahme der *Pivot_column* und *Value_column*. Die Spalten der *Table_source*, mit Ausnahme der *Pivot_column* und *Value_column*, werden als Gruppierungsspalten des Pivot-Operators bezeichnet. Weitere Informationen zu PIVOT und UNPIVOT, finden Sie unter [mithilfe von PIVOT und UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
  PIVOT führt einen Gruppierungsvorgang für die Eingabetabelle in Bezug auf die Gruppierungsspalten aus und gibt für jede Gruppe eine Zeile zurück. Darüber hinaus enthält die Ausgabe eine Spalte für jeden Wert im angegebenen der *Column_list* , angezeigt wird, der *Pivot_column* von der *Input_table*.  
@@ -360,20 +360,20 @@ ON (p.ProductID = v.ProductID);
   
  Gibt eine Tabelle mit einem einzelnen Datensatz für jede Zeile zurück, die die Werte enthält, die zum angegebenen Zeitpunkt in der Vergangenheit real (aktuell) waren. Intern wird eine Union zwischen der temporalen Tabelle und ihrer Verlaufstabelle ausgeführt, und die Ergebnisse werden gefiltert, dass die Werte in der Zeile zurückgegeben, die vom angegebenen Zeitpunkt gültig war die  *\<Datum_Uhrzeit >* Parameter. Der Wert für eine Zeile wird für gültig befunden Wenn die *System_start_time_column_name* Wert ist kleiner als oder gleich der  *\<Datum_Uhrzeit >* Parameterwert und die *System_end_time_ Column_name* Wert ist größer als die  *\<Datum_Uhrzeit >* Parameterwert.   
   
- VON \<startdatum_uhrzeit > TO \<enddatum_uhrzeit >
+ FROM \<start_date_time> TO \<end_date_time>
 
 **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
   
  Gibt eine Tabelle mit den Werten für alle Datensatzversionen, die innerhalb des angegebenen Zeitraums, unabhängig davon, ob sie vor dem aktiv waren die  *\<start_datum_uhrzeit >* Parameterwert für die Argument ist oder nicht mehr aktiviert, wenn die  *\<ende_datum_uhrzeit >* Parameterwert für das TO-Argument. Intern wird eine Union zwischen der temporalen Tabelle und ihrer Verlaufstabelle ausgeführt, und die Ergebnisse werden so gefiltert, dass die Werte für alle Zeilenversionen zurückgegeben werden, die zu irgendeinem Zeitpunkt innerhalb des angegebenen Zeitbereichs aktiv waren. Zeilen, die genau an dem durch die FROM-Endpunkt definierten unteren Grenzwert aktiv wurden, sind enthalten, und Zeilen, die genau an dem durch den TO-Endpunkt definierten oberen Grenzwert aktiv wurden, sind nicht enthalten.  
   
- ZWISCHEN \<startdatum_uhrzeit > AND \<enddatum_uhrzeit >  
+ BETWEEN \<start_date_time> AND \<end_date_time>  
 
 **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Gleich wie oben in der **FROM \<startdatum_uhrzeit > TO \<ende_datum_uhrzeit >** Beschreibung, außer sie Zeilen, die auf die enthalten durch definierten oberen Grenzwert aktiv wurden die \<enddatum_uhrzeit > Endpunkt.  
   
- CONTAINED IN (\<startdatum_uhrzeit >, \<enddatum_uhrzeit >)  
+ CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 
 **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
@@ -857,9 +857,9 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [OPENQUERY &#40; Transact-SQL &#41;](../../t-sql/functions/openquery-transact-sql.md)   
+ [INSERT &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
- [WOBEI &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

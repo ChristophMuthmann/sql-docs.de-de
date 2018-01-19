@@ -20,15 +20,15 @@ helpviewer_keywords:
 - GeomFromGML method
 ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dbb619a9e840574ffbdb58fdc4e7d2a39d2e9d28
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 864452110a8836749d1be76304b5d98249ee2bea
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

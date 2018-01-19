@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: CurveToLineWithTolerance method (geometry)
 ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: caa3a00f6ed962122288fa0d71a4f2d2f92bd6f7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2f7429f54395b5a765c84939aac2ce7fe0a94c08
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Gibt eine polygonale Näherung einer Instanz von **geometry** mit Kreisbogensegm
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Fehlertoleranz*  
+ *tolerance*  
  Ein **double** -Ausdruck, der die maximalen Fehler zwischen dem ursprünglichen Kreisbogensegment und der linearen Näherung definiert.  
   
  *relative*  

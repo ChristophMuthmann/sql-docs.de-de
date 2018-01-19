@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: CollectionAggregate method (geometry)
 ms.assetid: b7c85d59-c841-4b7f-9d46-8b4b7f2a3afe
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44f6131f572c509c43fd671dee7f0331e73fb441
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8d4c5718fc45f035e6f51b305d1d4cac79d1ce02
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="collectionaggregate-geometry-data-type"></a>CollectionAggregate (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

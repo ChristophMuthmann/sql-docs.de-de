@@ -23,15 +23,15 @@ helpviewer_keywords:
 - removing cursor references
 ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4f0b4fbd8d6cffb43fc8a6c7c69a9e1182a2dadb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f7dd1a4deca2a3c6db7db7596c94f0def97934da
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Cursorname*  
+ *cursor_name*  
  Der Name eines bereits deklarierten Cursors. Wenn sowohl ein globaler als auch ein lokaler Cursor mit vorhanden *Cursor_name* als Buchstabenfolge, *Cursor_name* bezieht sich auf den globalen Cursor, wenn GLOBAL angegeben ist und auf den lokalen Cursor GLOBAL nicht angegeben ist.  
   
  @*cursor_variable_name*  
@@ -146,10 +146,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schließen &#40; Transact-SQL &#41;](../../t-sql/language-elements/close-transact-sql.md)   
+ [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [Cursor](../../relational-databases/cursors.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [Abrufen von Daten &#40; Transact-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
- [OPEN &#40; Transact-SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)  
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
   
   

@@ -29,11 +29,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7c554f15df3eae68ea3b5cda1ba5bb316f5dcc17
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b1608f86abf8605b707f8b72e7baac3b9b794e7
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 DBCC CHECKCATALOG   
 [   
     (   
@@ -56,7 +55,7 @@ DBCC CHECKCATALOG
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Database_name* | *Database_id* | 0  
+ *database_name* | *database_id* | 0  
  Der Name oder die ID der Datenbank, für die die Katalogkonsistenz überprüft werden soll. Erfolgt keine Eingabe, oder wird 0 angegeben, wird die aktuelle Datenbank verwendet. Datenbanknamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md).  
   
  WITH NO_INFOMSGS  
@@ -78,23 +77,23 @@ DBCC CHECKCATALOG führt verschiedene Konsistenzprüfungen zwischen System-Metad
 Wenn eine Momentaufnahme nicht erstellt werden kann, erwirbt DBCC CHECKCATALOG eine exklusive Datenbanksperre, um die erforderliche Konsistenz zu erhalten. Wenn Inkonsistenzen gefunden werden, können diese nicht repariert werden, und die Datenbank muss von einer Sicherung wiederhergestellt werden.
   
 > [!NOTE]  
->  Ausführen von DBCC CHECKCATALOG für **Tempdb** Überprüfungen ausgeführt. Dies liegt daran, dass aus Leistungsgründen keine datenbankmomentaufnahmen verfügbar sind **Tempdb**. Dies bedeutet, dass die erforderliche Transaktionskonsistenz nicht erhalten werden kann. Wiederverwenden des Servers zum Auflösen einer beliebigen **Tempdb** Metadaten zu beseitigen.  
+> Ausführen von DBCC CHECKCATALOG für **Tempdb** Überprüfungen ausgeführt. Dies liegt daran, dass aus Leistungsgründen keine datenbankmomentaufnahmen verfügbar sind **Tempdb**. Dies bedeutet, dass die erforderliche Transaktionskonsistenz nicht erhalten werden kann. Wiederverwenden des Servers zum Auflösen einer beliebigen **Tempdb** Metadaten zu beseitigen.  
   
 > [!NOTE]  
->  DBCC CHECKCATALOG überprüft keine FILESTREAM-Daten. FILESTREAM speichert BLOBs (Binary Large Objects) im Dateisystem.  
+> DBCC CHECKCATALOG überprüft keine FILESTREAM-Daten. FILESTREAM speichert BLOBs (Binary Large Objects) im Dateisystem.  
   
 DBCC CHECKCATALOG wird auch ausgeführt, im Rahmen des [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).
   
 ## <a name="result-sets"></a>Resultsets  
 Falls keine Datenbank angegeben ist, gibt DBCC CHECKCATALOG Folgendes zurück:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
 Falls [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] als Datenbankname angegeben ist, gibt DBCC CHECKCATALOG Folgendes zurück:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
@@ -115,5 +114,5 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[Systemtabellen &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
+[System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
   

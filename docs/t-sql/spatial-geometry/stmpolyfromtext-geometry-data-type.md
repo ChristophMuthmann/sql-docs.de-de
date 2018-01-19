@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STMPolyFromText (geometry Data Type)
 ms.assetid: f087a61c-f063-4fb8-8f1c-251a2fed76a1
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4e8217c1f2ceeebc840fcc78592eda4732460db3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 166a64eecf67fe7e1eb15a3e872613debbe9de71
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stmpolyfromtext-geometry-data-type"></a>STMPolyFromText (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

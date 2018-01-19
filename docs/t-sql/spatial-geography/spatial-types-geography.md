@@ -18,15 +18,15 @@ helpviewer_keywords:
 - spatial data types [SQL Server]
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e13e451fefafe8f213bd63da41c22ede4c0f1b5b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3c536b06487c20f654b742f37f429ca64015ebfc
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="spatial-types---geography"></a>Räumliche Typen - Geographie
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

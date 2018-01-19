@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: Extended Static Geography Methods
 ms.assetid: a665a137-197c-4201-a2fb-ba639b5f3ca3
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b20aecfb9ae21f6e8b366c5da407c5050105ca24
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dc9097220d694668de3d401560d408c1ad1d73c5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="extended-static-geography-methods"></a>Erweiterte statische geography-Methoden
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Analysieren](../../t-sql/spatial-geography/parse-geography-data-type.md)  
   
--   [Point](../../t-sql/spatial-geography/point-geography-data-type.md)  
+-   [Punkt](../../t-sql/spatial-geography/point-geography-data-type.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Statische Geography-Aggregatmethoden](../../t-sql/spatial-geography/static-aggregate-geography-methods.md)   

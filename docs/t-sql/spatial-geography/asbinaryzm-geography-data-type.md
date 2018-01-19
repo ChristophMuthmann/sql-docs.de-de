@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AsBinaryZM
 ms.assetid: 37246adb-814d-4113-9983-4d336de8182c
 caps.latest.revision: "7"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9abdf15e501c014a53c587799c6f246113567cb9
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f46f38c4a08c9cac11393c044876c2569b412a02
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="asbinaryzm-geography-data-type"></a>AsBinaryZM (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

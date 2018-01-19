@@ -30,15 +30,15 @@ helpviewer_keywords:
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 caps.latest.revision: "73"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: eaebe21d731916e0ed6906e7d916df4c8cac2d90
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: de9b90e46c344c4d287d677c9aa17e5d635aca6d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -78,11 +78,11 @@ RAISERROR ( { msg_str | @local_variable }
   
  *Msg_str* ist eine Zeichenfolge mit optional eingebetteten Konvertierungsspezifikationen. Jede Konvertierungsspezifikation definiert, wie ein Wert in der Argumentliste formatiert und in ein Feld an der Position der Konvertierungsspezifikation in versetzt *Msg_str*. Konvertierungsspezifikationen weisen das folgende Format auf:  
   
- % [[*Flag*] [*Breite*] [. *Genauigkeit*] [{h | l}]] *Typ*  
+ % [[*Flag*] [*Breite*] [. *precision*] [{h | l}]] *type*  
   
  Die Parameter, die in zu verwendenden *Msg_str* sind:  
   
- *Kennzeichen*  
+ *flag*  
   
  Ist ein Code, der den Abstand und die Ausrichtung des ersetzten Werts bestimmt.  
   
@@ -94,7 +94,7 @@ RAISERROR ( { msg_str | @local_variable }
 |# (Nummer)|0x-Präfix für Hexadezimaltyp von x oder X|Das Nummernzeichenflag (#) wird jedem Wert ungleich 0 mit 0, 0x bzw. 0X vorangestellt, wenn es mit dem Format o, x oder X verwendet wird. Wenn das Nummernzeichenflag (#) vor d, i oder u steht, wird das Flag ignoriert.|  
 |" " (Leerzeichen)|Auffüllung mit Leerstellen|Dem Ausgabewert werden Leerzeichen vorangestellt, wenn der Wert ein Vorzeichen aufweist und positiv ist. Dies wird ignoriert, wenn er mit dem Pluszeichenflag (+) versehen ist.|  
   
- *Breite*  
+ *width*  
   
  Ist eine ganze Zahl, die die Mindestbreite des Felds definiert, in das der Argumentwert platziert werden soll. Wenn die Länge des Argumentwerts gleich oder länger als *Breite*, ist der Wert ohne Auffüllung ausgegeben. Wenn der Wert kürzer als *Breite*, der Wert wird auf die im angegebenen Länge aufgefüllt *Breite*.  
   
@@ -108,7 +108,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  Ein Sternchen (*) bedeutet, dass die Genauigkeit durch das zugeordnete Argument in der Argumentliste angegeben wird, welches ein Wert für eine ganze Zahl sein muss.  
   
- {h | l} *Typ*  
+ {h | l} *type*  
   
  Wird verwendet, mit den Zeichentypen d, i, o, s, X, X oder u verwendet und erstellt **Shortint** (h) oder **Longint** (l)-Werte.  
   
@@ -126,10 +126,10 @@ RAISERROR ( { msg_str | @local_variable }
 > [!NOTE]  
 >  Konvertieren eines Werts, der [!INCLUDE[tsql](../../includes/tsql-md.md)] **"bigint"** -Datentyp geben **% I64d**.  
   
- **@***Local_variable*  
- Ist eine Variable eines beliebigen gültigen Zeichendatentyps, die eine Zeichenfolge, die auf die gleiche Weise wie formatiert enthält *Msg_str*. **@***Local_variable* muss **Char** oder **Varchar**, oder werden implizit in diese Datentypen konvertiert werden können.  
+ **@** *local_variable*  
+ Ist eine Variable eines beliebigen gültigen Zeichendatentyps, die eine Zeichenfolge, die auf die gleiche Weise wie formatiert enthält *Msg_str*. **@*** Local_variable* muss **Char** oder **Varchar**, oder werden implizit in diese Datentypen konvertiert werden können.  
   
- *Schweregrad*  
+ *severity*  
  Ist der benutzerdefinierte Schweregrad, der dieser Meldung zugeordnet ist. Bei Verwendung *Msg_id* zum Auslösen einer benutzerdefinierten Meldung mit Sp_addmessage erstellt, überschreibt in RAISERROR angegebene Schweregrad der Schweregrad den Schweregrad in Sp_addmessage angegeben.  
   
  Schweregrade von 0 bis 18 können von jedem Benutzer angegeben werden. Schweregrade von 19 bis 25 können nur von Mitgliedern der festen Sysadmin-Serverrolle oder Benutzer mit ALTER TRACE-Berechtigungen angegeben werden. Für Schweregrade von 19 bis 25 ist die Option WITH LOG erforderlich. Geringere Schweregrade als 0 werden als 0 interpretiert. Höhere Schweregrade als 25 werden als 25 interpretiert.  
@@ -150,12 +150,12 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  An invalid parameter or option was specified for procedure 'mysp_CreateCustomer'.
  ```  
   
- *Status*  
+ *state*  
  Eine ganze Zahl zwischen 0 und 255. Negative Werte werden standardmäßig auf 1. Werte größer als 255 sollte nicht verwendet werden. 
   
  Wird derselbe benutzerdefinierte Fehler an mehreren Stellen ausgelöst, kann durch Verwenden einer eindeutigen Statusnummer für die einzelnen Positionen der Codeabschnitt ermittelt werden, der die Fehler auslöst.  
   
- *Argument*  
+ *argument*  
  Sind die im Ersatz für Variablen, die in definierten verwendeten Parameter *Msg_str* oder entsprechende Meldung *Msg_id*. Es können 0 oder mehr Ersetzungsparameter vorhanden sein, jedoch nicht mehr als 20. Jeder Ersetzungsparameter kann eine lokale Variable oder einen der folgenden Datentypen aufweisen: **"tinyint"**, **"smallint"**, **Int**, **Char**, **Varchar**, **Nchar**, **Nvarchar**, **binäre**, oder **Varbinary**. Es werden keine weiteren Datentypen unterstützt.  
   
  *Option*  
@@ -289,10 +289,10 @@ GO
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
- [Sp_addmessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [Sp_dropmessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
+ [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
- [Xp_logevent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/xp-logevent-transact-sql.md)   
+ [xp_logevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logevent-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   

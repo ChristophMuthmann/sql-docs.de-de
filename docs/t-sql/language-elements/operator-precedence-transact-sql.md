@@ -19,15 +19,15 @@ helpviewer_keywords:
 - precedence [SQL Server], operators
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c534653bb383fbbfcd069cb98bb72519d3d02987
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b1208137b82bf64a6b48a7d6f2db2bc681a7d7f6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="operator-precedence-transact-sql"></a>Operatorrangfolge (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ SELECT @MyNumber;
   
 ## <a name="see-also"></a>Siehe auch  
  [Logische Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
- [Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

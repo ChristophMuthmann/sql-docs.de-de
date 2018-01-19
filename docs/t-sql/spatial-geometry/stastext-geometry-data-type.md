@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STAsText (geometry Data Type)
 ms.assetid: e0decf5e-2858-4c56-b61a-6123f47fb51c
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: aac75544ff6e47c5cdabde89e3b051ef6cd26811
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2a4bf462c9502b5d6c714e2149669f8e3f82e0a4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stastext-geometry-data-type"></a>STAsText (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
