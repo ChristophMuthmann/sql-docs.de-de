@@ -21,14 +21,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3fae54870409e11ed94050dd621784e57625eb02
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d6d0c4561b4c913799857774fa19dd35999614d1
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="data-mining-programming---ole-db"></a>Datamining-Programmierungsverfahren - OLE DB
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Die Datamining-Funktionen in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] entsprechen den [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB für Data Mining 1.0-Spezifikation, die im Juni 2000 veröffentlicht wurden.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  Die Datamining-Funktionen in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] entsprechen den [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB für Data Mining 1.0-Spezifikation, die im Juni 2000 veröffentlicht wurden.  
   
  In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] wurde die Spezifikation durch Hinzufügung folgender Elemente erweitert: neue Schemarowsets, Spalten zu bestehenden Schemarowsets, Syntax zur Data Mining Extensions (DMX)-Sprache zum Erstellen und Verwalten von Miningstrukturen.  
   

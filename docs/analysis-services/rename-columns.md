@@ -19,11 +19,13 @@ ms.author: owend
 manager: kfile
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 4acf2b779ab65ab8886dad9d603632e6ecf97427
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2cfc73728765784c3471c3bfcc0e68382b54b845
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="rename-columns"></a>Umbenennen von Spalten
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]In dieser Lektion wird entfernt. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+In dieser Lektion wird entfernt. 

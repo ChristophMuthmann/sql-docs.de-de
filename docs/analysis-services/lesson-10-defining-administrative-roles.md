@@ -18,26 +18,28 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b08ad3c2373234688e70633298f474e4c8254fb4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ed03cf00101a8e36760571a89c9bfe25dff98bca
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>Lektion 10: Definieren von Administratorrollen
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]In dieser Lektion erfahren Sie wie Sicherheitsrollen für Verwaltungstasks definiert.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+In dieser Lektion erfahren Sie, wie Sicherheitsrollen für Verwaltungstasks definiert werden.  
   
 > [!NOTE]  
 > Für alle Lektionen in diesem Lernprogramm sind abgeschlossene Projekte online verfügbar. Sie können jede Lektion aufrufen, indem Sie ein abgeschlossenes Projekt aus der vorherigen Lektion als Ausgangspunkt verwenden. [Klicken Sie hier](http://go.microsoft.com/fwlink/?LinkID=221866) , um die Beispielprojekte für dieses Lernprogramm herunterzuladen.  
   
 Diese Lektion beinhaltet die folgende Aufgabe:  
   
-[Erteilen von Berechtigungen zum Verarbeiten von Datenbanken](../analysis-services/lesson-10-granting-process-database-permissions.md)  
+[Erteilen von Verarbeitungsberechtigungen für die Datenbank](../analysis-services/lesson-10-granting-process-database-permissions.md)  
 Im Rahmen dieser Aufgabe definieren Sie eine Sicherheitsrolle, die berechtigt ist, die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank zu verarbeiten, und anschließend testen Sie diese Sicherheitsrolle.  
   
 ## <a name="see-also"></a>Siehe auch  
 [Analysis Services-Lernprogrammszenario](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Mehrdimensionale Modellierung &#40; Adventure Works-Lernprogramm &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   

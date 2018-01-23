@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3e1a38f2d4466c70259d9f58787b88c939459f59
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: de637476cd0aa2577c850062dffebc0e4fc66238
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="tabular-model-scripting-language-tmsl-reference"></a>Tabular Model Scripting Language (TMSL)-Referenz
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Tabular Model Scripting Language (TMSL) ist der Befehl und Objekt Modell-Definition-Syntax für Analysis Services-Tabellenmodell-Datenbanken mit Kompatibilitätsgrad 1200 oder höher. TMSL kommuniziert mit Analysis Services über das XMLA-Protokoll, in dem die [XMLA. Führen Sie](../analysis-services/xmla/xml-elements-methods-execute.md) Methode akzeptiert beide JSON-basierte **Anweisung** Skripts in TMSL als auch die herkömmlichen XML-basierte Skripts in [Analysis Services Scripting Language &#40; ASSL XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  Tabular Model Scripting Language (TMSL) ist der Befehl und Objekt Modell-Definition-Syntax für Analysis Services-Tabellenmodell-Datenbanken mit Kompatibilitätsgrad 1200 oder höher. TMSL kommuniziert mit Analysis Services über das XMLA-Protokoll, in dem die [XMLA. Führen Sie](../analysis-services/xmla/xml-elements-methods-execute.md) Methode akzeptiert beide JSON-basierte **Anweisung** Skripts in TMSL als auch die herkömmlichen XML-basierte Skripts in [Analysis Services Scripting Language &#40; ASSL XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
  Schlüsselelemente des TMSL umfassen Folgendes:  
   
@@ -68,11 +70,11 @@ ms.lasthandoff: 01/08/2018
 
 ||||||  
 |-|-|-|-|-|  
-|**Version**|**Multidimensional**|**Tabellarische 110 x**|**Tabellarische 1200**| **Tabellarische 1400** |
+|**Version**|**Mehrdimensionale**|**Tabellarische 110 x**|**Tabular 1200**| **Tabular 1400** |
 |Azure Analysis Services|NA|NA|TMSL|TMSL| 
 |SQL Server 2017|ASSL|ASSL|TMSL|TMSL| 
 |SQL Server 2016|ASSL|ASSL|TMSL|TMSL| 
-|SQLServer 2014|ASSL|ASSL|NA|NA|   
+|SQL Server 2014|ASSL|ASSL|NA|NA|   
 |SQL Server 2012|ASSL|ASSL|NA|NA|  
 
   

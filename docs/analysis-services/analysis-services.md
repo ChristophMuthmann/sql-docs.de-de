@@ -25,14 +25,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 0a11280eca74da75737d30fe795c856988d422ae
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 00b88b320118df9649b546b35259ec1c8acdc7cf
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="what-is-analysis-services"></a>Was ist eine Analysis Services?
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services ist ein analytisches Datenmodul in Decision Support und Business Analytics, analytischen Daten für Geschäftsberichte und Clientanwendungen wie Excel, Power BI bereitstellt, die durch das Reporting Services-Berichte und andere Daten Visualisierungstools verwendet.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  Analysis Services ist ein analytisches Datenmodul in Decision Support und Business Analytics, analytischen Daten für Geschäftsberichte und Clientanwendungen wie Excel, Power BI bereitstellt, die durch das Reporting Services-Berichte und andere Daten Visualisierungstools verwendet.  
   
  Ein typischer Workflow enthält, erstellen eine mehrdimensionale oder tabellarische Datenmodell, Bereitstellung des Modells als Datenbank mit einer lokalen SQL Server Analysis Services oder Azure Analysis Services-Serverinstanz, wiederkehrende Datenverarbeitung einrichten und zuweisen Berechtigungen zum Zugriff auf Daten von Endbenutzern zu ermöglichen. Wenn er abgeschlossen ist, kann Ihr semantische Datenmodell von allen Clientanwendungen, die Unterstützung von Analysis Services als Datenquelle zugegriffen werden.  
  
@@ -61,7 +63,7 @@ Im Allgemeinen ist die Dokumentation für Azure Analysis Services in Azure-Dokum
 *  [Vergleichen von tabellarischen und mehrdimensionalen Lösungen](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
 *  [Tabellarische Modelle](../analysis-services/tabular-models/tabular-models-ssas.md)  
 *  [Mehrdimensionale Modelle](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)  
-*  [Data Mining](../analysis-services/data-mining/data-mining-ssas.md)  
+*  [Datamining](../analysis-services/data-mining/data-mining-ssas.md)  
 *  [PowerPivot für SharePoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
 *  [Instanzverwaltung](../analysis-services/instances/analysis-services-instance-management.md)    
 *  [Tutorials](../analysis-services/analysis-services-tutorials-ssas.md)   

@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 876c15beb1fc62e805a4c86718da0590c19244bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 969a3952f113521b5f584533fd0676b33b873b53
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Vergleichen von tabellarischen und mehrdimensionalen Lösungen
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services bietet mehrere Ansätze zum Erstellen eines Business Intelligence-Semantikmodells: tabellarische, mehrdimensionale und Power Pivot für SharePoint.
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  SQL Server Analysis Services bietet mehrere Ansätze zum Erstellen eines Business Intelligence-Semantikmodells: tabellarische, mehrdimensionale und Power Pivot für SharePoint.
   
  Mehr als ein Ansatz ermöglicht eine Modellierungsumgebung, die auf unterschiedliche Geschäfts- und Benutzeranforderungen zugeschnitten ist. Das mehrdimensionale Modell ist eine auf offenen Standards basierende ausgereifte Technologie, die von zahlreichen Herstellern von BI-Software genutzt wird, aber nur schwer zu meistern ist. Das tabellarische Modell bietet einen relationalen Modellierungsansatz, den viele Entwickler intuitiver finden. Das Power Pivot-Modell ist noch einfacher und bietet eine visuelle Datenmodellierung in Excel sowie Serverunterstützung, die über SharePoint bereitgestellt wird.  
   
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/08/2018
 |Standardelement|ja|nein|  
 |Anzeigeordner|ja|Ja<sup>1</sup>|  
 |Distinct Count|ja|Ja (über DAX)|
-|Drillthrough ausführen|ja|Ja (hängt mit Client-Anwendung)|
+|Drillthroughberichte|ja|Ja (hängt mit Client-Anwendung)|
 |Hierarchien|ja|ja|
 |KPIs (Key Performance Indicators)|ja|ja| 
 |Verknüpfte Objekte|ja|Ja (verknüpfte Tabellen)|
@@ -81,7 +83,7 @@ ms.lasthandoff: 01/08/2018
 |Sicherheit auf Zeilenebene|ja|ja| 
 |Sicherheit auf Nachrichtenebene-Objekt|ja|Ja<sup>1</sup>|
 |Semiadditive Measures|ja|ja| 
-|Translations|[Ja](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|ja| 
+|Übersetzungen|[Ja](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|ja| 
 |Benutzerdefinierte Hierarchien|ja|ja|
 |Rückschreiben|ja|nein| 
   

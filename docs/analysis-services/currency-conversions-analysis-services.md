@@ -25,14 +25,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3c2d9626ff12593f6192ab6b3a6bec1bb6ab4a7b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b454d405b6175c200d8be9426fafb7e79be25e70
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="currency-conversions-analysis-services"></a>Währungsumrechnungen (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[applies](../includes/applies-md.md)] Mehrdimensionale nur  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  [!INCLUDE[applies](../includes/applies-md.md)] Nur Multidimensional  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet eine Kombination von Funktionen, die durch MDX-Skripts (Multidimensional Expressions) bestimmt werden, um für Cubes, die mehrere Währungen unterstützen, Währungsumrechnungen bereitzustellen.  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="defining-currency-conversions"></a>Definieren von Währungsumrechnungen  
  Sie können mit dem Business Intelligence-Assistenten die Funktionen der Währungsumrechnung für einen Cube definieren, oder Sie können Währungsumrechnungen mithilfe von MDX-Skripts manuell definieren.  
   
-### <a name="prerequisites"></a>Voraussetzungen  
+### <a name="prerequisites"></a>Erforderliche Komponenten  
  Bevor Sie eine Währungsumrechnung in einem Cube mithilfe des Business Intelligence-Assistenten definieren können, müssen Sie zunächst mindestens eine Währungsdimension, eine Zeitdimension und eine Wechselkurs-Measuregruppe definieren. Aus diesen Objekten kann der Business Intelligence-Assistent die Daten und Metadaten abrufen, mit deren Hilfe die notwendige Berichtswährungsdimension und das notwendige MDX-Skript zum Bereitstellen der Währungsumrechnungsfunktionen erstellt werden.  
   
 ### <a name="decisions"></a>Entscheidungen  

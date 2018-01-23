@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2c9d71ea7710736a17a404a997e43e6683894cd7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 77b8a5621b71eec40546d79d73ab1672dfff6a7e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>4-6-angeben von Attributbeziehungen in eine benutzerdefinierte Hierarchie
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Da Sie bereits in diesem Lernprogramm erfahren haben, können Sie Attributhierarchien in Ebenen innerhalb einer benutzerdefinierten Hierarchie um Navigationspfade für Benutzer in einem Cube bereitzustellen organisieren. Eine Benutzerhierarchie kann eine natürliche Hierarchie wie beispielsweise Ort, Land/Region und Staat repräsentieren oder nur einen Navigationspfad wie beispielsweise Angestelltenname, Titel und Abteilungsname. Für den Benutzer, der in einer Hierarchie navigiert, stellen sich diese beiden Hierarchietypen gleich dar.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Wie Sie bereits in diesem Lernprogramm erfahren haben, können Sie Attributhierarchien in Ebenen innerhalb von Benutzerhierarchien organisieren, um Navigationspfade für Benutzer in einem Cube zur Verfügung zu stellen. Eine Benutzerhierarchie kann eine natürliche Hierarchie wie beispielsweise Ort, Land/Region und Staat repräsentieren oder nur einen Navigationspfad wie beispielsweise Angestelltenname, Titel und Abteilungsname. Für den Benutzer, der in einer Hierarchie navigiert, stellen sich diese beiden Hierarchietypen gleich dar.  
   
 Wenn Sie Attributbeziehungen zwischen den Attributen definieren, die die Ebenen bilden, kann von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] mithilfe einer natürlichen Hierarchie eine Aggregation von einem Attribut verwendet werden, um die Ergebnisse von einem verknüpften Attribut zu erhalten. Wenn keine Beziehungen zwischen Attributen definiert sind, werden von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] alle Nicht-Schlüssel-Attribute vom Schlüsselattribut aggregiert. Sofern die zugrunde liegenden Daten dies unterstützen, sollten Sie daher auch Attributbeziehungen zwischen Attributen definieren. Durch Definieren von Attributbeziehungen wird die Dimensions-, Partitions- und Abfrageverarbeitung verbessert. Weitere Informationen finden Sie unter [Definieren von Attributbeziehungen](../analysis-services/multidimensional-models/attribute-relationships-define.md) und [Attributbeziehungen](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
@@ -187,10 +189,10 @@ In den Aufgaben in diesem Thema definieren Sie Attributbeziehungen für die Attr
   
 14. Klicken Sie im Menü **Erstellen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]auf **Analysis Services Tutorial bereitstellen**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
-[Definieren von unbekannten Elementen und Eigenschaften für das Verarbeiten von NULL-Werten](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+[Definieren von the Unknown Member and Null-Verarbeitung von Eigenschaften](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
 [Definieren von Attributbeziehungen](../analysis-services/multidimensional-models/attribute-relationships-define.md)  
 [Eigenschaften der Benutzerhierarchie](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   

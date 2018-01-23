@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 0fcd5cefc02359d407b1799e4cc31ed5afa3c818
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 0cfea0b32221f6aa1ebb8cb947640de3b670c79c
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Führen Sie die 2017 von SQL Server-Container-Image mit Docker
 
@@ -68,6 +68,9 @@ Dieses Image besteht aus SQL Server auf Grundlage 16.04 Ubuntu Linux ausgeführt
    ```
 
    > [!NOTE]
+   > Das Kennwort muss die Kennwortrichtlinie für SQL Server Standard, andernfalls der Container kann ohne SQLServer eingerichtet wurde und funktioniert nicht mehr. Wird standardmäßig das Kennwort muss mindestens 8 Zeichen lang sein und Zeichen aus drei der folgenden vier enthalten: Großbuchstaben, Kleinbuchstaben, Ziffern, Basis 10 und Symbole. Sie können das Fehlerprotokoll überprüfen, durch das Ausführen der [Docker Protokolle](https://docs.docker.com/engine/reference/commandline/logs/) Befehl.
+
+   > [!NOTE]
    > Dies erstellt standardmäßig einen Container mit der Developer-Edition von SQL Server-2017. Der Prozess zum Ausführen von Produktions-Editionen in Containern ist etwas anders. Weitere Informationen finden Sie unter [ausführen Produktion containerimages](sql-server-linux-configure-docker.md#production).
 
    Die folgende Tabelle enthält eine Beschreibung der Parameter in der vorherigen `docker run` Beispiel:
@@ -76,9 +79,9 @@ Dieses Image besteht aus SQL Server auf Grundlage 16.04 Ubuntu Linux ausgeführt
    |-----|-----|
    | **-e "ACCEPT_EULA = Y"** |  Legen Sie die **ACCEPT_EULA** -Variable auf einen beliebigen Wert und bestätigen Sie Ihre Zustimmung zu den [Endbenutzer-Lizenzvertrag](http://go.microsoft.com/fwlink/?LinkId=746388). Erforderlich für das Image von SQL Server festlegen. |
    | **-e "MSSQL_SA_PASSWORD =\<YourStrong! Passw0rd\>"** | Geben Sie Ihren eigenen sicheres Kennwort, das mindestens 8 Zeichen lang und erfüllt die [SQL Server-kennwortanforderungen](../relational-databases/security/password-policy.md). Erforderlich für das Image von SQL Server festlegen. |
-   | **p - 1401:1433** | Zuordnen von TCP-Port für die hostumgebung (erster Wert) mit einem TCP-Port im Container (zweite Wert). In diesem Beispiel wird SQL Server lauscht an TCP 1433 im Container, und dies ist an den Port nach 1401, auf dem Host verfügbar gemacht. |
-   | **– Name sql1** | Geben Sie einen benutzerdefinierten Namen für den Container, anstatt eine zufällig generierte. Wenn Sie mehrere Container ausführen, können nicht Sie diesen Namen wiederverwenden. |
-   | **Microsoft/Mssql-Server-Linux:2017-neueste** | Das SQL Server 2017 Linux-Container-Bild. |
+   | **-p 1401:1433** | Zuordnen von TCP-Port für die hostumgebung (erster Wert) mit einem TCP-Port im Container (zweite Wert). In diesem Beispiel wird SQL Server lauscht an TCP 1433 im Container, und dies ist an den Port nach 1401, auf dem Host verfügbar gemacht. |
+   | **--name sql1** | Geben Sie einen benutzerdefinierten Namen für den Container, anstatt eine zufällig generierte. Wenn Sie mehrere Container ausführen, können nicht Sie diesen Namen wiederverwenden. |
+   | **microsoft/mssql-server-linux:2017-latest** | Das SQL Server 2017 Linux-Container-Bild. |
 
 1. Verwenden Sie zum Anzeigen der Docker-Containers die `docker ps` Befehl.
 

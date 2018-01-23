@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: dec2c20c2450f4db1d0671f365714647c47c7db6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd263b08584b0ba13f6486e72bcf6c9f083ca896
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="recordset-object-ado"></a>Recordset-Objekt (ADO)
 Stellt die gesamte Gruppe von Datensätzen aus einer Basistabelle oder die Ergebnisse eines ausgeführten Befehls dar. Zu jedem Zeitpunkt die **Recordset** Objekt bezieht sich auf nur einen einzelnen Datensatz in der Gruppe als der aktuelle Datensatz.  
@@ -54,7 +54,7 @@ Stellt die gesamte Gruppe von Datensätzen aus einer Basistabelle oder die Ergeb
   
  Sie können die [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), **MoveLast**, **MoveNext**, und **MovePrevious** Methoden; das [verschieben](../../../ado/reference/ado-api/move-method-ado.md) -Methode. und die [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), und [Filter](../../../ado/reference/ado-api/filter-property.md) zu positionieren den aktuellen Datensatz, sofern der Anbieter unterstützt die relevanten Eigenschaften die Funktionalität. Vorwärtscursor **Recordset** Objekte unterstützen nur die [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) Methode. Bei Verwendung der **verschieben** Methoden, um jeden Datensatz besuchen (oder durchlaufen die **Recordset**), können Sie die **BOF** und **EOF** Eigenschaften Bestimmen Sie, ob Sie am Anfang oder Ende überschritten haben die **Recordset**.  
   
- Vor der Verwendung der Funktionen einer **Recordset** -Objekt, rufen Sie die **unterstützt** Methode für das Objekt, um sicherzustellen, dass die Funktionalität unterstützt oder verfügbar ist. Sie müssen nicht die Funktionalität verwenden bei der **unterstützt** Methode "false" zurückgegeben. Beispielsweise können Sie die **MovePrevious** Methode nur, wenn `Recordset.Supports(adMovePrevious)` gibt **"true"**. Andernfalls wird eine Fehlermeldung erhalten, da die **Recordset** -Objekt wurde geschlossen und die Funktionalität für die Instanz nicht verfügbar dargestellt. Wenn eine Funktion, die Sie interessiert sind, nicht unterstützt wird, **unterstützt** wird auch "false" zurückgeben. In diesem Fall sollten Sie die entsprechende Eigenschaft oder Methode aufrufen, auf die **Recrodset** Objekt.  
+ Vor der Verwendung der Funktionen einer **Recordset** -Objekt, rufen Sie die **unterstützt** Methode für das Objekt, um sicherzustellen, dass die Funktionalität unterstützt oder verfügbar ist. Sie müssen nicht die Funktionalität verwenden bei der **unterstützt** Methode "false" zurückgegeben. Beispielsweise können Sie die **MovePrevious** Methode nur, wenn `Recordset.Supports(adMovePrevious)` gibt **"true"**. Andernfalls wird eine Fehlermeldung erhalten, da die **Recordset** -Objekt wurde geschlossen und die Funktionalität für die Instanz nicht verfügbar dargestellt. Wenn eine Funktion, die Sie interessiert sind, nicht unterstützt wird, **unterstützt** wird auch "false" zurückgeben. In diesem Fall sollten Sie die entsprechende Eigenschaft oder Methode aufrufen, auf die **Recordset** Objekt.  
   
  **Recordset** Objekte unterstützen zwei Typen von aktualisieren: sofortige als auch im Batchmodus. In das sofortige Aktualisieren, alle Änderungen an Daten geschrieben werden sofort mit der zugrunde liegenden Datenquelle nach Aufrufen der [Update](../../../ado/reference/ado-api/update-method.md) Methode. Sie können Arrays von Werten auch übergeben, als Parameter mit der [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) und **aktualisieren** Methoden und gleichzeitig mehrere Felder in einem Datensatz aktualisieren.  
   

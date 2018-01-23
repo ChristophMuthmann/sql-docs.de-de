@@ -20,14 +20,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 12b3c89ac68cd633c50ea96ded258a91cc066ae8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 69f16ef4141ca467063a84bf2305ccbe6d8f8996
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Entwicklerhandbuch (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]In Analysis Services fast jedes Objekt und die Arbeitslast programmierbaren und häufig mehr als ein Ansatz zur Auswahl vorhanden ist.  Optionen umfassen das Schreiben von verwaltetem Code, Skript oder einen offenen Standards wie XMLA und MSOLAP verwenden, wenn Ihre Lösung nicht infrage mithilfe von .NET Framework.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+In Analysis Services fast jedes Objekt und die Arbeitslast programmierbaren und häufig mehr als ein Ansatz zur Auswahl vorhanden ist.  Optionen umfassen das Schreiben von verwaltetem Code, Skript oder einen offenen Standards wie XMLA und MSOLAP verwenden, wenn Ihre Lösung nicht infrage mithilfe von .NET Framework.
 
 ## <a name="what-you-can-accomplish-in-code"></a>Was können Sie im Code erreichen.
 Typische Programmierszenarien enthalten Server und die Bereitstellung, Verwaltung, Modell und Datenbankerstellung und Datenzugriff von benutzerdefinierten Anwendungen und Berichte, die Analysis Services-Daten nutzen. In all diesen Szenarien ist eine feste Architektur und Objekt Definition Hierarchie, mit klar verständlichen Vorgängen, die Datendefinition, Verarbeitung und abfragearbeitsauslastungen erstrecken.

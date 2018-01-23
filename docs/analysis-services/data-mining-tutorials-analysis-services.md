@@ -19,15 +19,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 33717f3b72c46ba55e2e774fde62eba0646fa9c9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0e1c600dddc4ab87c0f5290d90fdecda49f95045
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Data Mining-Lernprogramme (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erleichtert das Erstellen von Datamining-Lösungen mithilfe von Assistenten und integrierte Visualisierungen. Insbesondere dann, wenn Sie Computerlernen nicht gewohnt sind, sind die Tools in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] eine einfache Möglichkeit zum Entwerfen, Trainieren und Durchsuchen von Datamining-Modellen. Die Daten in Ihren Modellen können in einem Cube, einer relationalen Datenbank oder einer anderen Quelle, die von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt wird, gespeichert werden. Nach dem Erstellen eines Modells können Sie es produktiv nutzen durch Zugriff auf das Modell zum Erstellen von Vorhersageabfragen mithilfe von mehreren Clients, einschließlich [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] und ASP.NET.  
+
+[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erleichtert das Erstellen von Datamining-Lösungen mithilfe von Assistenten und integrierten Visualisierungen. Insbesondere dann, wenn Sie Computerlernen nicht gewohnt sind, sind die Tools in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] eine einfache Möglichkeit zum Entwerfen, Trainieren und Durchsuchen von Datamining-Modellen. Die Daten in Ihren Modellen können in einem Cube, einer relationalen Datenbank oder einer anderen Quelle, die von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt wird, gespeichert werden. Nach dem Erstellen eines Modells können Sie es produktiv nutzen durch Zugriff auf das Modell zum Erstellen von Vorhersageabfragen mithilfe von mehreren Clients, einschließlich [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] und ASP.NET.  
   
 > [!NOTE]  
 >Die hier beschriebenen Tutorials wurden nicht für [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]aktualisiert. Sie können die Tutorials für SQL Server 2014 verwenden. Funktionell gibt es keine Änderungen in Data Mining-Funktionen für [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Die Schritte sollten identisch sein.  

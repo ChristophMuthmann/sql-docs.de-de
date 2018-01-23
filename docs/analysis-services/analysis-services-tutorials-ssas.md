@@ -18,22 +18,24 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3d535cf6f8bc65ef44393527a46441332fd5aea0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6a2578633c1ccce72d866c40882eaf4c95669d6c
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Analysis Services-Lernprogramme (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dieser Abschnitt enthält Lernprogramme für SQL Server Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Dieser Abschnitt enthält Lernprogramme für SQL Server Analysis Services.  
   
 [Tabellenmodellierung &#40;Adventure Works-Tutorial&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
 Dieses Lernprogramm enthält Lektionen zum Erstellen eines grundlegenden tabellarischen Analysis Services-Modells für das fiktive Unternehmen Adventure Works, mithilfe von SQL Server Data Tools (SSDT).  
   
-[Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Mehrdimensionale Modellierung &#40; Adventure Works-Lernprogramm &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 Dieses Lernprogramm vermittelt die wesentlichen Fähigkeiten und Konzepte hinter multidimensionaler Modellierung in SSDT. Wenn Sie fertig sind, müssen Sie eine Cubedatenbank basierend auf dem Adventure Works-Daten, die Sie aus Excel, Reporting Services oder eine andere Clientanwendung, die Verbindung mit Analysis Services zugreifen können.  
   
-[Data Mining](../analysis-services/data-mining-tutorials-analysis-services.md)  
+[Datamining](../analysis-services/data-mining-tutorials-analysis-services.md)  
 Diese Sammlung von Tutorials beschreibt das Erstellen von Datamining-Lösungen mithilfe von Assistenten und integrierten Visualisierungen.  
   
   

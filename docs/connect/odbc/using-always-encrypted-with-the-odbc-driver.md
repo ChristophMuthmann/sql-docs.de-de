@@ -18,10 +18,10 @@ manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
 ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
-ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Mit "immer verschlüsselt" mit dem ODBC-Treiber für SQLServer
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -350,8 +350,8 @@ Der ODBC-Treiber für SQL Server enthält die folgenden integrierten-Schlüssels
 
 | Name | Description | Name des Anbieters (Metadaten) |Verfügbarkeit|
 |:---|:---|:---|:---|
-|Azure-Schlüsseltresor |Speichern von CMKs in ein Azure-Schlüsseltresor | `AZURE_KEY_VAULT` |Windows, Mac OS, Linux|
-|Windows-Zertifikatspeicher|CMKs lokal speichert, in der Windows-Schlüsselspeicher| `MSSQL_CERTIFICATE_STORE`|Windows|
+|Azure-Schlüsseltresor |Speichern von CMKs in ein Azure-Schlüsseltresor | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
+|Windows Certificate Store|CMKs lokal speichert, in der Windows-Schlüsselspeicher| `MSSQL_CERTIFICATE_STORE`|Windows|
 
 - Sie (oder Ihrem DBA) müssen sicherstellen, dass die in den Metadaten des spaltenhauptschlüssels, konfigurierte Anbietername richtig ist und der Pfad des Hauptschlüssels Spalte Schlüsselpfad Format für den gegebenen Provider einhält. Es wird empfohlen, dass Sie die Schlüssel mithilfe von Tools wie SQL Server Management Studio konfigurieren, die die gültigen Anbieternamen und Schlüsselpfade automatisch generieren, wenn die Anweisung [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) ausgegeben wird.
 
@@ -378,13 +378,13 @@ Damit um den Treiber CMKs in AKV speichern gespeichert werden, für die spaltenv
 
 Die folgenden Verbindungszeichenfolgen zeigen, wie Azure Key Vault mit den beiden Anmeldeinformationstypen zu authentifizieren:
 
-**ClientID/-Geheimnis**:
+**ClientID/Secret**:
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**Benutzername/Kennwort**
+**Username/Password**
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
