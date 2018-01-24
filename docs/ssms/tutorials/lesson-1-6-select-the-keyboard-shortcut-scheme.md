@@ -14,15 +14,15 @@ ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 1dfc6b5c-0a93-450f-b5b3-34ae0ca79717
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 914f73712e5a8f3120017cf414d968dd323bb98b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3b3a5045ed02175591b1e0d6272a88b3cfd3d152
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-6---select-the-keyboard-shortcut-scheme"></a>Lektion 1-6: Auswählen des Schemas für Tastenkombinationen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Anstelle des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Standardtastaturschemas können Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zur Verwendung eines Tastaturschemas konfigurieren, das mit [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] kompatibel ist.  

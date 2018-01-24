@@ -16,15 +16,15 @@ helpviewer_keywords:
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0280a49bf91f078355dedab297ffd75102f5faa
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7374751ae2fd74f93ed0744853eb472689538347
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Heraufstufen häufig verwendeter XML-Werte mit berechneten Spalten
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Wenn Abfragen in erster Linie nur für eine geringe Anzahl von Element- und Attributwerten ausgeführt werden, kann es sinnvoll sein, diese Mengen in relationale Spalten heraufzustufen. Dies ist nützlich, wenn Abfragen für einen kleinen Teil der XML-Daten ausgegeben werden, während die gesamte XML-Instanz abgerufen wird. Das Erstellen eines XML-Indexes für die XML-Spalte ist nicht erforderlich. Stattdessen kann die heraufgestufte Spalte indiziert werden. Um die heraufgestufte Spalte zu verwenden, müssen Abfragen geschrieben werden. Das heißt, der Abfrageoptimierer richtet die Abfragen für die XML-Spalte nicht erneut an die heraufgestufte Spalte aus.  
@@ -259,7 +259,7 @@ as
   
  Der delete-Trigger ist identisch mit der Nicht-CLR-Version. Dagegen ist beim update-Trigger lediglich die Funktion udf_XML2Table() durch CLR_udf_XML2Table() ersetzt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden von XML in berechneten Spalten](../../relational-databases/xml/use-xml-in-computed-columns.md)  
   
   

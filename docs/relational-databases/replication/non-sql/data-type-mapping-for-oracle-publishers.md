@@ -17,53 +17,53 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8c754c1796f76236b5efeda3f53bb785c8daf76f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4078e78f9f1e8879d709ef154a11e44055e2dcd5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="data-type-mapping-for-oracle-publishers"></a>Datentypzuordnung für Oracle-Verleger
+# <a name="data-type-mapping-for-oracle-publishers"></a>Data Type Mapping for Oracle Publishers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Oracle-Datentypen und [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen stimmen nicht immer exakt überein. Wenn möglich, wird beim Veröffentlichen einer Oracle-Tabelle der übereinstimmende Datentyp automatisch ausgewählt. In Fällen, in denen eine einzelne Datentypzuordnung unklar ist, werden alternative Datentypzuordnungen bereitgestellt. Informationen dazu, wie alternative Zuordnungen ausgewählt werden, finden Sie im Abschnitt "Angeben alternativer Datentypzuordnungen" weiter unten in diesem Thema.  
   
  Die folgende Tabelle zeigt die standardmäßige Zuordnung von Datentypen zwischen Oracle und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die für den Datenfluss von einem Oracle-Verleger zu einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler gültig ist. Die Spalte Alternativen gibt an, ob alternative Zuordnungen verfügbar sind.  
   
 |Oracle-Datentyp|SQL Server-Datentyp|Alternativen|  
 |----------------------|--------------------------|------------------|  
-|BFILE|VARBINARY(MAX)|Ja|  
-|BLOB|VARBINARY(MAX)|Ja|  
-|CHAR([1-2000])|CHAR([1-2000])|Ja|  
-|CLOB|VARCHAR(MAX)|Ja|  
-|DATE|DATETIME|Ja|  
-|GLEITKOMMAZAHL|GLEITKOMMAZAHL|Nein|  
-|FLOAT([1-53])|FLOAT([1-53])|Nein|  
-|FLOAT([54-126])|GLEITKOMMAZAHL|Nein|  
-|INT|NUMERIC(38)|Ja|  
-|INTERVAL|DATETIME|Ja|  
-|LONG|VARCHAR(MAX)|Ja|  
-|LONG RAW|IMAGE|Ja|  
-|NCHAR([1-1000])|NCHAR([1-1000])|Nein|  
-|NCLOB|NVARCHAR(MAX)|Ja|  
-|NUMBER|GLEITKOMMAZAHL|Ja|  
-|NUMBER([1-38])|NUMERIC([1-38])|Nein|  
-|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Ja|  
-|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|Nein|  
-|RAW([1-2000])|VARBINARY([1-2000])|Nein|  
-|REAL|GLEITKOMMAZAHL|Nein|  
-|ROWID|CHAR(18)|Nein|  
-|TIMESTAMP|DATETIME|Ja|  
-|TIMESTAMP(0-7)|DATETIME|Ja|  
-|TIMESTAMP(8-9)|DATETIME|Ja|  
-|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|Ja|  
-|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|Nein|  
-|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|Ja|  
-|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|Nein|  
-|UROWID|CHAR(18)|Nein|  
-|VARCHAR2([1-4000])|VARCHAR([1-4000])|Ja|  
+|BFILE|VARBINARY(MAX)|ja|  
+|BLOB|VARBINARY(MAX)|ja|  
+|CHAR([1-2000])|CHAR([1-2000])|ja|  
+|CLOB|VARCHAR(MAX)|ja|  
+|DATE|DATETIME|ja|  
+|GLEITKOMMAZAHL|GLEITKOMMAZAHL|nein|  
+|FLOAT([1-53])|FLOAT([1-53])|nein|  
+|FLOAT([54-126])|GLEITKOMMAZAHL|nein|  
+|INT|NUMERIC(38)|ja|  
+|INTERVAL|DATETIME|ja|  
+|LONG|VARCHAR(MAX)|ja|  
+|LONG RAW|IMAGE|ja|  
+|NCHAR([1-1000])|NCHAR([1-1000])|nein|  
+|NCLOB|NVARCHAR(MAX)|ja|  
+|NUMBER|GLEITKOMMAZAHL|ja|  
+|NUMBER([1-38])|NUMERIC([1-38])|nein|  
+|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|ja|  
+|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|nein|  
+|RAW([1-2000])|VARBINARY([1-2000])|nein|  
+|real|GLEITKOMMAZAHL|nein|  
+|ROWID|CHAR(18)|nein|  
+|TIMESTAMP|DATETIME|ja|  
+|TIMESTAMP(0-7)|DATETIME|ja|  
+|TIMESTAMP(8-9)|DATETIME|ja|  
+|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|ja|  
+|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|nein|  
+|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|ja|  
+|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|nein|  
+|UROWID|CHAR(18)|nein|  
+|VARCHAR2([1-4000])|VARCHAR([1-4000])|ja|  
   
 ## <a name="considerations-for-data-type-mapping"></a>Überlegungen zur Datentypzuordnung  
  Beachten Sie beim Replizieren von Daten aus Oracle-Datenbanken in Bezug auf Datentypen Folgendes:  
@@ -110,9 +110,9 @@ ms.lasthandoff: 11/17/2017
   
  Informationen zum Angeben alternativer Datentypzuordnungen finden Sie unter [Specify Data Type Mappings for an Oracle Publisher](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Konfigurieren eines Oracle-Verlegers](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Überlegungen zum Entwurf und Einschränkungen für Oracle-Verleger](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Veröffentlichungen mit Oracle (Übersicht)](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

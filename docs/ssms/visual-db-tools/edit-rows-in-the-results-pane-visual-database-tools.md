@@ -21,13 +21,13 @@ ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4f7051a7f0d4610a2ddd6a612db9525380d40d5a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6ad965ba099a52dfb025c8d85d6fce3cf3bf9979
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>Bearbeiten von Zeilen im Ergebnisbereich (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In vielen Fällen können Sie die Daten im [Ergebnisbereich](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) bearbeiten. Ausführlichere Informationen zum Ändern von Daten finden Sie unter [Regeln zum Aktualisieren von Ergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md) und [Verwenden von Daten im Ergebnisbereich &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)bearbeiten.  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - canonical forms
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a20cb4d1a23ed32f7bddf1aa79d5428f46b9926e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8f6682717a70bc98358a3cb010f38b773c0b44ca
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>Kanonische Formen und Musterbeschränkungen
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Das XSD-Musterfacet ermöglicht das Beschränken des lexikalischen Speicherplatzes für simple-Datentypen. Wenn einem Datentyp eine Musterbeschränkung auferlegt wird, für den mehrere mögliche lexikalische Darstellungen vorhanden sind, können einige Werte bei der Überprüfung unerwartetes Verhalten bewirken.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
  Die unpräzise Serialisierung von Gleitkommawerten weist ein ähnliches Problem auf. Aufgrund des von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendeten Gleitkommaserialisierungsalgorithmus ist es möglich, dass ähnliche Werte die gleiche kanonische Form gemeinsam verwenden. Wenn ein Gleitkommawert serialisiert und dann erneut eingefügt wird, kann sich sein Wert geringfügig ändern. In seltenen Fällen kann dieser Vorgang zu einem Wert führen, der einen der folgendes Facets für seinen Datentyp beim erneuten Einfügen verletzt: **enumeration**, **minInclusive**, **minExclusive**, **maxInclusive**oder **maxExclusive**. Damit dies verhindert wird, weist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Werte von Datentypen zurück, die von `xs:float` oder `xs:double` abgeleitet sind und nicht serialisiert und erneut eingefügt werden können.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Anforderungen und Einschränkungen für XML-Schemaauflistungen auf dem Server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

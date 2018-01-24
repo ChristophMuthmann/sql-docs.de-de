@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
 caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbb1759fcdf89686498698c4bd77ce529da4ed1d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f7d494c40e02e96d53f827e9553c743d72660d0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>Dialogfeld 'Erweiterte Bearbeitung (Bedingung)'
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Verwenden Sie das Dialogfeld **Erweiterte Bearbeitung**, um komplexe Ausdrücke für Bedingungen der richtlinienbasierten Verwaltung zu erstellen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Zellenwert**  
  Zeigt die Funktion oder den Ausdruck an, die bzw. der als Zellenwert verwendet wird, wenn Sie ihn erstellen. Wenn Sie auf **OK**klicken, wird der Zellenwert in der Zelle **Feld** oder **Wert** im Bedingungsausdrucksfeld des Dialogfelds **Neue Bedingung erstellen** oder **Bedingung öffnen** auf der Seite **Allgemein** angezeigt.  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
 > **WICHTIG!** Für die Funktionen, mit denen Sie richtlinienbasierte Verwaltungsbedingungen erstellen können, wird nicht immer die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax verwendet. Stellen Sie sicher, dass Sie die Beispielsyntax befolgen. Wenn Sie beispielsweise die Funktionen **DateAdd** oder **DatePart** verwenden, müssen Sie das *datepart* -Argument in einfache Anführungszeichen einschließen.  
   
-|Funktion|Signatur|Beschreibung|Argumente|Rückgabewert|Beispiel|  
+|Funktion|Signatur|Description|Argumente|Rückgabewert|Beispiel|  
 |--------------|---------------|-----------------|---------------|------------------|-------------|  
 |**Add()**|Numeric Add (Numeric *Ausdruck1*, Numeric *Ausdruck2*)|Addition zweier Zahlen.|*Ausdruck1* und *Ausdruck2* : Jeder gültige Ausdruck eines beliebigen Datentyps der numerischen Kategorie, mit Ausnahme des Datentyps **bit** . Kann eine Konstante, Eigenschaft oder Funktion sein, die einen numerischen Typ zurückgibt.|Gibt den Datentyp des Arguments zurück, das in der Rangfolge höher eingestuft ist.|`Add(Property1, 5)`|  
 |**Array()**|Array Array (VarArgs *Ausdruck*)|Erstellt ein Array aus einer Liste von Werten. Kann mit Aggregatfunktionen, wie z. B. Sum() und Count(), verwendet werden.|*Ausdruck* : Ein Ausdruck, der in ein Array konvertiert wird.|Das Array.|`Array(2,3,4,5,6)`|  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
 |**ExecuteSQL()**|Variant ExecuteSQL (String *Rückgabetyp*, String *sqlAbfrage*)|Führt die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage auf dem Zielserver aus.<br /><br /> Weitere Informationen zu ExecuteSql() finden Sie unter [ExecuteSql()-Funktion](http://blogs.msdn.com/b/sqlpbm/archive/2008/07/03/executesql.aspx).|*Rückgabetyp* : Gibt den Rückgabetyp der durch die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung zurückgegebenen Daten an. Die gültigen Literale für *Rückgabetyp* sind **Numeric**, **String**, **Bool**, **DateTime**, **Array**und **Guid**.<br /><br /> *sqlAbfrage* : Die Zeichenfolge, die die auszuführende Abfrage enthält.||`ExecuteSQL ('Numeric', 'SELECT COUNT(*) FROM msdb.dbo.sysjobs') <> 0`<br /><br /> Führt eine Transact-SQL-Skalarwertabfrage für eine Zielinstanz von SQL Server aus. In einer `SELECT` -Anweisung kann nur eine Spalte angegeben werden. Zusätzliche Spalten nach der ersten Spalte werden ignoriert. Die resultierende Abfrage sollte nur eine Zeile zurückgeben. Zusätzliche Zeilen nach der ersten Zeile werden ignoriert. Wenn die Abfrage eine leere Menge zurückgibt, wird der für `ExecuteSQL` erstellte Bedingungsausdruck zu false ausgewertet. `ExecuteSql` unterstützt die Auswertungsmodi **Bedarfsgesteuert** und **Nach Zeitplan** .<br /><br /> -`@@ObjectName`:<br />                      Entspricht dem Namensfeld in [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Die Variable wird durch den Namen des aktuellen Objekts ersetzt.<br /><br /> -`@@SchemaName`Entspricht dem Namensfeld in [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md). Die Variable wird durch den Namen des Schemas für das aktuelle Objekt ersetzt, sofern zutreffend.<br /><br /> Hinweis: Kennzeichnen Sie das einfache Anführungszeichen mit einem weiteren einfachen Anführungszeichen, um ein einfaches Anführungszeichen in eine ExecuteSQL-Anweisung aufzunehmen. Um beispielsweise einen Verweis auf einen Benutzer mit dem Namen O'Brian einzuschließen, geben Sie O"Brian ein.|  
 |**ExecuteWQL()**|Variant ExecuteWQL (string *Rückgabetyp* , string *Namespace*, string *wql*)|Führt das WQL-Skript für den bereitgestellten Namespace aus. Die Select-Anweisung kann nur eine Rückgabespalte enthalten. Wenn mehr als eine Spalte bereitgestellt wird, wird ein Fehler ausgelöst.|*Rückgabetyp* Gibt den Rückgabetyp der durch die WQL-Abfrage zurückgegebenen Daten an. Die gültigen Literale sind **Numeric**, **String**, **Bool**, **DateTime**, **Array**und **Guid**.<br /><br /> *Namespace* : Der WMI-Namespace, in dem die Abfrage ausgeführt wird.<br /><br /> *wql* : Die Zeichenfolge, die die auszuführende WQL-Abfrage enthält.||`ExecuteWQL('Numeric', 'root\CIMV2', 'select NumberOfProcessors from win32_ComputerSystem') <> 0`|  
 |**False()**|Bool False()|Gibt den booleschen Wert FALSE zurück.|Keine|Gibt den booleschen Wert FALSE zurück.|`IsDatabaseMailEnabled = False()`|  
-|**GetDate()**|DateTime GetDate()|Gibt das Systemdatum zurück.|Keine|Gibt das Systemdatum als datetime-Wert zurück.|`@DateLastModified = GetDate()`|  
+|**GetDate()**|DateTime GetDate()|Gibt das Systemdatum zurück.|InclusionThresholdSetting|Gibt das Systemdatum als datetime-Wert zurück.|`@DateLastModified = GetDate()`|  
 |**Guid()**|Guid Guid(String *guidZeichenfolge*)|Gibt eine GUID aus einer Zeichenfolge zurück.|*guidZeichenfolge* : Die Zeichenfolgendarstellung der zu erstellenden GUID.|Gibt die GUID zurück, die aus der Zeichenfolge erstellt wurde.|`Guid('12340000-0000-3455-0000-000000000454')`|  
 |**IsNull()**|Variant IsNull (Variant *Prüfausdruck*, Variant *Ersatzwert*)|Der Wert von *Prüfausdruck* wird zurückgegeben, wenn der Wert nicht NULL ist. Andernfalls wird *Ersatzwert* zurückgegeben. Sind die Typen unterschiedlich, wird *Ersatzwert* implizit in den Typ von *Prüfausdruck*konvertiert.|*Prüfausdruck* : Der Ausdruck, der auf NULL überprüft werden soll. *Prüfausdruck* kann ein beliebiger von der richtlinienbasierten Verwaltung unterstützter Typ sein: Numeric, String, Bool, DateTime, Array und Guid.<br /><br /> *Ersatzwert* : Der Ausdruck, der zurückgegeben werden soll, wenn *Prüfausdruck* NULL ist. *Ersatzwert* muss einen Typ aufweisen, der implizit in den Typ von *Prüfausdruck*konvertiert wird.|Der Rückgabetyp entspricht dem Typ von *Prüfausdruck* , wenn *Prüfausdruck* nicht NULL ist, andernfalls wird der Typ von *Ersatzwert* zurückgegeben.||  
 |**Len()**|Numeric Len (*Zeichenfolgenausdruck*)|Gibt die Anzahl von Zeichen des angegebenen Zeichenfolgenausdrucks zurück, jedoch ohne nachfolgende Leerzeichen.|*Zeichenfolgenausdruck* : Der auszuwertende Zeichenfolgenausdruck.|Gibt den Wert der Datentypkategorie „Integer“ zurück.|`Len('Hello')` gibt in diesem Beispiel `5` zurück.|  

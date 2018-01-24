@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e27fceed483f3f66d1f167c5971a536bc4aa6a77
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d649216f87a35c21430cd2d9b16bd4a4085b485
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Angeben der Präfixlänge in Datendateien mittels bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Als kompakteste Form der Dateispeicherung beim Massenexportieren von Daten im nativen Format in eine Datendatei setzt der Befehl **bcp** mindestens ein Zeichen, das auf die Länge des Felds hinweist, vor jedes Feld. Diese Zeichen werden als *Längenpräfixzeichen*bezeichnet.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
  Wenn Sie 0 angeben, werden Sie von **bcp** zur Eingabe der Länge des Felds (für einen Zeichendatentyp) oder eines Feldabschlusszeichens (für einen nativen Nicht-Zeichentyp) aufgefordert.  
   
 > [!NOTE]  
->  Nachdem Sie interaktiv alle Felder in einem Befehl **bcp** angegeben haben, werden Sie vom Befehl dazu aufgefordert, Ihre Antworten für die einzelnen Felder in einer Nicht-XML-Formatdatei zu speichern. Weitere Informationen zu Nicht-XML-Formatdateien finden Sie unter [Nicht-XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
+>  Nachdem Sie interaktiv alle Felder in einem **bcp**-Befehl angegeben haben, werden Sie vom Befehl dazu aufgefordert, Ihre Antworten für die einzelnen Felder in einer Nicht-XML-Formatdatei zu speichern. Weitere Informationen zu Nicht-XML-Formatdateien finden Sie unter [Nicht-XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
 ## <a name="overview-of-prefix-length"></a>Übersicht über die Präfixlänge  
  Zum Speichern der Präfixlänge eines Felds muss eine ausreichende Anzahl von Bytes vorhanden sein, um die maximale Länge des Felds darzustellen. Die erforderliche Anzahl von Byte hängt auch ab vom Dateispeichertyp, der NULL-Zulässigkeit einer Spalte und davon, ob die Daten in der Datendatei im systemeigenen Format oder im Zeichenformat gespeichert werden. Beispielsweise erfordert der Datentyp **text** oder **image** vier Präfixzeichen, um die Feldlänge zu speichern, während der Datentyp **varchar** zwei Zeichen erfordert. In der Datendatei werden diese Längenpräfixzeichen im internen binären Datenformat von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeichert.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
  Verwenden Sie die in der folgenden Tabelle gezeigten Präfixlängen, wenn Sie einen Massenexport von Daten vornehmen und diese in systemeigenen Datentypen oder im Zeichenformat speichern.  
   
-|SQL Server<br /><br /> Datentyp|Systemeigenes Format<br /><br /> NOT NULL|Systemeigenes Format<br /><br /> NULL|Zeichenformat<br /><br /> NOT NULL|Zeichenformat<br /><br /> NULL|  
+|SQL Server<br /><br /> Datentyp|Systemeigenes Format<br /><br /> NOT NULL|Systemeigenes Format<br /><br /> NULL|Zeichenformat<br /><br /> NOT NULL|Zeichenformat<br /><br /> NULL|  
 |------------------------------|--------------------------------|----------------------------|-----------------------------------|-------------------------------|  
 |**char**|2|2|2|2|  
 |**varchar**|2|2|2|2|  
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Verwenden Sie die weiter oben in diesem Thema unter **Präfixlängen für den Massenexport**bereitgestellten Präfixlängen, um die Präfixlänge in einer Datendatei anzugeben, die nicht mithilfe von [bcp](#PrefixLengthsExport)erstellt wurde.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Angeben der Feldlänge mithilfe von bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   

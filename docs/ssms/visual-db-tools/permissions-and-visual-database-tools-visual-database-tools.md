@@ -16,13 +16,13 @@ ms.assetid: c09a6bb7-efc3-4471-819e-c60f11de96f0
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b4c7a9678f0ecf1acf5169e50012ec865ba92ef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c13005a453ba4f360c9ca2a7de106c4f3b3a4498
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>Berechtigungen und Visual Database Tools (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Berechtigungen, die Benutzern den Zugriff auf Datenquellenobjekte ermöglichen, werden nicht in Visual Database Tools, sondern in der Datenquelle zugewiesen. Die Zugriffsberechtigungen für Datenquellenobjekte werden durch die Sicherheitsrichtlinie der Installation gesteuert. Wenn Sie nicht über die Berechtigung verfügen, auf bestimmte Datenbankobjekte zuzugreifen, müssen Sie sich an den Datenbankadministrator wenden.  

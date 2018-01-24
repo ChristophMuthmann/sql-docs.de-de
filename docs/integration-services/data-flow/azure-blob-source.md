@@ -18,13 +18,13 @@ ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
 caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a274b61e96ab0af99cf91d8d99ba0197a705f252
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 96203230b881dbdea9389daa6a2e726cd59d86af
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="azure-blob-source"></a>Azure-Blob-Quelle
   Die **Azure-Blobquelle** ermöglicht es einem SSIS-Paket, Daten aus einem Azure-Blob zu lesen. Die unterstützten Dateiformate sind CSV und AVRO.

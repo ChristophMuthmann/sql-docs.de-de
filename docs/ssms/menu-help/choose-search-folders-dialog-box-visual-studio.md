@@ -16,13 +16,13 @@ ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 974a77627d00103a5ac4f89ab9773dfcea0a0ef6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7b0bddd8bb76fa236f84cc4229b6da5ff979b2aa
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Suchordner auswählen (Dialogfeld in Visual Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Ermöglicht es Ihnen, eigene benannte Sätze mit Suchordnern zusammenzustellen, zu speichern und zu überarbeiten sowie den Ordner anzugeben, in dem sie durchsucht werden. Zum Anzeigen dieses Dialogfelds klicken Sie im Fenster In Dateien suchen, In Dateien ersetzen oder Suchen und Ersetzen neben der Dropdownliste **Suchen in** auf die Schaltfläche **Durchsuchen (...)** .  

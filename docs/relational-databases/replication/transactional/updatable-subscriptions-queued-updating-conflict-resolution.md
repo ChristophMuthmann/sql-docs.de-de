@@ -19,15 +19,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], conflict resolution
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b48c692d0f4992c46bcf27ffa80e2d1bf0740c39
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0720762973d0144393761b11b3997c4626de2088
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Aktualisierbare Abonnements – Konfliktlösungsoptionen für das verzögerte Update über eine Warteschlange
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Da die verzögerte Aktualisierung von Abonnements über eine Warteschlange Änderungen an denselben Daten an mehreren Standorten zulässt, können Konflikte auftreten, wenn die Daten auf dem Verleger synchronisiert werden. Die Replikation erkennt alle Konflikte, wenn Änderungen mit dem Verleger synchronisiert werden, und löst die Konflikte anhand der Richtlinie zur Konfliktlösung, die Sie beim Erstellen der Veröffentlichung ausgewählt haben. Die folgenden Konflikte sind möglich:  
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="subscriber-wins"></a>Abonnent gewinnt  
  Die Konflikterkennung unter der Richtlinie Abonnent gewinnt bedeutet, dass die letzte Abonnententransaktion gewinnt, die den Verleger aktualisiert. Wird ein Konflikt erkannt, wird in diesem Fall die vom Abonnenten gesendete Transaktion weiterhin verwendet, und der Verleger wird aktualisiert. Diese Vorgehensweise eignet sich für Anwendungen, in denen die Datenintegrität durch diese Änderungen nicht gefährdet wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

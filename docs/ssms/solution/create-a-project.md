@@ -19,13 +19,13 @@ ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13ef5a52fff423b9c4a4035b2751017a30e86da9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 767341628dec4f192235954aaa4eeb6ece681615
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-project"></a>Erstellen eines Projekts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können innerhalb einer vorhandenen Projektmappe ein oder mehrere Projekte erstellen.  

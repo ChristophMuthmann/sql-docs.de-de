@@ -22,15 +22,15 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47790c69d2f3fbfaf2af2d86b5bc6c6d3baf79fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c52b8aa34c3f384e9ab1f638e6f6e9dac3bdf04
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Erweiterte Konflikterkennung und -lösung bei der Mergereplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Wenn zwischen einem Verleger und einem Abonnenten eine Verbindung besteht und die Synchronisierung vorgenommen wird, werden jegliche Konflikte vom Merge-Agent erkannt. Wenn Konflikte erkannt werden, verwendet der Merge-Agent einen Konfliktlöser (der angegeben wird, wenn ein Artikel einer Veröffentlichung hinzugefügt wird), um festzustellen, welche Daten akzeptiert und an andere Sites weitergegeben werden.  
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Angeben eines Mergeabonnementtyps und einer Konfliktlösungspriorität &#40;Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Replikations- [!INCLUDE[tsql](../../../includes/tsql-md.md)] - und Replication Management Objects-Programmierung (RMO): [Erstellen eines Pullabonnements](../../../relational-databases/replication/create-a-pull-subscription.md) und [Erstellen eines Pushabonnements](../../../relational-databases/replication/create-a-push-subscription.md)  
+-   Replikations- [!INCLUDE[tsql](../../../includes/tsql-md.md)] - und Replication Management Objects-Programmierung (RMO): [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md) und [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>Interaktiver Konfliktlöser  
  Die Replikation stellt eine Benutzeroberfläche für den interaktiven Konfliktlöser bereit, die in Verbindung mit dem prioritätsbasierten Standardkonfliktlöser oder mit einem Artikelkonfliktlöser verwendet werden kann. Bei der Ausführung einer bedarfsgesteuerten Synchronisierung mit der Synchronisierungsverwaltung von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows zeigt der interaktive Konfliktlöser Konfliktdaten in Laufzeit an und bietet Ihnen die Möglichkeit, die Art der Konfliktlösung auszuwählen. Weitere Informationen zum Aktivieren der interaktiven Konfliktlösung und zum Starten des interaktiven Konfliktlösers finden Sie unter [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
@@ -111,7 +111,7 @@ ms.lasthandoff: 11/17/2017
  Die einfachste Möglichkeit zum Anzeigen von Konflikten ist die Verwendung des Replikationskonflikt-Viewers, der in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] verfügbar ist ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bietet ebenfalls gespeicherte Prozeduren, mit denen die Konflikttabellen abgefragt werden können). Der Konflikt-Viewer und die interaktive Konfliktlöser sind ähnliche Tools, im interaktiven Konfliktlöser können Sie jedoch bei der Synchronisierung Konflikte lösen, während der Konflikt-Viewer für die Anzeige von Konflikten nach der Konfliktlösung bestimmt ist. Wenn die Konfliktmetadaten weiterhin in den Systemtabellen verfügbar sind (Konfliktmetadaten werden standardmäßig 14 Tage lang beibehalten), können Sie die Ergebnisse der Konfliktlösung überschreiben. Wenn jedoch regelmäßig ein direktes Eingreifen erforderlich ist, sollten Sie die Verwendung des interaktiven Konfliktlösers in Betracht ziehen.  
   
 > [!NOTE]  
->  Konflikte, die logische Datensätze einschließen, werden im Konflikt-Viewer nicht angezeigt. Mit den gespeicherten Replikationsprozeduren können Informationen zu diesen Konflikten angezeigt werden. Weitere Informationen finden Sie unter [Anzeigen von Konfliktinformationen zu Mergeveröffentlichungen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+>  Konflikte, die logische Datensätze einschließen, werden im Konflikt-Viewer nicht angezeigt. Mit den gespeicherten Replikationsprozeduren können Informationen zu diesen Konflikten angezeigt werden. Weitere Informationen finden Sie unter [Anzeigen von Konfliktinformationen zu Mergeveröffentlichungen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
   
  Im Konflikt-Viewer werden Informationen aus drei Systemtabellen angezeigt:  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Replikation [!INCLUDE[tsql](../../../includes/tsql-md.md)] Programmierung: [Anzeigen von Konfliktinformationen zu Mergeveröffentlichungen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Synchronisieren von Daten](../../../relational-databases/replication/synchronize-data.md)  
   
   

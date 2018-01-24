@@ -20,12 +20,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 caps.latest.revision: "148"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: cd0b3b84613720d825102f2676c2c07fb49a7cfc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 81810a418fd7f36dcadabdac5c535fa8bdaadcd3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>Unterstützte Versions- und Editionsupgrades in SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Sie können ein Upgrade von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] ausführen. In diesem Thema werden die unterstützten Upgradepfade von diesen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen sowie die unterstützten Editionsupgrades für [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]aufgeführt.  
@@ -149,7 +149,7 @@ Szenarien, die in der Liste nicht aufgeführt sind, werden nicht unterstützt. D
 - Unterstützung von benutzerdefinierten Integration Services-Drittanbieterkomponenten für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sowie Ausführen und Upgrade der Komponenten.  
   
 ## <a name="includesssqlv14-mdincludessssqlv14-mdmd-edition-upgrade"></a>[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Editionsupgrade  
-In der folgenden Tabelle sind die unterstützten Szenarien für das Editionsupgrade in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] aufgeführt.  
+In der folgenden Tabelle sind die unterstützten Szenarien für das Editionsupgrade in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]aufgeführt.  
   
 Ausführliche Anweisungen zum Ausführen eines Editionsupgrades finden Sie unter [Aktualisieren auf eine andere Edition von SQL Server (Setup)](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md).  
   
@@ -181,7 +181,7 @@ Ausführliche Anweisungen zum Ausführen eines Editionsupgrades finden Sie unter
   
 -   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Evaluation in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 
  [Editionen und unterstützten Funktionen von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
  

@@ -18,13 +18,13 @@ ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 074a97f74e322b75030d5a921ba4e2b453a59a49
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a80220d2c963dcf5879422ae9e754963a1bb287d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Protokollversand und Replikation (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Beim Protokollversand werden zwei Kopien einer einzigen Datenbank verwendet, die normalerweise auf verschiedenen Computern gespeichert sind. Für die Clients ist immer nur eine Kopie der Datenbank verfügbar. Diese Kopie wird als primäre Datenbank bezeichnet. Updates, die von Clients an der primären Datenbank vorgenommen werden, werden durch den Protokollversand auf die andere Kopie der Datenbank übertragen, die als sekundäre Datenbank bezeichnet wird. Beim Protokollversand wird das Transaktionsprotokoll von jedem Einfüge-, Update- oder Löschvorgang, der an der primären Datenbank vorgenommen wird, auf die sekundäre Datenbank angewandt.  
@@ -99,7 +99,7 @@ ms.lasthandoff: 11/20/2017
   
  **So konfigurieren Sie die Mergereplikation und den Protokollversand**  
   
-1.  Konfigurieren Sie den Protokollversand für die Veröffentlichungsdatenbank. Weitere Informationen finden Sie unter [Konfigurieren des Protokollversands &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
+1.  Konfigurieren Sie den Protokollversand für die Veröffentlichungsdatenbank. Weitere Informationen finden Sie unter [Konfigurieren des Protokollversands &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)eingeführt.  
   
 2.  Bei einem Ausfall des Verlegers benennen Sie den Computer auf dem Sekundärserver um, und weisen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz dann einen Namen zu, der dem Namen des primären Servers entspricht. Informationen zum Umbenennen des Computers finden Sie in der Windows-Dokumentation. Informationen zum Umbenennen des Servers finden Sie unter [Umbenennen eines Computers, der eine eigenständige Instanz von SQL Server hostet](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) und [Umbenennen einer SQL Server-Failoverclusterinstanz](../../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md).  
   
@@ -119,7 +119,7 @@ ms.lasthandoff: 11/20/2017
   
      Wenn Sie die Veröffentlichungsdatenbank mit einem Abonnenten synchronisieren, auf dem eine frühere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ausgeführt wird, kann das Abonnement nicht anonym sein – es muss sich um ein Clientabonnement oder ein Serverabonnement handeln (in früheren Versionen als lokales Abonnement bzw. globales Abonnement bezeichnet). Weitere Informationen finden Sie unter [Synchronisieren von Daten](../../relational-databases/replication/synchronize-data.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Replikationsfunktionen und -tasks](../../relational-databases/replication/replication-features-and-tasks.md)   
  [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Datenbankspiegelung und Replikation &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  

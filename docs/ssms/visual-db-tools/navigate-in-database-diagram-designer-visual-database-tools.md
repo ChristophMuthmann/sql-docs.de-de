@@ -19,13 +19,13 @@ ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd6aa99f77bd9a2a43e9c910007466beba9bc9f3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6274d6f8e01833e850c5fedca92dcd18a769f784
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>Navigieren im Datenbankdiagramm-Designer (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können im Datenbankdiagramm-Designer mit der Tastatur und der Maus arbeiten. In den folgenden Tabellen können Sie bestimmte Methoden nachschlagen, die im Datenbankdiagramm-Designer verwendet werden.  

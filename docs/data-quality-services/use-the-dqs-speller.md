@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9389568b31c445d66713b68efea8c312f5df9dec
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e336447f1719999505d03fff77d0343ff5adf5ef
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-the-dqs-speller"></a>Verwenden der DQS-Rechtschreibprüfung
   Die [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Rechtschreibprüfung überprüft die Syntax, Rechtschreibung und Satzstruktur von Zeichenfolgenwerten in einer Domäne. Die Rechtschreibprüfung ist eine eigenständige, clientseitige Funktion, die nicht in serverseitige Module integriert ist und keine Auswirkungen auf aktuelle Abläufe oder Status hat. Mit der Rechtschreibprüfung werden die Zeichenfolgenwerte identifiziert, bei denen es sich möglicherweise um Fehler handelt. Diese werden an der gleichen Stelle, an der andere manuelle Änderungen an Domänenwerten vorgenommen werden, mit einem roten Unterstrich markiert. Dazu gehören die folgenden Stellen:  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/20/2017
   
  Die Rechtschreibprüfung funktioniert nur in einzelnen Domänen mit dem Datentyp Zeichenfolge. Alle Werte in einer einzelnen Domäne des Datentyps Zeichenfolge werden zur Überprüfung an die Rechtschreibprüfung gesendet. Die Rechtschreibprüfung funktioniert weder für eine Verbunddomäne noch für Domänen, die nicht vom Typ Zeichenfolge sind, oder kombinierte Werte (z. B. Buchstaben und Zahlen ohne Leerzeichen), römische Ziffern, einzelne Zeichen bzw. Werte, die nur aus Großbuchstaben bestehen.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Um die Rechtschreibprüfung ausführen zu können, ist es erforderlich, dass eine Wissensdatenbank und eine Domäne in der Wissensermittlungs- oder Domänenverwaltungsaktivität geöffnet sind, die Rechtschreibprüfung für die entsprechende Domäne und Seite aktiviert ist und die Spracheigenschaft für die Domäne angegeben ist.  

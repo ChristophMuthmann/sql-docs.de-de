@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sparse columns
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 33e750a4fbbd1dc7ae9d1cdec930189f85f3d129
-ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
+ms.openlocfilehash: 7e5f2e347053a5814bc1e00365f97c2d305cc064
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-sparse-columns"></a>Verwenden von Spalten mit geringer Dichte
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - data-tier application [SQL Server], monitor
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 caps.latest.revision: "11"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cb93f6f2644966696f7d7c48f2dac7f72cde06b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a8bfc10f588c868693eb0d24308730a618db9df7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="monitor-data-tier-applications"></a>Überwachen von Datenebenenanwendungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Eine Datenebenenanwendung (DAC) kann vom **Hilfsprogramm-Explorer** und **Objekt-Explorer** zusammen mit Systemsichten und -tabellen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) überwacht werden. Zusätzlich können alle Objekte der in der DAC enthaltenen Datenbank mithilfe standardmäßiger Datenbank- und [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Überwachungsverfahren überwacht werden.  
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="monitoring-dac-databases"></a>Überwachen von DAC-Datenbanken  
  Nachdem eine DAC erfolgreich bereitgestellt wurde, funktioniert die in der DAC enthaltene Datenbank genauso wie jede andere Datenbank. Verwenden Sie die [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Standardtechniken und -tools zum Überwachen von Leistung, Protokollen, Ereignissen und Ressourcennutzung der Datenbank.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Bereitstellen einer Datenebenenanwendung](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
   

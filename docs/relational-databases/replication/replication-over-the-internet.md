@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Internet [SQL Server replication], publishing
 ms.assetid: 04e7f4ed-e244-4bbe-ba12-09c33abea09e
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fd7b2400e4f50cf139c388a9043380c247a09167
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 72e3ba0e441fc62d1f2e43adbc43ba73b4e6ddd8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-over-the-internet"></a>Replikation über das Internet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das Replizieren von Daten über das Internet ermöglicht Remotebenutzern sowie Benutzern, die nicht mit dem Netzwerk verbunden sind, bei Bedarf mithilfe einer Verbindung zum Internet auf Daten zuzugreifen. Verwenden Sie Folgendes, um Daten über das Internet zu replizieren:  

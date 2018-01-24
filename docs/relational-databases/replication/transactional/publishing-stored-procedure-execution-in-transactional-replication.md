@@ -17,15 +17,15 @@ helpviewer_keywords:
 - transactional replication, publishing stored procedure execution
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 935ef9f319559ee9e021e9cedbb6150c7334d1f6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c55bc119e70be951807a9abd2ee37712d14aa46
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Veröffentlichen der Ausführung von gespeicherten Prozeduren in der Transaktionsreplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Wenn Sie gespeicherte Prozeduren verwenden, die auf dem Verleger ausgeführt werden und sich auf die veröffentlichten Tabellen auswirken, sollten Sie darüber nachdenken, diese gespeicherten Prozeduren als Artikel für die Ausführung einer gespeicherten Prozedur in Ihre Veröffentlichung aufzunehmen. Die Definition der Prozedur (die CREATE PROCEDURE-Anweisung) wird beim Initialisieren des Abonnements auf den Abonnenten repliziert. Wenn die Prozedur dann auf dem Verleger ausgeführt wird, führt die Replikation auch die entsprechende Prozedur auf dem Abonnenten aus. Dies kann in den Fällen, in denen umfangreiche Batchvorgänge ausgeführt werden, zu einer deutlichen Leistungssteigerung führen, da nur die Ausführung der Prozedur repliziert wird und sich das Replizieren der einzelnen Änderungen für jede Zeile erübrigt. Nehmen wir z. B. an, Sie erstellen in der Veröffentlichungsdatenbank die folgende gespeicherte Prozedur:  
@@ -99,7 +99,7 @@ COMMIT TRANSACTION T2
   
  Wenn für XACT_ABORT OFF angegeben werden muss, geben Sie den **-SkipErrors** -Parameter für den Verteilungs-Agent an. Auf diese Weise kann der Agent auch dann die Änderungen auf den Abonnenten anwenden, wenn es zu einem Fehler kommt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   

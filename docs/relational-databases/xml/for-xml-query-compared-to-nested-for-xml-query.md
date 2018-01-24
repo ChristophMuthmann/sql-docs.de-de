@@ -16,15 +16,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c58715813c4369258d5244e517e2e1753a9046c7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6ca00676ee79264e5d4e6c46261ef21e1479e1e9
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML-Abfragen im Vergleich zu geschachtelten FOR XML-Abfragen
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] In diesem Thema wird eine einstufige FOR XML-Abfrage mit einer geschachtelten FOR XML-Abfrage verglichen. Ein Vorteil, den die Verwendung geschachtelter FOR XML-Abfragen bietet, besteht darin, dass Sie eine Kombination aus attributzentriertem und elementzentriertem XML-Code für Abfrageergebnisse angeben können. Das Beispiel veranschaulicht dies.  
@@ -206,7 +206,7 @@ FOR XML AUTO, TYPE
   
  Wenn Sie die `ELEMENTS` -Direktive aus der geschachtelten `FOR XML` -Abfrage entfernen, mit der die Produktunterkategorien generiert werden, ist das gesamte Ergebnis attributzentriert. Sie können diese Abfrage dann ohne Schachtelung schreiben. Das Hinzufügen der `ELEMENTS` -Direktive ergibt einen XML-Code, der teilweise attributzentriert und teilweise elementzentriert ist. Dieses Ergebnis kann nicht durch eine FOR XML-Abfrage mit nur einer einzigen Ebene generiert werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden von geschachtelten FOR XML-Abfragen](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

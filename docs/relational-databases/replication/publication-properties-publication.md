@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Publication Properties dialog box
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a8f9dc462f54554e9a2d5fea626230ba691b37d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fa06b62a1b687af1db14b15e255c3aa4a596c549
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-properties----ltpublicationgt"></a>Veröffentlichungseigenschaften - &lt;Veröffentlichung&gt;
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieser Abschnitt enthält Informationen zu allen Seiten des Dialogfelds **Veröffentlichungseigenschaften**:  
@@ -45,10 +45,10 @@ ms.lasthandoff: 11/17/2017
   
 -   [Veröffentlichungseigenschaften (Datenpartitionen)](../../relational-databases/replication/publication-properties-data-partitions.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Eigenschaftenreferenz &#40;Replication&#41;](../../relational-databases/replication/properties-reference-replication.md)  
+ [Eigenschaftenreferenz &#40;Replikation&#41;](../../relational-databases/replication/properties-reference-replication.md)  
   
   

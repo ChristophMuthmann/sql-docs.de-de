@@ -22,13 +22,13 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 caps.latest.revision: "48"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7b83e4fedf8ee39ceb90b2156852de4698ae273a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f21ea2afcf50beb80ec3cdfdc39c0d1f79d5adbe
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Listener, Clientkonnektivität, Anwendungsfailover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieses Thema enthält Informationen zu Überlegungen hinsichtlich [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Clientkonnektivität und Anwendungsfailoverfunktionalität.  
@@ -100,11 +100,11 @@ ms.lasthandoff: 11/20/2017
  Hybride Netzwerkkonfigurationen und DHCP in mehreren Subnetzen werden nicht für Verfügbarkeitsgruppenlistener unterstützt. Das liegt daran, dass im Fall eines Failovers eine dynamische IP abgelaufen sein könnte oder freigegeben wird, wodurch die hohe Verfügbarkeit insgesamt gefährdet wird.  
   
 ###  <a name="SelectListenerPort"></a> Auswählen eines Ports für Verfügbarkeitsgruppenlistener  
- Wenn Sie einen Verfügbarkeitsgruppenlistener konfigurieren, müssen Sie einen Port festlegen.  Sie können den Standardport auf 1433 konfigurieren, um Clientverbindungszeichenfolgen einfach zu gestalten. Wenn Sie 1433 verwenden, müssen Sie keine Portnummer in einer Verbindungszeichenfolge festlegen.   Da jeder Verfügbarkeitsgruppenlistener einen separaten virtuellen Netzwerknamen besitzt, kann außerdem jeder für einen WSFC-Cluster konfigurierte Verfügbarkeitsgruppenlistener für den Verweis auf Port 1433 konfiguriert werden.  
+ Wenn Sie einen Verfügbarkeitsgruppenlistener konfigurieren, müssen Sie einen Port festlegen.  Sie können den Standardport auf 1433 konfigurieren, um Clientverbindungszeichenfolgen einfach zu gestalten. Wenn Sie 1433 verwenden, müssen Sie keine Portnummer in einer Verbindungszeichenfolge festlegen.   Da jeder Verfügbarkeitsgruppenlistener einen separaten virtuellen Netzwerknamen besitzt, kann außerdem jeder für einen WSFC-Cluster konfigurierte Verfügbarkeitsgruppenlistener für den Verweis auf Port 1433 konfiguriert werden.  
   
  Sie können auch einen nicht standardmäßigen Listenerport festlegen. Dies bedeutet jedoch, dass Sie auch in der Verbindungszeichenfolge immer dann explizit einen Zielport angeben müssen, wenn Sie eine Verbindung mit dem Verfügbarkeitsgruppenlistener herstellen.  Darüber hinaus müssen Sie die Berechtigung für die Firewall für den nicht standardmäßigen Port öffnen.  
   
- Wenn Sie den Standardport 1433 für die virtuellen Netzwerknamen der Verfügbarkeitsgruppenlistener verwenden, müssen Sie dennoch sicherstellen, dass keine anderen Dienste im Clusterknoten diesen Port verwenden. Andernfalls tritt ein Portkonflikt auf.  
+ Wenn Sie den Standardport 1433 für die virtuellen Netzwerknamen der Verfügbarkeitsgruppenlistener verwenden, müssen Sie dennoch sicherstellen, dass keine anderen Dienste im Clusterknoten diesen Port verwenden. Andernfalls tritt ein Portkonflikt auf.  
   
  Wenn eine der Instanzen von SQL Server bereits über den Instanzlistener TCP-Port 1433 überwacht und keine anderen Dienste (einschließlich weitere Instanzen von SQL Server) auf dem Computer Port 1433 überwachen, wird kein Portkonflikt mit dem Verfügbarkeitsgruppenlistener verursacht.  Das liegt daran, dass der Verfügbarkeitsgruppenlistener den selben TCP-Port im gleichen Dienstprozess freigeben kann.  Mehrere Instanzen von SQL Server (parallel) sollten jedoch nicht für die Überwachung desselben Ports konfiguriert werden.  
   
@@ -246,7 +246,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 -   [SQL Server AlwaysOn-Teamblog: Der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Always On-Clientkonnektivität &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)   
  [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   

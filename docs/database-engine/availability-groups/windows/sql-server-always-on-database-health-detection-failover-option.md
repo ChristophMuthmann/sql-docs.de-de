@@ -22,13 +22,13 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 caps.latest.revision: "4"
 author: JasonWHowell
 ms.author: jasonh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c9f10162900579bcf871b2a1bf63d8aa5cc4ac6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fe422c7445debc085f9d610550f365ccc4f1b8f2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Failoveroption für die Integritätserkennung auf Datenbankebene in einer Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ab SQL Server 2016 ist die Option „Integritätserkennung auf Datenbankebene“ (DB_FAILOVER) verfügbar, wenn eine Always On-Verfügbarkeitsgruppe konfiguriert wird. Die Integritätserkennung auf Datenbankebene erkennt, wenn eine Datenbank sich nicht mehr im Onlinestatus befindet oder ein Fehler auftritt und löst ein automatisches Failover der Verfügbarkeitsgruppe aus. 
@@ -102,7 +102,7 @@ select name, db_failover from sys.availability_groups
 
 Beispielausgabe für DMV:
 
-name  |  db_failover  
+NAME  |  db_failover  
 ---------|---------
 | Contoso-ag |  1  |
 
@@ -172,7 +172,7 @@ Eine Erläuterung der Felder finden Sie im Folgenden:
 
 In dieser Beispielausgabe zeigt „fault_type“, dass ein kritisches Ereignis auf der Verfügbarkeitsgruppe „Contoso-ag“ stattgefunden hat, die sich auf dem Replikat „SQLSERVER-1“ befindet. Der Grund dafür ist die Datenbank namens „AutoHaSample2“ mit dem Fehlertyp 2 (Herunterfahren).
 
-|Feld  | Wert
+|Feld  | value
 |---------|---------
 |availability_group_id |    24E6FE58-5EE8-4C4E-9746-491CFBB208C1
 |availability_group_name |  Contoso-ag

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 98c27d595b2cb849bdca3ccd72bd51cc8378a8b7
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: e516b5d29e975236e9fa002a7d258caca706663d
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Änderungsprotokoll für SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dieses Änderungsprotokoll bezieht sich auf [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
@@ -251,7 +251,6 @@ Diese Vorschauversion ist die erste Version von SSDT für Visual Studio 2017. Mi
 - SSIS ist nicht lokalisiert.
 - Die SSIS-Aufgabe „Paket ausführen“ unterstützt kein Debuggen, wenn der Prozess *ExecuteOutofProcess* auf *TRUE* festgelegt ist. Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt.
 - Eine vollständige Liste der Änderungen finden Sie unter [changelog (Änderungsprotokoll)](changelog-for-sql-server-data-tools-ssdt.md).
-- Melden Sie Fehler auf der Website [SSDT Connect Feedback](https://connect.microsoft.com/SQLServer/Feedback).
 - SSIS-Pakete mit Drittanbietererweiterungen können nicht so geändert werden, dass sie sich an andere Serverversionen richten.
 
 

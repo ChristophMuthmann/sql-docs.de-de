@@ -15,13 +15,13 @@ ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 caps.latest.revision: "2"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76913433e0cfe08d316c668a79d452959ebbee3b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a6d456f5197522bdd9f936f468645f1cbd9bc377
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Erstellen eines gruppierten DTCs für eine AlwaysOn-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema werden Sie durch eine vollständige Konfiguration einer gruppierten DTC-Ressource für eine SQL Server AlwaysOn-Verfügbarkeitsgruppe geführt. Für die vollständige Konfiguration kann bis zu einer Stunde erforderlich sein. 

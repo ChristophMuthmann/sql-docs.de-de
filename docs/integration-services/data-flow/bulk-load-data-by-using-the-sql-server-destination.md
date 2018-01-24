@@ -21,13 +21,13 @@ ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72c335cab197a6adcb85f0b0e7c05cc9f8c3e7dc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9cdd73f56e17dbe97a2075d33a0ceefc032fc345
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Massenladen von Daten mithilfe des SQL Server-Ziels
   Das Paket muss bereits mindestens einen Datenflusstask und eine Datenquelle enthalten, damit Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ziel hinzufügen und konfigurieren können.  
@@ -71,10 +71,10 @@ ms.lasthandoff: 11/20/2017
   
 11. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)   
  [SQL Server Integration Services-Transformationen](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Integration Services Paths](../../integration-services/data-flow/integration-services-paths.md)  (Integration Services-Pfade)  
+ [SQL Server Integration Services-Pfade](../../integration-services/data-flow/integration-services-paths.md)   
  [Datenflusstask](../../integration-services/control-flow/data-flow-task.md)  
   
   

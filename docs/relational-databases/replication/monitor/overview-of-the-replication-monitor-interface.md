@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Replication Monitor, about Replication Monitor
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 977bcf0ef4265e3864fee580dd2a8bced177b334
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dedf784414d1eda02bd650bd46051950f22629ad
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Übersicht über die Benutzeroberfläche des Replikationsmonitors
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Der Replikationsmonitor in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bietet eine Sicht aller Replikationsaktivitäten, bei der der Verleger oder der Verteiler im Vordergrund steht, in einem Format mit zwei Bereichen an. Im linken Bereich fügen Sie dem Monitor einen Verleger hinzu, und im rechten Bereich zeigt der Monitor die Informationen zum Verleger, dessen Veröffentlichungen, Abonnements für diese Veröffentlichungen und die verschiedenen Replikations-Agents an. Neben der Darstellung der Informationen zur Replikationstopologie ermöglicht der Replikationsmonitor die Ausführung zahlreicher Aufgaben, wie beispielsweise des Startens und Anhaltens von Agents und des Überprüfens von Daten.  
@@ -239,7 +239,7 @@ ms.lasthandoff: 11/17/2017
   
      In diesem Dialogfeld können Sie ein neues Profil erstellen und dabei optional die Werte eines vorhandenen Profils aufnehmen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Replikation](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

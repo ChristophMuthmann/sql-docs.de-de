@@ -22,15 +22,15 @@ helpviewer_keywords:
 - validating replicated data
 ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9834f7c0d65ab05a7dda5f68b05438760abef21
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 65c3d00ab7ebdfdf99b6ad52f5b9b5460ef6c29f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="validate-replicated-data"></a>Überprüfen von replizierten Daten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die Daten auf dem Abonnenten mit denen auf dem Verleger übereinstimmen. Die Überprüfung kann für bestimmte Abonnements oder für alle Abonnements für eine Veröffentlichung ausgeführt werden. Geben Sie einen der folgenden Überprüfungstypen an. Bei der nächsten Ausführung des Verteilungs-Agents oder des Merge-Agents werden die Daten dann überprüft:  
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
   
  Bei der Überprüfung anhand von binären Prüfsummen werden nicht die physischen Zeilen auf der Datenseite, sondern die einzelnen Spalten einer 32-Bit-Redundanzüberprüfung (Redundancy Check, CRC) unterzogen. Dadurch können die Spalten mit der Tabelle in einer beliebigen physischen Reihenfolge auf der Datenseite dargestellt werden, es wird aber trotzdem dieselbe CRC für die Zeile berechnet. Die Überprüfung anhand von binären Prüfsummen kann verwendet werden, wenn Zeilen- oder Spaltenfilter auf die Veröffentlichung angewendet wurden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Best Practices for Replication Administration](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   
   

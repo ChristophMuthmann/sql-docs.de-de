@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d16491ef-4a25-4e02-88a7-ab7c0812904a
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa3228e1ec6af0f7ef019c9f339169abbbdd68e8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dcf41a8d7223bbebc313f22fa5c08cffffcb3733
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-xtp-transaction-log"></a>XTP-Transaktionsprotokoll für SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,12 +30,12 @@ ms.lasthandoff: 11/17/2017
   
  In dieser Tabelle werden die Leistungsindikatoren für **SQL Server-XTP-Transaktionsprotokoll** beschrieben.  
   
-|Leistungsindikator|Beschreibung|  
+|Leistungsindikator|Description|  
 |-------------|-----------------|  
 |**Geschriebene Protokollbytes/s**|Die Anzahl von Bytes, die vom In-Memory-OLTP-Modul durchschnittlich pro Sekunde in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktionsprotokoll geschrieben werden.|  
 |**Geschriebene Protokolleinträge/s**|Die Anzahl von Datensätzen, die vom In-Memory-OLTP-Modul durchschnittlich pro Sekunde in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktionsprotokoll geschrieben werden.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Leistungsindikatoren für SQL Server XTP &#40;In-Memory OLTP&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   

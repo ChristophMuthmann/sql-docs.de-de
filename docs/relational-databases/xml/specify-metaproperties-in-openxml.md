@@ -19,15 +19,15 @@ helpviewer_keywords:
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e1d8a0a29b6d92aeab9c1c6e4afa01a2665add6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ffde4891d1481b628012a64d58b73f904e131f7e
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Angeben von Metaeigenschaften in OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Metaeigenschaftsattribute in einem XML-Dokument sind Attribute, die die Eigenschaften eines XML-Objekts (z.B. Element, Attribut oder ein beliebiger anderer DOM-Knoten) beschreiben. Diese Attribute sind nicht physisch im Text des XML-Dokuments enthalten. Vielmehr stellt OPENXML diese Metaeigenschaften für alle XML-Objekte bereit. Die Metaeigenschaften ermöglichen es Ihnen, Informationen (wie etwa die relative Position oder Namespaceinformationen) über XML-Knoten zu extrahieren. Diese Informationen bieten Ihnen mehr Details, als in der Textdarstellung zu sehen sind.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Sie können in XPath-Navigationen nicht auf diese Metaeigenschaften verweisen.  
   
-|Metaeigenschaftsattribut|Beschreibung|  
+|Metaeigenschaftsattribut|Description|  
 |----------------------------|-----------------|  
 |**@mp:id**|Stellt einen systemgenerierten, dokumentweiten Bezeichner des DOM-Knotens bereit. Dieser Bezeichner verweist auf denselben XML-Knoten, solange das Dokument nicht erneut analysiert wird.<br /><br /> Eine XML-ID von **0** zeigt an, dass es sich bei dem Element um ein Stammelement handelt. Die übergeordnete XML-ID ist NULL.|  
 |**@mp:localname**|Speichert den lokalen Teil des Knotennamens. Die Metaeigenschaft wird mit einem Präfix und einem Namespace-URI (Uniform Resource Identifier) zur Benennung von Element- oder Attributknoten verwendet.|  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
  In dieser Tabelle werden die zusätzlichen Eigenschaften übergeordneter Metaeigenschaftsattribute dargestellt, die Ihnen das Abrufen von Hierarchieinformationen ermöglichen.  
   
-|Übergeordnetes Metaeigenschaftsattribut|Beschreibung|  
+|Übergeordnetes Metaeigenschaftsattribut|Description|  
 |-----------------------------------|-----------------|  
 |**@mp:parentid**|Entspricht **../@mp:id**|  
 |**@mp:parentlocalname**|Entspricht **../@mp:localname**|  
@@ -217,7 +217,7 @@ O3    1999-07-14 00:00:00.000     <Order amount="100" note="Wrap it blue
 O4    1996-01-20 00:00:00.000     <Order amount="10000"/>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   
  [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 caps.latest.revision: "73"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8ef239563e768ee5044e07e8bca666bdd4169158
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: b37e7cc96300a3bba0e83f2458820afd20d1b004
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Replikation unterstützt eine breite Palette von Schemaänderungen an veröffentlichten Objekten. Wenn Sie eine der folgenden Schemaänderungen am entsprechenden veröffentlichten Objekt auf einem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verleger vornehmen, wird diese Änderung standardmäßig an alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten weitergegeben:  
@@ -113,7 +113,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Die zu löschende Spalte darf nicht in den Filterklauseln eines Artikels einer Veröffentlichung in der Datenbank verwendet werden.  
   
--   Beim Löschen einer Spalte aus einem veröffentlichten Artikel sollten Sie alle Einschränkungen, Indizes oder Eigenschaften der Spalte berücksichtigen, die sich auf die Datenbank auswirken können. Beispiel:  
+-   Beim Löschen einer Spalte aus einem veröffentlichten Artikel sollten Sie alle Einschränkungen, Indizes oder Eigenschaften der Spalte berücksichtigen, die sich auf die Datenbank auswirken können. Zum Beispiel:  
   
     -   Sie können keine in einem Primärschlüssel verwendeten Spalten aus Artikeln in Transaktionsveröffentlichungen löschen, da die Spalten von der Replikation verwendet werden.  
   
@@ -164,7 +164,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Die Mergereplikation stellt gespeicherte Prozeduren bereit, mit denen Schemaänderungen bei der Problembehandlung ausgelassen werden können. Weitere Informationen finden Sie unter [sp_markpendingschemachange &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md) und [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER VIEW &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-view-transact-sql.md)   
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-procedure-transact-sql.md)   

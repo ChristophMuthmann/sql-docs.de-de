@@ -16,15 +16,15 @@ helpviewer_keywords:
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5963e9521c9c54cad7cee997f246d31b1b198549
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9a5ff7baa53924206192db30e8ae9f50cef02cff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Beheben von Verbindungsfehlern mit dem SQL Server-Datenbankmodul
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ Wenn Sie zu diesem Zeitpunkt eine Fehlermeldung erhalten, müssen Sie den Fehler
 >    [!NOTE] 
 >    Einige Fehlermeldungen, die absichtlich an den Client übergeben wurden, stellen nicht genügend Informationen bereit, wie das Problem behoben werden kann. Dies ist eine Sicherheitsfunktion, die verhindern soll, dass Informationen über SQL Server an einen Angreifer übermittelt werden. Sehen Sie sich das SQL Server-Fehlerprotokoll an, um alle Informationen über den Fehler anzuzeigen. Dort finden Sie die Einzelheiten. Wenn Sie den Fehler **18456 Fehler bei der Anmeldung für den Benutzer**erhalten, sehen Sie sich das Thema [MSSQLSERVER_18456](http://msdn.microsoft.com/library/cc645917) in der Onlinedokumentation an, um weitere Informationen über Fehlercodes zu erhalten. Auf Aaron Bertrands Blog unter [Troubleshooting Error 18456](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)(Problembehandlung von Error 18456) finden Sie ebenso eine umfangreiche Liste mit Fehlercodes. Sie können das Fehlerprotokoll mit SSMS (falls Sie eine Verbindung herstellen können) im Abschnitt „Verwaltung“ des Objekt-Explorers anzeigen. Andernfalls können Sie das Fehlerprotokoll mit dem Windows-Editor anzeigen. Der standardmäßige Speicherort variiert je nach Version und kann während des Setups geändert werden. Der Standardspeicherort für [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] ist `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
 
-4.   Wenn Sie keine Verbindung mithilfe von Shared Memory herstellen können, versuchen Sie eine Verbindung mithilfe von TCP herzustellen. Sie können eine TCP-Verbindung durch Angabe von **tcp:** vor dem Namen erzwingen. Beispiel:
+4.   Wenn Sie keine Verbindung mithilfe von Shared Memory herstellen können, versuchen Sie eine Verbindung mithilfe von TCP herzustellen. Sie können eine TCP-Verbindung durch Angabe von **tcp:** vor dem Namen erzwingen. Zum Beispiel:
 
 |Verbinden mit:|Typ:|Beispiel:|
 |-----------------|---------------|-----------------|

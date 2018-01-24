@@ -15,12 +15,12 @@ ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: v-saume
-manager: jhubbard
-ms.openlocfilehash: 083530811bd1dcee460e10566d9ddf94b8aa5f71
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: aa2ce39b4cf932d5659adb2ccc1a85b4ff547cac
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Automatisches Initialisieren der AlwaysOn-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ Mit SQL Server 2016 wurde das automatische Seeding von Verfügbarkeitsgruppen ei
 
 Weitere Hintergrundinformationen finden Sie unter [Automatisches Seeding für sekundäre Replikate](automatic-seeding-secondary-replicas.md).
  
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 In SQL Server 2016 erfordert automatisches Seeding, dass der Pfad für Daten- und Protokolldateien für jede SQL Server-Instanz der Verfügbarkeitsgruppe identisch ist. In SQL Server 2017 können Sie unterschiedliche Pfade verwenden, Microsoft empfiehlt jedoch, dieselben Pfade zu verwenden, wenn alle Replikate auf derselben Plattform (z.B. Windows oder Linux) gehostet werden. Plattformübergreifende Verfügbarkeitsgruppen besitzen unterschiedliche Pfade für die Replikate. Weitere Informationen finden Sie unter [Datenträgerlayout](automatic-seeding-secondary-replicas.md#disklayout).
 
@@ -150,7 +150,7 @@ Die folgenden Systemsichten zeigen den Status des automatischen Seedings in SQL 
 
 **sys.dm_hadr_automatic_seeding** 
 
-Fragen Sie auf dem primären Replikat `sys.dm_hadr_automatic_seeding` ab, um den Status des automatischen Seedingprozesses zu überprüfen. Die Sicht gibt eine Zeile für jeden Seedingprozess zurück. Beispiel:
+Fragen Sie auf dem primären Replikat `sys.dm_hadr_automatic_seeding` ab, um den Status des automatischen Seedingprozesses zu überprüfen. Die Sicht gibt eine Zeile für jeden Seedingprozess zurück. Zum Beispiel:
 
 ```sql
 SELECT start_time, 
@@ -215,7 +215,7 @@ GO
 
 Die folgende Tabelle enthält die erweiterten Ereignisse die sich auf automatisches Seeding beziehen: 
 
-| Name | Beschreibung|
+| Name | Description|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  Seedinganforderungsnachricht.
 |hadr_physical_seeding_backup_state_change |    Statusänderung auf der Sicherungsseite für das physische Seeding.
@@ -236,7 +236,7 @@ Die folgende Tabelle enthält die erweiterten Ereignisse die sich auf automatisc
 
 **Überwachen des automatischen Seedings**
 
-Fragen Sie `sys.dm_hadr_physical_seeding_stats` nach aktuell ausgeführten automatischen Seedingprozessen ab. Die Sicht gibt eine Zeile für jede Datenbank zurück. Beispiel:
+Fragen Sie `sys.dm_hadr_physical_seeding_stats` nach aktuell ausgeführten automatischen Seedingprozessen ab. Die Sicht gibt eine Zeile für jede Datenbank zurück. Zum Beispiel:
 
 ```sql
 SELECT local_database_name, 

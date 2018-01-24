@@ -19,13 +19,13 @@ ms.assetid: b6ecb6eb-9514-4ac1-b67c-31e3d39db4d9
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9c9188b1b33eac136f2bc1a59b04aa2af1716d18
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0bc51e70a327e8d7f1b1f133eb7e5c42809d57ed
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="jobs-that-reference-a-schedule"></a>Aufträge mit Verweisen auf einen Zeitplan
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieses Dialogfelds können Sie Informationen zu Aufträgen anzeigen, die auf einen bestimmten Zeitplan verweisen.  

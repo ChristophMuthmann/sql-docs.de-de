@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: HierarchyID
 ms.assetid: 7b8064c7-62c6-488d-84d2-57a5828fb907
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27cbbfc0bb1cf691a7bd22913af01d0b76a27423
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a3d15df3ae3bf757b54e2e4d48c55b94285540d9
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="lesson-2-4---reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>Lektion 2.4: Neuanordnen von Daten in einer hierarchischen Tabelle mit hierarchischen Methoden
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Eine Hierarchie neu zu ordnen ist eine allgemeine Wartungsaufgabe. In dieser Aufgabe werden wir eine UPDATE-Anweisung mit der [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) -Methode verwenden, um zunächst eine einzelne Zeile an eine neue Position in der Hierarchie zu verschieben. Dann verschieben wir eine ganze Teilstruktur an eine neue Position.  
@@ -118,7 +118,7 @@ Text_OrgNode OrgNode OrgLevel EmployeeID EmpName Title
 /            Ox      0        6          David   Marketing Manager  
 /1/          0x58    1        46         Sariya  Marketing Specialist  
 /1/1/        0x5AC0  2        269        Wanida  Marketing Assistant  
-/1/1//2      0x5AD0  3        291        Kevin   Marketing Intern  
+/1/1/1/      0x5AD0  3        291        Kevin   Marketing Intern  
 /2/          0x68    1        271        John    Marketing Specialist  
 /2/1/        0x6AC0  2        272        Mary    Marketing Assistant  
 /3/          0x78    1        119        Jill    Marketing Specialist  
@@ -128,7 +128,7 @@ Die gesamte Organisationsstruktur, die Jill (sowohl Wanida als auch Kevin) beric
   
 Eine gespeicherte Prozedur für die Neuorganisation eines Bereichs einer Hierarchie finden Sie im Abschnitt „Verschieben von Teilstrukturen“ unter [Hierarchische Daten (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md#BKMK_MovingSubtrees).  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Zusammenfassung: Verwalten von Daten in einer hierarchischen Tabelle](../../relational-databases/tables/lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
   
   

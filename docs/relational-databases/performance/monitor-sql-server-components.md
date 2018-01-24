@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cc1115ebc7142d49a8b0cda79cc6dee1d8f250f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e42a68231284071a38797fa76085123ab89e92fe
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-sql-server-components"></a>Überwachen von SQL Server-Komponenten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Überwachung ist wichtig, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Dienst in einer dynamischen Umgebung bereitstellt. Die Daten in der Anwendung ändern sich. Die Art des Zugriffs, den Benutzer benötigen, ändert sich. Die Art der Verbindungsherstellung ändert sich. Möglicherweise ändern sich sogar die Typen der Anwendungen, die auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifen, aber [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwaltet automatisch Ressourcen auf Systemebene, z.B. Arbeits- oder Datenträgerspeicher, um den Bedarf an manueller Optimierung auf Systemebene zu minimieren. Mithilfe der Überwachung können Administratoren Leistungstrends identifizieren, um zu bestimmen, ob Änderungen erforderlich sind.  

@@ -23,15 +23,15 @@ helpviewer_keywords:
 - backups [SQL Server replication], transactional replication
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 69c0da57bc8bf51162dcc26771726bf2e9f6091d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5d7e9c5e24951afe3a997dce86f10b63b6fcfdf4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Drei Bereiche sind beim Entwickeln einer Sicherungs- und Wiederherstellungsstrategie für die Momentaufnahme- und Transaktionsreplikation zu berücksichtigen:  
@@ -351,13 +351,13 @@ ms.lasthandoff: 11/17/2017
   
 2.  Stellen Sie sicher, dass die Datenbank hinsichtlich der Replikationskonfiguration und der Einstellungen mit der Veröffentlichungsdatenbank konsistent ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Sichern und Wiederherstellen von replizierten Datenbanken](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [Verteilung konfigurieren](../../../relational-databases/replication/configure-distribution.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
- [Initialisieren eines Abonnements](../../../relational-databases/replication/initialize-a-subscription.md)   
+ [Initialize a Subscription](../../../relational-databases/replication/initialize-a-subscription.md)   
  [Synchronisieren von Daten](../../../relational-databases/replication/synchronize-data.md)  
   
   

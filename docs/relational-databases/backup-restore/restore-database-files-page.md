@@ -16,20 +16,20 @@ f1_keywords:
 - sql13.swb.restoredb.files.f1 in the code
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43c7026aa357587fea7d4a9611b88237ed7896fd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dff6aada8273e1e994ce321213cee66ae0b0bbb0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-database-files-page"></a>Datenbank wiederherstellen (Seite Dateien)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Auf der Seite **Dateien** des Dialogfelds **Datenbank wiederherstellen** können Sie die Dateien verwalten, die Sie für die Wiederherstellung in der Datenbank ausgewählt haben.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
   
 ### <a name="restore-database-files-as"></a>Datenbankdateien wiederherstellen als  
  Mit dieser Option weisen Sie den wiederhergestellten Dateien den neuen Dateipfad zu und verwalten den Pfad.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
  **Alle Dateien verschieben in Ordner**  
  Wiederhergestellte Dateien werden verschoben.  
   
-|Option|Beschreibung|  
+|Option|Description|  
 |------------|-----------------|  
 |**Datendateiordner**|Geben Sie den Namen des Datendateiordners ein, in den die wiederhergestellten Datendateien verschoben werden sollen, oder navigieren Sie zu diesem.|  
 |**Protokolldateiordner**|Geben Sie den Ordner mit den Protokolldateien ein, in den die wiederhergestellte Protokolldatei verschoben werden soll, oder navigieren Sie zu diesem.|  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
  **Wiederherstellen als**  
  Die Dateinamen werden aufgeführt, unter denen die wiederhergestellten Dateien gespeichert werden sollen. Geben Sie den richtigen Dateinamen ein, oder suchen Sie nach diesem.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbank wiederherstellen &#40;Seite „Allgemein“&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)   
  [Datenbank wiederherstellen &#40;Seite „Optionen“&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)   
  [RESTORE-Argumente &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)   

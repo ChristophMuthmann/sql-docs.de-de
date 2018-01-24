@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.swb.serverproperties.memory.f1
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b9ae03362f1dfb89aaebc09aabfed60c327a9d3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 57a2f7e2b4f0a75cf212d79284b85c00eda92d81
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---memory-page"></a>Servereigenschaften (Seite „Speicher“)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Auf dieser Seite können Sie die Arbeitsspeichereinstellungen für den Server anzeigen und bearbeiten. Wenn für **Minimaler Serverarbeitsspeicher** 0 und für **Maximaler Serverarbeitsspeicher** 2147483647 MB festgelegt sind, kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu jeder Zeit die optimale Menge an Arbeitsspeicher nutzen, abhängig davon, wie viel Arbeitsspeicher vom Betriebssystem und von anderen Anwendungen aktuell verwendet wird. Mit der wechselnden Auslastung des Computers und von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ändert sich auch der zugeordnete Arbeitsspeicher. Sie können außerdem diese dynamische Arbeitsspeicherbelegung mit den unten angegebenen Minimal- und Maximalwerten begrenzen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Minimaler Serverarbeitsspeicher (in MB)**  
  Gibt an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit der angegebenen Mindestgröße des zugeordneten Speichers beginnen und unterhalb dieses Werts keinen Speicher freigeben sollte. Legen Sie diesen Wert auf der Basis der Größe und Aktivität Ihrer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fest. Diese Option sollte immer auf einen geeigneten Wert festgelegt werden, um sicherzustellen, dass das Betriebssystem nicht zu viel Arbeitsspeicher von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anfordert und dadurch die Leistung von Windows beeinträchtigt.  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/20/2017
  **Ausgeführte Werte**  
  Zeigt die derzeit aktiven Werte für die Optionen in diesem Bereich an. Diese Werte sind schreibgeschützt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Serverkonfigurationsoptionen für den Serverarbeitsspeicher](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   

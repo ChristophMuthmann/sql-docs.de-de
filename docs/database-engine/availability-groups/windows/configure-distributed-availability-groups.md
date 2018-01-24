@@ -15,13 +15,13 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 caps.latest.revision: "28"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b26a0a774c6f1f6dcb7dd9b01c732be336f76b94
-ms.sourcegitcommit: b4b7cd787079fa3244e77c1e9e3c68723ad30ad4
+ms.openlocfilehash: 67aaeb56b3d3230e650dc24d16221e2af6872344
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-distributed-availability-group"></a>Konfigurieren verteilter Verfügbarkeitsgruppen  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

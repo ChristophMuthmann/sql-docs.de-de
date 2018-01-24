@@ -16,15 +16,15 @@ helpviewer_keywords:
 - default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 caps.latest.revision: "4"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d56a9141ce472f9419eca3504dae859dab886689
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5549947b718e1303d1c6a065cb5790b7af5dabe7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Standard-Netzwerkkonfiguration von SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Um eine erhöhte Sicherheit zu gewährleisten, wird bei bestimmten Neuinstallationen von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] die Netzwerkkonnektivität deaktiviert. Die Netzwerkkonnektivität über TCP/IP wird nicht deaktiviert, wenn Sie Enterprise Edition, Standard Edition, Evaluation Edition oder Workgroup Edition verwenden oder wenn eine vorherige Installation von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] vorhanden ist. Für alle Installationen wird das Shared Memory-Protokoll aktiviert, um lokale Verbindungen mit dem Server zu ermöglichen. Der [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] -Browser-Dienst wird möglicherweise beendet, je nach Installationsbedingungen und -optionen.
@@ -45,7 +45,7 @@ Entwickler   | Neue Installation  | Aktiviert   | Disabled  | Deaktiviert für N
 Evaluation  | Neue Installation  | Aktiviert   | Aktiviert   | Deaktiviert für Netzwerkverbindungen
 SQL Server Express  | Neue Installation  | Aktiviert   | Disabled  | Deaktiviert für Netzwerkverbindungen
 Alle Editionen    | Vorherige Installation ist vorhanden, wird aber nicht aktualisiert.   | Wie für Neuinstallation  | Wie für Neuinstallation  | Wie für Neuinstallation
-Alle Editionen    | Upgrade   | Aktiviert   | Einstellungen aus früherer Installation werden beibehalten.    | Einstellungen aus früherer Installation werden beibehalten.
+Alle Editionen    | UPGRADE   | Aktiviert   | Einstellungen aus früherer Installation werden beibehalten.    | Einstellungen aus früherer Installation werden beibehalten.
 
 
 >[!NOTE]
@@ -72,7 +72,7 @@ Der [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] -Browserdienst 
 * Beim Installieren einer benannten Instanz des Datenbankmoduls, die alle Instanzen von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Express einschließt.
 * Beim Installieren einer benannten Instanz von Analysis Services.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
 [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 

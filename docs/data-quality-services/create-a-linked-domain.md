@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 898177d27b1c580d8cf40f6d2966ab91c7b01733
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 30f25b5b1c71f6a84bdd114173c8fc04c0b3902d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-linked-domain"></a>Erstellen einer verknüpften Domäne
   In diesem Thema wird beschrieben, wie eine verknüpfte Domäne in einer Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellt wird. Eine verknüpfte Domäne wird aus einer anderen, zuvor vorhandenen Domäne, erstellt und erbt alle Werte, Regeln und Eigenschaften von der Domäne, mit der sie verknüpft wird - mit Ausnahme des Namens und der Beschreibung. Sie können einen Satz verknüpfter Domänen als eine Domäne verwalten. Indem Sie eine Domäne mit der anderen verknüpfen, erstellen Sie eine Domäne, die ihre Inhalte von einer anderen Domäne erbt.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
   
  Ein Beispiel ist ein Datensatz, der die folgenden Felder enthält: Kundenvorname, Kundennachname und Vorname des Vaters. Angenommen, Sie ordnen den Kundenvornamen und den Vornamen des Vaters einer Vornamendomäne zu und machen die Vornamendomäne und die Nachnamendomäne zu Teilen einer Verbunddomäne für vollständige Namen. Das Problem ist, dass der Vorname des Vaters der Verbunddomäne ohne Nachname hinzugefügt wird. Wenn Sie allerdings die beiden Vornamenfelder mit einer Domäne verknüpfen und die beiden Domänen miteinander verknüpfen, können Sie die Kundenvornamedomäne der Verbunddomäne für vollständige Namen hinzufügen und das Feld für den Vornamen des Vaters nicht der Verbunddomäne hinzufügen. Dadurch verhindern Sie, dass der Vorname des Vaters der Verbunddomäne hinzugefügt wird.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Um eine verknüpfte Domäne zu erstellen, müssen Sie eine Wissensdatenbank und eine vorhandene Domäne haben, zu der Sie eine Verknüpfung herstellen möchten.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
   
 6.  Falls notwendig können Sie den Namen oder die Beschreibung der verknüpften Domäne auf der Registerkarte „Domäneneigenschaften“ ändern.  
   
-7.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
+7.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
   
 ##  <a name="Map"></a> Map two fields to linked domains  
   

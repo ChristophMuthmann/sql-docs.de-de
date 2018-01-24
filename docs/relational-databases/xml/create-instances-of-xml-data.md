@@ -22,15 +22,15 @@ helpviewer_keywords:
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ec51663f65f5673888ef20ee462078e545848334
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: 24a96c4692a8ce096a766fa534a1f939abb60bb4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-instances-of-xml-data"></a>Erstellen von Instanzen der XML-Daten
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie XML-Instanzen generiert werden.  
@@ -77,7 +77,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
 -   Das `xml:space` -Attribut für ein Element oder eines seiner Vorgängerelemente weist den Standardwert auf.  
   
- Beispiel:  
+ Zum Beispiel:  
   
 ```  
 declare @x xml  
@@ -91,7 +91,7 @@ select @x
 <root><child/></root>  
 ```  
   
- Sie können dieses Verhalten jedoch ändern. Um Leerzeichen für eine xml DT-Instanz beizubehalten, verwenden Sie den CONVERT-Operator und seinen optionalen *style* -Parameter, um einen Wert von 1 festzulegen. Beispiel:  
+ Sie können dieses Verhalten jedoch ändern. Um Leerzeichen für eine xml DT-Instanz beizubehalten, verwenden Sie den CONVERT-Operator und seinen optionalen *style* -Parameter, um einen Wert von 1 festzulegen. Zum Beispiel:  
   
 ```  
 SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)  
@@ -139,7 +139,7 @@ select @x
 ```  
   
 ## <a name="using-the-select-statement-with-a-for-xml-clause"></a>Verwenden der SELECT-Anweisung mit einer FOR XML-Klausel  
- Sie können die FOR XML-Klausel in einer SELECT-Anweisung verwenden, um Ergebnisse als XML zurückzugeben. Beispiel:  
+ Sie können die FOR XML-Klausel in einer SELECT-Anweisung verwenden, um Ergebnisse als XML zurückzugeben. Zum Beispiel:  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -189,7 +189,7 @@ go
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden **xml** -Datentypinstanzen an den Client zurückgegeben, die das Ergebnis unterschiedlicher Serverkonstrukte sind (z. B. FOR XML-Abfragen, für die die TYPE-Direktive verwendet wird, oder bei denen der **xml** -Datentyp verwendet wird, um XML aus SQL-Spalten, -Variablen und -Ausgabeparametern zurückzugeben). Im Clientanwendungscode wird vom ADO.NET-Anbieter angefordert, dass diese **xml** -Datentypinformationen als Binärcode vom Server gesendet werden. Wenn Sie FOR XML jedoch ohne die TYPE-Direktive verwenden, werden die XML-Daten als Zeichenfolgentyp zurückgegeben. Der Clientanbieter ist in jedem Fall fähig, beide XML-Formate zu verarbeiten.  
   
 ## <a name="using-constant-assignments"></a>Verwenden von Konstantenzuweisungen  
- Eine Zeichenfolgenkonstante kann dort verwendet werden, wo eine Instanz des **xml** -Datentyps erwartet wird. Dies entspricht einer impliziten CAST-Anweisung für die Zeichenfolge in XML. Beispiel:  
+ Eine Zeichenfolgenkonstante kann dort verwendet werden, wo eine Instanz des **xml** -Datentyps erwartet wird. Dies entspricht einer impliziten CAST-Anweisung für die Zeichenfolge in XML. Zum Beispiel:  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -215,11 +215,11 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|Description|  
 |-----------|-----------------|  
 |[Abrufen und Abfragen von XML-Daten](../../relational-databases/xml/retrieve-and-query-xml-data.md)|Beschreibt die Teile von XML-Instanzen, die nicht beibehalten werden, wenn sie in Datenbanken gespeichert werden.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [xml-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
  [XML DML &#40;Data Modification Language&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   

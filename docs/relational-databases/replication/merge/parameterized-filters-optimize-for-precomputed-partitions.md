@@ -17,15 +17,15 @@ helpviewer_keywords:
 - merge replication precomputed partitions [SQL Server replication], about precomputed partitions
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bb142518ea996d1344c71aed46e06645fb0d957
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c5e5341614b3da26ec21f84017b0e776000a3bb5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Parametrisierte Filter - Optimierung für vorausberechnete Partitionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vorausberechnete Partitionen dienen der Leistungsoptimierung und können mit gefilterten Mergeveröffentlichungen verwendet werden. Vorausberechnete Partitionen sind darüber hinaus eine Anforderung für die Verwendung logischer Datensätze bei gefilterten Veröffentlichungen. Weitere Informationen zu logischen Datensätzen finden Sie unter [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="performance-of-precomputed-partitions"></a>Leistung vorausberechneter Partitionen  
  Bei vorausberechneten Partitionen besteht ein geringfügiger Leistungsabfall, wenn Änderungen vom Abonnenten auf den Verleger hochgeladen werden. Der Großteil der Zeit bei der Mergeverarbeitung wird jedoch für die Auswertung von Partitionen und den Download von Änderungen vom Verleger zum Abonnenten aufgewendet. Deshalb kann der Reingewinn noch immer erheblich sein. Der Leistungsvorteil variiert je nach Anzahl der Abonnenten, die gleichzeitig eine Synchronisierung ausführen, und der Anzahl von Updates pro Synchronisierung, bei denen Zeilen zwischen Partitionen verschoben werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

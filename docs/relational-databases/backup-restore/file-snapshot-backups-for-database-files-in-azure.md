@@ -15,13 +15,13 @@ ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 caps.latest.revision: "34"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6546a08f4d45f8104a752ed8ba578b3b82f97be9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8970c703cc7b2af93cb29466f0b06c3d83cc1f56
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dateimomentaufnahme-Sicherungen verwenden Azure-Momentaufnahmen, um nahezu sofortige Sicherungen und schnellere Wiederherstellungen für Datenbankdateien mithilfe von Azure Blob Storage zu nutzen. Diese Funktion ermöglicht es Ihnen, Ihre Sicherungs- und Wiederherstellungsrichtlinien zu vereinfachen. Eine Livedemo finden Sie unter [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)(in englischer Sprache). Weitere Informationen zum Speichern von Datenbankdateien mithilfe von Azure Blob Storage finden Sie unter [SQL Server-Datendateien in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
@@ -183,7 +183,7 @@ GO
 ## <a name="did-this-article-help-you-were-listening"></a>Fanden Sie diesen Artikel nützlich? Wir hören Ihnen zu  
  Welche Informationen suchen Sie, und haben Sie sie gefunden? Wir nehmen uns Ihr Feedback zu Herzen, um unsere Inhalte zu verbessern. Bitte senden Sie Ihre Kommentare an [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20File-Snapshot%20Backups%20for%20Database%20Files%20in%20Azure%20page)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Tutorial: Verwenden von SQL Server 2016-Datenbanken mit Microsoft Azure Blob Storage](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   

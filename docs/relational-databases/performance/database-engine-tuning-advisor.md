@@ -14,17 +14,17 @@ ms.topic: article
 f1_keywords: sql13.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c0c43bf59c4b45990c491f129598fe4210a8494b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11720ea18ba01bd0cdaec11e4500dc5cba5ef24c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="database-engine-tuning-advisor"></a>Datenbankoptimierungsratgeber
+# <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Der [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Datenbankoptimierungsratgeber (DTA) analysiert Datenbanken und gibt Empfehlungen zum Optimieren der Abfrageleistung. Mit dem Datenbankoptimierungsratgeber können Sie einen optimalen Satz von Indizes, indizierten Sichten oder Tabellenpartitionen auswählen und erstellen, auch wenn Sie nicht über detaillierte Kenntnisse bezüglich der Datenbankstruktur oder der internen Mechanismen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügen. Mit dem DTA können Sie die folgenden Aufgaben ausführen:  
   
 -   Beheben der Leistungsprobleme einer bestimmten Problemabfrage  
@@ -107,7 +107,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Der Datenbankoptimierungsratgeber speichert Daten zu Optimierungssitzungen und andere Informationen in der **msdb** -Datenbank. Wenn an der **msdb** -Datenbank Änderungen vorgenommen werden, besteht das Risiko, dass Optimierungssitzungsdaten verloren gehen. Um dieses Risiko zu umgehen, müssen Sie für die **msdb** -Datenbank eine geeignete Sicherungsstrategie implementieren.  
   
-## <a name="performance-considerations"></a>Leistungsaspekte  
+## <a name="performance-considerations"></a>Überlegungen zur Leistung  
  Der Datenbankmodul-Optimierungsratgeber kann bei der Analyse signifikante Prozessor- und Arbeitsspeicherressourcen belegen. Um zu vermeiden, dass die Leistung des Produktionsservers beeinträchtigt wird, wenden Sie eine der folgenden Strategien an:  
   
 -   Optimieren Sie die Datenbanken, wenn der Server frei ist. Der Datenbankoptimierungsratgeber kann sich auf Wartungstasks auswirken.  

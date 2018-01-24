@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: heaps
 ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 caps.latest.revision: "8"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5d9a2fd4946c5c15e9d46992d6bf5f41ecaaad42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d3b9cc6ed05e6b796558b2f9cb878839dc698072
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>Heaps (Tabellen ohne gruppierte Indizes)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
 >  In bestimmten Fällen gibt es gute Gründe, eine Tabelle als einen Heap zu belassen, statt einen gruppierten Index zu erstellen. Die effektive Verwendung von Heaps ist jedoch Benutzern mit fortgeschrittenen Kenntnissen vorbehalten. Die meisten Tabellen sollten über einen sorgfältig ausgewählten gruppierten Index verfügen, es sei denn, es gibt gute Gründe, die Tabelle als Heap beizubehalten.  
   
 ## <a name="when-to-use-a-heap"></a>Verwendungsbereiche für Heaps  
- Wenn eine Tabelle ein Heap ist und nicht über ungruppierte Indizes verfügt, muss die ganze Tabelle überprüft werden (mit einem Tabellenscan), um eine Zeile zu finden. Dies ist durchaus denkbar, wenn es sich um eine kleine Tabelle handelt, wie z. B. eine Liste der zwölf Niederlassungen eines Unternehmens.  
+ Wenn eine Tabelle ein Heap ist und nicht über ungruppierte Indizes verfügt, muss die ganze Tabelle überprüft werden (mit einem Tabellenscan), um eine Zeile zu finden. Dies ist durchaus denkbar, wenn es sich um eine kleine Tabelle handelt, wie z. B. eine Liste der zwölf Niederlassungen eines Unternehmens.  
   
  Wenn eine Tabelle als Heap gespeichert wird, werden einzelne Zeilen durch einen Zeilenbezeichner (RID, Row Identifier) gekennzeichnet, der aus der Dateinummer, der Datenseitennummer und einem Slot auf der Seite besteht. Die Zeilen-ID ist eine kleine und effiziente Struktur. In einigen Fällen verwenden Datenarchitekten Heaps, wenn immer über nicht gruppierte Indizes auf Daten zugegriffen wird und die RID kleiner als ein Schlüssel des gruppierten Indexes ist.  
   

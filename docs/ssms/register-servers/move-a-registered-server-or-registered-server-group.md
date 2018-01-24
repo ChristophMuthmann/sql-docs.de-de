@@ -21,13 +21,13 @@ ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
 caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89f9a409da7eede0af44d58d9d33a1105ec5b0e0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: acc83458670e254fcbbc25f683684621b513f08e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>Verschieben eines registrierten Servers bzw. einer registrierte Servergruppe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In diesem Thema wird beschrieben, wie Sie die Server in „Registrierte Server“ organisieren, indem Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] einen registrierten Server oder Servergruppen verschieben. Servergruppen können registrierte Server oder weitere Servergruppen enthalten. Sowohl Server als auch Servergruppen können von einer Servergruppe in die andere verschoben werden.  

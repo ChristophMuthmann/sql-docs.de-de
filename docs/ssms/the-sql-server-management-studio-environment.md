@@ -16,13 +16,13 @@ ms.assetid: 73f4db18-6b4e-4b72-9dce-449bd5de8eab
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ce4fd180d5f57dcbdada9412f80cb4791440ecd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 858d968c7ac8b420fc8fe1475b06f99bd396ea4f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="the-sql-server-management-studio-environment"></a>Die SQL Server Management Studio-Umgebung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

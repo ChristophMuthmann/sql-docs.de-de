@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 caps.latest.revision: "65"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9db1fe5e47e062e2fa1a4563d54059b0ecfdc0af
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6fdf75cd720e6463a41475212beb07ee4a79819
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---advanced-page"></a>Servereigenschaften (Seite „Erweitert“)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Auf dieser Seite können Sie die erweiterten Servereinstellungen anzeigen und ändern.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Anzeigen oder Ändern von Servereigenschaften &#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)  
   
-## <a name="containment"></a>Kapselung  
+## <a name="containment"></a>Containment  
  Aktivieren enthaltener Datenbanken  
  Gibt an, ob diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eigenständige Datenbanken zulässt. Bei **True**kann eine eigenständige Datenbank erstellt, wiederhergestellt oder angefügt werden. Bei **False**kann keine eigenständige Datenbank erstellt, wiederhergestellt oder an diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angefügt werden. Wenn die Einschlusseigenschaft geändert wird, kann sich dies auf die Sicherheit der Datenbank auswirken. Durch das Aktivieren eigenständiger Datenbanken gewährt der Datenbankbesitzer Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn eigenständige Datenbanken deaktiviert werden, können Benutzer u. U. keine Verbindung herstellen. Wie sich die Einschlusseigenschaft auswirken kann, erfahren Sie unter [Contained Databases](../../relational-databases/databases/contained-databases.md) und [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 11/20/2017
  **Abfragewartezeit**  
  Gibt die Zeit in Sekunden an (von 0 bis 2147483647), die eine Abfrage auf Ressourcen wartet, bevor der Vorgang timeoutbedingt abgebrochen wird. Bei Verwendung des Standardwertes von –1 wird das Timeout als das 25-fache der geschätzten Abfragekosten berechnet. Weitere Informationen finden Sie unter [Configure the query wait Server Configuration Option](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

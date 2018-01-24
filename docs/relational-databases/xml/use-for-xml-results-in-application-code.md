@@ -21,15 +21,15 @@ helpviewer_keywords:
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 47a0090ce4c927eb41d30b7d5e7f417bedd614fb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1d06987ca4d4f9bf0b9aee605effdeb78ab3f095
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Verwenden von FOR XML-Ergebnissen in Anwendungscode
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Mithilfe von FOR XML-Klauseln in SQL-Abfragen können Sie Abfrageergebnisse abrufen und sogar in XML-Daten umwandeln. Diese Funktionalität bietet Ihnen die folgenden Möglichkeiten, wenn FOR XML-Abfrageergebnisse in XML-Anwendungscode verwendet werden können:  
@@ -298,7 +298,7 @@ SqlConnection closed.
 > [!NOTE]  
 >  Mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** -Datentyp-Unterstützung, können Sie fordern, dass das Ergebnis einer FOR XML-Abfrage nicht als typisierte Zeichenfolgen- oder Imagedaten zurückgegeben wird, sondern als **xml** -Datentyp. Dazu müssen Sie die [TYPE-Direktive](../../relational-databases/xml/type-directive-in-for-xml-queries.md)angeben. Wenn die TYPE-Direktive in FOR XML-Abfragen verwendet wird, ermöglicht sie den programmgesteuerten Zugriff auf die FOR XML-Ergebnisse, wie das auch in [Verwenden von XML-Daten in Anwendungen](../../relational-databases/xml/use-xml-data-in-applications.md)gezeigt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

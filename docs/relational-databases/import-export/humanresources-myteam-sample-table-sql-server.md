@@ -17,15 +17,15 @@ helpviewer_keywords:
 - bulk exporting [SQL Server], examples
 ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c7c82b62908b8004c9ef93c77b5d980cb65b0787
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0d1175f8be3cdd8ebf15227ea46ceca7180a44e7
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam-Beispieltabelle (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Viele der Codebeispiele in [Importieren und Exportieren von Massendaten](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) erfordern eine besondere Testtabelle namens **myTeam**. Bevor Sie die Beispiele ausführen können, müssen Sie die **myTeam** -Tabelle im **HumanResources** -Schema der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank erstellen.  
@@ -35,11 +35,11 @@ ms.lasthandoff: 11/17/2017
   
  Die **myTeam** -Tabelle enthält die folgenden Spalten.  
   
-|Column|Datentyp|NULL-Zulässigkeit|Beschreibung|  
+|Spalte|Datentyp|NULL-Zulässigkeit|Description|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|**smallint**|Nicht NULL|Primärschlüssel für die Zeilen. Mitarbeiter-ID eines Mitglieds meines Teams.|  
 |**Name**|**nvarchar(50)**|Nicht NULL|Name eines Mitglieds meines Teams.|  
-|**Titel**|**nvarchar(50)**|NULL zulassen|Titel des Mitarbeiters in meinem Team.|  
+|**Title**|**nvarchar(50)**|NULL zulassen|Titel des Mitarbeiters in meinem Team.|  
 |**Hintergrund**|**nvarchar(50)**|Nicht NULL|Datum und Uhrzeit des letzten Updates der Zeile. (Standardwert)|  
   
 **So erstellen Sie HumanResources.myTeam**  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
     > [!NOTE]  
     >  Bei diesen Anweisungen wird die vierte Spalte ( `Background`) ausgelassen. Diese besitzt einen Standardwert. Das Auslassen dieser Spalte bewirkt, dass diese Spalte bei der `INSERT` -Anweisung leer bleibt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Massenimport und -export von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)  
   
   

@@ -23,15 +23,15 @@ helpviewer_keywords:
 - USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 04a9fcb300f3c3f374a3ee940df34c77d2516db0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a0414a27a14e937e7c58ca6ba74de3b6bfd6a2b0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="plan-guides"></a>Planhinweislisten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mit Planhinweislisten können Sie die Leistung von Abfragen optimieren, wenn Sie den Text der eigentlichen Abfrage in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nicht direkt ändern möchten oder können. Planhinweislisten beeinflussen die Abfrageoptimierung, indem Abfragehinweise oder ein fester Abfrageplan an die Abfragen angefügt werden. Die Verwendung von Planhinweislisten bietet sich z. B. an, wenn eine kleine Teilmenge von Abfragen in der Datenbankanwendung eines Drittanbieters nicht erwartungsgemäß funktioniert. In der Planhinweisliste geben Sie die Transact-SQL-Anweisung an, die optimiert werden soll, sowie entweder eine OPTION-Klausel mit den zu verwendenden Abfragehinweisen oder einen spezifischen Abfrageplan, der für die Optimierung der Abfrage verwendet werden soll. Wenn die Abfrage ausgeführt wird, vergleicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Transact-SQL-Anweisung mit der Planhinweisliste und fügt der Abfrage entweder zur Laufzeit die OPTION-Klausel hinzu oder verwendet den angegebenen Abfrageplan.  

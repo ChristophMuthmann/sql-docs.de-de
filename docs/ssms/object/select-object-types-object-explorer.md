@@ -16,13 +16,13 @@ ms.assetid: 6d27ab0b-a016-4fb3-9391-74c6a9c1991c
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b97e83af3e2b13a0995f24aa56a7622f34d1f327
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: afb32a83bc36c894ed2d44ed9763f9435a345f0e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="select-object-types-object-explorer"></a>Objekttypen auswählen (Objekt-Explorer)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mithilfe dieses Dialogfelds können Sie die Objekttypen angeben, die im Dialogfeld **Objekte auswählen** angezeigt werden.  

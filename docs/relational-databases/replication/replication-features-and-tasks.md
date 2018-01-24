@@ -17,15 +17,15 @@ helpviewer_keywords:
 - replication [SQL Server], interoperability
 ms.assetid: 47c613e4-7fe9-462a-89b4-659b14825b70
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fff6d14c8303b4f627492c258177331f8d7db2a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5a1b9183f8a9cf1c60bd399baf43825c4a3949f6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-features-and-tasks"></a>Replikationsfunktionen und -tasks
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Suchen Sie nach den Informationen, die am Entwurf und der Implementierung von Replikationslösungen beteiligte Personen – Designer, Entwickler, Analytiker oder Administratoren – benötigen.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Datenbankspiegelung und Replikation &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server-Replikation](../../relational-databases/replication/sql-server-replication.md)   
  [Technische Referenz &#40;Replikation&#41;](../../relational-databases/replication/technical-reference-replication.md)  
   

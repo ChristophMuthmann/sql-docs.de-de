@@ -26,13 +26,13 @@ ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1aa5d3107577a7d838d6ba813934b42f497db8a7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 33b5f17a28639d750e1c3df36c5619d33740c3db
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mithilfe des Abfrage- und Sicht-Designers können Sie die Datenempfangs- und Datenmanipulationsteile einer Anwendung erstellen und verwalten.  

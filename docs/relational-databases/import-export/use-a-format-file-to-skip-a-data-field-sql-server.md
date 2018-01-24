@@ -16,22 +16,22 @@ helpviewer_keywords:
 - skipping data fields when importing
 ms.assetid: 6a76517e-983b-47a1-8f02-661b99859a8b
 caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fbe24a2b8a4865121a3bf949be1434a23c0383de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 202385ebd84ef8ba9798be4f188d8cb4c82facf2
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Auslassen eines Datenfelds mithilfe einer Formatdatei (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Eine Datendatei kann mehr Felder enthalten, als Spalten in der Tabelle vorhanden sind. In diesem Thema wird beschrieben, wie Nicht-XML- und XML-Formatdateien an eine Datendatei mit mehr Feldern angepasst werden können, indem die Tabellenspalten den entsprechenden Datenfeldern zugeordnet und die übrigen Felder ignoriert werden.  Weitere Informationen finden Sie unter [Erstellen einer Formatdatei (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) .
 
 |Outline|
 |---|
-|[Beispieltestbedingungen](#etc)<br />&emsp;&#9679;&emsp;[Beispieltabelle](#sample_table)<br />&emsp;&#9679;&emsp;[Beispieldatendatei](#sample_data_file)<br />[Erstellen der Formatdateien](#create_format_file)<br />&emsp;&#9679;&emsp;[Erstellen einer Nicht-XML-Formatdatei](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[Ändern einer Nicht-XML-Formatdatei](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[Erstellen einer XML-Formatdatei](#xml_format_file)<br />&emsp;&#9679;&emsp;[Ändern einer XML-Formatdatei](#modify_xml_format_file)<br />[Importieren von Daten mithilfe einer Formatdatei zum Überspringen eines Datenfelds](#import_data)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und der Nicht-XML-Formatdatei](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und der XML-Formatdatei](#bcp_xml)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und der Nicht-XML-Formatdatei](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und der XML-Formatdatei](#bulk_xml)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET(BULK...) und der Nicht-XML-Formatdatei](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET(BULK...) und der XML-Formatdatei](#openrowset_xml)<p>                                                                                                                                                                                                                  </p>|
+|[Beispieltestbedingungen](#etc)<br />&emsp;&#9679;&emsp;[Beispieltabelle](#sample_table)<br />&emsp;&#9679;&emsp;[Beispieldatendatei](#sample_data_file)<br />[Erstellen der Formatdateien](#create_format_file)<br />&emsp;&#9679;&emsp;[Erstellen einer Nicht-XML-Formatdatei](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[Ändern einer Nicht-XML-Formatdatei](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[Erstellen einer XML-Formatdatei](#xml_format_file)<br />&emsp;&#9679;&emsp;[Ändern einer XML-Formatdatei](#modify_xml_format_file)<br />[Importieren von Daten mithilfe einer Formatdatei zum Überspringen eines Datenfelds](#import_data)<br />&emsp;&#9679;&emsp;[Verwenden von BCP- und der Nicht-XML-Formatdatei](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und der XML-Formatdatei](#bcp_xml)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und der Nicht-XML-Formatdatei](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und der XML-Formatdatei](#bulk_xml)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET(BULK...) und der Nicht-XML-Formatdatei](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET(BULK...) und der XML-Formatdatei](#openrowset_xml)<p>                                                                                                                                                                                                                  </p>|
   
 > [!NOTE]
 >  Mithilfe einer Nicht-XML- oder XML-Formatdatei kann der Massenimport einer Datendatei in die Tabelle ausgeführt werden. Hierzu kann ein [bcp-Hilfsprogramm](../../tools/bcp-utility.md)-Befehl, eine [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)- oder eine INSERT ... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)-Anweisung verwendet werden. Weitere Informationen finden Sie unter [Massenimport von Daten mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).
@@ -106,7 +106,7 @@ Vergleichen Sie die vorgenommenen Änderungen:
 
 ```
 
-Die geänderte Formatdatei berücksichtigt nun:
+Die geänderte Formatdatei entspricht nun Folgendem:
 * 4 Datenfelder
 * Das erste Datenfeld in `myTestSkipField.bcp` ist der ersten Spalte zugeordnet, ` myTestSkipField.. PersonID`
 * Das zweite Datenfeld in `myTestSkipField.bcp` ist keiner Spalte zugeordnet.
@@ -162,7 +162,7 @@ Vergleichen Sie die vorgenommenen Änderungen:
 </BCPFORMAT>
 ```
 
-Die geänderte Formatdatei berücksichtigt nun:
+Die geänderte Formatdatei entspricht nun Folgendem:
 * 4 Datenfelder
 * FIELD 1, das COLUMN 1 entspricht, wird der ersten Tabellenspalte zugeordnet, `myTestSkipField.. PersonID`
 * FIELD 2 entspricht keiner COLUMN und wird daher keiner Tabellenspalte zugeordnet.
@@ -170,7 +170,7 @@ Die geänderte Formatdatei berücksichtigt nun:
 * FIELD 4, das COLUMN 4 entspricht, wird der dritten Tabellenspalte zugeordnet, `myTestSkipField.. LastName`
 
 ## Importieren von Daten mithilfe einer Formatdatei zum Überspringen eines Datenfelds<a name="import_data"></a>
-In den folgenden Beispielen werden die Datenbank, die Datendatei und die Formatdateien verwendet, die oben erstellt wurden.
+Die nachstehenden Beispiele verwenden die oben erstellte Datenbank, Datendatei und Formatdatei.
 
 ### Verwenden von [bcp](../../tools/bcp-utility.md) und der [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bcp_nonxml"></a>
 Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
@@ -255,7 +255,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 ```
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

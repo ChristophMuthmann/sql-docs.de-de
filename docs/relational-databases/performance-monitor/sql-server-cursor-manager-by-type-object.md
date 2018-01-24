@@ -16,22 +16,22 @@ helpviewer_keywords:
 - SQLServer:Cursor Manager by Type
 ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b896d5a57046912fec183be926120dc98398bbd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b818f7a5222dc92896e9624ef7cbc89f05fe2af8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>SQL Server, Cursor-Manager nach Typ-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das **SQLServer:Cursor-Manager nach Typ**-Objekt stellt Leistungsindikatoren zum Überwachen von Cursorn bereit, die nach dem Typ gruppiert sind.  
   
  Diese Tabelle beschreibt die Leistungsindikatoren des **SQLServer:Cursor-Manager nach Typ** -Objekts von SQL Server.  
   
-|Leistungsindikatoren des SQLServer:Cursor-Manager nach Typ-Objekts|Beschreibung|  
+|Leistungsindikatoren des SQLServer:Cursor-Manager nach Typ-Objekts|Description|  
 |-------------------------------------|-----------------|  
 |**Aktive Cursor**|Anzahl der aktiven Cursor.|  
 |**Cachetrefferquote**|Das Verhältnis zwischen Cachetreffern und -suchvorgängen.|  
@@ -45,14 +45,14 @@ ms.lasthandoff: 11/17/2017
   
  Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
-|Cursor-Manager-Instanz|Beschreibung|  
+|Cursor-Manager-Instanz|Description|  
 |-----------------------------|-----------------|  
 |**_Total**|Informationen für alle Cursor.|  
 |**API Cursor**|Nur die API-Cursor-Informationen.|  
 |**TSQL Global Cursor**|Nur die globalen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Cursorinformationen.|  
 |**TSQL Local Cursor**|Nur die lokalen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Cursorinformationen.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

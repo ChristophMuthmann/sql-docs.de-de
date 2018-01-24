@@ -16,13 +16,13 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 caps.latest.revision: "8"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d1dba346ae2e2cb5f68ff93613a2f3c12729780
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9e7f97c11f27f8eb1773c8535ace8e409290750d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>Lokale Überwachung für Feedbackerfassung zur SQL Server-Nutzung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

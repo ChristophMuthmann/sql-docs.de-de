@@ -16,15 +16,15 @@ helpviewer_keywords:
 - peer-to-peer transactional replication, conflict detection
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d27cca1b3e5a35dfcf405b8f10cd0e099e2a756
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ec8c660444c11a95896c2d3e0cfd47a7d8bc8514
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>Peer-zu-Peer - Konflikterkennung bei der Peer-zu-Peer-Replikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Bei der Peer-zu-Peer-Transaktionsreplikation können Sie an einem beliebigen Knoten in der Topologie Daten einfügen, aktualisieren oder löschen, und Datenänderungen können an andere Knoten übermittelt werden. Da Sie Daten an einem beliebigen Knoten ändern können, können Datenänderungen an verschiedenen Knoten untereinander in Konflikt stehen. Wird eine Zeile an mehr als einem Knoten geändert, kann es zu einem Konflikt kommen, oder das Update kann sogar verloren gehen, wenn die Zeile an andere Knoten übermittelt wird.  
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/17/2017
   
     5.  Führen Sie [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) aus: Geben Sie 'p2p_continue_onconflict' für den @property-Parameter und **false** für den @value-Parameter an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

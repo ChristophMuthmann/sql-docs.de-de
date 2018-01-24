@@ -25,15 +25,15 @@ f1_keywords:
 helpviewer_keywords: wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25be7d99d07300731a9395b096f316faef973eef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: edef05d3a9cd1ae3a363a4cdead10130ee42459f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Assistent zum Verwalten von Partitionen (F1-Hilfe)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mit dem **Assistenten zum Verwalten von Partitionen** können Sie vorhandene partitionierte Tabellen durch Partitionswechsel oder Implementierung eines Szenarios mit gleitendem Fenster verwalten und ändern. Dieser Assistent vereinfacht die Verwaltung von Partitionen und die Migration von Daten in die und aus den Tabellen.  
@@ -46,10 +46,10 @@ ms.lasthandoff: 11/17/2017
   
  Allgemeine Informationen zu Partitionen und Indizes finden Sie unter [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
- Dieser Abschnitt stellt die Informationen bereit, die zum Verwalten, Ändern und Implementieren von Partitionen mit dem **Assistenten zum Verwalten von Partitionen** erforderlich sind.  
+ Dieser Abschnitt stellt die Informationen bereit, die zum Verwalten, Ändern und Implementieren von Partitionen mit dem **Assistenten zum Verwalten von Partitionen**erforderlich sind.  
   
 ##  <a name="Top"></a> In diesem Abschnitt  
- Die folgenden Abschnitte stellen Hilfe für die Seiten des **Assistenten zum Verwalten von Partitionen**bereit.  
+ Die folgenden Abschnitte stellen Hilfe für die Seiten des **Assistenten zum Verwalten von Partitionen** bereit.  
   
  [Assistent zum Verwalten von Partitionen (Seite 'Partitionsaktion auswählen')](#SelectPartitionAction)  
   
@@ -180,7 +180,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="NewJob"></a> Neuer Auftragszeitplan (Seite)  
  Verwenden Sie die Seite **Neuer Auftragszeitplan** , um die Eigenschaften des Zeitplans anzuzeigen und zu ändern.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  Wählen Sie den Typ des gewünschten Zeitplans für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag aus.  
   
  **Name**  
@@ -192,7 +192,7 @@ ms.lasthandoff: 11/17/2017
  **Zeitplantyp**  
  Wählen Sie den Zeitplantyp aus.  
   
- **Aktiviert**  
+ **Enabled**  
  Aktivieren oder deaktivieren Sie den Zeitplan.  
   
 ### <a name="recurring-schedule-types-options"></a>Zeitplantypoptionen für wiederkehrende Aufträge  
@@ -272,7 +272,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="Progress"></a> Status (Seite)  
  Auf der Seite **Status** können Sie Statusinformationen zu den Aktionen im **Assistenten zum Verwalten von Partitionen**anzeigen. Je nach den im Assistenten ausgewählten Optionen enthält die Seite **Status** eine oder mehrere Aktionen. Im oberen Feld werden der Gesamtstatus des Assistenten und die Anzahl der empfangenen Status-, Fehler- und Warnmeldungen angezeigt.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Details**  
  Stellt für jede vom Assistenten ausgeführte Aktion Informationen zur Aktion, zum Status und zu den zurückgegebenen Meldungen bereit.  
   
@@ -307,7 +307,7 @@ ms.lasthandoff: 11/17/2017
   
  ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In diesem Abschnitt](#Top)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

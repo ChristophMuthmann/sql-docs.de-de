@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.addeditfilter.f1
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a859ba6929e849ea753b3cf5c86c428afbaaadfb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0461e699bbf3593f87567d3972aa7e260bca3111
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-or-edit-filter"></a>Hinzufügen oder Bearbeiten von Filtern
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe der Dialogfelder **Filter hinzufügen** und **Filter bearbeiten** können Sie statische Zeilenfilter und parametrisierte Zeilenfilter hinzufügen und bearbeiten.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
   
  Mithilfe von Zeilenfiltern können Sie eine zu veröffentlichende Teilmenge von Zeilen aus einer Tabelle angeben. Mithilfe von Zeilenfiltern können Sie Zeilen entfernen, die Benutzern nicht angezeigt werden sollen (z. B. Zeilen mit vertraulichen oder streng vertraulichen Informationen). Mit Zeilenfiltern können Sie auch unterschiedliche Datenpartitionen erstellen, die an verschiedene Abonnenten übermittelt werden. Indem Sie unterschiedliche Datenpartitionen für verschiedene Abonnenten veröffentlichen, können Sie auch Konflikte vermeiden, die andernfalls dadurch entstehen würden, dass mehrere Abonnenten dieselben Daten aktualisieren.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Dieses Dialogfeld umfasst einen zweistufigen Vorgang für die Transaktions- und Momentaufnahmeveröffentlichungen sowie einen dreistufigen Vorgang für Mergeveröffentlichungen. Für alle Veröffentlichungstypen ist es erforderlich, dass Sie eine zu filternde Tabelle und eine oder mehrere Spalten auswählen, die im Filter eingeschlossen sein sollen. Der Filter wird als standardmäßige WHERE-Klausel definiert.  
   
 1.  **Wählen Sie die zu filternde Tabelle aus**  
@@ -64,11 +64,11 @@ ms.lasthandoff: 11/17/2017
   
  Nachdem Sie einen Filter hinzugefügt oder bearbeitet haben, klicken Sie auf **OK** , um die Änderungen zu speichern und das Dialogfeld zu schließen. Der von Ihnen angegebene Filter wird analysiert und für die Tabelle in der SELECT-Klausel ausgeführt. Wenn die Filteranweisung Syntaxfehler oder andere Probleme enthält, werden Sie benachrichtigt und können die Filteranweisung bearbeiten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filtern von veröffentlichten Daten](../../relational-databases/replication/publish/filter-published-data.md)   
- [Verknüpfungsfilter](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

@@ -18,13 +18,13 @@ ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 452b2bc9e11d0f2d1dd06767efe68d48bfdcef8d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c958466070df5f51e69e8aa0d665b65177794dff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard"></a>Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Der Assistent zum Konfigurieren der Sicherheit für die Datenbankspiegelung kann verwendet werden, um die Sicherheitseinstellungen aller oder mehrerer der an der Spiegelung beteiligten Serverinstanzen zu Beginn zu konfigurieren. Der Assistent ist mit der Seite **Wird gespiegelt** im Dialogfeld **Datenbankeigenschaften** verknüpft.  
@@ -35,11 +35,11 @@ ms.lasthandoff: 11/20/2017
   
 2.  Erweitern Sie **Datenbanken**, und wählen Sie die zu spiegelnde Datenbank aus.  
   
-3.  Klicken Sie mit der rechten Maustaste auf die Datenbank, wählen Sie **Tasks**aus, und klicken Sie anschließend auf **Spiegeln**. Dadurch wird die Seite [Spiegelung](../../relational-databases/databases/database-properties-mirroring-page.md) des Dialogfelds **Datenbankeigenschaften** geöffnet.  
+3.  Klicken Sie mit der rechten Maustaste auf die Datenbank, wählen Sie **Tasks**aus, und klicken Sie dann auf **Spiegeln**. Dadurch wird die Seite [Spiegelung](../../relational-databases/databases/database-properties-mirroring-page.md) des Dialogfelds **Datenbankeigenschaften** geöffnet.  
   
 4.  Klicken Sie auf **Sicherheit konfigurieren**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Datenbankeigenschaften &#40;Seite Wird gespiegelt&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  

@@ -15,13 +15,13 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 caps.latest.revision: "72"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9e2f0d6a57d890eaeb673d213c48245e84e5624
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a960b0862617027d77f28a7acc247312f461a78f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>Lokale Überwachung für Feedbackerfassung zur SSMS-Nutzung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL Server Management Studio (SSMS) enthält internetaktivierte Features, die anonyme Featurenutzungsdaten erfassen und an Microsoft senden können. SSMS erfasst möglicherweise Standardinformationen zu Ihrem Computer und Informationen zur Nutzung und Leistung, die möglicherweise an Microsoft übermittelt und analysiert werden, um die Qualität, Sicherheit und Zuverlässigkeit von SSMS zu optimieren. Wir erfassen nicht Ihren Namen, Ihre Adresse oder andere Kontaktinformationen. Weitere Informationen finden Sie in den [Datenschutzbestimmungen von SQL Server](https://www.microsoft.com/en-us/privacystatement/SQLServer/Default.aspx).

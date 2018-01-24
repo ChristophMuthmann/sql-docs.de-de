@@ -22,15 +22,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c9b6f552ef52af748dcce74977bfc74806c9546
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 10bc53216b65298837a5086adf89550ad97606a7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-merge-replication-performance"></a>Verbessern der Leistung der Mergereplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Im Anschluss an die in [Verbessern der allgemeinen Replikationsleistung](../../../relational-databases/replication/administration/enhance-general-replication-performance.md) beschriebenen Überlegungen zur allgemeinen Leistung sollten Sie sich Gedanken über die im Folgenden im Zusammenhang mit einer Mergereplikation beschriebenen zusätzlichen Aspekte machen.  
@@ -69,11 +69,11 @@ ms.lasthandoff: 11/17/2017
   
 -   Verwenden Sie vorausberechnete Partitionen mit parametrisierten Filtern (diese Funktion wird standardmäßig verwendet). Weitere Informationen finden Sie unter [Optimieren Parametrisierter Filter-Leistung mit Vorausberechneten Partitionen ](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
-     Vorausberechnete Partitionen setzen dem Filterverhalten bestimmte Grenzen. Wenn Ihre Anwendung mit diesen Grenzen nicht zurecht kommt, legen Sie für die **keep_partition_changes** -Option **True**fest. Dies führt zu einer Leistungssteigerung. Weitere Informationen finden Sie unter [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     Vorausberechnete Partitionen setzen dem Filterverhalten bestimmte Grenzen. Wenn Ihre Anwendung mit diesen Grenzen nicht zurecht kommt, legen Sie für die **keep_partition_changes** -Option **True**fest. Dies führt zu einer Leistungssteigerung. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Verwenden Sie bei Daten, die zwar gefiltert, nicht aber von mehreren Benutzer genutzt werden sollen, Partitionen, die sich nicht überlappen.  
   
-     Die Replikation kann die Leistung bei Daten optimieren, die sich nicht in mehreren Partitionen befinden bzw. an mehrere Abonnements gesendet werden. Weitere Informationen finden Sie unter [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     Die Replikation kann die Leistung bei Daten optimieren, die sich nicht in mehreren Partitionen befinden bzw. an mehrere Abonnements gesendet werden. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Erstellen Sie keine komplexen Joinfilterhierarchien.  
   

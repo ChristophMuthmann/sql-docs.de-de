@@ -19,13 +19,13 @@ ms.assetid: 493dd3d0-50c6-4d8d-aba1-cd7c3030a581
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b8f75dcd8398205bdf4f9a2a1b553cea06e47174
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1c1d9f79f85f926346dabd488a3231af2b2fbfce
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-management-studio-web-browser"></a>SQL Server Management Studio-Webbrowser
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

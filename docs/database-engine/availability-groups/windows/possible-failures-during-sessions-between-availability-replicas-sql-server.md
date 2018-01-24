@@ -19,13 +19,13 @@ ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fde99df0bca010b8920267b1b41de87fbe38e2bf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e1532ade775800e7688fca8efa844ba535b95bab
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Mögliche Fehler bei Sitzungen zwischen Verfügbarkeitsreplikaten (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Physische, Betriebssystem- oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Probleme können einen Fehler in einer Sitzung zwischen zwei Verfügbarkeitsreplikaten verursachen. Ein Verfügbarkeitsreplikat überprüft Komponenten, auf denen Sqlservr.exe beruht, nicht regelmäßig, um festzustellen, ob sie ordnungsgemäß ausgeführt werden oder nicht. Bei einigen Fehlertypen meldet die betroffene Komponente der Sqlservr.exe jedoch einen Fehler. Ein von einer anderen Komponente gemeldeter Fehler wird als *schwerwiegender Fehler*bezeichnet. Um andere Fehler zu erkennen, die andernfalls unbemerkt blieben, implementiert [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] einen eigenen Sitzungstimeoutmechanismus. Gibt den Zeitraum für das Sitzungstimeout in Sekunden an. Dieser Timeoutzeitraum ist die maximale Wartezeit einer Serverinstanz auf den Erhalt einer PING-Meldung von einer anderen Instanz, bevor sie annimmt, dass keine Verbindung zur anderen Instanz besteht. Wenn ein Sitzungstimeout zwischen zwei Verfügbarkeitsreplikaten auftritt, gehen die Verfügbarkeitsreplikate davon aus, dass ein Fehler aufgetreten ist, und deklarieren einen *Softwarefehler*.  
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="responding-to-an-error"></a>Reagieren auf Fehler  
  Ungeachtet des Fehlertyps reagiert eine Serverinstanz, die einen Fehler erkennt, abhängig von ihrer Rolle, dem Verfügbarkeitsmodus der Sitzung und dem Status der anderen Verbindungen in der Sitzung. Informationen darüber, was beim Verlust eines Partners geschieht, finden Sie unter [Verfügbarkeitsmodi &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  **So ändern Sie den Timeoutwert (nur Verfügbarkeitsmodus mit synchronem Commit)**  
   
 -   [Ändern des Sitzungstimeouts für ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Abfrage **session_timeout** in [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

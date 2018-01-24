@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.common.extendedproperties.f1
 ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ada959607aff6c1482194b19e91284cf1aaef67e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a40f19346fe5c40c4c7f6aa1426d2a58081e564a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-object-extended-properties-page"></a>Datenbankobjekt (Seite Erweiterte Eigenschaften)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Mithilfe der erweiterten Eigenschaften können Sie Datenbankobjekten benutzerdefinierte Eigenschaften hinzufügen. Mithilfe dieser Seite können Sie die erweiterten Eigenschaften für das ausgewählte Objekt anzeigen und ändern. Die Seite **Erweiterte Eigenschaften** ist für alle Datenbankobjekttypen gleich.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
  **Delete**  
  Entfernt die ausgewählte erweiterte Eigenschaft.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Katalogsichten für erweiterte Eigenschaften &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/f39fd324-efd4-4468-884c-bf77ed1a026f)  
   
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 013f7f8de93cdeb172200a969a17152657b514ab
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bbf1758426b38100a75c889936185e2e152691a3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="retrieve-and-query-xml-data"></a>Abrufen und Abfragen von XML-Daten
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] In diesem Thema werden die Abfrageoptionen beschrieben, die für die Abfrage von XML-Daten anzugeben sind. Es beschreibt auch die Teile der XML-Instanzen, die nicht beibehalten werden, wenn sie in Datenbanken gespeichert werden.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] behält den Inhalt der XML-Instanz bei. Allerdings werden die Aspekte der XML-Instanz nicht beibehalten, die im Hinblick auf das XML-Datenmodell als nicht signifikant betrachtet werden. Das bedeutet, dass eine abgerufene XML-Instanz möglicherweise nicht mit der Instanz identisch ist, die auf dem Server gespeichert wurde, aber die gleichen Informationen enthält.  
   
 ### <a name="xml-declaration"></a>XML-Deklaration  
- Die XML-Deklaration in einer Instanz wird nicht beibehalten, wenn die Instanz in der Datenbank gespeichert wird. Beispiel:  
+ Die XML-Deklaration in einer Instanz wird nicht beibehalten, wenn die Instanz in der Datenbank gespeichert wird. Zum Beispiel:  
   
 ```  
 CREATE TABLE T1 (Col1 int primary key, Col2 xml)  
@@ -85,7 +85,7 @@ SELECT @x.query('/*')
 GO  
 ```  
   
- Das Namespacepräfix des Ergebnisses kann unterschiedlich sein. Beispiel:  
+ Das Namespacepräfix des Ergebnisses kann unterschiedlich sein. Zum Beispiel:  
   
 ```  
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>  
@@ -108,7 +108,7 @@ GO
  Wenn die Optionen nicht wie dargestellt festgelegt sind, schlagen Abfragen und Änderungen für **xml** -Datentypmethoden fehl.  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md)  
   
   

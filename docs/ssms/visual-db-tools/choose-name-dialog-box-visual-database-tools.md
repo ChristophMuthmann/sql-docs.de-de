@@ -19,13 +19,13 @@ ms.assetid: cd6b5527-c032-473e-b954-1a549e1cdf4a
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d0b04ebc0490fe8eebdba130c5b5f1724549496
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dae6ccad669be3cb1bd3764e56f7a1033a09ab97
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>Namen auswählen (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dieses Dialogfeld wird angezeigt, wenn Sie **\<Tabellenname> speichern**, **<DiagramName> speichern** oder **<ViewName> speichern** aus dem Menü **Datei** auswählen.  

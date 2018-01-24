@@ -24,15 +24,15 @@ helpviewer_keywords:
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 581c46bbb59d9339bc91712a4e100d922e76813f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e32ecad2ca9d89f31e7a6b7e05c650a66ffc8c3a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML-Schemaauflistungen (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Wie im Thema [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) beschrieben wird, ermöglicht SQL Server eine native Speicherung von XML-Daten mithilfe des **xml**-Datentyps. Optional können Sie über eine XML-Schemaauflistung einer Variablen oder einer Spalte vom **xml** -Typ XSD-Schemas zuordnen. Die XML-Schemaauflistung speichert die importierten XML-Schemas und wird dann für folgende Zwecke verwendet:  
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
   
 -   MODELGROUP  
   
- Beispiel:  
+ Zum Beispiel:  
   
 -   **SomeAttribute** ist eine ATTRIBUTE-Komponente.  
   
@@ -211,7 +211,7 @@ N'http://www.microsoft.com/books')
   
 -   Erstellen Sie eine Tabelle, die eine **xml** -Datentypspalte enthält, um die XML-Schemas zu speichern, und laden Sie diese auch in das XML-Typsystem. Sie können dann diese XML-Spalte abfragen, indem Sie **xml** -Datentypmethoden verwenden. Für diese Spalte können Sie auch einen XML-Index erstellen. Allerdings muss die Anwendung für diese Vorgehensweise die Konsistenz zwischen den in der XML-Spalte gespeicherten XML-Schemas und dem XML-Typsystem beibehalten. Wenn Sie z. B. den XML-Schemanamespace aus dem XML-Typsystem löschen, müssen Sie ihn auch aus der Tabelle löschen, damit die Konsistenz beibehalten wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Anzeigen einer gespeicherten XML-Schemaauflistung](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)   
  [Vorverarbeiten eines Schemas zum Zusammenführen eingeschlossener Schemas](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)   
  [Anforderungen und Einschränkungen für XML-Schemaauflistungen auf dem Server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  

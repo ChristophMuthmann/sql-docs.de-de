@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.swb.backupdatabase.mediaoptions.f1
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36f6bc6f33194ce8bb4cf110fa8bbd44fd870a40
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a220cb8eb2218843e460741c016120787b943b0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-database-media-options-page"></a>Datenbank sichern (Seite 'Medienoptionen')
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Auf der Seite **Medienoptionen** des Dialogfelds **Datenbank sichern** können Sie Medienoptionen zur Sicherung der Datenbank anzeigen oder ändern.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Wenn Sie eine Sicherungsaufgabe mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) -Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und anschließend ein Ziel für das Skript auswählen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ### <a name="overwrite-media"></a>Medium überschreiben  
  Mit den Optionen des Bereichs **Medium überschreiben** kann gesteuert werden, wie die Sicherung auf das Medium geschrieben wird. Wenn Sie im Dialogfeld Datenbank sichern auf der Seite Allgemein die Option URL (Windows Azure-Speicher) als Sicherungsziel auswählen, sind die Optionen im Abschnitt Medium überschreiben deaktiviert. Sie können eine Sicherung mithilfe der Transact-SQL-Anweisung **BACKUP TO URL. WITH FORMAT** überschreiben. Weitere Informationen finden Sie unter [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
  **Band vor dem Entladen zurückspulen**  
  Das Band wird vor dem Entladen freigegeben und zurückgespult. Diese Option ist nur aktiviert, wenn **Band nach dem Sichern entladen** ausgewählt ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Sichern von Dateien und Dateigruppen &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

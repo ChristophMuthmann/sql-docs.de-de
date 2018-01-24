@@ -16,15 +16,15 @@ helpviewer_keywords:
 - column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0871c2e084749a9ceb79192e55e3a99cb24eb351
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fece12352dc2691fdab3906a00f8cb64151590b2
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-column-sets"></a>Verwenden von Spaltensätzen
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -119,21 +119,21 @@ GO
   
 |Datentyp|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Maximale Länge|Genauigkeit|Dezimalstellen|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
-|**char**, **varchar**, **binary**|-1|'Standardwert'|0|0|8000|Nicht zutreffend**|Nicht zutreffend|  
-|**nvarchar**|-1|'Standardwert'|0|0|4000|Nicht zutreffend|Nicht zutreffend|  
-|**decimal**, **float**, **real**|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|18|0|  
-|**integer**, **bigint**, **tinyint**, **smallint**|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|  
-|**datetime2**|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|7|  
-|**datetime offset**|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|7|  
-|**datetime**, **date**, **smalldatetime**|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|  
-|**money**, **smallmoney**|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|  
-|**Uhrzeit**|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|7|  
+|**char**, **varchar**, **binary**|-1|'Standardwert'|0|0|8000|Nicht zutreffend**|Nicht verfügbar|  
+|**nvarchar**|-1|'Standardwert'|0|0|4000|Nicht verfügbar|Nicht verfügbar|  
+|**decimal**, **float**, **real**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|18|0|  
+|**integer**, **bigint**, **tinyint**, **smallint**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|  
+|**datetime2**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|7|  
+|**datetime offset**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|7|  
+|**datetime**, **date**, **smalldatetime**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|  
+|**money**, **smallmoney**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|  
+|**Uhrzeit**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|7|  
   
  \*  „localeID -1“ ist das Standardgebietsschema. Das englischsprachige Gebietsschema ist 1033.  
   
  **  Nicht zutreffend = Bei einem SELECT-Vorgang für den Spaltensatz werden für diese Attribute keine Werte ausgegeben. Gibt eine Fehlermeldung zurück, wenn für dieses Attribut von dem Aufrufer in der für einen Spaltensatz in einem INSERT- oder UPDATE-Vorgang bereitgestellten XML-Darstellung ein Wert angegeben wird.  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
  Das Sicherheitsmodell für Spaltensätze funktioniert ähnlich wie das Sicherheitsmodell zwischen Tabellen und Spalten. Spaltensätze können als Minitabellen visualisiert werden, und die SELECT-Vorgänge entsprechen den SELECT *-Vorgängen für diese Minitabellen. Bei der Beziehung zwischen Spaltensatz und Sparsespalten handelt es sich jedoch nicht um einen Container, sondern um eine Gruppenbeziehung. Das Sicherheitsmodell prüft die Sicherheit der Spaltensatz-Spalte, wobei die DENY-Vorgänge für die zugrunde liegenden Sparsespalten berücksichtigt werden. Für das Sicherheitsmodell gelten die folgenden zusätzlichen Eigenschaften:  
   
 -   Wie bei anderen Spalten in der Tabelle können Sicherheitsberechtigungen für den Spaltensatz erteilt und aufgehoben werden.  
@@ -263,7 +263,7 @@ WHERE DocID = 3 ;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden von Spalten mit geringer Dichte](../../relational-databases/tables/use-sparse-columns.md)  
   
   

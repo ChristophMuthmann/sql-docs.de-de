@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f586f008a1a646698e01e75f3175f7b56f8a311
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 663d8b3a7f8dbb27813ecbdd3f2aafdb64ed94d5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Verwenden des Hilfsprogramm-Explorers zum Verwalten des SQL Server-Hilfsprogramms
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Als Komponente von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt der Hilfsprogramm-Explorer eine Verbindung mit [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanzen her, um im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hilfsprogramm eine Strukturansicht aller Objekte bereitzustellen. Der Inhaltsbereich des Hilfsprogramm-Explorers bietet verschiedene Möglichkeiten zur Anzeige von Zusammenfassungsdaten und detaillierten Daten zum Status verwalteter Instanzen von SQL Server. Der Hilfsprogramm-Explorer stellt auch eine Benutzeroberfläche für die Anzeige und Verwaltung von Richtliniendefinitionen bereit. Die Funktionen des Hilfsprogramm-Explorers können sich je nach den Objekten im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm geringfügig unterscheiden; sie umfassen in der Regel jedoch die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm verwalteten Objekte, Daten und Richtlinien. Weitere Informationen finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
@@ -70,9 +70,9 @@ ms.lasthandoff: 11/17/2017
   
  Powershell bietet zwar keine F1-Hilfe, verfügt jedoch über ein **Get-Help** -Cmdlet mit Informationen zur Verwendung von Powershell. Weitere Informationen zur Verwendung von Get-Help finden Sie unter [Aufrufen der SQL Server PowerShell-Hilfe](../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Konfigurieren von Integritätsrichtlinien &#40;SQL Server-Hilfsprogramm&#41;](../../relational-databases/manage/configure-health-policies-sql-server-utility.md)   
- [Objekt-Explorer](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)  
+ [Objekt-Explorers](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)  
   
   

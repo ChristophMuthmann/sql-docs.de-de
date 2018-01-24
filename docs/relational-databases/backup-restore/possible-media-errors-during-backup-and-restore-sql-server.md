@@ -26,21 +26,21 @@ helpviewer_keywords:
 - checksums [SQL Server]
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8bf78aac25b2d9ab927dfe822f140c8dac7bcb9d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7422aabdffd7985332c669964f0eb518a210ec07
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Mögliche Medienfehler während der Sicherung und Wiederherstellung (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] haben Sie die Möglichkeit, trotz erkannter Fehler eine Datenbank wiederherzustellen. Ein wichtiger neuer Fehlererkennungsmechanismus ist die optionale Erstellung einer Sicherungsprüfsumme, die von einem Sicherungsvorgang erstellt und von einem Wiederherstellungsvorgang überprüft wird. Sie können steuern, ob vom Vorgang auf Fehler geprüft wird, und ob der Vorgang beim Auftreten eines Fehlers beendet oder fortgesetzt wird. Wenn eine Sicherung eine Sicherungsprüfsumme enthält, kann mithilfe von RESTORE- und RESTORE VERIFYONLY-Anweisungen auf Fehler hin geprüft werden.  
   
 > [!NOTE]  
->  Gespiegelte Sicherungen bieten bis zu fünf Kopien (Spiegel) eines Mediensatzes, womit alternative Kopien für die Wiederherstellung zur Verfügung gestellt werden, die durch beschädigte Medien ausgelöst wurden. Weitere Informationen finden Sie unter [Gespiegelte Sicherungsmediensätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
+>  Gespiegelte Sicherungen bieten bis zu fünf Kopien (Spiegel) eines Mediensatzes, womit alternative Kopien für die Wiederherstellung zur Verfügung gestellt werden, die durch beschädigte Medien ausgelöst wurden. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Gespiegelte Sicherungsmediensätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)noch nicht kennen.  
   
   
 ##  <a name="BckChecksums"></a> Sicherungsprüfsummen  
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Angeben, ob ein Sicherungs- oder Wiederherstellungsvorgang fortgesetzt wird, nachdem ein Fehler festgestellt wurde &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   

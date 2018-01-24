@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Web synchronization, security architecture
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a582eb3debf641b5704e051e67c49104a83f270c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 94de766b7e039aa2b66d900202fff0d458b0f358
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Sicherheitsarchitektur für die Websynchronisierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ermöglicht eine präzise Steuerung der Konfiguration der Websynchronisierungssicherheit. In diesem Thema wird eine umfassende Liste aller Komponenten bereitgestellt, die in eine Websynchronisierungskonfiguration einbezogen werden können, und Informationen zu den zwischen den Komponenten hergestellten Verbindungen. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="f-connection-to-the-distributor"></a>F. Verbindung zum Verteiler  
  Die Mergereplikationssynchronisierung, die auf dem Computer mit IIS gehostet wird, stellt auch Verbindungen zum Verteiler her. Die Mergereplikationssynchronisierung stellt die Verbindung zum Verteiler entweder mithilfe der Windows-Authentifizierung oder der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung her. Die Windows-Benutzer- oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldung, die Sie angeben, muss folgende Kriterien erfüllen:  
   
--   Sie muss in der Veröffentlichungszugriffsliste (Publication Access List oder PAL) enthalten sein. Weitere Informationen finden Sie unter [Schützen des Verlegers](../../../relational-databases/replication/security/secure-the-publisher.md).  
+-   Sie muss in der Veröffentlichungszugriffsliste (Publication Access List oder PAL) enthalten sein. Weitere Informationen finden Sie unter [Schützen des Verteilers](../../../relational-databases/replication/security/secure-the-publisher.md).  
   
 -   Sie muss mit einem Datenbankbenutzer in der Verteilungsdatenbank verknüpft sein. Der Benutzer kann der **Guest** -Benutzer sein.  
   
@@ -140,8 +140,8 @@ ms.lasthandoff: 11/17/2017
 |---------------------|------------------------------------|  
 |Beliebiger Windows-Benutzer, der über die erforderlichen Berechtigungen verfügt.|Internetinformationsdienste-Manager (IIS). |  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren der Websynchronisierung](../../../relational-databases/replication/configure-web-synchronization.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md)   
  [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
   

@@ -18,20 +18,20 @@ helpviewer_keywords:
 - Database Mirroring object
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49461bb2ff928355259b66e4c468eed5ce4e8879
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 751d65e88be75199a2f6f6a892e5cc221b0a8006
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server, Datenbankspiegelung (Objekt)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das **SQLServer:Datenbankspiegelung**-Leistungsobjekt enthält Leistungsindikatoren, die Informationen zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankspiegelung melden. In der nachfolgenden Tabelle sind die in diesem Objekt enthaltenen Indikatoren aufgelistet.  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
 |**Empfangene Bytes/Sekunde**|Anzahl von empfangenen Byte pro Sekunde.|  
 |**Gesendete Byte/Sekunde**|Anzahl von gesendeten Byte pro Sekunde.|  
@@ -58,10 +58,10 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Auf jedem Partner wird abhängig von der Rolle, die der Partner derzeit ausführt, für einige der Indikatoren der Wert 0 angezeigt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Mithilfe der Leistungsindikatoren können Sie die Leistung der Datenbankspiegelung überwachen. Beispielsweise können Sie den Indikator **Transaktionsverzögerung** untersuchen, um festzustellen, ob die Datenbankspiegelung Auswirkungen auf die Leistung des Prinzipalservers hat, oder Sie können die Indikatoren **Wiederholungswarteschlange** und **Protokollsende-Warteschlange** untersuchen, um festzustellen, wie gut die Spiegeldatenbank mit der Prinzipaldatenbank Schritt halten kann. Mit dem Leistungsindikator **Gesendete Protokollbytes/Sekunde** können Sie überwachen, wie viele Protokollbytes pro Sekunde gesendet wurden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

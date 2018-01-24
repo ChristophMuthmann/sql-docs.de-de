@@ -19,13 +19,13 @@ ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ace503d33170b10379ccbdab94b9860e2689946
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d96421cdb127c87165fef692e94265ffaf2d3f51
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>Öffnen von Datenbankdiagrammen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Nach dem Öffnen eines Datenbankdiagramms kann die Struktur des Diagramms angezeigt oder geändert werden.  

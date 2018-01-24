@@ -18,13 +18,13 @@ ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fe328cd267fd93be9bf6745b28de1ef710d31d4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d4f7e1e866b10bedc5c43e21c4ec8b20c723f4d7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="run-queries-visual-database-tools"></a>Ausführen von Abfragen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Nachdem Sie das Erstellen der Abfrage abgeschlossen haben, können Sie die Abfrage ausführen.  

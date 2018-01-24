@@ -18,12 +18,12 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 caps.latest.revision: "14"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 571f4f13be8ddcfaf2bd1b4d649df0ef09ba6bfc
-ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
+manager: craigg
+ms.openlocfilehash: 5a23b32644a51bf4e46cab280c7d382d2cb1c786
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Konfigurieren von SQL Server in einer Server Core-Installation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieses Thema enthält Details zum Konfigurieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für eine Server Core-Installation.  
@@ -229,7 +229,7 @@ $Tcp
   
  Sie können das Hilfsprogramm in der Administrator-Eingabeaufforderung auf Server Core mit der Syntax starten, die im Thema [SQLdiag Utility](../../tools/sqldiag-utility.md)angegeben ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Installieren von SQL Server unter Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
  [Themen zu Vorgehensweisen für die Installation](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   

@@ -20,13 +20,13 @@ ms.assetid: 05f1ba1d-465f-4e36-84bb-21b963c9b8f9
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6a04a3e2beadefdd94596e215eb972c0af4a7ad
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 785774a5caa5409fcedee6c28bc326cf724c9ffa
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>Hinzufügen abgeleiteter Tabellen zu Abfragen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Abgeleitete Tabellen stellen Resultsets dar, die als Tabellenquellen in einer Abfrage verwendet werden. Im **Diagrammbereich**können Sie einer Abfrage eine abgeleitete Tabelle hinzufügen.  

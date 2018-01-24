@@ -21,13 +21,13 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 74b2beeb4f74afab2dc7300e51093d3e271f58e4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 25e9efc5d7ffb6d4d0c09cc88e19671ed7f7b043
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transaktionen: Always On-Verfügbarkeitsgruppen und Datenbankspiegelung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ In SQL Server 2016 und früher werden datenbankübergreifende Transaktionen inne
 Datenbankübergreifende Transaktionen werden für die Datenbankspiegelung ebenfalls nicht unterstützt.  
   
 ##  <a name="dtcsupport"></a> SQL Server 2016: Unterstützung für verteilte Transaktionen  
-Verteilte Transaktionen werden mit den Verfügbarkeitsgruppen unterstützt. Dies gilt für verteilte Transaktionen zwischen Datenbanken, die von zwei verschiedene Instanzen von SQL Server gehostet werden. Dies gilt auch für verteilte Transaktionen zwischen SQL Server und einem anderen DTC-kompatiblen Server.  
+Verteilte Transaktionen werden mit den Verfügbarkeitsgruppen unterstützt. Dies gilt für verteilte Transaktionen zwischen Datenbanken, die von zwei verschiedene Instanzen von SQL Server gehostet werden. Dies gilt auch für verteilte Transaktionen zwischen SQL Server und einem anderen DTC-konformen Server.  
  
 Microsoft Distributed Transaction Coordinator (MSDTC oder DTC) ist ein Windows-Dienst, der eine Transaktionsinfrastruktur für verteilte Systeme bereitstellt. Mit MSDTC können Clientanwendungen mehrere Datenquellen in eine Transaktion aufnehmen. Für diese Transaktion wird dann auf allen Servern, die Teil der Transaktion sind, ein Commit ausgeführt. Sie können MSDTC beispielsweise dazu nutzen, um Transaktionen zu koordinieren, die mehrere Datenbanken auf verschiedenen Servern umfassen.
 

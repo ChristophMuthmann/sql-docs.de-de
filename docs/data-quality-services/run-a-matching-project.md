@@ -17,15 +17,15 @@ f1_keywords:
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 284e081f53fe047a257d22020d0792897c8623ed
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9874323ad1bef8199d2ebc969bb3673826b946fb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="run-a-matching-project"></a>Ausführen eines Abgleichsprojekts
   In diesem Thema wird beschrieben, wie ein Datenabgleich in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ausgeführt wird. Der Abgleichsprozess identifiziert anhand von Abgleichsregeln in der Abgleichsrichtlinie Cluster von übereinstimmenden Datensätzen, legt basierend auf einer Survivorship-Regel einen Datensatz von jedem Cluster als Survivor fest und exportiert die Ergebnisse. DQS führt den Abgleichsprozess, auch Deduplizierung genannt, in einem computerunterstützten Prozess aus, Sie erstellen die Abgleichsregeln jedoch interaktiv und wählen die Survivorship-Regel aus mehreren Optionen aus, so dass Sie den Abgleichsprozess selbst steuern können.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/20/2017
   
  Sie müssen den Abgleich vorbereiten, indem Sie eine Abgleichsrichtlinie mit einer oder mehreren Abgleichsregeln erstellen und die Richtlinie für Beispieldaten ausführen. Der Abgleichsprojektprozess erfolgt getrennt vom Abgleichsrichtlinienprozess. Es wird keine Wissensdatenbank mit dem beim Abgleichsprojekt gewonnenen Abgleichswissen gefüllt. Weitere Informationen zum Erstellen von Abgleichsrichtlinie finden Sie unter [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
   

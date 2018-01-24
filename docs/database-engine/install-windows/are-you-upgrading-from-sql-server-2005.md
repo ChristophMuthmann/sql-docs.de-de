@@ -15,12 +15,12 @@ ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
 caps.latest.revision: "21"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 0d0f68c51cfc99f8ff6b6af2e048fbbb7f951ae9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: eae5931014a84ff1169412b830a20e217627918c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>Führen Sie ein Upgrade von SQL Server 2005 aus?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das Ende des erweiterten Supports für SQL Server 2005 ist ein guter Grund für das Upgrade auf eine neuere Version von SQL Server und der Azure SQL-Datenbank. Ein Upgrade ermöglicht es Ihnen, Sicherheit und Compliance beizubehalten, eine bahnbrechende Leistung zu erzielen, und die Infrastruktur Ihrer Datenplattform zu optimieren.  
@@ -75,7 +75,7 @@ Um eine umfassendere Analyse dieser Optionen anzuzeigen, [klicken Sie hier](http
 ## <a name="get-sql-server"></a>SQL Server erwerben  
  Um eine Evaluierungsversion von SQL Server herunterzuladen, [click here (klicken Sie hier)](http://www.microsoft.com/evalcenter/evaluate-sql-server-2016).  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
  [SQL Server (2017)](http://www.microsoft.com/sql-server/sql-server-2017)   
  [SQL Server 2005: Supportende](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
   

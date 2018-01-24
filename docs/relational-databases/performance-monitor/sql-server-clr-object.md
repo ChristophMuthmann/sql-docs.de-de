@@ -16,26 +16,26 @@ helpviewer_keywords:
 - CLR object [SQL Server]
 ms.assetid: bed788b0-a68e-4fb1-b001-03bf09ff868e
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 657517f481b0d6628428daa80bd80d4cf23fd126
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9b4227a0f2aa330da06562e4163ecf1ce51d4ca3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-clr-object"></a>SQL Server, CLR-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das **SQLServer:CLR**-Objekt liefert Indikatoren für die Überwachung der CLR-Ausführung (Common Language Runtime) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  In der folgenden Tabelle werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **CLR** -Indikatoren beschrieben.  
   
-|CLR-Indikatoren|Beschreibung|  
+|CLR-Indikatoren|Description|  
 |------------------|-----------------|  
 |**CLR Execution**|Gesamtausführungszeit in CLR ( Mikrosekunden ).|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

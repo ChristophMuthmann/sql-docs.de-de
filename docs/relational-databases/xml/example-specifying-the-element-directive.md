@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: ELEMENT directive
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9cf0356191e1f71c1b886599a46da1be9bb46bd3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 217dba29c2005e7f0ae34ea36e82436c5179a1d1
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="example-specifying-the-element-directive"></a>Beispiel: Angeben der ELEMENT-Direktive
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Dadurch werden Mitarbeiterinformationen abgerufen und wird elementzentrierter XML-Code generiert, wie nachfolgend zu sehen ist:  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 </Employee>  
 ```  
   
- Die Abfrage bleibt dieselbe, mit der Ausnahme, dass Sie nun den Spaltennamen die `ELEMENT` -Direktive hinzufügen. Folglich werden dem <`Name`>-Element anstelle von Attributen die untergeordneten Elemente <`FName`> und <`LName`> hinzugefügt. Die `Employee!1!EmpID`-Spalte gibt keine `ELEMENT`-Direktive an; daher wird `EmpID` als Attribut des <`Employee`>-Elements hinzugefügt.  
+ Die Abfrage bleibt dieselbe, mit der Ausnahme, dass Sie nun den Spaltennamen die `ELEMENT`-Direktive hinzufügen. Folglich werden dem <`Name`>-Element anstelle von Attributen die untergeordneten Elemente <`FName`> und <`LName`> hinzugefügt. Die `Employee!1!EmpID`-Spalte gibt keine `ELEMENT`-Direktive an; daher wird `EmpID` als Attribut des <`Employee`>-Elements hinzugefügt.  
   
 ```  
 SELECT 1    as Tag,  
@@ -88,7 +88,7 @@ FOR XML EXPLICIT;
   
  `...`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden des EXPLICIT-Modus mit FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - compatibility [SQL Server replication]
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 caps.latest.revision: "56"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4031251e251a40014cdcbf41727876bf85f08efd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ed99a17a18efb268878bf8b76b41a67d43ccfff5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-backward-compatibility"></a>Abwärtskompatibilität von Replikationen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In den Themen zur Abwärtskompatibilität werden Änderungen im Verhalten von Replikationen zwischen den verschiedenen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beschrieben. Es ist wichtig die Abwärtskompatibilität zu verstehen, wenn Sie ein Upgrade ausführen, oder wenn Sie über mehrere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer Replikationstopologie verfügen.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
  [Wichtige Änderungen in der SQL Server-Replikation](../../relational-databases/replication/breaking-changes-in-sql-server-replication.md)  
  Änderungen an Replikationsfunktionen, die möglicherweise Änderungen an Anwendungen erfordern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Aktualisieren von replizierten Datenbanken](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   

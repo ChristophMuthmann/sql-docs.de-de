@@ -19,13 +19,13 @@ ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7cef5c9676d25b0d37b8a863e4155c2a0068f3b2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ea453dd39647ed7087495a05a6daa0268e0909cc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>Verwerfen von Änderungen an Diagrammen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Änderungen am Datenbankdiagramm, die nicht in der Datenbank gespeichert werden sollen, können verworfen werden.  

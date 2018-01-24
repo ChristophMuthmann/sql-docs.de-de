@@ -16,13 +16,13 @@ ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
 caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43ecb337ed0e54282b7347287481fd4ce7a84f5a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 247af1bcdb8e3d3293792fb52a5d0e8149ce6ccc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-2---subscribe-to-and-check-the-finance-name-policy"></a>Lektion 2.2: Abonnieren und Überprüfen der Richtlinie „Finance Name“
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In dieser Aufgabe konfigurieren Sie die Datenbank „Finanzen“, um die Richtlinienkategorie „Finanzen“ zu abonnieren. Anschließend testen Sie die Richtlinie Finanz_Name.  
@@ -79,7 +79,7 @@ Dieses Lernprogramm ist beendet. Um zum Anfang des Tutorials zurückzukehren, kl
   
 Eine Liste der Tutorials finden Sie unter [Tutorials für SQL Server 2016](../../sql-server/tutorials-for-sql-server-2016.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

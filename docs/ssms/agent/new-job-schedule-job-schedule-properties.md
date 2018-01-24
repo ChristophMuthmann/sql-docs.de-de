@@ -18,13 +18,13 @@ ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94af2eeef2d7a6bc308463deb70207305f52500f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b4ddf72c55ea9dcc3561ea6903f024dc9a071569
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="new-job-schedule---job-schedule-properties"></a>Neuer Auftragszeitplan – Eigenschaften des Auftragszeitplans
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieser Seite können Sie die Eigenschaften des Zeitplans anzeigen und ändern.  

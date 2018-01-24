@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 906150705dabca37cfee4eae1d0e19cecc641e4c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 64065e9cf9ce2429ba98b8ca46bac3b000020d6b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-engine-instances-sql-server"></a>Datenbankmodulinstanzen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] ist eine Kopie der ausführbaren Datei **sqlservr.exe**, die als Betriebssystemdienst ausgeführt wird. Von jeder Instanz werden mehrere Systemdatenbanken und eine oder mehrere Benutzerdatenbanken verwaltet. Auf einem Computer können mehrere Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]ausgeführt werden. Anwendungen stellen eine Verbindung mit der Instanz her, um Tasks in einer durch die Instanz verwalteten Datenbank auszuführen.  
@@ -31,11 +31,11 @@ ms.lasthandoff: 11/20/2017
   
  Sie können mehrere Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf demselben Computer ausführen. Bei einer Instanz kann es sich um die Standardinstanz handeln. Die Standardinstanz hat keinen Namen. Wenn eine Verbindungsanforderung nur den Namen des Computers angibt, wird die Verbindung mit der Standardinstanz hergestellt. Für benannte Instanzen geben Sie beim Installieren der Instanz jeweils einen Instanznamen an. Verbindungsanforderungen müssen sowohl den Computernamen als auch den Instanznamen angeben, damit eine Verbindung mit der Instanz hergestellt werden kann. Die Installation einer Standardinstanz ist nicht obligatorisch. Alle Instanzen, die auf einem Computer ausgeführt werden, können benannte Instanzen sein.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Beschreibt, wie die Eigenschaften einer Instanz konfiguriert werden. Konfigurieren Sie Standardeinstellungen wie Speicherorte und Datumsformate und die Verwendung der Betriebssystemressourcen durch die Instanz, z. B. des Arbeitsspeichers oder von Threads.|[Konfigurieren von Datenbankmodulinstanzen &#40;SQL Server&#41;](../../database-engine/configure-windows/configure-database-engine-instances-sql-server.md)|  
+|Beschreibt, wie die Eigenschaften einer Instanz konfiguriert werden. Konfigurieren Sie Standardeinstellungen wie Speicherorte und Datumsformate und die Verwendung der Betriebssystemressourcen durch die Instanz, z. B. des Arbeitsspeichers oder von Threads.|[Konfigurieren von Datenbankmodulinstanzen &#40;SQL Server&#41;](../../database-engine/configure-windows/configure-database-engine-instances-sql-server.md)|  
 |Beschreibt, wie die Sortierung für eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verwaltet wird. Sortierungen definieren die Bitmuster, die zum Darstellen von Zeichen und zugeordneten Verhaltensweisen wie der Sortierung und Groß-/Kleinschreibung und Akzenten in Vergleichsvorgängen verwendet werden.|[Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md)|  
 |Beschreibt, wie Verbindungsserverdefinitionen konfiguriert werden, die in einer Instanz ausgeführte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen zulassen, um in getrennten OLE DB-Datenquellen gespeicherte Daten zu verwenden.|[Verbindungsserver &#40;Datenbankmodul&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)|  
 |Beschreibt, wie ein LOGON-Trigger erstellt wird, der auszuführende Aktionen angibt, die nach der Überprüfung des Anmeldeversuchs, aber vor dem Beginn der Verwendung von Ressourcen in der Instanz ausgeführt werden sollen. LOGON-Trigger unterstützen Aktionen wie die Protokollierung der Verbindungsaktivität die logikbasierte Einschränkung von Anmeldungen, die zusätzlich zur Authentifizierung der Anmeldeinformationen durch Windows und SQL Server verwendet wird.|[Logon-Trigger](../../relational-databases/triggers/logon-triggers.md)|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/20/2017
 |Beschreibt die Funktionen von Service Broker für Messaging- und Warteschlangenanwendungen und enthält Zeiger auf die Service Broker-Dokumentation.|[Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)|  
 |Beschreibt, wie die Pufferpoolerweiterung verwendet werden kann, um eine nahtlose Integration von nicht flüchtigen Erweiterungen des Arbeitsspeichers, d. h. von Festkörperlaufwerken (SSD), in den Pufferpool des Datenbankmoduls bereitzustellen, durch die der E/A-Durchsatz deutlich verbessert wird.|[Pufferpool-Erweiterungsdatei](../../database-engine/configure-windows/buffer-pool-extension.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sqlservr (Anwendung)](../../tools/sqlservr-application.md)   
  [Datenbankfunktionen](../../relational-databases/database-features.md)   
  [Instanzübergreifende Datenbankmodulfunktionen](../../relational-databases/database-engine-cross-instance-features.md)  

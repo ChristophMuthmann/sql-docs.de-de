@@ -16,15 +16,15 @@ helpviewer_keywords:
 - 'SQLServer: Resource Pool Stats object'
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 11fb2808ac4f99f9778a7ab12c81e91a379d4ef7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 626e2db49945df2262db203dde46f78d5b5bde81
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, 'Statistiken für Ressourcenpools'-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das „SQLServer:Statistiken für Ressourcenpools“-Objekt enthält Leistungsindikatoren, die Informationen zur Resource Governor-Poolstatistik zurückgeben.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
 |**Verwendeter Arbeitsspeicher (KB)**|Die im Ressourcenpool verwendete Arbeitsspeichermenge in Kilobyte (KB).|  
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, 'Statistiken für Arbeitsauslastungsgruppen'-Objekt](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)   
  [Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md)  

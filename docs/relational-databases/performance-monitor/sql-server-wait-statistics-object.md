@@ -16,22 +16,22 @@ helpviewer_keywords:
 - SQLServer:Wait Statistics
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c040fa96a905d3b9547163e1b75963b3ac28933
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 86fed40dbd12e7124aa837b7e428af711e33ef24
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server, Wartestatistik-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das **SQLServer:Wartestatistik**-Leistungsobjekt enthält Leistungsindikatoren mit Informationen zum Wartestatus.  
   
  In der folgenden Tabelle werden die im Wartestatistik-Objekt enthaltenen Leistungsindikatoren aufgelistet.  
   
-|Leistungsindikatoren des SQLServer:Wartestatistik-Objekts|Beschreibung|  
+|Leistungsindikatoren des SQLServer:Wartestatistik-Objekts|Description|  
 |-----------------------------------------|-----------------|  
 |**Sperrenwartevorgänge**|Statistik für Prozesse, die auf eine Sperre warten|  
 |**Protokollpuffer-Wartevorgänge**|Statistik für Prozesse, die auf die Verfügbarkeit des Protokollpuffers warten|  
@@ -48,14 +48,14 @@ ms.lasthandoff: 11/17/2017
   
  Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
-|Element|Beschreibung|  
+|Element|Description|  
 |----------|-----------------|  
 |**Durchschnittliche Wartezeit (ms)**|Durchschnittliche Zeit für den ausgewählten Wartetyp|  
 |**Kumulierte Wartezeit (ms) pro Sekunde**|Aggregierte Wartezeit für den ausgewählten Typ pro Sekunde|  
 |**Aktuell ausgeführte Wartevorgänge**|Anzahl der Prozesse, die zurzeit auf den folgenden Typ warten|  
 |**Gestartete Wartevorgänge pro Sekunde**|Anzahl der pro Sekunde gestarteten Wartevorgänge des ausgewählten Wartetyps|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

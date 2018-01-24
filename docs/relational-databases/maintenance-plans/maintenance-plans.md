@@ -18,15 +18,15 @@ helpviewer_keywords:
 - maintenance plans [SQL Server]
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7db2ba76a3be5099075ef56871794b59066eb538
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 62c07a1aacaf0d2cc30808b41d0f58360144acff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-plans"></a>Wartungspläne
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mit Wartungsplänen wird ein Workflow der Tasks erstellt, die erforderlich sind, um sicherzustellen, dass Ihre Datenbank optimiert und regelmäßig gesichert wird, und dass sie keine Inkonsistenzen aufweist. Mit dem Wartungsplanungs-Assistenten werden zudem zentrale Wartungspläne erstellt, doch durch das manuelle Erstellen von Plänen steht Ihnen eine sehr viel höhere Flexibilität zur Verfügung.  
@@ -63,12 +63,12 @@ ms.lasthandoff: 11/17/2017
   
  Die von den Wartungstasks generierten Ergebnisse können als Bericht in eine Textdatei oder in die Wartungsplantabellen (**sysmaintplan_log** und **sysmaintplan_logdetail**) in **msdb** geschrieben werden. Um die Ergebnisse im Protokolldatei-Viewer anzuzeigen, klicken Sie mit der rechten Maustaste auf **Wartungspläne**, und klicken Sie anschließend auf **Verlauf anzeigen**.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Erste Schritte mit Wartungsplänen mithilfe der folgenden Themen:  
   
 |||  
 |-|-|  
-|**Description**|**Thema**|  
+|**Beschreibung**|**Thema**|  
 |Konfigurieren der **Agent XPs**-Serverkonfigurationsoption, um erweiterte gespeicherte Prozeduren für SQL Server Agent zu aktivieren.|[Agent XPs (Serverkonfigurationsoption)](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |Beschreibt, wie ein Wartungsplan mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] erstellt wird.|[Erstellen eines Wartungsplans](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |Beschreibt, wie ein Wartungsplan mithilfe der Wartungsplan-Entwurfsbenutzeroberfläche erstellt wird.|[Erstellen eines Wartungsplans &#40;Entwurfsoberfläche für Wartungspläne&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  

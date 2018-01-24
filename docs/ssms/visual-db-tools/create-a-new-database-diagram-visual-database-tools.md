@@ -18,13 +18,13 @@ ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0ba635346ceebfd444f15aaae189cf6a31ff19d0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ca5b030d33182f56a962d4bd6e1acb048834bc31
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Erstellen eines neuen Datenbankdiagramms (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mit dem Objekt-Explorer können neue Datenbankdiagramme erstellt werden. Datenbankdiagramme zeigen die Struktur der betreffenden Datenbank grafisch an. Mithilfe von Datenbankdiagrammen können Tabellen, Spalten, Beziehungen und Schlüssel erstellt und geändert werden. Darüber hinaus können Indizes und Einschränkungen geändert werden.  

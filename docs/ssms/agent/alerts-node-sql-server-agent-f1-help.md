@@ -15,13 +15,13 @@ ms.assetid: dc5013c1-692c-4cc4-820c-1c09482c6886
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4210d09b65f794927052d74381725d0c9b5b80a8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a4aa70e0c5ef2c38fc6d3bec6a08f6393aa28c7b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="alerts-node-sql-server-agent-f1-help"></a>Warnungen (Knoten; F1-Hilfe des SQL Server-Agents)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieser Abschnitt enthält die F1-Hilfe zum Knoten **Warnungen** des Objekt-Explorers von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  

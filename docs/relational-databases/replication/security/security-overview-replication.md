@@ -19,15 +19,15 @@ helpviewer_keywords:
 - authentication [SQL Server replication]
 ms.assetid: 27828fe4-3b54-4c33-886e-08e8279e34b5
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52216840839e67e6b7b8036a1a954e75a4aaa2c0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9e0bcbe317e86f9562f28a339bb4e5ce4c81dfe5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="security-overview-replication"></a>Sicherheitsübersicht (Replikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Grundsätzlich basiert das Sichern der Replikationsumgebung auf den folgenden Faktoren: dem Verständnis der Authentifizierungs- und Autorisierungsoptionen, dem Verständnis der entsprechenden Verwendungsmöglichkeiten der Replikationsfilterfunktionen und dem Erlernen spezieller Maßnahmen zum Sichern der einzelnen Bestandteile einer Replikationsumgebung. Die Replikationsumgebung umfasst den Verteiler, den Verleger, Abonnenten und den Momentaufnahmeordner. Thema dieses Kapitels ist die Replikationssicherheit, die auf der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Sicherheit und Windows-Sicherheit aufbaut. Daher sind Kenntnisse dieser Grundlage und der Bedeutung der Replikationssicherheit unentbehrlich. Weitere Informationen zum Thema Sicherheit finden Sie unter [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md). Weitere Informationen zu den Überlegungen zur Sicherheit bei der Veröffentlichung von Oracle-Daten finden Sie im Abschnitt zum Replikations-Sicherheitsmodell im Thema [Design Considerations and Limitations for Oracle Publishers](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
  [Sichere Bereitstellung &#40;Replikation&#41;](../../../relational-databases/replication/security/secure-deployment-replication.md)  
  Beschreibt, wie alle Komponenten einer Replikationstopologie besser gesichert werden können.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Sicherheit und Schutz &#40;Replikation&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   

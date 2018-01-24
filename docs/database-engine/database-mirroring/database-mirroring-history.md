@@ -16,13 +16,13 @@ ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 caps.latest.revision: "25"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c06fd5ffe8a889b1decb3083f517c5ecae86bc0b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3e3bf2700f9570a41f07d18d376332080daa99cd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-history"></a>Datenbankspiegelungsverlauf
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Verwenden Sie dieses Dialogfeld, um den Verlauf des Spiegelungsstatus für eine gespiegelte Datenbank auf einer angegebenen Serverinstanz anzuzeigen.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Serverinstanz**  
  Der Name der Serverinstanz, von der der Verlauf gemeldet wird.  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/20/2017
  **Verlauf**  
  Zeigt die Verlaufsliste an. Wenn Sie auf einen Spaltenheader klicken, wird das Raster nach der entsprechenden Spalte sortiert. Die Liste enthält folgende Spalten:  
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|Description|  
 |-----------------|-----------------|  
 |**Aufgezeichnete Zeit**|Timestamp der Verlaufszeile.|  
 |**Rolle**|Die aktuelle Spiegelungsrolle der Serverinstanz für diese Datenbank: Prinzipal oder Spiegel.|  
@@ -80,13 +80,13 @@ ms.lasthandoff: 11/20/2017
 |**Sendezeit**|Die ungefähre Dauer der Zeit, die die Prinzipalserverinstanz benötigt, um das derzeit in der Sendewarteschlange befindliche Protokoll an die Spiegelserverinstanz zu senden (die *Senderate*). Da die Rate der eingehenden Transaktionen erheblich schwanken kann, handelt es sich bei der Protokollsendezeit um einen Schätzwert. Die Senderate kann jedoch nützlich sein, um die für ein manuelles Failover erforderliche Zeit grob zu schätzen.|  
 |**Send Rate**|Rate, in KB pro Sekunde, mit der Transaktionen an die Spiegelserverinstanz gesendet werden.|  
 |**Neue Transaktionsrate**|Rate, in KB pro Sekunde, mit der eingehende Transaktionen in das Protokoll des Prinzipals eingegeben werden. Vergleichen Sie diesen Wert mit dem Wert **Sendezeit** , um zu bestimmen, ob die Spiegelung im Rückstand ist, einen Vorsprung hat oder auf dem aktuellen Stand ist.|  
-|**Älteste, nicht gesendete Transaktion**|Alter der ältesten, nicht gesendeten Transaktion in der Sendewarteschlange. Das Alter dieser Transaktion gibt an, wie viele Minuten an Transaktionen noch nicht an die Spiegelserverinstanz gesendet wurden. Anhand dieses Werts lässt sich das Potenzial an Datenverlusten bezogen auf die Zeit ermitteln.|  
+|**Älteste, nicht gesendete Transaktion**|Alter der ältesten, nicht gesendeten Transaktion in der Sendewarteschlange. Das Alter dieser Transaktion gibt an, wie viele Minuten an Transaktionen noch nicht an die Spiegelserverinstanz gesendet wurden. Dieser Wert hilft, das Datenverlustrisiko in Bezug auf die Zeit zu messen.|  
 |**Nicht wiederhergestelltes Protokoll**|Die Menge der Protokolldaten in KB, die sich in der Wiederholungswarteschlange befinden.|  
 |**Wiederherstellungszeit**|Die geschätzte Anzahl von Minuten, die erforderlich ist, um das Protokoll, das sich derzeit in der Wiederholungswarteschlange befindet, auf die Spiegeldatenbank anzuwenden.|  
 |**Wiederherstellungsrate**|Rate, in KB pro Sekunde, mit der Transaktionen in der Spiegeldatenbank wiederhergestellt werden.|  
 |**Spiegelungscommitaufwand**|Durchschnittliche Verzögerung pro Transaktion in Millisekunden (nur im synchronen Modi). Hierbei handelt es sich um die Verzögerung, die entsteht, während die Prinzipalserverinstanz darauf wartet, dass die Spiegelserverinstanz den Transaktionsprotokolldatensatz in die Wiederholungswarteschlange schreibt.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

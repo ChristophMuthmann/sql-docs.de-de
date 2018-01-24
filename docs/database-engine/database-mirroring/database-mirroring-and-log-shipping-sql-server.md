@@ -18,13 +18,13 @@ ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 55051d755bb2fb2abec5668fb21328905c0dbf82
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 092a000b7b942a3b26a7bafedcc65ed2b19944f7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Datenbankspiegelung und Protokollversand (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Für eine Datenbank kann eine Datenbankspiegelung oder ein Protokollversand ausgeführt werden. Datenbankspiegelung und Protokollversand können auch gleichzeitig ausgeführt werden. Bei der Entscheidung für eine Methode sollten Sie Folgendes berücksichtigen:  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/20/2017
   
  ![Protokollversand und Datenbankspiegelung](../../database-engine/database-mirroring/media/logshipping-and-dbm-automatic-failover.gif "Log shipping and database mirroring")  
   
- Nach einem Spiegelungsfailover ist der auf dem sekundären Server definierte Name des primären Servers unverändert. .  
+ Nach einem Spiegelungsfailover ist der auf dem sekundären Server definierte Name des primären Servers unverändert. zugreifen.  
   
 ## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>Auswirkungen der Datenbankspiegelung auf eine Remoteüberwachungsinstanz  
  Wenn der Protokollversand mit einer Remoteüberwachungsinstanz verwendet wird, hat das Kombinieren der Protokollversandsitzung und der Datenbankspiegelung Auswirkungen auf die Informationen in den Überwachungstabellen. Die Informationen zum primären Server sind eine Kombination der Informationen, die auf dem Prinzipalserver bzw. primären Server konfiguriert sind, und der auf jedem sekundären Server konfigurierten Überwachung.  
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="setting-up-mirroring-and-log-shipping-together"></a>Einrichten der Kombination aus Spiegelung und Protokollversand  
  Um die Datenbankspiegelung und den Protokollversand gemeinsam einzurichten, sind die folgenden Schritte erforderlich:  
   
-1.  Stellen Sie Sicherungen der Prinzipaldatenbank bzw. primären Datenbank mit der Option NORECOVERY auf einer anderen Serverinstanz wieder her, die dann später von der Datenbankspiegelung als Spiegeldatenbank für die Prinzipaldatenbank bzw. primäre Datenbank verwendet wird. Weitere Informationen finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+1.  Stellen Sie Sicherungen der Prinzipaldatenbank bzw. primären Datenbank mit der Option NORECOVERY auf einer anderen Serverinstanz wieder her, die dann später von der Datenbankspiegelung als Spiegeldatenbank für die Prinzipaldatenbank bzw. primäre Datenbank verwendet wird. Weitere Informationen finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)verwendet.  
   
 2.  Einrichten der Datenbankspiegelung Weitere Informationen finden Sie unter [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md) oder [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/20/2017
   
      Sie sollten eine einzige Freigabe als Sicherungsverzeichnis (Sicherungsfreigabe) einrichten. Dadurch ist sichergestellt, dass nach dem Rollenwechsel zwischen dem Prinzipalserver und dem Spiegelserver Sicherungsaufträge weiterhin in dasselbe Verzeichnis wie zuvor schreiben. Eine bewährte Methode besteht darin, sicherzustellen, dass sich diese Freigabe auf einem anderen physischen Server befindet als die Server, auf denen die Datenbanken für die Spiegelung und den Protokollversand bereitgestellt werden.  
   
-     Weitere Informationen finden Sie unter [Konfigurieren des Protokollversands &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
+     Weitere Informationen finden Sie unter [Konfigurieren des Protokollversands &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)eingeführt.  
   
 5.  Manuelles Failover vom Prinzipal zum Spiegel.  
   

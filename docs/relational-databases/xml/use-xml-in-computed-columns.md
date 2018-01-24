@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML [SQL Server], computed columns
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 65a30335d23497b2af1d8a075d84873b565abe79
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 825a0a87683ec6913a6985804c6111af0543dc79
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-xml-in-computed-columns"></a>Verwenden von XML in berechneten Spalten
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] XML-Instanzen können als Quelle für eine berechnete Spalte oder als Typ einer berechneten Spalte auftreten. In den Beispielen in diesem Thema wird gezeigt, wie XML mit berechneten Spalten verwendet wird.  
@@ -91,7 +91,7 @@ FROM T
   
 ### <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|Description|  
 |-----------|-----------------|  
 |[Heraufstufen häufig verwendeter XML-Werte mit berechneten Spalten](../../relational-databases/xml/promote-frequently-used-xml-values-with-computed-columns.md)|Beschreibt, wie die Eigenschaftenhöherstufung mit berechneten Spalten und Eigenschaftentabellen verwendet wird.|  
   

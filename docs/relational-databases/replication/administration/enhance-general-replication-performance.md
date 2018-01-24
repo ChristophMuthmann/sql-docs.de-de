@@ -24,15 +24,15 @@ helpviewer_keywords:
 - transactional replication, performance
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b1f9c651b9b0ffc41af0beec6ace0a570f02d09
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 72c807961694b90e0a987385c5a0fad4a38bd184
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-general-replication-performance"></a>Verbessern der allgemeinen Replikationsleistung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Wenn Sie die Hinweise in diesem Thema beachten, können Sie die allgemeine Leistung aller Replikationstypen in der Anwendung und im Netzwerk verbessern.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/17/2017
     SET READ_COMMITTED_SNAPSHOT ON  
     ```  
   
-     Weitere Informationen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md).  
+     Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md).  
   
 -   Gehen Sie bei der Anwendungslogik in Triggern mit Bedacht vor.  
   
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/17/2017
   
      Sie können Änderungen partitionieren, indem Sie Datenteilmengen auf jedem Abonnenten veröffentlichen, oder indem eine Anwendung Änderungen für eine bestimmte Zeile an einen bestimmten Knoten leitet:  
   
-    -   Die Mergereplikation unterstützt das Veröffentlichen von Datenteilmengen, indem parametrisierte Filter mit einzelnen Veröffentlichungen verwendet werden. Weitere Informationen finden Sie unter [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+    -   Die Mergereplikation unterstützt das Veröffentlichen von Datenteilmengen, indem parametrisierte Filter mit einzelnen Veröffentlichungen verwendet werden. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
     -   Die Transaktionsreplikation unterstützt das Veröffentlichen von Datenteilmengen, indem statische Filter mit mehreren Veröffentlichungen verwendet werden. Weitere Informationen finden Sie unter [Filtern von veröffentlichten Daten](../../../relational-databases/replication/publish/filter-published-data.md).  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 11/17/2017
   
      Wenn umfangreiche Änderungen an Abonnenten gesendet werden müssen, kann die Neuinitialisierung mit einer neuen Momentaufnahme schneller sein als das Verwenden der Replikation zum Verschieben der einzelnen Änderungen. Weitere Informationen finden Sie unter [Erneutes Initialisieren von Abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
-     Bei der Transaktionsreplikation zeigt der Replikationsmonitor folgende Informationen auf der Registerkarte **Nicht verteilte Befehle** an: die Anzahl der Transaktionen in der Verteilungsdatenbank, die noch nicht an einen Abonnenten verteilt wurden; und die geschätzte Zeit für das Verteilen dieser Transaktionen. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agents &#40;Replikationsmonitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Bei der Transaktionsreplikation zeigt der Replikationsmonitor folgende Informationen auf der Registerkarte **Nicht verteilte Befehle** an: die Anzahl der Transaktionen in der Verteilungsdatenbank, die noch nicht an einen Abonnenten verteilt wurden; und die geschätzte Zeit für das Verteilen dieser Transaktionen. Weitere Informationen finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben für die einem Abonnement zugeordneten Agent &#40;Replikationsmonitor &#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## <a name="snapshot-considerations"></a>Überlegungen zu Momentaufnahmen  
   
@@ -152,7 +152,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Initialisieren Sie ein Abonnement gegebenenfalls manuell.  
   
-     In einigen Szenarien, wenn z. B. große Anfangsdatasets eine Rolle spielen, ist es vorteilhafter, ein Abonnement statt mit einer Momentaufnahme mit einer anderen Methode zu initialisieren. Weitere Informationen finden Sie unter [Initialisieren eines Transaktionsabonnements ohne Momentaufnahme](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+     In einigen Szenarien, wenn z. B. große Anfangsdatasets eine Rolle spielen, ist es vorteilhafter, ein Abonnement statt mit einer Momentaufnahme mit einer anderen Methode zu initialisieren. Weitere Informationen finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)initialisiert wird.  
   
 ## <a name="agent-parameters"></a>Agentparameter  
   

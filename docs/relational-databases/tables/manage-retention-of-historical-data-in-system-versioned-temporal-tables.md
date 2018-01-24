@@ -15,13 +15,13 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 caps.latest.revision: "23"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42d859148c12bcc83c3f6961b69385a390431f20
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 41c64af6ffe805d6b0b92ffde0c7057a7cd2abca
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  Nachdem Sie die Beibehaltungsdauer bestimmt haben, ist der nächste Schritt, einen Plan für die Verwaltung von Verlaufsdaten zu entwickeln. Dazu gehört, wie und wo Sie Verlaufsdaten speichern und wie Sie Verlaufsdaten löschen, die älter sind, als die Beibehaltungsanforderungen vorsehen. Die folgenden vier Ansätze für das Verwalten von Verlaufsdaten in der temporalen Verlaufstabelle stehen Ihnen zur Verfügung:  
   
--   [Stretch-Datenbank](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)  
+-   [Stretch Database](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)  
   
 -   [Tabellenpartitionierung](https://msdn.microsoft.com/library/mt637341.aspx#using-table-partitioning-approach)  
   
@@ -500,7 +500,7 @@ Die hervorragende Datenkompression und die effiziente Beibehaltungsbereinigung m
 
 Weitere Details finden Sie unter: [Verwalten von Verlaufsdaten in temporalen Tabellen mit Beibehaltungsrichtlinien](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy).
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Temporale Tabellen](../../relational-databases/tables/temporal-tables.md)   
  [Erste Schritte mit temporalen Tabellen mit Systemversionsverwaltung](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Systemkonsistenzprüfungen von temporalen Tabellen](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   

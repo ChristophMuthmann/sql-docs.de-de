@@ -16,13 +16,13 @@ ms.assetid:
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52fc22dc74afa25194dcf6c0883a2ae3aec26a27
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 61014dfd6113a16e37b4be9a1a06e6901abba37f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="domain-independent-availability-groups"></a>Domänenunabhängige Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
 GO
 ```
 10. Erstellen Sie für jedes Replikat, das möglicherweise ein primäres Replikat ist, einen Anmeldenamen und Benutzer auf allen entsprechenden sekundären Replikaten.
-11. Stellen Sie auf jeder Instanz die Zertifikate für die anderen Instanzen wieder her, für die ein Anmeldename und Benutzer erstellt wurde. Stellen Sie alle sekundären Replikatzertifikate auf dem primären Replikat wieder her. Stellen Sie auf jedem sekundären Replikat das Zertifikat des primären Replikats wieder her. Wiederholen Sie diesen Vorgang für jedes andere Replikat, das das primäre Replikat sein kann. Beispiel:
+11. Stellen Sie auf jeder Instanz die Zertifikate für die anderen Instanzen wieder her, für die ein Anmeldename und Benutzer erstellt wurde. Stellen Sie alle sekundären Replikatzertifikate auf dem primären Replikat wieder her. Stellen Sie auf jedem sekundären Replikat das Zertifikat des primären Replikats wieder her. Wiederholen Sie diesen Vorgang für jedes andere Replikat, das das primäre Replikat sein kann. Zum Beispiel:
 ```
 CREATE CERTIFICATE [InstanceB_Cert]
 AUTHORIZATION InstanceB_User
@@ -147,7 +147,7 @@ GO
 
 ### <a name="next-steps"></a>Nächste Schritte 
 
-- [Verwenden des Assistenten für Verfügbarkeitsgruppen (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
+- [Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen (SQL Server)](use-the-availability-group-wizard-sql-server-management-studio.md)
 
 - [Verwenden des Dialogfelds Neue Verfügbarkeitsgruppe (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  

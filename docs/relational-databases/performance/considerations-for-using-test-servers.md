@@ -22,15 +22,15 @@ helpviewer_keywords:
 - offload tuning overhead [SQL Server]
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8fddc2009fba8e86f0d9ebfdffcf476d90e747d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bb2515163afb01ece59d6d1dc7d681e67dfbbbd4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="considerations-for-using-test-servers"></a>Gesichtspunkte bei der Verwendung von Testservern
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Verwendung eines Testservers zur Optimierung einer Datenbank auf einem Produktionsserver ist ein wesentlicher Vorteil des [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Optimierungsratgebers. Mit dieser Funktion können Sie den Verarbeitungsaufwand für die Optimierung auf einen Testserver auslagern, ohne die tatsächlichen Daten vom Produktionsserver auf den Testserver zu kopieren.  

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a688b5d0da43f4c49e22c70bf1faf3bc1773097d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7b1785dc0435baf024a68c62e256e54498d1c8d3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-matching"></a>Datenabgleich
   Der [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Datenabgleichsprozesse ermöglichen es Ihnen, Datenduplizierung zu reduzieren und Datengenauigkeit in einer Datenquelle zu verbessern. Der Abgleich analysiert den Grad der Duplizierung in allen Datensätzen einer einzelnen Datenquelle und gibt gewichtete Wahrscheinlichkeiten einer Übereinstimmung zwischen den einzelnen verglichenen Datensatzgruppen zurück. Sie können dann entscheiden, welche Datensätze Übereinstimmungen sind und die entsprechende Aktion für die Quelldaten ergreifen.  

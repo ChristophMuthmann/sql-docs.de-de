@@ -19,13 +19,13 @@ ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66b72b4a855628c20ba06afa465be5ee7997fb6b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e0db1311d470614c5ab30b960bbfe05d1bf86e5d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>Erstellen von Abfragen mit Parametern (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In vielen Fällen empfiehlt es sich, eine Abfrage zu erstellen, die Sie in den Anwendungen immer wieder für die Eingabe verschiedener Daten verwenden können. In diesem Abschnitt erhalten Sie Informationen darüber, wie Parameterabfragen für allgemeine Zwecke erstellt werden.  

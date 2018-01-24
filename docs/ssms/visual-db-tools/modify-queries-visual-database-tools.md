@@ -18,13 +18,13 @@ ms.assetid: e2618a89-90fb-43d8-ac4e-cabd2aa3f1dc
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28bd4cabbbaea6c0adfa84c9e811c056670a44f0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a8ab6a5c3489cbdb6c5ab2e864fdbb9c68bd9d5b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="modify-queries-visual-database-tools"></a>Ändern von Abfragen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Öffnen Sie eine Abfrage, um diese im Abfrage- und Sicht-Designer zu ändern.  

@@ -16,13 +16,13 @@ ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85ecfe90f8821623156f5a343197cc7b20ce8802
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3d3f5dd740387c0ba38cf9ad54f915ef2fd1f5eb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lektion 1: Erstellen und Anwenden einer Richtlinie 'Standardmäßig aus'
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mit richtlinienbasierten Verwaltungsrichtlinien können Sie ein oder mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ein oder mehrere Instanzobjekte, Serverinstanzen, ein oder mehrere Datenbanken oder ein oder mehrere Datenbankobjekte verwalten. Als Datenbankadministrator möchten Sie sicherstellen, dass auf bestimmten Servern keine Datenbank-E-Mail aktiviert ist. In dieser Lektion erstellen Sie eine Bedingung und eine Richtlinie, durch die diese Serveroption festgelegt wird. Sie testen den Server, um zu sehen, ob er die Richtlinie einhält. Anschließend verwenden Sie die Richtlinie, um den Server neu zu konfigurieren, sodass der Server die Richtlinie einhält.  
@@ -33,7 +33,7 @@ Diese Lektion enthält die folgenden Themen:
   
 -   [Konfigurieren eines Servers für das Ausführen der Richtlinie 'Standardmäßig aus'](../../relational-databases/policy-based-management/lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Erstellen der Richtlinie 'Standardmäßig aus'](../../relational-databases/policy-based-management/lesson-1-1-create-the-off-by-default-policy.md)  
   
 ## <a name="next-lesson"></a>Nächste Lektion  

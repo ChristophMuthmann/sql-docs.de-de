@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Database Engine Tuning Advisor, performance improvements
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bca7b1d7ce1a0dfeade10654a1f4242b188d5d0a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 935483efd524b85c24e11716c5499b25b81ff651
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="performance-improvements-using-dta-recommendations"></a>Leistungsverbesserungen mit DTA-Empfehlungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Anschließend haben wir die jeweils empfohlenen Indizes implementiert. Dabei wur
 
 Die obigen Beispiele veranschaulichen also die Fähigkeit von DTA, die vom SQL Server-Datenbankmodul unterstützten Rowstore- und Columnstore-Indizes optimal nutzen und eine geeignete Indexkombination empfehlen zu können, mit der sich die CPU-Zeit für die Arbeitsauslastung deutlich reduzieren lässt. 
 
-<a name="see-also"></a>Siehe auch
+<a name="see-also"></a>Weitere Informationen finden Sie unter
 ---
 [Datenbankoptimierungsratgeber](../../relational-databases/performance/database-engine-tuning-advisor.md)
 

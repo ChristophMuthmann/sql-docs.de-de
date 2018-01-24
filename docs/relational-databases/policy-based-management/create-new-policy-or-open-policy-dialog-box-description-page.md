@@ -13,20 +13,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e135883125a3876901b5085cf055d3aa4a2356c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cc54ea269d627ce3935c307ef9f5c330c603e99d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Dialogfeld 'Neue Richtlinie erstellen' oder 'Richtlinie öffnen', Seite 'Beschreibung'
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieses Dialogfelds können Sie einer richtlinienbasierten Verwaltungsrichtlinie eine Beschreibung und zusätzliche Informationen hinzufügen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Kategorie**  
  Wenn Sie eine neue Richtlinie erstellen, wählen Sie eine Richtlinienkategorie aus.  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
  **Geändert von**  
  Der Anmeldename, der die letzte Änderung an der Richtlinie vorgenommen hat.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

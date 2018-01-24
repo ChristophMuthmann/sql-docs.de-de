@@ -14,29 +14,29 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d64722c817bda6fd5f940371506b3737a80323c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 16e7f118afae0ca2f33ca8852ee4ac71e156fe52
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secondary-database-settings"></a>Einstellungen für die sekundäre Datenbank
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieses Dialogfelds konfigurieren und ändern Sie die Eigenschaften einer sekundären Datenbank in der Protokollversandkonfiguration.  
   
  Eine Erläuterung zu den Konzepten des Protokollversands finden Sie unter [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Sekundäre Serverinstanz**  
  Zeigt den Namen der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die in der Protokollversandkonfiguration derzeit als sekundärer Server konfiguriert ist.  
   
  **Sekundäre Datenbank**  
  Zeigt den Namen der sekundären Datenbank für die Protokollversandkonfiguration an. Wenn Sie einer Protokollversandkonfiguration eine neue sekundäre Datenbank hinzufügen, können Sie eine Datenbank aus der Liste auswählen oder den Namen einer neuen Datenbank in das Feld eingeben. Wenn Sie den Namen einer neuen Datenbank in das Feld eingeben, müssen Sie auf der Registerkarte **Initialisierung** eine Option auswählen, die eine vollständige Datenbanksicherung der primären Datenbank in der sekundären Datenbank wiederherstellt. Die neue Datenbank wird im Verlauf des Wiederherstellungsvorgangs erstellt.  
   
- **Connect**  
+ **Verbinden**  
  Stellen Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur Verwendung als sekundärer Server in der Protokollversandkonfiguration her. Das zum Verbinden verwendete Konto muss Mitglied der festen Serverrolle sysadmin auf der sekundären Serverinstanz sein.  
   
  **Registerkarte Initialisieren**  
@@ -120,7 +120,7 @@ ms.lasthandoff: 11/17/2017
  **Diesen Auftrag deaktivieren**  
  Unterdrückt Wiederherstellungsvorgänge in der sekundären Datenbank.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

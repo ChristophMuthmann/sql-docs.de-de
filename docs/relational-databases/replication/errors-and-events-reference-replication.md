@@ -19,15 +19,15 @@ helpviewer_keywords:
 - errors and events reference [SQL Server replication]
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86ba007fa8d7827a62f664e31cd80a8efeebed69
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7a053348a203ad7d1e3a9a3cf9fa0f7672300b64
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="errors-and-events-reference-replication"></a>Fehler- und Ereignisreferenz (Replikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieser Abschnitt der Dokumentation enthält Informationen zu Ursachen und Lösungen für eine Reihe von Fehlern, die im Zusammenhang mit der Replikation auftreten können.  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], defining
 ms.assetid: e66d06ec-a12b-444d-875b-77f958af2f21
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8edc949b81a6b8c6d336ecaf3fd955d406a3648
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ee95ce967637c9b1be05d0ee4de552b1cb7ea4e4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-modify-and-delete-publications-and-articles-replication"></a>Erstellen, Ändern und Löschen von Veröffentlichungen und Artikeln (Replikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieser Abschnitt der Dokumentation enthält Informationen zur Ausführung der Aufgaben, die das Erstellen von Veröffentlichungen und das Definieren von Artikeln betreffen.  
@@ -107,9 +107,9 @@ ms.lasthandoff: 11/17/2017
   
 -   [Angeben eines Mergeartikelkonfliktlösers](../../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)  
   
--   [Angeben interaktiver Konfliktauflösung von Mergeartikeln](../../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md)  
+-   [Angeben von interaktiver Konfliktauflösung von Mergeartikeln](../../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Veröffentlichen von Daten und Datenbankobjekten](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

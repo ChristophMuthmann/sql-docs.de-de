@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd7202378a76fb0de0552685343fc681f39ea4bb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9c1676681c21b306c6df820957b07863c5db6c5a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-composite-domain"></a>Erstellen einer Verbunddomäne
   In diesem Thema wird beschrieben, wie eine Verbunddomäne in einer Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellt wird. Eine Verbunddomäne besteht aus einer oder mehreren Einzeldomänen, die für ein einzelnes Datenfeld gelten. Weitere Informationen zu Verbunddomänen finden Sie unter [Verwalten einer Verbunddomäne](../data-quality-services/managing-a-composite-domain.md).  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/20/2017
   
  Nach dem Erstellen einer Verbunddomäne können Sie die Eigenschaften der Verbunddomäne ändern, einen Verweisdatendienst an die Domäne anfügen, domänenübergreifende Regeln oder Wertebeziehungen erstellen. Wählen Sie hierzu die Verbunddomäne in der Liste **Domäne** auf der Seite **Domänenverwaltung** und dann die entsprechende Registerkarte aus.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Um eine Verbunddomäne zu erstellen, müssen Sie eine Wissensdatenbank erstellt und geöffnet und mindestens zwei Einzeldomänen erstellt haben, um die Verbunddomäne hinzufügen zu können.  
@@ -93,13 +93,13 @@ ms.lasthandoff: 11/20/2017
   
 5.  Wenn Sie **Trennzeichen** als Analysemethode ausgewählt haben, können Sie auch **Analyse der Wissensdatenbank verwenden**auswählen. Weitere Informationen finden Sie unter [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
-6.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
+6.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
   
 ##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Erstellen einer Verbunddomäne  
  Nachdem Sie eine Verbunddomäne erstellt haben, können Sie andere Domänenverwaltungstasks in der Domäne ausführen, Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  
- Data Quality Services ermöglicht es Ihnen, Daten auf Grundlage des Wissens, nicht nur nach Trennzeichen oder Reihenfolge, zu analysieren. Die Analyse der Wissensdatenbank wird verwendet, wenn einer Verbunddomäne komplexe Quelldaten zugeordnet werden und Sie keine Verweisdatendienste verwenden. Sie können die Analyse der Wissensdatenbank verwenden, um die Daten aus der Datenquelle in die relevanten Einzeldomänen zu analysieren. Mit der Analyse der Wissensdatenbank versucht DQS zunächst, Wissen zu verwenden, um komplexe Daten in einzelne Domänen zu analysieren. Wenn möglich identifiziert DQS Teile der Zeichenfolge wie in einer oder mehreren Domänen und analysiert die Zeichenfolge in seine verschiedenen Domänen. Beispiel: Sie haben „John B. Doe“ als komplexen Wert in einem Feld für den vollen Namen, das durch eine Verbunddomäne „Voller Name“ dargestellt wird. Wenn DQS „John“ als Teil der Vornamendomäne und „Doe“ als Teil der Nachnamendomäne identifiziert, fügt DQS auf Grundlage des Domänenwissens „B.“ zur Domäne für den zweiten Vornamen hinzu.  
+ Data Quality Services ermöglicht es Ihnen, Daten auf Grundlage des Wissens, nicht nur nach Trennzeichen oder Reihenfolge, zu analysieren. Die Analyse der Wissensdatenbank wird verwendet, wenn einer Verbunddomäne komplexe Quelldaten zugeordnet werden und Sie keine Verweisdatendienste verwenden. Sie können die Analyse der Wissensdatenbank verwenden, um die Daten aus der Datenquelle in die relevanten Einzeldomänen zu analysieren. Mit der Analyse der Wissensdatenbank versucht DQS zunächst, Wissen zu verwenden, um komplexe Daten in einzelne Domänen zu analysieren. Wenn möglich identifiziert DQS Teile der Zeichenfolge wie in einer oder mehreren Domänen und analysiert die Zeichenfolge in seine verschiedenen Domänen. Beispiel: Sie haben „John B. Doe“ als komplexen Wert in einem Feld für den vollen Namen, das durch eine Verbunddomäne „Voller Name“ dargestellt wird. Wenn DQS „John“ als Teil der Vornamendomäne und „Doe“ als Teil der Nachnamendomäne identifiziert, fügt DQS auf Grundlage des Domänenwissens „B.“  zur Domäne für den zweiten Vornamen hinzu.  
   
  Sie können die Analyse der Wissensdatenbank nur verwenden, wenn Sie auch die auf Trennzeichen basierende Analyse auswählen. Die Analyse der Wissensdatenbank ersetzt nicht die Trennzeichenanalyse, sondern erweitert sie. Nur, wenn kein Wissen dafür vorhanden ist, verwendet DQS für die Analyse ein Trennzeichen. In einigen Fällen bestimmt DQS möglicherweise die eine Analyse durch die Analyse der Wissensdatenbank und bestimmt dann eine andere Analyse durch die auf Trennzeichen basierte Analyse.  
   

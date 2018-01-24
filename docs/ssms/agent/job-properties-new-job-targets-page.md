@@ -16,13 +16,13 @@ ms.assetid: 7e7ba084-af0e-4356-bb43-4d1c232129e4
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 122b4ad7b1544fd517ba0e0a0a529e82da33db16
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c0c7fec12ff0c2a41c53bb76f32131989fb59750
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="job-properties---new-job-targets-page"></a>Auftragseigenschaften – Neuer Auftrag (Seite „Ziele“)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mit dieser Seite können Sie die Zielserver für den Auftrag verwalten.  

@@ -23,15 +23,15 @@ helpviewer_keywords:
 - database restores [SQL Server], scenarios
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 354525f5eae1c28e67b9c5d697cb5060c3f1b656
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 19220b692245c3f07afb8e8a40026b44f1217ea3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Übersicht über Wiederherstellungsvorgänge (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/17/2017
 |Wiederherstellungsvorgang|Vollständiges Wiederherstellungsmodell|Massenprotokolliertes Wiederherstellungsmodell|Einfaches Wiederherstellungsmodell|  
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |Datenwiederherstellung|Vollständige Wiederherstellung (falls das Protokoll verfügbar ist).|Gefahr des Datenverlusts.|Alle Daten seit der letzten vollständigen Sicherung oder differenziellen Sicherung gehen verloren.|  
-|Wiederherstellung bis zu einem bestimmten Zeitpunkt|Jeder von den Protokollsicherungen abgedeckte Zeitpunkt.|Nicht zulässig, wenn die Protokollsicherung massenprotokollierte Änderungen enthält.|Nicht unterstützt.|  
+|Wiederherstellung bis zu einem bestimmten Zeitpunkt|Jeder von den Protokollsicherungen abgedeckte Zeitpunkt.|Nicht zulässig, wenn die Protokollsicherung massenprotokollierte Änderungen enthält.|Wird nicht unterstützt.|  
 |File restore **\***|Vollständige Unterstützung.|Manchmal.**\*\***|Verfügbar nur für schreibgeschützte sekundäre Dateien.|  
 |Page restore **\***|Vollständige Unterstützung.|Manchmal.**\*\***|Keine.|  
 |Schrittweise Wiederherstellung (Dateigruppenebene) **\***|Vollständige Unterstützung.|Manchmal.**\*\***|Verfügbar nur für schreibgeschützte sekundäre Dateien.|  
@@ -164,7 +164,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
  Keine.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
   
   

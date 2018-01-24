@@ -18,13 +18,13 @@ ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cce3e5c6962370301f8a8453838d13815c62e3c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b704894472708af8af87aae4387cb1c78d6856e8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="view-project-properties"></a>Anzeigen der Projekteigenschaften
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können dem Projekt zugeordnete Eigenschaften im Eigenschaftenfenster anzeigen.  

@@ -26,15 +26,15 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 493e78f36abc0e45c74278407f607a56b1572d88
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fd801f6a94a10e43432fc650b689ffccf88ced7b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] OPENXML ist ein [!INCLUDE[tsql](../../includes/tsql-md.md)]-Schlüsselwort, das für arbeitsspeicherinterne XML-Dokumente ein Rowset bereitstellt, das mit einer Tabelle oder einer Sicht vergleichbar ist. OPENXML ermöglicht es, auf XML-Daten so zuzugreifen, wie auf ein relationales Rowset. Dies geschieht, indem eine Rowsetsicht der internen Darstellung eines XML-Dokuments bereitgestellt wird. Die Datensätze im Rowset können in Datenbanktabellen gespeichert werden.  
@@ -143,7 +143,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  In der folgenden Tabelle wird die Struktur der Rahmentabelle beschrieben.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|Die eindeutige ID des Dokumentknotens.<br /><br /> Das Stammelement weist den ID-Wert 0 auf. Die negativen ID-Werte sind reserviert.|  
 |**parentid**|**bigint**|Identifiziert das übergeordnete Element des Knotens. Bei dem über diese ID identifizierten übergeordneten Objekt muss es sich nicht unbedingt um das übergeordnete Element handeln. Dies hängt jedoch vom NodeType des Knotens ab, dessen übergeordnetes Objekt durch diese ID identifiziert wird. Wenn es sich bei dem Knoten beispielsweise um einen Textknoten handelt, kann das übergeordnete Objekt ein Attributknoten sein.<br /><br /> Wenn sich der Knoten auf der obersten Ebene im XML-Dokument befindet, ist **ParentID** gleich NULL.|  
@@ -202,7 +202,7 @@ EXEC sp_xml_removedocument @docHandle;
   
 -   Wenn mehrere Teilelemente denselben Namen besitzen, wird der erste Knoten zurückgeliefert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
  [sp_xml_removedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   

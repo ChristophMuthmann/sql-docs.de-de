@@ -23,15 +23,15 @@ helpviewer_keywords:
 - deactivating subscriptions
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a5568d5e75605430ad78fd38c5832971f2e2ae8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ebf798f5575af888afa8dc3935174d9a6d916d6c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Abonnementablauf und -deaktivierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Abonnements können deaktiviert werden oder ablaufen, wenn sie nicht innerhalb einer angegebenen *Beibehaltungsdauer* synchronisiert werden. Die stattfindende Aktion hängt vom Typ der Replikation und der überschrittenen Beibehaltungsdauer ab.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
      Wenn ein Pushabonnement abläuft, wird es vollständig entfernt. Bei Pullabonnements ist dies nicht der Fall. Sie müssen einen Cleanup der Pullabonnements auf dem Abonnenten ausführen. Weitere Informationen finden Sie unter [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
 ## <a name="merge-replication"></a>Mergereplikation  
- Bei der Mergereplikation wird die Beibehaltungsdauer der Veröffentlichung (die **@retention** und **@retention_period_unit**-Parameter von [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)) verwendet. Wenn ein Abonnement abläuft, muss es erneut initialisiert werden, da Metadaten für das Abonnement entfernt werden. Abonnements, die nicht erneut initialisiert werden, werden vom Auftrag **Cleanup abgelaufener Abonnements** gelöscht, der auf dem Verleger ausgeführt wird. Dieser Auftrag wird standardmäßig einmal pro Tag ausgeführt, und es werden dabei alle Pushabonnements gelöscht, die seit einem Zeitraum, der der doppelten Beibehaltungsdauer der Veröffentlichung entspricht, nicht synchronisiert wurden. Beispiel:  
+ Bei der Mergereplikation wird die Beibehaltungsdauer der Veröffentlichung (die **@retention** und **@retention_period_unit**-Parameter von [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)) verwendet. Wenn ein Abonnement abläuft, muss es erneut initialisiert werden, da Metadaten für das Abonnement entfernt werden. Abonnements, die nicht erneut initialisiert werden, werden vom Auftrag **Cleanup abgelaufener Abonnements** gelöscht, der auf dem Verleger ausgeführt wird. Dieser Auftrag wird standardmäßig einmal pro Tag ausgeführt, und es werden dabei alle Pushabonnements gelöscht, die seit einem Zeitraum, der der doppelten Beibehaltungsdauer der Veröffentlichung entspricht, nicht synchronisiert wurden. Zum Beispiel:  
   
 -   Wenn eine Veröffentlichung eine Beibehaltungsdauer von 14 Tagen aufweist, kann ein Abonnement ablaufen, wenn es nicht innerhalb von 14 Tagen synchronisiert wurde.  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Wenn die Beibehaltungsdauer der Veröffentlichung nach einem Cleanup erhöht wird und für ein Abonnement ein Mergevorgang mit dem Verleger versucht wird (auf dem die Metadaten bereits gelöscht wurden), dann läuft das Abonnement nicht ab, weil die Beibehaltungsdauer erhöht wurde. Allerdings verfügt der Verleger nicht über ausreichende Metadaten zum Herunterladen der Änderungen auf den Abonnenten. Dies führt zu mangelnder Konvergenz der Daten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erneutes Initialisieren von Abonnements](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Replikations-Agent-Verwaltung](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)  

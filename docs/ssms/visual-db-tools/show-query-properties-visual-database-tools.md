@@ -20,13 +20,13 @@ ms.assetid: 4a7a8fa9-2e25-40a0-a7b6-377d04a03e5e
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9969209a8260b7bf275d500868fc322bc45311d7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1751f94ef19db3e84aa710cddbd383062ab72562
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="show-query-properties-visual-database-tools"></a>Anzeigen von Abfrageeigenschaften (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können sich im Abfrage- und Sicht-Designer im Eigenschaftenfenster die Eigenschaften für eine Abfrage anzeigen lassen.  

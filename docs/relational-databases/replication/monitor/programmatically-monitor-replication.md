@@ -30,15 +30,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], monitoring
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: caa7d7966fee784794884d7e840f0802c4a7774d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a687248919676d1193682a983f8ba71b1827cc3c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="programmatically-monitor-replication"></a>Programmgesteuertes Überwachen der Replikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Der Replikationsmonitor ist ein grafisches Tool, mit dem Sie eine Replikationstopologie überwachen können. Mithilfe von gespeicherten [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Replikationsprozeduren oder Replikationsverwaltungsobjekten (RMO) können Sie programmgesteuert auf diese Überwachungsdaten zugreifen. Diese Objekte ermöglichen das Programmieren der folgenden Tasks:  
@@ -271,7 +271,7 @@ ms.lasthandoff: 11/17/2017
   
     -   *metricID* - ein <xref:System.Int32> -Wert, der die Schwellenwertmetrik für die Überwachung aus der folgenden Tabelle darstellt:  
   
-        |Wert|Beschreibung|  
+        |value|Description|  
         |-----------|-----------------|  
         |1|**expiration** - überwacht den bevorstehenden Ablauf von Abonnements für Transaktionsveröffentlichungen.|  
         |2|**latency** - überwacht die Leistung von Abonnements für Transaktionsveröffentlichungen.|  

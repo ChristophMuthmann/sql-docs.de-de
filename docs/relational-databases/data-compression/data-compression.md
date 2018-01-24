@@ -25,15 +25,15 @@ helpviewer_keywords:
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 996f547876031c29f975d85949d2ff300afdee5b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d999c313752ccbb23f31b9763463fc69e10ac20b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="data-compression"></a>Datenkomprimierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -186,12 +186,12 @@ Die folgende Tabelle enthält Replikationseinstellungen, mit denen die Komprimie
 |Benutzerabsicht|Replizieren des Partitionsschemas für eine Tabelle bzw. einen Index|Replizieren der Komprimierungseinstellungen|Skriptverhalten|  
 |-----------------|-----------------------------------------------------|------------------------------------|------------------------|  
 |Zur Replikation des Partitionsschemas und zur Aktivierung der Komprimierung auf dem Abonnenten für die Partition.|Wahr|Wahr|Sowohl für das Partitionsschema als auch für die Komprimierungseinstellungen wird ein Skript erstellt.|  
-|Zur Replikation des Partitionsschemas ohne Komprimierung der Daten auf dem Abonnenten.|Wahr|Falsch|Für das Partitionsschema wird ein Skript erstellt, für die Komprimierungseinstellungen der Partition jedoch nicht.|  
-|Keine Replikation des Partitionsschemas und keine Komprimierung der Daten auf dem Abonnenten.|Falsch|Falsch|Weder für die Partition noch für die Komprimierungseinstellungen wird ein Skript erstellt.|  
-|Zur Komprimierung der Tabelle auf dem Abonnenten, wenn alle Partitionen auf dem Verleger komprimiert sind, ohne Replikation des Partitionsschemas.|Falsch|Wahr|Überprüft, ob alle Partitionen für die Komprimierung aktiviert wurden.<br /><br /> Skriptausgabe der Komprimierung auf Tabellenebene.|  
+|Zur Replikation des Partitionsschemas ohne Komprimierung der Daten auf dem Abonnenten.|Wahr|False|Für das Partitionsschema wird ein Skript erstellt, für die Komprimierungseinstellungen der Partition jedoch nicht.|  
+|Keine Replikation des Partitionsschemas und keine Komprimierung der Daten auf dem Abonnenten.|Falsch|False|Weder für die Partition noch für die Komprimierungseinstellungen wird ein Skript erstellt.|  
+|Zur Komprimierung der Tabelle auf dem Abonnenten, wenn alle Partitionen auf dem Verleger komprimiert sind, ohne Replikation des Partitionsschemas.|False|Wahr|Überprüft, ob alle Partitionen für die Komprimierung aktiviert wurden.<br /><br /> Skriptausgabe der Komprimierung auf Tabellenebene.|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>Auswirkungen der Komprimierung auf andere SQL Server-Komponenten 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
    
  Die Komprimierung erfolgt im Speichermodul, und die Daten werden in den meisten anderen Komponenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im unkomprimierten Zustand dargestellt. Hierdurch werden die Auswirkungen der Komprimierung auf die anderen Komponenten auf folgende Punkte beschränkt:  
 -   Massenimport- und -exportvorgänge  
@@ -203,7 +203,7 @@ Die folgende Tabelle enthält Replikationseinstellungen, mit denen die Komprimie
 -   Die Datenkomprimierung ist nicht kompatibel mit Sparsespalten. Daher können Tabellen mit Sparsespalten weder komprimiert werden, noch können Sparsespalten einer komprimierten Tabelle hinzugefügt werden.  
 -   Die Aktivierung der Komprimierung kann bewirken, dass sich Abfragepläne ändern, da die Daten mit einer anderen Anzahl von Seiten und Zeilen pro Seite gespeichert werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Implementierung von Zeilenkomprimierung](../../relational-databases/data-compression/row-compression-implementation.md)   
  [Implementierung von Seitenkomprimierung](../../relational-databases/data-compression/page-compression-implementation.md)   
  [Implementierung von Unicode-Komprimierung](../../relational-databases/data-compression/unicode-compression-implementation.md)   

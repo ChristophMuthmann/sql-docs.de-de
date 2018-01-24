@@ -20,13 +20,13 @@ ms.assetid: 6d9819b8-ee2f-4838-9713-c5e3ad37ab46
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb5152ae022bd736492f01d2a370443cc42850b5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d6d3432b44f8adf35e6ea3fc105d1057a40250e0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>Entfernen von Spalten aus Abfragen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wenn Sie in einer Abfrage eine Spalte nicht länger verwenden möchten, können Sie diese entfernen. In diesem Fall entfernt der Abfrage- und Sicht-Designer die Verweise auf die Spalte aus der Auswahlliste, den Sortierangaben, den Suchkriterien, aus dem **SQL-Bereich**und aus allen Gruppenangaben.  

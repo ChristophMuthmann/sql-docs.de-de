@@ -18,13 +18,13 @@ ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59e779d5f51ecfd481da588634409d920ef287da
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4ab10f8b0aaab9cc0c967187dea73e10739164f6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="general-user-interface-elements"></a>Allgemeine Benutzeroberflächenelemente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der **Editor**, das Fenster **Eigenschaften** und die **Toolbox** zählen zu den grundlegenden Elementen von [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)].  

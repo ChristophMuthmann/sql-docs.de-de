@@ -22,13 +22,13 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 caps.latest.revision: "48"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b605fdc999d3b0bb8937428e7b158322d182d839
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dd664120017d7e498fd2930281380c718e98aaa9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/20/2017
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] basiert zur Überwachung und Verwaltung der aktuellen Rollen der Verfügbarkeitsreplikate, die zu einer gegebenen Verfügbarkeitsgruppe gehören, auf dem Windows-Failoverclustering (WSFC)-Cluster und bestimmt, wie sich ein Failoverereignis auf die Verfügbarkeitsreplikate auswirkt. Für jede erstellte Verfügbarkeitsgruppe wird eine WSFC-Ressourcengruppe erstellt. Der WSFC-Cluster überwacht diese Ressourcengruppe, um den Zustand des primären Replikats auszuwerten.  
   
- Das Quorum für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] basiert unabhängig davon, ob ein bestimmter Clusterknoten Verfügbarkeitsreplikate hostet, auf allen Knoten des WSFC-Clusters. Im Gegensatz zur Datenbankspiegelung ist in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]keine Zeugenrolle verfügbar.  
+ Das Quorum für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] basiert unabhängig davon, ob ein bestimmter Clusterknoten Verfügbarkeitsreplikate hostet, auf allen Knoten des WSFC-Clusters. Im Gegensatz zur Datenbankspiegelung ist in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] keine Zeugenrolle verfügbar.  
   
  Die allgemeine Integrität des WSFC-Clusters wird von den Abstimmungen eines Quorums der Clusterknoten bestimmt. Wird der WSFC-Cluster wegen eines nicht geplanten Notfalls oder aufgrund eines persistenten Hardware- oder Kommunikationsfehlers offline geschaltet, ist manueller Eingriff durch den Administrator erforderlich. Ein Windows Server- oder WSFC-Clusteradministrator muss ein Quorum erzwingen und dann die überdauernden Clusterknoten in einer nicht fehlertolerante Konfiguration wieder online schalten.  
   
@@ -77,11 +77,11 @@ ms.lasthandoff: 11/20/2017
   
 ||Knoten in einer FCI|Replikate in einer Verfügbarkeitsgruppe|  
 |-|-------------------------|-------------------------------------------|  
-|**Verwendet WSFC-Cluster**|Ja|Ja|  
+|**Verwendet WSFC-Cluster**|ja|ja|  
 |**Schutzebene**|Instanz|Datenbank|  
 |**Speichertyp**|Shared|Nicht freigegeben<br /><br /> Obwohl die Replikate in einer Verfügbarkeitsgruppe keinen Speicher gemeinsam verwenden, verwendet ein Replikat, das von einer FCI gehostet wird, gemäß der Anforderung dieser FCI eine gemeinsame Speicherlösung. Die Speicherlösung wird nur von Knoten in dieser FCI verwendet und nicht zwischen den Replikaten der Verfügbarkeitsgruppe.|  
 |**Speicherlösungen**|Direkt angefügt, SAN, Einbindungspunkte, SMB|Hängt von Knotentyp ab|  
-|**Lesbare sekundäre**|Nein*|Ja|  
+|**Lesbare sekundäre**|Nein*|ja|  
 |**Anwendbare Failoverrichtlinieneinstellungen**|WSFC-Quorum<br /><br /> FCI-spezifisch<br /><br /> Verfügbarkeitsgruppeneinstellungen*|WSFC-Quorum<br /><br /> Verfügbarkeitsgruppeneinstellungen|  
 |**Failoverressourcen**|Server, Instanz und Datenbank|Nur Datenbank|  
   
@@ -128,7 +128,7 @@ ms.lasthandoff: 11/20/2017
   
      [Konfigurieren von Windows-Failoverclustering für SQL Server (Verfügbarkeitsgruppe oder Failoverclusterinstanz) mit beschränkter Sicherheit](https://blogs.msdn.microsoft.com/sqlalwayson/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security/)  
   
-     [SQL Server AlwaysOn-Teamblogs: Der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblogs: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server-Technikblogs](http://blogs.msdn.com/b/psssql/)  
   
@@ -142,7 +142,7 @@ ms.lasthandoff: 11/20/2017
   
      [Whitepapers des SQL Server-Kundenberatungsteams](http://sqlcat.com/)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Aktivieren und Deaktivieren von Always On-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
  [Überwachen von Verfügbarkeitsgruppen (Transact-SQL)](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   

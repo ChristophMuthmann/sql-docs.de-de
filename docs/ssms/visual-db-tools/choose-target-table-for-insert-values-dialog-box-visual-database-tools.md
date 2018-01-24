@@ -18,13 +18,13 @@ ms.assetid: 580ed86a-be86-419b-9dc7-e3b17f19905f
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f73ebe1c3a1c0f1b37b02f7941c217d10780d88
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 69f5728462ca8df633618be59fbcf1eb6f4272ff
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>Zieltabelle für eingefügte Ergebnisse auswählen (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mit diesem Dialogfeld können Sie angeben, welche Tabelle mit einer INSERT VALUES-Abfrage aktualisiert werden soll. Das Dialogfeld wird aufgerufen, wenn beim Ändern des Typs einer Abfrage in eine INSERT VALUES-Abfrage im Bereich **Diagramm** mehrere Tabellen angezeigt werden.  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], adding
 ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9d6f6fc1ab13564faaab865410f9b9d132c3b6fa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 082b20b502afb8201ab63db204bf0fff25e17c66
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Nachdem eine Veröffentlichung erstellt wurde, können ihr Artikel hinzugefügt oder Artikel aus der Veröffentlichung gelöscht werden. Während das Hinzufügen von Artikeln jederzeit erfolgen kann, hängen die Schritte zum Löschen von Artikeln vom jeweiligen Replikationstyp und dem Zeitpunkt ab, zu dem der Artikel gelöscht wird.  
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
  > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)]Service Pack 2** oder höher und **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** oder höher unterstützen das Löschen einer Tabelle mit dem **DROP TABLE**-DLL-Befehl für Artikel, die an einer Transaktionsreplikation beteiligt sind. Wenn eine DROP TABLE-DDL durch die Publikation(en) unterstützt wird, löscht der DROP TABLE-Vorgang die Tabelle aus der Veröffentlichung und der Datenbank. Der Protokollleseagent wird einen Bereinigungsbefehl für die Verteilungsdatenbank für die gelöschte Tabelle posten und die Bereinigung der Metadaten des Verlegers durchführen. Wenn der Protokollleser noch nicht alle Protokolleinträge verarbeitet hat, die auf die gelöschte Tabelle verweisen, wird er neue Befehle ignorieren, die der gelöschten Tabelle zugeordnet sind. Bereits verarbeitete Datensätze werden an die Verteilungsdatenbank übermittelt. Sie können auf die Abonnentendatenbank angewendet werden, wenn der Verteilungs-Agent sie verarbeitet, bevor der Protokollleser veraltete (gelöschte) Artikel bereinigt. Die **Standard**-Einstellung für alle Veröffentlichungen für Transaktionsreplikationen unterstützt keine DROP TABLE-DLL. [KB 3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) enthält weitere detaillierte Informationen zu dieser Verbesserung.
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Veröffentlichen von Daten und Datenbankobjekten](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Erneutes Initialisieren von Abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)  

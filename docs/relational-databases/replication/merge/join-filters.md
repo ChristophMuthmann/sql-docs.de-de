@@ -18,15 +18,15 @@ helpviewer_keywords:
 - join filters
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7873edc14c20b25cefa66a7c1602c056ab7b978f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 211bde4093eff61342659558e231fb29c13e5bd7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="join-filters"></a>Verknüpfungsfilter
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Durch einen Joinfilter kann eine Tabelle auf der Grundlage der Filterkriterien einer verknüpften Tabelle in der Veröffentlichung gefiltert werden. In der Regel wird eine übergeordnete Tabelle mithilfe eines parametrisierten Filters gefiltert. Anschließend werden ein oder mehrere Joinfilter auf dieselbe Weise definiert, wie Sie einen Join zwischen Tabellen definieren. Die Joinfilter erweitern den parametrisierten Filter so, dass die Daten in den zugehörigen Tabellen nur dann repliziert werden, wenn sie der Joinfilterklausel entsprechen.  
@@ -92,7 +92,7 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
      Es wird dringend empfohlen, eine solche Logik statt in einer Unterabfrage in einem Joinfilter auszudrücken. Wenn Ihre Anwendung für die Verwendung einer Unterabfrage einen Zeilenfilter benötigt, stellen Sie sicher, dass die Unterabfrage ausschließlich Daten in der Nachschlagetabelle referenziert, die sich nicht ändern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Filtern veröffentlichter Daten für die Mergereplikation](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
  [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   

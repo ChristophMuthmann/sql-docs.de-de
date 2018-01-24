@@ -19,13 +19,13 @@ ms.assetid: 0f70973e-34af-4805-aa27-5493673842e5
 caps.latest.revision: "19"
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c46817cd74402bdf37635c389627cadcfa99d8ba
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 95e7b7371689b192ac1d822647f749e8022e1454
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="view-registered-servers-in-sql-server-management-studio"></a>Anzeigen von registrierten Servern in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In diesem Thema wird beschrieben, wie registrierte Server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] angezeigt werden.  

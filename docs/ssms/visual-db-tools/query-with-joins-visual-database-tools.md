@@ -23,13 +23,13 @@ ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb22fb2b6def35ee971edf962adf176aaa78edd3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 011d5fd28f4a5f5bab66fd6579c8e84f52a5989d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="query-with-joins-visual-database-tools"></a>Erstellen von Abfragen mit Joins (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Ein Abfrageergebnis kann Daten aus mehreren Tabellen oder Tabellenwertobjekten enthalten. Daten aus mehreren Tabellenwertobjekten können mit dem JOIN-Vorgang aus SQL kombiniert werden.  

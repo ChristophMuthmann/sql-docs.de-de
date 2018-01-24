@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7290b3701425411f0ba7d05e6790737057274762
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ab8c2fa693b264707e89f4438d408f4c513e565
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, SQL-Statistik-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das **SQLServer:SQL-Statistik**-Objekt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Indikatoren bereit, mit denen Sie die Kompilierung und die Art der Anforderungen, die an eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gesendet werden, überwachen können. Das Überwachen der Anzahl der Kompilierungen und Neukompilierungen von Abfragen sowie der Anzahl der Batches, die eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erhalten hat, gibt Ihnen einen Hinweis auf die Verarbeitungsgeschwindigkeit von Benutzerabfragen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowie auf die Effektivität, mit der der Abfrageoptimierer die Abfragen verarbeitet.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  Es folgen die Leistungsindikatoren für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **-Objekt von** .  
   
-|SQL-Statistik-Leistungsindikatoren von SQL Server|Beschreibung|  
+|SQL-Statistik-Leistungsindikatoren von SQL Server|Description|  
 |----------------------------------------|-----------------|  
 |**Versuche für automatische Parametrisierung/Sekunde**|Anzahl der Versuche für automatische Parametrisierung pro Sekunde. Die Gesamtanzahl sollte die Summe der fehlgeschlagenen, gesicherten und ungesicherten automatischen Parametrisierungen sein. Eine automatische Parametrisierung tritt dann ein, wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht, eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anforderung zu parametrisieren, indem bestimmte Literale durch Parameter ersetzt werden, damit der sich ergebende zwischengespeicherte Ausführungsplan für mehrere ähnliche Anforderungen wiederverwendet werden kann. Beachten Sie, dass in höheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Auto-Parametrisierungen auch als einfache Parametrisierungen bezeichnet werden. Dieser Leistungsindikator schließt keine erzwungenen Parametrisierungen ein.|  
 |**Batchanforderungen/Sekunde**|Anzahl der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehlsbatches, die pro Sekunde empfangen wurden. Diese Statistik ist von allen Einschränkungen (wie z. B. E/A, Anzahl der Benutzer, Cachegröße, Komplexität der Anforderungen usw.) betroffen. Eine hohe Anzahl der Batchanforderungen bedeutet einen guten Durchsatz.|  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 |**Erneute SQL-Kompilierungen/Sekunde**|Anzahl der erneuten Anweisungskompilierungen pro Sekunde. Zählt, wie oft erneute Kompilierungen von Anweisungen ausgelöst werden. Im Allgemeinen liegt es in Ihrem Interesse, dass der Wert der Neukompilierungen niedrig ist.|  
 |**Unsichere Auto-Parametrisierungen/Sekunde**|Anzahl der unsicheren automatischen Parametrisierungen pro Sekunde. Beispielsweise weist die Abfrage Eigenschaften auf, die verhindern, dass der zwischengespeicherte Plan wiederverwendet wird. Diese werden als unsafe gekennzeichnet. Die Anzahl der erzwungenen Parametrisierungen wird von diesem Leistungsindikator nicht gezählt.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server, Plancache-Objekt](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   

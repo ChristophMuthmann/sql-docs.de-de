@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.selectsource.f1
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1dba73f7bbfa6cb1ffee7d24a9f283e29e4649b0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9bd5115125244859cb147dbc4a5028f87111aaed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="select-source-dialog-box"></a>Dialogfeld 'Quelle auswählen'
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieses Dialogfelds können Sie die Quelle der auszuführenden Richtlinien auswählen. Um eine oder mehrere XML-Dateien auszuwählen, die Richtlinien enthalten, wählen Sie **Dateien**aus. Um die Richtlinien auszuführen, die auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gefunden werden, wählen Sie **Server**aus.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, eine Datenbank oder ein Datenbankobjekt, wählen Sie **Richtlinien**aus, und wählen Sie dann **Auswerten**aus. Klicken Sie auf der Seite **Richtlinienauswahl** des Dialogfelds **Richtlinien auswerten** auf die Schaltfläche zum Durchsuchen (**...**).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Dateien**  
  Wählen Sie eine oder mehrere XML-Dateien aus, die Richtlinien enthalten.  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  
   
- **Benutzername**  
+ **User name**  
  Geben Sie den Benutzernamen für die Verbindung ein. Diese Option ist nur verfügbar, wenn Sie die Windows-Authentifizierung für die Verbindungsherstellung ausgewählt haben.  
   
  **Anmeldename**  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
  **Kennwort**  
  Geben Sie das Kennwort für die Anmeldung ein. Sie können diese Option nur bearbeiten, wenn Sie zum Verbinden die Authentifizierung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgewählt haben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Richtlinienverwaltungsknoten &#40;Objekt-Explorer&#41;](../../relational-databases/policy-based-management/policy-management-node-object-explorer.md)   
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   

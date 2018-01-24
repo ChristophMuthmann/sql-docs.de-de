@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Log Reader Agent, performance
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac5c385cfdff8c4c024c02534d8c040534c400ca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 63a14e8eb3342d0d03f61028d20aea9ba018f3a8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-transactional-replication-performance"></a>Verbessern der Leistung der Transaktionsreplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ziehen Sie nach der Erwägung der allgemeinen Leistungstipps, die unter [Enhancing General Replication Performance](../../../relational-databases/replication/administration/enhance-general-replication-performance.md) aufgeführt sind, auch die nachfolgenden Aspekte, die sich speziell auf die Transaktionsreplikation beziehen, in Betracht.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Konfigurieren Sie den Verteiler auf einem dedizierten Server.  
   
-     Durch die Konfiguration eines Remoteverteilers kann der Verarbeitungsaufwand auf dem Verleger reduziert werden. Weitere Informationen finden Sie unter [Konfigurieren der Verteilung](../../../relational-databases/replication/configure-distribution.md).  
+     Durch die Konfiguration eines Remoteverteilers kann der Verarbeitungsaufwand auf dem Verleger reduziert werden. Weitere Informationen finden Sie unter [Configure Distribution](../../../relational-databases/replication/configure-distribution.md).  
   
 -   Richten Sie eine angemessene Größe für die Verteilungsdatenbank ein.  
   

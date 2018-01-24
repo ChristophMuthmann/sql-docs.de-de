@@ -16,15 +16,15 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], article processing order
 ms.assetid: d151e2c5-cf50-4cb3-a829-8f32455dbd66
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cb9d8b566766e23bfb17bc93b53d9d222fa3895
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a4476f6aaa996dff5ed88258a2cb9430a62774cd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-the-processing-order-of-merge-articles"></a>Angeben der Verarbeitungsreihenfolge von Mergeartikeln
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ab [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] haben Sie die Möglichkeit, die Standardreihenfolge zu überschreiben, in der Artikel bei Mergeveröffentlichungen verarbeitet werden. Die Änderung der Standardverarbeitungsreihenfolge ist z. B. dann sinnvoll, wenn Sie für die Definition von referenzieller Integrität Trigger verwenden und diese Trigger in einer bestimmten Reihenfolge ausgelöst werden sollen.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  Wenn die referenzielle Integrität durch Trigger oder auf Anwendungsebene gewahrt wird, müssen Sie die Reihenfolge angeben, in der die Artikel verarbeitet werden sollen. Im Beispiel mit den Triggern würden Sie dann angeben, dass die **SalesOrderHeader** -Tabelle vor der **SalesOrderDetail**-Tabelle zu verarbeiten ist, weil die Artikelreihenfolge auf der Einfügereihenfolge basiert. Bei der Mergereplikation wird die Reihenfolge der Löschungen automatisch umgekehrt. Das Nichtfestlegen einer Artikelverarbeitungsreihenfolge führt nicht zu einem Scheitern der Mergereplikation, weil der Merge-Agent mit der Verarbeitung der Artikel fortfährt, wenn es zu einer Einschränkungsverletzung kommt. Wenn die anderen Artikel verarbeitet sind, versucht der Agent, alle Operationen, die fehlgeschlagen sind, erneut auszuführen. Durch das Angeben einer Artikelverarbeitungsreihenfolge werden lediglich solche Neuversuche und die damit verbundene zusätzliche Verarbeitung verhindert. Wenn Sie eine falsche Reihenfolge angeben (z. B. eine, bei der die Detaildatensätze vor den Headerdatensätzen verarbeitet werden), versucht die Mergereplikation die Verarbeitung so lange, bis sie gelingt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
  [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)   
  [Join Filters](../../../relational-databases/replication/merge/join-filters.md)  

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6c8389b3c37b71df9e49a75c45b667cc4575192c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f888c404cf4342e23965d421fcb7855b918b7e25
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-snapshots-sql-server"></a>Datenbank-Momentaufnahmen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Eine Datenbankmomentaufnahme ist eine schreibgeschützte statische Sicht einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank (die *Quelldatenbank*). Die Datenbankmomentaufnahme ist hinsichtlich der Transaktionen mit der Quelldatenbank zum Zeitpunkt der Momentaufnahmeerstellung konsistent. Eine Datenbankmomentaufnahme befindet sich immer auf derselben Serverinstanz wie ihre Quelldatenbank. Beim Aktualisieren der Quelldatenbank wird auch die Datenbankmomentaufnahme aktualisiert. Daher wird wahrscheinlich der verfügbare Speicherplatz aufgebraucht, je länger eine Datenbankmomentaufnahme besteht.  
@@ -241,7 +241,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Löschen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbankspiegelung und Datenbankmomentaufnahmen &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   

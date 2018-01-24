@@ -21,15 +21,15 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 88db862493213badd36cfcaf4301cc1be6da5881
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4dbf50b3d48d83d3df69ec285a22379164f883e0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-network-configuration"></a>Server-Netzwerkkonfiguration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Zu den Aufgaben, die im Rahmen der Server-Netzwerkkonfiguration durchgeführt werden müssen, gehören das Aktivieren von Protokollen, das Ändern des Anschlusses oder der Pipe, der bzw. die von einem Protokoll verwendet wird, das Konfigurieren der Verschlüsselung, das Konfigurieren des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser-Diensts, das Offenlegen oder Verbergen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] im Netzwerk sowie das Registrieren des Serverprinzipalnamens (SPN). In den meisten Fällen ist es nicht erforderlich, die Server-Netzwerkkonfiguration zu ändern. Konfigurieren Sie die Server-Netzwerkprotokolle nur dann neu, wenn spezielle Netzwerkanforderungen erfüllt werden müssen.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/20/2017
   
  SPNs können auch verwendet werden, um die Clientauthentifizierung bei der Verbindung mit NTLM sicherer zu gestalten. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit dem Datenbankmodul unter Verwendung von Erweiterter Schutz](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).  
   
-## <a name="sql-server-browser-service"></a>SQL Server-Browserdienst  
+## <a name="sql-server-browser-service"></a>SQL Server Browser Service  
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser-Dienst wird auf dem Server ausgeführt und unterstützt Clientcomputer bei der Suche nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browserdienst muss nicht konfiguriert werden, er muss jedoch in einigen Verbindungsszenarien ausgeführt werden. Weitere Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser finden Sie unter [SQL Server-Browserdienst &#40;Datenbankmodul und SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).  
   
 ## <a name="hiding-sql-server"></a>Ausblenden von SQL Server  

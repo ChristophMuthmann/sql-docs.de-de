@@ -16,15 +16,15 @@ helpviewer_keywords:
 - retention periods [SQL Server replication]
 ms.assetid: c288daab-5181-4d4b-ba2a-8a147098e758
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70f1a7de1cdc1641324d0a90bce210269cb05f89
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b43e9ee27b6121bf9bc35107ade4a09a6808fa7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="set-the-history-retention-period-sql-server-management-studio"></a>Festlegen der Beibehaltungsdauer für den Verlauf (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Beibehaltungsdauer für den Verlauf wird auf der Seite **General** des Dialogfelds **Distribution Database Properties – \<DistributionDatabase>** angegeben. Mit dieser Einstellung wird angegeben, wie lange der Replikations-Agentverlauf gespeichert werden soll. Diese Seite ist über die Seite **General** des Dialogfelds **Verteilereigenschaften - \<Distributor>** verfügbar. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verteilung konfigurieren](../../relational-databases/replication/configure-distribution.md)  
   
   

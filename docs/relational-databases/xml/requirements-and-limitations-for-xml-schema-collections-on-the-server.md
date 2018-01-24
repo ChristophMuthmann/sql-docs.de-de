@@ -27,15 +27,15 @@ helpviewer_keywords:
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 caps.latest.revision: "84"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5cd69a363f823d5d5ef197524d2fe5a3f393d438
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d12b4ae5ef18aadaf580945f5326dc08f00c11ac
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Anforderungen und Einschränkungen für XML-Schemaauflistungen auf dem Server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Die Überprüfung mit der XML-Schemadefinitionssprache (XSD) weist einige Einschränkungen für SQL-Spalten auf, die den **xml**-Datentyp verwenden. Die folgende Tabelle liefert Einzelheiten zu diesen Einschränkungen und stellt außerdem Richtlinien zum Ändern des XSD-Schemas für die Verwendung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereit. Die Themen in diesem Abschnitt enthalten zusätzliche Informationen über bestimmte Einschränkungen sowie eine Anleitung zur Arbeit mit ihnen.  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|Description|  
 |-----------|-----------------|  
 |[Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|Beschreibt kanonische Formen und Musterbeschränkungen.|  
 |[Platzhalterkomponenten und Inhaltsüberprüfung](../../relational-databases/xml/wildcard-components-and-content-validation.md)|Beschreibt die Einschränkungen bei der Verwendung von Platzhalterzeichen, lax-Überprüfung und anyType-Elementen mit XML-Schemaauflistungen.|  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/17/2017
 |[Große XML-Schemasammlungen und Bedingungen des Typs „Nicht genügend Arbeitsspeicher“](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)|Stellt Lösungen für Situationen bereit, in denen nicht genügend Arbeitsspeicher verfügbar ist, was gelegentlich bei großen Schemaauflistungen vorkommt.|  
 |[Nicht deterministische Inhaltsmodelle](../../relational-databases/xml/non-deterministic-content-models.md)|Beschreibt die Einschränkungen hinsichtlich nicht deterministischer Inhaltsmodelle.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [XML-Daten &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Erteilen von Berechtigungen für eine XML-Schemaauflistung](../../relational-databases/xml/grant-permissions-on-an-xml-schema-collection.md)   

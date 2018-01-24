@@ -17,15 +17,15 @@ helpviewer_keywords:
 - hierarchyid [Database Engine], tutorial
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ed9d79b4dacf83513a41b4d33cd13ed7852be184
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 668177022a6032c906a97c1787ddac3b9a6771dc
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>Lernprogramm: Verwenden des hierarchyid-Datentyps
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Dieses Tutorial richtet sich an Benutzer, die mit [!INCLUDE[tsql](../../includes/tsql-md.md)] vertraut sind, aber noch keine Erfahrung mit dem Datentyp **hierarchyid** haben.  
@@ -48,7 +48,7 @@ Auf dem System muss Folgendes installiert sein:
   
 -   Internet Explorer 6 oder eine höhere Version.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Lernprogramm: Erste Schritte mit dem Datenbankmodul](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](../../t-sql/tutorial-writing-transact-sql-statements.md)  
 [hierarchyid-Datentyp-Methodenverweis](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  

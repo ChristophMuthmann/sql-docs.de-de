@@ -20,13 +20,13 @@ ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9cbebb7269afbf1ae1caa16032c7d4c4406ba148
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a9336d8387ac7ff764821eee47405203672a31fe
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Navigieren im Abfrage- und Sicht-Designer (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können im Abfrage- und Sicht-Designer mit der Tastatur und mit der Maus arbeiten. In den folgenden Tabellen finden Sie spezielle Methoden.  

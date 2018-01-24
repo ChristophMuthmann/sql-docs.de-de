@@ -16,13 +16,13 @@ ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 74210d90aa66f6bc770e6c9cb56a2e0fa38fff64
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8ce2864c359c33efe354de4f85fd347f51047874
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>Optionen (SQL Server-Objekt-Explorer – Befehle)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wenn Sie mit der rechten Maustaste auf eine Tabelle oder eine Sicht im Objekt-Explorer klicken, werden die beiden folgenden Optionen zum Anzeigen von Zeilen in der Tabelle angezeigt:  

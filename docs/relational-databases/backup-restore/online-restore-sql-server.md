@@ -16,15 +16,15 @@ helpviewer_keywords:
 - online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a92b8a183c2975e219ef5774cd110e5f53e483a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b3500b144cc3afb10c5ac12ee76e49dc11953623
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="online-restore-sql-server"></a>Onlinewiederherstellungen [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Onlinewiederherstellung wird nur von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Enterprise Edition unterstützt. In dieser Edition erfolgen Datei- und Seitenwiederherstellungen sowie schrittweise Wiederherstellungen standardmäßig online. Dieses Thema ist nur für Datenbanken relevant, die mehrere Dateien oder Dateigruppen enthalten (und unter dem einfachen Wiederherstellungsmodell nur für schreibgeschützte Dateigruppen).  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Wiederherstellen des Protokolls mit WITH RECOVERY für die letzte Protokollwiederherstellung. Damit werden die wiederhergestellten Daten online geschaltet.  
   
- Gelegentlich ist für eine Transaktion, für die kein Commit ausgeführt wurde, kein Rollback möglich, weil die für das Rollback erforderlichen Daten während des Starts offline sind. In diesem Fall wird die Transaktion verzögert. Weitere Informationen finden Sie unter [Markierte Transaktionen&#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).  
+ Gelegentlich ist für eine Transaktion, für die kein Commit ausgeführt wurde, kein Rollback möglich, weil die für das Rollback erforderlichen Daten während des Starts offline sind. In diesem Fall wird die Transaktion verzögert. Weitere Informationen finden Sie unter [Markierte Transaktionen &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)entfernt werden.  
   
 > [!NOTE]  
 >  Wenn für die Datenbank aktuell das massenprotokollierte Wiederherstellungsmodell verwendet wird, empfiehlt es sich, zum vollständigen Wiederherstellungsmodell zu wechseln, bevor Sie eine Onlinewiederherstellung starten. Weitere Informationen finden Sie unter [Anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
@@ -94,11 +94,11 @@ ms.lasthandoff: 11/17/2017
   
 -   [Beispiel: Schrittweise Wiederherstellung einer Datenbank &#40;Vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [Beispiel: Schrittweise Wiederherstellung nur bestimmter Dateigruppen &#40;Vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [Beispiel: Schrittweise Wiederherstellung nur bestimmter Dateigruppen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
 -   [Beispiel: Onlinewiederherstellung einer Datei mit Lese-/Schreibzugriff &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
--   [Beispiel: Onlinewiederherstellung einer schreibgeschützten Datei &#40;Vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
+-   [Beispiel: Onlinewiederherstellung einer schreibgeschützten Datei &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
@@ -112,7 +112,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Entfernen von veralteten Dateigruppen &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Dateiwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [Dateiwiederherstellungen &#40;einfaches Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [Wiederherstellung von Seiten &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   

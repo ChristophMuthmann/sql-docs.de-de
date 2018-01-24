@@ -15,15 +15,15 @@ f1_keywords: vs.toolbox
 helpviewer_keywords: Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d1295c3b760386380c626e1afde9b98401ef3bd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a339068c7fe7f467a40f0b04bb3f08a6eecaefa9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="toolbox-component-f1-help"></a>Toolboxkomponente (F1-Hilfe)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In der **Toolbox** wird eine Vielzahl von Elementen angezeigt, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Projekten verwendet werden können. Die **Toolbox** können Sie über das Menü **Ansicht** öffnen. Bei Bedarf können Sie das Fenster der Toolbox verankern. Eine verankerte **Toolbox** kann in geöffnetem Zustand fixiert werden oder für die Zeit, in der sie nicht verwendet wird, auf **Automatisch ausblenden** gesetzt werden.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="add-azure-components-to-the-toolbox"></a>Hinzufügen von Azure-Komponenten zur Toolbox  
  Das Azure Feature Pack für Integration Service enthält Verbindungs-Manager für Verbindungen zu Azure-Datenquellen und Tasks für allgemeine Azure-Vorgänge. Installieren Sie das Feature Pack, um diese Elemente der Toolbox hinzufügen. Weitere Informationen finden Sie unter [Azure Feature Pack für Integration Services &#40;SSIS&#41;](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden der Toolbox](http://msdn.microsoft.com/library/16733e39-4dc5-416f-ab10-c1d823f79d2d)   
  [Auswählen von Toolboxelementen &#40;Seite „Wartungstasks“&#41;](http://msdn.microsoft.com/library/b92c9054-7479-45d8-a54c-c1bb6699bdb3)  
   

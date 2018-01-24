@@ -19,15 +19,15 @@ helpviewer_keywords:
 - bcp utility [SQL Server], compatibility
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
 caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 719cd41fd6bf7597593edeceba69e45da9441940
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c373de30a62be5afa38398bbd7bc4d55ebf45d25
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Angeben von Datenformaten für die Kompatibilität bei Verwendung von bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In diesem Thema werden die Datenformatattribute, feldspezifischen Eingabeaufforderungen und das Speichern von Feld-nach-Feld-Daten in einer Formatdatei des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**bcp**-Befehls, die keine XML-Datei ist, beschrieben. Das Verständnis dieser Konzepte kann für Sie nützlich sein, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten für den Massenimport in ein anderes Programm, z. B. ein anderes Datenbankprogramm, mit einem Massenexportvorgang exportieren. Die Standarddatenformate in (systemeigen, Zeichen oder Unicode) der Quelltabelle können mit dem vom anderen Programm erwarteten Datenlayout inkompatibel sein. Falls eine Inkompatibilität vorliegt, müssen Sie beim Exportieren von Daten das Datenlayout beschreiben.  
@@ -109,7 +109,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
 >  Für eine Datendatei, die ein einziges Datenformat für den Dateispeichertyp verwendet, wie z.B. das Zeichenformat oder das native Format, können Sie mit der Option **format** schnell eine Formatdatei erstellen, ohne Daten zu exportieren oder zu importieren. Diese Vorgehensweise hat den Vorteil, dass sie einfach ist und die Möglichkeit bietet, eine XML-Formatdatei oder eine Nicht-XML-Formatdatei zu erstellen. Weitere Informationen finden Sie unter [Erstellen einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md).  
   
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Angeben des Dateispeichertyps mithilfe von bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
@@ -122,7 +122,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
 ## <a name="related-content"></a>Verwandte Inhalte  
  Keine.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Massenimport und -export von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [Datenformate für Massenimport oder Massenexport &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   

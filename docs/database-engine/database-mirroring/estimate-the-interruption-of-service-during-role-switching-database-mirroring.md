@@ -22,13 +22,13 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2083d1c82e4557e4de96cd8841ce043563b25f90
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3b506d1897f7de298a3f9bbe9259eab106ffcbda
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Einschätzen der Unterbrechung des Diensts während des Rollenwechsels (Datenbankspiegelung)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Während eines Rollenwechsels ist der Zeitraum, für den die Datenbankspiegelung außer Dienst ist, abhängig von der Art des Rollenwechsels und vom Grund für den Rollenwechsel.  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/20/2017
   
  ![Error detection and failover time (Fehlererkennung und Failoverzeit)](../../database-engine/database-mirroring/media/dbm-failovauto-time.gif "Error detection and failover time (Fehlererkennung und Failoverzeit)")  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Betriebsmodi der Datenbankspiegelung](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  

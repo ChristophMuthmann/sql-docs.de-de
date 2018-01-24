@@ -15,12 +15,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 caps.latest.revision: "23"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: ca3034c2c08ac3315e9cbda4e0f76c9d817d634d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: fe3fe62c9ab9ae24f0c3fdc366e61ebfd8d480a1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Installieren von SQL Server mit dem Speicher der SMB-Dateifreigabe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] können Systemdatenbanken (master, model, msdb und tempdb) sowie [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Benutzerdatenbanken mit dem SMB-Dateiserver (Server Message Block) als Speicheroption installiert werden. Dies gilt sowohl für eigenständige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstallationen (FCI).  

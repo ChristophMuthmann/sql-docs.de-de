@@ -18,13 +18,13 @@ ms.assetid: 862b7c83-7878-49ad-84f0-67288d658ea8
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27700f030ab97818cfcbdb6b5389417f37118c9b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 591c7f95401b89a8584d67ead8f3ecccca836593
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="show-diagram-properties-visual-database-tools"></a>Anzeigen von Diagrammeigenschaften (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können Eigenschaften für ein Datenbankdiagramm im Eigenschaftenfenster anzeigen.  

@@ -19,13 +19,13 @@ ms.assetid: e7985d14-8e6c-4fca-a1c9-9af1eeacb1e2
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61c0d1c75d533106b7660e257f0f0e19d0a3d1be
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bf9184edf85ff6dd7edf79ef9ada5103a8bc4de4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="view-join-properties-visual-database-tools"></a>Anzeigen von Joineigenschaften (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Im Eigenschaftenfenster wird eine Auflistung der Eigenschaften für eine Sicht angezeigt.  

@@ -15,12 +15,12 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 14843789252f1e18a728edd13327f28428c7061c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: d31efaf4118ec4b73195b8ee47f35d8d65611af1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>Reparieren von Fehlern bei einer SQL Server-Installation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Der Reparaturvorgang kann in den folgenden Szenarien verwendet werden:  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/20/2017
     Setup.exe /q /ACTION=Repair /INSTANCENAME=instancename  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Themen zu Vorgehensweisen für die Installation](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   

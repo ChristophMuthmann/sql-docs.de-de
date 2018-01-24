@@ -20,13 +20,13 @@ ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6f1b17fdb1d50e86578b55250a5b15b4d8d054b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 909710f164136630826d14d368dc831af03d01f6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>Löschen eines Datenbankdiagramms (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wenn Sie ein Datenbankdiagramm nicht mehr benötigen, können Sie es löschen.  

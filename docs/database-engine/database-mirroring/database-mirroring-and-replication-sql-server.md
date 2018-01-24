@@ -18,13 +18,13 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 caps.latest.revision: "39"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3c54a32f33bb5c74218f597c04451bd4d194a980
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3e4757ca79a259ac4d7ddbc554954d139828f0f9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Datenbankspiegelung und Replikation (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Datenbankspiegelung kann in Verbindung mit der Replikation verwendet werden, um die Verfügbarkeit der Veröffentlichungsdatenbank zu verbessern. Bei der Datenbankspiegelung sind zwei Kopien einer einzigen Datenbank vorhanden, die normalerweise auf verschiedenen Computern gespeichert sind. Für die Clients ist immer nur eine Kopie der Datenbank verfügbar. Diese Kopie wird als Prinzipaldatenbank bezeichnet. Updates, die Clients an der Prinzipaldatenbank vornehmen, werden in der anderen Kopie der Datenbank angewendet, die als Spiegeldatenbank bezeichnet wird. Beim Spiegeln wird das Transaktionsprotokoll von jedem Einfüge-, Update- oder Löschvorgang, der an der Prinzipaldatenbank vorgenommen wird, auf die Spiegeldatenbank angewandt.  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/20/2017
   
     -   [Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Ausführbare Konzepte für die Programmierung von Replikations-Agent](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
      Es wird empfohlen, zunächst den **–PublisherFailoverPartner** -Parameter zu einem Agent-Profil hinzuzufügen und anschließend den Spiegeldatenbanknamen im Profil anzugeben. Wenn Sie z. B. die Replikation mit gespeicherten Prozeduren konfigurieren:  
   
@@ -166,7 +166,7 @@ ms.lasthandoff: 11/20/2017
 |Modus mit hoher Leistung|Wenn die Spiegeldatenbank nicht verfügbar ist, läuft sie ungeschützt (das heißt, sie wird nicht gespiegelt). Der Protokolllese-Agent repliziert jedoch nur solche Transaktionen, die in der Spiegeldatenbank festgeschrieben wurden. Wenn der Dienst erzwungen wird und der Spiegelserver die Rolle der Prinzipaldatenbank übernimmt, arbeitet der Protokolllese-Agent für die Spiegeldatenbank und beginnt mit dem Übernehmen der neuen Transaktionen.<br /><br /> Beachten Sie, dass die Replikationslatenzzeit steigt, wenn die Spiegeldatenbank hinter die Prinzipaldatenbank zurückfällt.|  
 |Der Modus mit hoher Sicherheit ohne automatisches Failover|Für alle Transaktionen, für die ein Commit ausgeführt wird, wird sichergestellt, dass sie auf dem Datenträger in der Spiegeldatenbank festgeschrieben werden. Der Protokolllese-Agent repliziert jedoch nur solche Transaktionen, die in der Spiegeldatenbank festgeschrieben wurden. Wenn die Spiegeldatenbank nicht verfügbar ist, deaktiviert die Prinzipaldatenbank jede weitere Aktivität in der Datenbank, weshalb der Protokolllese-Agent keine Transaktionen replizieren muss.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Replikationsfunktionen und -tasks](../../relational-databases/replication/replication-features-and-tasks.md)   
  [Protokollversand und Replikation &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)  
   

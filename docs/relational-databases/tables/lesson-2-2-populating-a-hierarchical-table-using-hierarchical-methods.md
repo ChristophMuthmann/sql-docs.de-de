@@ -16,15 +16,15 @@ f1_keywords: HierarchyID
 helpviewer_keywords: HierarchyID
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e5af8385d5968daba091c05ae41cff780be8f47b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 24e6481c9f9122786d46cf7b813fdbdddac2ef74
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-2---populating-a-hierarchical-table-using-hierarchical-methods"></a>Lektion 2.2: Auffüllen einer hierarchischen Tabelle mit hierarchischen Methoden
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -170,7 +170,7 @@ Wie in der vorigen Lektion verwenden wir die Methode `ToString()` , um den **hie
   
 Die Tabelle ist jetzt vollständig mit den Daten der Marketingabteilung aufgefüllt.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Abfragen einer hierarchischen Tabelle mit hierarchischen Methoden](../../relational-databases/tables/lesson-2-3-querying-a-hierarchical-table-using-hierarchy-methods.md)  
   
   

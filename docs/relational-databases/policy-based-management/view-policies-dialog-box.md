@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.managepolicies.general.f1
 ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa7dfabe97a531dc69302cc30b0c42a6d3cd09f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6e339d3fa4719aac58023a62a1d858b6a98dfe5d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-policies-dialog-box"></a>Dialogfeld 'Richtlinien anzeigen'
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieses Dialogfelds können Sie die Richtlinien anzeigen, die für dieses Ziel gelten. In diesem Dialogfeld werden relevante Richtlinien, deren Richtlinienkategorien und Informationen über die Richtlinien angezeigt.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Richtlinienzustand**  
  Gibt den Status der Richtlinie im Hinblick auf dieses Ziel an. Bleibt leer, wenn der Status unbekannt ist.  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
  **Letzte Ausführung**  
  Datum und Uhrzeit der letzten Ausführung der Richtlinie.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

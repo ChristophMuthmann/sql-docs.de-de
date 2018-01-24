@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 401b870e8a40b2d451bf7b17aa0eb7c4f7a304f0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 68e9e9a97b9a601bad62750b2092f2bea66441c0
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML-Datentyp und -Spalten (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] In diesem Thema werden die Vorteile und die Einschränkungen des **xml**-Datentyps für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erläutert. Es soll Ihnen zudem die Entscheidung vereinfachen, wie XML-Daten gespeichert werden.  
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Möglichkeiten zur Datenänderung  
   
-     Bestimmte Arbeitsauslastungen erfordern ein differenziertes Ändern der XML-Daten. Das kann z. B. das Hinzufügen eines neuen Abschnitts zu einem Dokument einschließen, was bei anderen Arbeitsauslastungen wie z. B. Webinhalt nicht der Fall ist. Für Ihre Anwendung kann die Sprachenunterstützung bei der Datenänderung wichtig sein.  
+     Bestimmte Arbeitsauslastungen erfordern ein differenziertes Ändern der XML-Daten. Das kann z. B. das Hinzufügen eines neuen Abschnitts zu einem Dokument einschließen, was bei anderen Arbeitsauslastungen wie z. B. Webinhalt nicht der Fall ist. Für Ihre Anwendung kann die Sprachenunterstützung bei der Datenänderung wichtig sein.  
   
 -   Unterstützung von Schemas  
   
@@ -180,7 +180,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Er kann nicht als Schlüsselspalte für einen Index verwendet werden. Er kann jedoch als Daten in einen gruppierten Index aufgenommen werden oder über das Schlüsselwort INCLUDE explizit zu einem nicht gruppierten Index hinzugefügt werden, wenn der nicht gruppierte Index erstellt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Beispiele für den Massenimport und -export von XML-Dokumenten &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
   

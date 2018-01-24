@@ -22,15 +22,15 @@ helpviewer_keywords:
 - database deploy [SQL Server]
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf70035387f68c17913ba152101cf1417f6e8741
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 110cea8f6a219fad5121e88a19ed5608b2afcb59
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Bereitstellen einer Datenbank mit DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Verwenden Sie den Assistenten zum **Bereitstellen von Datenbanken auf SQL Azure**, um eine Datenbank zwischen einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz und einem [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]-Server bzw. zwischen zwei [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]-Servern bereitzustellen.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
  Datenbankoptionen wie TRUSTWORTHY, DB_CHAINING und HONOR_BROKER_PRIORITY können nicht im Rahmen des Bereitstellungsprozesses angepasst werden. Physische Eigenschaften, z. B. die Anzahl der Dateigruppen oder die Anzahl und Größe der Dateien, können nicht im Rahmen des Bereitstellungsprozesses geändert werden. Nachdem die Bereitstellung abgeschlossen wurde, können Sie die ALTER DATABASE-Anweisung, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]oder PowerShell für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden, um die Datenbank individuell anzupassen.  
   
 ###  <a name="LimitationsRestrictions"></a> Einschränkungen  
- Der Assistent zum **Bereitstellen von Datenbanken** unterstützt das Bereitstellen einer Datenbank:  
+ Der Assistent zum **Bereitstellen von Datenbanken**  unterstützt das Bereitstellen einer Datenbank:  
   
 -   Von einer [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz auf [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
@@ -145,7 +145,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  Verwenden Sie die **Import** -Methode des **Microsoft.SqlServer.Management.Dac.DacStore** -Typs, um die BACPAC-Datei zu importieren. Geben Sie die beim Exportvorgang erstellte BACPAC-Datei an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Exportieren einer Datenebenenanwendung](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)  

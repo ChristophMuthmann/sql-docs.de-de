@@ -20,15 +20,15 @@ helpviewer_keywords:
 - updatable subscriptions
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d146aaae7ef0a3e033deb1fb3a3cc51b49663abc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a31fed7f22953170b443c42b6394786e6fa9a60e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>Aktualisierbare Abonnements – Für die Transaktionsreplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,10 +130,10 @@ ms.lasthandoff: 11/17/2017
   
     -   Wenn Konflikte zu erwarten sind, gehen Sie folgendermaßen vor: Verwenden Sie keine FOREIGN KEY-Einschränkungen auf dem Verleger oder dem Abonnenten, wenn Sie die Konfliktlösung "Abonnent gewinnt" verwenden; verwenden Sie keine FOREIGN KEY-Einschränkungen auf dem Abonnenten, wenn Sie die Konfliktlösung "Verleger gewinnt" verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Peer-zu-Peer-Transaktionsreplikation](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Veröffentlichungstypen der Transaktionsreplikation](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Abonnieren von Veröffentlichungen](../../../relational-databases/replication/subscribe-to-publications.md)  
+ [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   

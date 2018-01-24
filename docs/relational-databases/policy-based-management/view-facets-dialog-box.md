@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.viewfacet.f1
 ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3e73a3a40fa2ef43a04fafdecd6c4f7798a81ef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: abbe4aa8bc606437662fb92bb25f8d80002e70e8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-facets-dialog-box"></a>Dialogfeld 'Facets anzeigen'
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieses Dialogfelds können Sie die Eigenschaften eines Facets der richtlinienbasierten Verwaltung anzeigen. Die Eigenschaften eines Facets werden bei der Erstellung des Facets definiert und können mithilfe dieses Dialogfelds nicht geändert werden.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Facet**  
  Der Name des derzeit ausgewählten Facets.  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
  **Aktuellen Status als Richtlinie exportieren**  
  Klicken Sie, um den beschriebenen Status der Facet-Eigenschaften als neue Richtlinie in eine XML-Datei zu exportieren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

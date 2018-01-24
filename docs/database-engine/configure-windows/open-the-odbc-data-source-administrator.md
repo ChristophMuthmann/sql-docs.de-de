@@ -16,15 +16,15 @@ helpviewer_keywords:
 - opening ODBC Data Source Administrator
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a1e1cac2d9bf679eaf5e0eb0c2a8b8068cc9c919
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 588a096147da057e2d8404693e73521f8c4fd04c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>Öffnen des ODBC-Datenquellen-Administrators
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Zum Herstellen von Verbindungen mit der Azure Active Directory-Authentifizierung für SQL-Datenbank installieren Sie die neuesten Treiber, z. B. [ODBC-Treiber 13.1 für SQL Server](https://www.microsoft.com/download/details.aspx?id=53339).   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überprüfen der Version des ODBC SQL Server-Treibers &#40;Windows&#41;](../../database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md)  
   
   

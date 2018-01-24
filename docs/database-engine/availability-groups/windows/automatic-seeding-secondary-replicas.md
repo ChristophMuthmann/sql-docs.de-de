@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 2dc72a3874e9742b3bf73d0bdaf2b3d0e00f33c4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 86282a01e4c9027d9dc340d348a814f61c0f4b3b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Automatisches Seeding für sekundäre Replikate
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Bei SQL Server 2012 und 2014 ist die einzige Möglichkeit, ein sekundäres Repli
 
 * [Auswirkungen von Leistung und Transaktionsprotokoll auf das primäre Replikat](#performance-and-transaction-log-impact-on-the-primary-replica)
 * [Datenträgerlayout](#disk-layout)
-* [Sicherheit](#security)
+* [Security](#security)
 
 
 ### <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>Auswirkungen von Leistung und Transaktionsprotokoll auf das primäre Replikat
@@ -85,7 +85,7 @@ Beim Kombinieren von Standard- und Nicht-Standardpfaden auf den primären und se
 
 Aktivieren Sie das Ablaufverfolgungsflag 9571, um das Verhalten von SQL Server 2016 (und früher) wiederherzustellen. Weitere Informationen zum Aktivieren von Ablaufverfolgungsflags finden Sie unter [DBCC TRACEON (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md).
 
-### <a name="security"></a>Sicherheit
+### <a name="security"></a>Security
 
 Die Sicherheitsberechtigungen variieren je nach Art des Replikats, das initialisiert wird:
 
@@ -169,7 +169,7 @@ Wenn das sekundäre Replikat das automatische Seeding verwendet hat, als es zur 
 
 ## <a name="change-the-seeding-mode-of-a-replica"></a>Ändern des Seedingmodus eines Replikats
 
-Der Seedingmodus eines Replikats kann geändert werden, nachdem die Verfügbarkeitsgruppe erstellt wurde, und das automatische Seeding kann so aktiviert oder deaktiviert werden. Das Aktivieren des automatischen Seedings nach dem Erstellen ermöglicht, dass eine Datenbank zur Verfügbarkeitsgruppe hinzugefügt werden kann, die automatisches Seeding verwendet, wenn Sie mit Sichern, Kopieren und Wiederherstellen erstellt wurde. Beispiel:
+Der Seedingmodus eines Replikats kann geändert werden, nachdem die Verfügbarkeitsgruppe erstellt wurde, und das automatische Seeding kann so aktiviert oder deaktiviert werden. Das Aktivieren des automatischen Seedings nach dem Erstellen ermöglicht, dass eine Datenbank zur Verfügbarkeitsgruppe hinzugefügt werden kann, die automatisches Seeding verwendet, wenn Sie mit Sichern, Kopieren und Wiederherstellen erstellt wurde. Zum Beispiel:
 
 ```sql
 ALTER AVAILABILITY GROUP [AGName]
@@ -249,7 +249,7 @@ GO
 
 Die folgende Tabelle enthält erweiterte Ereignisse, die sich auf automatisches Seeding beziehen.
 
-|Name|Beschreibung|
+|Name|Description|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|Seedinganforderungsnachricht.|
 |hadr_physical_seeding_backup_state_change|Statusänderung auf der Sicherungsseite für das physische Seeding.|

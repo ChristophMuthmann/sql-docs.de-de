@@ -16,13 +16,13 @@ ms.assetid: 7f976d2b-1a16-47f8-85e6-d7c2bf6a84b8
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 873ec86f961896bba873509fe29bb71546be29c4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8e28ee8cda5ac45f6c34f3d6229b07505e066de5
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-designers---analysis-services-designers---general"></a>Optionen (Designer - Analysis Services-Designer – Allgemein)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Legen Sie das Standardverhalten von SQL Server Analysis Services-Designern mithilfe der Seite **Designer**, **Wartungspläne**, **Analysis Services** und **Allgemein** fest.  

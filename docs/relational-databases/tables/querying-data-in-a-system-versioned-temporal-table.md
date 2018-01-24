@@ -15,20 +15,20 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 caps.latest.revision: "7"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bdac67ec17d4dd47ce413822833db543cbbe6043
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5bd4678f0a17e570f089f3c532df5a32e284787d
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Wenn Sie den letzten (aktuellsten) Zustand der Daten in einer temporalen Tabelle abrufen möchten, können Sie die Abfrage wie gewohnt durchführen, so wie auch bei nicht temporalen Tabellen. Wenn die PERIOD-Spalten nicht ausgeblendet sind, erscheinen ihre Werte in einer SELECT \* -Abfrage. Wenn Sie die **PERIOD** -Spalten als ausgeblendet angegeben haben, erscheinen ihre Werte nicht in einer SELECT \* -Abfrage. Wenn die **PERIOD** -Spalten ausgeblendet wurden, verweisen Sie in der SELECT-Klausel explizit auf die **PERIOD** -Spalten, um die Werte für diese Spalten zurückzugeben.  
   
- Verwenden Sie die neue  **FOR SYSTEM_TIME** -Klausel mit vier temporal-spezifischen Unterklauseln zum Abfragen von Daten über die aktuellen Tabellen und Verlaufstabellen, um eine zeitbasierte Analyse jedweder Art auszuführen. Weitere Informationen zu diesen Klauseln finden Sie unter [Temporal Tables](../../relational-databases/tables/temporal-tables.md) (Temporäre Tabellen) und [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
+ Verwenden Sie die neue  **FOR SYSTEM_TIME** -Klausel mit vier temporal-spezifischen Unterklauseln zum Abfragen von Daten über die aktuellen Tabellen und Verlaufstabellen, um eine zeitbasierte Analyse jedweder Art auszuführen. Weitere Informationen zu diesen Klauseln finden Sie unter [Temporal Tables](../../relational-databases/tables/temporal-tables.md) (Temporäre Tabellen) und [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
 -   AS OF <Datum>  
   
@@ -141,12 +141,13 @@ ORDER BY [DeptID], [SysStartTime] Desc
 ## <a name="did-this-article-help-you-were-listening"></a>Fanden Sie diesen Artikel nützlich? Wir hören Ihnen zu  
  Welche Informationen suchen Sie, und haben Sie sie gefunden? Wir nehmen uns Ihr Feedback zu Herzen, um unsere Inhalte zu verbessern. Bitte senden Sie Ihre Kommentare an [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Queryinging%20a%20System-Versioned%20Temporal%20Table%20page)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Temporal Tables](../../relational-databases/tables/temporal-tables.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [Erstellen einer temporalen Tabelle mit Systemversionsverwaltung](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)   
  [Ändern von Daten in einer temporalen Tabelle mit Systemversionsverwaltung](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)   
- [Ändern vom Schema einer versionsverwalteten temporalen Tabelle](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)   
+ [Ändern des Schemas einer versionsverwalteten temporalen Tabelle](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md) 
+  
  [Beenden der Versionsverwaltung auf einer versionsverwalteten temporalen Tabelle](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   

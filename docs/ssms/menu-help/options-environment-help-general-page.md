@@ -16,13 +16,13 @@ ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b12f4599658f6e9c3a330e96aa87b65090092478
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d5b9be182f2af8ab60469591d63fb847da20f244
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-environment---help---general-page"></a>Optionen (Umgebung – Hilfe – Seite „Allgemein“)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Im Dialogfeld **Optionen** wählen Sie Dokumentationssätze aus und entscheiden, ob Themen intern in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] oder extern in einem separaten Fenster angezeigt werden sollen. Zum Zugreifen auf dieses Dialogfeld klicken Sie im Menü **Extras** auf **Optionen** . Erweitern Sie dann im Knoten **Umgebung** den Eintrag **Hilfe** , und klicken Sie auf **Allgemein**.  
