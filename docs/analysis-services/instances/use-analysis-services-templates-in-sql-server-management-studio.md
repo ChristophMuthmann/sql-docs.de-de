@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2ad2bc8a5d6d440f9f8c06f17d2857e5343adfce
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2b13acc5ac8947e4e97509764f648f8c31da1fa6
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Verwenden von Analysis Services-Vorlagen in SQL Server Management Studio
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] bietet eine Reihe von Vorlagen können Sie die erstellen Sie schnell XMLA-Skripts, DMX- oder MDX-Abfragen erstellen, KPIs in einen Cube oder tabellarisches Modell, Skript Sicherung Wiederherstellungsvorgänge und viele andere Tasks ausführen. Die Vorlagen befinden sich im **Vorlagen-Explorer** von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt einen Satz von Vorlagen bereit, mit deren Hilfe Sie schnell XMLA-Skripts oder DMX/MDX-Abfragen erstellen, KPIs in einem Cube oder einem tabellarischen Modell erstellen, Skripts für Sicherungs- und Wiederherstellungsvorgänge schreiben und viele andere Tasks ausführen können. Die Vorlagen befinden sich im **Vorlagen-Explorer** von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  Dieses Thema enthält eine Liste der Vorlagen für mehrdimensionale Modelle und tabellarische Modelle sowie Beispiele für die Erstellung einer MDX-Abfrage und XMLA-Anweisung mit dem Metadaten-Explorer und dem Vorlagen-Explorer.  
   
@@ -214,25 +216,25 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |XMLA\Verwaltung|Sicherung|Zeigt, wie Sie mithilfe des Befehls XMLA **Sicherung** eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank in einer Datei sichern.|  
 ||Abbrechen|Zeigt, wie Sie mithilfe des XMLA **Cancel** -Befehls alle laufenden Operationen der aktuellen Sitzung (für alle Benutzer außer Administratoren oder Serveradministratoren), Datenbank (für Administratoren) oder Instanz (für Serveradministratoren) abbrechen.|  
 ||Create Remote Partition Database|Zeigt, wie Sie mithilfe des XMLA **Create** -Befehls in Verbindung mit dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language-Datenbankelement (ASSL) eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank und eine Datenquelle zum Speichern von Remotepartitionen erstellen.|  
-||DELETE|Zeigt, wie Sie mithilfe des Befehls XMLA **Löschen** -Befehls eine vorhandene [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank löschen.|  
+||Delete|Zeigt, wie Sie mithilfe des Befehls XMLA **Löschen** -Befehls eine vorhandene [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank löschen.|  
 ||Process Dimension|Zeigt, wie Sie mithilfe des XMLA **Batch** -Befehls in Verbindung mit dem **Parallel** -Element und dem **Process** -Befehl die Attribute einer Dimension durch eine parallele Stapeloperation aktualisieren.|  
 ||Process Partition|Zeigt, wie Sie mithilfe des XMLA **Batch** -Befehls in Verbindung mit dem **Parallel** -Element und dem **Process** -Befehl eine Partition durch eine parallele Stapeloperation vollständig verarbeiten.|  
 ||Wiederherstellung|Zeigt, wie Sie mithilfe des Befehls XMLA **Wiederherstellung** -Befehls eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank aus einer vorhandenen Sicherungsdatei wiederherstellen.|  
 ||Synchronisieren|Zeigt, wie Sie mithilfe des Befehls XMLA **Synchronisieren** verwenden können, um eine andere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank mit der aktuellen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database using the SkipMembership option for the SynchronisierenSecurity tag.|  
 |XMLA\Schemarowsets|Ermitteln von Schemarowsets|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_SCHEMA_ROWSETS-Schemarowsets abrufen.|  
 |XMLA\Serverstatus|Verbindungen|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_CONNECTIONS-Schemarowsets abrufen.|  
-||Jobs|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_JOBS-Schemarowsets abrufen.|  
+||Aufträge|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_JOBS-Schemarowsets abrufen.|  
 ||Speicherorte|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt des DISCOVER_LOCATIONS-Schemarowsets unter Angabe des Pfads zum Standort der Sicherungsdateien abrufen.|  
 ||Locks|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_LOCKS-Schemarowsets abrufen.|  
 ||Memory Grant|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_MEMORYGRANT-Schemarowsets abrufen.|  
-||Performance Counters|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_PERFORMANCE_COUNTERS-Schemarowsets abrufen.|  
+||Leistungsindikatoren|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_PERFORMANCE_COUNTERS-Schemarowsets abrufen.|  
 ||Sitzungen|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_SESSIONS-Schemarowsets abrufen.|  
 ||Traces|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_TRACES-Schemarowsets abrufen.|  
 ||Transaktionen|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_TRANSACTIONS-Schemarowsets abrufen.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Multidimensional Expressions &#40;MDX&#41; – Referenz](../../mdx/multidimensional-expressions-mdx-reference.md)   
- [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Datamining-Erweiterungen &#40; DMX &#41; Referenz](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Analysis Services Scripting Language &#40;ASSL für XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [Analysis Services Scripting Language &#40; ASSL XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   

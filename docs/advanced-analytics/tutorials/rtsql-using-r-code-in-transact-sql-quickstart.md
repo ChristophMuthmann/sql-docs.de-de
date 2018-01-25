@@ -18,11 +18,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3e1562fc0cf2cd1c3f037dab1ee275beeaeffeea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9c0896ca67df3d8000fae8f3cd3d336b047ee481
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>Verwenden von R-Code in Transact-SQL (R in SQL-Schnellstart)
 
@@ -39,7 +39,7 @@ Dieses Tutorial erklärt Ihnen, wie Sie grundsätzlich ein R-Skript aus einer ge
 
 30 Minuten ohne Setup
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Sie benötigen Zugriff auf eine Instanz von SQL Server mit einem der folgenden bereits installiert:
 
@@ -50,7 +50,7 @@ Die SQL Server-Instanz kann im virtuellen Computer in Azure oder lokal sein. Bea
 
 Zum Ausführen von SQL-Abfragen, die R-Skripts enthalten, können Sie eine andere Anwendung, die eine Verbindung mit einer Datenbank herstellen und T-SQL-Code ausführen können. SQL-Experten können SQL Server Management Studio (SSMS) oder Visual Studio verwenden.
 
-Für dieses Lernprogramm soll zeigen, wie einfach es ist zum Ausführen von R in SQL Server, wir haben verwendet die neue **Mssql-Erweiterung für Visual Studio Code**. Visual Studio Code ist einer kostenlosen Entwicklungsumgebung, die unter Linux, Mac OS oder Windows ausgeführt werden kann. Die **Mssql*** Erweiterung ist eine einfache Erweiterung für die Ausführung von SQL-Abfragen. Informationen zur Installation finden Sie im Artikel [Use the mssql extension for Visual Studio Code (Verwenden der MSSQL-Erweiterung für Visual Studio Code)](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
+Für dieses Lernprogramm soll zeigen, wie einfach es ist zum Ausführen von R in SQL Server, wir haben verwendet die neue **Mssql-Erweiterung für Visual Studio Code**. Visual Studio Code ist einer kostenlosen Entwicklungsumgebung, die unter Linux, Mac OS oder Windows ausgeführt werden kann. Die **Mssql** Erweiterung ist eine einfache Erweiterung für die Ausführung von T-SQL-Abfragen. Informationen zur Installation finden Sie im Artikel [Use the mssql extension for Visual Studio Code (Verwenden der MSSQL-Erweiterung für Visual Studio Code)](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>Verbinden mit Datenbank und Ausführen eines Hello World-Testskripts
 
