@@ -19,15 +19,15 @@ helpviewer_keywords:
 - DB-Library bulk copy
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df98f0513252765781d2030b1597aec50bbd246e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: abdb8b529914a3ebb09ed0d5d933c30e0ef43f9d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Konvertieren von DB-Library-Programmen zum Massenkopieren in ODBC-Programme
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt keine DB-Library-Meldungs- und Fehlerbehandlungsroutinen; Sie müssen Aufrufen **SQLGetDiagRec** zum Abrufen von ODBC-Massenkopierfunktionen ausgelöste Fehler und Meldungen. Die ODBC-Versionen der Massenkopierfunktionen geben die Standardrückgabecodes SUCCEED bzw. FAILED für das Massenkopieren zurück statt der Rückgabecodes im ODBC-Stil, wie SQL_SUCCESS oder SQL_ERROR.  
   
--   Die Werte für die DB-Library [Bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*Varlen* Parameter werden anders interpretiert als die ODBC **Bcp_bind***CbData*Parameter.  
+-   Die Werte für die DB-Library [Bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*Varlen* Parameter werden anders interpretiert als die ODBC **Bcp_bind *** CbData* Parameter.  
   
     |Angegebene Bedingung|DB-Library- *Varlen* Wert|ODBC *CbData* Wert|  
     |-------------------------|--------------------------------|-------------------------|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
      In der DB-Library eine *Varlen* Wert-1 gibt an, dass Daten variabler Länge angegeben wird, die in der ODBC *CbData* wird interpretiert, dass nur NULL-Werte übergeben werden. Ändern Sie alle DB-Library *Varlen* Spezifikationen von-1 in SQL_VARLEN_DATA und alle *Varlen* von 0 in SQL_NULL_DATA.  
   
--   Die DB-Library **Bcp_colfmt***File_collen* und den ODBC- [Bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*CbUserData* haben dasselbe Problem wie die  **Bcp_bind***Varlen* und *CbData* Parametern wie oben beschrieben. Ändern Sie alle DB-Library *File_collen* Spezifikationen von-1 in SQL_VARLEN_DATA und alle *File_collen* von 0 in SQL_NULL_DATA.  
+-   Die DB-Library  **Bcp_colfmt *** File_collen* und den ODBC- [Bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*CbUserData * haben dasselbe Problem wie die **Bcp_bind *** Varlen*und *CbData* Parametern wie oben beschrieben. Ändern Sie alle DB-Library *File_collen* Spezifikationen von-1 in SQL_VARLEN_DATA und alle *File_collen* von 0 in SQL_NULL_DATA.  
   
 -   Die *iValue* Parameter der ODBC- [Bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) Funktion ist ein void-Zeiger. In der DB-Library *iValue* wurde eine ganze Zahl. Wandeln Sie die Werte für die ODBC *iValue* in void *.  
   

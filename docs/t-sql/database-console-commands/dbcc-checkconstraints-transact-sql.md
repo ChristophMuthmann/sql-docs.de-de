@@ -25,15 +25,15 @@ helpviewer_keywords:
 - integrity [SQL Server], constraints
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 358dddc25f1265f344387cc75ef12f79182c27e3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2ff75ba3c32d138d9124eba5cfe170cf146d5778
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ DBCC CHECKCONSTRAINTS
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *TABLE_NAME* | *Table_id* | *Constraint_name* | *Constraint_id*  
+ *table_name* | *table_id* | *constraint_name* | *constraint_id*  
  Die zu überprüfende Tabelle oder Einschränkung. Wenn *Table_name* oder *Table_id* wird angegeben, werden alle aktivierte Einschränkungen der Tabelle überprüft. Wenn *Constraint_name* oder *Constraint_id* wird angegeben, wird nur diese Einschränkung überprüft. Wenn weder ein Tabellenbezeichner noch ein Einschränkungsbezeichner angegeben ist, werden alle aktivierten Einschränkungen für alle Tabellen in der aktuellen Datenbank überprüft.  
  Durch den Einschränkungsnamen wird die zugehörige Tabelle eindeutig identifiziert. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
   
@@ -99,10 +99,10 @@ Wenn *Table_name* oder *Table_id* angegeben ist und es für die versionsverwaltu
   
 |Check|Zusätzliche Informationen in der Ausgabe, wenn Fehler bei der Überprüfung|  
 |-----------|-----------------------------------------------|  
-|PeriodEndColumn ≥ PeriodStartColumn (aktuell)|[Sys_end] = '{0}' und MAX(DATETIME2) = ' 9999-12-31 23:59:59.99999 "|  
-|PeriodEndColumn ≥ PeriodStartColumn (aktuell sind, Verlauf)|[Sys_start] = "{0}" und [Sys_end] = "\ {1\}"|  
+|PeriodEndColumn ≥ PeriodStartColumn (aktuell)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
+|PeriodEndColumn ≥ PeriodStartColumn (aktuell sind, Verlauf)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
 |PeriodStartColumn < Current_utc_time (aktuell)|[Sys_start] = '{0}' und SYSUTCTIME|  
-|PeriodEndColumn < Current_utc_time (Verlauf)|[Sys_end] = '{0}' und SYSUTCTIME|  
+|PeriodEndColumn < Current_utc_time (Verlauf)|[sys_end] = '{0}' AND SYSUTCTIME|  
 |(überlappungen)|(sys_start1 sys_end1), (sys_start2 sys_end2) für zwei überlappende Datensätze.<br /><br /> Wenn mehr als 2 überlappende Datensätze sind, müssen Ausgabe mehrere Zeilen jeder mit ein Paar von überlappt.|  
   
 Es gibt keine Möglichkeit Constraint_name oder Constraint_id angeben, um nur temporale konsistenzprüfungen ausgeführt.

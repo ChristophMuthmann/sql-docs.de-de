@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bd2cfd04ccc1de66fab7c518fdc31191955b24b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 833c0bed38d02905b3a260f50824825c9859484f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,12 +73,12 @@ FOR CONVERSATION
   
  Wenn CONTRACT_NAME nicht angegeben ist, wird die Eigenschaft für den Vertrag der Konversationspriorität nicht geändert.  
   
- LOCAL_SERVICE_NAME = {*"LocalServiceName"* | **ANY**}  
+ LOCAL_SERVICE_NAME = {*LocalServiceName* | **ANY**}  
  Gibt den Namen eines Diensts an, der als Kriterium verwendet werden kann, um zu bestimmen, ob die Konversationspriorität für einen Konversationsendpunkt übernommen wird.  
   
  *"LocalServiceName"* ist eine [!INCLUDE[ssDE](../../includes/ssde-md.md)] Bezeichner und geben Sie den Namen eines Diensts muss in der aktuellen Datenbank.  
   
- *"LocalServiceName"*  
+ *LocalServiceName*  
  Gibt an, dass die Konversationspriorität für Folgendes übernommen werden kann:  
   
 -   Jeden Konversationsendpunkt für Initiator, dessen initiatordienstname entspricht *"LocalServiceName"*.  
@@ -90,7 +90,7 @@ FOR CONVERSATION
   
  Wenn LOCAL_SERVICE_NAME nicht angegeben ist, wird die Eigenschaft für den lokalen Dienst der Konversationspriorität nicht geändert.  
   
- REMOTE_SERVICE_NAME = {'*"RemoteServiceName"*"| **ANY**}  
+ REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Gibt den Namen eines Diensts an, der als Kriterium verwendet werden kann, um zu bestimmen, ob die Konversationspriorität für einen Konversationsendpunkt übernommen wird.  
   
  *"RemoteServiceName"* ist ein Literal vom Typ **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)]Führt einen Byte-pro-Byte-Vergleich mit der *"RemoteServiceName"* Zeichenfolge. Bei dem Vergleich wird die Groß-/Kleinschreibung beachtet, die aktuelle Sortierung hingegen wird nicht berücksichtigt. Der Zieldienst kann in der aktuellen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder in einer Remoteinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] vorhanden sein.  
@@ -144,8 +144,8 @@ ALTER BROKER PRIORITY SimpleContractPriority
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie die BROKERPRIORITÄT &#40; Transact-SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
+ [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [DROP BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [Sys. conversation_priorities &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
+ [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   

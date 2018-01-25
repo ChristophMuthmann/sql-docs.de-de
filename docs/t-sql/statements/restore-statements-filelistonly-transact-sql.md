@@ -23,15 +23,15 @@ helpviewer_keywords:
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 caps.latest.revision: "83"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 54e5a186bc7beaa13cfb1fef8d69cc1fbf34cbf0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e6776115033e6e7222abc610673dd8b0aaff81dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE-Anweisungen - FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,10 +88,10 @@ FROM <backup_device>
   
 |Spaltenname|Datentyp|Description|  
 |-|-|-|  
-|LogicalName|**vom Datentyp nvarchar(128)**|Logischer Name der Datei.|  
+|LogicalName|**nvarchar(128)**|Logischer Name der Datei.|  
 |PhysicalName|**nvarchar(260)**|Physischer Name oder Betriebssystemname der Datei.|  
 |Typ|**char(1)**|Einer der folgenden Dateitypen:<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Protokolldatei<br /><br /> **D**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datendatei<br /><br /> **F** = Volltextkatalog<br /><br /> **S** = FileStream, FileTable oder [!INCLUDE[hek_2](../../includes/hek-2-md.md)] Container|  
-|FileGroupName|**vom Datentyp nvarchar(128)**|Name der Dateigruppe, die die Datei enthält.|  
+|FileGroupName|**nvarchar(128)**|Name der Dateigruppe, die die Datei enthält.|  
 |Größe|**numeric(20,0)**|Aktuelle Größe in Bytes.|  
 |MaxSize|**numeric(20,0)**|Maximal zulässige Größe in Bytes.|  
 |FileID|**bigint**|Eindeutiger Dateibezeichner in der Datenbank.|  

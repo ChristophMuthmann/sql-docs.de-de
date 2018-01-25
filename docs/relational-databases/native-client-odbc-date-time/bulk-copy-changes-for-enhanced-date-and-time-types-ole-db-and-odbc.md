@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: ODBC, bulk copy operations
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18199adbb78f94a22bedaeb8cedb436174c8add7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b02ccdea2128211fbac5390da436f165a193fe07
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Massenkopieränderungen für verbesserte Datums- und Uhrzeittypen (OLE DB und ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,10 +35,10 @@ ms.lasthandoff: 01/08/2018
   
 |Dateispeichertyp|Datentyp in der Hostdatei|Antwort auf die Aufforderung: "Geben Sie den Dateispeichertyp des Felds < Feldname > [\<Standardwert >]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|DATETIME|SQLDATETIME|d|  
+|Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|date|SQLDATE|de|  
-|Uhrzeit|SQLTIME|te|  
+|Datum|SQLDATE|de|  
+|Zeit|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
   
@@ -76,9 +76,9 @@ ms.lasthandoff: 01/08/2018
   
 |Dateispeichertyp|Speichergröße (in Byte)|  
 |-----------------------|---------------------------|  
-|DATETIME|8|  
+|datetime|8|  
 |smalldatetime|4|  
-|date|3|  
+|Datum|3|  
 |Uhrzeit|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
@@ -97,12 +97,12 @@ ms.lasthandoff: 01/08/2018
 ## <a name="bcp-types-in-sqlnclih"></a>BCP-Typen in sqlncli.h  
  Die folgenden Typen werden in sqlncli.h definiert, um mit den BCP API-Erweiterungen für ODBC verwendet zu werden. Diese Typen übergeben werden, mit der *eUserDataType* ibcpsession:: BCPColFmt in OLE DB-Parameter.  
   
-|Dateispeichertyp|Datentyp in der Hostdatei|Geben Sie für die Verwendung mit ibcpsession:: BCPColFmt|value|  
+|Dateispeichertyp|Datentyp in der Hostdatei|Geben Sie für die Verwendung mit ibcpsession:: BCPColFmt|Wert|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
-|DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
+|Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
-|Uhrzeit|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
+|Datum|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|Zeit|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
   
@@ -111,12 +111,12 @@ ms.lasthandoff: 01/08/2018
   
  **OLE DB-Hinweis** die folgenden Konvertierungen von IBCPSession ausgeführt werden. IRowsetFastLoad verwendet OLE DB-Konvertierungen gemäß [Konvertierungen ausgeführt vom Client zum Server](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Beachten Sie, dass datetime-Werte auf 1/300stel einer Sekunde gerundet werden und dass für smalldatetime-Werte die Sekunden vom Server auf null festgelegt werden, nachdem die unten beschriebenen Clientkonvertierungen durchgeführt wurden. Datetime-Rundung wird durch Stunden und Minuten, aber nicht durch das Datum weitergegeben.  
   
-|An --><br /><br /> Von|date|Uhrzeit|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
+|An --><br /><br /> Von|Datum|Uhrzeit|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|Uhrzeit|–|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|Datum|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|Zeit|–|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
-|DATETIME|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
+|Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
 |Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|–|–|  

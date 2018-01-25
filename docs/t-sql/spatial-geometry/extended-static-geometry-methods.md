@@ -17,13 +17,13 @@ ms.assetid: 04c02af0-5243-4d53-b35a-ddc4113ee8f6
 caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f72fe98e600e17842059e13d1f9656a51f1d067a
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: cd2a003e0349b01a5234a60e66fd064213203984
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extended-static-geometry-methods"></a>Erweiterte statische geometry-Methoden
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

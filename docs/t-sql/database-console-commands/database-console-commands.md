@@ -16,13 +16,13 @@ ms.assetid: 02265d6f-44fb-4e28-af58-115ba1ef6c75
 caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 482348c64acc6d72e102616e0e0b9ecac8767cb4
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: f23f9e52ae434129e061a9ad3e087097aa3efc8c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="database-console-commands"></a>Database Console Commands (Datenbankkonsolenbefehle)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

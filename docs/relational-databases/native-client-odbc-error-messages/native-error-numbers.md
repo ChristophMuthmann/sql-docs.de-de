@@ -19,15 +19,15 @@ helpviewer_keywords:
 - errors [ODBC], native error numbers
 ms.assetid: 77cbc826-f47f-4803-8e7a-223d6df069b1
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49fbc1ffedf678170bf08306220a7389cf1ed3f4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a4d076af08e8282dd8b71510063f7e091a5aa6d7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="native-error-numbers"></a>Systemeigene Fehlernummern
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

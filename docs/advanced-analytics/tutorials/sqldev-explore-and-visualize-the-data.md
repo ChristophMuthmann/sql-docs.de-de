@@ -18,13 +18,13 @@ ms.assetid: 7fe670f3-5e62-43ef-97eb-b9af54df9128
 caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 8048bc1eff7437e2a96bd8995f0362b341cbf092
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e9ebd9be2603222f3faecfcd84314014bc6229c1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Lektion 3: Durchsuchen und Visualisieren von Daten
 
@@ -56,7 +56,7 @@ Im ursprünglichen Dataset wurden die Taxi-IDs und die Fahrtendatensätze in sep
   
 -   Die Werte für die Bezeichnungsspalte basieren auf der _Tipp\_Betrag_ Spalte mithilfe dieser Geschäftsregeln:
   
-    |Name der abgeleiteten Spalte|Regel|
+    |Name der abgeleiteten Spalte|Rule|
     |-|-|
      |tipped|If tip_amount > 0, tipped = 1, otherwise tipped = 0|
     |tip_class|Class 0: tip_amount = $0<br /><br />Class 1: tip_amount > $0 and tip_amount <= $5<br /><br />Class 2: tip_amount > $5 and tip_amount <= $10<br /><br />Class 3: tip_amount > $10 and tip_amount <= $20<br /><br />Class 4: tip_amount > $20|
@@ -130,7 +130,7 @@ Die gespeicherte Prozedur gibt das Bild als Strom von varbinary-Daten zurück, d
   
     **Ergebnisse**
     
-    *Zeichnungsfläche*
+    *plot*
     *0xFFD8FFE000104A4649...*
   
 2.  Öffnen Sie eine PowerShell-Eingabeaufforderung, führen Sie den folgenden Befehl aus, und stellen Sie den erforderlichen Instanznamen, Datenbanknamen, Benutzernamen und die Anmeldeinformationen als Argumente bereit:

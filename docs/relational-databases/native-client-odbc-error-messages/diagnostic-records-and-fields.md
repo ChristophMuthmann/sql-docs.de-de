@@ -23,15 +23,15 @@ helpviewer_keywords:
 - status information [ODBC]
 ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ced62a96f94fa4cb929f295f7a390c60b42e15d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5b2c800550b992735c0af6854a83d5ea28a2c597
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="diagnostic-records-and-fields"></a>Diagnosedatensätze und -felder
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
  Felder in den Statusdatensätzen enthalten Informationen über bestimmte Fehler oder Warnungen, die vom ODBC-Treiber-Manager, vom Treiber oder von der Datenquelle zurückgegeben werden, einschließlich SQLSTATE, systemeigener Fehlernummer, Diagnosemeldung, Spaltennummer und Zeilennummer. Statusdatensätze werden nur erstellt, wenn die Funktion SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA oder SQL_STILL_EXECUTING zurückgibt. Eine vollständige Liste der Felder in den statusdatensätzen finden Sie unter **SQLGetDiagField**.  
   
- **SQLGetDiagRec** ruft zusammen mit der ODBC SQLSTATE, systemeigener Fehlernummer und diagnosemeldungsfeldern einen einzelnen Diagnosedatensatz ab. Diese Funktion ist vergleichbar mit der ODBC 2. *x***SQLError** Funktion. Die einfachste Fehlerbehandlungsfunktion in ODBC 3. *x* wiederholt aufgerufen **SQLGetDiagRec** beginnend mit der *RecNumber* Parametersatz auf 1 und erhöht *RecNumber* von 1 bis **SQLGetDiagRec** gibt SQL_NO_DATA zurück. Dies ist gleichbedeutend mit einer ODBC 2. *x* aufrufende **SQLError** bis SQL_NO_DATA_FOUND zurückgegeben.  
+ **SQLGetDiagRec** ruft zusammen mit der ODBC SQLSTATE, systemeigener Fehlernummer und diagnosemeldungsfeldern einen einzelnen Diagnosedatensatz ab. Diese Funktion ist vergleichbar mit der ODBC 2. *X *** SQLError** Funktion. Die einfachste Fehlerbehandlungsfunktion in ODBC 3. *x* wiederholt aufgerufen **SQLGetDiagRec** beginnend mit der *RecNumber* Parametersatz auf 1 und erhöht *RecNumber* von 1 bis **SQLGetDiagRec** gibt SQL_NO_DATA zurück. Dies ist gleichbedeutend mit einer ODBC 2. *x* aufrufende **SQLError** bis SQL_NO_DATA_FOUND zurückgegeben.  
   
  ODBC-3. *x* unterstützt weitaus mehr Diagnoseinformationen als ODBC 2. *X*. Diese Informationen werden in weiteren Feldern in Diagnosedatensätzen abgerufen, indem gespeichert **SQLGetDiagField**.  
   

@@ -32,15 +32,15 @@ helpviewer_keywords:
 - starting conversations
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d4ca1959c247aedd2e49c38a870621d440a089f7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a2ece31010207b6044504f099c11443a2fec0fa2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,13 +96,13 @@ WHERE database_id = DB_ID() ;
  ON CONTRACT *Contract_name*  
  Gibt den Vertrag an, dem diese Konversation entspricht. Der Vertrag muss in der aktuellen Datenbank vorhanden sein. Wenn der Zieldienst für den angegebenen Vertrag keine neuen Konversationen akzeptiert, gibt [!INCLUDE[ssSB](../../includes/sssb-md.md)] eine Fehlermeldung zur Konversation zurück. Wenn diese Klausel weggelassen wird, handelt es sich bei die Konversation entspricht den Vertrag mit dem Namen **Standard**.  
   
- RELATED_CONVERSATION  **=**  *Related_conversation_handle*  
+ RELATED_CONVERSATION **= *** Related_conversation_handle*  
  Gibt die vorhandene Konversationsgruppe an, der der neue Dialog hinzugefügt wird. Wenn diese Klausel vorhanden ist, wird der neue Dialog gehört, auf derselben Konversationsgruppe als das Dialogfeld "gemäß *Related_conversation_handle*. Die *Related_conversation_handle*muss einen Typ implizit in den Typ **"uniqueidentifier"**. Die Anweisung schlägt fehl, wenn die *Related_conversation_handle* verweist nicht auf einen vorhandenen Dialog.  
   
- RELATED_CONVERSATION_GROUP  **=**  *Related_conversation_group_id*  
+ RELATED_CONVERSATION_GROUP **= *** Related_conversation_group_id*  
  Gibt die vorhandene Konversationsgruppe an, der der neue Dialog hinzugefügt wird. Wenn diese Klausel vorhanden ist, wird das Dialogfeld "neue" hinzugefügt werden, auf die Konversationsgruppe, die gemäß *Related_conversation_group_id*. Die *Related_conversation_group_id*muss einen Typ implizit in den Typ **"uniqueidentifier"**. Wenn *Related_conversation_group_id*ist kein Verweis eine vorhandene Konversationsgruppe Service Broker erstellt eine neue Konversationsgruppe mit dem angegebenen *Related_conversation_group_id* und verknüpft den neuen Dialog mit dieser Konversationsgruppe an.  
   
- Lebensdauer  **=**  *Dialog_lifetime*  
+ Lebensdauer **= *** Dialog_lifetime*  
  Gibt den maximalen Zeitraum an, in dem der Dialog geöffnet bleibt. Damit der Dialog erfolgreich abgeschlossen wird, müssen beide Endpunkte den Dialog explizit beenden, bevor die Lebensdauer abläuft. Die *Dialog_lifetime* Wert in Sekunden angegeben werden muss. Lifetime ist vom Datentyp **Int**. Wenn keine LIFETIME-Klausel angegeben wird, wird die Lebensdauer des Dialogs der Maximalwert der der **Int** -Datentyp.  
   
  ENCRYPTION  
@@ -217,8 +217,8 @@ BEGIN DIALOG CONVERSATION @dialog_handle
   
 ## <a name="see-also"></a>Siehe auch  
  [BEGIN CONVERSATION TIMER &#40; Transact-SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
- [END CONVERSATION-Anweisung &#40; Transact-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
  [MOVE CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/move-conversation-transact-sql.md)   
- [Sys. conversation_endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   

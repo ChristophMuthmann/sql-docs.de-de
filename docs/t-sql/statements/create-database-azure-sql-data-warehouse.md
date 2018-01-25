@@ -1,5 +1,5 @@
 ---
-title: Erstellen der Datenbank (Azure SQL Datawarehouse) | Microsoft Docs
+title: CREATE DATABASE (Azure SQL Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 10/16/2017
 ms.prod: 
@@ -14,14 +14,14 @@ ms.topic: language-reference
 dev_langs: TSQL
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 7406a538eb4c0f236f2e0d444e96fd2c4fa5d585
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: 51db5c7cbaa2932cfcb819538d743fe1368f6442
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-database-azure-sql-data-warehouse"></a>Erstellen der Datenbank (Azure SQL Datawarehouse)
+# <a name="create-database-azure-sql-data-warehouse"></a>CREATE DATABASE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 Erstellt eine neue Datenbank.  
@@ -52,7 +52,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 *database_name*  
 Der Name der neuen Datenbank. Dieser Name muss auf dem SQL-Server, die beide hosten können eindeutig sein [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Datenbanken und [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] -Datenbanken und entsprechen dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Regeln für Bezeichner entsprechen. Weitere Informationen finden Sie unter [Bezeichner](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
-*Sortierungsname*  
+*collation_name*  
 Gibt die Standardsortierung für die Datenbank an. Als Sortierungsname kann entweder der Name einer Windows-Sortierreihenfolge oder ein SQL-Sortierungsname verwendet werden. Wenn nicht angegeben, wird der Datenbank die standardsortierung zugewiesen, also SQL_Latin1_General_CP1_CI_AS.  
   
 Weitere Informationen zu den Windows- und SQL-Sortierungsnamen finden Sie unter [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
@@ -75,7 +75,7 @@ SERVICE_OBJECTIVE
 Gibt die Leistungsebene an. Weitere Informationen zu dienstziele für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], finden Sie unter [Leistung Ebenen](https://azure.microsoft.com/documentation/articles/performance-tiers/).  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
-Verwendung [DATABASEPROPERTYEX &#40; Transact-SQL &#41; ](../../t-sql/functions/databasepropertyex-transact-sql.md) um die Datenbankeigenschaften anzuzeigen.  
+Use [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) to see the database properties.  
   
 Verwendung [ALTER DATABASE &#40; Azure SQL Datawarehouse &#41; ](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md) zum Ändern der maximalen Größe oder Objective-Werte später service.   
 

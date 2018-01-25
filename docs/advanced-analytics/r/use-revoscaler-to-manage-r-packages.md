@@ -15,12 +15,12 @@ ms.assetid:
 caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 1cc59cad6bfb95ee0981604d336087809f9cb932
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+manager: cgronlund
+ms.openlocfilehash: e10435c2a0cdc5ed181aeab9bdd0bbfefa9a7f25
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>So verwenden Sie RevoScaleR-Funktionen zum Suchen, oder installieren R-Pakete auf SQL Server
 
@@ -81,7 +81,7 @@ Dieser Abschnitt enthält Beispiele zum Verwenden der Paket-Verwaltungsfunktione
 
 Wenn Sie über die Berechtigung zum Installieren der Pakete haben, führen Sie einen des Pakets Verwaltungsfunktionen von Ihrem R-Client, und geben Sie den computekontext, in denen Pakete sind, hinzugefügt oder entfernt werden soll.  Der Rechenkontext kann Ihr lokaler Computer oder eine Datenbank auf der SQL Server-Instanz sein. Ihre Anmeldeinformationen bestimmen, ob der Vorgang auf dem Server abgeschlossen werden kann.
 
-**Von Transact-SQL**
+**From Transact-SQL**
 
 Zum Ausführen von Paket-Management-Funktionen in einer gespeicherten Prozedur umschließen Sie sie in einem Aufruf von `sp_execute_external_script`.
 

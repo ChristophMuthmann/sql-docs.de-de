@@ -19,13 +19,13 @@ ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 caps.latest.revision: "38"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4370076afa9255cc7e83acaa6fe4dffeb73bc958
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7a3822e0469836b59369eb676ece956533d4df58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="value-method-xml-data-type"></a>value()-Methode (xml-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -141,7 +141,7 @@ Result
 ```  
   
 ### <a name="d-using-the-exist-method-instead-of-the-value-method"></a>D. Verwenden der exist()-Methode anstelle der value()-Methode  
- Aus Leistungsgründen sollten Sie zum Vergleichen mit einem relationalen Wert die `value()` -Methode mit `exist()` verwenden und nicht die `sql:column()`-Methode in einem Prädikat. Zum Beispiel:  
+ Aus Leistungsgründen sollten Sie zum Vergleichen mit einem relationalen Wert die `value()` -Methode mit `exist()` verwenden und nicht die `sql:column()`-Methode in einem Prädikat. Beispiel:  
   
 ```  
 CREATE TABLE T (c1 int, c2 varchar(10), c3 xml)  
@@ -166,7 +166,7 @@ GO
  [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [XML-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
+ [xml-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
  [XML Data Modification Language &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

@@ -13,25 +13,25 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cba92f6f0449e17065f92b3e73a8d8134cd8a77f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7758218bd96bf8df7c69057c2fef14f3e85633bb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Aufrufen von SQLColumns für eine Tabelle mit Spalten mit geringer Dichte
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Dieses Beispiel veranschaulicht das Aufrufen von SQLColumns in einer Tabelle mit Sparsespalten, die unter Verwendung von ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client definiert wurden.  
+  Dieses Beispiel veranschaulicht das Aufrufen von SQLColumns in einer Tabelle mit Spalten mit geringer Dichte, die unter Verwendung von ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client definiert wurden.  
   
  In einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]kann das Beispiel nicht ausgeführt werden.  
   
- Weitere Informationen zur Funktion für Sparsespalten finden Sie unter [Sparse Columns Support in SQL Server Native Client](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
+ Weitere Informationen zur Funktion für Spalten mit geringer Dichte finden Sie unter [Sparse Columns Support in SQL Server Native Client](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
   
 ## <a name="example"></a>Beispiel  
  Das erste Codelisting ist der C++-Quellcode. Ändern Sie "MyServer" in einen gültigen Servernamen. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält. Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  

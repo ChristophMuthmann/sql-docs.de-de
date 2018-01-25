@@ -22,15 +22,15 @@ helpviewer_keywords:
 - backup media [SQL Server], content information
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
 caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 972a51eca37afca09042608b3bfcc767ec6ece27
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c5cbf694abdf86a5e5e13f2799f5b1f4b808a498
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>RESTORE-Anweisungen - LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ FROM <backup_device>
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**MediaName**|**vom Datentyp nvarchar(128)**|Name des Mediums.|  
+|**MediaName**|**nvarchar(128)**|Name des Mediums.|  
 |**MediaSetId**|**uniqueidentifier**|Eindeutige ID des Mediensatzes.|  
 |**FamilyCount**|**int**|Die Anzahl der Medienfamilien im Mediensatz.|  
 |**FamilySequenceNumber**|**int**|Sequenznummer dieser Familie.|  
@@ -91,7 +91,7 @@ FROM <backup_device>
 |**MediaSequenceNumber**|**int**|Sequenznummer dieses Mediums in der Medienfamilie.|  
 |**MediaLabelPresent**|**tinyint**|Gibt an, ob die Medienbeschreibung Folgendes enthält:<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] medienbezeichnung von Tape Format<br /><br /> **0** = medienbeschreibung|  
 |**MediaDescription**|**nvarchar(255)**|Medienbeschreibung als Text oder die Medienbezeichnung von Tape Format.|  
-|**SoftwareName**|**vom Datentyp nvarchar(128)**|Name der Sicherungssoftware, die die Bezeichnung geschrieben hat.|  
+|**SoftwareName**|**nvarchar(128)**|Name der Sicherungssoftware, die die Bezeichnung geschrieben hat.|  
 |**SoftwareVendorId**|**int**|Eindeutige ID des Softwareanbieters, der die Sicherung geschrieben hat.|  
 |**MediaDate**|**datetime**|Datum und Uhrzeit des Zeitpunkts, an dem die Bezeichnung geschrieben wurde.|  
 |**Mirror_Count**|**int**|Die Anzahl von Spiegeln in einem Spiegelsatz (1-4).<br /><br /> Hinweis: Die Bezeichnungen für verschiedene Spiegel in einem Satz geschrieben sind identisch.|  

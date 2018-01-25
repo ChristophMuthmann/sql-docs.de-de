@@ -16,15 +16,15 @@ helpviewer_keywords:
 - commands [OLE DB]
 ms.assetid: de03b27e-8c5a-4060-b650-f77279be01df
 caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d4e4f86bf4b678e3946f16b63f8dc71499be1c0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 596133acdd06a91f6235cfc0b342a562ac0eceb3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="commands"></a>Befehle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/08/2018
 
   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter macht die **ICommand** Schnittstelle sowie die Befehlsobjekte, die in diesem Abschnitt beschrieben werden:  
   
--   [Befehlsyntax](../../relational-databases/native-client-ole-db-commands/command-syntax.md)  
+-   [Befehlssyntax](../../relational-databases/native-client-ole-db-commands/command-syntax.md)  
   
 -   [Befehlsparameter](../../relational-databases/native-client-ole-db-commands/command-parameters.md)  
   

@@ -16,13 +16,13 @@ ms.assetid: a33d5db9-aed1-4c96-85bf-9d3b5051c635
 caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 580e410876d23601f6d0b53e080167779d64e655
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: a30ef8c87eaaf31891ebfcbc15405e53da09a4d9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ogc-methods-on-geography-instances"></a>OGC-Methoden für geography-Instanzen
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

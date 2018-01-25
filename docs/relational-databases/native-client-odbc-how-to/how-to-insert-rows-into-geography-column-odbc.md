@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fc80ca85e77e64f2ca1d9da80f021b517a2bb72
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6fa3374c0f60a43a9ddff566b11c4554c66ac7a0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>Vorgehensweise: Einfügen von Zeilen in eine Geografiespalte (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/08/2018
  Weitere Informationen zu räumlicher Speicherung finden Sie unter [räumliche Daten &#40; SQLServer &#41; ](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ## <a name="example"></a>Beispiel  
- Die erste ([!INCLUDE[tsql](../../includes/tsql-md.md)]) Codelisting erstellt eine Tabelle, die von diesem Beispiel verwendet.  
+ Das erste Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt eine im Beispiel verwendete Tabelle.  
   
  Kompilieren Sie das zweite Codelisting (C++) mit odbc32.lib und user32.lib. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   

@@ -15,15 +15,15 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 caps.latest.revision: "13"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3aa20ea08fe34eab316a41d46ea955a78e4be512
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 515c21cbf7874c0268eeedad0b67e0ce7cf3726d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="explain-transact-sql"></a>Erklären Sie (Transact-SQL)
+# <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Gibt den Abfrageplan für eine [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] -Anweisung ohne die Anweisung ausführen. Verwendung **Erklärung** Preview, welche Vorgänge die datenverschiebung erfordern, und die geschätzten Kosten der Abfragevorgänge anzeigen.  
@@ -66,13 +66,13 @@ EXPLAIN SQL_statement
   
  Die XML-Tags werden diese Informationen enthalten:  
   
-|XML-Tag|Zusammenfassungen, Attribute und Inhalt|  
+|XML Tag|Zusammenfassungen, Attribute und Inhalt|  
 |-------------|--------------------------------------|  
-|\<Dsql_query >|Oberste Ebene/Dokumentelement.|
-|\<SQL >|Als Echo *SQL_statement*.|  
-|\<Params >|Dieses Tag ist zu diesem Zeitpunkt nicht verwendet.|  
-|\<Dsql_operations >|Fasst zusammen und enthält die Abfrageschritte für die und Kosteninformationen für die Abfrage enthält. Enthält auch alle von der `<dsql_operation>` blockiert. Dieses Tag enthält Informationen zur Anzahl für die gesamte Abfrage:<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *Grenzwerte* die geschätzte Gesamtzeit für die Abfrage in Millisekunden ausgeführt wird.<br /><br /> *Total_number_operations* ist die Gesamtanzahl von Vorgängen für die Abfrage. Ein Vorgang, der parallelisiert wird, und führen Sie auf mehreren Knoten wird als einzelner Vorgang gezählt.|  
-|\<Dsql_operation >|Beschreibt einen einzelnen Vorgang innerhalb des Abfrageplans. Die \<Dsql_operation >-Tag enthält den Vorgangstyp als Attribut:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *Operation_type* ist einer der Werte in den [Abfragen von Daten (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> Der Inhalt der `\<dsql_operation>` Block ist abhängig von den Vorgangstyp.<br /><br /> Finden Sie in der folgenden Tabelle aus.|  
+|\<dsql_query>|Oberste Ebene/Dokumentelement.|
+|\<sql>|Als Echo *SQL_statement*.|  
+|\<params>|Dieses Tag ist zu diesem Zeitpunkt nicht verwendet.|  
+|\<dsql_operations>|Fasst zusammen und enthält die Abfrageschritte für die und Kosteninformationen für die Abfrage enthält. Enthält auch alle von der `<dsql_operation>` blockiert. Dieses Tag enthält Informationen zur Anzahl für die gesamte Abfrage:<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *Grenzwerte* die geschätzte Gesamtzeit für die Abfrage in Millisekunden ausgeführt wird.<br /><br /> *Total_number_operations* ist die Gesamtanzahl von Vorgängen für die Abfrage. Ein Vorgang, der parallelisiert wird, und führen Sie auf mehreren Knoten wird als einzelner Vorgang gezählt.|  
+|\<dsql_operation>|Beschreibt einen einzelnen Vorgang innerhalb des Abfrageplans. Die \<Dsql_operation >-Tag enthält den Vorgangstyp als Attribut:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *Operation_type* ist einer der Werte in den [Abfragen von Daten (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> Der Inhalt der `\<dsql_operation>` Block ist abhängig von den Vorgangstyp.<br /><br /> Finden Sie in der folgenden Tabelle aus.|  
   
 |Vorgangstyp|Inhalt|Beispiel|  
 |--------------------|-------------|-------------|  

@@ -28,13 +28,13 @@ ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 caps.latest.revision: "196"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 35ccffcfbdce2c10b20c8459e59a1c2d41962088
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e0a4792974ec9aa78678aec74dc390e992471e64
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ CREATE AVAILABILITY GROUP group_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Gruppenname*  
+ *group_name*  
  Gibt den Namen der neuen Verfügbarkeitsgruppe an. *Gruppenname* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Bezeichner](../../relational-databases/databases/database-identifiers.md), und es in allen Verfügbarkeitsgruppen im WSFC-Cluster muss eindeutig sein. Die maximale Länge eines Verfügbarkeitsgruppennamens beträgt 128 Zeichen.  
   
  AUTOMATED_BACKUP_PREFERENCE  **=**  {PRIMÄREN | SECONDARY_ONLY | SEKUNDÄRE | KEINE}  
@@ -173,12 +173,12 @@ CREATE AVAILABILITY GROUP group_name
 > [!IMPORTANT]  
 >  **sp_server_diagnostics** führt keine Integritätsprüfungen auf Datenbankebene aus.  
   
- DB_FAILOVER  **=**  {ON | {OFF}  
+ DB_FAILOVER  **=** { ON | OFF }  
  Gibt die Antwort an, die bei eine Datenbank auf dem primären Replikat offline ist. Alle Status außer ONLINE für eine Datenbank in der verfügbarkeitsgruppe auf ON festgelegt, wird ein automatisches Failover ausgelöst. Wenn diese Option auf OFF festgelegt ist, wird nur die Integrität der Instanz verwendet, auf Automatisches Failover auslösen.  
   
   Weitere Informationen zu dieser Einstellung finden Sie unter [Datenbankoption für die Erkennung von Ebene Integrität](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) 
   
- DTC_SUPPORT  **=**  {PER_DB | KEINE}  
+ DTC_SUPPORT  **=** { PER_DB | NONE }  
  Gibt an, ob die datenbankübergreifende Transaktionen über dem distributed Transaction Coordinator (DTC) unterstützt werden. Datenbankübergreifende Transaktionen werden nur unterstützt ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. PER_DB wird die verfügbarkeitsgruppe mit Unterstützung für diese Transaktionen erstellt. Weitere Informationen finden Sie unter [Datenbankübergreifende Transaktionen und verteilte Transaktionen für Always On-Verfügbarkeitsgruppen oder Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
  BASIC  
@@ -193,12 +193,12 @@ CREATE AVAILABILITY GROUP group_name
  CLUSTER_TYPE  
  In SQLServer 2017 eingeführt. Verwendet, um festzustellen, ob die verfügbarkeitsgruppe auf einem Windows Server Failover Cluster (WSFC) ist.  Auf WSFC festgelegt, wenn die verfügbarkeitsgruppe auf eine Failoverclusterinstanz auf einem Windows Server-Failovercluster ist. Auf EXTERNEN festgelegt, wenn der Cluster von einem Cluster-Manager verwaltet wird, die nicht auf einem Windows Server-Failovercluster, wie Linux Schrittmacher ist. Beim Gruppieren von Verfügbarkeit mithilfe von WSFC nicht für Cluster Koordinierung auf NONE festgelegt. Angenommen, wenn eine verfügbarkeitsgruppe Linux-Servern mit keine Cluster-Manager enthält. 
 
- Datenbank *Database_name*  
+ DATABASE *database_name*  
  Gibt eine Liste mit mindestens einer Benutzerdatenbank auf der lokalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz an (der Serverinstanz, auf der Sie die Verfügbarkeitsgruppe erstellen). Sie können mehrere Datenbanken für eine Verfügbarkeitsgruppe angeben, aber jede Datenbank kann nur zu einer Verfügbarkeitsgruppe gehören. Weitere Informationen zu den Typ von Datenbanken, die eine verfügbarkeitsgruppe unterstützt werden, finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40; SQLServer &#41; ](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). Um herauszufinden, welche lokalen Datenbanken bereits zu einer verfügbarkeitsgruppe gehören, finden Sie unter der **Replica_id** Spalte in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) -Katalogsicht angezeigt.  
   
  Die DATABASE-Klausel ist optional. Wenn Sie ihn weglassen, ist die neue verfügbarkeitsgruppe leer.  
   
- Nachdem Sie die verfügbarkeitsgruppe erstellt haben, eine Verbindung mit jeder Serverinstanz, die ein sekundäres Replikat hostet und klicken Sie dann jede sekundäre Datenbank vorbereiten, und mit der verfügbarkeitsgruppe zu verknüpfen. Weitere Informationen finden Sie unter [Starten der Datenverschiebung auf einer sekundären Always On-Datenbank &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+ Nachdem Sie die verfügbarkeitsgruppe erstellt haben, eine Verbindung mit jeder Serverinstanz, die ein sekundäres Replikat hostet und klicken Sie dann jede sekundäre Datenbank vorbereiten, und mit der verfügbarkeitsgruppe zu verknüpfen. Weitere Informationen finden Sie weiter unten in diesem Thema im Abschnitt [Starten der Datenverschiebung auf einer sekundären Always On-Datenbank &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 > [!NOTE]  
 >  Später können Sie berechtigte Datenbanken auf der Serverinstanz hinzufügen, die das primäre Replikat für eine Verfügbarkeitsgruppe hostet. Sie können zudem eine Datenbank aus einer Verfügbarkeitsgruppe entfernen. Weitere Informationen finden Sie unter [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)hinzugefügt wird.  
@@ -234,7 +234,7 @@ CREATE AVAILABILITY GROUP group_name
  ENDPOINT_URL **= "**TCP**://***Systemadresse***:***Port***"**  
  Gibt den URL-Pfad für die [datenbankspiegelungsendpunkt](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die das verfügbarkeitsreplikat hostet, die Sie in der aktuellen REPLICA ON-Klausel definieren.  
   
- Die ENDPOINT_URL-Klausel ist erforderlich. Weitere Informationen finden Sie unter [Angeben der Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)zu unterstützen.  
+ Die ENDPOINT_URL-Klausel ist erforderlich. Weitere Informationen finden Sie unter [Angeben der Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats &#40; SQLServer &#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)zu unterstützen.  
   
  **"**TCP**://***Systemadresse***:***Port***"**  
  Gibt eine URL zum Bestimmen einer Endpunkt-URL oder einer URL für das schreibgeschützte Routing an. Die URL-Parameter lauten wie folgt:  
@@ -343,7 +343,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  Für die Datenbanken im primären Replikat sind alle Verbindungen zugelassen. Dies ist das Standardverhalten.  
   
- READ_ONLY_ROUTING_LIST  **=**  { **("**\<Server_instance >**"** [ **,**... *n* ] **)** | NONE} gibt eine durch Trennzeichen getrennte Liste von Serverinstanzen, die verfügbarkeitsreplikate für diese verfügbarkeitsgruppe, die die folgenden Anforderungen erfüllen hosten, wenn unter der sekundären Rolle ausgeführt wird:  
+ READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE } Specifies a comma-separated list of server instances that host availability replicas for this availability group that meet the following requirements when running under the secondary role:  
   
 -   Wird konfiguriert, um alle Verbindungen oder schreibgeschützte Verbindungen (siehe das obige ALLOW_CONNECTIONS-Argument der SECONDARY_ROLE-Option) zuzulassen.  
   
@@ -427,7 +427,7 @@ CREATE AVAILABILITY GROUP group_name
 >  -   Bitten Sie den Netzwerkadministrator, die IP-Adresse des Listeners zur exklusiven Verwendung zu reservieren.  
 > -   Geben Sie den DNS-Hostnamen des Listeners an Anwendungsentwickler weiter, damit diese den Namen in Verbindungszeichenfolgen zum Anfordern von Clientverbindungen mit dieser Verfügbarkeitsgruppe verwenden.  
   
- *DNS-Name*  
+ *dns_name*  
  Gibt den DNS-Hostnamen des Verfügbarkeitsgruppenlisteners an. Der DNS-Name des Listeners muss in der Domäne und NetBIOS eindeutig sein.  
   
  *Dns_name* ist ein Zeichenfolgenwert. Dieser Name darf nur alphanumerische Zeichen, Bindestriche (-) und Unterstriche (_) enthalten (in beliebiger Reihenfolge). Bei DNS-Hostnamen muss die Groß-/Kleinschreibung beachtet werden. Die maximale Länge beträgt 63 Zeichen.  
@@ -449,7 +449,7 @@ CREATE AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- MIT IP-Adresse **(** { **("***four_part_ipv4_address***","***four_part_ipv4_mask* **')** | **("***ipv6_address***")** } [ **,** ...  *n*  ] **)** [ **,** PORT  **=**  *Listener_port* ]  
+ MIT IP-Adresse **(** { **("***four_part_ipv4_address***","***four_part_ipv4_mask***")** | **("***ipv6_address***")** } [ **,** ...  *n*  ] **)** [ **,** PORT **= *** Listener_port* ]  
  Gibt an, dass statt DHCP Listener der verfügbarkeitsgruppe eine oder mehrere statische IP-Adressen verwendet. Um eine Verfügbarkeitsgruppe über mehrere Subnetze zu erstellen, erfordert jedes Subnetz in der Listenerkonfiguration eine statische IP-Adresse. Für ein angegebenes Subnetz kann die statische IP-Adresse entweder eine IPv4-Adresse oder eine IPv6-Adresse sein. Wenden Sie sich an Ihren Netzwerkadministrator, um eine statische IP-Adresse für jedes Subnetz zu erhalten, die ein Replikat für die neue verfügbarkeitsgruppe hostet.  
   
  Beispiel:  
@@ -465,7 +465,7 @@ CREATE AVAILABILITY GROUP group_name
  *ipv6_address*  
  Gibt eine IPv6-Adresse für einen Verfügbarkeitsgruppenlistener an. Beispiel: `2001::4898:23:1002:20f:1fff:feff:b3a3`.  
   
- PORT  **=**  *Listener_port*  
+ PORT **=** *listener_port*  
  Gibt die Portnummer –*Listener_port*– von einem Verfügbarkeitsgruppen-Listener verwendet werden, die von einer WITH IP-Klausel angegeben ist. PORT ist optional.  
   
  Die Standardportnummer 1433 wird unterstützt. Wenn Sie jedoch Sicherheitsbedenken hegen, empfehlen wir die Verwendung einer anderen Portnummer.  
@@ -480,7 +480,7 @@ CREATE AVAILABILITY GROUP group_name
 ## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** und die CREATE AVAILABILITY GROUP-Serverberechtigung, ALTER ANY AVAILABILITY GROUP-Berechtigung oder CONTROL SERVER-Berechtigung.  
+ Erfordert die Mitgliedschaft in der festen **sysadmin** -Serverrolle und die CREATE AVAILABILITY GROUP-Serverberechtigung, ALTER ANY AVAILABILITY GROUP-Berechtigung oder CONTROL SERVER-Berechtigung.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -497,7 +497,7 @@ CREATE AVAILABILITY GROUP group_name
   
 |Replikatoption|Einstellung auf `COMPUTER01`|Einstellung auf `COMPUTER02`|Einstellung auf `COMPUTER03`|Description|  
 |--------------------|-----------------------------|-----------------------------|-----------------------------|-----------------|  
-|ENDPOINT_URL|TCP: / /*COMPUTER01:5022*|TCP: / /*COMPUTER02:5022*|TCP: / /*COMPUTER03:5022*|In diesem Beispiel weisen die Systeme dieselbe Domäne auf. Daher können die Endpunkt-URLs den Namen des Computersystems als Systemadresse verwenden.|  
+|ENDPOINT_URL|TCP://*COMPUTER01:5022*|TCP://*COMPUTER02:5022*|TCP://*COMPUTER03:5022*|In diesem Beispiel weisen die Systeme dieselbe Domäne auf. Daher können die Endpunkt-URLs den Namen des Computersystems als Systemadresse verwenden.|  
 |AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|Zwei der Replikate verwenden den Modus mit synchronem Commit. Nach der Synchronisierung unterstützen sie Failover ohne Datenverlust. Das dritte Replikat verwendet den Verfügbarkeitsmodus mit asynchronem Commit.|  
 |FAILOVER_MODE|AUTOMATIC|AUTOMATIC|MANUAL|Die Replikate mit synchronem Commit unterstützen automatisches Failover und geplantes manuelles Failover. Das Verfügbarkeitsmodusreplikat mit synchronem Commit unterstützt nur erzwungenes manuelles Failover.|  
 |BACKUP_PRIORITY|30|30|90|Dem Replikat mit asynchronem Commit wird eine höhere Priorität (90) als dem Replikat mit synchronem Commit zugewiesen. Sicherungen sind tendenziell auf der Serverinstanz auftreten, die das Replikat mit asynchronem Commit hostet.|  
@@ -564,20 +564,20 @@ GO
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
--   [Erstellen einer Verfügbarkeitsgruppe &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)  
+-   [Erstellen einer Verfügbarkeitsgruppe &#40; Transact-SQL &#41;](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)  
   
--   [Verwenden des Assistenten für Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [Verwenden Sie den Assistenten für Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
 -   [Verwenden des Dialogfelds „Neue Verfügbarkeitsgruppe“ &#40;SQL Server Management Studio&#41;](../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [Verwenden des Assistenten für Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [Verwenden Sie den Assistenten für Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
- [DROP AVAILABILITY GROUP &#40; Transact-SQL &#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   
+ [DROP AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   
  [Problembehandlung für die Always On-Verfügbarkeitsgruppenkonfiguration &#40; SQLServer &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
- [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover (SQL Server)](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   

@@ -23,13 +23,13 @@ ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef249a7482610419873604637290cab3ef18e34b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 87dca9b5bcd70335a6121b1be1e49f4cc352826e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Einbinden relationaler Daten in XML-Daten
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.lasthandoff: 11/17/2017
   
  Um relationale Nicht-XML-Daten in XML zu binden, bietet das SQL Server-Datenbankmodul folgende Pseudofunktionen:  
   
--   [SQL: Column &#40; &#41; Function &#40; XQuery &#41; ](../../xquery/xquery-extension-functions-sql-column.md) Können Sie die Werte aus einer relationalen Spalte in einem XQuery- oder XML DML-Ausdruck verwenden.  
+-   [sql:column&#40;&#41; Function &#40;XQuery&#41;](../../xquery/xquery-extension-functions-sql-column.md) Lets you use the values from a relational column in your XQuery or XML DML expression.  
   
--   [SQL: Variable &#40; &#41; Function &#40; XQuery &#41; ](../../xquery/xquery-extension-functions-sql-variable.md) . Gibt Ihnen die Möglichkeit, den Wert einer SQL-Variablen im XQuery- oder XML DML-Ausdruck zu verwenden.  
+-   [sql:variable&#40;&#41; Function &#40;XQuery&#41;](../../xquery/xquery-extension-functions-sql-variable.md) . Gibt Ihnen die Möglichkeit, den Wert einer SQL-Variablen im XQuery- oder XML DML-Ausdruck zu verwenden.  
   
  Sie können diese Funktionen mit **Xml** -Datentypmethoden tritt ein, wenn Sie einen relationalen Werts in XML verfügbar machen möchten.  
   

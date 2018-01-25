@@ -27,13 +27,13 @@ ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 caps.latest.revision: "33"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5759d9764789bff24f6512058b95d0e6f83db91f
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: a6e211c1159d3f78e37226e8ad170ce84a7ce476
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="unary-operators---positive"></a>Unäre Operatoren - positiv
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

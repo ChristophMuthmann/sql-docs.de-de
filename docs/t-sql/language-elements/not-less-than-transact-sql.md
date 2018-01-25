@@ -25,13 +25,13 @@ ms.assetid: ecbb598e-58a2-4b6c-90b4-3ad5bdfcae39
 caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d58f155894bf119caa5fc8fb7635a7f2c7cc6aaf
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 2bd79083902b27a5588587e246182fe061312805
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lt-not-less-than-transact-sql"></a>!&lt; (Nicht kleiner als) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

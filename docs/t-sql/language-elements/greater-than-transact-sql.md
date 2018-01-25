@@ -26,13 +26,13 @@ ms.assetid: 50a7b098-a3fb-4df6-ae42-1272d6346338
 caps.latest.revision: "37"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c4bb915f7165091e98e27f0c5e3765c943030e6c
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 088bc05da0de6b1d88f7d1b84a01062ed6a5b850
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="gt-greater-than-transact-sql"></a>&gt; (Greater Than) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

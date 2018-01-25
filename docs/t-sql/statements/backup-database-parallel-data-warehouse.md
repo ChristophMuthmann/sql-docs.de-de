@@ -15,13 +15,13 @@ ms.assetid: 73c8d465-b36b-4727-b9f3-368e98677c64
 caps.latest.revision: "11"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ced03c90d0f30a1e8749d09f00d293bdee53b06e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cc87423b3444daf6d44f590c283b52ce948da193
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>SICHERUNGSDATENBANK (Parallel Datawarehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -63,7 +63,7 @@ BACKUP DATABASE database_name
  *database_name*  
  Der Name der Datenbank auf dem eine Sicherung erstellt. Die Datenbank kann es sich um die master-Datenbank oder eine Benutzerdatenbank sein.  
   
- AUF den Datenträger = "\\\\*UNC_path*\\*Backup_directory*"  
+ TO DISK = '\\\\*UNC_path*\\*backup_directory*'  
  Der Netzwerkpfad und das Verzeichnis, in dem [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] schreibt die Sicherungsdateien. Z. B. "\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup".  
   
 -   Der Pfad zur Sicherungsverzeichnis Namen muss bereits vorhanden und muss als eine vollqualifizierte Universal naming Convention (UNC)-Pfad angegeben werden.  
@@ -76,7 +76,7 @@ BACKUP DATABASE database_name
   
 -   Der Server oder Host muss eine IP-Adresse angegeben werden.  Sie können nicht als Host-oder Server angeben.  
   
- DESCRIPTION = **"***Text***"**  
+ DESCRIPTION = **'***text***'**  
  Gibt eine Beschreibung des Sicherungssatzes an. Die maximale Länge des Texts beträgt 255 Zeichen.  
   
  Die Beschreibung wird in den Metadaten gespeichert und wird angezeigt, wenn der Sicherungsheader mit RESTORE HEADERONLY wiederhergestellt wird.  
@@ -160,11 +160,11 @@ BACKUP DATABASE database_name
 ## <a name="metadata"></a>Metadaten  
  Diese dynamischen Verwaltungssichten enthalten Informationen über alle Sicherung, Wiederherstellung und Ladevorgänge. Die Informationen, die über Systemneustarts weiterhin besteht.  
   
--   [Sys.pdw_loader_backup_runs &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [sys.pdw_loader_backup_runs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [Sys.pdw_loader_backup_run_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [sys.pdw_loader_backup_run_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
--   [Sys.pdw_loader_run_stages &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
+-   [sys.pdw_loader_run_stages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
   
 ## <a name="performance"></a>Leistung  
  Zum Ausführen einer Sicherung [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] erste sichert die Metadaten, und klicken Sie dann führt eine parallele Sicherung der Datenbankdaten auf den Serverknoten gespeichert. Daten werden direkt aus jeder Serverknoten im Sicherungsverzeichnis kopiert. Die beste Leistung zum Verschieben von Daten von den Computeknoten im Sicherungsverzeichnis erzielen [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] steuert die Anzahl von Serverknoten, die gleichzeitig von Daten kopieren.  

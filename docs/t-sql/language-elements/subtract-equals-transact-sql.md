@@ -25,13 +25,13 @@ ms.assetid: 2a2056b5-1dfa-4ea8-8cfc-6331a2f94da9
 caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f81acd843073d132de339fd183d76c64dd8b6b63
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: e42283367d3035ce4d7fcaecb4f7c96bcb7fed68
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="--subtraction-assignment-transact-sql"></a>= (Subtraktionszuweisung) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

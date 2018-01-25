@@ -12,12 +12,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: aa07f181ef8a17b79bd978ffd58174bf28d870f0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: dd64f680a288f144e14104aedc99d4c6eda85934
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="introducing-revoscalepy"></a>Einführung in revoscalepy
 
@@ -162,7 +162,7 @@ Zum Ausführen von Python-Code in SQL Server muss installiert sein 2017 von SQL 
 
 Vollständige Dokumentation für diese APIs sind verfügbar, wenn das Produkt veröffentlicht wird. In der Zwischenzeit wird empfohlen, dass Sie die entsprechende Funktion in den Bibliotheken "revoscaler" oder MicrosoftML verweisen.
 
-+ ["Revoscaler"](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
++ [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
 + [MicrosoftML](https://msdn.microsoft.com/microsoft-r/microsoftml/microsoftml)
 
 Erhalten Sie Hilfe für eine beliebige Python-Funktion, durch Importieren des Moduls, und dem anschließenden Aufrufen `help()`. Z. B. Ausführung `help(revoscalepy)` aus Python-IDE gibt eine Liste aller Funktionen im Modul Revoscalepy mit ihren Signaturen zurück.

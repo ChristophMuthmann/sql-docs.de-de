@@ -25,11 +25,11 @@
 
 # [Migration von SSIS-Paketen zu Azure per Lift & Shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
 ## [Tutorial: Bereitstellen, Ausführen und Überwachen eines Pakets in Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-## [Verbinden mit dem SSIS-Katalog in Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
-## [Zeitliche Planung der Paketausführung in Azure](lift-shift/ssis-azure-schedule-packages.md)
-## [Überprüfen von in Azure bereitgestellten Paketen](lift-shift/ssis-azure-validate-packages.md)
 ## [Verbinden mit Datenquellen mit der Windows-Authentifizierung](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [Verbinden mit Dateien und Dateifreigaben](lift-shift/ssis-azure-files-file-shares.md)
+## [Überprüfen von in Azure bereitgestellten Paketen](lift-shift/ssis-azure-validate-packages.md)
+## [Verbinden mit dem SSIS-Katalog in Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Zeitliche Planung der Paketausführung in Azure](lift-shift/ssis-azure-schedule-packages.md)
 
 # [Installation oder Upgrade](../integration-services/install-windows/install-integration-services.md)
 
@@ -175,11 +175,8 @@
 #### [Lektion 3-3: Testen des bereitgestellten Pakets](lesson-3-3-testing-the-deployed-packages.md)
 
 # Ressourcen
-## Folgen Sie dem Blog
-### [SSIS-Teamblog](https://blogs.msdn.microsoft.com/ssis/)
-## Hilfe
-### [SSIS-Forum auf MSDN](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
-### [SSIS-Tag in Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
-## Geben Sie Feedback
-### [SQL Server-Feedback-forum](https://feedback.azure.com/forums/908035-sql-server)  
+## [Abrufen von Hilfe im SSIS-Forum](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+## [Abrufen von Hilfe auf Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+## [Dem SSIS-Teamblog folgen](https://blogs.msdn.microsoft.com/ssis/)
+## [Melden von Problemen und anfordern von Features](https://feedback.azure.com/forums/908035-sql-server)
 ## [Rufen Sie die Dokumente auf Ihrem PC auf](../sql-server/sql-server-help-installation.md)

@@ -15,15 +15,15 @@ ms.assetid: 6fc5fd95-2045-4f20-a914-3598091bc7cc
 caps.latest.revision: "37"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e8d0df617bef08305166f4112fcb4f4d371137d2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a5c22e2ce58189f396835f65748fdbab7ef8f9d5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL-Datenbank)
+# <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Ändert eine [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Ändert den Namen einer Datenbank, die Edition und der Dienst Ziel einer Datenbank, der Join einen elastischen Pool und legt Datenbankoptionen an.  
@@ -201,7 +201,7 @@ ALTER DATABASE { database_name }
  CURRENT  
  Legt fest, dass die zurzeit verwendete Datenbank geändert werden soll.  
   
- Ändern von Namen  **=**  *Name der neuen Datenbank*  
+ Ändern von Namen **= *** Name der neuen Datenbank*  
  Benennt die Datenbank mit dem angegebenen als Namen *Name der neuen Datenbank*. Im folgende Beispiel ändert den Namen einer Datenbank `db1` auf `db2`:   
 
 ```  
@@ -222,7 +222,7 @@ ALTER DATABASE current
  ÄNDERN (MAXSIZE  **=**  [100 MB | 500 MB | 1 | 1024... 4096] GB)  
  Gibt die maximale Größe der Datenbank an. Die maximale Größe muss dem gültigen Wertsatz für die EDITION-Eigenschaft der Datenbank entsprechen. Eine Änderung der maximalen Datenbankgröße kann auch dazu führen, dass die EDITION-Eigenschaft der Datenbank geändert wird. In der folgenden Tabelle sind die unterstützten MAXSIZE-Werte und die Standardwerte (S) für die Dienstebenen von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] aufgeführt.  
   
-|**MAXSIZE**|**Standard**|**S0 S2**|**S3-S12**|**P1-P6 und PRS1 PRS6**|**P11-P15**|  
+|**MAXSIZE**|**Standard**|**S0-S2**|**S3-S12**|**P1-P6 und PRS1 PRS6**|**P11-P15**|  
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|  
@@ -405,10 +405,10 @@ ALTER DATABASE db1 FAILOVER
  [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [Sys. database_mirroring_witnesses &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
- [Sys. data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
- ["Sys.FileGroups" &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [Sys. master_files &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
+ [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Systemdatenbanken](../../relational-databases/databases/system-databases.md)  
   
   

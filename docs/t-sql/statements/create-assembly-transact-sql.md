@@ -24,15 +24,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], creating
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 caps.latest.revision: "94"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4e7587bfb20c110dd28e6b59bba0fde1e937cb6e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3f937dc219eb317347cceeafcdcd8753244bcb07
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,18 +61,18 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *AssemblyName*  
+ *assembly_name*  
  Der Name der Assembly. Der Name muss innerhalb der Datenbank und eine gültige eindeutig [Bezeichner](../../relational-databases/databases/database-identifiers.md).  
   
  Autorisierung *Owner_name*  
  Gibt den Namen eines Benutzers oder einer Rolle als Besitzer der Assembly an. *Owner_name* muss der Name einer Rolle, der der aktuelle Benutzer angehört, oder der aktuelle Benutzer muss IMPERSONATE-Berechtigung verfügen, auf *Owner_name*. Wird kein Wert angegeben, wird der aktuelle Benutzer zum Besitzer.  
   
- \<Client_assembly_specifier >  
+ \<client_assembly_specifier>  
 Gibt den lokalen Pfad oder den Netzwerkspeicherort an, unter dem die Assembly gespeichert ist, die hochgeladen wird. Außerdem wird damit der Manifestdateiname angegeben, der der Assembly entspricht.  \<Client_assembly_specifier > kann als feste Zeichenfolge oder ausgewerteter Ausdruck in eine Zeichenfolge fester mit Variablen ausgedrückt werden. Das Laden von Assemblys mit mehreren Modulen wird von CREATE ASSEMBLY nicht unterstützt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sucht auch nach abhängigen Assemblys dieser Assembly an demselben Speicherort und lädt sie mit demselben Besitzer wie die Assembly auf Stammebene hoch. Wenn keine abhängigen Assemblys gefunden werden und diese noch nicht in der aktuellen Datenbank geladen sind, wird für CREATE ASSEMBLY ein Fehler gemeldet. Wenn die abhängigen Assemblys bereits in der aktuellen Datenbank geladen sind, muss der Besitzer dieser Assemblys mit dem Besitzer der neu erstellten Assembly identisch sein.
   
  \<Client_assembly_specifier > kann nicht angegeben werden, wenn der angemeldete Benutzer Identität angenommen hat.  
   
- \<Assembly_bits >  
+ \<assembly_bits>  
  Die Liste der Binärwerte, aus denen die Assembly und die abhängigen Assemblys bestehen. Der erste Wert in der Liste wird als Assembly auf Stammebene betrachtet. Die Werte, die den abhängigen Assemblys entsprechen, können in einer beliebigen Reihenfolge bereitgestellt werden. Werte, die nicht Abhängigkeiten der Stammassembly entsprechen, werden ignoriert.  
   
 > [!NOTE]  
@@ -84,7 +84,7 @@ Gibt den lokalen Pfad oder den Netzwerkspeicherort an, unter dem die Assembly ge
  *varbinary_expression*  
  Ist ein Ausdruck vom Typ **Varbinary**.  
   
- PERMISSION_SET { **SICHERE** | EXTERNAL_ACCESS | UNSICHERE}  
+ PERMISSION_SET { **SAFE** | EXTERNAL_ACCESS | UNSAFE }  
  >  [!IMPORTANT]  
  >  Die `PERMISSION_SET` Option hat Auswirkungen auf die `clr strict security` Option in der Warnung öffnende beschrieben. Wenn `clr strict security` ist aktiviert, werden alle Assemblys als behandelt `UNSAFE`.
  
@@ -193,13 +193,13 @@ WITH PERMISSION_SET = SAFE;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [ALTER ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
- [DROP ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
+ [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
+ [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
- [Erstellen Sie Aggregat &#40; Transact-SQL &#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
+ [CREATE AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Verwendungsszenarien und Beispiele für Common Language Runtime &#40; CLR &#41; Integration](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
   

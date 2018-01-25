@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DBCC DBREINDEX statement
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ec9cbe9b5b8d7757c63b5dcca3b9011245ec0fd3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 991c16eea9a651270ca299e72cafbc822465a9b3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Erstellt ein oder mehrere Indizes einer Tabelle in der angegebenen Datenbank neu.
@@ -62,7 +62,7 @@ DBCC DBREINDEX
  *index_name*  
  Der Name des neu zu erstellenden Indexes. Indexnamen müssen den Regeln für Bezeichner entsprechen. Wenn *index_name* angegeben wird, muss auch *table_name* angegeben werden. Wenn *index_name* nicht oder als " " angegeben wird, werden alle Indizes für die Tabelle neu erstellt.  
   
- *FILLFACTOR*  
+ *fillfactor*  
  Der Prozentsatz an Speicherplatz auf jeder Indexseite, der beim Erstellen oder Neuerstellen des Indexes zum Speichern von Daten verwendet werden soll. *fillfactor* ersetzt den ursprünglichen Füllfaktor als neuer Standardwert für den Index und für alle nicht gruppierten Indizes, die neu erstellt werden, weil ein gruppierter Index neu erstellt wird.  
  Wenn *fillfactor* 0 ist, verwendet DBCC DBREINDEX den für den Index zuletzt angegebenen Füllfaktorwert. Dieser Wert wird in der **sys.indexes** -Katalogsicht gespeichert.   
  Wenn *fillfactor* angegeben wird, müssen auch *table_name* und *index_name* angegeben werden. Wenn *fillfactor* nicht angegeben wird, wird der Standardfüllfaktor, 100, verwendet. Weitere Informationen finden Sie unter [Angeben des Füllfaktors für einen Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  

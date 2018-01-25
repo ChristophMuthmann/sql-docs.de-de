@@ -18,12 +18,12 @@ dev_langs: TSQL
 helpviewer_keywords: ALTER EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: e679664f02ffcb08d811a66229a21f1bdaf08077
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: d0fe9adc1907d773bdfddda38b5900774ec97deb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER externe Bibliothek (Transact-SQL)  
 
@@ -73,7 +73,7 @@ Die Datei kann in Form von ein lokaler Pfad oder ein Netzwerkpfad angegeben werd
 
 Optional kann eine Betriebssystemplattform für die Datei angegeben werden. Für jede Betriebssystemplattform für eine bestimmte Sprache oder die Common Language Runtime ist nur eine Datei Artefakt oder Inhalt zulässig.
 
-**DATA_SOURCE = External_data_source_name**
+**DATA_SOURCE = external_data_source_name**
 
 Gibt den Namen der externen Datenquelle, die den Speicherort der Bibliotheksdatei enthält. Dieser Speicherort muss es sich um ein Azure-Blob-Speicherpfad verweisen. Verwenden Sie zum Erstellen einer externen Datenquelle [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md).
 
@@ -137,7 +137,7 @@ ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 
 
 ## <a name="see-also"></a>Siehe auch  
 
-[Erstellen von EXTERNEN Bibliothek (Transact-SQL)](create-external-library-transact-sql.md)
-[löschen externe Bibliothek (Transact-SQL)](drop-external-library-transact-sql.md)  
+[CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)
+[DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  

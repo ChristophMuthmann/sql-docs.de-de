@@ -14,13 +14,13 @@ ms.assetid: cf6f3b7d-f9f9-4e45-b0d1-07850b53e0c5
 caps.latest.revision: "20"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9131644884ebbfc833c8752df57249c94493dc0b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1a38808a619a658bed6cef12d20b52e1f98ad429
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>Optimieren der Leistung für R in SQL Server
 

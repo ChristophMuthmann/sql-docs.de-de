@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a06e868a26e0da160e70e7f2923496e73f136ff7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a601a5f93f7a922228232c8ef4a91b5775eded91
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,10 +62,10 @@ ALTER DATABASE database_name
  SET HADR  
  Führt den angegebenen Befehl [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]-Befehl in der angegebenen Datenbank aus.  
   
- {AVAILABILITY GROUP  **=**  *Gruppenname* | {OFF}  
+ {AVAILABILITY GROUP **= *** Gruppenname* | {OFF}  
  Verknüpft die Verfügbarkeitsdatenbank mit der angegebenen Verfügbarkeitsgruppe oder entfernt sie hieraus.  
   
- *Gruppenname*  
+ *group_name*  
  Verknüpft die angegebene Datenbank auf dem sekundären Replikat, das von der Serverinstanz gehostet wird, auf der Sie den Befehl ausführen, mit der durch group_name angegebenen Verfügbarkeitsgruppe.  
   
  Für diesen Vorgang müssen folgende Voraussetzungen gegeben sein:  
@@ -81,7 +81,7 @@ ALTER DATABASE database_name
     > [!NOTE]  
     >  Um eine Datenbank mit der verfügbarkeitsgruppe hinzuzufügen, eine Verbindung mit der Serverinstanz, die das primäre Replikat hostet, und verwenden Sie die [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*Gruppenname* Hinzufügen von Datenbanken *Database_name*  Anweisung.  
   
- Weitere Informationen finden Sie unter [Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)aktiviert sind, eine Always On-Verfügbarkeitsgruppe zu erstellen.  
+ Weitere Informationen finden Sie unter [Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
  OFF  
  Entfernt die angegebene sekundäre Datenbank aus der Verfügbarkeitsgruppe.  
@@ -149,7 +149,7 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
 ## <a name="see-also"></a>Siehe auch  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40; SQLServer &#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [Problembehandlung bei AlwaysOn-Verfügbarkeitsgruppenkonfiguration &#40; SQLServer &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
   

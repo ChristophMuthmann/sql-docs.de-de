@@ -16,13 +16,13 @@ ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
 caps.latest.revision: "7"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa9dec84a07189eb3b2c6c9c3d9342db4eac1df6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8ba4237f9a43a525571a2d25f95acb0a31d4a5cb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="version---transact-sql-metadata-functions"></a>Version - Transact-SQL-Metadaten-Funktionen
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -52,6 +52,6 @@ SELECT VERSION();
   
 ## <a name="see-also"></a>Siehe auch 
 [SESSION_ID (Transact-SQL)](../../t-sql/functions/session-id-transact-sql.md)  
-[Db_name &#40; Transact-SQL &#41;](../../t-sql/functions/db-name-transact-sql.md)  
+[DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)  
   
   

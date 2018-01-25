@@ -18,12 +18,12 @@ dev_langs: TSQL
 helpviewer_keywords: PREDICT clause
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 5f2ed3582341ff2824943a432e5877602b0b9ee7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: b9aacbffa28783adf6e92d9260d2bf73d89a0cc4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="predict-transact-sql"></a>VORHERSAGEN Sie (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Das Modellobjekt kann mithilfe von R oder Python oder ein anderes Tool erstellt 
 
 DATA-Parameter dient zum Angeben der Daten für die Bewertung oder die Vorhersage verwendet. Daten in Form einer Tabellenquelle in der Abfrage angegeben. Tabellenquelle kann es sich um eine Tabelle, Tabellenalias, CTE-Alias, Sicht oder Tabellenwertfunktion handeln.
 
-**Parameter**
+**parameters**
 
 Der Parameter-Parameter wird verwendet, an die optionale benutzerdefinierte Parameter für die Bewertung oder die Vorhersage verwendet.
 
@@ -73,7 +73,7 @@ Der Name jedes Parameters bezieht sich auf den Typ des Modells. Die RxPredict-Fu
 
 > [HINWEIS] Diese Option wird nicht unterstützt, in der Vorabversion von SQL Server-2017 und dienen lediglich der Forward-Kompatibilität enthalten ist.
 
-**MIT ( \<Result_set_definition >)**
+**WITH ( \<result_set_definition> )**
 
 Die WITH-Klausel wird verwendet, um das Schema für die zurückgegebene Ausgabe angeben der `PREDICT` Funktion.
 
@@ -91,7 +91,7 @@ Fehlermeldungen mit den Daten verknüpft, werden die zugrunde liegenden Vorhersa
 
 Es ist nicht möglich, die Struktur mit internen Modellen anzeigen `PREDICT`. Wenn Sie den Inhalt des Modells selbst verstehen möchten, müssen Sie das Modellobjekt laden, deserialisieren Sie ihn und entsprechenden R-Code verwenden, um das Modell zu analysieren.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Hinweise
 
 Die `PREDICT` Funktion wird in allen Editionen von SQL Server, einschließlich Linux unterstützt.
 

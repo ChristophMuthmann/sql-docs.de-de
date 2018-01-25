@@ -17,13 +17,13 @@ ms.assetid: 4e19f582-ef8f-40f7-8ad1-4f08591cdd1a
 caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bd22d4fd5ec8be93555fc91087ac55b537fa12b
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 900a6a71ea545bfbb433671760174ec241b89de7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="static-aggregate-geometry-methods"></a>Statische Geometry-Aggregatmethoden
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

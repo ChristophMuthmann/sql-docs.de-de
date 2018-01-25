@@ -25,15 +25,15 @@ helpviewer_keywords:
 - services [Service Broker], permissions
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c63c3d62d0104642953545da75b0f7fa1b988eb0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 100c447d3a258ecf8a590173a7c0ef161f0fad3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY (Berechtigungen von Service Broker) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,22 +59,22 @@ DENY permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Berechtigung*  
+ *permission*  
  Gibt eine Berechtigung an, die für ein sicherbares Element von [!INCLUDE[ssSB](../../includes/sssb-md.md)] verweigert werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
- Vertrag **::***Contract_name*  
+ Vertrag **:: *** Contract_name*  
  Gibt den Vertrag an, für den die Berechtigung verweigert wird. Der bereichsqualifizierer **::** ist erforderlich.  
   
- NACHRICHTENTYP **::***Message_type_name*  
+ NACHRICHTENTYP **:: *** Message_type_name*  
  Gibt den Nachrichtentyp an, für den die Berechtigung verweigert wird. Der bereichsqualifizierer **::** ist erforderlich.  
   
- REMOTE SERVICE BINDING **::***Remote_binding_name*  
+ REMOTE SERVICE BINDING **:: *** Remote_binding_name*  
  Gibt die Remotedienstbindung an, für die die Berechtigung verweigert wird. Der bereichsqualifizierer **::** ist erforderlich.  
   
- ROUTE **::***Route_name*  
+ ROUTE **::***route_name*  
  Gibt die Route an, für die die Berechtigung verweigert wird. Der bereichsqualifizierer **::** ist erforderlich.  
   
- Dienst **::***Message_type_name*  
+ Dienst **:: *** Message_type_name*  
  Gibt den Dienst an, für den die Berechtigung verweigert wird. Der bereichsqualifizierer **::** ist erforderlich.  
   
  *database_principal*  

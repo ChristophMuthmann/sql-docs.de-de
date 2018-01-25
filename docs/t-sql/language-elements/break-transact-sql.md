@@ -24,13 +24,13 @@ ms.assetid: 67c30b8d-3f15-41ad-b9a9-a4ced3b2af9f
 caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 025c4d7b72ff26b231a92c4b9492ccbbc987c467
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 9fe4eb7310113a124bee8e1a0f9c4cad3ac45b12
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="break-transact-sql"></a>BREAK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

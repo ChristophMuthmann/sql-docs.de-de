@@ -16,15 +16,15 @@ ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
 caps.latest.revision: "9"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bda2e9c6813e53bffeab974e5e01b475cdfebe26
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d869ed18b07f824ffa4cc3fc8b746ded5242ed99
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-diagnostics-session-transact-sql"></a>Erstellen des DIAGNOSESITZUNG (Transact-SQL)
+# <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Diagnosesitzungen können Sie auf die Leistung von System- oder Abfrage ausführlicher und benutzerdefinierte Diagnoseinformationen zu speichern.  
@@ -67,7 +67,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  *max_item_count_num*  
  Die Anzahl der Ereignisse in einer Ansicht beibehalten werden. Z. B. werden 100 angegeben wird, die 100 letzten Ereignisse, die den Filterkriterien entsprechen. um die diagnosesitzung beibehalten werden. Wenn weniger als 100 Ereignisse Übereinstimmung gefunden werden, wird die diagnosesitzung weniger als 100 Ereignisse enthalten. *Max_item_count_num* muss mindestens 100 und kleiner oder gleich 100.000.  
   
- *Ereignisname*  
+ *event_name*  
  Definiert die tatsächliche Ereignisse in der diagnosesitzung gesammelt werden sollen.  *Ereignisname* ist eines der Ereignisse aufgeführt, die [sys.pdw_diag_events](http://msdn.microsoft.com/en-us/d813aac0-cea1-4f53-b8e8-d26824bc2587) , in denen `sys.pdw_diag_events.is_enabled='True'`.  
   
  *filter_property_name*  
@@ -79,7 +79,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  *comp_type*  
  Der Vergleichstyp. Mögliche Werte sind: ist gleich, EqualsOrGreaterThan, EqualsOrLessThan, "GreaterThan", "LessThan", ungleich, Contains, RegEx  
   
- *Eigenschaftsname*  
+ *property_name*  
  Eine Eigenschaft mit dem Ereignis verknüpft wird.  Eigenschaftsnamen können Teil der Capture-Tag sein oder als Teil der Filterkriterien verwendet.  
   
 |Eigenschaftsname|Description|  

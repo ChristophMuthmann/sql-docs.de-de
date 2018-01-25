@@ -20,13 +20,13 @@ ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
 caps.latest.revision: "15"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 70f37ef6816f5288c1d50240bf813a20ff33fae7
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: a1e42125e49b0191b4ccdcc3628b75d025cccb6a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-string-concatenation-assignment-transact-sql"></a>+= (Zeichenfolge verketten Zuweisung) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -23,13 +23,13 @@ ms.assetid: 34beb660-db19-46ca-ac90-2218471457bf
 caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f85a8a1c27c5582f7770ba1ef002d123fb34faed
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 09bb6ed9095c7dd37aa73bdd165e78c83362fb4c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-multiplication-transact-sql"></a>* (Multiplication) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

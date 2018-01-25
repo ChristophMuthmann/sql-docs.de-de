@@ -16,13 +16,13 @@ ms.assetid: d3835d6d-e68b-486d-81a0-81b717cc6134
 caps.latest.revision: "33"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5d14a6ea1726c59288b72f6c42d31df0f7f09cbd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 49b3174910ca8b5ce1b590f1205bc3d134b76f4b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="view-and-explore-the-data-using-sql-walkthrough"></a>Anzeigen und Durchsuchen von Daten mit SQL (Exemplarische Vorgehensweise)
 

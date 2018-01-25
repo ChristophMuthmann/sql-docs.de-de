@@ -19,15 +19,15 @@ helpviewer_keywords:
 - initialization properties [OLE DB]
 ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
 caps.latest.revision: "59"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08cca5788a9e3908fd72fd415feaab72533b1480
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 218228de964e75a7d67961ba7d8cd812497d8729
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="initialization-and-authorization-properties"></a>Initialisierungs- und Autorisierungseigenschaften
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/08/2018
 
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter interpretiert OLE DB-Initialisierung und Autorisierungseigenschaften wie folgt:  
   
-|Eigenschafts-ID|Description|  
+|Eigenschafts-ID|Beschreibung|  
 |-----------------|-----------------|  
 |DBPROP_AUTH_CACHE_AUTHINFO|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter speichert keine Authentifizierungsinformationen im Cache.<br /><br /> Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt bei einem Versuch, den Eigenschaftswert festzulegen, DB_S_ERRORSOCCURRED zurück. Die *DwStatus* -Element der DBPROP-Struktur gibt DBPROPSTATUS_NOTSUPPORTED an.|  
 |DBPROP_AUTH_ENCRYPT_PASSWORD|Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verwendet Standard- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherheitsmechanismen, um Kennwörter zu verbergen.<br /><br /> Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt bei einem Versuch, den Eigenschaftswert festzulegen, DB_S_ERRORSOCCURRED zurück. Die *DwStatus* -Element der DBPROP-Struktur gibt DBPROPSTATUS_NOTSUPPORTED an.|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 01/08/2018
   
  Im anbieterspezifischen Eigenschaftensatz DBPROPSET_SQLSERVERDBINIT, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter definiert diese zusätzlichen Initialisierungseigenschaften.  
   
-|Eigenschafts-ID|Description|  
+|Eigenschafts-ID|Beschreibung|  
 |-----------------|-----------------|  
 |SSPROP_AUTH_OLD_PASSWORD|Typ: VT_BSTR<br /><br /> R/W: Schreiben<br /><br /> Standard: VT_EMPTY<br /><br /> Beschreibung: Das aktuelle oder abgelaufene Kennwort. Weitere Informationen finden Sie unter [Kennwörter programmgesteuert ändern](../../relational-databases/native-client/features/changing-passwords-programmatically.md).|  
 |SSPROP_INIT_APPNAME|Typ: VT_BSTR<br /><br /> R/w: Lesen/Schreiben<br /><br /> Beschreibung: Name der Clientanwendung.|  
@@ -93,7 +93,7 @@ Server=MyServer;UID=MyUserName;
   
  Eine Liste der verfügbaren in Schlüsselwörter der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter finden Sie unter [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Datenquellenobjekte &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

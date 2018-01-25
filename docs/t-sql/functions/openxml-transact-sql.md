@@ -23,13 +23,13 @@ ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7b1fb1d28c4bddb679bd4aab8ce6cb11f21caca5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f5b32c99393bb5b7f31423df840f7f0069dd3518
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *IDOC*  
+ *idoc*  
  Das Dokumenthandle für die interne Darstellung eines XML-Dokuments. Die interne Darstellung eines XML-Dokuments wird durch den Aufruf erstellt **Sp_xml_preparedocument**.  
   
  *rowpattern*  
  Der XPath-Muster zur Identifizierung der Knoten verwendet wird (im XML-Dokument, dessen Handle übergeben, der *Idoc* Parameter) als Zeilen verarbeitet werden.  
   
- *Flags*  
+ *flags*  
  Gibt die zwischen den XML-Daten und dem relationalen Rowset zu verwendende Zuordnung an und legt fest, wie die Überlaufspalte ausgefüllt wird. *Flags* ist ein optionaler Eingabeparameter und kann einen der folgenden Werte sein.  
   
 |Bytewert|Description|  
@@ -64,7 +64,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Kann mit XML_ATTRIBUTES oder XML_ELEMENTS kombiniert werden (logisches OR). In den Kontext des Abrufens dieses Flag gibt an, dass die verwendeten Daten nicht in die Überlaufeigenschaft kopiert werden sollten  **@mp:xmltext** .|  
   
  *SchemaDeclaration*  
- Ist die Schemadefinition im Format: *ColName**ColType* [*ColPattern* | *Metaeigenschaft*] [**,***ColNameColType* [*ColPattern* | *Metaeigenschaft*]...]  
+ Ist die Schemadefinition im Format: *ColName ** ColType* [*ColPattern* | *Metaeigenschaft*] [**, *** ColNameColType* [*ColPattern * | *Metaeigenschaft*]...]  
   
  *ColName*  
  Der Name einer Spalte des Rowsets.  
@@ -79,10 +79,10 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  Als allgemeine XPath-Muster *ColPattern* unterstützt auch die Metaeigenschaften.  
   
- *Metaeigenschaften*  
+ *MetaProperty*  
  Eine der von OPENXML bereitgestellten Metaeigenschaften. Wenn *Metaeigenschaft* angegeben ist, wird die Spalte enthält, von der Metaeigenschaft bereitgestellte Informationen. Die Metaeigenschaften ermöglichen es Ihnen, zum Extrahieren von Informationen (z. B. relativen Position und Namespaceinformationen) über XML-Knoten. Dies bietet mehr Informationen, als in der Textdarstellung zu sehen sind.  
   
- *Tabellenname*  
+ *TableName*  
  Ist der Tabellenname, die zugewiesen werden kann (anstelle von *SchemaDeclaration*), wenn bereits eine Tabelle mit dem gewünschten Schema vorhanden ist und keine Spaltenmuster erforderlich sind.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -90,11 +90,11 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  Die folgende Tabelle beschreibt die Struktur der **Edge** Tabelle.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|Die eindeutige ID des Dokumentknotens.<br /><br /> Das Stammelement hat den ID-Wert 0. Die negativen ID-Werte sind reserviert.|  
 |**parentid**|**bigint**|Identifiziert das übergeordnete Element des Knotens. Das durch diese ID identifizierte übergeordnete Element ist nicht notwendigerweise das übergeordnete Element; dies hängt vielmehr vom Knotentyp (NodeType) des Knotens ab, dessen übergeordnetes Element nicht von dieser ID identifiziert wird. Wenn es sich bei dem Knoten beispielsweise um einen Textknoten handelt, kann das übergeordnete Objekt ein Attributknoten sein.<br /><br /> Wenn sich der Knoten auf der obersten Ebene im XML-Dokument befindet, ist **ParentID** gleich NULL.|  
-|**Knotentyp**|**int**|Identifiziert den Knotentyp. Eine ganze Zahl, die der XML DOM-Knotentypnummer (Document Object Model) entspricht.<br /><br /> Die Knotentypen sind Folgende:<br /><br /> 1 = Elementknoten<br /><br /> 2 = Attributknoten<br /><br /> 3 = Textknoten|  
+|**nodetype**|**int**|Identifiziert den Knotentyp. Eine ganze Zahl, die der XML DOM-Knotentypnummer (Document Object Model) entspricht.<br /><br /> Die Knotentypen sind Folgende:<br /><br /> 1 = Elementknoten<br /><br /> 2 = Attributknoten<br /><br /> 3 = Textknoten|  
 |**localname**|**nvarchar**|Gibt den lokalen Namen des Elements oder Attributs an. Ist NULL, wenn das DOM-Objekt keinen Namen hat.|  
 |**Präfix**|**nvarchar**|Das Namespacepräfix des Knotennamens.|  
 |**namespaceuri**|**nvarchar**|Der Namespace-URI (Universal Resource Identifier) des Knotens. Ist der Wert NULL, ist kein Namespace vorhanden.|  

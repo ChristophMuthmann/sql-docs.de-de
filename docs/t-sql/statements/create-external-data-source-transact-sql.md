@@ -23,15 +23,15 @@ ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
 caps.latest.revision: "58"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 283971bbd1bfe04b26860f56601c315ac5244717
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8e5f0a03ef6efa09218cc6740df4439a25eb7265
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-external-data-source-transact-sql"></a>Erstellen der EXTERNEN Datenquelle (Transact-SQL)
+# <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Erstellt eine externe Datenquelle für PolyBase, elastischen Datenbankabfragen oder Azure Blob-Speicher. Abhängig vom jeweiligen Szenario unterscheidet sich deutlich die Syntax aus. Eine Datenquelle erstellt, für PolyBase kann nicht für elastische Datenbanken Abfragen verwendet werden.  Auf ähnliche Weise kann eine Datenquelle erstellt, die für elastische Datenbanken Abfragen für PolyBase usw. verwendet werden. 
@@ -135,10 +135,10 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 ## <a name="arguments"></a>Argumente  
  *Data_source_name* gibt den benutzerdefinierten Namen für die Datenquelle. Der Name muss innerhalb der Datenbank in SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse eindeutig sein. Der Name muss innerhalb des Servers in Parallel Data Warehouse eindeutig sein.
   
- TYP = [HADOOP | SHARD_MAP_MANAGER | RDBMS | BLOB_STORAGE]  
+ TYPE = [ HADOOP | SHARD_MAP_MANAGER | RDBMS | BLOB_STORAGE]  
  Gibt den Datenquellentyp. HADOOP verwenden, wird die externen Datenquelle Hadoop oder Azure-Speicher-BLOBs für Hadoop. Verwenden Sie SHARD_MAP_MANAGER aus, wenn eine externe Datenquelle für elastische Datenbanken Abfrage für Sharding in Azure SQL-Datenbank zu erstellen. Verwenden Sie RDBMS mit externen Datenquellen für datenbankübergreifende Abfragen mit elastischen Datenbank in Azure SQL-Datenbank.  BLOB_STORAGE verwenden, beim Ausführen von Massenvorgängen mithilfe von [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) oder [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) mit [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
   
-Speicherort = \<Location_path > **HADOOP**    
+LOCATION = \<location_path> **HADOOP**    
 Für HADOOP gibt den Uniform Resource Indicator (URI) für einen Hadoop-Cluster.  
 `LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
 NameNode_URI: Den Computernamen oder IP-Adresse des Hadoop-Clusters – Namenode.  
@@ -259,7 +259,7 @@ Eine vollständige Liste der Hadoop-Distributionen und Versionen, die von jeder 
  Anmeldeinformationen = *Credential_name*  
  Gibt die datenbankbezogenen Anmeldeinformationen für die Authentifizierung mit der externen Datenquelle. Ein Beispiel finden Sie unter [C. erstellen eine Azure-Blob-Speicher des externen Datenquelle](../../t-sql/statements/create-external-data-source-transact-sql.md#credential). Zum Erstellen von Anmeldeinformationen finden Sie unter [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md). Beachten Sie, dass die Anmeldeinformationen nicht bei öffentlichen Datasets erforderlich ist, die den anonymen Zugriff zulassen. 
   
- Database_name = *"QueryDatabaseName"*  
+ DATABASE_NAME = *'QueryDatabaseName'*  
  Der Name der Datenbank, die als die shardzuordnungs-Manager (für SHARD_MAP_MANAGER) besitzt oder die remote-Datenbank (für RDBMS).  
   
  SHARD_MAP_NAME = *"ShardMapName"*  
@@ -480,12 +480,12 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 In diesem Beispiel verwendet, finden Sie unter [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).
   
 ## <a name="see-also"></a>Siehe auch
-[Ändern der EXTERNEN Datenquelle (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  
+[ALTER EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  
 [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
 [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
-[Erstellen Sie die externe Tabelle AS SELECT &#40; Transact-SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
+[CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
 [Erstellen Sie die Tabelle als SELECT &#40; Azure SQL Datawarehouse &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
-[Sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
+[sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   
   
 

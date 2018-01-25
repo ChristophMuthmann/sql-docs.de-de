@@ -20,15 +20,15 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE WORKLOAD GROUP statement
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3554f6c282ba3ef551fd8592ede4c97f6d29b358
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: cec1360259d78679fab31a45a074d5fbbf3779b5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ CREATE WORKLOAD GROUP group_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Gruppenname*  
+ *group_name*  
  Der benutzerdefinierte Name für die Arbeitsauslastungsgruppe. *Gruppenname* ist alphanumerisch, kann bis zu 128 Zeichen sein, muss innerhalb einer Instanz eindeutig sein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und Sie müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md).  
   
  WICHTIGKEIT = {NIEDRIG | **MITTEL** | HOHE}  
@@ -95,7 +95,7 @@ CREATE WORKLOAD GROUP group_name
 >   
 >  Beachten Sie, dass in beiden Fällen der Timeoutfehler 8645 auftreten kann, wenn der Server nicht über ausreichend physischen Arbeitsspeicher verfügt.  
   
- REQUEST_MAX_CPU_TIME_SEC =*Wert*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  Gibt die maximale CPU-Zeit in Sekunden an, die eine Anforderung beanspruchen kann. *Wert* muss 0 oder eine positive ganze Zahl sein. Die Standardeinstellung für *Wert* ist 0 (null) bedeutet unbeschränkt.  
   
 > [!NOTE]  
@@ -104,7 +104,7 @@ CREATE WORKLOAD GROUP group_name
 > [!IMPORTANT]
 > Beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, und Verwenden von [Ablaufverfolgungsflag 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Ressourcenkontrolle wird eine Anforderung abgebrochen, wenn die maximale Zeit überschritten wird. 
   
- REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*Wert*  
+ REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Gibt die maximale Zeit in Sekunden an, die eine arbeitsspeicherzuweisung (Arbeitsspeicherpuffer) auf das Freiwerden eine Abfrage wartet.  
   
 > [!NOTE]  
@@ -112,7 +112,7 @@ CREATE WORKLOAD GROUP group_name
   
  *Wert* muss 0 oder eine positive ganze Zahl sein. Die Standardeinstellung für *Wert*, 0, verwendet eine interne Berechnung basierend auf den Abfragekosten, um die maximale Zeit festlegen.  
   
- MAX_DOP =*Wert*  
+ MAX_DOP =*value*  
  Gibt den maximalen Grad der Parallelität (DOP) für parallele Anforderungen an. *Wert* muss 0 oder eine positive ganze Zahl sein. Der zulässige Bereich für *Wert* liegt zwischen 0 und 64. Die Standardeinstellung für *Wert*, 0, verwendet die globale Einstellung. MAX_DOP wird wie folgt behandelt:  
   
 -   MAX_DOP als Abfragehinweis wird so lange verwendet, wie die Arbeitsauslastungsgruppe MAX_DOP nicht überschritten wird. Wenn der Wert des MAXDOP-Abfragehinweises den mit der Ressourcenkontrolle konfigurierten Wert überschreitet, verwendet das Datenbankmodul den MAXDOP-Wert der Ressourcenkontrolle.  
@@ -125,7 +125,7 @@ CREATE WORKLOAD GROUP group_name
   
 -   Nach der Konfiguration kann DOP nur bei Arbeitsspeicher-Engpässen verringert werden. Die Neukonfiguration der Arbeitsauslastungsgruppe ist während des Wartens in der Speicherzuweisungs-Warteschlange nicht sichtbar.  
   
- GROUP_MAX_REQUESTS =*Wert*  
+ GROUP_MAX_REQUESTS =*value*  
  Gibt die maximale Anzahl gleichzeitiger Anforderungen an, die in der Arbeitsauslastungsgruppe ausgeführt werden können. *Wert* muss 0 oder eine positive ganze Zahl sein. Die Standardeinstellung für *Wert*0 lässt unbegrenzte Anforderungen. Wenn die maximale Anzahl gleichzeitiger Anforderungen erreicht wird, kann sich ein Benutzer dieser Gruppe zwar anmelden, wird jedoch in den Wartezustand versetzt, bis die Anzahl gleichzeitiger Anforderungen unter den angegebenen Wert gefallen ist.  
   
  Mithilfe von { *Pool_name* | **"Default"** }  

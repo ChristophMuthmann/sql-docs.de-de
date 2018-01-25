@@ -27,15 +27,15 @@ helpviewer_keywords:
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 caps.latest.revision: "67"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 168ba93fdfbf999cb325d985c3c29601cc21b4ed
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7bd20267a78f9a0fcaf2d854b6e94553b7c80167
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ CREATE QUEUE <object>
  *Schema_name* (Objekt)  
  Der Name des Schemas, zu dem die neue Warteschlange gehört. Standardmäßig handelt es sich bei dem Schema um das Standardschema für den Benutzer, der die Anweisung ausführt. Wenn die CREATE QUEUE-Anweisung von einem Mitglied der festen Serverrolle "Sysadmin" ausgeführt wird, oder ein Mitglied der Db_dbowner oder Db_ddladmin Datenbankrollen in der Datenbank gemäß festen *Database_name*, *Schema_name* können ein anderes als das dem Anmeldenamen der aktuellen Verbindung zugeordnete Schema angeben. Andernfalls *Schema_name* muss das Standardschema für den Benutzer, der die Anweisung ausführt.  
   
- *Warteschlangenname*  
+ *queue_name*  
  Der Name der zu erstellenden Warteschlange. Dieser Name muss den Richtlinien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner entsprechen.  
   
  STATUS (Warteschlange)  
@@ -102,13 +102,13 @@ CREATE QUEUE <object>
  STATUS (Aktivierung)  
  Gibt an, ob [!INCLUDE[ssSB](../../includes/sssb-md.md)] die gespeicherte Prozedur startet. Ist STATUS = ON, startet die Warteschlange die mit PROCEDURE_NAME angegebene gespeicherte Prozedur, wenn die Anzahl der zurzeit ausgeführten Prozeduren kleiner als MAX_QUEUE_READERS ist und wenn Nachrichten schneller in der Warteschlange ankommen, als die gespeicherten Prozeduren Nachrichten empfangen. Ist STATUS = OFF, startet die Warteschlange die gespeicherte Prozedur nicht. Wird diese Klausel nicht angegeben, ist die Standardeinstellung ON.  
   
- Procedure_name = \<Prozedur >  
+ PROCEDURE_NAME = \<procedure>  
  Gibt den Namen der gespeicherten Prozedur an, die für die Verarbeitung von Nachrichten in dieser Warteschlange gestartet werden soll. Dieser Wert muss ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner sein.  
   
- *Database_name*(Vorgehensweise)  
+ *database_name*(procedure)  
  Der Name der Datenbank, die die gespeicherte Prozedur enthält.  
   
- *Schema_name*(Vorgehensweise)  
+ *schema_name*(procedure)  
  Der Name des Schemas, das die gespeicherte Prozedur enthält.  
   
  *procedure_name*  
@@ -154,7 +154,7 @@ CREATE QUEUE <object>
   
  In der folgenden Tabelle werden die Spalten in einer Warteschlange aufgelistet.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |status|**tinyint**|Status der Nachricht. Die RECEIVE-Anweisung gibt alle Nachrichten, die den Status **1**. Wenn die Nachrichtenbeibehaltung aktiviert ist, wird der Status auf 0 festgelegt. Wenn die Nachrichtenbeibehaltung deaktiviert ist, wird die Meldung aus der Warteschlange gelöscht. Nachrichten in der Warteschlange können einen der folgenden Werte enthalten:<br /><br /> **0**= empfangene Nachricht wurde beibehalten<br /><br /> **1**= bereit zu empfangen<br /><br /> **2**= noch nicht abgeschlossen<br /><br /> **3**= gesendete Nachricht wurde beibehalten|  
 |priority|**tinyint**|Die Prioritätsebene, die der Nachricht zugewiesen wird.|  
@@ -168,7 +168,7 @@ CREATE QUEUE <object>
 |service_contract_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Vertrags, dem die Konversation entspricht.|  
 |message_type_name|**nvarchar(256)**|Name des Nachrichtentyps, der die Nachricht beschreibt.|  
 |message_type_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Nachrichtentyps, der die Nachricht beschreibt.|  
-|validation|**NCHAR(2)**|Für die Nachricht verwendete Überprüfung.<br /><br /> E = leer<br /><br /> N = Keine<br /><br /> X = XML|  
+|validation|**nchar(2)**|Für die Nachricht verwendete Überprüfung.<br /><br /> E = leer<br /><br /> N = Keine<br /><br /> X = XML|  
 |message_body|**varbinary(max)**|Inhalt der Nachricht.|  
 |message_id|**uniqueidentifier**|Eindeutiger Bezeichner für die Nachricht.|  
   
@@ -230,10 +230,10 @@ CREATE QUEUE ExpenseQueue
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [ALTER QUEUE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
+ [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [DROP QUEUE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
- [Empfangen von &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
+ [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

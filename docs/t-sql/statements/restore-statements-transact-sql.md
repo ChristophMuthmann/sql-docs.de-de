@@ -41,15 +41,15 @@ helpviewer_keywords:
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 caps.latest.revision: "248"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b5f6424589d13652095b43ffcefa63e8916ecf39
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: edafff7cc70224c67ef970ca4c13e47cce113f23
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE-Anweisungen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -262,7 +262,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   Vorbereiten einer verfügbarkeitsdatenbank für eine Always On-verfügbarkeitsgruppe  
   
-     Weitere Informationen finden Sie unter [Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)erstellt und konfiguriert wird.  
+     Weitere Informationen finden Sie unter [Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
 -   Vorbereiten einer Spiegeldatenbank für die Datenbankspiegelung  
   
@@ -312,7 +312,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
  Jede Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet im Vergleich zu früheren Versionen jedoch einen anderen Standardpfad. Daher muss zum Wiederherstellen einer Datenbank, die am Standardort für Sicherungen in früheren Versionen erstellt wurde, die MOVE-Option verwendet werden. Informationen zum neuen Standardpfad finden Sie unter [Dateispeicherorte für Standard- und benannte Instanzen von SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).  
   
- Nachdem Sie eine Datenbank einer früheren Version in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wiederhergestellt haben, wird die Datenbank automatisch aktualisiert. In der Regel ist die Datenbank sofort verfügbar. Wenn eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank aber Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft  **upgrade_option** . Wenn die Upgradeoption auf „Importieren“ (**upgrade_option** = 2) oder „Neu erstellen“ (**upgrade_option** = 0) festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf Importieren festgelegt ist und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Verwenden Sie **sp_fulltext_service** , um die Einstellung der Servereigenschaft [upgrade_option](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)zu ändern.  
+ Nachdem Sie eine Datenbank einer früheren Version in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wiederhergestellt haben, wird die Datenbank automatisch aktualisiert. In der Regel ist die Datenbank sofort verfügbar. Wenn eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank aber Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft  **upgrade_option** . Wenn die Upgradeoption auf „Importieren“ (**upgrade_option** = 2) oder „Neu erstellen“ (**upgrade_option** = 0) festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf Importieren festgelegt ist und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Um die Einstellung der Servereigenschaft **upgrade_option** zu ändern, verwenden Sie [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
  Wird eine Datenbank zum ersten Mal an eine neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angefügt oder wiederhergestellt, ist noch keine Kopie des Datenbank-Hauptschlüssels (verschlüsselt vom Diensthauptschlüssel) auf dem Server gespeichert. Der Datenbank-Hauptschlüssel (Database Master Key, DMK) muss mithilfe der Anweisung **OPEN MASTER KEY** entschlüsselt werden. Nachdem der Datenbank-Hauptschlüssel entschlüsselt wurde, können Sie für die Zukunft die automatische Entschlüsselung aktivieren, indem Sie die Anweisung **ALTER MASTER KEY REGENERATE** verwenden. Auf diese Weise können Sie eine Kopie des mit dem Diensthauptschlüssel (Service Master Key, SMK) verschlüsselten Datenbank-Hauptschlüssels für den Server bereitstellen. Wenn eine Datenbank von einer früheren Version aktualisiert wurde, sollte der DMK neu generiert werden, damit er den neueren AES-Algorithmus verwendet. Weitere Informationen zum Neugenerieren des DMK finden Sie unter [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). Die zum Neugenerieren des DMK zum Upgrade auf AES erforderliche Zeit hängt von der Anzahl der Objekte ab, die durch den DMK geschützt werden. Der DMK muss nur einmal auf AES aktualisiert und neu generiert werden. Dies hat keine Auswirkungen auf zukünftige Neugenerierungen im Rahmen einer Schlüsselrotationsstrategie.  
   
@@ -407,7 +407,7 @@ Note: URL is the format used to specify the location and the file name for the W
 ### <a name="permissions"></a>Berechtigungen  
  Ist die wiederherzustellende Datenbank nicht vorhanden, muss der Benutzer über CREATE DATABASE-Berechtigungen verfügen, um RESTORE ausführen zu können. Ist die Datenbank vorhanden, werden RESTORE-Berechtigungen standardmäßig den Mitgliedern der festen Serverrollen **sysadmin** und **dbcreator** sowie dem Besitzer (**dbo**) der Datenbank erteilt (für die Option FROM DATABASE_SNAPSHOT ist die Datenbank immer vorhanden).  
   
- RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
+ RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur geprüft werden kann, wenn die Datenbank unbeschädigt ist und auf sie zugegriffen werden kann, was beim Ausführen von RESTORE nicht immer der Fall ist, verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
   
 ##  <a name="examples"></a> Beispiele  
  Bei allen Beispielen wird davon ausgegangen, dass eine vollständige Datenbanksicherung ausgeführt wurde.  
@@ -538,7 +538,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
   
  [&#91; Der Anfang des Beispiele &#93;](#examples)  
   
-###  <a name="restoring_transaction_log_to_mark"></a>G. Wiederherstellen eines Transaktionsprotokolls bis zu einer Markierung  
+###  <a name="restoring_transaction_log_to_mark"></a> G. Wiederherstellen eines Transaktionsprotokolls bis zu einer Markierung  
  Im folgenden Beispiel wird das Transaktionsprotokoll bis zur Markierung in der markierten Transaktion mit dem Namen `ListPriceUpdate`wiederhergestellt.  
   
 ```  
@@ -576,7 +576,7 @@ RESTORE LOG AdventureWorks2012
   
  [&#91; Der Anfang des Beispiele &#93;](#examples)  
   
-###  <a name="restoring_using_TAPE"></a>H. Wiederherstellen mit der TAPE-Syntax  
+###  <a name="restoring_using_TAPE"></a> H. Wiederherstellen mit der TAPE-Syntax  
  Im folgenden Beispiel wird eine vollständige Datenbanksicherung von einem `TAPE`-Sicherungsmedium wiederhergestellt.  
   
 ```  
@@ -586,7 +586,7 @@ RESTORE DATABASE AdventureWorks2012
   
  [&#91; Der Anfang des Beispiele &#93;](#examples)  
   
-###  <a name="restoring_using_FILE_n_FG"></a>ICH. Wiederherstellen mithilfe der FILE- und FILEGROUP-Syntax  
+###  <a name="restoring_using_FILE_n_FG"></a> I. Wiederherstellen mithilfe der FILE- und FILEGROUP-Syntax  
  Im folgenden Beispiel wird eine Datenbank mit dem Namen `MyDatabase` wiederhergestellt, die über zwei Dateien, eine sekundäre Dateigruppe und ein Transaktionsprotokoll verfügt. Für die Datenbank wird das vollständige Wiederherstellungsmodell verwendet.  
   
  Die Datenbanksicherung ist der neunte Sicherungssatz im Mediensatz auf einem logischen Sicherungsmedium mit dem Namen `MyDatabaseBackups`. Anschließend werden drei Protokollsicherungen, die sich in den nächsten drei Sicherungssätzen (`10`, `11` und `12`) im Medium `MyDatabaseBackups` befinden, mit `WITH NORECOVERY` wiederhergestellt. Nach dem Wiederherstellen der letzten Protokollsicherung wird die Datenbank wiederhergestellt.  
@@ -628,7 +628,7 @@ GO
   
  [&#91; Der Anfang des Beispiele &#93;](#examples)  
   
-###  <a name="reverting_from_db_snapshot"></a>J. Wiederherstellen aus einer Datenbank-Momentaufnahme  
+###  <a name="reverting_from_db_snapshot"></a> J. Wiederherstellen aus einer Datenbank-Momentaufnahme  
  Im folgenden Beispiel wird eine Datenbank aus einer Datenbank-Momentaufnahme wiederhergestellt. In diesem Beispiel wird davon ausgegangen, dass derzeit in der Datenbank nur eine Momentaufnahme vorhanden ist. Ein Beispiel zum Erstellen dieser Datenbankmomentaufnahme finden Sie unter [Erstellen einer Datenbankmomentaufnahme &#40; Transact-SQL &#41; ](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 > **Hinweis:** Reverting zu einer Momentaufnahme löscht alle Volltextkataloge.  
@@ -642,7 +642,7 @@ GO
 
  [&#91; Der Anfang des Beispiele &#93;](#examples)  
   
-###  <a name="Azure_Blob"></a>K. Wiederherstellen aus dem Microsoft Azure Blob-Speicherdienst  
+###  <a name="Azure_Blob"></a> K. Wiederherstellen aus dem Microsoft Azure Blob-Speicherdienst  
 Die folgenden drei Beispiele umfassen die Verwendung des Microsoft Azure Storage-Diensts.  Der Speicherkontoname lautet `mystorageaccount`.  Der Container für Datendateien heißt `myfirstcontainer`.  Der Container für Sicherungsdateien heißt `mysecondcontainer`.  Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, löschen und Liste Rechte für jeden Container erstellt wurde.  SQL Server-Anmeldeinformationen erstellt wurden, mithilfe der Shared Access Signatures, die die gespeicherte Zugriffsrichtlinien zugeordnet sind.  Informationen zu SQL Server-Sicherung und-Wiederherstellung mit dem Microsoft Azure Blob-Speicher finden Sie unter [SQL Server-Sicherung und-Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
 
 **K1.  Stellen Sie eine vollständige datenbanksicherung wieder her, aus dem Microsoft Azure-Speicherdienst**  
@@ -686,7 +686,7 @@ RESTORE DATABASE Sales
  - [Sichern und Wiederherstellen von replizierten Datenbanken](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  - [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  - [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
- - [RESTORE REWINDONLY &#40; Transact-SQL &#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
+ - [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
  - [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  - [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
  - [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  

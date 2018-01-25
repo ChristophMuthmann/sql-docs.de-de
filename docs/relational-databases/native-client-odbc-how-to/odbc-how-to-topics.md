@@ -13,21 +13,21 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fdd4ba2e98b31d2637641eaded57be1aa4415c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f1332812cc70853fc095e506b43c45aa637cec6c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="odbc-how-to-topics"></a>ODBC How-to Topics
+# <a name="odbc-how-to-topics"></a>ODBC: Themen zur Vorgehensweise
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Verwenden der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC-Treiber, Sie müssen möglicherweise ODBC-Datenquellen erstellen, und stellen Sie sicher, dass der Server die richtige Version der gespeicherten Prozeduren für Kataloginformationen verfügt. Zur Programmierung einer ODBC-Anwendung, die SQL Server verwendet, müssen Sie wissen, wie Sie ODBC-Handles zuordnen, Attribute festlegen, eine Verbindung mit einer Instanz von SQL Server herstellen, Abfragen ausführen und Ergebnisse verarbeiten.  
+  Um den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -ODBC-Treiber zu verwenden, müssen Sie in der Lage sein, ODBC-Datenquellen zu erstellen, und sicherstellen, dass der Server über die korrekte Version der gespeicherten Prozeduren für Kataloginformationen verfügt. Zur Programmierung einer ODBC-Anwendung, die SQL Server verwendet, müssen Sie wissen, wie Sie ODBC-Handles zuordnen, Attribute festlegen, eine Verbindung mit einer Instanz von SQL Server herstellen, Abfragen ausführen und Ergebnisse verarbeiten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

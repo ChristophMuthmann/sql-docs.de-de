@@ -26,15 +26,15 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE BROKER PRIORITY statement
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 256536ee8fc56891b0b957498c7c5bcf4881f235
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 524909a3f12040460950448e77c177f3b1aeef8d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,12 +77,12 @@ FOR CONVERSATION
   
  Der Standardwert ist ANY.  
   
- LOCAL_SERVICE_NAME = {*"LocalServiceName"* | **ANY**}  
+ LOCAL_SERVICE_NAME = {*LocalServiceName* | **ANY**}  
  Gibt den Namen eines Diensts an, der als Kriterium verwendet werden kann, um zu bestimmen, ob die Konversationspriorität für einen Konversationsendpunkt übernommen wird.  
   
  *"LocalServiceName"* ist eine [!INCLUDE[ssDE](../../includes/ssde-md.md)] Bezeichner. Mit diesem muss der Name eines Diensts in der aktuellen Datenbank angegeben werden.  
   
- *"LocalServiceName"*  
+ *LocalServiceName*  
  Gibt an, dass die Konversationspriorität für Folgendes übernommen werden kann:  
   
 -   Jeden Konversationsendpunkt für Initiator, dessen initiatordienstname entspricht *"LocalServiceName"*.  
@@ -94,7 +94,7 @@ FOR CONVERSATION
   
  Der Standardwert ist ANY.  
   
- REMOTE_SERVICE_NAME = {'*"RemoteServiceName"*"| **ANY**}  
+ REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Gibt den Namen eines Diensts an, der als Kriterium verwendet werden kann, um zu bestimmen, ob die Konversationspriorität für einen Konversationsendpunkt übernommen wird.  
   
  *"RemoteServiceName"* ist ein Literal vom Typ **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)]Führt einen Byte-pro-Byte-Vergleich mit der *"RemoteServiceName"* Zeichenfolge. Bei dem Vergleich wird die Groß-/Kleinschreibung beachtet, die aktuelle Sortierung hingegen wird nicht berücksichtigt. Der Zieldienst kann in der aktuellen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder in einer Remoteinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] vorhanden sein.  
@@ -139,13 +139,13 @@ FOR CONVERSATION
   
 |Vertrag des Vorgangs|Lokaler Dienst des Vorgangs|Remotedienst des Vorgangs|  
 |------------------------|-----------------------------|------------------------------|  
-|*ContractName*|*"LocalServiceName"*|*"RemoteServiceName"*|  
-|*ContractName*|*"LocalServiceName"*|ANY|  
-|*ContractName*|ANY|*"RemoteServiceName"*|  
+|*ContractName*|*LocalServiceName*|*RemoteServiceName*|  
+|*ContractName*|*LocalServiceName*|ANY|  
+|*ContractName*|ANY|*RemoteServiceName*|  
 |*ContractName*|ANY|ANY|  
-|ANY|*"LocalServiceName"*|*"RemoteServiceName"*|  
-|ANY|*"LocalServiceName"*|ANY|  
-|ANY|ANY|*"RemoteServiceName"*|  
+|ANY|*LocalServiceName*|*RemoteServiceName*|  
+|ANY|*LocalServiceName*|ANY|  
+|ANY|ANY|*RemoteServiceName*|  
 |ANY|ANY|ANY|  
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] sucht zuerst nach einer Priorität, bei der angegebene Vertrag, der lokale Dienst und der Remotedienst dem Vertrag, dem lokalen Dienst und dem Remotedienst des Vorgangs entsprechen. Wird keine entsprechende Priorität gefunden, sucht [!INCLUDE[ssSB](../../includes/sssb-md.md)] nach einer Priorität, bei der der Vertrag und der lokale Dienst dem Vertrag und dem lokalen Dienst des Vorgangs entsprechen und für die der Remotedienst als ANY angegeben wurde. Dieser Vorgang wird für alle Varianten fortgesetzt, die in der Rangfolgentabelle aufgeführt werden. Wenn keine Übereinstimmung gefunden wird, wird dem Vorgang die Standardpriorität 5 zugewiesen.  
@@ -288,15 +288,15 @@ CREATE BROKER PRIORITY BronzePriority
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [ALTER BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
  [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [Erstellen Sie Vertrag &#40; Transact-SQL &#41;](../../t-sql/statements/create-contract-transact-sql.md)   
+ [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
  [DROP BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [GET CONVERSATION GROUP &#40; Transact-SQL &#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
- [Empfangen von &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
- [SEND &#40; Transact-SQL &#41;](../../t-sql/statements/send-transact-sql.md)   
- [Sys. conversation_priorities &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
+ [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
+ [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md)   
+ [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   

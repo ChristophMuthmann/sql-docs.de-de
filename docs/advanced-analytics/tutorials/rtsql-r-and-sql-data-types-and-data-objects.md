@@ -17,13 +17,13 @@ ms.assetid: 1a17fc5b-b8c5-498f-b8b1-3b7b43a567e1
 caps.latest.revision: "8"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: b3c3a23cb44cc33a9257e4522be30cd3a8dd30ca
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
-ms.translationtype: HT
+ms.openlocfilehash: d329bc157af5fd8f9f5fa6445dfaa5452255a719
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="r-and-sql-data-types-and-data-objects-r-in-sql-quickstart"></a>R und SQL-Typen und Daten Datenobjekte (R in SQL-Schnellstart)
 

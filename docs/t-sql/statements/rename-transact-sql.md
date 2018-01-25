@@ -15,13 +15,13 @@ ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 caps.latest.revision: "15"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee5395145b72108b63256a7e3742eca6a9289e06
-ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
+ms.openlocfilehash: 3c08b4d991717d877ca33cd2d136d0dbf0d30483
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/20/2017
   Benennt eine benutzerdefinierte Tabelle in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Benennt eine vom Benutzer erstellten Tabelle oder Datenbank in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 > [!NOTE]  
->  Umbenennen eine Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verwenden Sie die gespeicherte Prozedur [Sp_renamedb &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Verwenden Sie zum Umbenennen einer Datenbank in Azure SQL-Datenbank die [ALTER DATABASE (Azure SQL-Datenbank)](/statements/alter-database-azure-sql-database.md) Anweisung. 
+>  Umbenennen eine Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verwenden Sie die gespeicherte Prozedur [Sp_renamedb &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Um eine Datenbank in Azure SQL-Datenbank umzubenennen, verwenden Sie die Anweisung [ALTER DATABASE (Azure SQL-Datenbank)](/statements/alter-database-azure-sql-database.md). 
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,12 +56,12 @@ RENAME DATABASE [::] database_name TO new_database_name
   
 ## <a name="arguments"></a>Argumente  
  BENENNEN SIE OBJEKT [:]   
-          [[*Database_name* . [ *Schema_name* ]. ] | [ *Schema_name* . []]*Table_name* TO *New_table_name*  
+          [ [*database_name* . [ *schema_name* ] . ] | [ *Schema_name* . []]*Table_name* TO *New_table_name*  
  **GILT FÜR:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)],  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  Ändern Sie den Namen einer benutzerdefinierten Tabelle. Geben Sie die Tabelle mit einer ein-, zwei- oder dreiteiligen Namen umbenannt werden soll.    Geben Sie die neue Tabelle *New_table_name* als einteiliger Name.  
   
- BENENNEN SIE DIE DATENBANK [:]   
+ RENAME DATABASE [::]   
           [ *Database_name* TO *Name der neuen Datenbank*  
  **GILT FÜR:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

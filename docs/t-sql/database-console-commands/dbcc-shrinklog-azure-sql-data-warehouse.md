@@ -15,15 +15,15 @@ dev_langs: TSQL
 caps.latest.revision: "11"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2561b5658e87e2d33f4ccd7649ede7d7fa2857d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d06917a784e507ab5568e28b4d34273f5fe71063
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="dbcc-shrinklog-azure-sql-data-warehouse"></a>DBCC SHRINKLOG (Azure SQL Datawarehouse)
+# <a name="dbcc-shrinklog-azure-sql-data-warehouse"></a>DBCC SHRINKLOG (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Reduziert die Größe des Transaktionsprotokolls *über die Appliance* für den aktuellen [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Datenbank. Die Daten werden zum Verkleinern des Transaktionsprotokolls defragmentiert. Im Laufe der Zeit kann das Transaktionsprotokoll der Datenbank ineffizienten werden. Verwenden Sie DBCC SHRINKLOG Fragmentierung und Verringern der Protokollgröße.

@@ -1,5 +1,5 @@
 ---
-title: ALTER_DATABASE (Azure SQL Datawarehouse) | Microsoft Docs
+title: ALTER DATABASE (Azure SQL Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: 
@@ -16,14 +16,14 @@ ms.assetid: da712a46-5f8a-4888-9d33-773e828ba845
 caps.latest.revision: "20"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 758f303efd228d806db53075f92cc8dd4664d40b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: 71737beb817cfeebed195c90d056768aef678a3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-database-azure-sql-data-warehouse"></a>ALTER DATABASE (Azure SQL Datawarehouse)
+# <a name="alter-database-azure-sql-data-warehouse"></a>ALTER DATABASE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 Ändert den Namen, eine maximale Größe oder ein dienstziel für eine Datenbank.  
@@ -129,5 +129,5 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
   
 ## <a name="see-also"></a>Siehe auch  
 [CREATE DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/create-database-azure-sql-data-warehouse.md)
-[SQL Data Warehouse-Liste der Referenzthemen](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/)  
+[SQL Data Warehouse list of reference topics](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/)  
   

@@ -26,13 +26,13 @@ ms.assetid: 02da8016-f6c0-41ae-8d59-33eaa02bfc95
 caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5bd0f8234088fbb358740d5c9b4e753d9ecaa11d
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: bc129a0a62c393cb8aee03edca3e0c2b567f9488
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-bitwise-not-transact-sql"></a>~ (Bitweises NOT) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

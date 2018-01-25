@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer EXTERNEN Tabelle (Transact-SQL) | Microsoft Docs
+title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/27/2017
 ms.prod: sql-non-specified
@@ -24,15 +24,15 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 caps.latest.revision: "30"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eab36ee612c3e559bf13db948c128ea6428063ae
-ms.sourcegitcommit: 3cc7ffde800b451923c523fd549e8f4b4994f052
+ms.openlocfilehash: 97381b5381491b98c81a6863b3cfcdc6a340c79e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-external-table-transact-sql"></a>Erstellen einer EXTERNEN Tabelle (Transact-SQL)
+# <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Erstellt eine externe PolyBase-Tabelle, die in einem Hadoop-Cluster oder Azure Blob-Speicher gespeicherte Daten verweist. Kann auch verwendet werden, zum Erstellen einer externen Tabelle [elastische Datenbankabfrage](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
@@ -135,7 +135,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Database_name* . [Schema_name]. | Schema_name. ] *Table_name*  
+ *Database_name* . [ schema_name ] . | schema_name. ] *table_name*  
  1 bis 3 - Teilenamens der Tabelle zu erstellen. Für eine externe Tabelle ist nur die Metadaten der Tabellen in SQL zusammen mit grundlegende Statistiken über die Datei oder Ordner verwiesen, die in Hadoop oder Azure Blob-Speicher gespeichert. Keine tatsächlichen Daten verschoben oder in gespeicherten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  \<Column_definition > [,...  *n*  ] CREATE EXTERNAL TABLE können eine oder mehrere Spaltendefinitionen. Verwenden die gleiche Syntax für eine Spalte definieren, CREATE EXTERNAL TABLE und CREATE TABLE. Eine Ausnahme, können Sie keine DEFAULT-Einschränkung in externen Tabellen. Die vollständigen Details Spaltendefinitionen und deren Datentypen finden Sie unter [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) und [erstellt eine Tabelle in Azure SQL-Datenbank](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
@@ -159,20 +159,20 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 |real|Single|float|FloatWritable||  
 |money|Decimal|double|DoubleWritable||  
 |smallmoney|Decimal|double|DoubleWritable||  
-|nchar|String<br /><br /> Char[]|Zeichenfolge|text||  
+|NCHAR|String<br /><br /> Char[]|Zeichenfolge|text||  
 |nvarchar|String<br /><br /> Char[]|Zeichenfolge|Text||  
 |char|String<br /><br /> Char[]|Zeichenfolge|Text||  
 |varchar|String<br /><br /> Char[]|Zeichenfolge|Text||  
-|binary|Byte[]|binary|BytesWritable|Gilt für Hive 0,8 und höher.|  
-|varbinary|Byte[]|binary|BytesWritable|Gilt für Hive 0,8 und höher.|  
-|Datum|DateTime|timestamp|TimestampWritable||  
-|smalldatetime|DateTime|timestamp|TimestampWritable||  
-|datetime2|DateTime|timestamp|TimestampWritable||  
-|datetime|DateTime|timestamp|TimestampWritable||  
+|BINARY|Byte[]|BINARY|BytesWritable|Gilt für Hive 0,8 und höher.|  
+|varbinary|Byte[]|BINARY|BytesWritable|Gilt für Hive 0,8 und höher.|  
+|Datum|datetime|timestamp|TimestampWritable||  
+|smalldatetime|datetime|timestamp|TimestampWritable||  
+|datetime2|datetime|timestamp|TimestampWritable||  
+|datetime|datetime|timestamp|TimestampWritable||  
 |Uhrzeit|TimeSpan|timestamp|TimestampWritable||  
-|decimal|Decimal|decimal|BigDecimalWritable|Gilt für Hive0.11 und später erneut.|  
+|Decimal|Decimal|Decimal|BigDecimalWritable|Gilt für Hive0.11 und später erneut.|  
   
- Speicherort = "*Folder_or_filepath*"  
+ LOCATION =  '*folder_or_filepath*'  
  Gibt den Ordner oder Pfad und Dateinamen für die tatsächlichen Daten in Hadoop oder Azure Blob-Speicher an. Die Position beginnt im Stammordner. Der Stammordner ist der Speicherort des in der externen Datenquelle angegeben.  
   
  Wenn Sie Standort um einen Ordner angeben, werden eine PolyBase-Abfrage, die aus der externen Tabelle auswählt Dateien aus dem Ordner und allen Unterordnern abgerufen. Keinen wie Hadoop zurück versteckte Ordner PolyBase. Sie gibt auch keine Dateien zurück für die der Dateiname mit einem Unterstrich (_) oder einem Punkt (.) beginnt.  
@@ -183,21 +183,21 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  Um die Standardwebsite als auch nur Lesen aus dem Stammordner zu ändern, legen Sie das Attribut \<polybase.recursive.traversal > in der Konfigurationsdatei Core-site.xml auf "false". Diese Datei befindet sich unter `<SqlBinRoot>\Polybase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Beispiel: `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.  
   
- DATA_SOURCE = *External_data_source_name*  
+ DATA_SOURCE = *external_data_source_name*  
  Gibt den Namen der externen Datenquelle, die den Speicherort der externen Daten enthält. Dieser Speicherort kann entweder eine Hadoop oder Azure Blob-Speicher. Verwenden Sie zum Erstellen einer externen Datenquelle [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
- FILE_FORMAT = *External_file_format_name*  
+ FILE_FORMAT = *external_file_format_name*  
  Gibt den Namen des externen Format Dateiobjekts, in dem die Datei Typ und Komprimierung die Methode für die externen Daten gespeichert. Verwenden Sie zum Erstellen eines externen Dateiformats [CREATE EXTERNAL FILE FORMAT &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-file-format-transact-sql.md).  
   
  Ablehnen von Optionen  
  Sie können angeben, dass Reject-Parameter, die bestimmen, wie PolyBase behandelt *dirty* zeichnet er aus der externen Datenquelle abgerufen. Ein Datensatz gilt als "dirty", wenn sie tatsächliche Datentypen oder die Anzahl der Spalten entsprechen nicht den Spaltendefinitionen der externen Tabelle.  
   
- Wenn Sie nicht angeben oder ändern die Werte ablehnen, werden PolyBase Standardwerte verwendet. Diese Informationen zu den Parametern ablehnen wird als zusätzliche Metadaten gespeichert, wenn Sie eine externe Tabelle mit CREATE EXTERNAL TABLE-Anweisung erstellen.   Wenn eine zukünftige SELECT-Anweisung oder wählen Sie in SELECT-Anweisung Daten aus der externen Tabelle auswählt, wird PolyBase die Reject-Optionen verwenden, um zu bestimmen, die Anzahl oder den Prozentsatz der Zeilen, die zurückgewiesen werden kann, bevor die tatsächliche Abfrage fehlschlägt. zugreifen. Die Abfrage zurückgegeben wird (Teilergebnisse), bis der Schwellenwert zum Zurückweisen überschritten wird. Es wird dann ein Fehler auftritt, mit der entsprechenden Fehlermeldung.  
+ Wenn Sie nicht angeben oder ändern die Werte ablehnen, werden PolyBase Standardwerte verwendet. Diese Informationen zu den Parametern ablehnen wird als zusätzliche Metadaten gespeichert, wenn Sie eine externe Tabelle mit CREATE EXTERNAL TABLE-Anweisung erstellen.   Wenn eine zukünftige SELECT-Anweisung oder wählen Sie in SELECT-Anweisung Daten aus der externen Tabelle auswählt, wird PolyBase die Reject-Optionen verwenden, um zu bestimmen, die Anzahl oder den Prozentsatz der Zeilen, die zurückgewiesen werden kann, bevor die tatsächliche Abfrage fehlschlägt. aus. Die Abfrage zurückgegeben wird (Teilergebnisse), bis der Schwellenwert zum Zurückweisen überschritten wird. Es wird dann ein Fehler auftritt, mit der entsprechenden Fehlermeldung.  
   
  REJECT_TYPE = **Wert** | Prozentsatz  
  Verdeutlicht, ob die Option "REJECT_VALUE" als ein Literalwert oder als Prozentsatz angegeben wird.  
   
- value  
+ Wert  
  REJECT_VALUE ist ein Literalwert, kein Prozentsatz. Die PolyBase-Abfrage schlägt fehl, wenn die Anzahl der abgelehnten Zeilen überschreitet *Reject_value*.  
   
  Z. B. wenn REJECT_VALUE = 5 und REJECT_TYPE = Wert, der PolyBase-SELECT-Abfrage schlägt fehl, nachdem 5 Zeilen abgelehnt wurden.  
@@ -256,7 +256,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
 -   **CREATE TABLE**  
   
--   **BELIEBIGES SCHEMA ÄNDERN**  
+-   **ALTER ANY SCHEMA**  
   
 -   **ÄNDERN SIE JEDE EXTERNE DATENQUELLE**  
   
@@ -563,7 +563,7 @@ FROM ClickStream
  [Beispiele für Metadaten-Abfrage (SQLServer PDW)](http://msdn.microsoft.com/en-us/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
- [Erstellen Sie die externe Tabelle AS SELECT &#40; Transact-SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
+ [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
  [Erstellen Sie die Tabelle als SELECT &#40; Azure SQL Datawarehouse &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
   
   

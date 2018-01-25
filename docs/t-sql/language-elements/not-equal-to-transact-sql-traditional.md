@@ -27,13 +27,13 @@ ms.assetid: 34cf9b38-d589-4be9-925a-116e224609a0
 caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 25c8b75d832fc4ed142bf6988e990ec8645302cc
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: ffacad3e57cd9c9ab1331e0dbe52335ae1d6ddf1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="not-equal-to-transact-sql---traditional"></a>Nicht gleich (Transact SQL) - herkömmlichen
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -23,15 +23,15 @@ helpviewer_keywords:
 - REVOKE statement, Service Broker
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 077fe296f48de1658a56d0c3e7403904652603bc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 897da4d05bcd9a2cfbb88ce5383ba7a71867edcc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE (Berechtigungen von Service Broker) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,22 +64,22 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!IMPORTANT]  
 >  Falls der Prinzipal die angegebene Berechtigung ohne GRANT OPTION besitzt, wird die Berechtigung selbst aufgehoben.  
   
- *Berechtigung*  
+ *permission*  
  Gibt eine Berechtigung an, die für ein sicherbares Element von [!INCLUDE[ssSB](../../includes/sssb-md.md)] aufgehoben werden kann. Eine Liste dieser Berechtigungen finden Sie unter Hinweise weiter unten in diesem Thema.  
   
- Vertrag **::***Contract_name*  
+ Vertrag **:: *** Contract_name*  
  Gibt den Vertrag an, für den die Berechtigung aufgehoben wird. Der bereichsqualifizierer **::** ist erforderlich.  
   
- NACHRICHTENTYP **::***Message_type_name*  
+ NACHRICHTENTYP **:: *** Message_type_name*  
  Gibt den Nachrichtentyp an, für den die Berechtigung aufgehoben wird. Der bereichsqualifizierer **::** ist erforderlich.  
   
- REMOTE SERVICE BINDING **::***Remote_binding_name*  
+ REMOTE SERVICE BINDING **:: *** Remote_binding_name*  
  Gibt die Remotedienstbindung an, für die die Berechtigung aufgehoben wird. Der bereichsqualifizierer **::** ist erforderlich.  
   
- ROUTE **::***Route_name*  
+ ROUTE **::***route_name*  
  Gibt die Route an, für die die Berechtigung aufgehoben wird. Der bereichsqualifizierer **::** ist erforderlich.  
   
- Dienst **::***Message_type_name*  
+ Dienst **:: *** Message_type_name*  
  Gibt den Dienst an, für den die Berechtigung aufgehoben wird. Der bereichsqualifizierer **::** ist erforderlich.  
   
  *database_principal*  
@@ -107,7 +107,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!CAUTION]  
 >  Durch ein kaskadiertes Aufheben einer Berechtigung, die mit GRANT OPTION erteilt wurde, werden sowohl GRANT als auch DENY für diese Berechtigung aufgehoben.  
   
- AS *Revoking_principal*  
+ AS *revoking_principal*  
  Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Aufheben der Berechtigung ableitet. *Revoking_principal* kann eines der folgenden sein:  
   
 -   Datenbankbenutzer  

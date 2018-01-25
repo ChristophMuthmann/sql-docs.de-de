@@ -16,13 +16,13 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 caps.latest.revision: "8"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 66e897341fa06f2666969677f7a3a2305b52cf46
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4ea7244857dcd25b1e36f3420811ef035d4ee3b2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transaktionen (SQL Datawarehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  Wenn AUTOCOMMIT auf ON festgelegt ist, wirkt sich mit einem anderen Satz AUTOCOMMIT ON-Anweisung nicht. Ebenso, wenn AUTOCOMMIT auf OFF festgelegt ist, hat eine andere SET AUTOCOMMIT OFF ausgeführt keine Auswirkungen.  
   
- SET IMPLICIT_TRANSACTIONS {ON | **OFF** }  
+ SET IMPLICIT_TRANSACTIONS { ON | **OFF** }  
  Diese Funktion schaltet die gleichen Modi als AUTOCOMMIT festgelegt. Wenn auf ON gesetzt SET IMPLICIT_TRANSACTIONS die Verbindung in den impliziten Transaktionsmodus. Bei OFF wird die Verbindung zurück in den Autocommitmodus.  Weitere Informationen finden Sie unter [SET IMPLICIT_TRANSACTIONS &#40; Transact-SQL &#41; ](../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -150,7 +150,7 @@ COMMIT;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SET IMPLICIT_TRANSACTIONS &#40; Transact-SQL &#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
+ [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   

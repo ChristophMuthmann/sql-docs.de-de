@@ -25,13 +25,13 @@ ms.assetid: f1054809-04f2-4995-9ebd-cb67098e6708
 caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7a62af817e30c1181beada08b9327b05a24a9ad0
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 017a2033b1a57b3e069caa9f5c8de1348e5a6ed6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="not-equal-to-transact-sql---exclamation"></a>Nicht gleich (Transact SQL) - Ausrufezeichen
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

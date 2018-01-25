@@ -24,15 +24,15 @@ helpviewer_keywords:
 - OLE DB, data types
 ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b61798867cbee7dafa81501e01455fcd4225a51
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 721f1891aefadf29070fdaf714c449bebb806ee7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Datentypzuordnung zu Rowsets und Parametern
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/08/2018
   
  Wenn **Sql_variant** Daten als DBTYPE_VARIANT abgerufen werden, wird es in einer VARIANT-Struktur im Puffer abgelegt. Die Untertypen in der VARIANT-Struktur können nicht definierten Untertypen zugeordnet, aber die **Sql_variant** -Datentyp. Die **Sql_variant** Daten müssen dann als DBTYPE_SQLVARIANT abgerufen werden, in der Reihenfolge für alle Untertypen zugeordnet.  
   
-## <a name="dbtypesqlvariant-data-type"></a>DBTYPE_SQLVARIANT-Datentyp  
+## <a name="dbtypesqlvariant-data-type"></a>DBTYPE_SQLVARIANT Data Type  
  Zur Unterstützung der **Sql_variant** -Datentyp, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt einen anbieterspezifischen Datentyp Namen DBTYPE_SQLVARIANT zur Verfügung. Wenn **Sql_variant** Daten als DBTYPE_SQLVARIANT abgerufen werden, erfolgt die Speicherung in einer anbieterspezifischen SSVARIANT-Struktur. Die SSVARIANT-Struktur enthält alle Untertypen, die den Untertypen des der **Sql_variant** -Datentyp.  
   
  Die Sitzungseigenschaft SSPROP_ALLOWNATIVEVARIANT muss außerdem auf TRUE festgelegt werden.  

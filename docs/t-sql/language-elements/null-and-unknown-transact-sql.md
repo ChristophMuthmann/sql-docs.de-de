@@ -16,13 +16,13 @@ ms.assetid: 9d491846-4730-4740-a680-77c69fae4a58
 caps.latest.revision: "5"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a581045af3d5ed73e9cf9736c60588d87733369
-ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.openlocfilehash: c26004fdfa5f2607235ffe7dddb7826a77f38b31
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULL und UNKNOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -58,9 +58,9 @@ ms.lasthandoff: 01/03/2018
 |FALSE|UNKNOWN|UNKNOWN|  
   
 ## <a name="see-also"></a>Siehe auch  
- [UND &#40; Transact-SQL &#41;](../../t-sql/language-elements/and-transact-sql.md)   
- [ODER &#40; Transact-SQL &#41;](../../t-sql/language-elements/or-transact-sql.md)   
- [NICHT &#40; Transact-SQL &#41;](../../t-sql/language-elements/not-transact-sql.md)   
- [IST NULL &#40; Transact-SQL &#41;](../../t-sql/queries/is-null-transact-sql.md)  
+ [AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md)   
+ [OR &#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md)   
+ [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md)   
+ [IS NULL &#40;Transact-SQL&#41;](../../t-sql/queries/is-null-transact-sql.md)  
   
   

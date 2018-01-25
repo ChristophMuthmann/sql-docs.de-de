@@ -14,13 +14,13 @@ ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
 caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9455eef75df9e802d797b67da0454d36e11def2d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 265f66c0dfba28e1f3c35fa560098b3a2d13cb0c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Leistung für R Services – Data-Optimierung
 
@@ -136,7 +136,7 @@ Dieser Abschnitt enthält verschiedene Tipps und Ressourcen, die für "revoscale
 
 Viele "revoscaler"-Algorithmus unterstützen die Parameter, um zu steuern, wie das trainierte Modell generiert wird. Während die Genauigkeit und Richtigkeit des Modells ist wichtig, könnte die Leistung des Algorithmus gleichermaßen wichtig sein. Um das richtige Gleichgewicht zwischen Genauigkeit und Zeit für das Training zu erhalten, können Sie Parameter für den erhöhen die Geschwindigkeit der Berechnung und in vielen Fällen verbessern, ohne zu reduzieren, die Genauigkeit oder die Korrektheit ändern.
 
-+ [der rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
++ [rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
 
     `rxDTree`unterstützt die `maxDepth` -Parameter, der die Tiefe der Entscheidungsstruktur steuert. Als `maxDepth` wird erhöht, Leistung kann beeinträchtigt werden, es ist daher wichtig, um die Vorteile der Erhöhen der Tiefe im Vergleich zu beeinträchtigt die Leistung zu analysieren.
 

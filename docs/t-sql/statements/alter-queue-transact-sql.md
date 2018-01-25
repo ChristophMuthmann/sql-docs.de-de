@@ -1,5 +1,5 @@
 ---
-title: ALTER-QUEUE (Transact-SQL) | Microsoft Docs
+title: ALTER QUEUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2016
 ms.prod: sql-non-specified
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - activation stored procedures [Service Broker]
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2774da9a0a75c4645a4bd64237ec99a7cf92d771
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7f97bd0a341ecc5e960c94c4c8bdabe30b572fd9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ WITH
  *Schema_name* (Objekt)  
  Der Name des Schemas, zu dem die neue Warteschlange gehört. Wenn kein *Schema_name* angegeben wird, wird standardmäßig das Standardschema für den aktuellen Benutzer.  
   
- *Warteschlangenname*  
+ *queue_name*  
  Der Name der zu ändernden Warteschlange.  
   
  STATUS (Warteschlange)  
@@ -114,7 +114,7 @@ WITH
  STATUS (Aktivierung)  
  Gibt an, ob die gespeicherten Prozedur von der Warteschlange aktiviert wird. Ist STATUS = ON, startet die Warteschlange die mit PROCEDURE_NAME angegebene gespeicherte Prozedur, wenn die Anzahl der zurzeit ausgeführten Prozeduren kleiner als MAX_QUEUE_READERS ist und wenn Nachrichten schneller in der Warteschlange ankommen, als die gespeicherten Prozeduren Nachrichten empfangen. Ist STATUS = OFF, aktiviert die Warteschlange die gespeicherte Prozedur nicht.  
   
- REBUILD [WITH \<Queue_rebuild_options >]  
+ REBUILD [ WITH \<queue_rebuild_options> ]  
  **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Erstellt alle Indizes für die interne Warteschlange-Tabelle neu. Verwenden Sie diese Funktion, wenn Sie Fragmentierungsprobleme aufgrund von Überlastung auftreten. MAXDOP ist die einzige unterstützte Warteschlange rebuild-Option. Neuerstellung der Fall ist immer ein Offlinevorgang.  
@@ -133,7 +133,7 @@ Im Gegensatz zu REORGANIZE auf Benutzertabellen REORGANIZE in einer Warteschlang
   
  Verschiebt die Warteschlange für die interne Tabelle (mit seiner Indizes) zu einer vom Benutzer angegebenen Dateigruppe.  Die neue Dateigruppe darf nicht schreibgeschützt sein.  
   
- Procedure_name = \<Prozedur >  
+ PROCEDURE_NAME = \<procedure>  
  Gibt den Namen der gespeicherten Prozedur an, die aktiviert werden soll, wenn die Warteschlange zu verarbeitende Nachrichten enthält. Dieser Wert muss ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner sein.  
   
  *Database_name* (Vorgehensweise)  
@@ -145,7 +145,7 @@ Im Gegensatz zu REORGANIZE auf Benutzertabellen REORGANIZE in einer Warteschlang
  *stored_procedure_name*  
  Der Name der gespeicherten Prozedur.  
   
- MAX_QUEUE_READERS =*Max_reader*  
+ MAX_QUEUE_READERS =*max_reader*  
  Gibt die maximale Anzahl von Instanzen der gespeicherten Aktivierungsprozedur, die die Warteschlange gleichzeitig gestartet wird. Der Wert der *Max_readers* muss eine Zahl zwischen 0 und 32767 sein.  
   
  EXECUTE AS  
@@ -262,7 +262,7 @@ ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]
   
 ## <a name="see-also"></a>Siehe auch  
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
- [DROP QUEUE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
+ [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
   

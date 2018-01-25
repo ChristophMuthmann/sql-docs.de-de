@@ -15,13 +15,13 @@ ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 caps.latest.revision: "9"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b1c445662f29241d8a2a1a547ef498f7491590b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1a44f5f46a60959b38b3e8121847e0c80c1ba82b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>Erstellen Sie REMOTE Tabelle AS SELECT (Parallel Datawarehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -61,7 +61,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
   
  Die Remotetabelle wird als Heap erstellt. Check-Einschränkungen oder Trigger keine. Die Sortierung der Remotetabellenspalten wird die Sortierung der Spalten der Quelltabelle identisch. Dies gilt für Spalten vom Typ **Char**, **Nchar**, **Varchar**, und **Nvarchar**.  
   
- *Verbindungszeichenfolge*  
+ *connection_string*  
  Eine Zeichenfolge, die angibt, die `Data Source`, `User ID`, und `Password` Parameter für das Herstellen einer Verbindung mit remote-Servers und der Datenbank.  
   
  Die Verbindungszeichenfolge ist eine durch Semikolons getrennte Liste von Schlüssel-Wert-Paaren. Schlüsselwörter wird die Groß-und Kleinschreibung nicht berücksichtigt. Leerzeichen zwischen den Schlüssel-Wert-Paaren werden ignoriert. Allerdings können Werte Groß-/Kleinschreibung beachtet, je nach Datenquelle sein.  
@@ -78,10 +78,10 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
 > [!NOTE]  
 >  Es wird empfohlen, über die IP-Adresse eine Verbindung mit einem Remoteserver. Abhängig von Ihrer Netzwerkkonfiguration möglicherweise Herstellen einer Verbindung mit dem Computernamen erfordern weitere Schritte zum einen nicht-Appliance DNS-Server zu verwenden, um mit dem richtigen Server den Namen aufzulösen. Dieser Schritt ist nicht erforderlich, bei der Verbindung mit einer IP-Adresse. Weitere Informationen finden Sie unter "Verwenden eine DNS-Weiterleitung Resolve-nicht-Appliance DNS-Namen (Analytics Platform System)" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- *Benutzername*  
+ *user_name*  
  Ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldename für die Authentifizierung. Maximale Anzahl von Zeichen ist 128.  
   
- *Kennwort*  
+ *password*  
  Das Anmeldekennwort. Maximale Anzahl von Zeichen ist 128.  
   
  *batch_size*  

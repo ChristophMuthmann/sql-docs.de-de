@@ -13,15 +13,15 @@ ms.assetid: 341e80f5-3b59-4122-bbaa-969d7904297d
 caps.latest.revision: "23"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 46912d3c96c55f07d54cc319f3d397e93e2d4da2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bc3d80c01bc16d6d89bbf3e97ddf88089e9379fd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="microsoft-machine-learning-services"></a>Microsoft Machine Learning-Dienste
+# <a name="microsoft-machine-learning-services"></a>Microsoft Machine Learning Services
 
 Das Ziel von Microsoft Machine Learning-Services ist eine erweiterbare, skalierbare Plattform für das Integrieren von Machine Learning-Aufgaben und Tools in die Anwendungen, die Machine Learning-Dienste zu nutzen bereitstellen. Die Plattform muss die Anforderungen aller Benutzer Entwicklungs- und das Data Analytics-Prozess Beteiligten aus Datenanalysten, Architekten und Datenbankadministratoren dienen.
 
@@ -62,7 +62,7 @@ Bei der Installation von Machine Learning für SQL Server erhalten Sie eine Vert
 Finden Sie hier, um zu beginnen:
 
 + [SQL Server R Services](sql-server-r-services.md)
-+ [SQL Server-Python-Dienste](../python/sql-server-python-services.md)
++ [SQL Server Python Services](../python/sql-server-python-services.md)
 + [Machine Learning-Lernprogramme](../tutorials/machine-learning-services-tutorials.md)
 
 > [!NOTE]

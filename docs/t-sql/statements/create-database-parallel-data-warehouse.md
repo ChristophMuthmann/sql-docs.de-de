@@ -15,15 +15,15 @@ ms.assetid: 40cacde4-ac72-45f7-9564-d76e2b4a741a
 caps.latest.revision: "13"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 622dd3433ad5cb900dbbcb23777add948ea5474b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4e9ff76a4d260604a93f59baa3b61f5c37b4952f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-database-parallel-data-warehouse"></a>Erstellen der Datenbank (Parallel Datawarehouse)
+# <a name="create-database-parallel-data-warehouse"></a>CREATE DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Erstellt eine neue Datenbank auf einem [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Appliance. Verwenden Sie diese Anweisung, um alle einer Anwendungsdatenbank zugeordneten Dateien erstellen und die maximale Größe und die automatische Vergrößerung-Optionen für die Datenbanktabellen und das Transaktionsprotokoll festzulegen.  
@@ -55,21 +55,21 @@ WITH (
   
  Automatische VERGRÖßERUNG ist entweder für alle Größen ON oder OFF für alle Größen. Ist beispielsweise nicht möglich ist, legen Sie die automatische VERGRÖßERUNG ON *Log_size*, aber nicht für *Replicated_size*.  
   
- *Replicated_size* [GB]  
+ *replicated_size* [ GB ]  
  Eine positive Zahl. Legt die Größe (in Gigabyte für ganze Zahl oder einen Dezimalwert) für den gesamten Speicherplatz zugeordnet ist, replizierte Tabellen und die entsprechenden Daten *auf jedem Knoten Compute*. Für Minimum und Maximum *Replicated_size* Anforderungen, finden Sie unter "Minimale und Maximalwerte" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
  Wenn automatische VERGRÖßERUNG aktiviert ist, werden replizierte Tabellen zulässig, die über diesen Grenzwert hinaus vergrößert.  
   
  Wenn automatische VERGRÖßERUNG auf OFF festgelegt ist, ein Fehler zurückgegeben, wenn ein Benutzer versucht, eine neue replizierte Tabelle erstellen, repliziert einfügen, Daten in einem vorhandenen repliziert-Tabelle ab, oder Aktualisieren einer vorhandenen, Tabelle in einer Weise, die die Größe erhöhen würde *Replicated_size*.  
   
- *Distributed_size* [GB]  
+ *distributed_size* [ GB ]  
  Eine positive Zahl. Die Größe in GB ganze Zahl oder einen Dezimalwert für den gesamten Speicherplatz zugeordnet ist, verteilte Tabellen (und die entsprechenden Daten) *über die Appliance*. Für Minimum und Maximum *Distributed_size* Anforderungen, finden Sie unter "Minimale und Maximalwerte" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
  Wenn automatische VERGRÖßERUNG aktiviert ist, ist es verteilte Tabellen zulässig, die über diesen Grenzwert hinaus vergrößert.  
   
  Wenn die automatische VERGRÖßERUNG auf OFF festgelegt ist, wird ein Fehler zurückgegeben, wenn ein Benutzer versucht, eine neue verteilte Tabelle erstellen, Einfügen von Daten in einer vorhandenen distributed-Tabelle ab, oder aktualisieren eine vorhandene verteilte Tabelle in einer Weise, die die Größe erhöhen würde *Distributed_size* .  
   
- *Log_size* [GB]  
+ *log_size* [ GB ]  
  Eine positive Zahl. Die Größe (in Gigabyte für ganze Zahl oder einen Dezimalwert) für das Transaktionsprotokoll *über die Appliance*.  
   
  Für Minimum und Maximum *Log_size* Anforderungen, finden Sie unter "Minimale und Maximalwerte" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  

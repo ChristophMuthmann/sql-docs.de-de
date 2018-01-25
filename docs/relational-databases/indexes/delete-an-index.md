@@ -19,15 +19,15 @@ helpviewer_keywords:
 - index deletions [SQL Server]
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f076878916c402070c4a2808209b30f2bb7ae495
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: c48c04746b81c1b635630fda279e6519edd1da53
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-an-index"></a>Löschen eines Indexes
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ ms.lasthandoff: 12/21/2017
   
 7.  Klicken Sie auf **Schließen**.  
   
-8.  Klicken Sie im Menü **Datei** auf **Save***Tabellenname*.  
+8.  Klicken Sie im Menü **Datei** auf **Save***table_name* (Tabellennamen speichern).  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   

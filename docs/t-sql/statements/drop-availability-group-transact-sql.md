@@ -24,13 +24,13 @@ ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
 caps.latest.revision: "44"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d097f90cfabc250921c3212ed0a89e85362c0f6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 82fdb4b104a0be0aa0d6469ccdd23f361f55618b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-availability-group-transact-sql"></a>DROP AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ DROP AVAILABILITY GROUP group_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Gruppenname*  
+ *group_name*  
  Gibt den Namen der Verfügbarkeitsgruppe an, die gelöscht werden soll.  
   
 ## <a name="limitations-and-recommendations"></a>Einschränkungen und Empfehlungen  
@@ -87,7 +87,7 @@ DROP AVAILABILITY GROUP AccountsAG;
   
 ## <a name="see-also"></a>Siehe auch  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [Entfernen einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
+ [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [Entfernen einer Verfügbarkeitsgruppe &#40; SQLServer &#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
   
   

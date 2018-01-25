@@ -16,13 +16,13 @@ ms.assetid: f5c79546-7f99-46a2-bf92-bd4ac8a50bf8
 caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ae2a19dce42a0124bbd6c1713e18f686a6c2d21
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 9498cdd80879f3b87cb43f75dcb839400256c9e6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ogc-static-geography-methods"></a>Statische geography-Methoden des OGC
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

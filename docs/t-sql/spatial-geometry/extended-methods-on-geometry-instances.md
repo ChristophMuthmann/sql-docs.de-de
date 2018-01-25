@@ -17,13 +17,13 @@ ms.assetid: 6472c5e1-d37f-4919-a903-177e90cbfe1b
 caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b42c1f66e92fa3b41588ea013ee9d6737b04432
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 4f8900e8643a8e24d5d3d9d463fdf654991ce974
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extended-methods-on-geometry-instances"></a>Erweiterte Methoden für geometry-Instanzen
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: Erstellen der Tabelle als Option (Azure SQL Datawarehouse) | Microsoft Docs
+title: CREATE TABLE AS SELECT (Azure SQL Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 10/07/2016
 ms.prod: 
@@ -16,15 +16,15 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 caps.latest.revision: "40"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 68cdce96ae6c8e6f98b3c6d922101c6f830ff208
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 429c2dc727d844c35943fa599e6fbcb911df04ac
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-table-as-select-azure-sql-data-warehouse"></a>Erstellen der Tabelle als Option (Azure SQL Datawarehouse)
+# <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Erstellen Sie Tabelle AS auswählen (CTAS) ist eine der wichtigsten T-SQL-Funktionen verfügbar. Es ist ein vollständig parallelisierte Vorgang, der eine neue Tabelle basierend auf der Ausgabe von einer SELECT-Anweisung erstellt. CTAS ist die schnellste und einfachste Möglichkeit, eine Kopie einer Tabelle zu erstellen.   
@@ -111,10 +111,10 @@ Einzelheiten finden Sie in der [Tabelle Partitionsoptionen](https://msdn.microso
 ### <a name="select-options"></a>Wählen Sie Optionen
 Die select-Anweisung ist der wesentliche Unterschied zwischen CTAS und CREATE TABLE.  
 
- `WITH`*Common_table_expression*  
+ `WITH` *common_table_expression*  
  Gibt ein temporäres benanntes Resultset an, das als allgemeiner Tabellenausdruck (CTE, Common Table Expression) bekannt ist. Weitere Informationen finden Sie unter [WITH Common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- `SELECT`*Select_criteria*  
+ `SELECT` *select_criteria*  
  Füllt die neue Tabelle mit den Ergebnissen einer SELECT-Anweisung. *Select_criteria* ist der Hauptteil der SELECT-Anweisung, der bestimmt, welche Daten in die neue Tabelle kopieren. Informationen zur SELECT-Anweisungen finden Sie unter [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
 <a name="permissions-bk"></a>  
@@ -831,11 +831,11 @@ Sie können daher sehen, dass typkonsistenz und Verwalten von NULL-Zulässigkeit
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
- [Erstellen Sie die externe Tabelle AS SELECT &#40; Transact-SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
+ [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
  [Erstellen von Tabellen &#40; Azure SQL Datawarehouse &#41; ](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)   
- [DROP EXTERNAL TABLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
+ [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [ALTER EXTERNAL TABLE &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  
+ [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  
   
   
 

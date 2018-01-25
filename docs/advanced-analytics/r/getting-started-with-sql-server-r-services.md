@@ -14,13 +14,13 @@ ms.assetid: 5b28a663-effe-41f6-9bda-eda95f0c6943
 caps.latest.revision: "34"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 856d3edb24dfad2177b4c48d30124c41c22172a8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8a6e15767282d347fc92b7decf2963d85827cf6f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="getting-started-with-sql-server-machine-learning"></a>Erste Schritte mit SQLServer Machine Learning
 
@@ -82,7 +82,7 @@ Bisher mussten Datenanalysten verwenden R Probleme mit der Leistung und Skalieru
 
 + **"Revoscaler"**.: Diese R-Paket enthält die Implementierung einiger der beliebtesten R-Funktionen neu gestaltet, um die Parallelität und Skalierung bereitzustellen. Das Paket enthält auch Funktionen, die die Leistung und Skalierung weiter erhöhen, indem Berechnungen mittels Push auf den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Computer übertragen werden, der in der Regel über wesentlich mehr Arbeitsspeicher und Rechenleistung verfügt.
 
-+ **Revoscalepy**. Diese Python-Clientbibliothek, neue und nur in SQL Server 2017 CTP 2.0 verfügbar implementiert die am häufigsten verwendeten Funktionen im "revoscaler", z. B. remote rechenkontexte und viele Algorithmen, die unterstützt verteilte Verarbeitung.
++ **revoscalepy**. Diese Python-Clientbibliothek, neue und nur in SQL Server 2017 CTP 2.0 verfügbar implementiert die am häufigsten verwendeten Funktionen im "revoscaler", z. B. remote rechenkontexte und viele Algorithmen, die unterstützt verteilte Verarbeitung.
 
 + Wählen Sie die beste Sprache für den Task aus.  R ist am besten für statistische Berechnungen, die schwierig zu implementieren, verwenden SQL sind. Für setbasierte Vorgänge für Daten, nutzen die Leistungsfähigkeit des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um optimale Leistung zu erzielen. Verwenden Sie das in-Memory-Datenbankmodul für sehr schnelle Berechnungen über Spalten.
 

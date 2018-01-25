@@ -25,15 +25,15 @@ helpviewer_keywords:
 - index defragmenting [SQL Server]
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f2444d6510e680d2ca3ab9938df92b839a7d04ac
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7e601ebb9a795445e4b49e0f60e134923edba104
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,16 +60,16 @@ DBCC INDEXDEFRAG
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Database_name* | *Database_id* | 0  
+ *database_name* | *database_id* | 0  
  Die Datenbank, die den zu defragmentierenden Index enthält. Wird 0 angegeben, wird die aktuelle Datenbank verwendet. Datenbanknamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md).  
   
  *TABLE_NAME* | *Table_id* | *View_name* | *View_id*  
  Die Tabelle oder Sicht, die den zu defragmentierenden Index enthält. Tabellen- und Sichtnamen müssen den Regeln für Bezeichner entsprechen.  
   
- *Index_name* | *Index_id*  
+ *index_name* | *index_id*  
  Der Name oder die ID für den Index, der defragmentiert werden soll. Falls nicht angegeben, werden von der Anweisung alle Indizes der angegebenen Tabelle oder Sicht defragmentiert. Indexnamen müssen den Regeln für Bezeichner entsprechen.  
   
- *Partitionsnummer* | 0  
+ *partition_number* | 0  
  Die Partitionsnummer des Indexes, der defragmentiert werden soll. Falls nichts oder 0 angegeben ist, werden von der Anweisung alle Partitionen im angegebenen Index defragmentiert.  
   
  WITH NO_INFOMSGS  

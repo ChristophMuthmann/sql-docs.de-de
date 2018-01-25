@@ -14,12 +14,12 @@ ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
 caps.latest.revision: "12"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 6777a47d9f2078b662990c2597f84cc41222de63
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: a5277d975380f135003bb7f8a11eec8641374f07
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>Bereitstellen eines virtuellen Computers für Machine Learning in Azure
 
@@ -73,7 +73,7 @@ Eine Windows-basierte virtuelle Maschine für SQL Server 2017 Enterprise Edition
 Ankündigungen zu neuen Data Science virtuellen Maschinen überwachen Sie diese Blog-Websites:
 
 + [Cortana Intelligence und Machine Learning](https://blogs.technet.microsoft.com/machinelearning/)
-+ [Data Platform-Insider](https://blogs.technet.microsoft.com/dataplatforminsider/)
++ [Data Platform Insider](https://blogs.technet.microsoft.com/dataplatforminsider/)
 
 ### <a name="adding-sql-server-to-an-existing-virtual-machine"></a>Hinzufügen von SQL Server zu einer vorhandenen virtuellen Maschine
 
@@ -144,7 +144,7 @@ Derzeit sind die folgenden virtuellen Maschinen für maschinelles Lernen mit SQL
 | Data Science Virtual Machine - Windows 2012|Enthält die gängigen Tools für Data Science, einschließlich Microsoft R Server Developer Edition, SQL Server 2016 Developer Edition, Python Anaconda-Verteilung, Julia Pro Developer Edition und Jupyter Notebooks für r| 
 | Data Science Virtual Machine - Windows-2016|Enthält SQL Server 2016 Developer Edition mit Unterstützung für R-Analysen in der Datenbank an.|
 |**SQL Server 2017**| ***   |
-|SQL Server 2017 Enterprise, WindowsServer 2016| Machine Learning-Dienste mit Unterstützung für Python und R-Sprache.|
+|SQL Server 2017 Enterprise Windows Server 2016| Machine Learning-Dienste mit Unterstützung für Python und R-Sprache.|
 |BYOL SQL Server 2017 Enterprise, WindowsServer 2016|Machine Learning-Dienste mit Unterstützung für Python und R-Sprache.|
 | Freien SQL Server-Lizenz: Entwickler SQL Server 2017 unter WindowsServer|Machine Learning-Dienste mit Unterstützung für Python und R-Sprache.|
 | **Andere**| *** |

@@ -32,13 +32,13 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 caps.latest.revision: "76"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fd51d2a902337b232f5bf9497f5ebd0bbcac9199
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: ccf03c6b2d3d7798f3bad65b340657bf2b21b751
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -123,7 +123,7 @@ Gibt den Namen für den neuen Index.
   
 Wenn die Tabelle bereits einen gruppierten columnstore-Index verfügt, können Sie den gleichen Namen wie des vorhandenen Indexes angeben, oder verwenden Sie die DROP EXISTING Option, um einen neuen Namen angeben.  
   
-ON [*Database_name*. [*Schema_name* ]. | *Schema_name* . ] *Table_name*  
+ON [*Database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Gibt den ein-, zwei- oder dreiteiligen Namen der Tabelle an, die als gruppierter Columnstore-Index gespeichert werden soll. Wenn die Tabelle ein Heap ist oder gruppierter Index der Tabelle von Rowstore in einen Columnstore konvertiert. Wenn die Tabelle bereits einen Columnstore ist, wird diese Anweisung den gruppierten columnstore-Index neu erstellt.  
   
 mit  
@@ -132,7 +132,7 @@ DROP_EXISTING = [AUS] | ON
 
    Die Standardeinstellung, DROP_EXISTING = OFF erwartet, dass der Indexname ist identisch mit den vorhandenen Namen. Ein Fehler auftritt, wird der angegebene Indexname bereits vorhanden ist.  
   
-MAXDOP = *Max_degree_of_parallelism*  
+MAXDOP = *max_degree_of_parallelism*  
    Überschreibt die Serverkonfiguration für den maximalen Grad an Parallelität für die Dauer des Indexvorgangs. Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
   
    *Max_degree_of_parallelism* Werte sind möglich:  
@@ -163,7 +163,7 @@ COLUMNSTORE_ARCHIVE
 ON  
    Mit den ON-Optionen können Sie Optionen für die Datenspeicherung, wie ein Partitionsschema, eine bestimmte Dateigruppe oder die Standarddateigruppe, angeben. Wenn die Option nicht angegeben ist, verwendet der Index die einstellungspartition oder dateigruppeneinstellungen-Einstellungen der vorhandenen Tabelle.  
   
-   *Partition_scheme_name* **(** *Column_name* **)**  
+   *partition_scheme_name* **(** *column_name* **)**  
    Gibt das Partitionsschema für die Tabelle an. Das Partitionsschema muss in der Datenbank bereits vorhanden sein. Um das Partitionsschema zu erstellen, finden Sie unter [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md).  
  
    *Column_name* gibt die Spalte für die ein partitionierter Index partitioniert ist. Diese Spalte muss den Datentyp, Länge, übereinstimmen und der Genauigkeit des Arguments der Partition, *Partition_scheme_name* verwendet.  
@@ -171,7 +171,7 @@ ON
    *filegroup_name*  
    Gibt die Dateigruppe zum Speichern des gruppierten Columnstore-Indexes an. Wenn kein Speicherort angegeben und die Tabelle nicht partitioniert ist, verwendet der Index die gleiche Dateigruppe wie die zugrunde liegende Tabelle oder Sicht. Die Dateigruppe muss bereits vorhanden sein.  
 
-   **"**Standard**"**  
+   **"**default**"**  
    Um den Index in der Standarddateigruppe erstellen, verwenden Sie "Default" oder [Default].  
   
    Wenn "default" angegeben wird, muss die Option QUOTED_IDENTIFIER für die aktuelle Sitzung auf ON festgelegt sein. QUOTED_IDENTIFIER hat standardmäßig den Wert ON. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
@@ -186,7 +186,7 @@ Erstellen Sie einen nicht gruppierten in-Memory-columnstore-Index für eine Rows
     Gibt die zu speichernden Spalten an. Ein nicht gruppierter columnstore-Index ist auf 1024 Spalten beschränkt.  
    Jede Spalte muss ein unterstützter Datentyp für columnstore-Indizes sein. Finden Sie unter [Einschränkungen](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) eine Liste der unterstützten Datentypen.  
 
-ON [*Database_name*. [*Schema_name* ]. | *Schema_name* . ] *Table_name*  
+ON [*Database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Gibt den ein-, zwei- oder dreiteiligen Namen der Tabelle, die den Index enthält.  
 
 MIT DROP_EXISTING = [DEAKTIVIERT] | ON  
@@ -194,7 +194,7 @@ MIT DROP_EXISTING = [DEAKTIVIERT] | ON
   
    DROP_EXISTING = OFF, wenn der angegebene Indexname bereits vorhanden ist, wird ein Fehler angezeigt. Der Indextyp kann nicht mithilfe von DROP_EXISTING geändert werden. In abwärtskompatibler Syntax ist WITH DROP_EXISTING gleichwertig mit WITH DROP_EXISTING = ON.  
 
-MAXDOP = *Max_degree_of_parallelism*  
+MAXDOP = *max_degree_of_parallelism*  
    Überschreibt die [Konfigurieren der max Degree of Parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) Konfigurationsoption für die Dauer des Indexvorgangs. Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
   
    *Max_degree_of_parallelism* Werte sind möglich:  
@@ -245,7 +245,7 @@ WOBEI \<Filter_expression > [AND \<Filter_expression >] gilt für: [!INCLUDE[ssS
 ON  
    Diese Optionen geben die Dateigruppen, die auf denen der Index erstellt wird.  
   
-*Partition_scheme_name* **(** *Column_name* **)**  
+*partition_scheme_name* **(** *column_name* **)**  
    Gibt das Partitionsschema, das definiert, die Dateigruppen, denen die Partitionen eines partitionierten Index zugeordnet ist. Das Partitionsschema muss in der Datenbank vorhanden, durch das Ausführen [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). 
    *Column_name* gibt die Spalte für die ein partitionierter Index partitioniert ist. Diese Spalte muss den Datentyp, Länge, übereinstimmen und der Genauigkeit des Arguments der Partition, *Partition_scheme_name* verwendet. *Column_name* ist nicht auf die Spalten in der Indexdefinition beschränkt. Wenn Sie einen columnstore-Index partitionieren, fügt [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Partitionierungsspalte als Spalte des Index hinzu, wenn sie noch nicht angegeben ist.  
    Wenn *Partition_scheme_name* oder *Dateigruppe* nicht angegeben wird und die Tabelle partitioniert ist, wird der Index in demselben Partitionsschema, mit der gleichen Partitionsspalte, wie die zugrunde liegende Tabelle platziert.  
@@ -255,7 +255,7 @@ ON
 *filegroup_name*  
    Gibt den Namen einer Dateigruppe an, für die der Index erstellt werden soll. Wenn *Filegroup_name* nicht angegeben wird und die Tabelle nicht partitioniert ist, der Index verwendet die gleiche Dateigruppe wie die zugrunde liegende Tabelle. Die Dateigruppe muss bereits vorhanden sein.  
  
-**"**Standard**"**  
+**"**default**"**  
 Erstellt den angegebenen Index für die Standarddateigruppe.  
   
 Die Benennung default ist in diesem Kontext kein Schlüsselwort. Es ist ein Bezeichner für die Standarddateigruppe und muss begrenzt sein, wie in ON **"**Standard**"** oder ON **[**Standard**]**. Wenn "default" angegeben wird, muss die Option QUOTED_IDENTIFIER für die aktuelle Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
@@ -275,7 +275,7 @@ Die SET-Optionen in der Spalte Erforderlicher Wert sind immer dann erforderlich,
 - Ein INSERT-, UPDATE-, DELETE- oder MERGE-Vorgang ändert die Daten in einem gefilterten Index.  
 - Der gefilterte Index wird vom Abfrageoptimierer verwendet, um den Abfrageplan zu erstellen.  
   
-    |SET-Optionen|Erforderlicher Wert|Standardserverwert|Default<br /><br /> OLE DB- und ODBC-Wert|Default<br /><br /> DB-Library-Wert|  
+    |SET-Optionen|Erforderlicher Wert|Standardserverwert|Standardwert<br /><br /> OLE DB- und ODBC-Wert|Standardwert<br /><br /> DB-Library-Wert|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -300,30 +300,30 @@ Die SET-Optionen in der Spalte Erforderlicher Wert sind immer dann erforderlich,
 ##  <a name="LimitRest"></a> Einschränkungen  
 
 **Jede Spalte in einem columnstore-Index muss eines der folgenden allgemeinen Geschäftsdatentypen sein:** 
--   "DateTimeOffset" [(  *n*  )]  
--   datetime2 [(  *n*  )]  
--   DATETIME  
+-   datetimeoffset [ ( *n* ) ]  
+-   datetime2 [ ( *n* ) ]  
+-   datetime  
 -   smalldatetime  
--   date  
+-   Datum  
 -   Zeit [(  *n*  )]  
 -   "float" [(  *n*  )]  
 -   echte [(  *n*  )]  
 -   Dezimal [( *Genauigkeit* [ *, Skalierung* ] **)** ]
 -   numerische [( *Genauigkeit* [ *, Skalierung* ] **)** ]    
 -   money  
--   SMALLMONEY  
--   BIGINT  
--   ssNoversion  
+-   smallmoney  
+-   bigint  
+-   int  
 -   smallint  
--   TINYINT  
+-   tinyint  
 -   bit  
--   Nvarchar [(  *n*  )] 
+-   nvarchar [ ( *n* ) ] 
 -   nvarchar(max) (gilt für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und Azure SQL-Datenbank auf Premium Tarif, in nur gruppierte columnstore-Indizes)   
--   NCHAR [(  *n*  )]  
+-   nchar [ ( *n* ) ]  
 -   Varchar [(  *n*  )]  
 -   varchar(max) (gilt für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und Azure SQL-Datenbank auf Premium Tarif, in nur gruppierte columnstore-Indizes)
--   Char [(  *n*  )]  
--   Varbinary [(  *n*  )] 
+-   char [ ( *n* ) ]  
+-   varbinary [ ( *n* ) ] 
 -   Varbinary (Max) (gilt für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und Azure SQL-Datenbank auf Premium Tarif, in nur gruppierte columnstore-Indizes)
 -   Binary [(  *n*  )]  
 -   "uniqueidentifier" (gilt für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher)
