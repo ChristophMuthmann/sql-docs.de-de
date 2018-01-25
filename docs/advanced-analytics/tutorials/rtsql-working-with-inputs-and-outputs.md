@@ -17,13 +17,13 @@ ms.assetid: 75480e5c-f37f-45b9-a176-67e08e9a9daf
 caps.latest.revision: "7"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: d1eb9c2c1c3c1265adfa263681997853791d1c93
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1cc68eb62feb999dbce64b6ca29cfc3c40a56a4c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>Arbeiten mit Eingaben und Ausgaben (R in SQL-Schnellstart)
 
@@ -136,7 +136,7 @@ EXECUTE sp_execute_external_script
 **Ergebnisse**
 
 *Col1*
-*Hello*
+*hello*
 <code>   </code>
 *world*
 

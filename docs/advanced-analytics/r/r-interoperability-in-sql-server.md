@@ -14,13 +14,13 @@ ms.assetid: 0506b950-34b3-4f11-8e2f-d067a58015bd
 caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: bb129cfab6872e060100b416f1a269512c3289f5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e393db396c7d41f7eca7851fa10544d697eac5c8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="r-interoperability-in-sql-server"></a>R-Interoperabilität in SQL Server
 

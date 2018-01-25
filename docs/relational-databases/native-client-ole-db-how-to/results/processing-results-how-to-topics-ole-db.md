@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: OLE DB, processing results
 ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1f8d6780c49abd6c087b63aa89e37eb4af0baa8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9fa01beef8f63de415cf273e89797b4808a22d87
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Vorgehensweisen zum Verarbeiten von Ergebnissen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Abrufen von Zeilen aus einem Resultset &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Vorgehensweisen für OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+## <a name="see-also"></a>Siehe auch  
+ [OLE DB-Themen zur Vorgehensweise](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

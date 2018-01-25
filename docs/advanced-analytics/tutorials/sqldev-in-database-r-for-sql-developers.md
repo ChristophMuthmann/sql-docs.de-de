@@ -18,13 +18,13 @@ ms.assetid: c18cb249-2146-41b7-8821-3a20c5d7a690
 caps.latest.revision: "15"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 66b4fb863308a8f31994f3cf4a9c3d63faa5129e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e1bb6f2e586bb2a4b8b2a92c8099dc33603e8475
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>In-Database-R-Analyse für SQL-Entwickler (Lernprogramm)
 

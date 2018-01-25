@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: OLE DB, how-to topics
 ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cea73ca80f4f022543be4d1b6130439133e54bc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3a8332117457dd90f5eb6210ac03b55401ac8b3b
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="ole-db-how-to-topics"></a>Vorgehensweisen für OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Verwenden von verbesserten Datums- und Uhrzeitfunktionen &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)  
   
--   [FILESTREAM und OLE DB](../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)  
+-   [FileStream und OLE DB](../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)  
   
 -   [Senden von BLOB-Daten an SQLServer mit IROWSETFASTLOAD und ISEQUENTIALSTREAM &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Verwenden des Table-Valued Parameters &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Programmierung für SQL Server Native Client](../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

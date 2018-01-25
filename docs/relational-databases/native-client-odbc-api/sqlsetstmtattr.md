@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLSetStmtAttr function
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9a4ed6f218b77febc84719fb001ca072c9b80bc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7cbc51d2212db08a4b3cce5d07673e96f263445d
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -152,7 +152,7 @@ ms.lasthandoff: 01/08/2018
   
  Wenn ein Katalog anderen Funktion dann SQLTables, SQLColumns oder SQLPrimaryKeys aufgerufen wird, wenn SQL_SOPT_SS_NAME_SCOPE einen Wert enthält, die andere als SQL_SS_NAME_SCOPE_TABLE, wird SQL_ERROR zurückgegeben. Ein Diagnosedatensatz mit SQLSTATE HY010 und der Meldung "Fehler in der Funktionsreihenfolge (SQL_SOPT_SS_NAME_SCOPE ist nicht auf SQL_SS_NAME_SCOPE_TABLE festgelegt)" wird generiert.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [SQLGetStmtAttr-Funktion](http://go.microsoft.com/fwlink/?LinkId=59355)   
  [ODBC-API-Implementierungsdetails](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

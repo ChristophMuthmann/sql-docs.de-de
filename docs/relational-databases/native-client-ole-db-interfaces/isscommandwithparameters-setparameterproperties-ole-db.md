@@ -1,5 +1,5 @@
 ---
-title: 'Isscommandwithparameters:: SetParameterProperties (OLE DB) | Microsoft Docs'
+title: ISSCommandWithParameters::SetParameterProperties (OLE DB) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -16,15 +16,15 @@ apitype: COM
 helpviewer_keywords: SetParameterProperties method
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 458b169c41ebf5e209e178bd9db67b9e04503ff7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1047b2b8a6eeddf1d3f02609f3af0b079a30b2eb
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>'ISSCommandWithParameters::SetParameterProperties' (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,10 +42,10 @@ HRESULT SetParameterProperties(
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Einem*[in]  
+ *cParams*[in]  
  Die Anzahl der SSPARAMPROPS-Strukturen in den *RgParamProperties* Array. Wenn diese Anzahl Null ist, **isscommandwithparameters:: SetParameterProperties** werden alle Eigenschaften, die für alle Parameter im Befehl angegeben wurden möglicherweise gelöscht.  
   
- *RgParamProperties*[in]  
+ *rgParamProperties*[in]  
  Ein Array von SSPARAMPROPS-Strukturen, die festgelegt werden sollen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

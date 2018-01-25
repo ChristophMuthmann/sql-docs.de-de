@@ -14,13 +14,13 @@ ms.assetid: 9a7f7e43-b568-406c-9434-5a2ec64ec5f5
 caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e3f906e0c5290b6aa2cab375e4761390f84e718d
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: e76a42ead115c8ee4fa89599b192d722ecfbb2ee
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="determine-which-r-packages-are-installed-on-sql-server"></a>Bestimmen Sie, welche R-Pakete auf SQL Server installiert sind
 

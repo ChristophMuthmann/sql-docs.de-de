@@ -16,15 +16,15 @@ apitype: COM
 helpviewer_keywords: BCPControl method
 ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72969fb998915015b59e47c602df075921f46a0e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 123232c2815dcb2e7086a58e363a0003d747f80d
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ HRESULT BCPControl(
 |BCP_OPTION_KEEPNULLS|Bestimmt, ob leere Datenwerte in der Datei in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle in NULL-Werte konvertiert werden. Wenn die *iValue* -Argument auf "true" festgelegt ist werden leere Werte konvertiert werden, auf NULL in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle. In der Standardeinstellung werden leere Werte in einen Standardwert für die Spalte in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle konvertiert, sofern ein Standardwert angegeben ist.|  
 |BCP_OPTION_LAST|Die letzte zu kopierende Zeile. Standardmäßig werden alle Zeilen kopiert. Ein Wert kleiner als 1 setzt diese Option auf den Standardwert zurück.|  
 |BCP_OPTION_LASTEX|Gibt für BCP-OUT-Vorgänge die letzte Zeile der Datenbanktabelle an, die in die Datendatei kopiert werden soll.<br /><br /> Gibt für BCP-IN-Vorgänge die letzte Zeile der Datendatei an, die in die Datenbanktabelle kopiert werden soll.<br /><br /> Die *iValue* Parameter muss die Adresse einer 64-Bit-Ganzzahl mit Vorzeichen sein, die den Wert enthält. Der maximale Wert, der an BCPLASTEX übergeben werden kann, ist 2^63-1.|  
-|BCP_OPTION_MAXERRS|Die Anzahl von Fehlern, die zulässig sind, bevor der Massenkopiervorgang fehlschlägt. Der Standardwert ist 10. Ein Wert kleiner als 1 setzt diese Option auf den Standardwert zurück. Beim Massenkopieren sind maximal 65.535 Fehler zulässig. Wenn für diese Option größere Werte als 65.535 festgelegt werden, wird diese Option auf 65.535 festgelegt.|  
+|BCP_OPTION_MAXERRS|Die Anzahl von Fehlern, die zulässig sind, bevor der Massenkopiervorgang fehlschlägt. Der Standardwert lautet 10. Ein Wert kleiner als 1 setzt diese Option auf den Standardwert zurück. Beim Massenkopieren sind maximal 65.535 Fehler zulässig. Wenn für diese Option größere Werte als 65.535 festgelegt werden, wird diese Option auf 65.535 festgelegt.|  
 |BCP_OPTION_ROWCOUNT|Gibt die Anzahl von Zeilen zurück, auf die sich der aktuelle (oder letzte) BCP-Vorgang auswirkt.|  
 |BCP_OPTION_TEXTFILE|Die Datendatei ist keine Binärdatei, sondern eine Textdatei. BCP stellt fest, ob es sich bei der Textdatei um eine Unicode-Datei handelt, indem der Unicode-Bytemarker in den ersten beiden Bytes der Datendatei überprüft wird.|  
 |BCP_OPTION_UNICODEFILE|Wenn diese Option auf TRUE festgelegt wurde, bedeutet das, dass die Eingabedatei ein Unicode-Dateiformat ist.|  

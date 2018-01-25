@@ -14,13 +14,13 @@ ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
 caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 24d15dab6e2b7b038b862e8d72d0b2ca625bd3f6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ec10bd25b3709a578ea5dee6c109da69ff7d3327
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>Unbeaufsichtigte Installation von Python Machine Learning-Services (Datenbankintern)
 
@@ -29,7 +29,7 @@ Dieses Thema beschreibt, wie die Befehlszeilenargumente in 2017 von SQL Server-S
 > [!NOTE]
 > Vergessen Sie nicht die Befehlszeilenargumente für die Lizenzbedingungen, eine für Python und für SQL Server enthalten.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Bevor Sie mit der Installation beginnen, beachten Sie folgende Voraussetzungen:
 

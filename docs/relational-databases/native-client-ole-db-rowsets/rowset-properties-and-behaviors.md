@@ -18,15 +18,15 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0c53bff9e68fb0b95ce2876fd9521c0eb40c206
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fad9cc93c8faa050d537e687604a8934d3ee3386
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>Eigenschaften und Verhaltensweisen von Rowsets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,8 +75,8 @@ ms.lasthandoff: 01/08/2018
 |DBPROP_MAYWRITECOLUMN|Diese Rowseteigenschaft wird nicht durch implementiert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter. Beim Versuch, den Eigenschaftswert zu lesen oder zu schreiben, wird ein Fehler generiert.|  
 |DBPROP_MEMORYUSAGE|Diese Rowseteigenschaft wird nicht durch implementiert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter. Beim Versuch, den Eigenschaftswert zu lesen oder zu schreiben, wird ein Fehler generiert.|  
 |DBPROP_NOTIFICATIONGRANULARITY|Diese Rowseteigenschaft wird nicht durch implementiert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter. Beim Versuch, den Eigenschaftswert zu lesen oder zu schreiben, wird ein Fehler generiert.|  
-|DBPROP_NOTIFICATIONPHASES|R/w: schreibgeschützt<br /><br /> Standard: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124;  DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124;  DBPROPVAL_NP_DIDEVENT<br /><br /> Beschreibung: Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt alle benachrichtigungsphasen.|  
-|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|R/w: schreibgeschützt<br /><br /> Standard: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> Beschreibung: Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieters können abgebrochen werden vor dem Versuch, eine Änderung des Rowsets vorzunehmen angegeben. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter keinen phasenabbruch, nachdem der Versuch abgeschlossen wurde.|  
+|DBPROP_NOTIFICATIONPHASES|R/w: schreibgeschützt<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124;  DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124;  DBPROPVAL_NP_DIDEVENT<br /><br /> Beschreibung: Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt alle benachrichtigungsphasen.|  
+|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|R/w: schreibgeschützt<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> Beschreibung: Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieters können abgebrochen werden vor dem Versuch, eine Änderung des Rowsets vorzunehmen angegeben. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter keinen phasenabbruch, nachdem der Versuch abgeschlossen wurde.|  
 |DBPROP_ORDEREDBOOKMARKS|Diese Rowseteigenschaft wird nicht durch implementiert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter. Beim Versuch, den Eigenschaftswert zu lesen oder zu schreiben, wird ein Fehler generiert.|  
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|R/w: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Die Einstellung ändern Sichtbarkeit Eigenschaften Ursachen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Cursor zur Unterstützung des Rowsets. Weitere Informationen finden Sie unter [Rowsets und SQL Server-Cursor](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
 |DBPROP_QUICKRESTART|R/w: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Die Festlegung auf VARIANT_TRUE fest, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter versucht, einen Servercursor für das Rowset zu verwenden.|  
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/08/2018
   
 |Eigenschafts-ID|Description|  
 |-----------------|-----------------|  
-|SSPROP_COLUMN_ID|Spalte: ColumnID<br /><br /> R/w: schreibgeschützt<br /><br /> Typ: VT_U12 &#124; VT_ARRAY<br /><br /> Standard: VT_EMPTY<br /><br /> Beschreibung: Ein Array von ganzzahligen Werten, die die Ordnungsposition (1-basiert) der Ergebnisspalte einer COMPUTE-Klausel innerhalb der aktuellen [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung darstellen. Dies ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter-Entsprechung des ODBC SQL_CA_SS_COLUMN_ID-Attributs.|  
+|SSPROP_COLUMN_ID|Spalte: ColumnID<br /><br /> R/w: schreibgeschützt<br /><br /> Type: VT_U12 &#124; VT_ARRAY<br /><br /> Standard: VT_EMPTY<br /><br /> Beschreibung: Ein Array von ganzzahligen Werten, die die Ordnungsposition (1-basiert) der Ergebnisspalte einer COMPUTE-Klausel innerhalb der aktuellen [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung darstellen. Dies ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter-Entsprechung des ODBC SQL_CA_SS_COLUMN_ID-Attributs.|  
 |SSPROP_DEFERPREPARE|Spalte: No<br /><br /> R/w: Lesen/Schreiben<br /><br /> Typ: VT_BOOL<br /><br /> Standard: VARIANT_TRUE<br /><br /> Beschreibung: VARIANT_TRUE: bei der vorbereiteten Ausführung die befehlsvorbereitung verzögert, bis **ICommand:: Execute** aufgerufen wird oder ein metaeigenschaftsvorgang durchgeführt wird. Wenn die Eigenschaft festgelegt ist auf<br /><br /> VARIANT_FALSE: Die Anweisung wird vorbereitet, wenn **ICommandPrepare:: Prepare** ausgeführt wird.|  
 |SSPROP_IRowsetFastLoad|Spalte: No<br /><br /> R/w: Lesen/Schreiben<br /><br /> Typ: VT_BOOL<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Legen Sie diese Eigenschaft auf VARIANT_TRUE fest, zum Öffnen eines Fastload-Rowsets durch **IOpenRowset:: OPENROWSET**. Diese Eigenschaft kann nicht festgelegt werden, **ICommandProperties:: SetProperties**.|  
 |SSPROP_ISSAsynchStatus|Spalte: No.<br /><br /> R/w: Lesen/Schreiben<br /><br /> Typ: VT_BOOL<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Legen Sie diese Eigenschaft auf VARIANT_TRUE fest, um asynchrone Vorgänge unter Verwendung ermöglichen der [ISSAsynchStatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md) Schnittstelle.|  
@@ -108,7 +108,7 @@ ms.lasthandoff: 01/08/2018
 |SSPROP_QP_NOTIFICATION_OPTIONS|Spalte: No<br /><br /> R/w: Lesen/Schreiben<br /><br /> Typ: VT_BSTR<br /><br /> Standard: leere Zeichenfolge<br /><br /> Beschreibung: Die Abfragebenachrichtigungsoptionen. Diese werden in einer Zeichenfolge mit `name=value` angegeben. Der Benutzer ist für das Erstellen des Diensts und Lesen von Benachrichtigungen von der Warteschlange verantwortlich. Die Syntax der Benachrichtigungen Optionen Abfragezeichenfolge lautet:<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> Beispiel:<br /><br /> `service=mySSBService;local database=mydb`|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|Spalte: No<br /><br /> R/w: Lesen/Schreiben<br /><br /> Typ: VT_UI4<br /><br /> Standard: 432000 Sekunden (5 Tage).<br /><br /> Minimum: 1 Sekunde<br /><br /> Maximum: 2^31-1 Sekunden<br /><br /> Beschreibung: Die Anzahl der Sekunden, während der die Abfragebenachrichtigung aktiv bleiben soll.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

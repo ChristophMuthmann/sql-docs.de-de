@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 69bb2bbbc35bf13c4facc70508bb569714c66488
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 4ed9af3072a53195d965607079ecdce09bb15841
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="step-1-download-the-sample-data"></a>Schritt 1: Herunterladen der Beispieldaten
 
@@ -77,7 +77,7 @@ Wenn alle Dateien heruntergeladen wurden, wechselt PowerShell in das mithilfe de
 
 [In der Datenbank Python Analytics für den SQL-Entwickler](sqldev-in-database-python-for-sql-developers.md)
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Siehe auch
 
 [Machine Learning-Dienste mit Python](../python/sql-server-python-services.md)
 

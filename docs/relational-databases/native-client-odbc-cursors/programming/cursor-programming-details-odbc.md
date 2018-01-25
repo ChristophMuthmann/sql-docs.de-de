@@ -18,15 +18,15 @@ helpviewer_keywords:
 - cursors [ODBC], programming
 ms.assetid: 6bae29c4-7f49-419c-8712-90db734f992e
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ae196ec58d217c1d2f70e67be3a95a9f15bf853
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8657ba947643e5675c51f8719d8d16cab890bafb
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="cursor-programming-details-odbc"></a>Details über das Programmieren von Cursorn (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Implizite Cursorkonvertierungen &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-cursors/programming/implicit-cursor-conversions-odbc.md)  
   
--   [Verwenden von Autofetch mit ODBC-Cursorn](../../../relational-databases/native-client-odbc-cursors/programming/using-autofetch-with-odbc-cursors.md)  
+-   [Verwenden von Autofetch mit ODBC-Cursor](../../../relational-databases/native-client-odbc-cursors/programming/using-autofetch-with-odbc-cursors.md)  
   
 -   [Schnelle Vorwärtscursor Cursor &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-cursors/programming/fast-forward-only-cursors-odbc.md)  
   

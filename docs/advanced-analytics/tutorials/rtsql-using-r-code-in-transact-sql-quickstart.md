@@ -16,13 +16,13 @@ ms.assetid: 4e6fe30d-a105-4d5b-bc05-5e5204753847
 caps.latest.revision: "36"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 9c0896ca67df3d8000fae8f3cd3d336b047ee481
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
-ms.translationtype: HT
+ms.openlocfilehash: 812a37c9400d67f2aa5bb08796877e0d06b815b9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>Verwenden von R-Code in Transact-SQL (R in SQL-Schnellstart)
 

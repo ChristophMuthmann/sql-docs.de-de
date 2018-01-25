@@ -13,12 +13,12 @@ ms.topic: tutorial
 caps.latest.revision: "4"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: e4fb52ba8597b2499cc3ea094ae1c4b0c9421237
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: b85213fee582bc240f83446f911c4d16056f997e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Verwenden von Python mit Revoscalepy zum Erstellen eines Modells
 
@@ -28,7 +28,7 @@ Die **Revoscalepy** -Paket für Python-Objekte, Transformationen enthält und Al
 
 Weitere Informationen finden Sie unter [neuerungen Revoscalepy?](../python/what-is-revoscalepy.md) und [Python-Funktion Referenz](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 > [!IMPORTANT]
 > Zum Ausführen von Python-Code in SQL Server muss installiert sein CTP für SQL Server 2017 2.0 oder höher, und müssen Sie installieren und aktivieren Sie das Feature "" **Machine Learning Services** mit Python. Integration von Python unterstützt andere Versionen von SQL Server nicht.

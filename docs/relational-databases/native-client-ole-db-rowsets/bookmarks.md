@@ -18,15 +18,15 @@ helpviewer_keywords:
 - OLE DB rowsets, bookmarks
 ms.assetid: 7d9076f2-bf9c-452e-b816-70371a0c1644
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43b0a2b8453c25b73a6bbfa6e9c24b9b1604056c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3db93558cfdad3f5823f5c7754e85a48ae30d95c
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bookmarks"></a>Lesezeichen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

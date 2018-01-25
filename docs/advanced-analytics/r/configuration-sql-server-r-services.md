@@ -14,13 +14,13 @@ ms.assetid: e0fd4554-60c6-4181-ac4c-2e366fb434f6
 caps.latest.revision: "7"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f9cfa89269e847318e1aa167df9796fb0c9ffacd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1adcfa901c81cc39f6f303d3d18021e6fb94bf20
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configuration-and-management"></a>Konfiguration und Verwaltung
 

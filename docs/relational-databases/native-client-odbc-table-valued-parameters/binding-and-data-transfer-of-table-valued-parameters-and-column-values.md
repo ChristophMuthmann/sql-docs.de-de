@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: table-valued parameters (ODBC), binding and data transfer
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d536a83a3c1c8f58fca6c62650c71e3a20bec28
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 738981ef92321f4989497b20d027667698065a75
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Bindung und Datenübertragung von Tabellenwertparametern und Spaltenwerten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,12 +43,12 @@ ms.lasthandoff: 01/08/2018
 |Parameter|Verknüpftes Attribut für Parametertypen, die keine Tabellenwertparameter sind, einschließlich Spalten|Verknüpftes Attribut für Tabellenwertparameter|  
 |---------------|--------------------------------------------------------------------------------|----------------------------------------------------|  
 |*InputOutputType*|SQL_DESC_PARAMETER_TYPE in IPD<br /><br /> Für Tabellenwertparameter-Spalten muss diese Angabe der Angabe für den Tabellenwertparameter selbst entsprechen.|SQL_DESC_PARAMETER_TYPE in IPD<br /><br /> Hier muss SQL_PARAM_INPUT angegeben werden.|  
-|*Werttyp*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in APD|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in APD<br /><br /> Hier muss SQL_C_DEFAULT oder SQL_C_BINARY angegeben werden.|  
+|*ValueType*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in APD|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in APD<br /><br /> Hier muss SQL_C_DEFAULT oder SQL_C_BINARY angegeben werden.|  
 |*ParameterType*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in IPD|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in IPD<br /><br /> Hier muss SQL_SS_TABLE angegeben werden.|  
 |*ColumnSize*|SQL_DESC_LENGTH oder SQL_DESC_PRECISION in IPD<br /><br /> Dies hängt vom Wert der *ParameterType*.|SQL_DESC_ARRAY_SIZE<br /><br /> Kann auch mit SQL_ATTR_PARAM_SET_SIZE festgelegt werden, wenn der Parameterfokus auf den Tabellenwertparameter festgelegt wurde.<br /><br /> Bei einem Tabellenwertparameter ist dies die Anzahl von Zeilen in den Tabellenwertparameter-Spaltenpuffern.|  
 |*DecimalDigits*|SQL_DESC_PRECISION oder SQL_DESC_SCALE in IPD|Nicht verwendet. Diese Angabe muss 0 sein.<br /><br /> Wenn dieser Parameter ist nicht 0, SQLBindParameter wird SQL_ERROR zurückgegeben, und ein Diagnosedatensatz mit SQLSTATE erzeugende = HY104 und der Meldung "Ungültige Genauigkeit oder Dezimalstellenanzahl".|  
 |*ParameterValuePtr*|SQL_DESC_DATA_PTR in APD|SQL_CA_SS_TYPE_NAME<br /><br /> Dies ist ein optionales Attribut für gespeicherte Prozeduren, und NULL kann angegeben werden, wenn es nicht erforderlich ist. Es muss für SQL-Anweisungen angegeben werden, die keine Prozeduraufrufe sind.<br /><br /> Dieser Parameter dient als eindeutiger Wert, anhand dessen die Anwendung den betreffenden Tabellenwertparameter bei Verwendung einer variablen Zeilenbindung identifizieren kann. Weitere Informationen finden Sie im Abschnitt "Variable Tabellenwertparameter-Zeilenbindung" weiter unten in diesem Thema.<br /><br /> Wenn ein Tabellenwertparameter-Typnamen bei einem Aufruf von SQLBindParameter angegeben ist, muss es als Unicode-Wert, auch bei Anwendungen angegeben werden, die als ANSI-Anwendungen erstellt werden. Der Wert für den Parameter verwendet *StrLen_or_IndPtr* sollte entweder SQL_NTS oder die Länge der Zeichenfolge multipliziert mit sizeof(WCHAR) sein.|  
-|*Pufferlänge*|SQL_DESC_OCTET_LENGTH in APD|Die Länge des Typnamens des Tabellenwertparameters in Byte<br /><br /> Kann SQL_NTS sein, wenn der Typname NULL-termininiert ist, oder 0, wenn der Typname des Tabellenwertparameters nicht erforderlich ist.|  
+|*BufferLength*|SQL_DESC_OCTET_LENGTH in APD|Die Länge des Typnamens des Tabellenwertparameters in Byte<br /><br /> Kann SQL_NTS sein, wenn der Typname NULL-termininiert ist, oder 0, wenn der Typname des Tabellenwertparameters nicht erforderlich ist.|  
 |*StrLen_or_IndPtr*|SQL_DESC_OCTET_LENGTH_PTR in APD|SQL_DESC_OCTET_LENGTH_PTR in APD<br /><br /> Für Tabellenwertparameter wird hier die Zeilenanzahl statt die Datenlänge angegeben.|  
   
  Zwei Datenübertragungsmodi werden für Tabellenwertparameter unterstützt: feste Zeilenbindung und variable Zeilenbindung.  
@@ -83,7 +83,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  SQLExecute oder SQLExecDirect aufruft. Dieser Aufruf gibt SQL_NEED_DATA zurück, falls SQL_PARAM_INPUT- oder SQL_PARAM_INPUT_OUTPUT-Parameter als Data-at-Execution-Parameter behandelt werden sollen. In diesem Fall geht die Anwendung wie folgt vor:  
   
-    -   Ruft die SQLParamData. Dies gibt die *ParameterValuePtr* Wert für einen Data-at-Execution-Parameter und den Rückgabecode SQL_NEED_DATA zurück. Wenn alle Parameterdaten an den Treiber übergeben wurde, gibt SQLParamData SQL_SUCCESS, SQL_SUCCESS_WITH_INFO oder SQL_ERROR zurück. Bei Data-at-Execution-Parametern *ParameterValuePtr*, die identisch mit den Deskriptor Deskriptorfeld sql_desc_data_ptr entspricht, können Sie als ein Token für den Parameter eindeutig identifiziert, für die ist ein Wert erforderlich, betrachtet werden. Dieses "Token" wird beim Binden von der Anwendung an den Treiber übergeben und während der Ausführung dann wieder an die Anwendung übergeben.  
+    -   Calls SQLParamData. Dies gibt die *ParameterValuePtr* Wert für einen Data-at-Execution-Parameter und den Rückgabecode SQL_NEED_DATA zurück. Wenn alle Parameterdaten an den Treiber übergeben wurde, gibt SQLParamData SQL_SUCCESS, SQL_SUCCESS_WITH_INFO oder SQL_ERROR zurück. Bei Data-at-Execution-Parametern *ParameterValuePtr*, die identisch mit den Deskriptor Deskriptorfeld sql_desc_data_ptr entspricht, können Sie als ein Token für den Parameter eindeutig identifiziert, für die ist ein Wert erforderlich, betrachtet werden. Dieses "Token" wird beim Binden von der Anwendung an den Treiber übergeben und während der Ausführung dann wieder an die Anwendung übergeben.  
   
 4.  Zum Senden von Zeilendaten für Tabellenwertparameter für null-Tabellenwertparameter, wenn der Tabellenwertparameter keine Zeilen enthält, ruft die Anwendung mit SQLPutData *StrLen_or_Ind* auf SQL_DEFAULT_PARAM festgelegt.  
   

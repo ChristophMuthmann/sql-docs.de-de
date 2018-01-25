@@ -14,13 +14,13 @@ ms.assetid: fb4446ba-e9ce-4b93-9854-5e8a58507da0
 caps.latest.revision: "4"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 19ecd44707cd6a94b9a521184b0c588806a63869
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 35194b08e43c98985e0ae0d03f1e470fe8370383
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>Installieren von Machine Learning-Server (eigenständig) oder Microsoft R Server (eigenständig) über die Befehlszeile
 
@@ -33,7 +33,7 @@ Ein **unbeaufsichtigte** Installation erfordert, geben Sie den Speicherort des S
 
 Für eine **stille** Installation geben Sie dieselben Argumente an, und fügen Sie den Schalter **/q** hinzu. Es werden keine aufforderungen mehr bereitgestellt, und keine Benutzerinteraktion erforderlich ist. -Setup Sie jedoch einen Fehler auf, wenn alle erforderlichen Argumente ausgelassen werden.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Sie sollten wissen, wie eine Installation von SQL Server über die Befehlszeile ausführen und mit den Argumenten scripting vertraut sein.
 
@@ -95,8 +95,8 @@ Nachdem Setup abgeschlossen ist, können Sie die Konfigurationsdatei, die von SQ
 
 Standardmäßig alle Protokolle und Zusammenfassungen für SQL Server einrichten und verwandte Funktionen werden erstellt, in den folgenden Ordnern:
 
-+ SQLServer 2017:`C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
-+ SQLServer 2016:`C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
++ SQL Server 2017: `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
++ SQL Server 2016:  `C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
 
 Für jede Funktion, die Sie installiert, wird ein separater Unterordner erstellt.
 

@@ -14,13 +14,13 @@ ms.assetid: d455f22a-190f-4a28-9088-98a843cd5db2
 caps.latest.revision: "15"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d28ac8e74230eb3420b7f045bceac9189ce245fa
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ac7b8138a4bfb137169236a68845e9f762711993
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="managing-and-monitoring-machine-learning-solutions"></a>Verwalten und Überwachen von Machine Learning-Lösungen
 
@@ -28,7 +28,7 @@ Dieser Artikel beschreibt die Funktionen in SQL Server Machine Learning Services
 
 **Gilt für:** SQL Server 2016-R-Services, SqlServer 2017 Machine Learning-Dienste
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicherheit
 
 Datenbankadministratoren müssen Datenzugriff bieten, nicht nur auf die Datenanalysten sondern mit einer Vielzahl von Berichts-Entwickler, Wirtschaftsanalytikern und Nutzern von Geschäftsdaten. Die Integration von R (und nun Python) in SQL Server bietet viele Vorteile, an dem Datenbankadministrator, der die Data Science-Rolle unterstützt.
 

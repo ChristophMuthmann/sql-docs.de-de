@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7cc579d5f4c5d84dcec335e69d12334725f60741
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 7a206f638b78a5e4311ab7889a7902aa39a17413
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="collations"></a>Sortierungen
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,14 +40,13 @@ ms.lasthandoff: 01/02/2018
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 COLLATE { <collation_name> | database_default }  
 <collation_name> :: =   
      { Windows_collation_name } | { SQL_collation_name }  
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Sortierungsname*  
+ *collation_name*  
  Der Name der Sortierung, die auf den Ausdruck, die Spaltendefinition oder die Datenbankdefinition angewendet werden soll. *Collation_name* kann nur ein bestimmter *Windows_collation_name* oder ein *SQL_collation_name*. *Collation_name* muss ein Literalwert sein. *Collation_name* kann nicht durch eine Variable oder einen Ausdruck dargestellt werden.  
   
  *Windows_collation_name* ist der Name für eine [Windows-Sortierungsname](../../t-sql/statements/windows-collation-name-transact-sql.md).  
@@ -87,11 +86,11 @@ COLLATE { <collation_name> | database_default }
   
  COLLATE verwendet *Collate_name* zum Verweisen auf den Namen des SQL Server-Sortierung oder der Windows-Sortierung auf den Ausdruck, die Spaltendefinition oder die Datenbankdefinition angewendet werden soll. *Collation_name* kann nur ein bestimmter *Windows_collation_name* oder ein *SQL_collation_name* und der Parameter muss einen Literalwert enthalten. *Collation_name* kann nicht durch eine Variable oder einen Ausdruck dargestellt werden.  
   
- Sortierungen werden außer beim Setup in der Regel durch den Sortierungsnamen identifiziert. Beim Setup geben Sie stattdessen den Sortierungskennzeichner (das Gebietsschema) für Windows-Sortierungen und dann die Sortierungsoptionen an, z. B. Unterscheidung nach Groß- und Kleinschreibung und Akzenten.  
+ Sortierungen werden außer beim Setup in der Regel durch den Sortierungsnamen identifiziert. Im Setup Geben Sie stattdessen den Sortierungskennzeichner (das Gebietsschema) für Windows-Sortierungen und geben Sie Optionen für die Sortierung, die vertrauliche oder Groß-/Kleinschreibung oder Akzentzeichen können Akzente nicht berücksichtigt sind.  
   
  Sie können die Systemfunktion ausführen [Fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) auf eine Liste mit allen gültigen Namen für Windows- und SQL Server-Sortierungen abzurufen:  
   
-```  
+```sql  
 SELECT name, description  
 FROM fn_helpcollations();  
 ```  
@@ -104,9 +103,11 @@ FROM fn_helpcollations();
   
 -   Beim Wiederherstellen oder Anfügen einer Datenbank, die standardsortierung der Datenbank und die Sortierungen aller **Char**, **Varchar**, und **Text** Spalten oder Parameter in der Datenbank muss vom Betriebssystem unterstützt werden.  
   
-     Codepageübersetzungen werden für unterstützt **Char** und **Varchar** Datentypen, jedoch nicht für **Text** -Datentyp. Datenverlust während der Codepageübersetzung wird nicht gemeldet.  
+> [!NOTE]
+> Codepageübersetzungen werden für unterstützt **Char** und **Varchar** Datentypen, jedoch nicht für **Text** -Datentyp. Datenverlust während der Codepageübersetzung wird nicht gemeldet.  
   
- Wenn die angegebene Sortierung oder die von dem referenzierten Objekt verwendete Sortierung eine Codepage, die nicht von Windows unterstützt verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird eine Fehlermeldung angezeigt.  
+> [!NOTE]
+> Wenn die angegebene Sortierung oder die von dem referenzierten Objekt verwendete Sortierung eine Codepage, die nicht von Windows unterstützt verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird eine Fehlermeldung angezeigt.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -132,39 +133,39 @@ COLLATE Traditional_Spanish_ci_ai ASC;
 GO  
 ```  
 
- Dies sind die Ergebnisse der ersten Abfrage.  
+Dies sind die Ergebnisse der ersten Abfrage.  
   
- ```
- Place 
- ------------- 
- California 
- Chiapas 
- Cinco Rios 
- Colima
- ```  
+```
+Place 
+------------- 
+California 
+Chiapas 
+Cinco Rios 
+Colima
+```  
   
- Dies sind die Ergebnisse der zweiten Abfrage.  
-  
- ```
- Place 
- ------------- 
- California 
- Cinco Rios 
- Colima 
- Chiapas
- ```  
+Dies sind die Ergebnisse der zweiten Abfrage.  
+ 
+```
+Place 
+------------- 
+California 
+Cinco Rios 
+Colima 
+Chiapas
+```  
   
 ### <a name="b-additional-examples"></a>B. Zusätzliche Beispiele  
- Für zusätzliche Beispiele, in denen **COLLATE**, finden Sie unter [CREATE DATABASE &#40; SQL Server Transact-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md) Beispiel **G. Erstellen einer Datenbank und Angeben eines sortierungsnamens und Optionen**, und [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md) Beispiel **V. Ändern der spaltensortierung**.  
+ Für zusätzliche Beispiele, in denen **COLLATE**, finden Sie unter [CREATE DATABASE &#40; SQL Server Transact-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples) Beispiel **G. Erstellen einer Datenbank und Angeben eines sortierungsnamens und Optionen**, und [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md#alter_column) Beispiel **V. Ändern der spaltensortierung**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md)   
- [Rangfolge von Sortierungen &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)   
- [Konstanten &#40; Transact-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [DEKLARIEREN SIE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [Table &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)  
+ [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [Rangfolge von Sortierungen &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)     
+ [Constants &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)     
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)     
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)     
+ [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)     
   
   

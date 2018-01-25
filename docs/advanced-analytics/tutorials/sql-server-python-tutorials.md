@@ -7,12 +7,12 @@ dev_langs: Python
 caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 60b17dd267e5b6bbb940a335aa89b74585b24dcc
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+manager: cgronlund
+ms.openlocfilehash: 7fc78e8055e72066925b1c9dee8534aea681933c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-python-tutorials"></a>SQL Server-Python-Lernprogramme
 

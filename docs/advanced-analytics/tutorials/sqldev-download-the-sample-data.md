@@ -18,13 +18,13 @@ ms.assetid: 32a5d5ad-c58a-4669-a90d-ef296b48fcd8
 caps.latest.revision: "10"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: b0664569183fc5228418826230a8b67ab5ac0f69
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b5a284de9bd18ffa8dee640476ae51091b3e738a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-1-download-the-sample-data"></a>Lektion 1: Herunterladen der Beispieldaten
 
