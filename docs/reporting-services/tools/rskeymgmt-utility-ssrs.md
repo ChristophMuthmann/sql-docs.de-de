@@ -23,7 +23,7 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -171,7 +171,7 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>Dateispeicherort  
- Rskeymgmt.exe befindet sich unter **\<*Laufwerk*>:\Programme\Microsoft SQL Server\110\Tools\Binn *oder unter *\<*Laufwerk*>:\Programme (x86)\Microsoft SQL Server\110\Tools\Binn**. Sie können das Hilfsprogramm von einem beliebigen Ordner im Dateisystem ausführen.  
+ Rskeymgmt.exe befindet sich unter **\<*Laufwerk*>:\Programme\Microsoft SQL Server\110\Tools\Binn** oder unter **\<*Laufwerk*>:\Programme (x86)\Microsoft SQL Server\110\Tools\Binn**. Sie können das Hilfsprogramm von einem beliebigen Ordner im Dateisystem ausführen.  
   
 ## <a name="remarks"></a>Remarks  
  Ein Berichtsserver verschlüsselt gespeicherte Anmeldeinformationen und Verbindungsinformationen. Zum Verschlüsseln von Daten werden ein öffentlicher Schlüssel und ein symmetrischer Schlüssel verwendet. Eine Berichtsserver-Datenbank muss über gültige Schlüssel verfügen, damit der Berichtsserver ausgeführt werden kann. Mithilfe von **rskeymgmt** können Sie die Schlüssel sichern, löschen oder wiederherstellen. Wenn die Schlüssel nicht wiederhergestellt werden können, bietet dieses Tool eine Möglichkeit zum Löschen verschlüsselter Inhalte, die nicht mehr verwendet werden können.  

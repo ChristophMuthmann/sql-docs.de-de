@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.fn_get_audit_file_TSQL
 - fn_get_audit_file
 - sys.fn_get_audit_file
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.fn_get_audit_file function
 - fn_get_audit_file function
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: de090736f4ddbf1ab2191b887fe8ea034af2b5f9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4ac4372d753bdc9fde231d2ec08daa957771dc46
+ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +53,7 @@ fn_get_audit_file ( file_pattern,
  *file_pattern*  
  Gibt das Verzeichnis oder den Pfad und den Dateinamen für den zu lesenden Überwachungsdateisatz an. Der Typ ist **nvarchar(260)**. 
  
- - **SQLServer**:
+ - **SQL Server**:
     
     Dieses Argument muss sowohl einen Pfad (Laufwerksbuchstabe oder Netzwerkfreigabe) als auch einen Dateinamen umfassen. Diese können ein Platzhalterzeichen enthalten. Ein einzelnes Sternchen (*) kann verwendet werden, mehrere Dateien von einem überwachungsdateisatz gesammelt. Beispiel:  
   
@@ -59,9 +61,9 @@ fn_get_audit_file ( file_pattern,
   
     -   **\<Pfad > \LoginsAudit_{GUID}** – sammelt alle Überwachungsdateien, die dem angegebenen Namen und GUID-Paar aufweisen.  
   
-    -   **\<Pfad > \LoginsAudit_{GUID}_00_29384.sqlaudit** -erfassen Sie eine bestimmte Überwachungsdatei.  
+    -   **\<path>\LoginsAudit_{GUID}_00_29384.sqlaudit** - Collect a specific audit file.  
   
- - **Azure SQL-Datenbank**:
+ - **Azure SQL Database**:
  
     Dieses Argument wird verwendet, eine Blob-URL (einschließlich der speicherendpunkt und Container) angeben. Während ein Sternchen-Platzhalter nicht unterstützt, können Sie eine partielle (Blob) Dateinamenpräfix (anstelle der vollständigen Blob-Name) verwenden, um mehrere Dateien (Blobs) zu sammeln, die mit diesem Präfix beginnen. Beispiel:
  
@@ -72,13 +74,13 @@ fn_get_audit_file ( file_pattern,
 > [!NOTE]  
 >  Einen Pfad ohne ein Dateinamenmuster zu übergeben generiert einen Fehler.  
   
- *"initial_file_name"*  
+ *initial_file_name*  
  Gibt den Pfad und den Namen einer bestimmten Datei im Überwachungsdateisatz an, von der an die Überwachungsdatensätze gelesen werden sollen. Der Typ ist **nvarchar(260)**.  
   
 > [!NOTE]  
 >  Die *"initial_file_name"* Argument muss gültige Einträge oder muss entweder die standardmäßige enthalten | NULL-Wert.  
   
- *"audit_record_offset" Stellen*  
+ *audit_record_offset*  
  Gibt einen bekannten Speicherort mit der für initial_file_name angegebenen Datei an. Wenn dieses Argument verwendet wird, beginnt die Funktion mit dem Lesen beim ersten Datensatz des Puffers, der direkt nach dem festgelegten Offset folgt.  
   
 > [!NOTE]  
@@ -120,10 +122,10 @@ fn_get_audit_file ( file_pattern,
 |user_defined_event_id|**smallint**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Benutzerdefinierte Ereignis-Id als Argument zu übergeben **Sp_audit_write**. **NULL** für Systemereignisse (Standard) und ungleich 0 für ein benutzerdefiniertes Ereignis. Weitere Informationen finden Sie unter [Sp_audit_write &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
 |user_defined_information|**nvarchar(4000)**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Verwendet, um zusätzliche Informationen aufzeichnet, die der Benutzer möchte in aufzeichnen |Überwachungsprotokoll mit dem **Sp_audit_write** gespeicherte Prozedur.|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**nvarbinary** | Nur SQL Server (ab 2016) |  
+|sequence_group_id |**varbinary** | Nur SQL Server (ab 2016) |  
 |transaction_id |**bigint** | Nur SQL Server (ab 2016) |  
-|client_ip |**vom Datentyp nvarchar(128)** | Azure SQL-Datenbank und SQL Server (beginnend mit 2017) |  
-|application_name |**vom Datentyp nvarchar(128)** | Azure SQL-Datenbank und SQL Server (beginnend mit 2017) |  
+|client_ip |**nvarchar(128)** | Azure SQL-Datenbank und SQL Server (beginnend mit 2017) |  
+|application_name |**nvarchar(128)** | Azure SQL-Datenbank und SQL Server (beginnend mit 2017) |  
 |duration_milliseconds |**bigint** | Nur Azure SQL-DB |  
 |response_rows |**bigint** | Nur Azure SQL-DB |  
 |affected_rows |**bigint** | Nur Azure SQL-DB |  
@@ -179,25 +181,25 @@ Ein vollständiges Beispiel zum Erstellen einer Überwachung finden Sie unter [S
 Informationen zum Einrichten der Überwachung von Azure SQL-Datenbank finden Sie unter [erste Schritte mit SQL-datenbanküberwachung](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-auditing).
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie die SERVER AUDIT &#40; Transact-SQL &#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
- [ALTER SERVER AUDIT &#40; Transact-SQL &#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
+ [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [Erstellen Sie die SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
  [ALTER SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
  [DROP SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [Erstellen Sie DATABASE AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
- [ALTER DATABASE AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
+ [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
  [DROP DATABASE AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
- [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [Sys. server_audits &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
- [Sys. server_file_audits &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
- [server_audit_specifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
- [server_audit_specification_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
- [database_audit_specifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
- [database_audit_specification_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [dm_server_audit_status &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [dm_audit_actions &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
- [dm_audit_class_type_map &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys.server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
+ [sys.server_file_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys.server_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
+ [sys.server_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
+ [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
+ [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
+ [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
+ [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

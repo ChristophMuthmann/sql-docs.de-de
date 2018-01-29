@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CREATE SERVER ROLE
 - SERVER ROLE
 - CREATE_SERVER_ROLE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SERVER ROLE
 - SERVER ROLE, CREATE
@@ -25,19 +27,19 @@ helpviewer_keywords:
 - user-defined server roles [SQL Server]
 - roles, server
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ffe7b33392bcdab6efb3ec9c172f9839015b88b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ad6b6aa0eac42e8f415de6e4633027aa70ee9158
+ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Erstellt eine neue benutzerdefinierte Serverrolle.  
   
@@ -50,7 +52,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Rollenname*  
+ *role_name*  
  Der Name der zu erstellenden Serverrolle.  
   
  Autorisierung *Server_principal*  

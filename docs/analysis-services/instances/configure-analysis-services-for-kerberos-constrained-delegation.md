@@ -12,7 +12,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
@@ -90,7 +90,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  Geben Sie auf der Seite zum Auswählen von Benutzern oder Computern das Konto ein, das zur Ausführung der SQL Server-Instanz verwendet wird, die Daten für tabellarische Analysis Services-Modelldatenbanken bereitstellt. Klicken Sie auf **OK** , um das Dienstkonto zu übernehmen.  
   
-     Wenn Sie das gewünschte Konto nicht auswählen können, überprüfen Sie, ob SQL Server ausgeführt wird und ob ein SPN für das Konto registriert wurde. Weitere Informationen zu SPNs für das Datenbankmodul finden Sie unter [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
+     Wenn Sie das gewünschte Konto nicht auswählen können, überprüfen Sie, ob SQL Server ausgeführt wird und ob ein SPN für das Konto registriert wurde. Weitere Informationen zu SPNs für das Datenbankmodul finden Sie unter [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
      ![SSAS_Kerberos_3_SelectUsers](../../analysis-services/instances/media/ssas-kerberos-3-selectusers.gif "SSAS_Kerberos_3_SelectUsers")  
   

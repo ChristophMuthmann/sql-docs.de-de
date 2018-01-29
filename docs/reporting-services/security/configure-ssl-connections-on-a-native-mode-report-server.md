@@ -11,9 +11,10 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Secure Sockets Layer (SSL)
+helpviewer_keywords:
+- Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/09/2018
   
 -   Durch das Deinstallieren von IIS kann der Dienst zu einer SSL-gerichteten Berichtsserver-URL vorübergehend unterbrochen werden. Aus diesem Grund wird dringend empfohlen, den Computer neu zu starten, nachdem Sie IIS deinstalliert haben.  
   
-     Sie müssen den Computer neu starten, um alle SSL-Sitzungen aus dem Cache zu löschen. Einige Betriebssysteme speichern SSL-Sitzungen bis zu 10 Stunden im Cache. Aus diesem Grund funktioniert eine https://-URL auch, nachdem die SSL-Bindung von der URL-Reservierung in HTTP.SYS entfernt wurde. Durch den Neustart des Computers werden alle geöffneten Verbindungen geschlossen, die den Kanal verwenden.  
+     Sie müssen den Computer neu starten, um alle SSL-Sitzungen aus dem Cache zu löschen. Einige Betriebssysteme speichern SSL-Sitzungen bis zu 10 Stunden im Cache. Aus diesem Grund funktioniert eine https:// URL auch, nachdem die SSL-Bindung von der URL-Reservierung in HTTP.SYS entfernt wurde. Durch den Neustart des Computers werden alle geöffneten Verbindungen geschlossen, die den Kanal verwenden.  
   
 ## <a name="bind-ssl-to-a-reporting-services-url-reservation"></a>Binden von SSL an eine URL-Reservierung für Reporting Services  
  In den folgenden Schritten wird nicht erläutert, wie Sie Zertifikate anfordern, generieren, herunterladen oder installieren. Sie müssen bereits ein Zertifakt installiert haben, das verwendet werden kann. Es bleibt Ihnen überlassen, welche Zertifikatseigenschaften Sie angeben, welche Zertifizierungsstelle Sie verwenden und mit welchen Tools und Hilfsprogrammen Sie das Zertifikat anfordern und installieren.  
