@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: "41"
-ms.openlocfilehash: 234c1ee3b13f3440e3f8a0377f3423ccf937acbc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 
+ms.openlocfilehash: cc95a4f26970b91f2346e3edfcfa937190694b43
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-windows-server-update-services-wsus"></a>Konfigurieren von Windows Server Update Services (WSUS)
 Diese Anweisungen führen Sie durch die Schritte zur Verwendung der Windows Server Update Services (WSUS)-Konfigurations-Assistent zum Konfigurieren von WSUS für Analytics Platform System. Sie müssen zum Konfigurieren von WSUS, bevor Sie Softwareupdates auf das Gerät anwenden können. WSUS ist bereits auf dem VMM-virtuellen Computer des Geräts installiert.  
@@ -61,7 +61,7 @@ Um WSUS konfigurieren möchten, müssen Sie:
   
     1.  In der **Server-Manager-Dashboard**auf die **Tools** Menü klicken Sie auf **Windows Server Update Services**.  
   
-    2.  Im linken Bereich des der **Updatedienste** klicken, um die Virtual Machine Management-Knoten-Server zu erweitern (***Appliance_domain*- VMM**), und klicken Sie dann auf **Optionen**.  
+    2.  Im linken Bereich des der **Updatedienste** klicken, um die Virtual Machine Management-Knoten-Server zu erweitern (***Appliance_domain *-VMM**), und klicken Sie dann auf **Optionen**.  
   
     3.  In der **Optionen** Bereich, klicken Sie auf **WSUS-Server-Konfigurations-Assistenten** um den Konfigurations-Assistenten zu starten.  
   
@@ -113,7 +113,7 @@ Um WSUS konfigurieren möchten, müssen Sie:
   
     Wenn dieser Server einen Proxyserver für den Zugriff auf Microsoft Update oder einen anderen upstream-Server erfordert, können Sie die proxyservereinstellungen hier konfigurieren. Klicken Sie andernfalls auf **Weiter**.  
   
-    ![WSUS – Proxy](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
+    ![WSUS Proxy](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
   
     #### <a name="to-configure-proxy-server-settings"></a>So konfigurieren Sie die proxyservereinstellungen  
   
@@ -148,7 +148,7 @@ Um WSUS konfigurieren möchten, müssen Sie:
   
     Deaktivieren Sie alle ausgewählten Updates.  
   
-    Wählen Sie **SQL Server 2014**, **Windows Server 2012 R2**, und **System Center 2012 R2 – Virtual Machine Manager**, und klicken Sie dann auf **Weiter**.  
+    Wählen Sie **SQLServer 2014**, **SQLServer 2016**, **Windows Server 2012 R2**, und **System Center 2012 R2 – Virtual Machine Manager**, und Klicken Sie dann auf **Weiter**.  
   
 9. Auswählen von Klassifizierungen.  
   

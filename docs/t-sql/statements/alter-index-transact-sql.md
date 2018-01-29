@@ -8,13 +8,15 @@ ms.service:
 ms.component: tsql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs: t-sql
+dev_langs:
+- t-sql
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -46,16 +48,16 @@ helpviewer_keywords:
 - index rebuild [SQL Server]
 - index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: "222"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 24c7f8121439958cd9d0d4f17254b0520cbaa857
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: a5bf734d607c6954c1652df9b9814a31b2224740
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -244,7 +246,7 @@ PARTITION
 > [!WARNING]
 >  Das Erstellen bzw. Neuerstellen von nicht ausgerichteten Indizes für eine Tabelle mit mehr als 1.000 Partitionen ist möglich, wird aber nicht unterstützt. Dies hätte Leistungseinbußen oder eine zu hohe Speicherauslastung während der Vorgänge zur Folge. Es empfiehlt sich, bei mehr als 1.000 Partitionen nur ausgerichtete Indizes zu verwenden.  
   
- *Partitionsnummer*  
+ *partition_number*  
    
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
@@ -307,7 +309,10 @@ Für columnstore-Indizes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 -   Bei Zeilengruppen, in denen mindestens 10 % der Zeilen logisch gelöscht wurden, versucht SQL Server, die dieser Zeilengruppe mit ein oder mehrere Zeilengruppen zu kombinieren.    Beispielsweise Zeilengruppe 1 mit 500.000 Zeilen komprimiert wird und Zeilengruppe 21 mit dem Maximum von 1.048.576 Zeilen komprimiert wird.  Zeilengruppe 21 hat 60 % der Zeilen gelöscht 409,830 Zeilen zu verwerfen. SQL Server wird bevorzugt, kombinieren diese zwei Zeilengruppen, um eine neue Zeilengruppe zu komprimieren, die 909,830 Zeilen enthält.  
   
 MIT NEU ORGANISIEREN (COMPRESS_ALL_ROW_GROUPS = {ON | **OFF** })  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)], die COMPRESS_ALL_ROW_GROUPS bietet eine Möglichkeit zum Öffnen oder CLOSED Delta-Zeilengruppen in den Columnstore zu zwingen. Mit dieser Option ist es nicht notwendig, um die Delta-Zeilengruppen zu leeren der columnstore-Index neu.  In Kombination mit dem anderen entfernen und Merge Defragmentierung Funktionen wird nicht mehr notwendig, dass der Index in den meisten Situationen neu erstellt.    
+
+ **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) und[!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+
+COMPRESS_ALL_ROW_GROUPS bietet eine Möglichkeit zum Öffnen oder CLOSED Delta-Zeilengruppen in den Columnstore zu zwingen. Mit dieser Option ist es nicht notwendig, um die Delta-Zeilengruppen zu leeren der columnstore-Index neu.  In Kombination mit dem anderen entfernen und Merge Defragmentierung Funktionen wird nicht mehr notwendig, dass der Index in den meisten Situationen neu erstellt.    
 
 -   ON erzwingt, dass alle Zeilengruppen in den Columnstore, unabhängig von der Größe und Status (geschlossen oder geöffnet).  
   
@@ -330,7 +335,7 @@ PAD_INDEX = { ON | OFF }
   
  Weitere Informationen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
-FILLFACTOR = *Fillfactor*  
+FILLFACTOR = *fillfactor*  
  
  **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
@@ -343,7 +348,7 @@ FILLFACTOR = *Fillfactor*
 > [!IMPORTANT]
 >  Das Erstellen oder Ändern eines gruppierten Indexes mit einem FILLFACTOR-Wert wirkt sich auf den Speicherplatz aus, den die Daten belegen, da das [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Daten beim Erstellen des gruppierten Indexes neu verteilt.  
   
- SORT_IN_TEMPDB = {ON | **OFF** }  
+ SORT_IN_TEMPDB = { ON | **OFF** }  
  
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -359,7 +364,7 @@ FILLFACTOR = *Fillfactor*
   
  Weitere Informationen finden Sie unter [SORT_IN_TEMPDB-Option für Indizes](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
   
- IGNORE_DUP_KEY  **=**  {ON | {OFF}  
+ IGNORE_DUP_KEY **=** { ON | OFF }  
  Gibt die Fehlermeldung an, wenn ein Einfügevorgang versucht, doppelte Schlüsselwerte in einen eindeutigen Index einzufügen. Die IGNORE_DUP_KEY-Option gilt nur für Einfügevorgänge nach dem Erstellen oder Neuerstellen des Index. Der Standardwert ist OFF.  
   
  ON  
@@ -368,13 +373,13 @@ FILLFACTOR = *Fillfactor*
  OFF  
  Eine Fehlermeldung wird ausgegeben, wenn doppelte Schlüsselwerte in einen eindeutigen Index eingefügt werden. Für den gesamten INSERT-Vorgang wird ein Rollback ausgeführt.  
   
- IGNORE_DUP_KEY kann für Indizes, die für eine Sicht erstellt, nicht eindeutige Indizes, XML-Indizes, räumlichen Indizes und gefilterte Indizes auf ON festgelegt werden.  
+ IGNORE_DUP_KEY cannot be set to ON   for indexes created on a view, non-unique indexes, XML indexes, spatial indexes, and filtered indexes.  
   
  Um IGNORE_DUP_KEY anzuzeigen, verwenden Sie [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
  In abwärtskompatibler Syntax ist WITH IGNORE_DUP_KEY gleichwertig mit WITH IGNORE_DUP_KEY = ON.  
   
- STATISTICS_NORECOMPUTE  **=**  {ON | {OFF}  
+ STATISTICS_NORECOMPUTE **=** { ON | OFF }  
  Gibt an, ob Verteilungsstatistiken neu berechnet werden. Der Standardwert ist OFF.  
   
  ON  
@@ -388,7 +393,7 @@ FILLFACTOR = *Fillfactor*
 > [!IMPORTANT]
 > Wenn Sie die automatische Neuberechnung von Verteilungsstatistiken deaktivieren, wählt der Abfrageoptimierer möglicherweise nicht die optimalen Ausführungspläne für Abfragen, an denen die Tabelle beteiligt ist.  
   
- STATISTICS_INCREMENTAL = {ON | **OFF** }  
+ STATISTICS_INCREMENTAL = { ON | **OFF** }  
  Wenn **ON**, die Statistiken erstellt werden, pro Partition. Wenn **OFF**, wird die statistikstruktur gelöscht und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Statistiken neu berechnet. Die Standardeinstellung ist **OFF**.  
   
  Wenn Statistiken pro Partition nicht unterstützt werden, wird die Option ignoriert und eine Warnung generiert. Inkrementelle Statistiken werden für folgende Statistiktypen nicht unterstützt:  
@@ -429,7 +434,7 @@ FILLFACTOR = *Fillfactor*
 
 -  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]vor V12, und SQL Server vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], lässt nicht die `ONLINE` option für den gruppierten Index erstellen oder Vorgänge neu zu erstellen, wenn die Basistabelle enthält **varchar(max)** oder **varbinary(max)** Spalten.
 
-FORTSETZBARE  **=**  {ON | **OFF**}
+RESUMABLE **=** { ON | **OFF**}
 
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und[!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
 
@@ -439,7 +444,7 @@ FORTSETZBARE  **=**  {ON | **OFF**}
 
  DEAKTIVIERT den Index ist der Vorgang nicht fortgesetzt werden können.
 
-MAX_DURATION  **=**  *Zeit* [**Minuten**] mit verwendet **kann wieder aufgenommen werden = ON** (erfordert **ONLINE = ON**).
+MAX_DURATION **=** *time* [**MINUTES**] used with **RESUMABLE = ON** (requires **ONLINE = ON**).
  
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
@@ -578,13 +583,13 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  Bei der Onlineindexneuerstellung muss auf blockierende Vorgänge für diese Tabelle gewartet werden. **WAIT_AT_LOW_PRIORITY** gibt an, dass der Vorgang zur onlineindexneuerstellung Sperren mit niedriger Priorität, sodass andere Vorgänge, während die onlineindexerstellung wartet gewartet wird. Das Weglassen der **WAIT AT LOW PRIORITY** -Option ist gleichwertig mit `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Weitere Informationen finden Sie unter [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
   
- MAX_DURATION = *Zeit* [**Minuten**]  
+ MAX_DURATION = *time* [**MINUTES**]  
   
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Die Wartezeit (ein ganzzahliger Wert in Minuten), während der die Sperren der Onlineindexneuerstellung mit niedriger Priorität warten, wenn der DDL-Befehl ausgeführt wird. Wenn der Vorgang blockiert wird die **MAX_DURATION** Zeit, eines der **ABORT_AFTER_WAIT** -Aktionen ausgeführt. **MAX_DURATION** ist immer in Minuten, und das Wort **Minuten** kann ausgelassen werden.  
  
- ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERN** }]  
+ ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
    
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
@@ -880,9 +885,9 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. Komprimieren Sie alle GEÖFFNETEN und "geschlossen" Delta-Zeilengruppen in den columnstore  
- Gilt nicht für: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+ **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) und[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], neu organisieren mit ausgeführt werden können (COMPRESS_ALL_ROW_GROUPS = ON) jede geöffnet und geschlossen Delta-Zeilengruppe im columnstore-Index als eine komprimierte Zeilengruppe komprimiert. Leert die Deltastores, und erzwingt die Übernahme aller Zeilen in den Columnstore komprimiert. Dies ist hilfreich, insbesondere nach vielen Insert-Vorgänge ausführen, da diese Vorgänge die Zeilen in einem oder mehreren Deltastores gespeichert werden.  
+ Der Befehl REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) Compreses Öffnen der einzelnen und Delta-Zeilengruppe im columnstore-Index als eine komprimierte Zeilengruppe geschlossen. Leert die Deltastores, und erzwingt die Übernahme aller Zeilen in den Columnstore komprimiert. Dies ist hilfreich, insbesondere nach vielen Insert-Vorgänge ausführen, da diese Vorgänge die Zeilen in einem oder mehreren Deltastores gespeichert werden.  
   
  REORGANIZE kombiniert Zeilengruppen zum Füllen von Zeilengruppen, bis eine maximale Anzahl von Zeilen \<= 1,024,576. Aus diesem Grund alle öffnen "und" CLOSED-Zeilengruppen zu komprimieren wird nicht Sie mit vielen komprimierten Zeilengruppen annehmen, die nur wenige Zeilen enthalten. Zeilengruppen, reduzieren Sie die komprimierte Größe und Verbessern der Leistung von Abfragen möglichst als gefüllt werden soll.  
   
@@ -1165,9 +1170,9 @@ Zusätzliche Beispiele zur datenkomprimierung finden Sie unter [Datenkomprimieru
   
 ## <a name="see-also"></a>Siehe auch  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [Erstellen Sie SPATIAL INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
- [Erstellen von XML-INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
- [DROP INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/drop-index-transact-sql.md)   
+ [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
+ [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
+ [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
  [Deaktivieren von Indizes und Einschränkungen](../../relational-databases/indexes/disable-indexes-and-constraints.md)   
  [XML-Indizes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md)   
