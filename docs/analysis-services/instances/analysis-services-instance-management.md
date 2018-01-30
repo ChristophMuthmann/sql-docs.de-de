@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cec454c2fe5dc832879a8a320b3e921c4f71ceb2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1540e9a5422b3a15081b1a25c813ef87ed8d6c0c
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="analysis-services-instance-management"></a>Analysis Services-Instanzverwaltung
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine Instanz von Analysis Services ist eine Kopie der **msmdsrv.exe** ausführbare Datei, die als Betriebssystemdienst ausgeführt wird. Jede Instanz ist völlig unabhängig von anderen Instanzen auf dem gleichen Server. Sie hat ihre eigenen Konfigurationseinstellungen, Berechtigungen, Anschlüsse, Startkonten, Dateispeicher und Servermoduseigenschaften.  
+
+  Eine Instanz von Analysis Services ist eine Kopie der ausführbaren Datei **msmdsrv.exe** , die als Betriebssystemdienst ausgeführt wird. Jede Instanz ist völlig unabhängig von anderen Instanzen auf dem gleichen Server. Sie hat ihre eigenen Konfigurationseinstellungen, Berechtigungen, Anschlüsse, Startkonten, Dateispeicher und Servermoduseigenschaften.  
   
  Jede Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird im Sicherheitskontext eines definierten Anmeldekontos als Windows-Dienst Msmdsrv.exe ausgeführt.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
 |Link|Taskbeschreibung|  
 |----------|----------------------|  
-|[Konfiguration nach der Installation &#40;Analysis Services&#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)|Beschreibt die erforderlichen und optionalen Aufgaben, durch die eine Analysis Services-Installation abgeschlossen oder geändert wird.|  
+|[Konfiguration nach der Installation &#40; Analysis Services &#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)|Beschreibt die erforderlichen und optionalen Aufgaben, durch die eine Analysis Services-Installation abgeschlossen oder geändert wird.|  
 |[Verbindung mit Analysis Services herstellen](../../analysis-services/instances/connect-to-analysis-services.md)|Beschreibt Verbindungszeichenfolgen-Eigenschaften, Clientbibliotheken, Authentifizierungsmethoden und Schritte zum Herstellen oder Löschen von Verbindungen.|  
 |[Überwachen einer Instanz von Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)|Beschreibt Tools und Techniken zum Überwachen einer Serverinstanz, einschließlich der Verwendung von Systemmonitor und SQL Server Profiler.|  
 |[Hohe Verfügbarkeit und Skalierbarkeit](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)|Beschreibt die am häufigsten verwendeten Techniken, um Analysis Services-Datenbanken hoch verfügbar und skalierbar zu machen. |  

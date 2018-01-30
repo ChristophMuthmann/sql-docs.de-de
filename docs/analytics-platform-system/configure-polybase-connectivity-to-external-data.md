@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
-caps.latest.revision: "43"
-ms.openlocfilehash: 65a10ada824b291e37e61a421882cf012c7b8ddc
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+caps.latest.revision: 
+ms.openlocfilehash: d9777fb2bbfd9af2598a422fc072877ff0b78959
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>Konfigurieren Sie PolyBase-Verbindungen zu externen Daten
 Erläutert das Konfigurieren von PolyBase in SQL Server PDW zur Verbindung mit externen Hadoop oder Microsoft Azure Blob-speicherdatenquellen. Die Verwendung von PolyBase zum Ausführen von Abfragen, die Daten aus mehreren Quellen, einschließlich u. a. Hadoop und Azure Blob-Speicher mit SQL Server PDW integrieren.  
@@ -53,7 +53,7 @@ Erläutert das Konfigurieren von PolyBase in SQL Server PDW zur Verbindung mit e
     RECONFIGURE;  
     ```  
   
-    Ausgeführte "Sp_configure" mit RECONFIGURE legt den Konfigurationswert fest. Neustarten der Region ist erforderlich, um den Ausführungswert festgelegt wird. Da ein Neustart erforderlich nach Beendigung des nächsten auch ist, müssen Sie den Neustart, bis nach dem nächsten Schritt führen Sie die Core-site.xml ändert.  
+    Ausgeführte "Sp_configure" mit RECONFIGURE legt den Konfigurationswert fest. Neustarten der Region ist erforderlich, um den Ausführungswert festgelegt wird. Da ein Neustart erforderlich nach Beendigung des nächsten auch ist, müssen Sie den Neustart erst nach dem nächsten Schritt führen Sie die Core-site.xml ändert.  
   
 4.  Um Microsoft Azure Blob-Speicher als eine externe Datenquelle zu aktivieren, fügen Sie mindestens einen der Microsoft Azure-Konto-speicherzugriffsschlüsseln PDW-Core-site.xml-Datei hinzu. So fügen Sie einen Schlüssel hinzu:  
   
@@ -61,7 +61,7 @@ Erläutert das Konfigurieren von PolyBase in SQL Server PDW zur Verbindung mit e
   
         ![Windows Azure Storage-Kontoname](./media/configure-polybase-connectivity-to-external-data/APS_PDW_AzureStorageAccountName.png "APS_PDW_AzureStorageAccountName")  
   
-    2.  Suchen Sie Ihre Azure-Speicherkonto-Zugriffsschlüssel an. Zu diesem Zweck klicken Sie auf den Namen des Speicherkontos, und klicken Sie auf dem Blatt "Einstellungen" auf **Schlüssel**. Es werden Name und Ihre kontoschlüssel angezeigt.  
+    2.  Suchen Sie Ihre Azure-Speicherkonto-Zugriffsschlüssel an. Zu diesem Zweck klicken Sie auf den Namen des Speicherkontos, und klicken Sie auf dem Blatt "Einstellungen" auf **Schlüssel**. Auf diese Weise wird Ihre kontoschlüssel und Speicherplatz.  
   
         ![Windows Azure-Konto-speicherzugriffsschlüsseln](./media/configure-polybase-connectivity-to-external-data/APS_PDW_AzureStorageAccountAccessKey.png "APS_PDW_AzureStorageAccountAccessKey")  
   
@@ -88,7 +88,7 @@ Erläutert das Konfigurieren von PolyBase in SQL Server PDW zur Verbindung mit e
         ```  
   
         > [!CAUTION]  
-        > Sicherheitsvorkehrungen Sie, bevor die Zugriffsschlüssel in Core-site.xml gespeichert. Jeder Benutzer mit CONTROL SERVER oder ALTER ANY EXTERNAL DATA SOURCE-Berechtigung kann mit eine externen Datenquelle erstellen, die dieses Konto greift auf. Sobald die externen Datenquelle erstellt wurde, können alle SQL Server PDW-Benutzer, die über die Berechtigung zum Erstellen von Tabellen eine externe Tabelle erstellen, die auf dieses Speicherkonto zugreift. Der Benutzer werden dann in der Lage Kontodaten zugreifen und nutzen Sie Ressourcen in das Konto.  
+        > Sicherheitsvorkehrungen Sie, bevor die Zugriffsschlüssel in Core-site.xml gespeichert. Jeder Benutzer mit CONTROL SERVER oder ALTER ANY EXTERNAL DATA SOURCE-Berechtigung kann mit eine externen Datenquelle erstellen, die dieses Konto greift auf. Sobald die externen Datenquelle erstellt wurde, können alle SQL Server PDW-Benutzer mit der CREATE TABLE-Berechtigungen eine externe Tabelle erstellen, die auf dieses Speicherkonto zugreift. Die Benutzer können dann Zugriff auf die Kontodaten und nutzen Sie Ressourcen in das Konto.  
   
     6.  Speichern Sie die Änderungen in Core-site.xml.  
   
@@ -117,13 +117,13 @@ Erläutert das Konfigurieren von PolyBase in SQL Server PDW zur Verbindung mit e
       </property>  
     ```  
   
-    Sobald eine beliebige Eigenschaft in Yarn-site.xml definiert ist, wird diese eigenschafteneinstellungen Einsatz von PolyBase beim Ausführen von Abfragen für den HDInsight-Region. Wenn PolyBase-Abfragen für den HDInsight-Region und einem externen Hadoop-Cluster 2.0 unter Windows ausgeführt werden sollen, Konsistenz aller Dateien Yarn-site.xml muss, andernfalls schlägt die PolyBase-Abfragen fehl.  
+    Sobald eine beliebige Eigenschaft in Yarn-site.xml definiert ist, verwendet PolyBase diese Einstellungen beim Ausführen von Abfragen für den HDInsight-Region an. Wenn PolyBase-Abfragen für den HDInsight-Region und einem externen Hadoop-Cluster 2.0 unter Windows ausgeführt werden sollen, Konsistenz aller Dateien Yarn-site.xml muss, andernfalls schlägt die PolyBase-Abfragen fehl.  
   
     Um PolyBase mit dem HDInsight-Region und einem externen Hadoop-Cluster 2.0 ausführen, verwenden Sie die Yarn-site.xml-Standardeinstellungen auf dem externen Hadoop-Cluster.  
   
 6.  Starten Sie die PDW-Region an. Zu diesem Zweck verwenden Sie das Configuration Manager-Tool. Finden Sie unter [starten Sie den Konfigurations-Manager &#40; Analyseplattformsystem &#41; ](launch-the-configuration-manager.md).  
   
-7.  Überprüfen Sie die Sicherheitseinstellungen für Hadoop-Verbindungen. Wenn die **schwache Authentifizierung** auf Hadoop Seite aktiviert ist, mithilfe von `dfs.permission = true`, müssen Sie einen Hadoop-Benutzer erstellen **Pdw_user** und gewähren von vollständigen Lese- und Schreibberechtigungen für diesen Benutzer. SQL Server PDW und den entsprechenden Aufrufen von SQL Server PDW werden immer als ausgegeben **Pdw_user** die ist ein fester Benutzername und kann nicht in dieser Version von Hadoop-Konnektivität und SQL Server PDW-Version nicht geändert werden. Wenn Sicherheit auf Hadoop mit deaktiviertem `dfs.permission = false`, keine weiteren Aktionen ausgeführt werden müssen.  
+7.  Überprüfen Sie die Sicherheitseinstellungen für Hadoop-Verbindungen. Wenn die **schwache Authentifizierung** auf Hadoop Seite aktiviert ist, mithilfe von `dfs.permission = true`, müssen Sie einen Hadoop-Benutzer erstellen **Pdw_user** und gewähren von vollständigen Lese- und Schreibberechtigungen für diesen Benutzer. SQL Server PDW und den entsprechenden Aufrufen von SQL Server PDW werden immer als ausgegeben **Pdw_user**.  Dies ist ein fester Benutzername und kann nicht in dieser Version von Hadoop-Konnektivität und SQL Server PDW-Version nicht geändert werden. Wenn Sicherheit auf Hadoop mit deaktiviertem `dfs.permission = false`, keine weiteren Aktionen ausgeführt werden müssen.  
   
 8.  Entscheiden Sie, welche Benutzer eine externe Datenquelle in der Microsoft Azure Blob-Speicher erstellen können. Geben Sie jeden Benutzer den Namen des Speicherkontos sowie **ALTER ANY EXTERNAL DATA SOURCE** oder **CONTROL SERVER** Berechtigung.  
   
@@ -134,9 +134,9 @@ Erläutert das Konfigurieren von PolyBase in SQL Server PDW zur Verbindung mit e
 Autorisierte Benutzer können jetzt externen Datenquellen und externe Dateiformate, externe Tabellen erstellen. Sie können diese verwenden, um Daten aus mehreren Quellen einschließlich Hadoop, integrieren, die Microsoft Azure Blob-Speicher und SQL Server PDW.  
 
 ## <a name="kerberos-configuration"></a>Kerberos-Konfiguration  
-Bitte beachten Sie, dass es zur Authentifizierung von PolyBase bei einem gesicherten Kerberos-Cluster erforderlich ist, die Einstellung hadoop.rpc.protection auf Authentifizierung festzulegen. Dadurch bleibt die Datenkommunikation zwischen den Hadoop-Knoten unverschlüsselt. 
+Beachten Sie, dass bei PolyBase zu einem Kerberos-gesicherte Cluster authentifiziert hat, muss die hadoop.rpc.protection-Einstellung auf Authentifizierung festgelegt werden. Dadurch verbleibt die Datenkommunikation zwischen Hadoop-Knoten, die unverschlüsselt. 
 
- So stellen Sie eine Verbindung mit einem mit Kerberos geschützten Hadoop-Cluster [mithilfe von MIT KDC] her:
+ Die Verbindung zu einem Kerberos-gesicherte Hadoop-Cluster [using MIT KDC]:
    
   
 1.  Suchen Sie das Hadoop-Konfigurationsverzeichnis im Installationspfad auf dem Knoten "Zugriffssteuerung":  
@@ -147,7 +147,7 @@ Bitte beachten Sie, dass es zur Authentifizierung von PolyBase bei einem gesiche
   
 2.  Suchen Sie den hadoopseitigen Konfigurationswert der in dieser Tabelle aufgelisteten Konfigurationsschlüssel. (Suchen Sie die Dateien auf dem Hadoop-Computer im Hadoop-Konfigurationsverzeichnis.)  
   
-3.  Kopieren Sie die Konfigurationswerte in die Eigenschaft „Value“ in den entsprechenden Dateien auf dem SQL Server-Computer.  
+3.  Kopieren Sie die Konfigurationswerte in der Value-Eigenschaft in den entsprechenden Dateien auf den Knoten "Zugriffssteuerung".  
   
     |**#**|**Konfigurationsdatei**|**Konfigurationsschlüssel**|**Aktion**|  
     |------------|----------------|---------------------|----------|   
@@ -159,7 +159,9 @@ Bitte beachten Sie, dass es zur Authentifizierung von PolyBase bei einem gesiche
     |6|mapred-site.xml|mapreduce.jobhistory.address|Suchen Sie die hadoopseitige Konfiguration, und kopieren Sie diese auf den SQL Server-Computer. Zum Beispiel: 10.193.26.174:10020|  
     |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Suchen Sie die hadoopseitige Konfiguration, und kopieren Sie diese auf den SQL Server-Computer. Beispiel: yarn/_HOST@YOUR-REALM.COM|  
   
-4.  Erstellen Sie ein datenbankweites Anmeldeinformationsobjekt, um die Authentifizierungsinformationen für jeden Hadoop-Benutzer anzugeben. Weitere Informationen finden Sie unter [PolyBase T-SQL-Objekte](../relational-databases/polybase/polybase-t-sql-objects.md).  
+4. Erstellen Sie ein datenbankweites Anmeldeinformationsobjekt, um die Authentifizierungsinformationen für jeden Hadoop-Benutzer anzugeben. Weitere Informationen finden Sie unter [PolyBase T-SQL-Objekte](../relational-databases/polybase/polybase-t-sql-objects.md).  
+
+5. Starten Sie die PDW-Region an. Zu diesem Zweck verwenden Sie das Configuration Manager-Tool. Finden Sie unter [starten Sie den Konfigurations-Manager &#40; Analyseplattformsystem &#41; ](launch-the-configuration-manager.md).
  
 ## <a name="see-also"></a>Siehe auch  
 [Appliance-Konfiguration &#40; Analyseplattformsystem &#41;](appliance-configuration.md)  

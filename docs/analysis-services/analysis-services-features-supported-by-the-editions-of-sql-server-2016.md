@@ -12,18 +12,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f09d7be1-bd63-43f8-b91c-bf19166b4457
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0b69db6baee27296bf9544801b627c884d68795b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 14c64237e32d433592f44fcbd0d56bd661cc4940
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="analysis-services-features-supported-by-the-editions-of-sql-server-2016"></a>Analysis Services-Funktionen, die von den Editionen von SQLServer 2016 unterstützt werden
+# <a name="analysis-services-features-supported-by-sql-server-editions"></a>Analysis Services-Funktionen von SQL Server-Editionen unterstützte
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
 Dieses Thema enthält Details zu Features, die von den verschiedenen Editionen von SQL Server 2016 Analysis Services unterstützt. Funktionen, die von den Evaluation- und Developer-Editionen unterstützt werden finden Sie in der Enterprise Edition.
@@ -45,7 +45,7 @@ Dieses Thema enthält Details zu Features, die von den verschiedenen Editionen v
 |Hierarchien|ja|ja|||||ja|  
 |KPIs (Key Performance Indicators)|ja|ja|||||ja|  
 |Perspektiven|ja||||||ja|  
-|Translations|ja|ja|||||ja|  
+|Übersetzungen|ja|ja|||||ja|  
 |DAX-Berechnungen, DAX-Abfragen, MDX-Abfragen|ja|ja|||||ja|  
 |Sicherheit auf Zeilenebene|ja|ja|||||ja|  
 |Mehrere Partitionen|ja||||||ja|  
@@ -67,12 +67,12 @@ Dieses Thema enthält Details zu Features, die von den verschiedenen Editionen v
 |Cube-Rückschreiben|ja|ja|||||ja|  
 |Rückschreiben von Dimensionen|ja||||||ja|  
 |Rückschreibezellen|ja|ja|||||ja|  
-|Drillthrough ausführen|ja|ja|||||ja|  
+|Drillthroughberichte|ja|ja|||||ja|  
 |Erweiterte Hierarchietypen (Übergeordnet-Untergeordnet- und unregelmäßige Hierarchien)|ja|ja|||||ja|  
 |Erweiterte Dimensionen (Bezugsdimensionen, m:n-Dimensionen)|ja|ja|||||ja|  
 |Verknüpfte Measures und Dimensionen|ja|Ja  <sup>2</sup> |||||ja|  
-|Translations|ja|ja|||||ja|  
-|Aggregations|ja|ja|||||ja|  
+|Übersetzungen|ja|ja|||||ja|  
+|Aggregationen|ja|ja|||||ja|  
 |Mehrere Partitionen|ja|Ja, bis zu 3|||||ja|  
 |Proaktives Zwischenspeichern|ja||||||ja|  
 |Benutzerdefinierte Assemblys (gespeicherte Prozeduren)|ja|ja|||||ja|  
@@ -122,6 +122,6 @@ Dieses Thema enthält Details zu Features, die von den verschiedenen Editionen v
   
  ## <a name="see-also"></a>Siehe auch  
  [Produktspezifikationen für SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
- [Installation für SQLServer 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)  
+ [Installation for SQL Server (Installation für SQLServer 2016)](../database-engine/install-windows/installation-for-sql-server-2016.md)  
 
 

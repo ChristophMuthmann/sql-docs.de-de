@@ -12,23 +12,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0006e143-d3ba-4d10-a415-e42c45e2bb0a
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6de32b7f057093f31143ad56e71c492be325cf4d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9f1a5ab2c98e45d705be57658238077d88daefb5
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Konfigurieren von Analysis Services und der eingeschränkten Kerberos-Delegierung
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Kerberos-Delegierung (KCD) eines Authentifizierungsprotokolls ist, das Sie mit Windows-Authentifizierung zum Delegieren von Anmeldeinformationen von Clients konfigurieren können, Dienst zu Dienst in Ihrer gesamten Umgebung. Die KCD erfordert zusätzliche Infrastruktur, z. B. einen Domänencontroller, und eine zusätzliche Konfiguration Ihrer Umgebung. Die KCD wird für verschiedene Szenarios vorausgesetzt, bei denen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] - und [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Daten mit SharePoint 2016 verwendet werden. In SharePoint 2016 wurde Excel Services aus der SharePoint-Farm auf einen getrennten, neuen Server, den sog. **Office Online Server**, ausgelagert. Da der Office Online Server getrennt ist, gibt es vermehrt Bedarf an einer Möglichkeit, Clientanmeldeinformationen in den typischen Szenarien mit zwei Hops zu delegieren.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
   
 ## <a name="overview"></a>Übersicht  
  Die KCD ermöglicht einem Konto, zum Zweck des Zugriffs auf Ressourcen die Identität eines anderen Kontos anzunehmen. Das Konto, das die Identität annimmt, ist ein einer Webanwendung zugewiesenes Dienstkonto oder das Computerkonto eines Webservers. Das Konto, dessen Identität angenommen wird, ist ein Benutzerkonto, das Zugriff auf Ressourcen benötigt. Die KCD arbeitet auf Dienstebene, sodass ausgewählten Diensten auf einem Server der Zugriff vom Konto, das die Identität annimmt, gewährt wird. Zugleich wird anderen Diensten auf demselben Server bzw. Diensten auf anderen Servern der Zugriff verweigert.  

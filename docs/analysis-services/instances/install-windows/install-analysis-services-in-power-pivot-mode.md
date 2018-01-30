@@ -14,41 +14,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7528721b65101ee32285d57f18f93f98eeec9dae
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: f3b10fdee9956b28273553755365b9251d073964
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Installieren von Analysis Services im PowerPivot-Modus
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Die Verfahren in diesem Thema führen Sie durch die Installation eines einzelnen Servers eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Server in [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Modus für eine SharePoint-Bereitstellung. In den Schritten führen Sie u. a. den Installations-Assistenten für SQL Server sowie Konfigurationsaufgaben unter Verwendung der SharePoint-Zentraladministration aus.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
-  
- **In diesem Thema:**  
-  
- [Hintergrund](#bkmk_background)  
-  
- [Erforderliche Komponenten](#bkmk_prereq)  
-  
- [Schritt 1: Installieren von PowerPivot für SharePoint](#InstallSQL)  
-  
- [Schritt 2: Konfigurieren einer grundlegenden Analysis Services-SharePoint-Integration](#bkmk_config)  
-  
- [Schritt 3: Überprüfen der Integration](#bkmk_verify)  
-  
- [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](#bkmk_firewall)  
-  
- [Aktualisieren von Arbeitsmappen und geplanter Datenaktualisierung](#bkmk_upgrade_workbook)  
-  
- [Über die Installation auf einem einzelnen Server hinausgehend – PowerPivot für Microsoft SharePoint](#bkmk_multiple_servers)  
   
 ##  <a name="bkmk_background"></a> Hintergrund  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint umfasst Dienste der mittleren Ebene sowie Back-End-Dienste, die den [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Datenzugriff in einer SharePoint 2016- oder einer SharePoint 2013-Farm ermöglichen.  
