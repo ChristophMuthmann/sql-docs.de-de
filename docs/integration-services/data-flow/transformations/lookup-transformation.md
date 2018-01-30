@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,7 +26,7 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-caps.latest.revision: "106"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
@@ -136,9 +137,9 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Video [How to: Implement a Lookup Transformation in Full Cache Mode](http://go.microsoft.com/fwlink/?LinkId=131031)(Vorgehensweise: Implementieren einer Suchtransformation im Vollcachemodus) unter msdn.microsoft.com  
+-   Video [Vorgehensweise: Implementieren einer Suchtransformation im Vollcachemodus](http://go.microsoft.com/fwlink/?LinkId=131031)(Vorgehensweise: Implementieren einer Suchtransformation im Vollcachemodus) unter msdn.microsoft.com  
   
--   Blog-Artikel [Best Practices for Using the Lookup Transformation Cache Modes](http://go.microsoft.com/fwlink/?LinkId=146623)(Bewährte Vorgehensweisen für die Verwendung des Cachemodus der Transformation für Suche) unter blogs.msdn.com  
+-   Blog-Artikel [Bewährte Vorgehensweisen für die Verwendung des Cachemodus der Transformation für Suche](http://go.microsoft.com/fwlink/?LinkId=146623)(Bewährte Vorgehensweisen für die Verwendung des Cachemodus der Transformation für Suche) unter blogs.msdn.com  
   
 -   Blogeintrag [Suchmuster: Keine Beachtung von Groß-/Kleinschreibung](http://go.microsoft.com/fwlink/?LinkId=157782)auf blogs.msdn.com.  
   

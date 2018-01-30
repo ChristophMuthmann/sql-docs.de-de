@@ -12,7 +12,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/09/2018
   
      Dadurch wird der SQL Server-Assistent für den [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] gestartet.  
   
-3.  Schließen Sie die übrigen Schritte ab, die unter [To install Report Builder from the download site](#download)aufgeführt sind.  
+3.  Schließen Sie die übrigen Schritte ab, die unter [So installieren Sie Berichts-Generator von der Downloadwebsite aus](#download)aufgeführt sind.  
   
 ## <a name="to-install-includessrbnoversionincludesssrbnoversion-mdmd-from-the-command-line"></a>So installieren Sie [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] über die Befehlszeile 
 

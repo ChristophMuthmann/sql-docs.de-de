@@ -11,9 +11,10 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
@@ -55,7 +56,7 @@ Zum Anzeigen des **Berichtsdatenbereichs** klicken Sie im Menü **Ansicht** auf 
     >  
     >`Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2014`  
     >  
-    >Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter: [Data Connections, Data Sources, and Connection Strings in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+    >Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter: [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
      
   
 6.  Klicken Sie im linken Bereich auf **Anmeldeinformationen** , und klicken Sie auf **Windows-Authentifizierung verwenden (integrierte Sicherheit)**.  
@@ -66,7 +67,7 @@ Zum Anzeigen des **Berichtsdatenbereichs** klicken Sie im Menü **Ansicht** auf 
 Sie haben erfolgreich eine Verbindung mit der [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] -Beispieldatenbank definiert. Als Nächstes erstellen Sie den Bericht. Weitere Informationen finden Sie unter [Lektion 3: Definieren eines Datasets für den Tabellenbericht (Reporting Services)](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Data Connections, Data Sources, and Connection Strings in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+[Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   
   

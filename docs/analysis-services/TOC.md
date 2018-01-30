@@ -1,12 +1,13 @@
-# [What is Analysis Services? (Was sind die Analysis Services?)](analysis-services.md)
+# [Grundlegendes zu SQL Server Analysis Services](analysis-services.md)
 
 # Übersicht
 ## [What's new in SQL Server Analysis Services 2016 (Neuerungen in SQL Server Analysis Services 2016)](what-s-new-in-analysis-services.md)  
 ## [What's new in SQL Server Analysis Services 2017 (Neuerungen in SQL Server Analysis Services 2017)](what-s-new-in-sql-server-analysis-services-2017.md) 
 ## [Neue und aktualisierte Artikel](new-updated-analysis-services.md)
 ## [Tools and applications (Tools und Anwendungen)](tools-and-applications-used-in-analysis-services.md)   
+## [Clientbibliotheken (Datenanbieter)](../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)
 ## [Comparing Tabular and Multidimensional solutions (Vergleichen von tabellarischen und mehrdimensionalen Lösungen)](comparing-tabular-and-multidimensional-solutions-ssas.md)  
-## [Analysis Services features supported by SQL Server 2016 editions (Analysis Services-Funktionen, die von den Editionen von SQL Server 2016 unterstützt werden)](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
+## [Analysis Services-Features, die von SQL Server-Editionen unterstützt werden](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
 ## [Backward compatibility (SQL Server 2016 Analysis Services) (Abwärtskompatibilität (SQL Server 2016 Analysis Services))](analysis-services-backward-compatibility.md)  
 ## [Backward compatibility (SQL Server 2017 Analysis Services) (Abwärtskompatibilität (SQL Server 2017 Analysis Services))](analysis-services-backward-compatibility-sql2017.md)  
 ## [Globalization and translation (Globalisierung und Übersetzung)](globalization-scenarios-for-analysis-services.md)  
@@ -14,9 +15,6 @@
 ### [Translations (Übersetzungen)](translation-support-in-analysis-services.md)  
 ### [Currency conversions (Währungsumrechnungen)](currency-conversions-analysis-services.md)  
 ### [Tips and best practices (Tipps und bewährte Methoden)](globalization-tips-and-best-practices-analysis-services.md) 
-
-# Beispiele
-## [Analysis Services samples (Beispiele für Analysis Services)](analysis-services-samples.md)
 
 # Lernprogramme
 ## [Tabellarische Modellierung (Kompatibilitätsgrad 1200)](tabular-modeling-adventure-works-tutorial.md)  
@@ -112,6 +110,8 @@
 ## [Schema rowsets (Schemarowsets)](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
 ## [Analysis Services Scripting Language (ASSL for XMLA) (Analysis Services Scripting Language (ASSL für XMLA))](scripting/analysis-services-scripting-language-assl-for-xmla.md)
 
+# Beispiele
+## [Analysis Services samples (Beispiele für Analysis Services)](analysis-services-samples.md)
 
 # Verweis
 ## [Data Analysis Expressions (DAX) on MSDN (Data Analysis Expressions (DAX) für MSDN)](https://msdn.microsoft.com/library/gg413422.aspx)

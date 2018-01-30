@@ -12,7 +12,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -63,7 +63,7 @@ ms.lasthandoff: 01/09/2018
   
 -   **HTML-Renderingerweiterung** Wenn Sie einen Bericht von einem Berichtsserver über einen Webbrowser anfordern, verwendet der Berichtsserver die HTML-Renderingerweiterung, um den Bericht zu rendern. Die HTML-Renderingerweiterung generiert HTML stets mit UTF-8-Codierung. Weitere Informationen finden Sie unter [Rendern in das HTML-Format (Berichts-Generator und SSRS)](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md) und [Browserunterstützung für Reporting Services und Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
--   **Excel-Renderingerweiterung** Die Excel-Renderingerweiterung rendert Berichte, die in [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 oder höher angezeigt und geändert werden können. Diese Renderingerweiterung erstellt Dateien in BIFF (Binary Interchange File Format). BIFF ist das ursprüngliche Dateiformat für Excel-Daten. Berichte, die in [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] gerendert werden, unterstützen alle für ein beliebiges Arbeitsblatt verfügbaren Funktionen. Weitere Informationen finden Sie unter [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md) (Exportieren nach Microsoft Excel (Berichts-Generator und SSRS)).  
+-   **Excel-Renderingerweiterung** Die Excel-Renderingerweiterung rendert Berichte, die in [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 oder höher angezeigt und geändert werden können. Diese Renderingerweiterung erstellt Dateien in BIFF (Binary Interchange File Format). BIFF ist das ursprüngliche Dateiformat für Excel-Daten. Berichte, die in [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] gerendert werden, unterstützen alle für ein beliebiges Arbeitsblatt verfügbaren Funktionen. Weitere Informationen finden Sie unter [Exportieren nach Microsoft Excel &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md) (Exportieren nach Microsoft Excel (Berichts-Generator und SSRS)).  
   
 -   **CSV-Renderingerweiterung** Die durch Trennzeichen getrennte CSV-Renderingerweiterung (Comma-Separated Value) rendert Berichte in durch Komma getrennte Nur-Text-Dateien ohne jede Formatierung. Benutzer können diese Dateien im Anschluss mit einer Tabellenkalkulationsanwendung, wie [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)], oder einem anderen Programm zum Lesen von Textdateien öffnen. Weitere Informationen finden Sie unter [Exportieren als CSV-Datei &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).  
   
