@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 883d6283f191827caf4de79e3f148f4680ccfe8a
-ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
+ms.openlocfilehash: 5c557108a98a0063cb0dad14e0d40f10deb03698
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -65,9 +66,9 @@ catalog.create_execution [@folder_name = folder_name
 [@useanyworker =] *useanyworker*  
 Geben Sie an, ob jeder Scale Out-Worker für die Ausführung zugelassen ist.
 
--   Verwenden Sie den Wert 1, um das Paket mit einem beliebigen Scale Out-Worker auszuführen. Wenn Sie `@useanyworker` auf „true“ setzen, steht jeder Worker, dessen maximale Taskanzahl (wie in der Workerkonfigurationsdatei angegeben) noch nicht erreicht ist, für die Ausführung des Pakets zur Verfügung.
+-   Verwenden Sie den Wert 1, um das Paket mit einem beliebigen Scale Out-Worker auszuführen. Wenn Sie `@useanyworker` auf „true“ setzen, steht jeder Worker, dessen maximale Taskanzahl (wie in der Workerkonfigurationsdatei angegeben) noch nicht erreicht ist, für die Ausführung des Pakets zur Verfügung. Weitere Informationen zur Konfigurationsdatei des Workers finden Sie unter [Integration Services (SSIS) Scale Out-Worker](../scale-out/integration-services-ssis-scale-out-worker.md).
 
--   Verwenden Sie den Wert 0, um anzugeben, dass nicht alle Scale Out-Worker für die Paketausführung zugelassen sind. Wenn Sie `@useanyworker` auf „false“ festlegen, müssen Sie mithilfe des Managers für horizontales Hochskalieren oder durch Aufrufen der gespeicherten Prozedur `[catalog].[add_execution_worker]` die Worker angeben, die zum Ausführen des Pakets zulässig sind.
+-   Verwenden Sie den Wert 0, um anzugeben, dass nicht alle Scale Out-Worker für die Paketausführung zugelassen sind. Wenn Sie `@useanyworker` auf „false“ festlegen, müssen Sie mithilfe des Managers für horizontales Hochskalieren oder durch Aufrufen der gespeicherten Prozedur `[catalog].[add_execution_worker]` die Worker angeben, die zum Ausführen des Pakets zulässig sind. Wenn Sie einen Worker angeben, der bereits ein anderes Paket ausführt, schließt der Worker die Ausführung des aktuellen Pakets ab, bevor er eine weitere Ausführung anfordert.
 
 Dieser Parameter ist optional. Wenn dieser Parameter nicht angegeben wird, wird der Wert auf 1 festgelegt. Das Argument *useanyworker* ist vom Typ **bit**. 
   

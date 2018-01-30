@@ -1,6 +1,6 @@
 ---
-title: "TDE für Azure SQL-Datenbank und Data Warehouse | Microsoft Docs"
-description: "Eine Übersicht über Transparent Data Encryption für SQL-Datenbank und Data Warehouse. Das Dokument behandelt die Vorteile sowie die Optionen für die Konfiguration, einschließlich die vom Dienst verwaltete TDE-Technologie und Bring Your Own Key."
+title: "Transparente Datenverschlüsselung für Azure SQL-Datenbank und Data Warehouse | Microsoft-Dokumentation"
+description: "Eine Übersicht über die transparente Datenverschlüsselung für SQL-Datenbank und Data Warehouse. Das Dokument behandelt die Vorteile sowie die Optionen für die Konfiguration, einschließlich der von einem Dienst verwalteten transparenten Datenverschlüsselung und Bring Your Own Key."
 keywords: 
 author: becczhang
 manager: craigg
@@ -18,121 +18,120 @@ ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: 39e1807178f536a1bac2148deae406b1e3bb44b5
-ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
+ms.openlocfilehash: 5c9ff69d5219e3cd508031669d67002931fa4060
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/23/2018
 ---
-# <a name="transparent-data-encryption-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption für Azure SQL-Datenbank und Data Warehouse
+# <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>Transparente Datenverschlüsselung für SQL-Datenbank und Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-Transparent Data Encryption (TDE) unterstützt Maßnahmen zum Schutz von Azure SQL-Datenbank und Data Warehouse vor bösartigen Aktivitäten, indem die Technologie die Verschlüsselung und Entschlüsselung der Datenbank in Echtzeit sowie der ihr zugeordneten Sicherheitskopien und der Transaktionsprotokolle in Ruhephasen vornimmt, ohne Änderungen an der Anwendung zu erfordern.
+Die transparente Datenverschlüsselung unterstützt Maßnahmen zum Schutz von Azure SQL-Datenbank und Azure Data Warehouse vor schädlichen Aktivitäten. Sie führt die Verschlüsselung und Entschlüsselung der Datenbank sowie der ihr zugeordneten Sicherheitskopien und der Transaktionsprotokolle in Ruhephasen in Echtzeit durch, ohne Änderungen an der Anwendung zu erfordern.
 
-TDE verschlüsselt den Speicher einer gesamten Datenbank mithilfe eines symmetrischen Schlüssels, der als Verschlüsselungsschlüssel für die Datenbank (DEK) bezeichnet wird. Dieser Verschlüsselungsschlüssel für die Datenbank wird durch die TDE-Schutzvorrichtung geschützt, die entweder ein vom Dienst verwaltetes Zertifikat („Vom Dienst verwaltete TDE“) oder ein asymmetrischer Schlüssel sein kann, der in Azure Key Vault („Bring Your Own Key“) gespeichert ist. Die TDE-Schutzvorrichtung ist auf Serverebene festgelegt. 
+Die transparente Datenverschlüsselung verschlüsselt den Speicher einer gesamten Datenbank mithilfe eines symmetrischen Schlüssels, der als Verschlüsselungsschlüssel für die Datenbank bezeichnet wird. Dieser Verschlüsselungsschlüssel für die Datenbank wird durch die Schutzvorrichtung der transparenten Datenverschlüsselung geschützt. Bei dieser Schutzvorrichtung handelt es sich entweder um ein von einem Dienst verwaltetes Zertifikat (von einem Dienst verwaltete transparente Datenverschlüsselung) oder um einen asymmetrischen Schlüssel, der in Azure Key Vault (Bring Your Own Key) gespeichert ist. Sie legen die Schutzvorrichtung für die transparente Datenverschlüsselung auf Serverebene fest. 
 
-Beim Datenbankstart wird der verschlüsselte DEK entschlüsselt und dann für die Entschlüsselung und erneute Verschlüsselung der Datenbankdateien im SQL Engine-Prozess verwendet. Die TDE führt die E/A-Verschlüsselung und -Entschlüsselung der Daten und auf Seitenebene durch. Jede Seite wird entschlüsselt, wenn sie in den Speicher gelesen wird und verschlüsselt, bevor Sie auf den Datenträger geschrieben wird. Eine allgemeine Beschreibung von TDE finden Sie unter [Transparente Datenverschlüsselung (TDE)](transparent-data-encryption.md).
+Beim Datenbankstart wird der Verschlüsselungsschlüssel der verschlüsselten Datenbank entschlüsselt und dann für die Entschlüsselung und erneute Verschlüsselung der Datenbankdateien im Prozess der SQL Server-Datenbank-Engine verwendet. Die transparente Datenverschlüsselung führt die E/A-Verschlüsselung und -Entschlüsselung der Daten auf Seitenebene durch. Jede Seite wird entschlüsselt, wenn sie in den Speicher gelesen wird, und dann verschlüsselt, bevor sie auf den Datenträger geschrieben wird. Eine allgemeine Beschreibung der transparenten Datenverschlüsselung finden Sie unter [Transparente Datenverschlüsselung](transparent-data-encryption.md).
 
-SQL Server kann bei der Ausführung auf einem virtuellen Azure-Computer auch einen asymmetrischen Schlüssel aus Key Vault verwenden. Die Konfigurationsschritte unterscheiden sich von der Verwendung eines asymmetrischen Schlüssels in Azure SQL-Datenbank. Weitere Informationen finden Sie im Thema [Erweiterbare Schlüsselverwaltung mit Azure Key Vault (SQL Server)](extensible-key-management-using-azure-key-vault-sql-server.md).
+SQL Server kann bei der Ausführung auf einem virtuellen Azure-Computer auch einen asymmetrischen Schlüssel aus Key Vault verwenden. Die Konfigurationsschritte unterscheiden sich von der Verwendung eines asymmetrischen Schlüssels in SQL-Datenbank. Weitere Informationen finden Sie unter [Erweiterbare Schlüsselverwaltung mit Azure Key Vault (SQL Server)](extensible-key-management-using-azure-key-vault-sql-server.md).
 
-## <a name="service-managed-tde"></a>Vom Dienst verwaltete TDE
+## <a name="service-managed-transparent-data-encryption"></a>Transparente Datenverschlüsselung (von einem Dienst verwaltet)
 
-In Azure sieht die Standardeinstellung für TDE so aus, dass der Datenbank-Verschlüsselungsschlüssel durch ein integriertes Serverzertifikat geschützt ist. Das integrierte Serverzertifikat ist für jeden Server eindeutig. Wenn sich eine Datenbank in einer Georeplikationsbeziehung befindet, werden die primäre und die sekundäre Geodatenbank vom übergeordneten Serverschlüssel der primären Datenbank geschützt. Wenn zwei Datenbanken mit dem gleichen Server verbunden sind, verwenden sie das gleiche integrierte Zertifikat. Microsoft tauscht diese Zertifikate mindestens alle 90 Tage automatisch untereinander.
+In Azure sieht die Standardeinstellung für die transparente Datenverschlüsselung so aus, dass der Verschlüsselungsschlüssel der Datenbank durch ein integriertes Serverzertifikat geschützt ist. Das integrierte Serverzertifikat ist für jeden Server eindeutig. Wenn sich eine Datenbank in einer Georeplikationsbeziehung befindet, werden die primäre und die sekundäre Geodatenbank vom übergeordneten Serverschlüssel der primären Datenbank geschützt. Wenn zwei Datenbanken mit dem gleichen Server verbunden sind, verwenden sie das gleiche integrierte Zertifikat. Microsoft tauscht diese Zertifikate mindestens alle 90 Tage automatisch untereinander.
 
-Microsoft verschiebt und verwaltet auch nahtlos die Schlüssel, die für die Georeplikation und Wiederherstellung benötigt werden. 
+Microsoft verschiebt und verwaltet auch die Schlüssel nahtlos, die für die Georeplikation und Wiederherstellung benötigt werden. 
 
 > [!IMPORTANT]
-> Alle neu erstellten SQL-Datenbanken werden standardmäßig mithilfe der vom Dienst verwalteten TDE verschlüsselt. Datenbanken, die schon vor Mai 2017 existiert haben, und Datenbanken, die durch Wiederherstellung, Georeplikation und Datenbankkopie erstellt wurden, werden nicht standardmäßig verschlüsselt.
+> Alle neu erstellten SQL-Datenbanken werden standardmäßig mithilfe der von einem Dienst verwalteten transparenten Datenverschlüsselung verschlüsselt. Datenbanken, die schon vor Mai 2017 vorhanden waren, und Datenbanken, die durch Wiederherstellung, Georeplikation und Datenbankkopie erstellt wurden, werden standardmäßig nicht verschlüsselt.
 >
 
 ## <a name="bring-your-own-key-preview"></a>Bring Your Own Key (Vorschau)
 
-Durch die Unterstützung von Bring Your Own Key (BYOK) (derzeit in der Vorschauphase) kann der Benutzer seine TDE-Verschlüsselungsschlüssel selbst verwalten und bestimmen, wer auf diese zugreifen kann und zu welchem Zeitpunkt. Azure Key Vault (AKV), das cloudbasierte externe Schlüsselverwaltungssystem von Azure, ist der erste Schlüsselverwaltungsdienst, der in TDE mit BYOK-Unterstützung integriert ist. Mit BYOK ist der Datenbankverschlüsselungsschlüssel durch einen asymmetrischen Schlüssel geschützt, der in AKV gespeichert ist. Der asymmetrische Schlüssel verlässt Key Vault nie. Sobald der Server Berechtigungen für einen Schlüsseltresor besitzt, sendet er grundlegende Schlüsselvorgangsanforderungen über den Key Vault-Dienst an den Schlüsseltresor. Der asymmetrische Schlüssel ist auf Serverebene festgelegt und wird von allen Datenbanken unter diesem Server geerbt. Mit der BYOK-Unterstützung können Benutzer nun Schlüsselverwaltungsaufgaben steuern, einschließlich Schlüsselrotationen, Schlüsseltresorberechtigungen, das Löschen von Schlüsseln und Aktivieren der Überwachung/Berichterstellung auf allen Verschlüsselungsschlüsseln. Key Vault bietet eine zentrale Schlüsselverwaltung, nutzt die streng überwachten Hardwaresicherheitsmodule (HSMs) und stuft die Trennung der Verwaltung von Schlüsseln und Daten höher, damit die rechtliche Kompatibilität eingehalten werden kann. Weitere Informationen über Key Vault finden Sie auf der [Dokumentationsseite für Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault).
+Durch die Bring Your Own Key-Unterstützung (Vorschau) können Sie Ihre Schlüssel für die transparente Datenverschlüsselung verwalten und steuern, wer zu welchem Zeitpunkt auf diese zugreifen kann. Key Vault, das cloudbasierte externe Schlüsselverwaltungssystem von Azure, ist der erste Schlüsselverwaltungsdienst, der in die transparente Datenverschlüsselung mit Bring Your Own Key-Unterstützung integriert ist. Durch die Bring Your Own Key-Unterstützung ist der Verschlüsselungsschlüssel der Datenbank durch einen asymmetrischen Schlüssel geschützt, der in Key Vault gespeichert ist. Der asymmetrische Schlüssel verlässt Key Vault nie. Sobald der Server Berechtigungen für einen Schlüsseltresor besitzt, sendet er grundlegende Anforderungen für Schlüsselvorgänge über Key Vault an den Schlüsseltresor. Der asymmetrische Schlüssel ist auf Serverebene festgelegt und wird von allen Datenbanken unter diesem Server geerbt.
 
-Weitere Informationen über TDE mit BYOK-Unterstützung für Azure SQL-Datenbank und Data Warehouse finden Sie unter [Transparent Data Encryption with Bring Your Own Key support (Transparent Data Encryption mit Bring Your Own Key-Unterstützung)](transparent-data-encryption-byok-azure-sql.md).
+Durch die Bring Your Own Key-Unterstützung können Sie die Aufgaben der Schlüsselverwaltung steuern, z.B. Schlüsselrotationen und Schlüsseltresorberechtigungen. Sie können ebenfalls Schlüssel löschen sowie die Überwachung und Berichterstellung für alle Verschlüsselungsschlüssel aktivieren. Key Vault bietet eine zentrale Schlüsselverwaltung und verwendet stark überwachte Hardwaresicherheitsmodule. Key Vault unterstützt die Trennung der Verwaltung von Schlüsseln und Daten, um gesetzliche Bestimmungen zu erfüllen. Weitere Informationen zu Key Vault finden Sie in der [Dokumentation zu Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault).
 
-Wenn Sie mit der Verwendung von TDE mit BYOK-Unterstützung beginnen möchten, sehen Sie sich den Leitfaden zur Vorgehensweise, [Turn on Transparent Data Encryption using your own key from Key Vault Using PowerShell (Aktivieren von Transparent Data Encryption mithilfe Ihres eigenen Schlüssels aus Key Vault mit PowerShell)](transparent-data-encryption-byok-azure-sql-configure.md), an.
+Weitere Informationen zur transparenten Datenverschlüsselung mit Bring Your Own Key-Unterstützung für SQL-Datenbank und Data Warehouse finden Sie unter [Transparent data encryption with Bring Your Own Key support (Transparente Datenverschlüsselung mit Bring Your Own Key-Unterstützung)](transparent-data-encryption-byok-azure-sql.md).
 
-## <a name="moving-a-tde-protected-database"></a>Verschieben einer TDE-geschützten Datenbank
+Weitere Informationen zur Verwendung der transparenten Datenverschlüsselung mit Bring Your Own Key-Unterstützung beginnen möchten finden Sie in diesem Leitfaden zur Vorgehensweise [Turn on transparent data encryption by using your own key from Key Vault by using PowerShell (Aktivieren der transparenten Datenverschlüsselung mithilfe Ihres eigenen Schlüssels aus Key Vault mit PowerShell)](transparent-data-encryption-byok-azure-sql-configure.md).
 
-Für Vorgänge in Azure brauchen Datenbanken nicht entschlüsselt zu werden. Die TDE-Einstellungen für die Quelldatenbank oder die primäre Datenbank werden transparent an das Ziel vererbt. Dazu gehören auch Vorgänge, die dieses beinhalten:
+## <a name="move-a-transparent-data-encryption-protected-database"></a>Verschieben einer durch die transparente Datenverschlüsselung gesicherte Datenbank
+
+Für Vorgänge in Azure müssen Datenbanken nicht entschlüsselt werden. Die Einstellungen der transparenten Datenverschlüsselung für die Quelldatenbank oder die primäre Datenbank werden transparent an das Ziel vererbt. Folgende Vorgänge sind enthalten:
 - Geowiederherstellung
 - Self-Service-Point-In-Time-Wiederherstellung
 - Wiederherstellung einer gelöschten Datenbank
 - Aktive Georeplikation
-- Erstellen einer Datenbankkopie
+- Erstellung einer Datenbankkopie
 
-Wenn Sie eine TDE-geschützte Datenbank exportieren, wird der exportierte Inhalt der Datenbank nicht verschlüsselt. Diese exportierten Inhalte werden in unverschlüsselten BACPAC-Dateien gespeichert. Achten Sie darauf, die BACPAC-Dateien in geeigneter Weise zu schützen und TDE zu aktivieren, sobald der Import der neuen Datenbank abgeschlossen ist.
+Wenn Sie eine Datenbank exportieren, die mit der transparenten Datenverschlüsselung gesichert ist, werden die exportierten Inhalte der Datenbank nicht verschlüsselt. Diese exportierten Inhalte werden in unverschlüsselten BACPAC-Dateien gespeichert. Achten Sie darauf, die BACPAC-Dateien entsprechend zu schützen, und aktivieren Sie die transparente Datenverschlüsselung, nachdem der Import der neuen Datenbank abgeschlossen ist.
 
-Wenn die BACPAC-Datei z.B. von einem lokalen SQL-Server exportiert wird, erfolgt keine automatische Verschlüsselung des importierten Inhalts der neuen Datenbank. Wenn die BACPAC-Datei auf einen lokalen SQL-Server exportiert wird, erfolgt ebenfalls keine automatische Verschlüsselung der neuen Datenbank.
+Wenn die BACPAC-Datei z.B. von einer lokalen Instanz von SQL Server exportiert wird, erfolgt keine automatische Verschlüsselung des importierten Inhalts der neuen Datenbank. Wenn die BACPAC-Datei auf eine lokale Instanz von SQL Server exportiert wird, erfolgt ebenfalls keine automatische Verschlüsselung der neuen Datenbank.
 
-Eine Ausnahme ist das Exportieren zu und aus Azure SQL-Datenbank. TDE ist in der neuen Datenbank aktiviert, jedoch ist die BACPAC-Datei selbst noch nicht verschlüsselt.
+Eine Ausnahme besteht im Exportieren nach und aus SQL-Datenbank. Die transparente Datenverschlüsselung ist in der neuen Datenbank aktiviert, die BACPAC-Datei ist jedoch nicht verschlüsselt.
 
-## <a name="managing-transparent-data-encryption-in-the-azure-portal"></a>Verwalten von Transparent Data Encryption im Azure-Portal
+## <a name="manage-transparent-data-encryption-in-the-azure-portal"></a>Verwalten der transparenten Datenverschlüsselung im Azure-Portal
 
-Um TDE über das Azure-Portal zu konfigurieren, müssen Sie als Azure-Besitzer, Azure-Mitwirkender oder SQL-Sicherheitsmanager verbunden sein. 
+Sie müssen eine Verbindung als Azure-Besitzer, Azure-Mitwirkender oder SQL-Sicherheitsmanager herstellen, um die transparente Datenverschlüsselung über das Azure-Portal zu konfigurieren. 
 
-Transparent Data Encryption wird auf Datenbankebene festgelegt. Um TDE auf einer Datenbank zu aktivieren, besuchen Sie das [Azure-Portal](https://portal.azure.com), und melden Sie sich mit Ihrem Azure-Administrator- oder Mitwirkendenkonto an. Suchen Sie die TDE-Einstellungen in Ihrer Benutzerdatenbank. Standardmäßig wird die vom Dienst verwaltete TDE verwendet, und ein TDE-Zertifikat wird automatisch für den Server erstellt, der die Datenbank enthält. 
+Die transparente Datenverschlüsselung wird auf Datenbankebene festgelegt. Besuchen Sie das [Azure-Portal](https://portal.azure.com), und melden Sie sich mit Ihrem Azure-Administrator- oder Mitwirkendenkonto an, um die transparente Datenverschlüsselung auf einer Datenbank zu aktivieren. Suchen Sie die Einstellungen für die transparente Datenverschlüsselung in Ihrer Benutzerdatenbank. Standardmäßig wird die von einem Dienst verwaltete transparente Datenverschlüsselung verwendet. Für den Server, der die Datenbank enthält, wird automatisch ein Zertifikat für die transparente Datenverschlüsselung generiert. 
 
-![vom Dienst verwaltete TDE](./media/transparent-data-encryption-azure-sql/service-managed-tde.png)  
+![Transparente Datenverschlüsselung (von einem Dienst verwaltet)](./media/transparent-data-encryption-azure-sql/service-managed-tde.png)  
 
-Der TDE-Hauptschlüssel, der auch als *TDE-Schutzvorrichtung* bezeichnet wird, wird auf Serverebene festgelegt. Besuchen Sie die TDE-Einstellungen in Ihrem Server, um TDE mit der Bring Your Own Key-Unterstützung zu verwenden und um Ihre Datenbanken mit einem Schlüssel aus Azure Key Vault zu schützen. 
+Der Hauptschlüssel für die transparente Datenverschlüsselung, der auch als Schutzvorrichtung für die transparente Datenverschlüsselung bezeichnet wird, wird auf Serverebene festgelegt. Verwenden Sie die Einstellungen für die transparente Datenverschlüsselung auf Ihrem Server, um diese mit Bring Your Own Key-Unterstützung zu verwenden und Ihre Datenbank mit einem Schlüssel von Key Vault zu schützen. 
 
-![TDE mit BYOK-Unterstützung](./media/transparent-data-encryption-azure-sql/tde-byok-support.png) 
+![Transparente Datenverschlüsselung mit Bring Your Own Key-Unterstützung](./media/transparent-data-encryption-azure-sql/tde-byok-support.png) 
 
-## <a name="managing-transparent-data-encryption-using-powershell"></a>Verwalten von Transparent Data Encryption mithilfe von PowerShell
+## <a name="manage-transparent-data-encryption-by-using-powershell"></a>Verwalten der transparenten Datenverschlüsselung mithilfe von PowerShell
 
-Um TDE über PowerShell zu konfigurieren, müssen Sie als Azure-Besitzer, Azure-Mitwirkender oder SQL-Sicherheitsmanager verbunden sein. 
+Sie müssen eine Verbindung als Azure-Besitzer, Azure-Mitwirkender oder SQL-Sicherheitsmanager herstellen, um die transparente Datenverschlüsselung über PowerShell zu konfigurieren. 
 
 | Cmdlet | Description |
 | --- | --- |
-| [Set-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/set-azurermsqldatabasetransparentdataencryption) |Aktiviert oder deaktiviert TDE für eine Datenbank|
-| [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |Ruft den TDE-Status für eine Datenbank ab |
+| [Set-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/set-azurermsqldatabasetransparentdataencryption) |Aktiviert oder deaktiviert die transparente Datenverschlüsselung für eine Datenbank|
+| [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |Ruft den Status der transparenten Datenverschlüsselung für eine Datenbank ab |
 | [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption-Activity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) |Überprüft den Verschlüsselungsfortschritt für eine Datenbank |
-| [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) |Fügt einem SQL-Server einen Key Vault-Schlüssel hinzu |
-| [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey) |Ruft die Key Vault-Schlüssel eines SQL-Servers ab |
-| [Set-AzureRmSqlServerTransparentDataEncryptionProtector](/powershell/module/azurerm.sql/set-azurermsqlservertransparentdataencryptionprotector) |Legt die TDE-Schutzvorrichtung für einen SQL-Server fest |
-| [Get-AzureRmSqlServerTransparentDataEncryptionProtector](/powershell/module/azurerm.sql/get-azurermsqlservertransparentdataencryptionprotector) |Ruft die Transparent Data Encryption-Schutzvorrichtung ab |
-| [Remove-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/remove-azurermsqlserverkeyvaultkey) |Entfernt einen Key Vault-Schlüssel aus einem SQL-Server |
+| [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) |Fügt einer Instanz von SQL Server einen Key Vault-Schlüssel hinzu |
+| [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey) |Ruft die Key Vault-Schlüssel für eine Instanz von SQL Server ab  |
+| [Set-AzureRmSqlServerTransparentDataEncryptionProtector](/powershell/module/azurerm.sql/set-azurermsqlservertransparentdataencryptionprotector) |Legt die Schutzvorrichtung der transparenten Datenverschlüsselung für eine Instanz von SQL Server fest |
+| [Get-AzureRmSqlServerTransparentDataEncryptionProtector](/powershell/module/azurerm.sql/get-azurermsqlservertransparentdataencryptionprotector) |Ruft die Schutzvorrichtung für die transparente Datenverschlüsselung ab |
+| [Remove-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/remove-azurermsqlserverkeyvaultkey) |Entfernt einen Key Vault-Schlüssel aus einer Instanz von SQL Server |
 |  | |
 
-## <a name="managing-transparent-data-encryption-using-transact-sql"></a>Verwalten von Transparent Data Encryption mithilfe von Transact-SQL
+## <a name="manage-transparent-data-encryption-by-using-transact-sql"></a>Verwalten der transparenten Datenverschlüsselung mithilfe von Transact-SQL
 
 Stellen Sie eine Verbindung mit der Datenbank mithilfe eines Kontos her, das ein Administratorkonto oder ein Mitglied der Rolle **dbmanager** in der Masterdatenbank ist.
 
 | Befehl | Description |
 | --- | --- |
-| [ALTER DATABASE (Azure SQL-Datenbank)](/sql/t-sql/statements/alter-database-azure-sql-database) | Verwenden Sie „SET ENCRYPTION ON/OFF“, um eine Datenbank zu verschlüsseln oder zu entschlüsseln. |
-| [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) |Gibt Informationen über den Verschlüsselungsstatus einer Datenbank und die ihr zugeordneten Verschlüsselungsschlüssel für die Datenbank zurück. |
-| [sys.dm_pdw_nodes_database_encryption_keys](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql) |Gibt Informationen über den Verschlüsselungsstatus jedes Data Warehouse-Knotens und die ihm zugeordneten Verschlüsselungsschlüssel für die Datenbank zurück. | 
+| [ALTER DATABASE (Azure SQL-Datenbank)](/sql/t-sql/statements/alter-database-azure-sql-database) | Durch SET ENCRYPTION ON/OFF wird eine Datenbank verschlüsselt oder entschlüsselt |
+| [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) |Gibt Informationen über den Verschlüsselungsstatus einer Datenbank und die ihr zugeordneten Verschlüsselungsschlüssel zurück |
+| [sys.dm_pdw_nodes_database_encryption_keys](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql) |Gibt Informationen über den Verschlüsselungsstatus jedes Data Warehouse-Knotens und die ihm zugeordneten Verschlüsselungsschlüssel der Datenbank zurück | 
 |  | |
 
-Die TDE-Schutzvorrichtung kann nicht mithilfe von Transact-SQL auf einen Schlüssel aus Azure Key Vault geändert werden; verwenden Sie PowerShell oder das Azure-Portal.
+Sie können die Schutzvorrichtung der transparenten Datenverschlüsselung mithilfe von Transact-SQL nicht durch einen Schlüssel von Key Vault ersetzen. Verwenden Sie PowerShell oder das Azure-Portal.
 
-## <a name="managing-transparent-data-encryption-using-rest-api"></a>Verwalten von Transparent Data Encryption mithilfe von REST API
+## <a name="manage-transparent-data-encryption-by-using-the-rest-api"></a>Verwalten der transparenten Datenverschlüsselung mithilfe der REST-API
  
-Um TDE über REST-API zu konfigurieren, müssen Sie als Azure-Besitzer, Azure-Mitwirkender oder SQL-Sicherheitsmanager verbunden sein. 
+Sie müssen eine Verbindung als Azure-Besitzer, Azure-Mitwirkender oder SQL-Sicherheitsmanager herstellen, um die transparente Datenverschlüsselung über die REST-API zu konfigurieren. 
 
 | Befehl | Description |
 | --- | --- |
-|[Server erstellen oder aktualisieren](/rest/api/sql/servers/createorupdate)|Fügt einem SQL-Server eine AAD-Identität hinzu (wird verwendet, um Zugriff auf Key Vault zu gewähren)|
-|[Serverschlüssel erstellen oder aktualisieren](/rest/api/sql/serverkeys/createorupdate)|Fügt einem SQL-Server einen Key Vault-Schlüssel hinzu|
-|[Serverschlüssel entfernen](/rest/api/sql/serverkeys/delete)|Entfernt einen Key Vault-Schlüssel aus einem SQL-Server|
-|[Serverschlüssel abrufen](/rest/api/sql/serverkeys/get)|Ruft einen bestimmten Key Vault-Schlüssel aus einem SQL-Server ab|
-|[Serverschlüssel nach Server auflisten](/rest/api/sql/serverkeys/listbyserver)|Ruft die Key Vault-Schlüssel eines SQL-Servers ab|
-|[Transparent Data Encryption-Schutzvorrichtung erstellen oder aktualisieren](/rest/api/sql/encryptionprotectors/createorupdate)|Legt die TDE-Schutzvorrichtung für einen SQL-Server fest|
-|[Transparent Data Encryption-Schutzvorrichtung abrufen](/rest/api/sql/encryptionprotectors/get)|Ruft die TDE-Schutzvorrichtung für einen SQL-Server ab|
-|[Transparent Data Encryption-Schutzvorrichtung nach Server auflisten](/rest/api/sql/encryptionprotectors/listbyserver)|Ruft die TDE-Schutzvorrichtung eines SQL-Servers auf|
-|[Transparent Data Encryption-Konfiguration erstellen oder aktualisieren](/rest/api/sql/transparentdataencryptions/createorupdate)|Aktiviert oder deaktiviert TDE für eine Datenbank|
-|[Transparent Data Encryption-Konfiguration abrufen](/rest/api/sql/transparentdataencryptions/get)|Ruft die TDE-Konfiguration für eine Datenbank ab.|
+|[Server erstellen oder aktualisieren](/rest/api/sql/servers/createorupdate)|Fügt eine Azure Active Directory-Identität zu einer Instanz von SQL Server hinzu, die für den Zugriff auf Key Vault verwendet wird|
+|[Serverschlüssel erstellen oder aktualisieren](/rest/api/sql/serverkeys/createorupdate)|Fügt einer Instanz von SQL Server einen Key Vault-Schlüssel hinzu|
+|[Serverschlüssel entfernen](/rest/api/sql/serverkeys/delete)|Entfernt einen Key Vault-Schlüssel aus einer Instanz von SQL Server|
+|[Serverschlüssel abrufen](/rest/api/sql/serverkeys/get)|Ruft einen bestimmten Key Vault-Schlüssel aus einer Instanz von SQL Server ab|
+|[Serverschlüssel nach Server auflisten](/rest/api/sql/serverkeys/listbyserver)|Ruft die Key Vault-Schlüssel für eine Instanz von SQL Server ab |
+|[Transparent Data Encryption-Schutzvorrichtung erstellen oder aktualisieren](/rest/api/sql/encryptionprotectors/createorupdate)|Legt die Schutzvorrichtung der transparenten Datenverschlüsselung für eine Instanz von SQL Server fest|
+|[Transparent Data Encryption-Schutzvorrichtung abrufen](/rest/api/sql/encryptionprotectors/get)|Ruft die Schutzvorrichtung der transparenten Datenverschlüsselung für eine Instanz von SQL Server ab|
+|[Transparent Data Encryption-Schutzvorrichtung nach Server auflisten](/rest/api/sql/encryptionprotectors/listbyserver)|Ruft die Schutzvorrichtungen der transparenten Datenverschlüsselung für eine Instanz von SQL Server ab |
+|[Transparent Data Encryption-Konfiguration erstellen oder aktualisieren](/rest/api/sql/transparentdataencryptions/createorupdate)|Aktiviert oder deaktiviert die transparente Datenverschlüsselung für eine Datenbank|
+|[Transparent Data Encryption-Konfiguration abrufen](/rest/api/sql/transparentdataencryptions/get)|Ruft die Konfiguration der transparenten Datenverschlüsselung für eine Datenbank ab|
 |[Ergebnisse der Transparent Data Encryption-Konfiguration auflisten](/rest/api/sql/transparentdataencryptionactivities/ListByConfiguration)|Ruft das Verschlüsselungsergebnis für eine Datenbank ab|
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Eine allgemeine Beschreibung von TDE finden Sie unter [Transparente Datenverschlüsselung (TDE)](transparent-data-encryption.md).
-
-- Weitere Informationen über TDE mit BYOK-Unterstützung für Azure SQL-Datenbank und Data Warehouse finden Sie unter [Transparent Data Encryption with Bring Your Own Key support (Transparent Data Encryption mit Bring Your Own Key-Unterstützung)](transparent-data-encryption-byok-azure-sql.md).
-
-- Wenn Sie mit der Verwendung von TDE mit BYOK-Unterstützung beginnen möchten, sehen Sie sich den Leitfaden zur Vorgehensweise, [Turn on Transparent Data Encryption using your own key from Key Vault Using PowerShell (Aktivieren von Transparent Data Encryption mithilfe Ihres eigenen Schlüssels aus Key Vault mit PowerShell)](transparent-data-encryption-byok-azure-sql-configure.md), an.
-
-- Weitere Informationen zu Key Vault finden Sie auf den [Seiten der Key Vault-Dokumentation](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault).
+- Eine allgemeine Beschreibung der transparenten Datenverschlüsselung finden Sie unter [Transparente Datenverschlüsselung](transparent-data-encryption.md).
+- Weitere Informationen zur transparenten Datenverschlüsselung mit Bring Your Own Key-Unterstützung für SQL-Datenbank und Data Warehouse finden Sie unter [Transparent data encryption with Bring Your Own Key support (Transparente Datenverschlüsselung mit Bring Your Own Key-Unterstützung)](transparent-data-encryption-byok-azure-sql.md).
+- Weitere Informationen zur Verwendung der transparenten Datenverschlüsselung mit Bring Your Own Key-Unterstützung finden Sie in folgendem Leitfaden zur Vorgehensweise: [Turn on transparent data encryption by using your own key from Key Vault by using PowerShell (Aktivieren der transparenten Datenverschlüsselung mithilfe Ihres eigenen Schlüssels aus Key Vault mit PowerShell)](transparent-data-encryption-byok-azure-sql-configure.md).
+- Weitere Informationen zu Key Vault finden Sie in der [Key Vault-Dokumentation](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault).

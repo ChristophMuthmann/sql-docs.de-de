@@ -1,14 +1,15 @@
 ---
 title: Erstellen von indizierten Sichten | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 05/27/2016
+ms.date: 01/22/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-views
+ms.technology:
+- dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - indexed views [SQL Server]
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8c82b7d40310c22d9c064367ba5437106ff32422
-ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
+ms.openlocfilehash: 16d6097ac129874ac5fb7f27118e499d86606ba7
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="create-indexed-views"></a>Erstellen von indizierten Sichten
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Sie Indizes für eine Sicht erstellen. Der erste Index, der für eine Sicht erstellt wird, muss ein eindeutiger gruppierter Index sein. Nachdem der eindeutige gruppierte Index erstellt wurde, können Sie weitere nicht gruppierte Indizes erstellen. Das Erstellen eines eindeutigen gruppierten Indexes für eine Sicht verbessert die Abfrageleistung, da die Sicht wie eine Tabelle mit einem gruppierten Index in der Datenbank gespeichert wird. Der Abfrageoptimierer kann indizierte Sichten verwenden, um die Abfrageausführung zu beschleunigen. Es ist nicht erforderlich, dass in der Abfrage auf die jeweilige Sicht verwiesen wird, damit der Optimierer diese Sicht als Ersatz berücksichtigt.  
@@ -36,18 +37,20 @@ ms.lasthandoff: 01/04/2018
 ##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
  Die folgenden Schritte sind zum Erstellen einer indizierten Sicht erforderlich und wichtig für eine erfolgreiche Implementierung der indizierten Sicht:  
   
-1.  Stellen Sie sicher, dass die SET-Optionen für alle vorhandenen Tabellen korrekt sind, auf die in der Sicht verwiesen wird.  
-  
+1.  Stellen Sie sicher, dass die SET-Optionen für alle vorhandenen Tabellen korrekt sind, auf die in der Sicht verwiesen wird.   
 2.  Stellen Sie sicher, dass die SET-Optionen für die Sitzung richtig festgelegt sind, bevor Sie Tabellen und die Sicht erstellen.  
-  
 3.  Stellen Sie sicher, dass die Sichtdefinition deterministisch ist.  
-  
-4.  Erstellen Sie die Sicht mithilfe der Option WITH SCHEMABINDING.  
-  
+4.  Erstellen Sie die Sicht mithilfe der Option `WITH SCHEMABINDING`.  
 5.  Erstellen Sie den eindeutigen gruppierten Index für die Sicht.  
+
+> [!IMPORTANT]
+> Wenn Sie DML<sup>1</sup> für eine Tabelle ausführen, auf die durch eine große Anzahl von indizierten Sichten oder durch wenige, jedoch sehr komplexe indizierte Sichten verwiesen wird, müssen diese indizierten Sichten ebenfalls aktualisiert werden. Als Folge daraus kann die DML-Abfrageleistung erheblich beeinträchtigt werden. In einigen Fällen kann kein Abfrageplan erstellt werden.
+> Testen Sie Ihre DML-Abfragen in solchen Fällen, bevor Sie diese für die Produktion verwenden, analysieren Sie den Abfrageplan, und optimieren bzw. vereinfachen Sie die DML-Anweisung.
+>
+> <sup>1</sup> Beispielsweise UPDATE-, DELETE- oder INSERT-Vorgänge
   
 ###  <a name="Restrictions"></a> Erforderliche SET-Optionen für indizierte Sichten  
- Das Auswerten desselben Ausdrucks kann im [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu unterschiedlichen Ergebnissen führen, wenn bei der Ausführung der Abfrage unterschiedliche SET-Optionen aktiviert sind. Wenn die SET-Option CONCAT_NULL_YIELDS_NULL auf ON festgelegt ist, gibt beispielsweise der Ausdruck **'**abc**'** + NULL den Wert NULL zurück. Wenn die Option CONCAT_NULL_YIEDS_NULL allerdings auf OFF festgelegt ist, ergibt derselbe Ausdruck **'**abc**'**.  
+ Das Auswerten desselben Ausdrucks kann im [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu unterschiedlichen Ergebnissen führen, wenn bei der Ausführung der Abfrage unterschiedliche SET-Optionen aktiviert sind. Wenn die SET-Option `CONCAT_NULL_YIELDS_NULL` auf ON festgelegt ist, gibt beispielsweise der Ausdruck **'**abc**'** + NULL den Wert NULL zurück. Wenn die Option `CONCAT_NULL_YIEDS_NULL` allerdings auf OFF festgelegt ist, ergibt derselbe Ausdruck **'**abc**'**.  
   
  Um sicherzustellen, dass die Sichten ordnungsgemäß verwaltet werden können und konsistente Ergebnisse zurückgeben, sind für indizierte Sichten feste Werte für mehrere SET-Optionen erforderlich. Die SET-Optionen in der folgenden Tabelle müssen auf die in der Spalte **Erforderlicher Wert** angezeigten Werte festgelegt werden, wenn eine der folgenden Bedingungen zutrifft:  
   
@@ -63,43 +66,40 @@ ms.lasthandoff: 01/04/2018
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS*|ON|ON|ON|OFF|  
+    |ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|  
     |ARITHABORT|ON|ON|OFF|OFF|  
     |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
     |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
     |QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
   
-     *Wenn Sie ANSI_WARNINGS auf ON festlegen, wird ARITHABORT implizit auf ON festgelegt.  
+     <sup>1</sup> Durch das Festlegen von `ANSI_WARNINGS` auf ON wird `ARITHABORT` implizit auf ON festgelegt.  
   
- Wenn Sie eine OLE DB- oder ODBC-Serververbindung verwenden, müssen Sie nur den Wert der ARITHABORT-Einstellung ändern. Alle DB-Library-Werte müssen entweder auf Serverebene mithilfe von **sp_configure** oder über die Anwendung mithilfe des SET-Befehls ordnungsgemäß festgelegt werden.  
+ Wenn Sie eine OLE DB- oder ODBC-Serververbindung verwenden, müssen Sie nur den Wert der `ARITHABORT`-Einstellung ändern. Alle DB-Library-Werte müssen entweder auf Serverebene mithilfe von **sp_configure** oder über die Anwendung mithilfe des SET-Befehls ordnungsgemäß festgelegt werden.  
   
 > [!IMPORTANT]  
->  Es wird dringend empfohlen, die Benutzeroption ARITHABORT serverweit auf ON festzulegen, sobald in einer Datenbank auf dem Server die erste indizierte Sicht oder der erste Index für eine berechnete Spalte erstellt wird.  
+> Es wird dringend empfohlen, die Benutzeroption `ARITHABORT` serverweit auf ON festzulegen, sobald in einer Datenbank auf dem Server die erste indizierte Sicht oder der erste Index für eine berechnete Spalte erstellt wird.  
   
 ### <a name="deterministic-views"></a>Deterministische Sichten  
- Die Definition einer indizierten Sicht muss deterministisch sein. Eine Sicht ist deterministisch, wenn alle Ausdrücke in der Auswahlliste sowie die WHERE-Klausel und die GROUP BY-Klausel deterministisch sind. Deterministische Ausdrücke geben stets dasselbe Ergebnis zurück, wenn sie mit einer bestimmten Gruppe von Eingabewerten ausgewertet werden. Nur deterministische Funktionen können Teil von deterministischen Ausdrücken sein. Beispielsweise ist die DATEADD-Funktion deterministisch, weil sie für eine bestimmte Gruppe von Argumentwerten stets dasselbe Ergebnis für die drei Parameter zurückgibt. GETDATE ist nicht deterministisch, da diese Funktion immer mit demselben Argument aufgerufen wird, der zurückgegebene Wert jedoch bei jeder Ausführung unterschiedlich ist.  
+ Die Definition einer indizierten Sicht muss deterministisch sein. Eine Sicht ist deterministisch, wenn alle Ausdrücke in der Auswahlliste sowie die `WHERE`-Klausel und die `GROUP BY`-Klausel deterministisch sind. Deterministische Ausdrücke geben stets dasselbe Ergebnis zurück, wenn sie mit einer bestimmten Gruppe von Eingabewerten ausgewertet werden. Nur deterministische Funktionen können Teil von deterministischen Ausdrücken sein. Beispielsweise ist die `DATEADD`-Funktion deterministisch, weil sie für eine bestimmte Gruppe von Argumentwerten immer das gleiche Ergebnis für die drei Parameter zurückgibt. `GETDATE` ist nicht deterministisch, da diese Funktion immer mit dem gleichen Argument aufgerufen wird, der zurückgegebene Wert jedoch bei jeder Ausführung unterschiedlich ist.  
   
  Um zu bestimmen, ob eine Sichtspalte deterministisch ist, verwenden Sie die **IsDeterministic** -Eigenschaft der [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) -Funktion. Mithilfe der **IsPrecise** -Eigenschaft der COLUMNPROPERTY-Funktion können Sie bestimmen, ob eine deterministische Spalte in einer Sicht mit Schemabindung präzise ist. COLUMNPROPERTY gibt den Wert 1 für TRUE, den Wert 0 für FALSE und NULL für ungültige Eingaben zurück. Dies bedeutet, dass die Spalte nicht deterministisch oder nicht präzise ist.  
   
  Auch wenn ein Ausdruck deterministisch ist, kann das exakte Ergebnis von der Prozessorarchitektur oder der Version des Microcodes abhängen, wenn dieser Ausdruck float-Ausdrücke enthält. Um die Datenintegrität sicherzustellen, können solche Ausdrücke nur als Nichtschlüsselspalten von indizierten Sichten verwendet werden. Deterministische Ausdrücke, die keine float-Ausdrücke enthalten, werden als präzise bezeichnet. Nur präzise deterministische Ausdrücke können in indizierten Sichten Teile von Schlüsselspalten und von WHERE-Klauseln oder GROUP BY-Klauseln sein.  
-  
-> [!NOTE]  
->  Indizierte Sichten, die temporale Abfragen (Abfragen, die die **FOR SYSTEM_TIME** -Klausel verwenden) überlagern, werden nicht unterstützt.  
-  
+
 ### <a name="additional-requirements"></a>Zusätzliche Anforderungen  
  Zusätzlich zu den Anforderungen bzgl. SET-Optionen und deterministischen Funktionen müssen die folgenden Anforderungen erfüllt werden:  
   
--   Der Benutzer, der die CREATE INDEX-Anweisung ausführt, muss der Besitzer der Sicht sein.  
+-   Der Benutzer, der die `CREATE INDEX`-Anweisung ausführt, muss der Besitzer der Sicht sein.  
   
--   Wenn Sie den Index erstellen, muss die Option IGNORE_DUP_KEY auf OFF (Standardeinstellung) festgelegt sein.  
+-   Wenn Sie den Index erstellen, muss die Option `IGNORE_DUP_KEY` auf OFF (Standardeinstellung) festgelegt sein.  
   
 -   Auf Tabellen muss in der Sichtdefinition mit dem zweiteiligen Namen *Schema***.***Tabellenname* verwiesen werden.  
   
--   Benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, müssen mit der Option WITH SCHEMABINDING erstellt werden.  
+-   Benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, müssen mit der Option `WITH SCHEMABINDING` erstellt werden.  
   
--   Auf benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, muss mit dem zweiteiligen Namen *Schema***.***Funktion*verwiesen werden.  
+-   Auf benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, muss mit dem zweiteiligen Namen *Schema***.***Funktion* verwiesen werden.  
   
--   Die Datenzugriffseigenschaft einer benutzerdefinierten Funktion muss NO SQL lauten, und die Eigenschaft für den externen Zugriff muss NO lauten.  
+-   Die Datenzugriffseigenschaft einer benutzerdefinierten Funktion muss `NO SQL` lauten, und die Eigenschaft für den externen Zugriff muss `NO` lauten.  
   
 -   CLR-Funktionen (Common Language Runtime) können in der SELECT-Liste der Sicht angezeigt werden, können aber nicht Teil der Definition des gruppierten Indexschlüssels sein. CLR-Funktionen können nicht in der WHERE-Klausel der Sicht oder in der ON-Klausel einer JOIN-Operation in der Sicht auftreten.  
   
@@ -112,7 +112,7 @@ ms.lasthandoff: 01/04/2018
     |DATA ACCESS = NO SQL|Wird durch Festlegen des DataAccess-Attributs auf DataAccessKind.None und des SystemDataAccess-Attributs auf SystemDataAccessKind.None bestimmt.|  
     |EXTERNAL ACCESS = NO|Diese Eigenschaft ist für CLR-Routinen standardmäßig auf NO festgelegt.|  
   
--   Die Sicht muss mithilfe der Option WITH SCHEMABINDING erstellt werden.  
+-   Die Sicht muss mithilfe der Option `WITH SCHEMABINDING` erstellt werden.  
   
 -   Die Sicht darf nur auf Basistabellen in derselben Datenbank wie die Sicht verweisen. Die Sicht kann nicht auf andere Sichten verweisen.  
   
@@ -120,38 +120,43 @@ ms.lasthandoff: 01/04/2018
   
     ||||  
     |-|-|-|  
-    |COUNT|ROWSET-Funktionen (OPENDATASOURCE, OPENQUERY, OPENROWSET UND OPENXML)|OUTER-Joins (LEFT, RIGHT oder FULL)|  
-    |Abgeleitete Tabelle (durch Angabe einer SELECT-Anweisung in der FROM-Klausel definiert)|Selbstjoins|Durch Angeben von Spalten mit SELECT \* oder SELECT *Tabellenname*.*|  
-    |DISTINCT|STDEV, STDEVP, VAR, VARP oder AVG|Allgemeine Tabellenausdrücke (CTE, Common Table Expression)|  
-    |**float**\*-, **text**-, **ntext**-, **image**-, **XML**- oder **filestream** -Spalten|Unterabfrage|Die OVER-Klausel, die Fensterrang- oder Fensteraggregatfunktionen enthält.|  
-    |Volltextprädikate (CONTAIN, FREETEXT)|Eine SUM-Funktion, die auf einen Ausdruck verweist, der NULL zulässt.|ORDER BY|  
-    |CLR-benutzerdefinierte Aggregatfunktion|NACH OBEN|Die Operatoren CUBE, ROLLUP oder GROUPING SETS|  
-    |MIN, MAX|Die Operatoren UNION, EXCEPT oder INTERSECT|TABLESAMPLE|  
-    |Tabellenvariablen|OUTER APPLY oder CROSS APPLY|PIVOT, UNPIVOT|  
-    |Spaltensätze mit geringer Dichte|Tabellenwertfunktionen mit Inlinefunktionen oder Funktionen mit mehreren Anweisungen|OFFSET|  
-    |CHECKSUM_AGG|||  
+    |`COUNT`|ROWSET-Funktionen (`OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET` und `OPENXML`)|`OUTER`-Joins (`LEFT`, `RIGHT` oder `FULL`)|  
+    |Abgeleitete Tabelle (durch Angabe einer `SELECT`-Anweisung in der `FROM`-Klausel definiert)|Selbstjoins|Angeben von Spalten mithilfe von `SELECT *` oder `SELECT <table_name>.*`|  
+    |`DISTINCT`|`STDEV`, `STDEVP`, `VAR`, `VARP` oder `AVG`|Allgemeine Tabellenausdrücke (CTE, Common Table Expression)|  
+    |**float**<sup>1</sup>-, **text**-, **ntext**-, **image**-, **XML**- oder **filestream**-Spalten|Unterabfrage|Die `OVER`-Klausel, die Fensterrangfunktionen oder Fensteraggregatfunktionen enthält|  
+    |Volltextprädikate (`CONTAINS`, `FREETEXT`)|Eine `SUM`-Funktion, die auf einen Ausdruck verweist, der NULL-Werte zulässt|`ORDER BY`|  
+    |CLR-benutzerdefinierte Aggregatfunktion|`TOP`|`CUBE`-, `ROLLUP`- oder `GROUPING SETS`-Operatoren|  
+    |`MIN`, `MAX`|`UNION`-, `EXCEPT`- oder `INTERSECT`-Operatoren|`TABLESAMPLE`|  
+    |Tabellenvariablen|`OUTER APPLY` oder `CROSS APPLY`|`PIVOT`, `UNPIVOT`|  
+    |Spaltensätze mit geringer Dichte|Inline-Tabellenwertfunktionen (TVF) oder Tabellenwertfunktionen mit mehreren Anweisungen (MSTVF)|`OFFSET`|  
+    |`CHECKSUM_AGG`|||  
   
-     \*Die indizierte Sicht kann Spalten mit dem Datentyp **float** enthalten. Allerdings dürfen solche Spalten nicht im Schlüssel des gruppierten Indexes enthalten sein.  
+     <sup>1</sup> Die indizierte Sicht kann Spalten mit dem Datentyp **float** enthalten. Allerdings dürfen solche Spalten nicht im Schlüssel des gruppierten Indexes enthalten sein.  
   
--   Wenn GROUP BY vorhanden ist, muss die VIEW-Definition COUNT_BIG(*) enthalten, während HAVING nicht enthalten sein darf. Diese GROUP BY-Einschränkungen gelten nur für die indizierte Sichtdefinition. Im Ausführungsplan einer Abfrage kann eine indizierte Sicht auch dann verwendet werden, wenn sie diese GROUP BY-Einschränkungen nicht erfüllt.  
+-   Wenn `GROUP BY` vorhanden ist, muss die VIEW-Definition `COUNT_BIG(*)` enthalten, während `HAVING` nicht enthalten sein darf. Diese `GROUP BY`-Einschränkungen gelten nur für die indizierte Sichtdefinition. Im Ausführungsplan einer Abfrage kann eine indizierte Sicht auch dann verwendet werden, wenn sie diese `GROUP BY`-Einschränkungen nicht erfüllt.  
   
--   Wenn die Sichtdefinition eine GROUP BY-Klausel enthält, kann der Schlüssel des eindeutigen gruppierten Index nur auf die Spalten verweisen, die in der GROUP BY-Klausel angegeben sind.  
+-   Wenn die Sichtdefinition eine `GROUP BY`-Klausel enthält, kann der Schlüssel des eindeutigen gruppierten Indexes nur auf die Spalten verweisen, die in der `GROUP BY`-Klausel angegeben werden.  
   
+> [!IMPORTANT]  
+> Indizierte Sichten, die temporale Abfragen (Abfragen, die die `FOR SYSTEM_TIME`-Klausel verwenden) überlagern, werden nicht unterstützt.  
+
 ###  <a name="Recommendations"></a> Empfehlungen  
- Wenn Sie in indizierten Sichten auf **datetime** - und **smalldatetime** -Zeichenfolgenliterale verweisen, wird empfohlen, das Literal mithilfe eines deterministischen Datenformats explizit in den gewünschten Datentyp zu konvertieren. Eine Liste der deterministischen Datenformatstile finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Ausdrücke, die eine implizite Konvertierung von Zeichenfolgen in **datetime** oder **smalldatetime** umfassen, werden als nicht deterministisch angesehen. Der Grund hierfür ist, dass die Ergebnisse von den LANGUAGE- und DATEFORMAT-Einstellungen der Serversitzung abhängen. Die Ergebnisse des Ausdrucks `CONVERT (datetime, '30 listopad 1996', 113)` hängen beispielsweise von der LANGUAGE-Einstellung ab, da die Zeichenfolge '`listopad`' für verschiedene Monate in verschiedenen Sprachen steht. In ähnlicher Weise interpretiert `DATEADD(mm,3,'2000-12-01')`in dem Ausdruck [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Zeichenfolge `'2000-12-01'` basierend auf der DATEFORMAT-Einstellung.  
-  
- Die implizierte Konvertierung von Nicht-Unicode-Zeichendaten zwischen Sortierungen wird auch als nicht deterministisch angesehen.  
+ Wenn Sie in indizierten Sichten auf **datetime** - und **smalldatetime** -Zeichenfolgenliterale verweisen, wird empfohlen, das Literal mithilfe eines deterministischen Datenformats explizit in den gewünschten Datentyp zu konvertieren. Eine Liste der deterministischen Datenformatstile finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Weitere Informationen zu deterministischen und nicht deterministischen Ausdrücken finden Sie im Abschnitt [Weitere Überlegungen](#nondeterministic) auf dieser Seite.
+
+Wenn Sie DML (z.B. UPDATE, DELETE oder INSERT) für eine Tabelle ausführen, auf die durch eine große Anzahl von indizierten Sichten oder durch wenige, jedoch sehr komplexe indizierte Sichten verwiesen wird, müssen diese indizierten Sichten während der DML-Ausführung ebenfalls aktualisiert werden. Als Folge daraus kann die DML-Abfrageleistung erheblich beeinträchtigt werden. In einigen Fällen kann kein Abfrageplan erstellt werden. Testen Sie Ihre DML-Abfragen in solchen Fällen, bevor Sie diese für die Produktion verwenden, analysieren Sie den Abfrageplan, und optimieren bzw. vereinfachen Sie die DML-Anweisung.
   
 ###  <a name="Considerations"></a> Weitere Überlegungen  
  Die Einstellung der Option **large_value_types_out_of_row** der Spalten in einer indizierten Sicht wird von der Einstellung für die entsprechende Spalte in der Basistabelle vererbt. Dieser Wert wird mithilfe von [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)festgelegt. Die Standardeinstellung für Spalten, die auf Grundlage von Ausdrücken erstellt werden, ist 0. Das bedeutet, dass umfangreiche Werte innerhalb der Zeile gespeichert werden.  
   
  Indizierte Sichten können für eine partitionierte Tabelle erstellt werden und selbst partitioniert werden.  
   
- Wenn Sie verhindern möchten, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] indizierte Sichten verwendet, schließen Sie den OPTION (EXPAND VIEWS)-Hinweis in die Abfrage ein. Außerdem kann der Optimierer die Indizes für die Sichten nicht verwenden, wenn eine der aufgeführten Optionen falsch festgelegt ist. Weitere Informationen zum OPTION (EXPAND VIEWS)-Hinweis finden Sie unter [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+ Wenn Sie verhindern möchten, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] indizierte Sichten verwendet, schließen Sie den `OPTION (EXPAND VIEWS)`-Hinweis in die Abfrage ein. Außerdem kann der Optimierer die Indizes für die Sichten nicht verwenden, wenn eine der aufgeführten Optionen falsch festgelegt ist. Weitere Informationen zum `OPTION (EXPAND VIEWS)`-Hinweis finden Sie unter [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md).  
   
  Wenn eine Sicht gelöscht wird, werden alle Indizes für diese Sicht gelöscht. Wird der gruppierte Index einer Sicht gelöscht, werden alle nicht gruppierten Indizes und alle automatisch erstellten Statistiken der Sicht gelöscht. Vom Benutzer erstellte Statistiken zur Sicht werden beibehalten. Nicht gruppierte Indizes können einzeln gelöscht werden. Durch das Löschen des gruppierten Index der Sicht wird das gespeicherte Resultset entfernt, und der Optimierer verarbeitet die Sicht von nun an wieder wie eine Standardsicht.  
   
  Indizes für Tabellen und Sichten können deaktiviert werden. Wenn ein gruppierter Index für eine Tabelle deaktiviert wird, werden Indizes für die den Tabellen zugeordneten Sichten auch deaktiviert.  
+ 
+<a name="nondeterministic"></a> Ausdrücke, die eine implizite Konvertierung von Zeichenfolgen in **datetime** oder **smalldatetime** umfassen, werden als nicht deterministisch angesehen. Der Grund hierfür ist, dass die Ergebnisse von den LANGUAGE- und DATEFORMAT-Einstellungen der Serversitzung abhängen. Die Ergebnisse des Ausdrucks `CONVERT (datetime, '30 listopad 1996', 113)` hängen beispielsweise von der LANGUAGE-Einstellung ab, da die Zeichenfolge '`listopad`' für verschiedene Monate in verschiedenen Sprachen steht. In ähnlicher Weise interpretiert `DATEADD(mm,3,'2000-12-01')`in dem Ausdruck [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Zeichenfolge `'2000-12-01'` basierend auf der DATEFORMAT-Einstellung. Die implizierte Konvertierung von Nicht-Unicode-Zeichendaten zwischen Sortierungen wird auch als nicht deterministisch angesehen.  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -168,7 +173,7 @@ ms.lasthandoff: 01/04/2018
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Im Beispiel werden eine Sicht und ein Index für diese Sicht erstellt. Dies beinhaltet zwei Abfragen, in denen die indizierte Sicht verwendet wird.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     --Set the options to support indexed views.  

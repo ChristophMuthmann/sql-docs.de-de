@@ -8,21 +8,23 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.status.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.status.f1
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 658cb8a6783afc9b01259e8cf2e8915659550867
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7b0ad2d6c9773860640bbf25ecac671dfae2dbe1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Datenbankspiegelungs-Monitor (Seite Status)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Diese schreibgeschützte Seite zeigt den neuesten Spiegelungsstatus für die Prinzipal- und die Spiegelserverinstanz der Datenbank an, die zum jetzigen Zeitpunkt in der Navigationsstruktur ausgewählt ist. Wenn Informationen zu einer Instanz zurzeit nicht verfügbar sind, sind einige der Zellen im Raster **Status** , das dieser Instanz entspricht, ausgegraut und zeigen die Option **Unbekannt**an.  
@@ -31,7 +33,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Status**  
  Zeigt ein Raster an, das den neuesten Spiegelungsstatus höherer Ebene der Prinzipal- und der Spiegelserverinstanz enthält. Die Zeilen des Rasters **Status** liegen in folgender Reihenfolge vor:  
   
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
  Es gibt folgende Spalten:  
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|Description|  
 |-----------------|-----------------|  
 |**Serverinstanz**|Name der Serverinstanz, deren Status in der Zeile **Status** angezeigt wird.|  
 |**Aktuelle Rolle**|Aktuelle Rolle der Serverinstanz: **Prinzipal** oder **Spiegel**.|  
@@ -56,7 +58,7 @@ ms.lasthandoff: 11/20/2017
  Die Menge der Protokolldaten (in Kilobyte), die sich in der Sendewarteschlange befinden.  
   
  **Älteste, nicht gesendete Transaktion**  
- Alter der ältesten, nicht gesendeten Transaktion in der Sendewarteschlange. Das Alter dieser Transaktion gibt an, wie viele Minuten an Transaktionen noch nicht an die Spiegelserverinstanz gesendet wurden. Anhand dieses Werts lässt sich das Potenzial an Datenverlusten bezogen auf die Zeit ermitteln.  
+ Alter der ältesten, nicht gesendeten Transaktion in der Sendewarteschlange. Das Alter dieser Transaktion gibt an, wie viele Minuten an Transaktionen noch nicht an die Spiegelserverinstanz gesendet wurden. Dieser Wert hilft, das Datenverlustrisiko in Bezug auf die Zeit zu messen.  
   
  **Zeit zum Senden des Protokolls (geschätzt)**  
  Die ungefähre Dauer der Zeit, die die Prinzipalserverinstanz benötigt, um das derzeit in der Sendewarteschlange befindliche Protokoll an die Spiegelserverinstanz zu senden (die *Senderate*). Da die Rate der eingehenden Transaktionen erheblich schwanken kann, handelt es sich bei der Protokollsendezeit um einen Schätzwert. Die Senderate kann jedoch nützlich sein, um die für ein manuelles Failover erforderliche Zeit grob zu schätzen.  
@@ -97,12 +99,12 @@ ms.lasthandoff: 11/20/2017
   
 -   **Hohe Sicherheit mit automatischem Failover (synchron)**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Mitglieder der festen Datenbankrolle **dbm_monitor** können den vorhandenen Spiegelungsstatus entweder mithilfe des Datenbankspiegelungs-Monitors oder der gespeicherten Prozedur **sp_dbmmonitorresults** anzeigen. Diese Benutzer können jedoch nicht die Statustabelle aktualisieren. Sie sind abhängig davon, dass der **Auftrag für den Datenbankspiegelungs-Monitor**die Statustabelle regelmäßig aktualisiert. Das Alter des angezeigten Status kann ein Benutzer über die Zeitangaben in den Bezeichnungen **Prinzipalprotokoll (***\<Zeit>***)** und **Spiegelungsprotokoll (***\<Zeit>***)** erfahren.  
   
  Wenn dieser Auftrag nicht vorhanden ist oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent beendet wurde, veraltet der Status zunehmend und gibt die Konfiguration der Spiegelungssitzung möglicherweise nicht mehr wieder. So kann z. B. nach einem Failover fälschlicherweise angezeigt werden, dass die Partner dieselbe Rolle haben (Prinzipal oder Spiegel), oder der aktuelle Prinzipalserver wird als Spiegel angezeigt, während der aktuelle Spiegelserver als Prinzipal angezeigt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

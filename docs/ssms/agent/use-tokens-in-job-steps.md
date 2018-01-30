@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e45f9df8f2356e7dea91fd47d10afd4fea958205
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd6a236b2ead2c5891d1794a7b20ea7a72c4a4de
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="use-tokens-in-job-steps"></a>Verwenden von Token in Auftragsschritten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,10 +96,10 @@ In der folgenden Tabelle sind die vom [!INCLUDE[ssNoVersion](../../includes/ssno
   
 |Escapemakros|Description|  
 |-----------------|---------------|  
-|**$(ESCAPE_SQUOTE(***token_name***))**|Umgeht einfache Anführungszeichen (') in der Token-Ersetzungszeichenfolge. Ein einfaches Anführungszeichen wird durch zwei einfache Anführungszeichen ersetzt.|  
-|**$(ESCAPE_DQUOTE(***token_name***))**|Umgeht doppelte Anführungszeichen (") in der Token-Ersetzungszeichenfolge. Ein doppeltes Anführungszeichen wird durch zwei doppelte Anführungszeichen ersetzt.|  
-|**$(ESCAPE_RBRACKET(***token_name***))**|Umgeht rechte eckige Klammern (]) in der Token-Ersetzungszeichenfolge. Ersetzt jede rechte eckige Klammer durch zwei rechte eckige Klammern.|  
-|**$(ESCAPE_NONE(***token_name***))**|Ersetzt Token, ohne irgendein Zeichen in der Zeichenfolge zu umgehen. Dieses Makro wird zur Unterstützung der Abwärtskompatibilität in Umgebungen bereitgestellt, in denen Token-Ersetzungszeichenfolgen nur von vertrauenswürdigen Benutzern erwartet werden. Weitere Informationen finden Sie weiter unten im Abschnitt zum Aktualisieren von Auftragsschritten für die Verwendung von Makros.|  
+|**$(ESCAPE_SQUOTE(***Tokenname***))**|Umgeht einfache Anführungszeichen (') in der Token-Ersetzungszeichenfolge. Ein einfaches Anführungszeichen wird durch zwei einfache Anführungszeichen ersetzt.|  
+|**$(ESCAPE_DQUOTE(***Tokenname***))**|Umgeht doppelte Anführungszeichen (") in der Token-Ersetzungszeichenfolge. Ein doppeltes Anführungszeichen wird durch zwei doppelte Anführungszeichen ersetzt.|  
+|**$(ESCAPE_RBRACKET(***Tokenname***))**|Umgeht rechte eckige Klammern (]) in der Token-Ersetzungszeichenfolge. Ersetzt jede rechte eckige Klammer durch zwei rechte eckige Klammern.|  
+|**$(ESCAPE_NONE(***Tokenname***))**|Ersetzt Token, ohne irgendein Zeichen in der Zeichenfolge zu umgehen. Dieses Makro wird zur Unterstützung der Abwärtskompatibilität in Umgebungen bereitgestellt, in denen Token-Ersetzungszeichenfolgen nur von vertrauenswürdigen Benutzern erwartet werden. Weitere Informationen finden Sie weiter unten im Abschnitt zum Aktualisieren von Auftragsschritten für die Verwendung von Makros.|  
   
 ## <a name="updating-job-steps-to-use-macros"></a>Aktualisieren von Auftragsschritten für die Verwendung von Makros  
 Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 1 können Auftragsschritte, die Token ohne Escapemakros enthalten, nicht ausgeführt werden. In diesen Fällen wird eine Fehlermeldung zurückgegeben, die darauf hinweist, dass der Auftragsschritt ein oder mehrere Token enthält, die mit einem Makro versehen werden müssen, bevor der Auftrag ausgeführt werden kann.  
@@ -109,7 +110,7 @@ Die folgende Tabelle beschreibt, wie die symbolische Ersetzung von [!INCLUDE[ssN
   
 |Tokensyntax|Tokenersetzung durch Warnungen aktiviert|Tokenersetzung durch Warnungen deaktiviert|  
 |----------------|------------------------------|-------------------------------|  
-|ESCAPE-Makro verwendet|Alle Token in Auftragsschritten werden erfolgreich ersetzt.|Durch Warnungen aktivierte Token werden nicht ersetzt. Dabei handelt es sich um folgende Token: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**und **WMI(***Eigenschaft***)**. Andere, statische Token werden erfolgreich ersetzt.|  
+|ESCAPE-Makro verwendet|Alle Token in Auftragsschritten werden erfolgreich ersetzt.|Durch Warnungen aktivierte Token werden nicht ersetzt. Dabei handelt es sich um folgende Token: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** und **WMI(***Eigenschaft***)**. Andere, statische Token werden erfolgreich ersetzt.|  
 |Kein ESCAPE-Makro verwendet|Alle Auftragsschritte mit Token werden nicht ausgeführt.|Alle Auftragsschritte mit Token werden nicht ausgeführt.|  
   
 ## <a name="token-syntax-update-examples"></a>Beispiele für Updates der Tokensyntax  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - dynamic ports [SQL Server]
 - TCP/IP [SQL Server], port numbers
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
-caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: daec5ed8b8ea3aece68c5bcde3522e8e3f9de9f4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d536334958c3f027de7d2d7dd9c78213938cbfe2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Konfigurieren eines Servers für das Überwachen eines bestimmten TCP-Ports
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ Da Port 1433 der bekannte Standard für [!INCLUDE[ssNoVersion](../../includes/ss
   
      ![TCP_Ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  Im Dialogfeld **Eigenschaften von IP***n* **Eigenschaften** im Feld **TCP-Port** die Portnummer ein, an der diese IP-Adresse lauschen soll, und klicken Sie auf **OK**konfiguriert.  
+4.  Geben Sie im Dialogfeld **IP***n* **Eigenschaften** im Feld **TCP-Port** die Portnummer ein, die diese IP-Adresse überwachen soll, und klicken Sie auf **OK**.  
   
 5.  Klicken Sie im Konsolenbereich auf **SQL Server-Dienste**.  
   
@@ -74,7 +75,7 @@ Nachdem Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] so konfigu
 -   Erstellen Sie einen Alias auf dem Client, und geben Sie die Portnummer an.  
 -   Programmieren Sie den Client so, dass die Verbindung mithilfe einer benutzerdefinierten Verbindungszeichenfolge hergestellt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen oder Löschen eines Serveralias für die Verwendung durch einen Client &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)   
  [SQL Server-Browserdienst](../../tools/configuration-manager/sql-server-browser-service.md)  
   

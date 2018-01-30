@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a705efcec62c826d391d302f73d2656ee694cbd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 35cef9e6a0576780aa802d891f9ea43cc21bc15a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Wiederherstellen verwandter Datenbanken mit einer markierten Transaktion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieses Thema ist nur für Datenbanken relevant, die markierte Transaktionen enthalten und von denen das vollständige oder massenprotokollierte Wiederherstellungsmodell verwendet wird.  
@@ -67,11 +68,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Transact-SQL-Syntax für das Wiederherstellen bis zu einer Markierung  
  Wenn Sie das Ziel einer markierten Transaktion mithilfe einer[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md)-Anweisung festlegen, können Sie eine der folgenden Klauseln verwenden, um ein Anhalten bei oder unmittelbar vor der Markierung zu bewirken:  
   
--   Verwenden Sie die WITH STOPATMARK = **'***<mark_name>***'**-Klausel, um anzugeben, dass die markierte Transaktion den Wiederherstellungspunkt darstellt.  
+-   Verwenden Sie die WITH STOPATMARK = **'***<Markierungsname>***'**-Klausel, um anzugeben, dass die markierte Transaktion den Wiederherstellungspunkt darstellt.  
   
      STOPATMARK führt ein Rollforward bis zur Markierung aus und schließt die markierte Transaktion in das Rollforward ein.  
   
--   Verwenden Sie die WITH STOPBEFOREMARK = **'***<mark_name>***'**-Klausel, um anzugeben, dass der Protokolldatensatz unmittelbar vor der Markierung den Wiederherstellungspunkt darstellt.  
+-   Verwenden Sie die WITH STOPBEFOREMARK = **'***<Markierungsname>***'**-Klausel, um anzugeben, dass der Protokolldatensatz unmittelbar vor der Markierung den Wiederherstellungspunkt darstellt.  
   
      STOPBEFOREMARK führt ein Rollforward bis zur Markierung aus und schließt die markierte Transaktion aus dem Rollforward aus.  
   
@@ -116,7 +117,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
 6.  Stellen Sie jede Datenbank wieder her.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - clustered indexes, UNIQUE constraint
 - indexes [SQL Server], clustered
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ec406af911a0ea95910eba4a7bf35b68544418cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9aca99e368fa95b55877b7c654be2fec55dbab2e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-clustered-indexes"></a>Erstellen gruppierter Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Erstellen eines gruppierten Indexes für eine Tabelle mit:**  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Implementations"></a> Typische Implementierungen  
  Gruppierte Indizes werden auf folgende Weise implementiert:  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/17/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-clustered-index-by-using-object-explorer"></a>So erstellen Sie einen gruppierten Index mit dem Objekt-Explorer  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Klicken Sie unter **Indexschlüsselspalten**auf **Hinzufügen…**.  
   
-5.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus***table_name* das Kontrollkästchen der Tabellenspalte, die dem gruppierten Index hinzugefügt werden soll.  
+5.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus***Tabellenname* das Kontrollkästchen der Tabellenspalte, die dem gruppierten Index hinzugefügt werden soll.  
   
 6.  Klicken Sie auf **OK**.  
   
@@ -120,13 +121,13 @@ ms.lasthandoff: 11/17/2017
   
 9. Klicken Sie auf **Schließen**.  
   
-10. Klicken Sie im Menü **Datei** auf **Speichern***table_name*.  
+10. Klicken Sie im Menü **Datei** auf **Speichern***Tabellenname*.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-create-a-clustered-index"></a>So erstellen Sie einen gruppierten Index  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/17/2017
   
  Weitere Informationen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen von Primärschlüsseln](../../relational-databases/tables/create-primary-keys.md)   
  [Erstellen von Unique-Einschränkungen](../../relational-databases/tables/create-unique-constraints.md)  
   

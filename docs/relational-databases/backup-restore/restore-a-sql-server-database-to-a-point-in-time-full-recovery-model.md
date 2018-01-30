@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - point in time recovery [SQL Server]
 - restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 08fc61282bda93c3c99d5c2cb28334cfd90876e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d3a7afa6acf10d26f64198f7064c2ff66cfee17f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt (vollständiges Wiederherstellungsmodell)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Wiederherstellen einer SQL Server-Datenbank zu einem bestimmten Zeitpunkt mit:**  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/17/2017
   
  RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So stellen Sie eine Datenbank bis zu einem Zeitpunkt wieder her**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der entsprechenden Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und erweitern Sie die Serverstruktur.  
@@ -103,7 +104,7 @@ ms.lasthandoff: 11/17/2017
   
 9. Nachdem Sie den gewünschten Zeitpunkt für die Wiederherstellung angegeben haben, stellt der Datenbankwiederherstellungsberater sicher, dass die Spalte **Wiederherstellen** des Rasters **Wiederherzustellende Sicherungssätze** nur die Sicherungen angezeigt, die für die Wiederherstellung bis zu diesem Zeitpunkt benötigt werden. Die ausgewählten Sicherungen machen den empfohlenen Wiederherstellungsplan für Ihre Zeitpunktwiederherstellung aus. Verwenden Sie nach Möglichkeit nur die für diesen Wiederherstellungsvorgang ausgewählten Sicherungen.  
   
-     Weitere Informationen zu den Spalten des Rasters **Wiederherzustellende Sicherungssätze** finden Sie unter [Datenbank wiederherstellen &#40;Seite „Allgemein“&#41;](../../relational-databases/backup-restore/restore-database-general-page.md). Informationen zum Datenbankwiederherstellungsberater finden Sie unter [Übersicht über Wiederherstellungsvorgänge &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
+     Weitere Informationen zu den Spalten des Rasters **Wiederherzustellende Sicherungssätze** finden Sie unter [Datenbank wiederherstellen &#40;Seite „Allgemein“&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)bezeichnet) gesichert werden. Informationen zum Datenbankwiederherstellungsberater finden Sie unter [Übersicht über Wiederherstellungsvorgänge &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
   
 10. Auf der Seite **Optionen** im Bereich **Wiederherstellungsoptionen** können Sie entsprechend Ihren Anforderungen die folgenden Optionen auswählen:  
   
@@ -140,7 +141,7 @@ ms.lasthandoff: 11/17/2017
   
  **Grundlegende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax**  
   
- RESTORE LOG *database_name* FROM <backup_device> WITH STOPAT **=***time***,** RECOVERY…  
+ RESTORE LOG *Datenbankname* FROM <Sicherungsgerät> WITH STOPAT **=***Zeit***,** RECOVERY…  
   
  Der Wiederherstellungszeitpunkt ist der Transaktionscommit, der zuletzt vor oder genau zu dem gegebenen **datetime** -Wert erfolgte, der für *time*angegeben wird.  
   
@@ -160,7 +161,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Stellen Sie die letzte differenzielle Datenbanksicherung wieder her und – sofern vorhanden –  ohne dabei die Datenbank wiederherzustellen (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Wenden Sie jede einzelne Transaktionsprotokollsicherung in derselben Reihenfolge an, in der sie erstellt wurde, und geben Sie dabei den Zeitpunkt an, zu dem die Wiederherstellung des Protokolls beendet werden soll (RESTORE DATABASE *Datenbankname* FROM <Sicherungsmedium> WITH STOPAT**=***time***,** RECOVERY).  
+4.  Wenden Sie jede einzelne Transaktionsprotokollsicherung in derselben Reihenfolge an, in der sie erstellt wurde, und geben Sie dabei den Zeitpunkt an, zu dem die Wiederherstellung des Protokolls beendet werden soll (RESTORE DATABASE *Datenbankname* FROM <Sicherungsgerät> WITH STOPAT**=***Zeit***,** RECOVERY).  
   
     > [!NOTE]  
     >  Die Optionen RECOVERY und STOPAT. Wenn die Transaktionsprotokollsicherung den geforderten Zeitpunkt nicht enthält (z. B. wenn der angegebene Zeitpunkt hinter dem Zeitpunkt liegt, bis zu dem das Transaktionsprotokoll reicht), wird eine Warnung erzeugt, und die Datenbank wird nicht wiederhergestellt.  
@@ -202,7 +203,7 @@ GO
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> (SMO)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  

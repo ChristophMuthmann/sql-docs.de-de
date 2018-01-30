@@ -8,22 +8,25 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.main.f1
-helpviewer_keywords: Database Mirroring Monitor [SQL Server], interface
+f1_keywords:
+- sql13.swb.dbmmonitor.main.f1
+helpviewer_keywords:
+- Database Mirroring Monitor [SQL Server], interface
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34171578d9cf3b544106acdb7f017cb33fd3ccf9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 66fcc054ffc20f45534845376c356745581db02d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-monitor-overview"></a>Datenbankspiegelungs-Monitor (Übersicht)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Wenn Sie über die richtigen Berechtigungen verfügen, können Sie den Datenbankspiegelungs-Monitor verwenden, um eine beliebige Teilmenge der gespiegelten Datenbanken auf einer Serverinstanz zu überwachen. Durch das Überwachen können Sie das Vorhandensein und die Qualität des Datenflusses in der Datenbank-Spiegelungssitzung überprüfen. Der Datenbankspiegelungs-Monitor ist auch bei der Problembehandlung der Ursachen für reduzierten Datenfluss hilfreich.  
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/20/2017
  *\<Status>*  
  Im Folgenden sind die möglichen Statuswerte und die zugehörigen Symbole aufgeführt:  
   
-|Symbol|Status|Beschreibung|  
+|Symbol|Status|Description|  
 |----------|------------|-----------------|  
 |Warnungssymbol|**Unbekannt**|Der Monitor ist mit keinem der beiden Partner verbunden. Es sind nur die Informationen verfügbar, die vom Monitor zwischengespeichert wurden.|  
 |Warnungssymbol|**Wird synchronisiert**|Der Inhalt der Spiegeldatenbank hält mit dem Inhalt der Prinzipaldatenbank nicht Schritt. Die Prinzipalserverinstanz sendet Protokolldatensätze an die Spiegelserverinstanz, die die Änderungen auf die Spiegeldatenbank anwendet, um ein Rollforward dafür auszuführen.<br /><br /> Beim Start einer Datenbank-Spiegelungssitzung befinden sich Spiegel- und Prinzipaldatenbank in diesem Status.|  
@@ -68,9 +71,9 @@ ms.lasthandoff: 11/20/2017
  *<PRINCIPAL_SERVER>*  
  Der Name des Partners, der derzeit die Prinzipalserverinstanz ist. Der Name weist folgendes Format auf:  
   
- *<SYSTEM_NAME>*[**\\***<instance_name>*]  
+ *<SYSTEM_NAME>*[**\\***<Instanzname>*]  
   
- Dabei ist *<SYSTEM_NAME>* der Name des Systems, auf dem sich die Serverinstanz befindet. Für eine nicht standardmäßige Serverinstanz wird auch der Instanzname angezeigt: *<SYSTEM_NAME>***\\***<instance_name>*.  
+ Dabei ist *<SYSTEM_NAME>* der Name des Systems, auf dem sich die Serverinstanz befindet. Für eine Serverinstanz, die nicht dem Standard entspricht, wird auch der Instanzname angezeigt: *<SYSTEMNAME>***\\***<Instanzname>*.  
   
  *<MIRROR_SERVER>*  
  Der Name des Partners, der derzeit die Spiegelserverinstanz ist. Das Format ist identisch mit dem Format für den Prinzipalserver.  
@@ -85,19 +88,19 @@ ms.lasthandoff: 11/20/2017
   
  Ein Systemadministrator kann die aktuelle Konfiguration der Warnungen für die Datenbank anzeigen, indem er die Seite im Registerformat **Warnungen** auswählt. Von dort aus kann der Administrator das Dialogfeld **Schwellenwerte für Warnung festlegen** öffnen, um einen oder mehrere Schwellenwerte für Warnungen zu aktivieren und zu konfigurieren.  
   
- Im Banner über den Registerkarten zeigt der Detailbereich den Zeitpunkt an, zu dem die Statusinformationen zuletzt vom Monitor aktualisiert wurden: **Letzte Aktualisierung:***\<date>**\<time>*. Normalerweise ruft der Datenbankspiegelungs-Monitor Statusinformationen von der Prinzipal- und der Spiegelserverinstanz zu unterschiedlichen Zeiten ab. Die ältere dieser beiden Aktualisierungszeiten wird angezeigt.  
+ Im Banner über den Registerkarten zeigt der Detailbereich den Zeitpunkt an, zu dem die Statusinformationen zuletzt vom Monitor aktualisiert wurden: **Letzte Aktualisierung:***\<Datum>**\<Uhrzeit>*. Normalerweise ruft der Datenbankspiegelungs-Monitor Statusinformationen von der Prinzipal- und der Spiegelserverinstanz zu unterschiedlichen Zeiten ab. Die ältere dieser beiden Aktualisierungszeiten wird angezeigt.  
   
 ## <a name="action-menu"></a>Menü Aktion  
  Das Menü **Aktion** enthält immer die folgenden Befehle:  
   
-|Befehl|Beschreibung|  
+|Befehl|Description|  
 |-------------|-----------------|  
 |**Gespiegelte Datenbank registrieren...**|Öffnet das Dialogfeld **Gespiegelte Datenbank registrieren** . Verwenden Sie dieses Dialogfeld, um eine oder mehrere gespiegelte Datenbanken auf einer bestimmten Serverinstanz zu registrieren, indem Sie die Datenbank bzw. Datenbanken dem Datenbankspiegelungs-Monitor hinzufügen. Wenn eine Datenbank hinzugefügt wurde, werden Informationen zu der Datenbank, zu ihren Partnern und zum Herstellen von Verbindungen mit den Partnern vom Datenbankspiegelungs-Monitor lokal zwischengespeichert.|  
 |**Serverinstanzverbindungen verwalten...**|Wenn Sie diesen Befehl auswählen, wird das Dialogfeld **Serververbindungen verwalten** geöffnet. In diesem Dialogfeld können Sie eine Serverinstanz auswählen, für die Sie Anmeldeinformationen angeben möchten, die der Monitor beim Herstellen einer Verbindung mit einem bestimmten Partner verwenden soll.<br /><br /> Suchen Sie den betreffenden Eintrag im Raster **Serverinstanzen** , und klicken Sie in dieser Zeile auf **Bearbeiten** , um die Anmeldeinformationen für einen Partner zu bearbeiten. Das Dialogfeld **Verbindung mit Server herstellen** wird mit festgelegtem Serverinstanznamen und mit auf den aktuellen zwischengespeicherten Wert initialisierten Steuerelementen für die Anmeldeinformationen angezeigt. Ändern Sie die Authentifizierungsinformationen nach Bedarf, und klicken Sie auf **Verbinden**. Wenn die Anmeldeinformationen über ausreichende Privilegien verfügen, wird die **Verbindung herstellen über** -Spalte mit den neuen Anmeldeinformationen aktualisiert.|  
   
  Wenn Sie eine Datenbank auswählen, enthält das Menü **Aktion** auch die folgenden Befehle.  
   
-|Befehl|Beschreibung|  
+|Befehl|Description|  
 |-------------|-----------------|  
 |**Registrierung für diese Datenbank aufheben**|Entfernt die ausgewählte Datenbank aus dem Datenbankspiegelungs-Monitor.|  
 |**Schwellenwerte für Warnung festlegen...**|Öffnet das Dialogfeld **Schwellenwerte für Warnung festlegen** . In diesem Dialogfeld kann ein Systemadministrator Warnungen für die Datenbank auf jedem der Partner aktivieren oder deaktivieren und den Schwellenwert jeder Warnung ändern. Es ist empfehlenswert, einen Schwellenwert für eine bestimmte Warnung auf beiden Partnern festzulegen, um sicherzustellen, dass die Warnung weiterhin angezeigt wird, wenn ein Failover der Datenbank erfolgt. Der geeignete Schwellenwert für jeden Partner ist abhängig von der Leistungsfähigkeit des Systems des betreffenden Partners.<br /><br /> Ein Ereignis wird nur dann in das Ereignisprotokoll für eine Leistung geschrieben, sofern der Wert seinen Schwellenwert erreicht oder überschreitet, wenn die Statustabelle aktualisiert wird. Wenn ein Spitzenwert den Schwellenwert vorübergehend zwischen zwei Statusupdates erreicht, wird dieser Spitzenwert nicht erkannt.|  
@@ -106,7 +109,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   

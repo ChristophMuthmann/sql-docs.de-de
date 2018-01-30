@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - ports [SQL Server]
 - dedicated administrator connections [SQL Server]
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
-caps.latest.revision: "65"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81d35953fbdf67c20e857b3b7e4d29e57f0c1a4b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7b2ada96d38f3653433aca10f15bfb0e87f165ed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Diagnoseverbindung für Datenbankadministratoren
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt eine spezielle Diagnoseverbindung für Administratoren bereit, wenn Standardverbindungen zum Server nicht möglich sind. Mit dieser Diagnoseverbindung kann ein Administrator auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifen, um Diagnoseabfragen auszuführen und Probleme zu behandeln, auch wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf Anforderungen von Standardverbindungen nicht antwortet.  
@@ -47,9 +48,9 @@ ms.lasthandoff: 11/27/2017
   
  Nur Mitglieder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Rolle sysadmin können dedizierte Administratorverbindungen (DAC) herstellen.  
   
- Die DAC steht über das **sqlcmd** -Hilfsprogramm für Eingabeaufforderungen mit einem speziellen Administratorschalter (**-A**) zur Verfügung und wird von diesem unterstützt. Weitere Informationen zum Verwenden von **sqlcmd** finden Sie unter [Verwenden von sqlcmd mit Skriptvariablen](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Sie können die Verbindung auch herstellen, indem Sie dem Instanznamen **admin:** im folgenden Format voranstellen: **sqlcmd -S admin:<*instance_name*>**>. Alternativ können Sie eine dedizierte Administratorverbindung (DAC) in einem [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Abfrage-Editor initiieren, indem Sie eine Verbindung mit **admin:\<*instance_name*>** herstellen.  
+ Die DAC steht über das **sqlcmd** -Hilfsprogramm für Eingabeaufforderungen mit einem speziellen Administratorschalter (**-A**) zur Verfügung und wird von diesem unterstützt. Weitere Informationen zum Verwenden von **sqlcmd** finden Sie unter [Verwenden von sqlcmd mit Skriptvariablen](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Sie können die Verbindung auch herstellen, indem Sie dem Instanznamen **admin:** im folgenden Format voranstellen: **sqlcmd S admin:<*Instanzname*>**. Alternativ können Sie auch eine Datenschichtanwendung (DAC) in einem [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Abfrage-Editor initiieren, indem Sie eine Verbindung mit **admin:\<*Instanzname*>** herstellen.  
   
-## <a name="restrictions"></a>Einschränkungen  
+## <a name="restrictions"></a>Restrictions  
  Da die DAC nur zum Diagnostizieren von Serverproblemen in seltenen Fällen gedacht ist, bestehen einige Einschränkungen für die Verbindung:  
   
 -   Um sicherzustellen, dass Ressourcen für die Verbindung verfügbar sind, ist nur eine DAC pro Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zulässig. Ist bereits eine dedizierte Administratorverbindung aktiv, wird jede weitere Anforderung einer Verbindung über DAC mit Fehler 17810 abgelehnt.  

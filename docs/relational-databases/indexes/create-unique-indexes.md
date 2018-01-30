@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], unique
 - unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 40c852b19c2b2ed8a1f7f8b304c30d6214bcee21
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4459bfad325436c9de896e0ad40deb60e2a707a3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-unique-indexes"></a>Erstellen eindeutiger Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So erstellen Sie einen eindeutigen Index auf einer Tabelle mithilfe von:**  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Benefits"></a> Vorteile eines eindeutigen Indexes  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 11/17/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>So erstellen Sie einen eindeutigen Index mit dem Tabellen-Designer  
   
@@ -132,7 +133,7 @@ ms.lasthandoff: 11/17/2017
   
 13. Klicken Sie auf **Schließen**.  
   
-14. Klicken Sie im Menü **Datei** auf **Speichern***table_name*.  
+14. Klicken Sie im Menü **Datei** auf **Speichern***Tabellenname*.  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>Erstellen eines eindeutigen Indexes mit dem Objekt-Explorer  
   
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  Klicken Sie unter **Indexschlüsselspalten**auf **Hinzufügen…**.  
   
-8.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus***table_name* die Kontrollkästchen der Tabellenspalten, die dem eindeutigen Index hinzugefügt werden sollen.  
+8.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus***Tabellenname* die Kontrollkästchen der Tabellenspalten, die dem eindeutigen Index hinzugefügt werden sollen.  
   
 9. Klicken Sie auf **OK**.  
   
@@ -160,7 +161,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>So erstellen Sie einen eindeutigen Index auf einer Tabelle  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

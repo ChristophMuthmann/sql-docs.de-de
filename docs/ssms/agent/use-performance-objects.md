@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - performance counters [SQL Server], SQL Server Agent
 - counters [SQL Server], SQL Server Agent
 ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34279a9ff92a6cda54ee76ebadad6bc9ed6ca5ef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f99696f644d5def145d4e4ff1c0b040ec29d6673
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="use-performance-objects"></a>Verwenden von Leistungsobjekten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +44,8 @@ Die folgende Tabelle veranschaulicht, wie die Leistungsobjekte des [!INCLUDE[ssN
   
 |Instanztyp|Objektname|  
 |-----------------|---------------|  
-|Default|**SQLAgent:***Objekt*:*Indikator*|  
-|Benannt|**SQLAgent$**<br /> **&#42;Instanzname&#42; :***Objekt*:*Indikator*|  
+|Default|**SQLAgent:***Objekt*:*Zähler*|  
+|Benannt|**SQLAgent$**<br /> ***Instanzname*:***Objekt*:*Zähler*|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] beinhaltet die folgenden Leistungsobjekte für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent.  
   

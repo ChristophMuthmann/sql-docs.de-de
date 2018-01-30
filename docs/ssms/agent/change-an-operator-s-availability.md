@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - disabling operators
 - operators (users) [Database Engine], changing availability with Management Studio
 ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddc03d3d6bbc890538280bed094786f37c3ee682
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 23c85593a9e89978f84271240f3898a02c40fca9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="change-an-operator39s-availability"></a>Ändern der Verfügbarkeit eines Operators
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie der Zeitplan für den Empfang von Warnmeldungen für einen Operator in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] oder [!INCLUDE[tsql](../../includes/tsql_md.md)] geändert wird.  
@@ -69,7 +70,7 @@ Nur Mitglieder der festen Serverrolle **sysadmin** können Operatoren bearbeiten
   
 4.  Klicken Sie mit der rechten Maustaste auf den Operator, den Sie aktivieren oder deaktivieren möchten, wählen Sie **Eigenschaften**aus, und klicken Sie anschließend auf die Registerkarte **Allgemein** .  
   
-5.  Aktivieren oder deaktivieren Sie im Dialogfeld *Operatorname***Eigenschaften** das Kontrollkästchen **Aktiviert** .  
+5.  Aktivieren oder deaktivieren Sie im Dialogfeld *Operatorname***Eigenschaften** das Kontrollkästchen **Aktiviert**.  
   
 6.  Klicken Sie auf **OK**.  
   

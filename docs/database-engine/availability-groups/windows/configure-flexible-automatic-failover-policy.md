@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c1ec4e43ebc62a5c64477cb372ad82f9d1bf26a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7e82b63c2bbc3d3788272f065d1cdb795decc8b1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>Konfigurieren einer flexiblen Richtlinie für automatisches Failover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  Die flexible Failoverrichtlinie für eine Verfügbarkeitsgruppe kann nicht mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]konfiguriert werden.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Limitations"></a> Einschränkungen beim automatischen Failover  
   
@@ -112,13 +113,13 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="PowerShellProcedure"></a> PowerShell  
  **So konfigurieren Sie die flexible Failoverrichtlinie**  
   
-1.  Legen Sie mit**cd**die Serverinstanz als Standard fest, auf der das primäre Replikat gehostet wird.  
+1.  Legen Sie mit (**cd**) die Serverinstanz als Standard fest, die das primäre Replikat hostet.  
   
 2.  Verwenden Sie beim Hinzufügen eines Verfügbarkeitsreplikats zu einer Verfügbarkeitsgruppe das Cmdlet **New-SqlAvailabilityGroup** . Verwenden Sie beim Ändern eines vorhandenen Verfügbarkeitsreplikats das Cmdlet **Set-SqlAvailabilityGroup**.  
   
-    -   Um die Failover-Bedingungsebene festzulegen, verwenden Sie den **FailureConditionLevel** *level*-Parameter, wobei *level* für einen der folgenden Werte steht:  
+    -   Um die Failover-Bedingungsebene festzulegen, verwenden Sie den Parameter **FailureConditionLevel***level*, wobei *level* für einen der folgenden Werte steht:  
   
-        |Wert|Ebene|Automatisches Failover wird initiiert, wenn...|  
+        |value|Ebene|Automatisches Failover wird initiiert, wenn...|  
         |-----------|-----------|-------------------------------------------|  
         |**OnServerDown**|1 (eins)|der Server ausfällt. Der SQL Server-Dienst wird aufgrund eines Failovers oder Neustarts beendet.|  
         |**OnServerUnresponsive**|2 (zwei)|der Server nicht reagiert. Der Wert der Bedingungsebene wird unterschritten, der SQL Server-Dienst ist mit dem Cluster verbunden, und der Schwellenwert für das Timeout der Integritätsprüfung wird überschritten, oder das aktuelle primäre Replikat weist einen fehlerhaften Status auf.|  
@@ -136,7 +137,7 @@ ms.lasthandoff: 11/20/2017
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   Um den Schwellenwert für das Timeout der Integritätsprüfung festzulegen, verwenden Sie den **HealthCheckTimeout***n* -Parameter, wobei *n* für eine ganze Zahl zwischen 15000 Millisekunden (15 Sekunden) und 4294967295 Millisekunden steht. Der Standardwert ist 30000 Millisekunden (oder 30 Sekunden).  
+    -   Um den Schwellenwert für das Timeout der Integritätsprüfung festzulegen, verwenden Sie den Parameter *HealthCheckTimeout***n*, wobei *n* für eine ganze Zahl zwischen 15.000 Millisekunden (15 Sekunden) und 4.294.967.295 Millisekunden steht. Der Standardwert ist 30000 Millisekunden (oder 30 Sekunden).  
   
          Mit dem folgenden Befehl wird z. B. der Schwellenwert für das Timeout der Integritätsprüfung der vorhandenen Verfügbarkeitsgruppe `AG1`in 120.000 Millisekunden (zwei Minuten) geändert.  
   
@@ -147,7 +148,7 @@ ms.lasthandoff: 11/20/2017
         ```  
   
 > [!NOTE]  
->  Um die Syntax eines Cmdlets anzuzeigen, verwenden Sie das Cmdlet **Get-Help** in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+>  Um die Syntax eines Cmdlets anzuzeigen, verwenden Sie das **Get-Help** -Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
  **Einrichten und Verwenden des SQL Server PowerShell-Anbieters**  
   
@@ -155,7 +156,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Verfügbarkeitsmodi &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Failover und Failovermodi (Always On-Verfügbarkeitsgruppen)](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   

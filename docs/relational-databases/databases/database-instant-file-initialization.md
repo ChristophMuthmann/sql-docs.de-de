@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - IFI [SQL Server]
 - database instant file initialization [SQL Server]
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cf0f0006186bde39228ac9b0039e5a45b42431b7
-ms.sourcegitcommit: b4b7cd787079fa3244e77c1e9e3c68723ad30ad4
+ms.openlocfilehash: 43b4084e91c08bfe870807196261e4be9b934872
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="database-file-initialization"></a>Datenbankdatei-Initialisierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Daten- und Protokolldateien werden initialisiert, um vorhandene Daten zu überschreiben, die von zuvor gelöschten Dateien auf dem Datenträger zurückgelassen wurden. Daten- und Protokolldateien werden erstmals durch Ausfüllen der Dateien mit Nullen initialisiert, wenn Sie einen der folgenden Vorgänge durchführen:  
@@ -89,6 +90,10 @@ Database Instant File Initialization: disabled. For security and performance con
 
 ## <a name="security-considerations"></a>Überlegungen zur Sicherheit  
 Da bei Verwendung der schnellen Dateiinitialisierung (Instant File Initialization, IFI) der gelöschte Datenträgerinhalt nur überschrieben wird, wenn neue Daten in die Dateien geschrieben werden, kann ein nicht autorisierter Prinzipal möglicherweise so lange auf den gelöschten Inhalt zugreifen, bis andere Daten in diesen Bereich der Datendatei geschrieben werden. Während die Datenbankdatei an die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angefügt ist, wird diese Gefahr einer Offenlegung von Informationen durch die besitzerverwaltete Zugriffssteuerungsliste (Discretionary Access Control List, DACL) in der Datei verringert. Diese DACL gewährt den Dateizugriff nur für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto und den lokalen Administrator. Wenn die Datei jedoch getrennt wird, kann möglicherweise ein Benutzer oder Dienst darauf zugreifen, der nicht über *SE_MANAGE_VOLUME_NAME* verfügt. Eine ähnliche Betrachtung ergibt sich bei der Sicherung der Datenbank: Der gelöschte Inhalt kann für einen nicht autorisierten Benutzer oder Dienst verfügbar werden, wenn die Sicherungsdatei nicht mit einer entsprechenden DACL geschützt wird.  
+
+Außerdem kann es sein, dass ein SQL Server-Administrator Zugriff auf die grundlegenden Inhalte der Seite und bereits gelöschte Inhalte erhält, wenn eine Datei über die schnelle Dateiinitialisierung erstellt wird.
+
+Wenn die Datenbankdateien auf einem Storage Area Network gehostet werden, kann es außerdem sein, dass das Storage Area Network neue Seiten immer als vorinitialisiert anzeigt und die Vorinitialisierung der Seiten durch das Betriebssystem würde einen unnötigen zeitlichen Mehraufwand bedeuten.
  
 > [!NOTE]
 > Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer sicheren physischen Umgebung installiert wird, können die aus der Aktivierung der schnellen Dateiinitialisierung resultierenden Leistungsvorteile das Sicherheitsrisiko überwiegen. Aus diesem Grund werden folgende Empfehlungen gegeben.

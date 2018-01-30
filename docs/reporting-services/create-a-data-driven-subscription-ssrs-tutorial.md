@@ -11,13 +11,14 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -75,7 +76,7 @@ Auf Ihrem Computer müssen für die Verwendung dieses Lernprogramms folgende Anw
   
 -   Die **AdventureWorks2014** -Beispieldatenbank, die Daten für den Beispielbericht bereitstellt.  
   
--   Eine [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Rollenzuordnung, welche die Aufgabe Alle Abonnements verwalten für den Beispielbericht umfasst. Diese Aufgabe ist für das Definieren eines datengesteuerten Abonnements erforderlich. Wenn Sie als Administrator am Computer angemeldet sind, gewährt die standardmäßige Rollenzuweisung für lokale Administratoren die zum Erstellen datengesteuerter Abonnements erforderlichen Berechtigungen. Weitere Informationen finden Sie unter [Granting Permissions on a Native Mode Report Server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
+-   Eine [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Rollenzuordnung, welche die Aufgabe Alle Abonnements verwalten für den Beispielbericht umfasst. Diese Aufgabe ist für das Definieren eines datengesteuerten Abonnements erforderlich. Wenn Sie als Administrator am Computer angemeldet sind, gewährt die standardmäßige Rollenzuweisung für lokale Administratoren die zum Erstellen datengesteuerter Abonnements erforderlichen Berechtigungen. Weitere Informationen finden Sie unter [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 -   Ein freigegebener Ordner, für den Sie Schreibberechtigungen besitzen. Auf den freigegebenen Ordner muss über eine Netzwerkverbindung zugegriffen werden können.  
   

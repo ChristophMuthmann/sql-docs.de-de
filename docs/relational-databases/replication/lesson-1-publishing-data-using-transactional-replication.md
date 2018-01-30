@@ -8,22 +8,25 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b6d053d9a0e80785e375fdb1f796ddf01894d993
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 49a9b7290e5f3253995f7bef0efd1390f74de5bf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lektion 1: Veröffentlichen von Daten mithilfe der Transaktionsreplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In dieser Lektion erstellen Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Transaktionsveröffentlichung, um eine gefilterte Teilmenge der **Product**-Tabelle in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Beispieldatenbank zu veröffentlichen. Außerdem fügen Sie der Veröffentlichungszugriffsliste (Publication Access List, PAL) die vom Verteilungs-Agent verwendete SQL Server-Anmeldung hinzu. Bevor Sie dieses Tutorial starten, sollten Sie das vorherige Tutorial ( [Vorbereiten des Servers für die Replikation](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)) abgeschlossen haben.  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 10. Deaktivieren Sie auf der Seite „Agentsicherheit“ das Kontrollkästchen **Sicherheitseinstellungen des Momentaufnahme-Agents verwenden** .  
   
-11. Klicken Sie für den Momentaufnahme-Agent auf **Sicherheitseinstellungen**, geben Sie \<*Machine_Name>***\repl_snapshot** im Feld **Prozesskonto** ein, geben Sie das Kennwort für dieses Konto ein und klicken Sie anschließend auf **OK**.  
+11. Klicken Sie für den Momentaufnahmen-Agent auf **Sicherheitseinstellungen**, geben Sie \<*Computername>***\repl_snapshot** im Feld **Prozesskonto** ein, geben Sie das Kennwort für dieses Konto ein, und klicken Sie anschließend auf **OK**.  
   
 12. Wiederholen Sie den vorherigen Schritt, um repl_logreader als Prozesskonto für den Protokolllese-Agenten festzulegen, und klicken Sie anschließend auf **Fertig stellen**.  
   
@@ -82,12 +85,12 @@ ms.lasthandoff: 11/17/2017
   
 3.  Wählen Sie die Seite **Veröffentlichungszugriffsliste** aus und klicken Sie auf **Hinzufügen**.  
   
-4.  Wählen Sie im Dialogfeld **Veröffentlichungszugriff hinzufügen** die Anmeldung *<Computername>***\repl_distribution** aus und klicken Sie auf **OK**. Klicken Sie auf **OK**.  
+4.  Klicken Sie im Dialogfeld **Veröffentlichungszugriff hinzufügen** auf *<Computername>***\repl_distribution**, und klicken Sie auf **OK**. Klicken Sie auf **OK**.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 Sie haben die Transaktionsveröffentlichung erfolgreich erstellt. Als Nächstes abonnieren Sie diese Veröffentlichung. Siehe [Lektion 2: Erstellen eines Abonnements für die Transaktionsveröffentlichung](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Filtern von veröffentlichten Daten](../../relational-databases/replication/publish/filter-published-data.md)  
 [Definieren eines Artikels](../../relational-databases/replication/publish/define-an-article.md)  
 [Erstellen und Anwenden der Momentaufnahme](../../relational-databases/replication/create-and-apply-the-snapshot.md)  

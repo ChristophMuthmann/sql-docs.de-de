@@ -8,22 +8,25 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c1d145f5fc43ad13cbc5f41faec86974ee736f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1fb890bc73be0a4d27c5ea9cafe1e2fbed930679
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Lektion 2: Erstellen eines Abonnements für die Mergeveröffentlichung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In dieser Lektion erstellen Sie das Abonnement mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Anschließend erstellen Sie Berechtigungen für die Abonnementdatenbank und generieren die gefilterte Datenmomentaufnahme für das neue Abonnement manuell. Für diese Lektion wird vorausgesetzt, dass Sie die vorherige Lektion abgeschlossen haben: [Lektion 1: Veröffentlichen von Daten mithilfe der Mergereplikation](../../relational-databases/replication/lesson-1-publishing-data-using-merge-replication.md).  
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  Geben Sie im Dialogfeld **Neue Datenbank** den Namen **SalesOrdersReplica** in das Feld **Datenbankname** ein, klicken Sie auf **OK**, und klicken Sie anschließend auf **Weiter**.  
   
-8.  Klicken Sie auf der Seite Sicherheit für den Merge-Agent auf die Schaltfläche mit den Auslassungspunkten (**…**), geben Sie im Feld **Prozesskonto** das Konto \<*Machine_Name>***\repl_merge** ein, und geben Sie das Kennwort für dieses Konto ein. Klicken Sie auf **OK** und anschließend auf **Weiter** und dann erneut auf **Weiter**.  
+8.  Klicken Sie auf der Seite Sicherheit für den Merge-Agent auf die Schaltfläche mit den Auslassungspunkten (**…**), geben Sie im Feld **Prozesskonto** das Konto \<*Computername>***\repl_merge** ein, und geben Sie das Kennwort für dieses Konto ein. Klicken Sie auf **OK** und anschließend auf **Weiter** und dann erneut auf **Weiter**.  
   
 9. Wählen Sie auf der Seite Abonnements initialisieren aus der Liste **Initialisierungszeitpunkt** die Option **Bei der ersten Synchronisierung** aus, klicken Sie auf **Weiter**, und klicken Sie erneut auf **Weiter** .  
   
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Abonnenten her, erweitern Sie **Datenbanken**, **SalesOrdersReplica**und **Sicherheit**, klicken Sie mit der rechten Maustaste auf **Benutzer**, und wählen Sie anschließend **Neuer Benutzer**aus.  
   
-2.  Geben Sie auf der Seite **Allgemein** im Feld **Benutzername** den Namen \<*Machine_Name>***\repl_merge** ein, klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**), und klicken Sie auf **Durchsuchen**. Wählen Sie \<*Machine_Name>***\repl_merge** aus, klicken Sie auf **OK** und dann auf **Namen überprüfen**, und klicken Sie anschließend auf **OK**.  
+2.  Geben Sie auf der Seite **Allgemein** im Feld **Benutzername** den Namen \<*Computername>***\repl_merge** ein, klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**), und klicken Sie auf **Durchsuchen**. Wählen Sie \<*Computername>***\repl_merge** aus, klicken Sie auf **OK** und dann auf **Namen überprüfen**, und klicken Sie anschließend auf **OK**.  
   
 3.  Wählen Sie unter **Mitgliedschaft in Datenbankrollen**die **db_owner**-Rolle aus, und klicken Sie anschließend auf **OK** , um den Benutzer zu erstellen.  
   
@@ -76,10 +79,10 @@ ms.lasthandoff: 11/17/2017
   
 5.  Wählen Sie die neu hinzugefügte Partition aus, klicken Sie auf **Die ausgewählten Momentaufnahmen jetzt generieren**, und klicken Sie anschließend auf **OK**.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 Sie haben erfolgreich ein Abonnement für die Mergeveröffentlichung erstellt und die gefilterte Momentaufnahme für die Datenpartition des neuen Abonnements generiert, damit diese verfügbar ist, wenn das Abonnement initialisiert wird. Als Nächstes gewähren Sie dem Merge-Agent Rechte für die Abonnementdatenbank und führen den Merge-Agent aus, um die Synchronisierung zu starten und das Abonnement zu initialisieren. Weitere Informationen finden Sie unter [Lektion 3: Synchronisieren des Abonnements für die Mergeveröffentlichung](../../relational-databases/replication/lesson-3-synchronizing-the-subscription-to-the-merge-publication.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)  
 [Erstellen eines Pullabonnements](../../relational-databases/replication/create-a-pull-subscription.md)  
 [Momentaufnahmen für Mergeveröffentlichungen mit parametrisierten Filtern](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  

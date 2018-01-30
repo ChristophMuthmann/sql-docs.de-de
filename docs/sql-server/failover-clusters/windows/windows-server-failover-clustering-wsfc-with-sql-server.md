@@ -8,7 +8,8 @@ ms.service:
 ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - quorum [SQL Server]
 - failover clustering [SQL Server], Always On Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5fdd2a6aed90983a38c4a34cd48588d157c036df
-ms.sourcegitcommit: 719bcc010dd1ca6f2acfcdf6f9bd9f73451ca8ca
+ms.openlocfilehash: 520b6480f584fcd26563c675548b0a60fd204e1f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Windows Server-Failoverclustering mit SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Beim *Windows Server-Failovercluster* (WSFC) handelt es sich um eine Gruppe unabhängiger Server, die zur Steigerung der Verfügbarkeit von Anwendungen und Diensten zusammenarbeiten. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] nutzt WSFC-Dienste und -Funktionen, um [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] - und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanzen zu unterstützen.  
@@ -42,7 +43,8 @@ ms.lasthandoff: 12/20/2017
  Clusterressource  
  Eine physische oder logische Entität, die im Besitz eines Knotens sein, online und offline geschaltet, zwischen Knoten verschoben und als Clusterobjekt verwaltet werden kann. Eine Clusterressource kann jeweils nur im Besitz eines einzelnen Knotens sein.  
   
- Rolle einer Auflistung von Clusterressourcen, die als einzelnes Clusterobjekt verwaltet werden. Für SQL Server gilt entweder die Rolle „Always On-Verfügbarkeitsgruppe“ (AG) oder die Rolle „Always On-Failoverclusterinstanz“ (FCI). Eine Rolle enthält sämtliche Clusterressourcen, die für AG und FCI benötigt werden. Failover und Failback führen Aktionen immer im Zusammenhang mit Rollen aus. Für eine FCI enthält die Rolle die Ressourcen einer IP-Adresse und eines Netzwerknamens sowie die SQL Server-Ressourcen. Eine AG-Rolle umfasst die AG-Ressource und, sollte ein Listener konfiguriert sein, einen Netzwerknamen und eine IP-Ressource. 
+ -Rolle  
+ Eine Auflistung von Clusterressourcen, die als einzelnes Clusterobjekt verwaltet werden, um besondere Funktionen bereitzustellen. Für SQL Server gilt entweder die Rolle „Always On-Verfügbarkeitsgruppe“ (AG) oder die Rolle „Always On-Failoverclusterinstanz“ (FCI). Eine Rolle enthält sämtliche Clusterressourcen, die für AG und FCI benötigt werden. Failover und Failback führen Aktionen immer im Zusammenhang mit Rollen aus. Für eine FCI enthält die Rolle die Ressourcen einer IP-Adresse und eines Netzwerknamens sowie die SQL Server-Ressourcen. Eine AG-Rolle umfasst die AG-Ressource und, sollte ein Listener konfiguriert sein, einen Netzwerknamen und eine IP-Ressource. 
 
  Netzwerknamenressource  
  Ein logischer Servername, der als Clusterressource verwaltet wird. Eine Netzwerknamenressource muss mit einer IP-Adressressource verwendet werden. Für diese Einträge sind möglicherweise Objekte in Active Directory Domain Services und/oder DNS erforderlich. 

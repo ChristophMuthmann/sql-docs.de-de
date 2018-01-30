@@ -8,7 +8,8 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - vlf size
 - transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: dcc274dcde55b2910b96404c2c3a06c647518dc5
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: 69637be0ea958bf908210df298b210959e3afc17
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,14 +86,16 @@ Das Transaktionsprotokoll in einer Datenbank erstreckt sich über eine oder mehr
 >    -  Wenn die Dateivergrößerung zwischen 64 MB und 1 GB beträgt, werden 8 VLFs erstellt, die den Umfang der Dateivergrößerung abdecken. (Beispielsweise werden für eine Vergrößerung von 512 MB acht VLFs von 64 MB erstellt.)
 >    -  Bei einer Dateivergrößerung von mehr als 1 GB werden 16 VLFs erstellt, die den Umfang der Dateivergrößerung abdecken. (Beispielsweise werden für eine Vergrößerung von 8 GB sechzehn VLFs von 512 MB erstellt.)
 
-Wenn die Protokolldateien durch viele kleine Schritte auf eine beträchtliche Größe anwachsen, enthalten sie zahlreiche virtuelle Protokolldateien. **Hierdurch verlangsamen sich möglicherweise das Starten der Datenbank sowie Protokollsicherungs- und -wiederherstellungsvorgänge.** Es wird empfohlen, den Protokolldateien einen *size*-Wert zuzuweisen, der ungefähr der endgültigen erforderlichen Größe entspricht, und darüber hinaus einen relativ hohen Wert für *growth_increment* festzulegen. Lesen Sie den folgenden Tipp, um die optimale VLF-Verteilung für die aktuelle Größe des Transaktionsprotokolls zu ermitteln.
+Wenn die Protokolldateien durch viele kleine Inkremente auf eine beträchtliche Größe anwachsen, enthalten sie zahlreiche virtuelle Protokolldateien. **Hierdurch verlangsamen sich möglicherweise das Starten der Datenbank sowie Protokollsicherungs- und -wiederherstellungsvorgänge.** Umgekehrt enthalten diese wenige große virtuelle Protokolldateien, wenn die Protokolldateien durch wenige oder nur ein Inkrement auf eine beträchtliche Größe anwachsen. Weitere Informationen zum Schätzen der **erforderlichen Größe** und der Einstellung für die **automatische Vergrößerung** eines Transaktionsprotokolls finden Sie unter [Verwalten der Größe der Transaktionsprotokolldatei](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations) im Abschnitt *Empfehlungen*.
+
+Es wird empfohlen, den Protokolldateien für eine optimale VLF-Verteilung mithilfe der erforderlichen Inkremente einen *size*-Wert zuzuweisen, der ungefähr der endgültigen erforderlichen Größe entspricht, und darüber hinaus einen relativ hohen Wert für *growth_increment* festzulegen. Lesen Sie den folgenden Tipp, um die optimale VLF-Verteilung für die aktuelle Größe des Transaktionsprotokolls zu ermitteln. 
  - Der mit dem Argument `SIZE` festgelegte *size*-Wert von `ALTER DATABASE` ist die Anfangsgröße der Protokolldatei.
- - Der *growth_increment*-Wert, der mit dem Argument `FILEGROWTH` von `ALTER DATABASE` festgelegt wird, entspricht der Menge von Speicherplatz, die der Datei immer dann hinzugefügt wird, wenn neuer Speicherplatz erforderlich wird. 
+ - Der *growth_increment*-Wert (auch als Wert für die automatische Vergrößerung bezeichnet), der mit dem Argument `FILEGROWTH` von `ALTER DATABASE` festgelegt wird, entspricht der Menge von Speicherplatz, die der Datei immer dann hinzugefügt wird, wenn neuer Speicherplatz erforderlich wird. 
  
 Weitere Informationen zu den Argumenten `FILEGROWTH` und `SIZE` von `ALTER DATABASE` finden Sie unter [ALTER DATABASE-Optionen FILE und FILEGROUP &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!TIP]
-> Um die optimale VLF-Verteilung für die aktuelle Größe des Transaktionsprotokolls aller Datenbanken in einer bestimmten Instanz zu ermitteln, sehen Sie sich [dieses Skript](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs) an.
+> Informationen darüber, wie Sie die optimale VLF-Verteilung für die aktuelle Größe des Transaktionsprotokolls aller Datenbanken in einer bestimmten Instanz sowie die benötigten Wachstumsinkremente zum Erreichen der erforderlichen Größe ermitteln, finden Sie in [diesem Skript](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
   
  Das Transaktionsprotokoll ist eine umbrechende Protokolldatei. Nehmen Sie beispielsweise an, eine Datenbank verfügt über eine physische Protokolldatei, die in vier VLFs unterteilt ist. Wenn die Datenbank erstellt wird, beginnt die logische Protokolldatei am Anfang der ersten physischen Protokolldatei. Neue Protokolldatensätze werden am Ende des logischen Protokolls hinzugefügt, das in Richtung des Endes des physischen Protokolls erweitert wird. Beim Abschneiden eines Protokolls werden alle virtuellen Protokolle freigegeben, deren Datensätze sich ohne Ausnahme vor der Mindestwiederherstellungs-Protokollfolgenummer (Minimum Recovery Log Sequence Number, MinLSN) befinden. *MinLSN* ist die Protokollfolgenummer des ältesten Protokolldatensatzes, der für einen erfolgreichen Rollback der gesamten Datenbank benötigt wird. Das Transaktionsprotokoll in der Beispieldatenbank würde in etwa so aussehen wie das Protokoll in der folgenden Abbildung.  
   

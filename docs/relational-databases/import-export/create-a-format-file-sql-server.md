@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: format files [SQL Server], creating
+helpviewer_keywords:
+- format files [SQL Server], creating
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
-caps.latest.revision: "57"
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c3aa7d6569f8a4390f249c032641978fb5382313
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e4eb0b49bbf52926536293cf26cd47046329abaf
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-format-file-sql-server"></a>Erstellen einer Formatdatei (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Beim Massenimportieren bzw. -exportieren von Daten in eine bzw. aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle können Sie eine Formatdatei für ein flexibles System für das Schreiben von Datendateien verwenden, bei denen nur geringfügige oder keine Bearbeitung erforderlich ist, um sie mit anderen Datenformaten oder für das Lesen von Datendateien aus anderen Softwareprogrammen kompatibel zu machen.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="creating-a-non-xml-format-file"></a>Erstellen einer Nicht-XML-Formatdatei  
  Geben Sie bei der Ausführung eines **bcp** -Befehls zum Erstellen einer Formatdatei das **format** -Argument an, und verwenden Sie **nul** anstatt eines Datendateipfads. Die **format** -Option erfordert außerdem die **-f** -Option, z.B.:  
   
- **bcp** *Tabelle_oder_Ansicht* **format** nul **-f***Formatdateiname*  
+ **bcp** *Tabelle_oder_Ansicht* **Format** NULL **-f***Formatdateiname*  
   
 > [!NOTE]  
 >  Um Nicht-XML-Formatdateien klar zu kennzeichnen, empfiehlt es sich, als Dateierweiterung FMT zu verwenden, beispielsweise "MeineTabelle.fmt".  
@@ -66,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
  Der Befehl **bcp** enthält die folgenden Qualifizierer.  
   
-|Qualifizierer|Beschreibung|  
+|Qualifizierer|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *Formatdatei*|Gibt die Nicht-XML-Formatdatei an.|  
 |**-n**|Gibt systemeigene Datentypen an.|  
@@ -96,7 +98,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  Der Befehl **bcp** enthält die folgenden Qualifizierer.  
   
-|Qualifizierer|Beschreibung|  
+|Qualifizierer|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *Formatdatei*|Gibt eine Nicht-XML-Formatdatei an.|  
 |**-c**|Gibt Zeichendaten an.|  
@@ -195,7 +197,7 @@ Im Folgenden ist ein Beispiel für die Formatdatei ohne Sortierungsinformationen
   
  Der Befehl **bcp** enthält die folgenden Qualifizierer.  
   
-|Qualifizierer|Beschreibung|  
+|Qualifizierer|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *Formatdatei* **-x**|Gibt die XML-Formatdatei an.|  
 |**-c**|Gibt Zeichendaten an.|  
@@ -235,7 +237,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  Der Befehl **bcp** enthält die folgenden Qualifizierer.  
   
-|Qualifizierer|Beschreibung|  
+|Qualifizierer|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *Formatdatei* **-x**|Gibt die XML-Formatdatei an.|  
 |**-n**|Gibt systemeigene Datentypen an.|  
@@ -278,8 +280,8 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
   
 -   [Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
  [Überspringen einer Tabellenspalte mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Auslassen eines Datenfelds mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)   

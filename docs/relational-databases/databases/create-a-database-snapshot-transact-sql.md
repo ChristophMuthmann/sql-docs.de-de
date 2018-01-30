@@ -8,27 +8,29 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: database snapshots [SQL Server], creating
+helpviewer_keywords:
+- database snapshots [SQL Server], creating
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
-caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1f7597f066fa8346be7f5a7c95b75b7c18648ca9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 57985ae3903c8c27b702818897e9889ecc0c01bf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Erstellen einer Datenbankmomentaufnahme (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankmomentaufnahme kann nur mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)] erstellt werden. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nicht unterstützt.  
   
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Die Quelldatenbank, die ein Wiederherstellungsmodell verwenden kann, muss die folgenden Voraussetzungen erfüllen:  
@@ -119,7 +121,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     Dabei ist der *Name der Quelldatenbank* die *Quelldatenbank*, der *logische Dateiname* ist der in SQL Server beim Verweis auf die Datei verwendete logische Name, der *physische Dateiname* ist der vom Betriebssystem beim Erstellen der Datei verwendete Pfad- und Dateiname, und der *Name der Datenbank-Momentaufnahme* ist der Name der Momentaufnahme, aus der die Datenbank wiederhergestellt werden soll. Eine vollständige Beschreibung dieser Syntax finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+     Dabei ist der *Quelle_**Datenbankname* die Quelldatenbank, der *logische_Dateiname* ist der in SQL Server beim Verweis auf die Datei verwendete logische Name, der *Betriebssystem_Dateiname* ist der vom Betriebssystem beim Erstellen der Datei verwendete Pfad- und Dateiname, und der *Name_der_Datenbank_Momentaufnahme* ist der Name der Momentaufnahme, aus der die Datenbank wiederhergestellt werden soll. Eine vollständige Beschreibung dieser Syntax finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)erstellt werden.  
   
     > [!NOTE]  
     >  Wenn Sie eine Datenbankmomentaufnahme erstellen, darf die CREATE DATABASE-Anweisung weder Protokolldateien noch Offlinedateien, Wiederherstellungsdateien oder außer Kraft gesetzte Dateien enthalten.  
@@ -177,7 +179,7 @@ GO
   
 -   [Löschen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Datenbank-Momentaufnahmen &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   

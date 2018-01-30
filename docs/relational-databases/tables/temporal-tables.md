@@ -8,20 +8,21 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e7f2945bcceefdd7613a44a292fa5794554607ce
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ba3bc1642b2b266c030f8ec326d001a8fb56b4ab
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="temporal-tables"></a>Temporale Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -123,7 +124,7 @@ CREATE TABLE dbo.Employee
 >  Die in den datetime2-Spalten des Systems aufgezeichneten Zeiten basieren auf dem Anfangszeitpunkt der Transaktion selbst. Beispielsweise wird für alle Zeilen, die innerhalb einer einzelnen Transaktion eingefügt werden, in der Spalte, die dem Beginn des **SYSTEM_TIME** -Zeitraums entspricht, die gleiche UTC-Zeit aufgezeichnet.  
   
 ## <a name="how-do-i-query-temporal-data"></a>Wie lassen sich temporale Daten abfragen?  
- Die **FROM***\<Tabelle>*-Klausel der **SELECT**-Anweisung hat eine neue Klausel (**FOR SYSTEM_TIME**) mit fünf temporal-spezifischen Unterklauseln zum Abfragen von Daten in der aktuellen und in den Verlaufstabellen. Die Syntax dieser neuen **SELECT** -Anweisung wird für Einzeltabellen direkt unterstützt, durch mehrfache JOINS weitergegeben und für zusammenfassende Sichten mehrerer temporaler Tabellen unterstützt.  
+ Die **FROM***\<Tabelle>*-Klausel der **SELECT**-Anweisung weist eine neue Klausel **FOR SYSTEM_TIME** mit fünf Unterklauseln auf. Diese sind für temporale Tabellen spezifisch und dienen zum übergreifenden Abfragen von Daten in aktuellen Tabellen und Verlaufstabellen. Die Syntax dieser neuen **SELECT** -Anweisung wird für Einzeltabellen direkt unterstützt, durch mehrfache JOINS weitergegeben und für zusammenfassende Sichten mehrerer temporaler Tabellen unterstützt.  
   
  ![Zeitliche Abfragen](../../relational-databases/tables/media/temporal-querying.PNG "Zeitliche Abfragen")  
   
@@ -153,12 +154,12 @@ SELECT * FROM Employee
 |**ALL**|Alle Zeilen|Gibt die Vereinigungsmenge der Zeilen zurück, die der aktuellen und der Verlaufstabelle angehören.|  
   
 > [!NOTE]  
->  Optional können Sie sich entscheiden, diese Zeitraumspalten auszublenden, sodass Abfragen, die nicht explizit auf diese Zeitraumspalten verweisen, diese Spalten nicht wiedergeben (das Szenario **SELECT \* FROM***\<Tabelle>*). Um eine ausgeblendete Spalte zurückzugeben, verweisen Sie einfach in der Abfrage explizit auf die ausgeblendete Spalte. Analog dazu verhalten sich **INSERT** und **BULK INSERT** -Anweisungen, als ob diese neuen Zeitraumspalten nicht vorhanden wären (und die Spaltenwerte werden automatisch aufgefüllt). Weitere Informationen zur Verwendung der **HIDDEN** -Klausel finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) und [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)unterstützt wird.  
+>  Optional können Sie diese Zeitraumspalten ausblenden, sodass Abfragen, die nicht explizit auf diese Zeitraumspalten verweisen, diese Spalten nicht zurückgeben (das **SELECT \* FROM***\<Tabelle>*-Szenario). Um eine ausgeblendete Spalte zurückzugeben, verweisen Sie einfach in der Abfrage explizit auf die ausgeblendete Spalte. Analog dazu verhalten sich **INSERT** und **BULK INSERT** -Anweisungen, als ob diese neuen Zeitraumspalten nicht vorhanden wären (und die Spaltenwerte werden automatisch aufgefüllt). Weitere Informationen zur Verwendung der **HIDDEN** -Klausel finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) und [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)unterstützt wird.  
   
 ## <a name="did-this-article-help-you-were-listening"></a>Fanden Sie diesen Artikel nützlich? Wir hören Ihnen zu  
  Welche Informationen suchen Sie, und haben Sie sie gefunden? Wir nehmen uns Ihr Feedback zu Herzen, um unsere Inhalte zu verbessern. Bitte senden Sie Ihre Kommentare an [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erste Schritte mit temporalen Tabellen mit Systemversionsverwaltung](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Temporale Tabellen mit Systemversionsverwaltung und speicheroptimierten Tabellen](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [Verwendungsszenarien für temporale Tabellen](../../relational-databases/tables/temporal-table-usage-scenarios.md)   

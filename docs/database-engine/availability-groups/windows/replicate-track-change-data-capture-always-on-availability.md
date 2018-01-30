@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cf871f0b6353d569106768deeeb5cc3e6d65b12d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4980545b408bde4c30047eae60e000f2518eb107
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replikation, Änderungsnachverfolgung und Change Data Capture (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -148,7 +149,7 @@ ms.lasthandoff: 11/20/2017
   
      Obwohl eine Clientanwendung in vielen Fällen immer eine Verbindung mit dem aktuellen primären Replikat herstellen möchte, ist dies nicht die einzige Möglichkeit, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]zu nutzen. Wenn eine Verfügbarkeitsgruppe für die Unterstützung von lesbaren sekundären Replikaten konfiguriert wurde, können Änderungsdaten auch von sekundären Knoten erfasst werden.  
   
-     Bei der Konfiguration einer Verfügbarkeitsgruppe wird das der SECONDARY_ROLE zugeordnete ALLOW_CONNECTIONS-Attribut verwendet, um den Typ des unterstützten sekundären Zugriffs anzugeben. Bei der Konfiguration als ALL werden alle Verbindungen zum sekundären Replikat zugelassen. Es sind jedoch nur die Verbindungen erfolgreich, die einen schreibgeschützten Zugriff erfordern. Bei der Konfiguration als READ_ONLY ist es bei der Verbindung mit der sekundären Datenbank erforderlich, eine schreibgeschützte Absicht anzugeben, damit die Verbindung erfolgreich hergestellt werden kann. Weitere Informationen finden Sie unter [Konfigurieren des schreibgeschützten Zugriffs auf ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
+     Bei der Konfiguration einer Verfügbarkeitsgruppe wird das der SECONDARY_ROLE zugeordnete ALLOW_CONNECTIONS-Attribut verwendet, um den Typ des unterstützten sekundären Zugriffs anzugeben. Bei der Konfiguration als ALL werden alle Verbindungen zum sekundären Replikat zugelassen. Es sind jedoch nur die Verbindungen erfolgreich, die einen schreibgeschützten Zugriff erfordern. Bei der Konfiguration als READ_ONLY ist es bei der Verbindung mit der sekundären Datenbank erforderlich, eine schreibgeschützte Absicht anzugeben, damit die Verbindung erfolgreich hergestellt werden kann. Weitere Informationen finden Sie unter [Konfigurieren des schreibgeschützten Zugriffs auf ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)besitzen.  
   
      Die folgende Abfrage kann verwendet werden, um zu bestimmen, ob eine schreibgeschützte Absicht benötigt wird, um eine Verbindung mit einem lesbaren sekundären Replikat herzustellen.  
   
@@ -196,7 +197,7 @@ Wenn Change Data Capture in einer Datenbank deaktiviert werden muss, die Teil ei
 ##  <a name="Prereqs"></a> Voraussetzungen, Einschränkungen und Überlegungen zum Verwenden der Replikation  
  Dieser Abschnitt enthält Überlegungen zum Bereitstellen der Replikation mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]einschließlich Voraussetzungen, Einschränkungen und Empfehlungen.  
   
-### <a name="prerequisites"></a>Erforderliche Komponenten  
+### <a name="prerequisites"></a>Voraussetzungen  
   
 -   Wenn sich bei Verwendung der Transaktionsreplikation die Veröffentlichungsdatenbank in einer Verfügbarkeitsgruppe befindet, muss auf dem der Verleger und Verteiler mindestens [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]ausgeführt werden. Auf dem Abonnenten kann eine frühere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Version verwendet werden.  
   
@@ -210,16 +211,16 @@ Wenn Change Data Capture in einer Datenbank deaktiviert werden muss, die Teil ei
   
 -   Die Verlegerinstanzen erfüllen alle zur Teilnahme an einer Always On-Verfügbarkeitsgruppe erforderlichen Voraussetzungen. Weitere Informationen finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)unterstützt.  
   
-### <a name="restrictions"></a>Einschränkungen  
+### <a name="restrictions"></a>Restrictions  
  Unterstützte Kombinationen der Replikation in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
 |||||  
 |-|-|-|-|  
 ||**Verleger**|**Verteiler***\*|**Abonnent**|  
-|**Transaktion**|Ja<br /><br /> Hinweis: Bietet keine Unterstützung für die bidirektionale und wechselseitige Transaktionsreplikation.|Nein|Ja|  
-|**P2P**|Nein|Nein|Nein|  
-|**Merge**|Ja|Nein|Ja*|  
-|**Momentaufnahme**|Ja|Nein|Ja*|  
+|**Transaktion**|ja<br /><br /> Hinweis: Bietet keine Unterstützung für die bidirektionale und wechselseitige Transaktionsreplikation.|nein|ja|  
+|**P2P**|nein|nein|nein|  
+|**Merge**|ja|nein|Ja*|  
+|**Momentaufnahme**|ja|nein|Ja*|  
   
  *Das Failover zur Replikatdatenbank erfolgt manuell. Automatisches Failover wird nicht bereitgestellt.  
   
@@ -258,10 +259,10 @@ Wenn Change Data Capture in einer Datenbank deaktiviert werden muss, die Teil ei
   
 -   [Verwenden der Änderungsnachverfolgung &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Replikationsabonnenten und Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
- [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Always On-Verfügbarkeitsgruppen: Interoperabilität (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Always On-Failoverclusterinstanzen (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [Über Change Data Capture &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   

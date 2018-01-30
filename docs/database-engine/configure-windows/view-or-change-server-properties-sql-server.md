@@ -8,10 +8,12 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.connectionproperties.f1
+f1_keywords:
+- sql13.swb.connectionproperties.f1
 helpviewer_keywords:
 - viewing server properties
 - server properties [SQL Server]
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - servers [SQL Server], viewing
 - Connection Properties dialog box
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
-caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 24c76d4b89c34eac3463c8acd401b52817e4d117
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 501375d52cb16f1919c82bfb65f84220bcbbe6a7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Anzeigen oder Ändern von Servereigenschaften (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Sie die Eigenschaften einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder dem SQL Server-Konfigurations-Manager anzeigen oder ändern.  
@@ -158,7 +160,7 @@ GO
   
 2.  Klicken Sie im **SQL Server-Konfigurations-Manager**auf **SQL Server-Dienste**.  
   
-3.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **SQL Server (\<***instancename***>)**, und klicken Sie dann auf **Eigenschaften**.  
+3.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **SQL Server (\<***Instanzname***>**), und klicken Sie dann auf **Eigenschaften**.  
   
 4.  Ändern Sie im Dialogfeld **SQL Server (\<***Instanzname***>)-Eigenschaften** die Servereigenschaften auf der Registerkarte **Dienst** oder auf der Registerkarte **Erweitert**, und klicken Sie dann auf **OK**.  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-transaction-log
+ms.technology:
+- dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - manage log size
 - log size, manage
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 23aaaed04bfb552865cf9eb95b3150d520499dd9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 58cbe590d16bba9d74f41dc7499b563a2e0b2499
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Verwalten der Größe der Transaktionsprotokolldatei
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieses Thema enthält Informationen zum Überwachen der Größe eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Transaktionsprotokolls, Verkleinern des Transaktionsprotokolls, Hinzufügen zu oder Vergrößern einer Transaktionsprotokolldatei, Optimieren der Wachstumsrate des **tempdb**-Transaktionsprotokolls und Steuern des Wachstums einer Transaktionsprotokolldatei.  
@@ -105,9 +106,9 @@ Es folgen einige allgemeine Empfehlungen für die Arbeit mit Transaktionsprotoko
       |Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Daten: 1 MB, Protokolldateien: 10 %|  
       |Vor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Daten: 10 %, Protokolldateien: 10 %|  
 
--   Ein kleines Vergrößerungsinkrement könnte dazu führen, dass zu viele kleine [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) generiert werden und die Leistung beeinträchtigt wird. 
+-   Ein kleines Vergrößerungsinkrement könnte dazu führen, dass zu viele kleine [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) generiert werden und die Leistung beeinträchtigt wird. Informationen darüber, wie Sie die optimale VLF-Verteilung für die aktuelle Größe des Transaktionsprotokolls aller Datenbanken in einer bestimmten Instanz sowie die benötigten Wachstumsinkremente zum Erreichen der erforderlichen Größe ermitteln, finden Sie in [diesem Skript](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
 
--   Ein großes Vergrößerungsinkrement könnte dazu führen, dass wenige große [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) generiert werden und darüber hinaus die Leistung beeinträchtigt. 
+-   Ein großes Vergrößerungsinkrement könnte dazu führen, dass wenige große [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) generiert werden und darüber hinaus die Leistung beeinträchtigt. Informationen darüber, wie Sie die optimale VLF-Verteilung für die aktuelle Größe des Transaktionsprotokolls aller Datenbanken in einer bestimmten Instanz sowie die benötigten Wachstumsinkremente zum Erreichen der erforderlichen Größe ermitteln, finden Sie in [diesem Skript](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs). 
 
 -   Auch bei aktiviertem autogrow-Inkrement können Sie eine Meldung erhalten, dass das Transaktionsprotokoll voll ist, wenn es nicht schnell genug wachsen kann, um die Anforderungen Ihrer Abfrage zu erfüllen. Weitere Informationen zum Ändern des Vergrößerungsinkrements finden Sie unter [ALTER DATABASE-Optionen FILE und FILEGROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 

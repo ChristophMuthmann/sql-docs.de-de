@@ -8,7 +8,8 @@ ms.service:
 ms.component: spatial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-spatial
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17c60845cbb26234bc6c52e7fe0e192973689e86
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11d8454a5862b02e162e22ead3ca46e68b4f1354
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Erstellen, Ändern und Löschen von räumlichen Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Mit einem räumlichen Index lassen sich bestimmte Operationen mit Spalten des Datentyps **geometry** oder **geography** (*räumliche Spalten*) effizienter ausführen. Für eine räumliche Spalte können mehrere räumliche Indizes angegeben werden. Dies ist beispielsweise hilfreich, wenn verschiedene Mosaikparameter in einer Spalte indiziert werden sollen.  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
 11. Geben Sie auf der Seite **räumlich** die Werte ein, die Sie für die räumlichen Eigenschaften des Index verwenden möchten.  
   
-     Beim Erstellen eines Index für eine Spalte des Typs **Geometrie** müssen Sie die Koordinaten **(***X-min***,***Y-min***)** und **(***X-max***,***Y-max***)** des umgebenden Felds angeben. Bei einem Index für eine Spalte des Typs **Geografie** werden die umgebenden Felder schreibgeschützt, nachdem Sie das Mosaikschema **Geografieraster** angegeben haben, weil im Geografierastermosaik kein umgebendes Feld verwendet wird.  
+     Beim Erstellen eines Index für eine Spalte des Typs **Geometrie** müssen Sie die Koordinaten **(***X-min***, ***Y-min***)** und **(***X-max***, ***Y-max***)** des umgebenden Felds angeben. Bei einem Index für eine Spalte des Typs **Geografie** werden die umgebenden Felder schreibgeschützt, nachdem Sie das Mosaikschema **Geografieraster** angegeben haben, weil im Geografierastermosaik kein umgebendes Feld verwendet wird.  
   
      Optional können Sie benutzerdefinierte Werte für das Feld **Zellen pro Objekt** und für die Rasterdichte auf jeder Ebene des Mosaikschemas angeben. Die Standardanzahl von Zellen pro Objekt ist 16 für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder 8 für [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder höher, und die Standardrasterdichte ist **Mittel** für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
@@ -159,7 +160,7 @@ ms.lasthandoff: 11/17/2017
  Räumliche Mosaike, die mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt wurden, können nicht in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]repliziert werden. Sie müssen räumliche Mosaike von [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] für räumliche Indizes für die Abwärtskompatibilität mit [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] - oder [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] -Datenbanken verwenden.  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   

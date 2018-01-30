@@ -1,7 +1,7 @@
 ---
 title: Reporting Services-Problembehandlung | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 05/25/2016
+ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.service: 
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6eeed553-512d-4603-9b14-0492a9d052b5
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ce0ce0df4a993917cb0aef35f603b3dfb2a5275c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f7125d026a9fde171db97685354b9e26bcebc6b3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="troubleshoot-reporting-services"></a>Reporting Services-Problembehandlung
   Mithilfe dieses Abschnitts können Sie Probleme bei [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bestimmen und beheben.  
@@ -48,5 +48,10 @@ ms.lasthandoff: 01/09/2018
 +  [Ursachen und Lösungen für Reporting Services-Fehler](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Reporting Services-Protokolldateien und Quellen](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+
+-  [Reporting Services Log Files and Sources (Reporting Services-Protokolldateien und -Quellen)](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+-   [Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+-  [SQL Server Reporting Services](https://stackoverflow.com/questions/tagged/reporting-services) auf Stack Overflow  
+-  Melden Sie ein Problem, oder machen Sie einen Vorschlag unter [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
+
+

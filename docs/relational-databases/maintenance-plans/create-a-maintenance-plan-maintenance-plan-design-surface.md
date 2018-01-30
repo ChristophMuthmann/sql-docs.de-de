@@ -8,21 +8,23 @@ ms.service:
 ms.component: maintenance-plans
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Maintenance Plan Design Surface
+helpviewer_keywords:
+- Maintenance Plan Design Surface
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9368c1af9cc0288868523d413d698816c7babc18
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 30a9e1d1a02e44de418a7d6d8de4acfe694e83f2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Erstellen eines Wartungsplans (Entwurfsoberfläche für Wartungspläne)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie für einen einzelnen Server oder mehrere Server mithilfe der Designoberfläche für Wartungspläne in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ein Wartungsplan erstellt wird. Der **Wartungsplanungs-Assistent** eignet sich am besten für das Erstellen von grundlegenden Wartungsplänen. Wenn Sie die Entwurfsoberfläche zum Erstellen eines Plans verwenden, können Sie einen erweiterten Workflow nutzen.  
@@ -33,11 +35,11 @@ ms.lasthandoff: 11/17/2017
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   [Erstellen eines Wartungsplans mithilfe der Entwurfsoberfläche für Wartungspläne](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -176,7 +178,7 @@ ms.lasthandoff: 11/17/2017
          **Ausdruck**  
          Geben Sie, wenn Sie die Vorgänge **Ausdruck**, **Ausdruck und Einschränkung**oder **Ausdruck oder Einschränkung**verwenden, einen Ausdruck ein. Der Ausdruck muss zu einem booleschen Wert ausgewertet werden.  
   
-         **Test**  
+         **Testen**  
          Überprüfen Sie den Ausdruck.  
   
          **Mehrere Einschränkungen**  
@@ -220,7 +222,7 @@ ms.lasthandoff: 11/17/2017
   
         1.  Wenn Sie **Textdateibericht generieren**auswählen, können Sie entweder **Neue Datei erstellen** oder **An Datei anfügen**auswählen.  
   
-        2.  Geben Sie je nach Ihrer Auswahl den Namen und vollständigen Pfad der neuen Datei oder der anzufügenden Datei ein, indem Sie die Informationen im Feld **Ordner** bzw. **Dateiname** angeben. Alternativ dazu können Sie auf die Auslassungspunkte **(…)** klicken und den Pfad zum Ordner oder den Dateinamen in den Dialogfeldern **Ordner suchen –***server_name* oder **Datenbankdateien suchen –***server_name* auswählen.  
+        2.  Geben Sie je nach Ihrer Auswahl den Namen und vollständigen Pfad der neuen Datei oder der anzufügenden Datei ein, indem Sie die Informationen im Feld **Ordner** bzw. **Dateiname** angeben. Alternativ dazu können Sie auf die Auslassungspunkte **(…)** klicken und den Pfad zum Ordner oder den Dateinamen in den Dialogfeldern **Ordner suchen** > *Servername* oder **Datenbankdateien suchen** > *Servername* auswählen.  
   
         3.  Wenn Sie in der Liste **Agentoperator**die Option **Bericht an einen E-Mail-Empfänger senden** auswählen, können Sie den Empfänger des per E-Mail gesendeten Berichts angeben.  
   
@@ -235,7 +237,7 @@ ms.lasthandoff: 11/17/2017
   
 12. Wenn Sie die Ergebnisse im Protokolldatei-Viewer anzeigen möchten, klicken Sie im **Objekt-Explorer**mit der rechten Maustaste entweder auf den Ordner **Wartungspläne** oder auf einen bestimmten Wartungsplan, und klicken Sie dann auf **Verlauf anzeigen**.  
   
-     Die folgenden Optionen sind im Dialogfeld **Protokolldatei-Viewer –***server_name* verfügbar.  
+     Die folgenden Optionen sind im Dialogfeld **Protokolldatei-Viewer** > *Servername* verfügbar.  
   
      **Protokoll laden**  
      Öffnen Sie ein Dialogfeld, in dem Sie eine zu ladende Protokolldatei angeben können.  

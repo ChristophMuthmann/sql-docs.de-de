@@ -8,7 +8,8 @@ ms.service:
 ms.component: sql-non-specified
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -35,16 +36,16 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: 
-caps.latest.revision: "121"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 583476272c18d111c603dbc2a174c01a8ce0a0d4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1e9a871ae7e354044fcf0778ae8fa7283a3475d4
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Editionen und unterstützten Funktionen von SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +83,7 @@ Die neuesten Versionsanmerkungen und Informationen zu Neuerungen finden Sie übe
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard Edition stellt eine grundlegende Datenverwaltungs- und Business Intelligence-Datenbank bereit, auf der Abteilungen und kleinere Unternehmen ihre Anwendungen ausführen. Diese unterstützt allgemeine Entwicklungstools für lokale und Cloudverwendung und ermöglicht eine effektive Datenbankverwaltung mit minimalen IT-Ressourcen.|  
 |Web|Die[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition ist eine mit geringen Anschaffungs- und Betriebskosten verbundene Option für Webhoster und Web-VAPs, die kostengünstige Skalierbarkeit und Verwaltungsfunktionen für Webpräsenzen jeder Größe bietet.|  
 |Entwickler|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition ermöglicht Entwicklern das Erstellen beliebiger Anwendungen auf der Basis von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sämtliche Funktionen der Enterprise Edition stehen zur Verfügung. Die Lizenz bezieht sich jedoch auf die Verwendung als Entwicklungs- und Testsystem und nicht als Produktionsserver. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer ist eine ideale Option zum Erstellen und Testen von Anwendungen.|  
-|Express-Editionen|Die Express Edition ist eine kostenlose Datenbank auf Einstiegsebene und eignet sich ideal zum Üben und zum Erstellen von datengesteuerten Anwendungen für Desktopcomputer und kleine Server. Dies ist die beste Wahl für unabhängige Softwareanbieter, Entwickler und Tüftler, die Clientanwendungen erstellen. Wenn Sie erweiterte Datenbankfunktionen benötigen, können Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express nahtlos auf höhere Endversionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]aktualisieren. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB, eine neue Light-Version von Express, die sämtliche Programmierbarkeitsfunktionen besitzt, wird noch im Benutzermodus ausgeführt und bietet eine schnelle, konfigurationsfreie Installation und eine kurze Liste an Voraussetzungen.|  
+|Express-Editionen|Die Express Edition ist eine kostenlose Datenbank auf Einstiegsebene und eignet sich ideal zum Üben und zum Erstellen von datengesteuerten Anwendungen für Desktopcomputer und kleine Server. Dies ist die beste Wahl für unabhängige Softwareanbieter, Entwickler und Tüftler, die Clientanwendungen erstellen. Wenn Sie erweiterte Datenbankfunktionen benötigen, können Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express nahtlos auf höhere Endversionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]aktualisieren. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB, eine neue Lightweightversion von Express, die sämtliche Programmierbarkeitsfunktionen besitzt, wird im Benutzermodus ausgeführt und stellt eine schnelle, konfigurationsfreie Installation und eine kurze Liste an Voraussetzungen bereit.|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>Verwenden von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit einem Internetserver  
  Die Clienttools von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] werden normalerweise auf einem Internetserver, z. B. einem Server mit Microsoft Internetinformationsdienste (Internet Information Services, IIS), installiert. Die Clienttools enthalten die Clientkonnektivitätskomponenten, mit denen eine Anwendung eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]herstellt.  
@@ -126,7 +127,7 @@ Die neuesten Versionsanmerkungen und Informationen zu Neuerungen finden Sie übe
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation|Kerndokumentation für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].| 
 
 **Developer und Evaluation-Editionen**  
-Von Developer und Evaluation-Editionen unterstützte Funktionen finden Sie unter Funktionen für die SQL Server Enterprise Edition in den folgenden Tabellen.
+Von den Editionen Developer und Evaluation unterstützte Funktionen finden Sie in den Funktionen der Enterprise Edition von SQL Server in den folgenden Tabellen.
 
 Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
@@ -151,25 +152,25 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Server Core-Unterstützung <sup>1</sup>|ja|ja|ja|ja|ja|  
-|Protokollversand|ja|ja|ja|Nein|Nein|  
+|Protokollversand|ja|ja|ja|nein|nein|  
 |Datenbankspiegelung|ja|ja<br /><br /> Nur vollständige Sicherheit|Nur WITNESS|Nur WITNESS|Nur WITNESS| 
-|Sicherungskomprimierung|ja|ja|Nein|Nein|Nein| 
+|Sicherungskomprimierung|ja|ja|nein|nein|nein| 
 |Datenbankmomentaufnahme|ja|ja|ja|ja|ja|
-|Always On-Failoverclusterinstanzen<sup>2</sup>|ja|ja|Nein|Nein|Nein|  
-|Always On-Verfügbarkeitsgruppen<sup>3</sup>|ja|Nein|Nein|Nein|Nein|
-|Basis-Verfügbarkeitsgruppen<sup>4</sup>|Nein|Ja|Nein|Nein|Nein|
-|Onlineseiten- und Onlinedateiwiederherstellung|ja|Nein|Nein|Nein|Nein|
-|Online-Indizierung|ja|Nein|Nein|Nein|Nein|
-|Fortsetzbare Neuerstellung von online geschalteten Indizes|ja|Nein|Nein|Nein|Nein|
-|Onlineschemaänderung|ja|Nein|Nein|Nein|Nein|
-|Schnelle Wiederherstellung|ja|Nein|Nein|Nein|Nein|
-|Gespiegelte Sicherungen|ja|Nein|Nein|Nein|Nein|
-|Hinzufügen von Speicher im laufenden Systembetrieb und CPU|ja|Nein|Nein|Nein|Nein|
+|Always On-Failoverclusterinstanzen<sup>2</sup>|ja|ja|nein|nein|nein|  
+|Always On-Verfügbarkeitsgruppen<sup>3</sup>|ja|nein|nein|nein|nein|
+|Basis-Verfügbarkeitsgruppen<sup>4</sup>|nein|ja|nein|nein|nein|
+|Onlineseiten- und Onlinedateiwiederherstellung|ja|nein|nein|nein|nein|
+|Online-Indizierung|ja|nein|nein|nein|nein|
+|Fortsetzbare Neuerstellung von online geschalteten Indizes|ja|nein|nein|nein|nein|
+|Onlineschemaänderung|ja|nein|nein|nein|nein|
+|Schnelle Wiederherstellung|ja|nein|nein|nein|nein|
+|Gespiegelte Sicherungen|ja|nein|nein|nein|nein|
+|Hinzufügen von Speicher im laufenden Systembetrieb und CPU|ja|nein|nein|nein|nein|
 |Datenbankwiederherstellungsberater|ja|ja|ja|ja|ja|
-|Verschlüsselte Sicherung|ja|ja|Nein|Nein|Nein|
-|Hybridsicherung in Windows Azure (Sicherung über URL)|ja|ja|Nein|Nein|Nein|
-|Verfügbarkeitsgruppe ohne Cluster|ja|ja|Nein|Nein|Nein|Nein|
-|Mindestreplikate für Commitverfügbarkeitsgruppen|ja|ja|ja|Nein|Nein|Nein|
+|Verschlüsselte Sicherung|ja|ja|nein|nein|nein|
+|Hybridsicherung in Windows Azure (Sicherung über URL)|ja|ja|nein|nein|nein|
+|Verfügbarkeitsgruppe ohne Cluster|ja|ja|nein|nein|nein|nein|
+|Mindestreplikate für Commitverfügbarkeitsgruppen|ja|ja|ja|nein|nein|nein|
   
 
 <sup>1</sup> Weitere Informationen zum Installieren von SQL Server unter Server Core finden Sie unter [Install SQL Server on Server Core (Installieren von SQL unter Server Core)](../database-engine/install-windows/install-sql-server-on-server-core.md). 
@@ -187,23 +188,23 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Columnstore <sup>1</sup>|ja|ja|ja|ja|ja|  
 |Große Objektbinärdateien in gruppierten Columnstore-Indizes|ja|ja|ja|ja|ja|  
-|Onlineneuerstellung für nicht gruppierten Columnstore-Index|ja|Nein|Nein|Nein|Nein|
+|Onlineneuerstellung für nicht gruppierten Columnstore-Index|ja|nein|nein|nein|nein|
 |In-Memory-OLTP <sup>1</sup>|ja|ja|ja|Ja, <sup>2</sup>|ja|
 |Stretch-Datenbank|ja|ja|ja|ja|ja|
 |Persistenter Hauptspeicher|ja|ja|ja|ja|ja|
 |Unterstützung mehrerer Instanzen|50|50|50|50|50|
 |Tabellen- und Indexpartitionierung|ja|ja|ja|ja|ja|  
 |Datenkomprimierung|ja|ja|ja|ja|ja|
-|Ressourcenkontrolle|ja|Nein|Nein|Nein|Nein|  
-|Parallelverarbeitung für partitionierte Tabellen|ja|Nein|Nein|Nein|Nein|
+|Ressourcenkontrolle|ja|nein|nein|nein|nein|  
+|Parallelverarbeitung für partitionierte Tabellen|ja|nein|nein|nein|nein|
 |Mehrere FILESTREAM-Container|ja|ja|ja|ja|ja|
-|NUMA-basierter und großer Arbeitsspeicher für umfangreiche Seiten und Zuordnung von Pufferarrays|ja|Nein|Nein|Nein|Nein|
-|Pufferpoolerweiterung|ja|ja|Nein|Nein|Nein|
-|Ressourcenkontrolle für E/A-Vorgänge|ja|Nein|Nein|Nein|Nein|  
+|NUMA-basierter und großer Arbeitsspeicher für umfangreiche Seiten und Zuordnung von Pufferarrays|ja|nein|nein|nein|nein|
+|Pufferpoolerweiterung|ja|ja|nein|nein|nein|
+|Ressourcenkontrolle für E/A-Vorgänge|ja|nein|nein|nein|nein|  
 |Verzögerte Dauerhaftigkeit|ja|ja|ja|ja|ja|
-|Automatische Optimierung|ja|Nein|Nein|Nein|Nein|
-|Adaptive Joins im Batchmodus|ja|Nein|Nein|Nein|Nein|
-|Feedback zur Speicherzuweisung im Batchmodus|ja|Nein|Nein|Nein|Nein|
+|Automatische Optimierung|ja|nein|nein|nein|nein|
+|Adaptive Joins im Batchmodus|ja|nein|nein|nein|nein|
+|Feedback zur Speicherzuweisung im Batchmodus|ja|nein|nein|nein|nein|
 |Verschachtelte Ausführung mit Tabellenwertfunktionen mit mehreren Anweisungen|ja|ja|ja|ja|ja|
 |Verbesserungen beim massenhaften Einfügen|ja|ja|ja|ja|ja|
 
@@ -221,25 +222,25 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Dynamische Datenmaskierung|ja|ja|ja|ja|ja|   
 |Allgemeine Überwachung|ja|ja|ja|ja|ja| 
 |Feine Überwachung|ja|ja|ja|ja|ja| 
-|Transparente Datenbankverschlüsselung|ja|Nein|Nein|Nein|Nein|   
-|Erweiterbare Schlüsselverwaltung|ja|Nein|Nein|Nein|Nein| 
+|Transparente Datenbankverschlüsselung|ja|nein|nein|nein|nein|   
+|Erweiterbare Schlüsselverwaltung|ja|nein|nein|nein|nein| 
 |Benutzerdefinierte Rollen|ja|ja|ja|ja|ja| 
 |Eigenständige Datenbanken|ja|ja|ja|ja|ja| 
-|Verschlüsselung von Sicherungen|ja|ja|Nein|Nein|Nein|  
+|Verschlüsselung von Sicherungen|ja|ja|nein|nein|nein|  
 
-##  <a name="Replication"></a> Replikation  
+##  <a name="Replication"></a> Replication  
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|Heterogene Abonnenten|ja|ja|Nein|Nein|Nein|  
+|Heterogene Abonnenten|ja|ja|nein|nein|nein|  
 |Mergereplikation|ja|ja|Ja (Nur Abonnent)|Ja (Nur Abonnent)|Ja (Nur Abonnent)|   
-|Veröffentlichungen mit Oracle|ja|Nein|Nein|Nein|Nein| 
-|Peer-zu-Peer-Transaktionsreplikation|ja|Nein|Nein|Nein|Nein|   
+|Veröffentlichungen mit Oracle|ja|nein|nein|nein|nein| 
+|Peer-zu-Peer-Transaktionsreplikation|ja|nein|nein|nein|nein|   
 |Momentaufnahmereplikation|ja|ja|Ja (Nur Abonnent)|Ja (Nur Abonnent)|Ja (Nur Abonnent)|   
 |SQL Server-Änderungsnachverfolgung|ja|ja|ja|ja|ja| 
 |Transaktionsreplikation|ja|ja|Ja (Nur Abonnent)|Ja (Nur Abonnent)|Ja (Nur Abonnent)|   
-|Transaktionsreplikation zu Azure|ja|ja|Nein|Nein|Nein|   
-|Aktualisierbares Abonnement für Transaktionsreplikation|ja|Nein|Nein|Nein|Nein|  
+|Transaktionsreplikation zu Azure|ja|ja|nein|nein|nein|   
+|Aktualisierbares Abonnement für Transaktionsreplikation|ja|nein|nein|nein|nein|  
   
 ##  <a name="SSMS"></a> Verwaltungstools  
   
@@ -248,13 +249,13 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |SQL Management Objects (SMO)|ja|ja|ja|ja|ja|  
 |SQL-Konfigurations-Manager|ja|ja|ja|ja|ja|   
 |SQL CMD (Command Prompt Tool – Eingabeaufforderungstool)|ja|ja|ja|ja|ja|      
-|Distributed Replay: Administratortool|ja|ja|ja|ja|Nein|  
-|Distributed Replay – Client|ja|ja|ja|Nein|Nein|  
-|Distributed Replay - Controller|Ja (bis zu 16 Clients)|Ja (1 Client)|Ja (1 Client)|Nein|Nein|   
+|Distributed Replay: Administratortool|ja|ja|ja|ja|nein|  
+|Distributed Replay – Client|ja|ja|ja|nein|nein|  
+|Distributed Replay - Controller|Ja (bis zu 16 Clients)|Ja (1 Client)|Ja (1 Client)|nein|nein|   
 |SQL Profiler|ja|ja|Nein <sup>1</sup>|Nein <sup>1</sup>|Nein <sup>1</sup>|  
-|SQL Server-Agent|ja|ja|ja|Nein|Nein| 
-|Microsoft System Center Operations Manager Management Pack|ja|ja|ja|Nein|Nein|  
-|Datenbankoptimierungsratgeber (DTA)|ja|Ja <sup>2</sup>|Ja <sup>2</sup>|Nein|Nein|      
+|SQL Server-Agent|ja|ja|ja|nein|nein| 
+|Microsoft System Center Operations Manager Management Pack|ja|ja|ja|nein|nein|  
+|Datenbankoptimierungsratgeber (DTA)|ja|Ja <sup>2</sup>|Ja <sup>2</sup>|nein|nein|      
   
  <sup>1</sup> SQL Server Web, SQL Server Express, SQL Server Express mit Tools und SQL Server Express mit Advanced Services können mit der SQL Server Standard- und SQL Server Enterprise-Edition profiliert werden.  
   
@@ -264,25 +265,25 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Benutzerinstanzen|Nein|Nein|Nein|Ja|ja| 
-|LocalDB|Nein|Nein|Nein|Ja|Nein| 
+|Benutzerinstanzen|nein|nein|nein|ja|ja| 
+|LocalDB|nein|nein|nein|ja|nein| 
 |Dedizierte Administratorverbindung|ja|ja|ja|Ja, mit Ablaufverfolgungsflag|Ja, mit Ablaufverfolgungsflag|   
 |SysPrep-Unterstützung <sup>1</sup>|ja|ja|ja|ja|ja| 
 |PowerShell-Skriptunterstützung<sup>2</sup>|ja|ja|ja|ja|ja| 
 |Unterstützung für Komponentenvorgänge der Datenschichtanwendung: Extrahieren, Bereitstellen, Aktualisieren, Löschen|ja|ja|ja|ja|ja| 
-|Richtlinienautomatisierung (Überprüfung nach Zeitplan und Änderungen)|ja|ja|ja|Nein|Nein|   
-|Sammler von Leistungsdaten|ja|ja|ja|Nein|Nein| 
-|Fähigkeit zur Registrierung als verwaltete Instanz in einer Mehrfachinstanzverwaltung|ja|ja|ja|Nein|Nein|   
-|Standardleistungsberichte|ja|ja|ja|Nein|Nein| 
-|Planhinweislisten und Planeinfrierung für Planhinweislisten|ja|ja|ja|Nein|Nein|   
+|Richtlinienautomatisierung (Überprüfung nach Zeitplan und Änderungen)|ja|ja|ja|nein|nein|   
+|Sammler von Leistungsdaten|ja|ja|ja|nein|nein| 
+|Fähigkeit zur Registrierung als verwaltete Instanz in einer Mehrfachinstanzverwaltung|ja|ja|ja|nein|nein|   
+|Standardleistungsberichte|ja|ja|ja|nein|nein| 
+|Planhinweislisten und Planeinfrierung für Planhinweislisten|ja|ja|ja|nein|nein|   
 |Direkte Abfrage von indizierten Sichten (mittels NOEXPAND-Hinweis)|ja|ja|ja|ja|ja| 
-|Automatische Wartung für indizierte Sichten|ja|ja|ja|Nein|Nein| 
-|Verteilte partitionierte Sichten|ja|Nein|Nein|Nein|Nein| 
-|Parallele Indexvorgänge|ja|Nein|Nein|Nein|Nein|  
-|Automatische Verwendung indizierter Sichten mittels Abfrageoptimierer|ja|Nein|Nein|Nein|Nein| 
-|Parallele Konsistenzprüfung|ja|Nein|Nein|Nein|Nein| 
-|SQL Server-Steuerungspunkt für das Hilfsprogramm|ja|Nein|Nein|Nein|Nein|    
-|Pufferpoolerweiterung|ja|ja|Nein|Nein|Nein| 
+|Automatische Wartung für indizierte Sichten|ja|ja|ja|nein|nein| 
+|Verteilte partitionierte Sichten|ja|nein|nein|nein|nein| 
+|Parallele Indexvorgänge|ja|nein|nein|nein|nein|  
+|Automatische Verwendung indizierter Sichten mittels Abfrageoptimierer|ja|nein|nein|nein|nein| 
+|Parallele Konsistenzprüfung|ja|nein|nein|nein|nein| 
+|SQL Server-Steuerungspunkt für das Hilfsprogramm|ja|nein|nein|nein|nein|    
+|Pufferpoolerweiterung|ja|ja|nein|nein|nein| 
   
  <sup>1</sup> Weitere Informationen finden Sie unter [Überlegungen zur Installation von SQL Server mit SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
  
@@ -293,20 +294,20 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Integration in Microsoft Visual Studio|ja|ja|ja|ja|ja| 
 |IntelliSense (Transact-SQL und MDX)|ja|ja|ja|ja|ja| 
-|SQL Server Data Tools (SSDT)|ja|ja|ja|ja|Nein|    
-|MDX-Bearbeitungs-, MDX-Debug- und MDX-Entwurfstools|ja|ja|Nein|Nein|Nein|   
+|SQL Server Data Tools (SSDT)|ja|ja|ja|ja|nein|    
+|MDX-Bearbeitungs-, MDX-Debug- und MDX-Entwurfstools|ja|ja|nein|nein|nein|   
   
 ##  <a name="Programmability"></a> Programmability  
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Grundlegende Integration von R|ja|ja|ja|ja|Nein|   
-|Erweiterte Integration von R|ja|Nein|Nein|Nein|Nein| 
-|Grundlegende Integration von Python|ja|ja|ja|ja|Nein|
-|Erweiterte Integration von Python|ja|Nein|Nein|Nein|Nein| 
-|Machine Learning-Server (eigenständig)|ja|Nein|Nein|Nein|Nein|   
+|Grundlegende Integration von R|ja|ja|ja|ja|nein|   
+|Erweiterte Integration von R|ja|nein|nein|nein|nein| 
+|Grundlegende Integration von Python|ja|ja|ja|ja|nein|
+|Erweiterte Integration von Python|ja|nein|nein|nein|nein| 
+|Machine Learning-Server (eigenständig)|ja|nein|nein|nein|nein|   
 |PolyBase-Computeknoten|ja|Ja <sup>1</sup>|Ja <sup>1</sup>, <sup>2</sup>|Ja <sup>1</sup>,|Ja <sup>1</sup>, | 
-|PolyBase-Hauptknoten|ja|Nein|Nein|Nein|Nein| 
+|PolyBase-Hauptknoten|ja|nein|nein|nein|nein| 
 |JSON|ja|ja|ja|ja|ja|   
 |Abfragespeicher|ja|ja|ja|ja|ja|   
 |Temporal|ja|ja|ja|ja|ja|   
@@ -318,10 +319,10 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |FileTable|ja|ja|ja|ja|ja| 
 |Datums- und Uhrzeitdatentypen|ja|ja|ja|ja|ja|  
 |Internationalisierungsunterstützung|ja|ja|ja|ja|ja| 
-|Volltextsuche und semantische Suche|ja|ja|ja|ja|Nein| 
-|Angabe der Sprache in einer Abfrage|ja|ja|ja|ja|Nein|   
+|Volltextsuche und semantische Suche|ja|ja|ja|ja|nein| 
+|Angabe der Sprache in einer Abfrage|ja|ja|ja|ja|nein|   
 |Service Broker (Messaging)|ja|ja|Nein (nur Client)|Nein (nur Client)|Nein (nur Client)|   
-|Transact-SQL-Endpunkte|ja|ja|ja|Nein|Nein| 
+|Transact-SQL-Endpunkte|ja|ja|ja|nein|nein| 
 |Diagramm|ja|ja|ja|ja|ja|  
 
 
@@ -339,13 +340,13 @@ Informationen über die Features von Integration Services (SSIS), die von den ei
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|Erstellen von Cubes ohne Datenbank|ja|ja|Nein|Nein|Nein |   
-|Automatisches Generieren von Staging- und Data Warehouse-Schemas|ja|ja|Nein|Nein|Nein| 
-|Change Data Capture|ja|ja|Nein|Nein|Nein| 
-|Optimierung von Sternjoin-Abfragen|ja|Nein|Nein|Nein|Nein| 
-|Skalierbare schreibgeschützte Analysis Services-Konfiguration|ja|Nein|Nein|Nein|Nein| 
-|Parallele Abfrageverarbeitung bei partitionierten Tabellen und Indizes|ja|Nein|Nein|Nein|Nein|   
-|Globale Batchaggregation|ja|Nein|Nein|Nein|Nein| 
+|Erstellen von Cubes ohne Datenbank|ja|ja|nein|nein|nein |   
+|Automatisches Generieren von Staging- und Data Warehouse-Schemas|ja|ja|nein|nein|nein| 
+|Change Data Capture|ja|ja|nein|nein|nein| 
+|Optimierung von Sternjoin-Abfragen|ja|nein|nein|nein|nein| 
+|Skalierbare schreibgeschützte Analysis Services-Konfiguration|ja|nein|nein|nein|nein| 
+|Parallele Abfrageverarbeitung bei partitionierten Tabellen und Indizes|ja|nein|nein|nein|nein|   
+|Globale Batchaggregation|ja|nein|nein|nein|nein| 
 
 ##  <a name="SSAS"></a> Analysis Services  
   
@@ -389,14 +390,14 @@ Informationen über die Business Intelligence-Clientfeatures, die von den einzel
 |Funktionsname|Enterprise|Standard|Web|Express mit Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|ja|ja|ja|ja|ja|   
-|Datenbank-E-Mail|ja|ja|ja|Nein|Nein| 
+|Datenbank-E-Mail|ja|ja|ja|nein|nein| 
   
 ##  <a name="Other"></a> Andere Komponenten  
   
 |Funktionsname|Enterprise|Standard|Web|Express mit Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|StreamInsight|StreamInsight Premium-Edition|StreamInsight Standard-Edition|StreamInsight Standard-Edition|Nein|Nein| 
-|StreamInsight HA|StreamInsight Premium-Edition|Nein|Nein|Nein|Nein|   
+|StreamInsight|StreamInsight Premium-Edition|StreamInsight Standard-Edition|StreamInsight Standard-Edition|nein|nein| 
+|StreamInsight HA|StreamInsight Premium-Edition|nein|nein|nein|nein|   
   
 > [![Herunterladen von SSMS](../ssms/download-sql-server-management-studio-ssms.md) **[Laden Sie die neueste Version von SQL Server Management Studio herunter.](../ssms/download-sql-server-management-studio-ssms.md)**    
   
