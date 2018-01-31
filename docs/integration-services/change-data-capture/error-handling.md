@@ -8,19 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3821b2849ef266437fb65c45004415727746d80f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 93a8df11a73ebb9abc21e94147c5ba2fbc0abd87
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="error-handling"></a>Fehlerbehandlung
   Eine Oracle CDC-Instanz führt das Mining für Änderungen einer einzelnen Oracle-Quelldatenbank durch (ein Oracle RAC-Cluster wird als einzelne Datenbank angesehen) und schreibt die Änderungen mit ausgeführtem Commit in Änderungstabellen in einer CDC-Datenbank auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zielinstanz.  
@@ -117,7 +118,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="handling-unexpected-oracle-cdc-instance-failures"></a>Behandeln von unerwarteten Oracle CDC-Instanzfehlern  
  Der Oracle CDC Service überwacht seine Unterprozesse der CDC-Instanz. Wenn ein Unterprozess der CDC-Instanz abgebrochen wird, deaktiviert der CDC Service diesen in der Tabelle MSXDBCDC.dbo.xdbcdc_databases und aktualisiert seinen cdc.xdbcdc_state-Status auf ABORTED. In diesem Fall wird das standardmäßige Dialogfeld Windows-Fehlerberichterstattung verwendet, um diesen Fehler zur weiteren Analyse zu melden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Change Data Capture Designer für Oracle von Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
  [Oracle CDC-Instanz](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   

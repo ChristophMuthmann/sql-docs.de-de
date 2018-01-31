@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cdce8273a2a1ed7cfa725f1933ab99de40cfe3f6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 54eb41670979c83b200060128da8564b765bcd5d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC-Datenbanken
   Eine Oracle CDC-Instanz wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mit dem gleichen Namen auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielinstanz zugeordnet. Diese Datenbank wird als Oracle CDC-Datenbank (oder kurz CDC-Datenbank) bezeichnet.  
@@ -113,7 +114,7 @@ ms.lasthandoff: 11/20/2017
   
  In der folgenden Tabelle werden die verfügbaren Optionen beschrieben.  
   
-|Name|Standardwert|Min|Max|STATIC-Cursor|Description|  
+|Name|Default|Min|Max|STATIC-Cursor|Description|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |Ablaufverfolgung|False|-|-|False|Die verfügbaren Werte sind:<br /><br /> Wahr<br /><br /> False<br /><br /> on<br /><br /> off|  
 |cdc_update_state_interval|10|1|120|False|Die Größe von Arbeitsspeichersegmenten (in KB), die für eine Transaktion zugeordnet werden (eine Transaktion kann mehr als ein Segment zuordnen). Siehe Spalte „memory_limit“ in der [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) -Tabelle.|  
@@ -191,7 +192,7 @@ ms.lasthandoff: 11/20/2017
 |data_end_cn|Die Änderungsnummer (CN) für die letzte Änderung der Daten in dieser Zeile.|  
 |data|Die bereitgestellten Änderungen für die Transaktion in BLOB-Form.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Change Data Capture Designer für Oracle von Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
   
   

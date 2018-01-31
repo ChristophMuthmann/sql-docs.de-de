@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 022b2b25d055e25dbfcc62ba494e5e6564dc4cd5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 753aa0f97ccfe8b5c63fff0e117e5f1a541bccb5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>Anzeigen der CDC-Instanzeigenschaften
   In diesem Verfahren wird beschrieben, wie Sie die CDC Designer Console zum Anzeigen von Informationen zu den Instanzen verwenden, die Sie im Rahmen der Verwaltung des Betriebs der Instanzen erstellen.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/20/2017
      **Tabellen**  
      Auf dieser Registerkarte werden Informationen zu den Tabellen angezeigt, die Teil des Change Data Capture-Vorgangs sind. Außerdem werden die Spalten aufgeführt, die aufgezeichnet werden. Informationen zur Anzeige auf dieser Registerkarte finden Sie unter [Edit Tables](../../integration-services/change-data-capture/edit-tables.md).  
   
-     **Erweitert**  
+     **Erweitert:**  
      Auf dieser Registerkarte wird eine Liste mit den erweiterten Eigenschaften angezeigt, die Sie im Eigenschaften-Editor definieren. Informationen zur Anzeige auf dieser Registerkarte finden Sie unter [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   
   

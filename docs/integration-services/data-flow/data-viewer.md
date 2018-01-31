@@ -8,27 +8,30 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.dataviewer.f1
-helpviewer_keywords: Data Viewer dialog box
+f1_keywords:
+- sql13.dts.designer.dataviewer.f1
+helpviewer_keywords:
+- Data Viewer dialog box
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8239be5300412755fa4711dea8523c4a052ab09a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f9541c6d49a6fc4f7a0dea8becdb4022ff53e3f6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-viewer"></a>Daten-Viewer
   Wenn ein Pfad zu einem Daten-Viewer konfiguriert ist, zeigt dieser Daten-Viewer die Daten pufferweise an, während sie zwischen zwei Datenflusskomponenten fließen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Grüner Pfeil**  
  Klicken Sie auf den Pfeil, um die Daten des nächsten Puffers anzuzeigen. Wenn die Daten in einem einzigen Puffer verschoben werden können, ist diese Option nicht verfügbar.  
   
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/20/2017
  **Daten kopieren**  
  Kopiert die Daten des aktuellen Puffers in die Zwischenablage.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Debuggen des Datenflusses](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
   

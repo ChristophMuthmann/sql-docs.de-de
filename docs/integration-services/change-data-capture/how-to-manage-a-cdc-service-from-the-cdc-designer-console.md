@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d160c771e78e05622bb86fc61f16088f8d76e04f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 29a2b0f8bceb00e0e7afb253d02bc0d0926f54a4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>Verwalten eines CDC Service über die CDC Designer Console
   In diesem Verfahren wird beschrieben, wie Sie die CDC Designer Console zum Verwalten eines CDC-Diensts verwenden.  

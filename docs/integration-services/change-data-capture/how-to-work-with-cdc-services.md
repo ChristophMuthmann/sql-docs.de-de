@@ -16,13 +16,13 @@ ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e867d2f9ab34ed2fa97b0e4f8bb6b4510ba0038
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6f3d5ba79da0e39806ba9ad9e3d36cb726802efb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-work-with-cdc-services"></a>Verwenden von CDC Services
   In diesem Verfahren wird beschrieben, wie Sie mithilfe der CDC Service Configuration Console eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz für die Verwendung von Oracle CDC Services vorbereiten und einen neuen CDC-Dienst erstellen.  
@@ -55,13 +55,13 @@ ms.lasthandoff: 11/20/2017
   
          Das Dialogfeld New Oracle CDC Service wird geöffnet.  
   
-         Informationen zur Verwendung dieses Dialogfelds finden Sie unter [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md). Informationen zum Erstellen oder Bearbeiten eines CDC-Diensts finden Sie unter [Erstellen und Bearbeiten eines CDC Service](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md).  
+         Informationen zur Verwendung dieses Dialogfelds finden Sie unter [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md). Informationen zum Erstellen oder Bearbeiten eines CDC-Diensts finden Sie unter [How to Create and Edit a CDC Service](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md).  
   
          Die vom Oracle CDC Service verwendete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung muss lediglich Mitglied der festen Serverrolle `public` sein. Es sind keine anderen Berechtigungen erforderlich. Um den Oracle CDC Service zu erstellen, muss die Anmeldung jedoch die Schreibberechtigung für die MSXDBCDC-Datenbank besitzen, z. B. muss der Anmeldung die Datenbankrolle **db_owner** zugewiesen werden. Wenn mit einer Anmeldung ohne Schreibberechtigung für die MSXDBDCDC-Datenbank versucht wird, eine neue Oracle CDC-Instanz zu erstellen, wird eine Fehlermeldung angezeigt. Klicken Sie in diesem Dialogfeld auf **OK** , um das Dialogfeld Verbindung mit SQL Server herstellen anzuzeigen.  
   
          Informationen zum Eingeben der Anmeldeinformationen für eine Anmeldung, die über die Schreibberechtigung für die MSXDBCDC-Datenbank verfügt, z. B. die Datenbankrolle **db_owner** , finden Sie unter [Erstellen und Bearbeiten eines CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md) und [Verbindung mit SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden von CDC Services](../../integration-services/change-data-capture/work-with-cdc-services.md)  
   
   

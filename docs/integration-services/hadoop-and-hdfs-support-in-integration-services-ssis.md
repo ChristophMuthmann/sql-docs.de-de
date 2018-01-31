@@ -8,21 +8,23 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: SQL13.SSIS.HADOOP.F1
+f1_keywords:
+- SQL13.SSIS.HADOOP.F1
 ms.assetid: fea03c62-9361-4b6f-b4ce-8fe0f94b34f2
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2a44be65609f02710630cf8afd1d1052b785b715
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e60b390dcb8549c1e776f83ef00049ff1b78d3ce
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hadoop-and-hdfs-support-in-integration-services-ssis"></a>Hadoop- und HDFS-Unterstützung in Integration Services (SSIS)
   SQL Server 2016 Integration Services (SSIS) umfasst die folgenden Komponenten, die lokale Unterstützung für Hadoop und HDFS bereitstellen.  

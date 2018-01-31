@@ -11,7 +11,8 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - data flow [Integration Services], column mapping
 - data flow [Integration Services], components
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 460c6fc491ce0088c174c49aeb66523079f8016b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 37610e7a14cef8512059929ac1ea04faa79bed38
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="selecting-input-columns-programmatically"></a>Programmgesteuertes Auswählen von Eingabespalten
   Nachdem Sie Komponenten programmgesteuert verbunden haben, wählen Sie die Spalten von Upstreamkomponenten aus, die Sie transformieren oder an Downstreamkomponenten übergeben werden. Wenn Sie keine Eingabespalten für Ihre Komponente auswählen, empfängt die Komponente keine Zeilen von dem Datenflusstask.  

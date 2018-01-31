@@ -8,23 +8,24 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPADLSCM.F1
 - sql14.dts.designer.afpadlscm.f1
 ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Lingxi-Li
 ms.author: lingxl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 556f0efa1ce15ee23acc190e547e3700e64eca4d
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 9d98d6cf214a4d08e3a617ab19307bfd42b58189
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store-Verbindungsmanager
 Ein SSIS-Paket (SQL Server Integration Services) kann den Azure Data Lake Store-Verbindungs-Manager verwenden, um einen Azure Data Lake Store-Dienst mit einem der beiden folgenden Authentifizierungstypen zu verbinden:

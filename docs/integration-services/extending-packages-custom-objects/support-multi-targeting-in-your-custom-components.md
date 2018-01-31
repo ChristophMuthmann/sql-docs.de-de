@@ -8,21 +8,23 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server (starting with 2016)
+applies_to:
+- SQL Server (starting with 2016)
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fea00f80ddaa43ee5bcd5d26ddcc515d2f6e849a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 49cdcb7768103ba9cfd62a58bcdcbf5399ae09a1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Unterstützen von mehreren Zielversionen in benutzerdefinierten Komponenten
  Sie können nun den SSIS-Designer in SQL Server Data Tools (SSDT) verwenden, um Pakete zu erstellen, zu verwalten und auszuführen, die auf SQL Server 2016, SQL Server 2014 oder SQL Server 2012 ausgerichtet sind. SSDT für Visual Studio 2015 können Sie unter [Download Latest SQL Server Data Tools (Herunterladen der aktuellen Version von SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md) herunterladen. 
@@ -40,7 +42,7 @@ Die fünf benutzerdefinierten SSIS-Erweiterungen unterstützen alle die Festlegu
 -   Protokollanbieter
 -   Datenflusskomponenten
 
-Für verwaltete Erweiterungen lädt der SSIS-Designer die Erweiterungsversion für die angegebene Zielversion herunter. Beispiel:
+Für verwaltete Erweiterungen lädt der SSIS-Designer die Erweiterungsversion für die angegebene Zielversion herunter. Zum Beispiel:
 -   Wenn die Zielversion SQL Server 2012 ist, lädt der Designer die SQL Server 2012-Version der Erweiterung herunter.
 -   Wenn die Zielversion SQL Server 2016 ist, lädt der Designer die SQL Server 2016-Version der Erweiterung herunter.
 

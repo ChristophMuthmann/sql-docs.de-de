@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c72863715fb807cba939c997da386b93004332f7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 95197ab786c24da00fc87f7788575d5847770c6b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Arbeiten mit dem Oracle CDC Service
   In diesem Abschnitt werden einige wichtige Begriffe des Oracle CDC Service beschrieben. Es werden die folgenden Begriffe behandelt:  
@@ -97,7 +98,7 @@ ms.lasthandoff: 11/20/2017
   
 |Element|Description|  
 |----------|-----------------|  
-|name|Der Name der Oracle-Datenbank in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz.|  
+|NAME|Der Name der Oracle-Datenbank in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz.|  
 |config_version|Der Zeitstempel (UTC) für die letzte Änderung in der entsprechenden **xdbcdc_config** -Tabelle der CDC-Datenbank oder der Zeitstempel der aktuellen Zeile in dieser Tabelle.<br /><br /> Der UPDATE-Trigger erzwingt für dieses Element den Wert GETUTCDATE(). Mithilfe von**config_version** kann der CDC-Dienst die CDC-Instanz ermitteln, die auf eine Konfigurationsänderung geprüft oder die aktiviert/deaktiviert werden muss.|  
 |cdc_service_name|Dieses Element bestimmt, welcher Oracle CDC Service die ausgewählte Oracle-Datenbank behandelt.|  
 |aktiviert|Gibt an, ob die Oracle CDC-Instanz aktiviert (1) oder deaktiviert (0) ist. Wenn der Oracle CDC Service gestartet wird, werden nur die als aktiviert (1) markierten Instanzen gestartet.<br /><br /> **Hinweis**: Eine Oracle CDC-Instanz kann aufgrund eines Fehlers deaktiviert werden, der nicht wiederholbar ist. In diesem Fall muss die Instanz manuell neu gestartet werden, nachdem der Fehler behoben wurde.|  
@@ -266,7 +267,7 @@ ms.lasthandoff: 11/20/2017
   
  **Hinweis**: Alle Parameter, die Leerzeichen oder doppelte Anführungszeichen enthalten, müssen in doppelte Anführungszeichen (") gesetzt werden. Eingebettete doppelte Anführungszeichen müssen verdoppelt werden (geben Sie zum Verwenden von **"A#B" D** als Kennwort z.B. **""A#B"" D"**ein).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden der CDC Service-Befehlszeilenschnittstelle](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)   
  [Vorbereiten von SQL Server für CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   

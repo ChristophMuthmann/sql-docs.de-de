@@ -8,30 +8,32 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: cdcServ
+f1_keywords:
+- cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eda4caf15a2c86f541978b49ee7e55c0d89e053c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dace3763da446c75677288d15401a7c749740677
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="work-with-cdc-services"></a>Verwenden von CDC Services
   Sie können die CDC Service Configuration Console verwenden, um einen neuen CDC-Dienst zu erstellen und eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank für CDC vorzubereiten.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Prepare SQL Server**  
  Aktivieren Sie diese Option im **Aktionsbereich** rechts in der CDC Service Configuration Console.  
   
- Sie können auch mit der rechten Maustaste auf **Local CDC Services** (Lokale CDC-Dienste) klicken und **Prepare SQL Server**(SQL Server vorbereiten) auswählen.  
+ Sie können auch mit der rechten Maustaste auf **Local CDC Services** klicken und **Prepare SQL Server**wählen.  
   
  Das Dialogfeld Preparing SQL Server Instance for Oracle CDC wird geöffnet.  
   
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
  Das Dialogfeld New Oracle CDC Service wird geöffnet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden von CDC Services](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
  [Erstellen und Bearbeiten eines Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   

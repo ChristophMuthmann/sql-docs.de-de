@@ -8,7 +8,8 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - Web server connections [Integration Services]
 - connections [Integration Services], HTTP
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5f6c0a872ae043e8550dc541d3c0e0f706e388a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c9efb5b8d8a972cfc60ccb078363bcba055eea01
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="http-connection-manager"></a>HTTP-Verbindungs-Manager
   Eine HTTP-Verbindung ermöglicht Paketen den Zugriff auf einen Webserver, indem zum Senden und Empfangen von Dateien HTTP verwendet wird. Der Task Webdienst von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet diesen Verbindungs-Manager.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
  Weitere Informationen zum HTTP-Verbindungs-Manager finden Sie unter [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md). Weitere Informationen zu einem allgemeinen Verwendungsszenario für den HTTP-Verbindungs-Manager finden Sie unter [Web Service Task](../../integration-services/control-flow/web-service-task.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Server-URL**  
  Geben Sie die URL für den Server ein.  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/20/2017
  **Anmeldeinformationen verwenden**  
  Geben Sie an, ob der HTTP-Verbindungs-Manager zur Authentifizierung die Sicherheitsanmeldeinformationen des Benutzers verwenden soll.  
   
- **Benutzername**  
+ **User name**  
  Wenn der HTTP-Verbindungs-Manager Anmeldeinformationen verwendet, müssen Sie einen Benutzernamen, ein Kennwort und eine Domäne angeben.  
   
  **Kennwort**  
@@ -103,7 +104,7 @@ ms.lasthandoff: 11/20/2017
   
  Weitere Informationen zum HTTP-Verbindungs-Manager finden Sie unter [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md). Weitere Informationen zu einem allgemeinen Verwendungsszenario für den HTTP-Verbindungs-Manager finden Sie unter [Web Service Task](../../integration-services/control-flow/web-service-task.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Proxy verwenden**  
  Gibt an, ob der HTTP-Verbindungs-Manager Verbindungen über einen Proxyserver herstellen soll.  
   
@@ -116,7 +117,7 @@ ms.lasthandoff: 11/20/2017
  **Anmeldeinformationen verwenden**  
  Gibt an, ob der HTTP-Verbindungs-Manager Anmeldeinformationen für den Proxyserver verwenden soll.  
   
- **Benutzername**  
+ **User name**  
  Wenn der HTTP-Verbindungs-Manager Anmeldeinformationen verwendet, müssen Sie einen Benutzernamen, ein Kennwort und eine Domäne angeben.  
   
  **Kennwort**  
@@ -134,7 +135,7 @@ ms.lasthandoff: 11/20/2017
  **Entfernen**  
  Wählen Sie eine Adresse aus, und entfernen Sie sie dann, indem Sie auf **Entfernen**klicken.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Webdienst (Task)](../../integration-services/control-flow/web-service-task.md)   
  [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

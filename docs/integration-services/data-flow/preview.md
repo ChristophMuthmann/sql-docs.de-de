@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10989fbbc56096b102eb89a23350dc6e57ad7d77
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c1f5663e964426da513af40e3184e9ab3af81e5c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="preview"></a>Vorschau
   Verwenden Sie das Dialogfeld **Vorschau** , um die von der SAP BW-Quelle extrahierten Daten in der Vorschau anzuzeigen.  
@@ -52,12 +53,12 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  Durch Klicken auf die Schaltfläche **Vorschau** öffnen Sie auch das Dialogfeld **Anforderungsprotokoll** . Weitere Informationen zu diesem Dialogfeld finden Sie unter [Request Log](../../integration-services/data-flow/request-log.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  Im Dialogfeld **Vorschau** werden die Zeilen angezeigt, die vom SAP NetWeaver BW-System angefordert werden. Die angezeigten Spalten entsprechen den in den Quelldaten definierten Spalten.  
   
  Das Dialogfeld verfügt über keinen weiteren Optionen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Quellen-Editor für SAP BW &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [F1-Hilfe zum Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

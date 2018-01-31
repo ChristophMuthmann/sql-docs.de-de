@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9adf6ab7d2a249f089f418ed436506922057eab5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f1834218ade0df3d83ad605effd96bd0d431e581
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Change Data Capture Service für Oracle von Attunity System Architecture
   Der CDC Service for Oracle zeichnet Änderungen, die an ausgewählten Tabellen in einer oder mehreren Oracle-Quelldatenbanken vorgenommen werden, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC-Datenbanken auf einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz auf. Im folgenden Diagramm sind die Komponenten dargestellt, aus denen der CDC Service for Oracle besteht.  

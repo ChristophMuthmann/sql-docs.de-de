@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 388a88d1f9a7ad6b18b2f04a702d2198c644e4fe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 86d567d804c64c769823b33cc50ff231d310a760
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-paths"></a>SQL Server Integration Services-Pfade
   Ein Pfad verbindet zwei Komponenten in einem Datenfluss, indem die Ausgabe einer Datenflusskomponente mit der Eingabe einer anderen Komponente verbunden wird. Ein Pfad weist eine Quelle und ein Ziel auf. Wenn z. B. ein Pfad eine Verbindung mit einer OLE DB-Quelle und einer Transformation zum Sortieren herstellt, ist die OLE DB-Quelle die Quelle des Pfads, und die Transformation zum Sortieren ist das Ziel des Pfads. Die Quelle ist die Komponente, wo der Pfad beginnt, und das Ziel ist die Komponente, wo der Pfad endet.  
@@ -67,7 +68,7 @@ Mithilfe des Dialogfelds **Datenflusspfad-Editor** legen Sie Pfadeigenschaften f
   
  Mit dem Knoten **Allgemein** des Dialogfelds **Datenflusspfad-Editor** werden der Pfad benannt und beschrieben und die Optionen für die Pfadanmerkungen angegeben.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Pfad an.  
   
@@ -77,7 +78,7 @@ Mithilfe des Dialogfelds **Datenflusspfad-Editor** legen Sie Pfadeigenschaften f
  **IdentificationString**  
  Die Zeichenfolge, die den Pfad identifiziert. Wird automatisch aus dem oben eingegebenen Namen erzeugt.  
   
- **Description**  
+ **Beschreibung**  
  Beschreiben Sie den Pfad.  
   
  **PathAnnotation**  
@@ -92,7 +93,7 @@ Mithilfe des Dialogfelds **Datenflusspfad-Editor** legen Sie Pfadeigenschaften f
 ## <a name="metadata-page---data-flow-path-editor"></a>Seite „Metadaten“ – Datenflusspfad-Editor
 Verwenden Sie die Seite **Metadaten** im Dialogfeld **Datenflusspfad-Editor** , um die Metadaten der Pfadspalten anzuzeigen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Pfadmetadaten**  
  Listet die Spaltenmetadaten auf. Klicken Sie auf die Spaltenüberschriften, um die Spaltendaten zu sortieren.  
   
@@ -132,7 +133,7 @@ Verwenden Sie die Seite **Metadaten** im Dialogfeld **Datenflusspfad-Editor** , 
 ## <a name="data-viewers-page---data-flow-path-editor"></a>Seite „Daten-Viewer“ – Datenflusspfad-Editor
 Verwenden Sie die Seite **Daten-Viewer** des Dialogfelds **Datenflusspfad-Editor** , um die Daten-Viewer zu verwalten, die dem Pfad zugeordnet sind.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name**  
  Listet die Daten-Viewer auf.  
   
@@ -158,7 +159,7 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
   
  Die folgende Tabelle beschreibt die konfigurierbaren Eigenschaften der Pfade in einem Datenfluss. Das Datenflussmodul weist auch zusätzlichen schreibgeschützten Eigenschaften, die nicht hier aufgelistet sind, Werte zu.  
   
-|Eigenschaftsname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Description|  
 |-------------------|---------------|-----------------|  
 |PathAnnotation|Ganze Zahl (Enumeration)|Ein Wert, der angibt, ob eine Anmerkung mit dem Pfad auf der Designeroberfläche angezeigt werden soll. Die möglichen Werte sind **AsNeeded**, **SourceName**, **PathName**und **Never**. Der Standardwert ist **AsNeeded**.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|Die dem Pfad zugeordnete Eingabe.|  

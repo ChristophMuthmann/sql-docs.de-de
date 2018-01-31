@@ -8,25 +8,26 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - XML validation
 - XML, validating
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71429997374af75e681da85b0f54588448e8937a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 131ef697bc63cfe5edbc6dcae01a1b9e831e2bc5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="validate-xml-with-the-xml-task"></a>Validieren von XML-Dokumenten mit dem XML-Task
+# <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   Validieren Sie XML-Dokumente und erhalten Sie eine umfangreiche Fehlerausgabe durch die Aktivierung der Eigenschaft **ValidationDetails** des XML-Tasks.  
   
  Die folgende Abbildung zeigt den **XML-Task-Editor** eingestellt für die XML-Validierung mit umfassender Fehlerausgabe.  
@@ -124,7 +125,7 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  ![Abfrage zum Gruppieren von XML-Fehlern in Management Studio](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Abfrage zum Gruppieren von XML-Fehlern in Management Studio")  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [XML-Task](../../integration-services/control-flow/xml-task.md)   
  [Editor für den XML-Task &#40;Seite Allgemein&#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
   

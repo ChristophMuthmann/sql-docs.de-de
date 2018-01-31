@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fcae6a724feb11400c8b6c3d4e149bc6b87504c9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ebd3fc40649e77cfb42b291132f6e1168381c427
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="convert-data-type-by-using-data-conversion-transformation"></a>Konvertieren des Datentyps mithilfe der Transformation für Datenkonvertierung
   Um eine Transformation für Datenkonvertierung hinzuzufügen und zu konfigurieren, muss das Paket bereits mindestens einen Datenflusstask und eine Quelle enthalten.  
@@ -59,11 +60,11 @@ ms.lasthandoff: 11/20/2017
   
 12. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)   
  [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Integration Services Paths](../../../integration-services/data-flow/integration-services-paths.md)  (Integration Services-Pfade)  
- [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)  (Integration Services-Datentypen)  
+ [SQL Server Integration Services-Pfade](../../../integration-services/data-flow/integration-services-paths.md)   
+ [SQL Server Integration Services-Datentypen](../../../integration-services/data-flow/integration-services-data-types.md)   
  [Datenflusstask](../../../integration-services/control-flow/data-flow-task.md)  
   
   

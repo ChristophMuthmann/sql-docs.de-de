@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 822116bb998a5a8f42afecaeedbbdf56f4c41a5b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4caf4c8fde349f6865792d327965a8dea4161f73
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-infosource-for-master-data"></a>InfoSource für Masterdaten erstellen
   Verwenden Sie das Dialogfeld **InfoSource für Masterdaten erstellen** , um eine neue InfoSource für Masterdaten im SAP NetWeaver BW-System zu erstellen.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  Wählen Sie im Dialogfeld **InfoSource erstellen** die Option **Masterdaten**aus, und klicken Sie dann auf **OK**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **InfoObject-Name**  
  Geben Sie den Namen des InfoObject ein, auf dem die neue InfoSource basieren soll.  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/20/2017
  **Speichern und aktivieren**  
  Speichern und aktivieren Sie die neue InfoSource.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [InfoSource erstellen](../../integration-services/data-flow/create-infosource.md)   
  [F1-Hilfe zum Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

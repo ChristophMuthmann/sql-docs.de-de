@@ -8,20 +8,21 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d6368c520e8ddf7f14a9d01605624687badbf03
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0f73fda280c7ee55e3140919b9bd79d999a2b03f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dqs-cleansing-connection-manager"></a>Verbindungs-Manager für DQS-Bereinigung
   Mit dem Verbindungs-Manager für DQS-Bereinigung kann ein Paket mit einem [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] -Server verbunden werden. Die DQS-Bereinigungstransformation verwendet den Verbindungs-Manager für DQS-Bereinigung.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/20/2017
 > [!IMPORTANT]  
 >  Der Verbindungs-Manager für DQS-Bereinigung unterstützt nur die Windows-Authentifizierung.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen. Weitere Informationen zu den Eigenschaften, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können, finden Sie unter [Transformations-Editor für die DQS-Bereinigung (Dialogfeld)](../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md).  
   
  Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie in der <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> -Klasse im Entwicklerhandbuch.  

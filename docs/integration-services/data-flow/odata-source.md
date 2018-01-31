@@ -8,7 +8,8 @@ ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 653b48d9148d840290911baed697138d07a92a91
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 035483d63bdd8e28a5d0089f5a7dc783917aeacf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odata-source"></a>OData-Quelle
 Verwenden Sie die OData-Quellkomponente in einem SSIS-Paket, um Daten aus einem Open Data Protocol (OData)-Dienst zu nutzen. Die Komponente unterstützt die OData v3 und v4-Protokolle.  
@@ -60,7 +61,7 @@ Die OData-Quelle umfasst Unterstützung für die folgenden Datenquellen:
   
 ### <a name="static-options"></a>Statische Optionen  
  **OData-Verbindungs-Manager**  
- Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+ Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
  Nach dem Auswählen oder Erstellen eines Verbindungs-Managers wird im Dialogfeld die vom Verbindungs-Manager verwendete OData-Protokollversion angezeigt.  
   
@@ -95,9 +96,9 @@ Die OData-Quelle umfasst Unterstützung für die folgenden Datenquellen:
  Geben Sie einen Ressourcenpfad ein. Beispiel: Mitarbeiter  
   
 ## <a name="odata-source-editor-columns-page"></a>Quellen-Editor für OData (Seite 'Spalten')
-  Verwenden Sie die Seite **Spalten** im Dialogfeld **Quellen-Editor für OData** , um externe (Quell-)Spalten auszuwählen, die in der Ausgabe enthalten sein sollen, und um die Spalten und Ausgabespalten einander zuzuordnen.  
+  Verwenden Sie die Seite **Spalten** im Dialogfeld **Quellen-Editor für OData**, um externe (Quell-)Spalten auszuwählen, die in der Ausgabe enthalten sein sollen, und um die Spalten und Ausgabespalten einander zuzuordnen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare externe Spalten**  
  Zeigt die Liste der in der Datenquelle verfügbaren Quellspalten an. Verwenden Sie Kontrollkästchen in der Liste, um in der Tabelle am Ende der Seite Spalten hinzuzufügen bzw. Spalten zu entfernen. Die ausgewählten Spalten werden der Ausgabe hinzugefügt.  
   
@@ -110,7 +111,7 @@ Die OData-Quelle umfasst Unterstützung für die folgenden Datenquellen:
 ## <a name="odata-source-editor-error-output-page"></a>Quellen-Editor für OData (Seite 'Fehlerausgabe')
   Mithilfe der Seite **Fehlerausgabe** des Dialogfelds **Quellen-Editor für OData** können Sie Fehlerbehandlungsoptionen auswählen und Eigenschaften für Fehlerausgabespalten festlegen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
@@ -125,7 +126,7 @@ Die OData-Quelle umfasst Unterstützung für die folgenden Datenquellen:
  **Abschneiden**  
  Gibt an, was im Falle einer Kürzung geschehen soll: den Fehler ignorieren, die Zeile umleiten oder die Komponente mit einem Fehler abbrechen.  
   
- **Description**  
+ **Beschreibung**  
  Zeigt die Beschreibung des Fehlers an.  
   
  **Diesen Wert für ausgewählte Zellen festlegen**  
@@ -134,7 +135,7 @@ Die OData-Quelle umfasst Unterstützung für die folgenden Datenquellen:
  **Anwenden**  
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OData-Verbindungs-Manager](../../integration-services/connection-manager/odata-connection-manager.md)  
   
   

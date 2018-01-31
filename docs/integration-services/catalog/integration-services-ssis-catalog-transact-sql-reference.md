@@ -8,20 +8,21 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9553cef4-36aa-4088-a9db-eee45a4502df
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bba7deccf41405cead3a72720a760e82acd4a8fe
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: 9fe74b1dfdc16e4a6acd58b21111eb77656f73b7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-catalog-transact-sql-reference"></a>Integration Services (SSIS) Katalog Transact-SQL-Referenz
 [Sichten &#40;Integration Services-Katalog&#41;](../../integration-services/system-views/views-integration-services-catalog.md)  
