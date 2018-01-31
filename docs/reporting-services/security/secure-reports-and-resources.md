@@ -18,7 +18,7 @@ helpviewer_keywords:
 - confidential reports [Reporting Services]
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/09/2018
 >  In früheren Versionen der Dokumentation war ein Beispiel zum Erstellen einer dynamischen Abfrage als Ausdruck enthalten. Durch diese Art der Abfrage entsteht eine Angriffsfläche für SQL-Injection-Angriffe; daher wird dies nicht empfohlen.  
   
 ## <a name="securing-confidential-reports"></a>Sichern vertraulicher Berichte  
- Berichte mit vertraulichen Informationen sollten auf der Datenzugriffsebene geschützt werden. Benutzer müssen in diesem Fall Anmeldeinformationen angeben, um auf die vertraulichen Daten zugreifen zu können. Weitere Informationen finden Sie unter [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Darüber hinaus können Sie einen Ordner für unbefugte Benutzer sperren. Weitere Informationen finden Sie unter [Sichere Ordner](../../reporting-services/security/secure-folders.md).  
+ Berichte mit vertraulichen Informationen sollten auf der Datenzugriffsebene geschützt werden. Benutzer müssen in diesem Fall Anmeldeinformationen angeben, um auf die vertraulichen Daten zugreifen zu können. Weitere Informationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Darüber hinaus können Sie einen Ordner für unbefugte Benutzer sperren. Weitere Informationen finden Sie unter [Sichere Ordner](../../reporting-services/security/secure-folders.md).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen und Verwalten von Rollenzuweisungen](../../reporting-services/security/create-and-manage-role-assignments.md)   

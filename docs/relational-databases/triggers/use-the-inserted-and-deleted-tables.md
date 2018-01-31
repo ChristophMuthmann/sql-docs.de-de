@@ -8,7 +8,8 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-dml
+ms.technology:
+- dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,7 +21,7 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/17/2017
   
  Da sich CHECK-Einschränkungen nur auf Spalten beziehen können, für die die Einschränkung auf Spalten- oder Tabellenebene definiert wurde, müssen tabellenübergreifende Einschränkungen (in diesem Fall Geschäftsregeln) als Trigger definiert werden.  
   
- Im folgenden Beispiel wird ein DML-Trigger erstellt. Der Trigger überprüft die Bonität eines Herstellers, wenn versucht wird, eine neue Bestellung in die `PurchaseOrderHeader` -Tabelle einzufügen. Zum Ermitteln der Bonität des Herstellers im Zusammenhang mit der gerade eingefügten Bestellung muss auf die `Vendor` -Tabelle verwiesen und diese mit der inserted-Tabelle verknüpft werden. Ist die Bonität zu niedrig, wird eine Meldung angezeigt, und die Bestellung wird nicht eingefügt. Bitte beachten Sie, dass in diesem Beispiel multirow-Datenänderungen nicht berücksichtigt werden. Weitere Informationen finden Sie unter [Create DML Triggers to Handle Multiple Rows of Data](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
+ Im folgenden Beispiel wird ein DML-Trigger erstellt. Der Trigger überprüft die Bonität eines Herstellers, wenn versucht wird, eine neue Bestellung in die `PurchaseOrderHeader` -Tabelle einzufügen. Zum Ermitteln der Bonität des Herstellers im Zusammenhang mit der gerade eingefügten Bestellung muss auf die `Vendor` -Tabelle verwiesen und diese mit der inserted-Tabelle verknüpft werden. Ist die Bonität zu niedrig, wird eine Meldung angezeigt, und die Bestellung wird nicht eingefügt. Bitte beachten Sie, dass in diesem Beispiel multirow-Datenänderungen nicht berücksichtigt werden. Weitere Informationen finden Sie unter [Erstellen von DML-Triggern für die Verarbeitung mehrerer Datenzeilen](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   
