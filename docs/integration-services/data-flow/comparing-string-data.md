@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - converting string data
 - string comparisons
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f717298f2ddf7db8590c64d870e565d39b9bd18d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3a706839de5dd4981e09c4bc1384ee45f86c0dcb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comparing-string-data"></a>Vergleichen von Zeichenfolgendaten
   Zeichenfolgendaten sind ein wichtiger Bestandteil vieler Transformationen, die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]ausgeführt werden, und Zeichenfolgenvergleiche werden auch bei der Auswertung von Ausdrücken in Variablen und Eigenschaftsausdrücken verwendet. Beispielsweise vergleicht die Transformation zum Sortieren Werte in einem Dataset, um Daten in auf- und absteigender Reihenfolge zu sortieren.  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/20/2017
   
  Das **FullySensitive** -Vergleichsflag wird im Dialogfeld **Erweiterter Editor** für die Transformation für Fuzzygruppierung und die Transformation für Fuzzysuche angezeigt. Wenn Sie das **FullySensitive** -Vergleichsflag auswählen, gelten alle Vergleichsoptionen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Integration Services-Datentypen](../../integration-services/data-flow/integration-services-data-types.md)   
  [Schnelle Analyse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
  [Standardanalyse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  

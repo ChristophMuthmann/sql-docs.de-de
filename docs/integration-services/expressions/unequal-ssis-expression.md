@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - unequal operator (!=)
 - '!= (not equal to)'
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c77407983c720aaf36042f678799ba698cb6dcb5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cf4ece7722dfe827632adede28ad969b21a527f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-unequal-ssis-expression"></a>!= (Ungleich) (SSIS-Ausdruck)
   Führt einen Vergleich aus, um zu ermitteln, ob zwei Ausdrücke mit kompatiblen Datentypen ungleich sind. Die Ausdrucksauswertung konvertiert viele Datentypen automatisch vor dem Vergleich.  
@@ -46,7 +47,7 @@ expression1 != expression2
 ## <a name="result-types"></a>Ergebnistypen  
  DT_BOOL  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn einer der Ausdrücke im Vergleich NULL ist, ist das Ergebnis des Vergleichs NULL. Wenn beide Ausdrücke NULL sind, ist das Ergebnis NULL.  
   
  Für die Ausdrucksgruppe ( *expression1* und *expression2*) muss eine der folgenden Regeln eingehalten werden:  
@@ -110,7 +111,7 @@ ListPrice != 500
 @LPrice != 500  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [== &#40;Gleich, SSIS-Ausdruck&#41;](../../integration-services/expressions/equal-ssis-expression.md)   
  [Operatorenrangfolge und -assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)  

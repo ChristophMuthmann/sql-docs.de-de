@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 91efcc7d11226a240f2f3b46ab1b14f57da3bbab
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e31c28e72bfcb23cc6f571ef38f85345c28e060e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="--conditional-ssis-expression"></a>? : (Bedingt) (SSIS-Ausdruck)
   Gibt einen von zwei Ausdrücken basierend auf der Auswertung eines booleschen Ausdrucks zurück. Falls der boolesche Ausdruck zu TRUE ausgewertet wird, wird der erste Ausdruck ausgewertet, und das Ergebnis ist das Ausdrucksergebnis. Falls der boolesche Ausdruck zu FALSE ausgewertet wird, wird der zweite Ausdruck ausgewertet, und das Ergebnis ist das Ausdrucksergebnis.  
@@ -50,7 +51,7 @@ boolean_expression?expression1:expression2
 ## <a name="result-types"></a>Ergebnistypen  
  Der Datentyp von *expression1* oder *expression2*.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Falls *boolean_expression* zu NULL ausgewertet wird, lautet das Ergebnis des Ausdrucks NULL. Wenn ein ausgewählter Ausdruck, *expression1* oder *expression2* , NULL ist, lautet das Ergebnis NULL. Wenn ein ausgewählter Ausdruck ungleich NULL ist, aber der nicht ausgewählte Ausdruck NULL ist, besitzt das Ergebnis den Wert des ausgewählten Ausdrucks.  
   
  Falls *expression1* und *expression2* vom gleichen Datentyp sind, gehört auch das Ergebnis zu diesem Datentyp. Die folgenden zusätzlichen Regeln sind auch auf Ergebnistypen anwendbar:  
@@ -103,7 +104,7 @@ boolean_expression?expression1:expression2
 ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Operatorenrangfolge und -assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

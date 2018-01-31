@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-caps.latest.revision: "98"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d255bfaa20012bce9104aad8e56611163d1c462a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2b27cb51a9b5090fc8495de50c597579eb100f6f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-data-types"></a>SQL Server Integration Services-Datentypen
   Wenn Daten an einen Datenfluss in einem Paket weitergegeben werden, konvertiert die Quelle, die die Daten extrahiert, diese in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp. Numerischen Daten wird ein numerischer Datentyp, Zeichenfolgendaten wird ein Zeichendatentyp und Daten ein Datumsdatentyp zugewiesen. Anderen Daten, wie z. B. GUIDs und BLOBs (Binary Large Object Blocks), werden ebenfalls entsprechende [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen zugewiesen. Falls Daten von einem Datentyp sind, der nicht in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp konvertiert werden kann, tritt ein Fehler auf.  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Verwenden Sie einen Ausdruck, um Datentypen implizit zu konvertieren. Weitere Informationen finden Sie unter [Integration Services-Datentypen in Ausdrücken](../../integration-services/expressions/integration-services-data-types-in-expressions.md), [Integration Services-Datentypen in Ausdrücken](../../integration-services/expressions/integration-services-data-types-in-expressions.md) und [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
--   Verwenden Sie den Typumwandlungsoperator, um Datentypen zu konvertieren. Weitere Informationen finden Sie unter [CAST &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
+-   Verwenden Sie den Typumwandlungsoperator, um Datentypen zu konvertieren. Weitere Informationen finden Sie unter [Umwandlung &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
 -   Verwenden Sie die Transformation für Datenkonvertierung, um den Datentyp einer Spalte von einem Datentyp in einen anderen umzuwandeln. Weitere Informationen finden Sie unter [Data Conversion Transformation](../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
   
@@ -224,30 +225,30 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Sie können die Größe entsprechender Datum-/Uhrzeit-Datentypen von Integration Services mithilfe der SQL Server-Datentypen schätzen.  
   
-|Datentyp|SQL Server<br /><br /> (SQLOLEDB; SQLNCLI10)|SQL Server (SqlClient)|Jet|Oracle<br /><br /> (OracleClient)|DB2<br /><br /> (DB2OLEDB)|DB2<br /><br /> (IBMDADB2)|  
+|Datentyp|SQL Server<br /><br /> (SQLOLEDB; SQLNCLI10)|SQL Server (SqlClient)|Jet|Oracle<br /><br /> (OracleClient)|DB2<br /><br /> (DB2OLEDB)|DB2<br /><br /> (IBMDADB2)|  
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
 |DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
 |DT_CY|smallmoney, money|smallmoney, money|Währung||||  
 |DT_DATE|||||||  
-|DT_DBDATE|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||Datum|Datum|Datum|  
+|DT_DBDATE|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||date|date|date|  
 |DT_DBTIME||||timestamp|Uhrzeit|Uhrzeit|  
 |DT_DBTIME2|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)(p)|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md) (p)|||||  
-|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
+|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|datetime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
 |DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)||timestamp|timestamp|timestamp|  
 |DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)(p)|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
-|DT_GUID|uniqueidentifier|uniqueidentifier|GUID||||  
+|DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
-|DT_I2|smallint|smallint|Short||smallint|smallint|  
-|DT_I4|int|int|Long||INTEGER|INTEGER|  
-|DT_I8|bigint|bigint|||bigint|bigint|  
+|DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
+|DT_I4|ssNoversion|ssNoversion|Long||INTEGER|INTEGER|  
+|DT_I8|BIGINT|BIGINT|||BIGINT|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
-|DT_R4|real|real|Single||real|real|  
-|DT_R8|float|float|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
+|DT_R4|REAL|REAL|Single||real|real|  
+|DT_R8|float|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
 |DT_STR|char, varchar||varchar||char, varchar|char, varchar|  
-|DT_UI1|tinyint|tinyint|Byte||||  
+|DT_UI1|TINYINT|TINYINT|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
 |DT_UI8|||||||  
@@ -261,7 +262,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="related-content"></a>Verwandte Inhalte  
  Blogeintrag, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](http://go.microsoft.com/fwlink/?LinkId=220823), auf blogs.msdn.com.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Daten in Datenflüssen](../../integration-services/data-flow/data-in-data-flows.md)  
   
   

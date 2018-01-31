@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1598f40bb947a98b8fccc8ae47ba1dd7b9447b0a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 508d0f2774033dee83ba600036ab09efd39eaa58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-flow-performance-features"></a>Data Flow Performance Features
   Dieses Thema bietet Vorschläge, wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete entworfen werden müssen, damit allgemeine Leistungsprobleme vermieden werden. Dieses Thema enthält zudem Informationen zu Funktionen und Tools, die Sie verwenden können, um Leistungsprobleme von Paketen zu beheben.  
@@ -169,7 +170,7 @@ ms.lasthandoff: 11/20/2017
   
  Zum Aktivieren bzw. Deaktivieren der Anzeige von Meldungen auf der Registerkarte **Status** schalten Sie die Option **Debug-Statusbericht** im Menü **SSIS** um. Beim Ausführen eines komplexen Pakets in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]kann eine Deaktivierung der Statusberichterstellung zur Verbesserung der Leistung beitragen.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
@@ -206,7 +207,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Video [Ausgeglichener Datenverteiler](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)auf technet.microsoft.com  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Tools zur Problembehandlung für die Paketentwicklung](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Behandlung von Problemen mit Paketausführungstools](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   

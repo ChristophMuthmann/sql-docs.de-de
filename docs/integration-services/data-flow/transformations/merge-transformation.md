@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - combining datasets
 - datasets [Integration Services], merging
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0d644035d982bf43af90ac9697528d0290e1809e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fb8e3884d531a2e5ebac5444e27aaade5495366d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="merge-transformation"></a>Transformation für Zusammenführen
   Die Transformation für Zusammenführen fasst zwei sortierte Datasets zu einem Dataset zusammen. Die Zeilen aus jedem Dataset werden basierend auf Werten in den Schlüsselspalten in die Ausgabe eingefügt.  
@@ -65,11 +66,11 @@ ms.lasthandoff: 11/20/2017
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu anzuzeigen, die Sie programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Nähere Informationen zum Festlegen von Eigenschaften finden Sie in den folgenden Themen:  
   
 -   [Festlegen der Eigenschaften einer Datenflusskomponente](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/20/2017
 > [!IMPORTANT]  
 >  Die Transformation für Zusammenführen erfordert als Eingabe sortierte Daten. Weitere Informationen zu dieser wichtigen Anforderung finden Sie unter [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name der Ausgabespalte**  
  Geben Sie den Namen der Ausgabespalte an.  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/20/2017
  **Eingabe 2 für Zusammenführen**  
  Wählen Sie die Spalte aus, die als Eingabe 2 für Zusammenführen zusammengeführt werden soll.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Transformation für Zusammenführungsjoin](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)   

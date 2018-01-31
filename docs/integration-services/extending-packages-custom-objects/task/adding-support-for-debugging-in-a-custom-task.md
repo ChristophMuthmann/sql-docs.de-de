@@ -11,7 +11,8 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - SSIS custom tasks, debugging
 - debugging [Integration Services], custom tasks
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd531049f4446df4f367907d13721f194a307e52
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0f8aa78d097e2e0810c62d45189ca6959b194504
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Bereitstellen von Unterstützung für das Debuggen in einem benutzerdefinierten Task
   Das [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Laufzeitmodul ermöglicht das Anhalten der Ausführung von Paketen, Tasks und anderen Arten von Containern mithilfe von Breakpoints. Mit Breakpoints können Sie Überprüfungen durchführen und Fehler beheben, die verhindern, dass die Anwendung oder die Tasks korrekt ausgeführt werden. Die Breakpointarchitektur ermöglicht es dem Client, den Laufzeitwert von Objekten im Paket an definierten Ausführungpunkten auszuwerten, während die Verarbeitung des Tasks angehalten ist.  

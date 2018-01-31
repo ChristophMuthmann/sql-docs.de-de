@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: da7bf1509d8c49bfcd10b03e38b41f87ea80580c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6fb4c80904f506c28ad4a67e6df6c476a354a7cd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="for-loop-container"></a>For-Schleifencontainer
   Der For-Schleifencontainer definiert die Wiederholung einer Ablaufsteuerung in einem Paket. Die Schleifenimplementierung ist mit der **For** -Schleifenstruktur in Programmiersprachen zu vergleichen. Bei jeder Wiederholung der Schleife wertet der For-Schleifencontainer einen Ausdruck aus und wiederholt dessen Workflow, bis der Ausdruck zu **False**ausgewertet wird.  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/20/2017
   
  Der For-Schleifencontainer stellt keine Funktionalität bereit. Er stellt lediglich die Struktur bereit, in der Sie die wiederholbare Ablaufsteuerung erstellen. Sie müssen mindestens einen Task in den For-Schleifencontainer einschließen, um Containerfunktionalität bereitzustellen. Weitere Informationen finden Sie unter [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md).  
   
- Der For-Schleifencontainer kann eine Ablaufsteuerung mit mehreren Tasks und anderen Containern enthalten. Das Hinzufügen von Tasks und Containern zu einem For-Schleifencontainer ist mit dem Hinzufügen von Tasks und Containern zu einem Paket vergleichbar, außer dass Sie die Tasks und Container nicht in das Paket, sondern in den For-Schleifencontainer ziehen. Falls der For-Schleifencontainer mehrere Tasks oder Container einschließt, können Sie diese wie bei einem Paket mithilfe von Rangfolgeneinschränkungen verbinden. Weitere Informationen finden Sie unter [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
+ Der For-Schleifencontainer kann eine Ablaufsteuerung mit mehreren Tasks und anderen Containern enthalten. Das Hinzufügen von Tasks und Containern zu einem For-Schleifencontainer ist mit dem Hinzufügen von Tasks und Containern zu einem Paket vergleichbar, außer dass Sie die Tasks und Container nicht in das Paket, sondern in den For-Schleifencontainer ziehen. Falls der For-Schleifencontainer mehrere Tasks oder Container einschließt, können Sie diese wie bei einem Paket mithilfe von Rangfolgeneinschränkungen verbinden. Weitere Informationen finden Sie unter [Rangfolgeneinschränkungen](../../integration-services/control-flow/precedence-constraints.md).  
   
 ## <a name="add-a-for-loop-container-in-a-control-flow"></a>Implementieren eines For-Schleifencontainers in einer Ablaufsteuerung  
   
@@ -99,7 +100,7 @@ Mithilfe der Seite **For-Schleife** des Dialogfelds **For-Schleifen-Editor** kö
   
  Weitere Informationen zum For-Schleifencontainer und zu dessen Verwendung in Paketen finden Sie unter [For Loop Container](../../integration-services/control-flow/for-loop-container.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **InitExpression**  
  Gibt optional einen Ausdruck zum Initialisieren von Werten an, die durch die Schleife verwendet werden.  
   
@@ -115,7 +116,7 @@ Mithilfe der Seite **For-Schleife** des Dialogfelds **For-Schleifen-Editor** kö
 > [!NOTE]  
 >  Objektnamen müssen innerhalb eines Pakets eindeutig sein.  
   
- **Description**  
+ **Beschreibung**  
  Geben Sie eine Beschreibung des For-Schleifencontainers an.  
  
 ## <a name="use-expressions-with-the-for-loop-container"></a>Verwenden von Ausdrücken mit dem For-Schleifencontainer  
@@ -130,7 +131,7 @@ Mithilfe der Seite **For-Schleife** des Dialogfelds **For-Schleifen-Editor** kö
  Die Ausdrucksgrammatik von [!INCLUDE[ssIS](../../includes/ssis-md.md)] stellt umfangreiche Operatoren und Funktionen zum Implementieren komplexer Ausdrücke bereit, die zum Auswerten, Initialisieren oder Zuweisen verwendet werden. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)ausgewertet wird.  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ablaufsteuerung](../../integration-services/control-flow/control-flow.md)   
  [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)  
   

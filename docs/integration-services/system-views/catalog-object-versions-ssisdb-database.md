@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b50e91381182bf2462c8f784a71e811f3bb8efe9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a8a790874900f5fc69e4f8e50d4f84d835d63c1a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogobjectversions-ssisdb-database"></a>catalog.object_versions (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +35,13 @@ ms.lasthandoff: 11/20/2017
 |object_id|**bigint**|Die eindeutige ID des Objekts.|  
 |object_type|**smallint**|Der Typ des Objekts. Der Wert `20` wird für Projekte angezeigt.|  
 |object_name|**sysname(nvarchar(128))**|Der Name des Objekts.|  
-|Beschreibung|**nvarchar(1024)**|Die Beschreibung des Projekts.|  
+|description|**nvarchar(1024)**|Die Beschreibung des Projekts.|  
 |created_by|**nvarchar(128)**|Der Name des Benutzers, der dem Katalog das Objekt hinzugefügt hat.|  
 |created_time|**datetimeoffset**|Datum und Uhrzeit, zu denen dem Katalog das Objekt hinzugefügt wurde.|  
 |restored_by|**nvarchar(128)**|Der Name des Benutzers, der das Objekt wiederhergestellt hat.|  
 |last_restored_time|**datetimeoffset**|Datum und Uhrzeit, zu denen das Objekt zuletzt wiederhergestellt wurde.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  In dieser Sicht wird eine Zeile für jede Version eines Objekts im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

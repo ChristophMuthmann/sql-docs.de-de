@@ -8,25 +8,27 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.cachetrans.f1
 - sql13.dts.designer.cachetranscon.f1
 - sql13.dts.designer.cachetransmap.f1
-helpviewer_keywords: Cache transform
+helpviewer_keywords:
+- Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1120ee2702b4951c91717a108997253de023d9c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 83d157914c7090273a213a7f2ed4b6e5ea7f2fa5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cache-transform"></a>Cachetransformation
   Die Transformation für Cachetransformation generiert ein Verweisdataset für die Transformation für Suche, indem Daten aus einer verbundenen Datenquelle im Datenfluss in einen Cacheverbindungs-Manager geschrieben werden. Die Transformation für Suche führt Suchvorgänge aus, indem Daten in Eingabespalten aus einer verbundenen Datenquelle mit Spalten in der Verweisdatenbank verknüpft werden.  
@@ -67,7 +69,7 @@ ms.lasthandoff: 11/20/2017
   
  Weitere Informationen zum Cacheverbindungs-Manager finden Sie unter [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Cache connection manager**  
  Wählen Sie einen vorhandenen Cacheverbindungs-Manager aus dem Listenfeld aus, oder erstellen Sie mithilfe der Schaltfläche **Neu** eine neue Verbindung.  
   
@@ -77,7 +79,7 @@ ms.lasthandoff: 11/20/2017
  **Bearbeiten**  
  Ändern einer vorhandenen Verbindung.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)  
   

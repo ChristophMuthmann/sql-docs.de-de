@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Data Reader task [Integration Services]
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59c418092ff7a4c5e0f4f2365ccc5293576068fc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d0e53e73df266bd3c0ec8656d0ad98198596eba5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="wmi-data-reader-task"></a>WMI-Datenleser (Task)
   Der Task WMI-Datenleser führt Abfragen mithilfe von WQL (WMI Query Language) aus, womit Informationen von WMI zu einem Computersystem zurückgegeben werden. Der Task WMI-Datenleser kann für folgende Zwecke verwendet werden:  
@@ -98,7 +99,7 @@ Select * FROM Win32_QuickFixEngineering
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WmiDataReaderTask.WmiDataReaderTask>  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Klicken Sie auf das folgende Thema, um weitere Informationen zum Festlegen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu erhalten:  
   
 -   [Festlegen der Eigenschaften eines Tasks oder Containers](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
@@ -106,22 +107,22 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="wmi-data-reader-task-editor-general-page"></a>Editor für den Task 'WMI-Datenleser' (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Editor für den Task 'WMI-Datenleser'** können Sie einen Namen und eine Beschreibung für den Task 'WMI-Datenleser' angeben.  
   
-  Weitere Informationen zur WMI Query Language (WQL) finden Sie im Thema zur Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI), [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(Abfragen mit WQL), in der MSDN Library.  
+  Weitere Informationen zur WMI Query Language (WQL) finden Sie im Thema zur Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) unter [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(Abfragen mit WQL) in der MSDN Library.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Task 'WMI-Datenleser' an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
 > [!NOTE]  
 >  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
   
- **Description**  
+ **Beschreibung**  
  Geben Sie eine Beschreibung für den Task 'WMI-Datenleser' ein.  
   
 ## <a name="wmi-data-reader-task-editor-wmi-options-page"></a>Editor für den Task 'WMI-Datenleser' (Seite WMI-Optionen)
   Auf der Seite **WMI-Optionen** des Dialogfelds **Editor für den Task „WMI-Datenleser“** können Sie die Quelle der WQL-Abfrage (Windows Management Instrumentation Query Language) und das Ziel des Abfrageergebnisses angeben.  
   
- Weitere Informationen zur WMI Query Language (WQL) finden Sie im Thema zur Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI), [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(Abfragen mit WQL), in der MSDN Library.  
+ Weitere Informationen zur WMI Query Language (WQL) finden Sie im Thema zur Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) unter [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(Abfragen mit WQL) in der MSDN Library.  
   
 ### <a name="static-options"></a>Statische Optionen  
  **WMIConnectionName**  
@@ -132,7 +133,7 @@ Select * FROM Win32_QuickFixEngineering
  **WQLQuerySourceType**  
  Wählen Sie den Quelltyp der WQL-Abfrage aus, die von dem Task ausgeführt wird. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Direct input**|Legen Sie die Quelle für eine WQL-Abfrage fest. Bei Auswahl dieses Werts wird die dynamische Option **WQLQuerySourceType**angezeigt.|  
 |**File connection**|Wählen Sie eine Datei aus, in der die WQL-Abfrage enthalten ist. Bei Auswahl dieses Werts wird die dynamische Option **WQLQuerySourceType**angezeigt.|  
@@ -147,7 +148,7 @@ Select * FROM Win32_QuickFixEngineering
  **DestinationType**  
  Wählen Sie den Zieltyp der WQL-Abfrage aus, die von dem Task ausgeführt wird. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**File connection**|Wählen Sie eine Datei aus, um die Ergebnisse der WQL-Abfrage darin zu speichern. Bei Auswahl dieses Werts wird die dynamische Option **DestinationType**angezeigt.|  
 |**Variable**|Legen Sie die Variable fest, um die Ergebnisse der WQL-Abfrage darin zu speichern. Bei Auswahl dieses Werts wird die dynamische Option **DestinationType**angezeigt.|  
@@ -184,7 +185,7 @@ Select * FROM Win32_QuickFixEngineering
   
  **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Ablaufsteuerung](../../integration-services/control-flow/control-flow.md)  
   

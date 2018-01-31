@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ee5bd643443aca136883e94a768fca60960c869
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: be3ad15259560b7b69a9a375affab2940376a22e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="excel-destination"></a>Excel-Ziel
   Das Excel-Ziel lädt Daten in Arbeitsblätter oder Bereiche in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Arbeitsmappen.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **Speichern von Memodaten (ntext)** Zum erfolgreichen Speichern von Zeichenfolgen mit mehr als 255 Zeichen in einer Excel-Spalte muss der Treiber den Datentyp der Zielspalte als **memo** und nicht als **string**erkennen. Wenn die Zieltabelle bereits Datenzeilen enthält, müssen die ersten Zeilen, die vom Treiber als Stichprobe genommen werden, mindestens eine Instanz eines Werts mit mehr als 255 Zeichen in der Memospalte enthalten. Wenn die Zieltabelle während des Paketentwurfs oder zur Laufzeit erstellt wird, muss die CREATE TABLE-Anweisung als Datentyp für die Memospalte LONGTEXT (oder eines der Synonyme) verwenden.  
   
--   **Datentypen**. Der Excel-Treiber erkennt nur einen begrenzten Satz von Datentypen. Beispielsweise werden alle numerischen Spalten als Werte mit doppelter Genauigkeit (DT_R8) interpretiert, und alle Zeichenfolgenspalten (außer Memospalten) werden als Unicode-Zeichenfolgen mit 255 Zeichen (DT_WSTR) interpretiert. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] werden die Excel-Datentypen folgendermaßen zugeordnet:  
+-   **Datentypen**. Der Excel-Treiber erkennt nur einen begrenzten Satz von Datentypen. Beispielsweise werden alle numerischen Spalten als Werte mit doppelter Genauigkeit (DT_R8) interpretiert, und alle Zeichenfolgenspalten (außer Memospalten) werden als Unicode-Zeichenfolgen mit 255 Zeichen (DT_WSTR) interpretiert. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] werden die Excel-Datentypen folgendermaßen zugeordnet:  
   
     -   Numerisch – Gleitkommawert mit doppelter Genauigkeit (DT_R8)  
   
@@ -90,13 +91,13 @@ ms.lasthandoff: 11/20/2017
   
  Das Dialogfeld **Erweiterter Editor** enthält alle Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften von Excel](../../integration-services/data-flow/excel-custom-properties.md)  
   
  Weitere Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Herstellen einer Verbindung mit einer Excel-Arbeitsmappe](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
   
@@ -128,7 +129,7 @@ ms.lasthandoff: 11/20/2017
  **Datenzugriffsmodus**  
  Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
   
-|Option|Beschreibung|  
+|Option|Description|  
 |------------|-----------------|  
 |Tabelle oder Sicht|Lädt Daten aus einem Arbeitsblatt oder dem benannten Bereich einer Excel-Datenquelle.|  
 |Variable für Tabellenname oder Sichtname|Geben Sie den Namen des Arbeitsblatts oder Bereichs in einer Variablen an.<br /><br /> **Verwandte Informationen:** [Verwenden von Variablen in Paketen](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -172,7 +173,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="excel-destination-editor-mappings-page"></a>Ziel-Editor für Excel (Seite Zuordnungen)
   Auf der Seite **Zuordnungen** des Dialogfelds **Ziel-Editor für Excel** können Sie eine Zuordnung von Eingabe- zu Zielspalten vornehmen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
   
@@ -188,7 +189,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="excel-destination-editor-error-output-page"></a>Ziel-Editor für Excel (Seite Fehlerausgabe)
   Auf der Seite **Erweitert** in **Ziel-Editor für Excel** können Sie die Optionen für die Fehlerbehandlung angeben.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Eingabe oder Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
@@ -203,7 +204,7 @@ ms.lasthandoff: 11/20/2017
  **Abschneiden**  
  Gibt an, was im Falle einer Kürzung geschehen soll: den Fehler ignorieren, die Zeile umleiten oder die Komponente mit einem Fehler abbrechen.  
   
- **Description**  
+ **Beschreibung**  
  Zeigt die Beschreibung des Fehlers an.  
   
  **Diesen Wert für ausgewählte Zellen festlegen**  
@@ -212,7 +213,7 @@ ms.lasthandoff: 11/20/2017
  **Anwenden**  
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Excel-Quelle](../../integration-services/data-flow/excel-source.md)   
  [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Datenfluss](../../integration-services/data-flow/data-flow.md)   

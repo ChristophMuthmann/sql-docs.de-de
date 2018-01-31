@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-caps.latest.revision: "70"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1bbe58e6c0503a7def766dc59d5911ecb4ef61f8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 82aad5cf36717e374cdb3e45d231504efac16549
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="script-component"></a>Skriptkomponente
   Die Skriptkomponente hostet Skripts und ermöglicht einem Paket benutzerdefinierten Skriptcode einzuschließen und benutzerdefinierten Skriptcode auszuführen. Die Skriptkomponente kann in Paketen für folgende Zwecke verwendet werden:  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="configuring-the-script-component-programmatically"></a>Programmgesteuertes Konfigurieren der Skriptkomponente im Designer  
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Fenster **Eigenschaften** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 11/20/2017
   
  Weitere Informationen zur Skriptkomponente finden Sie unter [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) (Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  Ihre Auswahl zwischen **Quelle**, **Ziel**und **Transformation** beeinflusst die Konfiguration der Skripttransformation und die Seiten des Transformations-Editors für die Skripterstellung.  
   
 ## <a name="script-transformation-editor-connection-managers-page"></a>Transformations-Editor für Skripterstellung (Seite Verbindungs-Manager)
@@ -127,7 +128,7 @@ ms.lasthandoff: 11/20/2017
   
  Weitere Informationen zur Skriptkomponente finden Sie unter [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) (Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Connection managers**  
  Zeigen Sie die Liste der Verbindungen an, die durch das Skript verwendet werden können.  
   
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/20/2017
  **Verbindungs-Manager**  
  Wählen Sie einen Verbindungs-Manager aus der Liste aus, oder wählen Sie **\<Neue Verbindung>** aus, um das Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** zu öffnen.  
   
- **Description**  
+ **Beschreibung**  
  Geben Sie eine Beschreibung für die Verbindung ein.  
   
  **Hinzufügen**  
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/20/2017
   
  Weitere Informationen zur Skriptkomponente finden Sie unter [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) (Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Eingabename**  
  Wählen Sie eine Option aus der Liste der verfügbaren Eingaben aus.  
   
@@ -178,11 +179,11 @@ ms.lasthandoff: 11/20/2017
   
  Weitere Informationen zur Skriptkomponente finden Sie unter [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) (Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Inputs and outputs**  
  Wählen Sie auf der linken Seite eine Eingabe oder Ausgabe, um die entsprechenden Eigenschaften in der Tabelle auf der rechten Seite anzuzeigen. Welche Eigenschaften bearbeitet werden können, ist von der getroffenen Auswahl abhängig. Viele dieser Eigenschaften sind schreibgeschützt. Weitere Informationen zu den einzelnen Eigenschaften finden Sie unter den folgenden Themen.  
   
- [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
  [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -203,13 +204,13 @@ ms.lasthandoff: 11/20/2017
   
  Weitere Informationen zur Skriptkomponente finden Sie unter [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) (Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Eigenschaften**  
  Zeigt die Skripttransformationseigenschaften an und ermöglicht Änderungen. Viele dieser Eigenschaften sind schreibgeschützt. Die folgenden Eigenschaften können Sie ändern:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
-|**Description**|Beschreibt den Zweck der Skripttransformation.|  
+|**Beschreibung**|Beschreibt den Zweck der Skripttransformation.|  
 |**LocaleID**|Gibt das Gebietsschema für die Bereitstellung regionsspezifischer Informationen für das Bestellen sowie für Datums- und Zeitformate an.|  
 |**Name**|Geben Sie einen aussagekräftigen Namen für die Komponente ein.|  
 |**ValidateExternalMetadata**|Zeigt an, ob von der Skripttransformation zur Entwurfszeit Spaltenmetadaten mithilfe externer Datenquellen überprüft werden. Bei dem Wert **false** wird die Überprüfung bis zur Ausführungszeit verzögert.|  

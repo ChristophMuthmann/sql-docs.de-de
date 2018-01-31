@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - XML [Integration Services]
 - XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 198bea7d4f2b566d34185156477179359eaf82bb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d8826d464d7cdbfab3e17e2cca9b61ceed0ae304
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xml-task"></a>XML-Task
   Der XML-Task wird für XML-Daten verwendet. Mit diesem Task kann ein Paket XML-Dokumente abrufen, mithilfe von XSLT-Stylesheets (Extensible Stylesheet Language Transformations) und XPath-Ausdrücken Vorgänge auf die Dokumente anwenden, mehrere Dokumente zusammenführen oder die aktualisierten Dokumente mit Dateien und Variablen überprüfen, vergleichen und speichern.  
@@ -139,7 +140,7 @@ ms.lasthandoff: 11/20/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [Festlegen der Eigenschaften eines Tasks oder Containers](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="xml-task-editor-general-page"></a>Editor für den XML-Task (Seite Allgemein)
@@ -151,7 +152,7 @@ ms.lasthandoff: 11/20/2017
  **OperationType**  
  Wählen Sie den Vorgangstyp aus der Liste aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Überprüfen**|Überprüft das XML-Dokument mithilfe eines DTD-(Document Type Definition-) bzw. XSD-(XML Schema Definition-)Schemas. Nach Auswahl dieser Option werden die dynamischen Optionen im Bereich **Validate**angezeigt.|  
 |**XSLT**|Führt XSL-Transformationen in XML-Dokumenten aus. Nach Auswahl dieser Option werden die dynamischen Optionen im Bereich **XSLT**angezeigt.|  
@@ -163,14 +164,14 @@ ms.lasthandoff: 11/20/2017
  **SourceType**  
  Wählen Sie den Quelltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
 |**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
 |**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  **Quelle**  
- Wenn **Quelle** auf **Direkteingabe**festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)** , und stellen Sie dann mithilfe des Dialogfelds **Dokumentquellen-Editor** den XML-Code bereit.  
+ Wenn **Quelle** auf **Direkteingabe** festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, und stellen Sie dann mithilfe des Dialogfelds **Dokumentquellen-Editor** den XML-Code bereit.  
   
  Wenn **Quelle** auf **Dateiverbindung** festgelegt ist, wählen Sie einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
@@ -199,7 +200,7 @@ ms.lasthandoff: 11/20/2017
  **DestinationType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
 |**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
@@ -207,7 +208,7 @@ ms.lasthandoff: 11/20/2017
  **ValidationType**  
  Wählen Sie den Überprüfungstyp aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**DTD**|Verwenden Sie eine Dokumenttypdefinition (DTD).|  
 |**XSD**|Verwenden Sie eine XML-Schemadefinition (XSD). Nach Auswahl dieser Option werden die dynamischen Optionen im Bereich **ValidationType**angezeigt.|  
@@ -224,14 +225,14 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  Wählen Sie den Quelltyp des zweiten XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
 |**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
 |**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  **SecondOperand**  
- Wenn **SecondOperandType** auf **Direkteingabe**festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)** , und stellen Sie dann über das Dialogfeld **Quellen-Editor** den XML-Code bereit.  
+ Wenn **SecondOperandType** auf **Direkteingabe** festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, und stellen Sie dann über das Dialogfeld **Quellen-Editor** den XML-Code bereit.  
   
  Wenn **SecondOperandType** auf **Dateiverbindung** festgelegt ist, wählen Sie einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
@@ -262,7 +263,7 @@ ms.lasthandoff: 11/20/2017
  **DestinationType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
 |**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
@@ -270,14 +271,14 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  Wählen Sie den Quelltyp des zweiten XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
 |**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
 |**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  **SecondOperand**  
- Wenn **SecondOperandType** auf **Direkteingabe**festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)** , und stellen Sie dann über das Dialogfeld **Quellen-Editor** den XML-Code bereit.  
+ Wenn **SecondOperandType** auf **Direkteingabe** festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, und stellen Sie dann über das Dialogfeld **Quellen-Editor** den XML-Code bereit.  
   
  Wenn **SecondOperandType** auf **Dateiverbindung** festgelegt ist, wählen Sie einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
@@ -308,7 +309,7 @@ ms.lasthandoff: 11/20/2017
  **DestinationType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
 |**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
@@ -316,14 +317,14 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  Wählen Sie den Quelltyp des zweiten XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
 |**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
 |**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  **SecondOperand**  
- Wenn **SecondOperandType** auf **Direkteingabe**festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)** , und stellen Sie dann über das Dialogfeld **Quellen-Editor** den XML-Code bereit.  
+ Wenn **SecondOperandType** auf **Direkteingabe** festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, und stellen Sie dann über das Dialogfeld **Quellen-Editor** den XML-Code bereit.  
   
  Wenn **SecondOperandType** auf **Dateiverbindung** festgelegt ist, wählen Sie einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
@@ -339,7 +340,7 @@ ms.lasthandoff: 11/20/2017
  **XPathOperation**  
  Wählen Sie den XPath-Ergebnistyp aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Evaluation**|Gibt die Ergebnisse einer XPath-Funktion zurück.|  
 |**Node list**|Gibt die ausgewählten Knoten als XML-Fragment zurück.|  
@@ -351,14 +352,14 @@ ms.lasthandoff: 11/20/2017
  **XPathStringSourceType**  
  Wählen Sie den Quelltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
 |**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
 |**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
   
  **XPathStringSource**  
- Wenn **XPathStringSourceType** auf **Direkteingabe**festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)** , und stellen Sie dann mithilfe des Dialogfelds **Quellen-Editor** den XML-Code bereit.  
+ Wenn **XPathStringSourceType** auf **Direkteingabe** festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, und stellen Sie dann mithilfe des Dialogfelds **Quellen-Editor** den XML-Code bereit.  
   
  Wenn **XPathStringSourceType** auf **Dateiverbindung** festgelegt ist, wählen Sie einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
@@ -388,7 +389,7 @@ ms.lasthandoff: 11/20/2017
  **DestinationType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
 |**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
@@ -396,7 +397,7 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  Wählen Sie den Zieltyp des zweiten XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
 |**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
@@ -419,7 +420,7 @@ ms.lasthandoff: 11/20/2017
  **DiffAlgorithm**  
  Wählen Sie den Vergleichsalgorithmus aus, der beim Vergleich von Dokumenten verwendet werden soll. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Automatisch**|Wenn Sie diese Option auswählen, wird vom XML-Task bestimmt, ob der schnelle oder der genaue Algorithmus verwendet wird.|  
 |**Fast**|Wenn diese Option ausgewählt ist, wird ein schneller, aber weniger genauer Vergleichsalgorithmus verwendet.|  
@@ -428,7 +429,7 @@ ms.lasthandoff: 11/20/2017
  **Diff Options**  
  Legen Sie die Vergleichsoptionen fest, die auf den Vergleichsvorgang angewendet werden sollen. Die Optionen sind in der folgenden Tabelle aufgeführt.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**IgnoreXMLDeclaration**|Geben Sie an, ob XML-Deklaration verglichen werden soll.|  
 |**IgnoreDTD**|Geben Sie an, ob die Dokumenttypdefinition (DTD) ignoriert werden soll.|  
@@ -463,7 +464,7 @@ ms.lasthandoff: 11/20/2017
  **DestinationType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
 |**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
@@ -471,7 +472,7 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
 |**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
@@ -509,7 +510,7 @@ ms.lasthandoff: 11/20/2017
  **DestinationType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
 |**Variable**|Legen Sie als Quelle eine Variable fest, die das XML-Dokument enthält.|  
@@ -517,7 +518,7 @@ ms.lasthandoff: 11/20/2017
  **SecondOperandType**  
  Wählen Sie den Zieltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
 |**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  

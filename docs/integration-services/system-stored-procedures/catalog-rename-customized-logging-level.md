@@ -8,25 +8,26 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 345b424bd4404af4cc2f52aee4fc9ce174aee983
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a0cfd15570162feb603fe987a135b0d77da4df60
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogrenamecustomizedlogginglevel"></a>catalog.rename_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Benennt einen vorhandenen benutzerdefinierten Protokolliergrad um. Weitere Informationen zu benutzerdefinierten Protokolliergraden finden Sie unter [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md) (SSIS-Protokollierung [SQL Server Integration Services]).  
+  Benennt einen vorhandenen benutzerdefinierten Protokolliergrad um. Weitere Informationen zu benutzerdefinierten Protokolliergraden finden Sie unter [Integration Services &#40;SSIS&#41; Logging (SSIS-Protokollierung [SQL Server Integration Services])](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,7 +47,7 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
   
  Der *new_name* ist **nvarchar(128)**.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="return-codes"></a>Rückgabecodes  
  0 (Erfolg)  
@@ -54,7 +55,7 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
  Wenn die gespeicherte Prozedur fehlschlägt, wird ein Fehler ausgelöst.  
   
 ## <a name="result-set"></a>Resultset  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  

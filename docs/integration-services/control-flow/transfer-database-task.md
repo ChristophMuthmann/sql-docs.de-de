@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,18 +18,19 @@ f1_keywords:
 - sql13.dts.designer.transferdatabasetask.database.f1
 - sql13.dts.designer.transferdatabasetask.sourcedbfiles.f1
 - sql13.dts.designer.transferdatabasetask.destdbfiles.f1
-helpviewer_keywords: Transfer Database task [Integration Services]
+helpviewer_keywords:
+- Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 026736a98fc4be0786cda2c993585d0d4165866b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 83ba4c606ccf7779f01219fcf69e90d2b3b6dea9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transfer-database-task"></a>Datenbanken übertragen (Task)
   Der Task "Datenbanken übertragen" verschiebt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank zwischen zwei Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Im Gegensatz zu den anderen Tasks, die lediglich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte durch Kopieren verschieben, kann der Task "Datenbanken übertragen" eine Datenbank entweder kopieren oder verschieben. Dieser Task kann auch verwendet werden, um eine Datenbank innerhalb desselben Servers zu kopieren.  
@@ -94,20 +96,20 @@ ms.lasthandoff: 11/20/2017
 ## <a name="transfer-database-task-editor-general-page"></a>Editor für den Task Datenbanken übertragen (Seite Allgemein)
   Mithilfe der Seite **Allgemein** des Dialogfelds **Editor für den Task 'Datenbanken übertragen'** können Sie den Task Datenbanken übertragen benennen und beschreiben. Der Task Datenbanken übertragen kopiert oder verschiebt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank zwischen zwei Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dieser Task kann auch verwendet werden, um eine Datenbank innerhalb desselben Servers zu kopieren.   
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Task Datenbanken übertragen ein. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
 > [!NOTE]  
 >  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
   
- **Description**  
+ **Beschreibung**  
  Geben Sie eine Beschreibung für den Task Datenbanken übertragen ein.  
   
 ## <a name="transfer-database-task-editor-databases-page"></a>Editor für den Task Datenbanken übertragen (Seite Datenbanken)
   Verwenden Sie die Seite **Datenbanken** des Dialogfelds **Editor für den Task Datenbanken übertragen** , um die Eigenschaften für die im Task Datenbanken übertragen verwendeten Quell- und Zieldatenbanken anzugeben. Der Task Datenbanken übertragen kopiert oder verschiebt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank zwischen zwei Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dieser Task kann auch verwendet werden, um eine Datenbank innerhalb desselben Servers zu kopieren.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **SourceConnection**  
  Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung...>**, um eine neue Verbindung mit dem Quellserver herzustellen.  
   
@@ -136,7 +138,7 @@ ms.lasthandoff: 11/20/2017
   
  Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Wahr**|Zielserverdatenbank überschreiben.|  
 |**False**|Zielserverdatenbank nicht überschreiben.|  
@@ -165,7 +167,7 @@ ms.lasthandoff: 11/20/2017
   
  Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Wahr**|Quelldatenbank wieder anfügen.|  
 |**False**|Quelldatenbank nicht wieder anfügen.|  
@@ -175,7 +177,7 @@ ms.lasthandoff: 11/20/2017
   
  Um dieses Dialogfeld mit den Datenbankdateinamen und -speicherorten des Quellservers aufzufüllen, geben Sie zuerst auf der Seite **Datenbanken** des Dialogfelds **Editor für den Task 'Datenbanken übertragen'** die Parameter **SourceConnection** und **SourceDatabaseName** an.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Quelldatei**  
  Die Namen der zu übertragenden Datenbankdateien auf dem Quellserver. **Quelldatei** ist schreibgeschützt.  
   
@@ -194,7 +196,7 @@ ms.lasthandoff: 11/20/2017
   
  Um dieses Dialogfeld automatisch mit den Datenbankdateinamen und -speicherorten des Quellservers aufzufüllen, geben Sie zuerst auf der Seite **Datenbanken**des Dialogfelds **Editor für den Task 'Datenbanken übertragen'**die Parameter **SourceConnection** , **SourceDatabaseName** und **SourceDatabaseFiles** an.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Zieldatei**  
  Namen der übertragenen Datenbankdateien auf dem Zielserver.  
   

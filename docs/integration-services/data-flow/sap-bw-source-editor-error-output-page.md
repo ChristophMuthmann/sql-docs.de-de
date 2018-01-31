@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.sapbwsource.erroroutput.f1
+f1_keywords:
+- sql13.dts.designer.sapbwsource.erroroutput.f1
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1dea5d2c3260d3399c9016315afb42df901527bf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 86a85b437421f5306f0d80b61fcfa4bf1642438f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>Quellen-Editor für SAP BW (Seite Fehlerausgabe)
   Mithilfe der Seite **Fehlerausgabe** im **Quellen-Editor für SAP BW** können Sie Fehlerbehandlungsoptionen auswählen und Eigenschaften für Fehlerausgabespalten festlegen.  
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Klicken Sie im **Quellen-Editor für SAP BW**auf **Fehlerausgabe** , um die Seite **Fehlerausgabe** des Editors zu öffnen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
   
 > [!NOTE]  
 >  Wenn Sie nicht alle Werte kennen, die zur Konfiguration der Quelle erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  
@@ -60,7 +62,7 @@ ms.lasthandoff: 11/20/2017
  **Abschneiden**  
  Gibt an, wie die SAP BW-Quellkomponente bei einer Kürzung vorgehen soll: den Fehler ignorieren, die Zeile umleiten oder die Komponente mit einem Fehler abbrechen.  
   
- **Description**  
+ **Beschreibung**  
  Zeigt die Beschreibung des Fehlers an.  
   
  **Diesen Wert für ausgewählte Zellen festlegen**  
@@ -69,7 +71,7 @@ ms.lasthandoff: 11/20/2017
  **Anwenden**  
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Quellen-Editor für SAP BW &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [Quellen-Editor für SAP BW &#40;Seite Spalten&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
  [Quellen-Editor für SAP BW &#40;Seite „Erweitert“&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   

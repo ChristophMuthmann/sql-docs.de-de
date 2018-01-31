@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cfb0db72c6fca86efb2e7fcdb24d602caea90eb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 140508a2b52ad86ddb7916e3ed0d5350d26aab73
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-infosource-for-transaction-data"></a>InfoSource für Transaktionsdaten erstellen
   Verwenden Sie das Dialogfeld **InfoSource für Transaktionsdaten erstellen** , um eine neue InfoSource für Transaktionsdaten im SAP NetWeaver BW-System zu erstellen.  
@@ -87,7 +88,7 @@ ms.lasthandoff: 11/20/2017
  **Typ**  
  Zeigt den Typ des InfoObject an, das der Datenflussspalte zugeordnet ist. In der folgenden Tabelle sind die möglichen Werte für den Typ aufgelistet.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |CHA|Merkmale|  
 |UNI|Einheiten|  
@@ -97,7 +98,7 @@ ms.lasthandoff: 11/20/2017
  **Einheitenfeld**  
  Geben Sie die Einheiten an, die vom InfoObject verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [InfoSource erstellen](../../integration-services/data-flow/create-infosource.md)   
  [F1-Hilfe zum Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

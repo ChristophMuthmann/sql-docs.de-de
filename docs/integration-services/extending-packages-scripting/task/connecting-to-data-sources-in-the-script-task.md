@@ -8,11 +8,14 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
 helpviewer_keywords:
 - connections [Integration Services], scripts
 - Integration Services packages, connections
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connections
 - SSIS Script task, connections
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 76108d1b6c4004d85456b0f412874012b8d71228
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: ec2177e6db706cff5b3ea63ea23c20023fd4dec9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>Herstellen einer Verbindung zu Datenquellen im Skripttask 
   Verbindungs-Manager bieten Zugriff auf Datenquellen, die im Paket konfiguriert wurden. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../../../integration-services/connection-manager/integration-services-ssis-connections.md).  

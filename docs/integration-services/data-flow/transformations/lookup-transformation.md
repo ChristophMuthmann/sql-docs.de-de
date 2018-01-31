@@ -29,13 +29,13 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 316fa73c7acd3e66a21ae285217c8ec917c7afbc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5530fc22bd6657e3cf0888d2cca8bc8d92b01895
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lookup-transformation"></a>Transformation für Suche
   Die Transformation für die Suche führt Suchvorgänge aus, indem Daten in Eingabespalten mit Spalten in einem Verweisdataset verknüpft werden. Mithilfe der Transformation für Suche können Sie auf zusätzliche Informationen in einer zugehörigen Tabelle zugreifen, die auf Werten in gemeinsamen Spalten basiert.  
@@ -124,7 +124,7 @@ ms.lasthandoff: 11/20/2017
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterscheiden sich in der Art des Zeichenfolgenvergleichs. Wenn die Transformation für Suche so konfiguriert ist, dass das Verweisdataset in den Cache geladen wird, bevor die Transformation für Suche ausgeführt wird, führt [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] den Suchvergleich im Cache aus. Andernfalls verwendet der Suchvorgang eine parametrisierte SQL-Anweisung, und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] führt den Suchvergleich aus. Dies bedeutet, dass die Transformation für Suche je nach Cachetyp möglicherweise eine unterschiedliche Anzahl von Übereinstimmungen aus der gleichen Suchtabelle zurückgibt.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen. Weitere Einzelheiten finden Sie in den folgenden Hilfethemen:  
   
 -   [Implementieren einer Suche im Modus "Kein Cache" oder "Teilcache"](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
@@ -137,9 +137,9 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Video [Vorgehensweise: Implementieren einer Suchtransformation im Vollcachemodus](http://go.microsoft.com/fwlink/?LinkId=131031)(Vorgehensweise: Implementieren einer Suchtransformation im Vollcachemodus) unter msdn.microsoft.com  
+-   Video [How to: Implement a Lookup Transformation in Full Cache Mode](http://go.microsoft.com/fwlink/?LinkId=131031)(Vorgehensweise: Implementieren einer Suchtransformation im Vollcachemodus) unter msdn.microsoft.com  
   
--   Blog-Artikel [Bewährte Vorgehensweisen für die Verwendung des Cachemodus der Transformation für Suche](http://go.microsoft.com/fwlink/?LinkId=146623)(Bewährte Vorgehensweisen für die Verwendung des Cachemodus der Transformation für Suche) unter blogs.msdn.com  
+-   Blog-Artikel [Best Practices for Using the Lookup Transformation Cache Modes](http://go.microsoft.com/fwlink/?LinkId=146623)(Bewährte Vorgehensweisen für die Verwendung des Cachemodus der Transformation für Suche) unter blogs.msdn.com  
   
 -   Blogeintrag [Suchmuster: Keine Beachtung von Groß-/Kleinschreibung](http://go.microsoft.com/fwlink/?LinkId=157782)auf blogs.msdn.com.  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="lookup-transformation-editor-general-page"></a>Transformations-Editor für Suche (Seite 'Allgemein')
   Auf der Seite **Allgemein** des Dialogfelds Transformations-Editor für Suche können Sie den Cachemodus und den Verbindungstyp auswählen sowie angeben, wie Zeilen ohne übereinstimmende Einträge behandelt werden sollen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Vollcache**  
  Das Verweisdataset wird generiert und in den Cache geladen, bevor die Transformation für Suche ausgeführt wird.  
   
@@ -163,7 +163,7 @@ ms.lasthandoff: 11/20/2017
  **Cacheverbindungs-Manager**  
  Die Transformation für Suche wird für die Verwendung eines Cacheverbindungs-Managers konfiguriert. Diese Option ist nur verfügbar, wenn die Option Vollcache ausgewählt ist.  
   
- **OLE DB-Verbindungs-Manager**  
+ **Teilcache**  
  Die Transformation für Suche wird für die Verwendung eines OLE DB-Verbindungs-Managers konfiguriert.  
   
  **Angeben, wie Zeilen ohne übereinstimmende Einträge behandelt werden sollen**  
@@ -179,7 +179,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="lookup-transformation-editor-connection-page"></a>Transformations-Editor für Suche (Seite 'Verbindung')
   Auf der Seite **Verbindung** des Dialogfelds **Transformations-Editor für Suche** können Sie einen Verbindungs-Manager auswählen. Wenn Sie einen OLE DB-Verbindungs-Manager auswählen, wählen Sie auch eine Abfrage, Tabelle oder Sicht zum Generieren des Verweisdatasets aus.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  Die folgenden Optionen sind verfügbar, wenn Sie im Dialogfeld **Transformations-Editor für Suche** auf der Seite **Allgemein** die Optionen **Vollcache** und Cacheverbindungs-Manager auswählen.  
   
  **Allgemein**  
@@ -226,7 +226,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="lookup-transformation-editor-columns-page"></a>Transformations-Editor für Suche (Seite 'Spalten')
   Auf der Seite **Spalten** des Dialogfelds **Transformations-Editor für Suche** können Sie den Join zwischen der Quell- und der Verweistabelle angeben sowie Suchspalten aus der Verweistabelle auswählen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Die Eingabespalten sind die Spalten im Datenfluss aus einer verbundenen Quelle. Die Datentypen der Eingabe- und Suchspalte müssen übereinstimmen.  
   
@@ -255,7 +255,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="lookup-transformation-editor-advanced-page"></a>Transformations-Editor für Suche (Seite 'Erweitert')
   Auf der Seite **Erweitert** des Dialogfelds **Transformations-Editor für Suche** können Sie die teilweise Zwischenspeicherung konfigurieren und die SQL-Anweisung für die Suchtransformation ändern.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Cachegröße (32-Bit)**  
  Passen Sie die Cachegröße (in Megabytes) für 32-Bit-Computer an. Der Standardwert ist 5 Megabytes.  
   
@@ -280,7 +280,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="external-resources"></a>Externe Ressourcen  
  Blogeintrag [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) (Suchcachemodi) auf blogs.msdn.com  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Transformation für Fuzzysuche](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Transformation für Ausdruckssuche](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)   

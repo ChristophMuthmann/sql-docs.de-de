@@ -8,25 +8,27 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.dataprofilingtask.f1
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.f1
 helpviewer_keywords:
 - Data Profiling task [Integration Services], about Data Profiling task
 - data profiling
 - profiling data
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2c047b4a34bc300c7caacd020dd4c1833077dd5a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 62c240d11e15eea39fb7246d147680b39370c7a6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profiling-task"></a>Datenprofilerstellungs-Task
   Der Datenprofilerstellungs-Task berechnet verschiedene Profile, mit deren Hilfe Sie sich mit einer Datenquelle vertraut machen und Probleme bei den Daten identifizieren können, die behoben werden müssen.  

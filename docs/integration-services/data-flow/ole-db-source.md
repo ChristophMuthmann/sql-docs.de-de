@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 669c3d72bd6287d0e534dd34f874978a8157da21
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e659322d66c01081c664850366a6cc4abf190d16
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-source"></a>OLE DB-Quelle
   Die OLE DB-Quelle extrahiert Daten mithilfe einer Datenbanktabelle, einer Sicht oder eines SQL-Befehls aus einer Reihe von OLE DB-kompatiblen relationalen Datenbanken. Beispielsweise kann die OLE DB-Quelle Daten aus Tabellen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access- oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken extrahieren.  
@@ -102,11 +103,11 @@ ms.lasthandoff: 11/20/2017
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften für OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Extrahieren von Daten mithilfe der OLE DB-Quelle](../../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md)  
   
@@ -139,7 +140,7 @@ ms.lasthandoff: 11/20/2017
 3.  Klicken Sie auf **Verbindungs-Manager**.  
   
 ### <a name="static-options"></a>Statische Optionen  
- **OLE DB-Verbindungs-Manager**  
+ **Teilcache**  
  Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
  **Neu**  
@@ -148,7 +149,7 @@ ms.lasthandoff: 11/20/2017
  **Datenzugriffsmodus**  
  Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
   
-|Option|Beschreibung|  
+|Option|Description|  
 |------------|-----------------|  
 |Tabelle oder Sicht|Rufen Sie Daten aus einer Tabelle oder Sicht in der OLE DB-Datenquelle ab.|  
 |Variable für Tabellenname oder Sichtname|Gibt den Namen der Tabelle oder Sicht in einer Variablen an.<br /><br /> **Verwandte Informationen:** [Verwenden von Variablen in Paketen](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -173,7 +174,7 @@ ms.lasthandoff: 11/20/2017
   
 #### <a name="data-access-mode--sql-command"></a>Datenzugriffsmodus = SQL-Befehl  
  **SQL-Befehlstext**  
- Geben Sie den Text einer SQL-Abfrage ein, und erstellen Sie die Abfrage, indem Sie auf **Abfrage erstellen**klicken. Wahlweise können Sie auch nach der Datei suchen, die den Abfragetext enthält, indem Sie auf **Durchsuchen**klicken.  
+ Geben Sie den Text einer SQL-Abfrage ein, und erstellen Sie die Abfrage, indem Sie auf **Abfrage erstellen**klicken, oder suchen Sie nach der Datei, die den Abfragetext enthält, indem Sie auf **Durchsuchen**klicken.  
   
  **Parameter**  
  Wenn Sie eine parametrisierte Abfrage eingeben und im Abfragetext ? als Parameterplatzhalter verwenden, können Sie den Paketvariablen mithilfe des Dialogfelds **Abfrageparameter festlegen** Abfrageeingabeparameter zuordnen.  
@@ -194,7 +195,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="ole-db-source-editor-columns-page"></a>Quellen-Editor für OLE DB (Seite Spalten)
   Auf der Seite **Spalten** des Dialogfelds **Quellen-Editor für OLE DB** können Sie jeder externen (Quell-)Spalte eine Ausgabespalte zuordnen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare externe Spalten**  
  Zeigt die Liste der in der Datenquelle verfügbaren externen Spalten an. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden.  
   
@@ -207,7 +208,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="ole-db-source-editor-error-output-page"></a>Quellen-Editor für OLE DB (Seite Fehlerausgabe)
   Mithilfe der Seite **Fehlerausgabe** des Dialogfelds **Quellen-Editor für OLE DB** können Sie Fehlerbehandlungsoptionen auswählen und Eigenschaften für Fehlerausgabespalten festlegen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
@@ -222,7 +223,7 @@ ms.lasthandoff: 11/20/2017
  **Abschneiden**  
  Gibt an, was im Falle einer Kürzung geschehen soll: den Fehler ignorieren, die Zeile umleiten oder die Komponente mit einem Fehler abbrechen.  
   
- **Description**  
+ **Beschreibung**  
  Zeigt die Beschreibung des Fehlers an.  
   
  **Diesen Wert für ausgewählte Zellen festlegen**  
@@ -231,7 +232,7 @@ ms.lasthandoff: 11/20/2017
  **Anwenden**  
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OLE DB-Ziel](../../integration-services/data-flow/ole-db-destination.md)   
  [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Datenfluss](../../integration-services/data-flow/data-flow.md)  

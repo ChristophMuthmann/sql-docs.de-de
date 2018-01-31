@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-caps.latest.revision: "115"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ae247a65d28b039210dcf8d3243ae19ffde504cc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 82f72b4696d1169055c5726d9095eff70715b523
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-sql-task"></a>SQL ausführen (Task)
   Mit dem Task SQL ausführen werden SQL-Anweisungen oder gespeicherte Prozeduren aus einem Paket ausgeführt. Dieser Task kann eine oder mehrere SQL-Anweisungen enthalten, die sequenziell ausgeführt werden. Der Task SQL ausführen kann für folgende Zwecke verwendet werden:  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="connect-to-a-data-source"></a>Herstellen einer Verbindung mit einer Datenquelle  
  Der Task SQL ausführen kann verschiedene Arten von Verbindungs-Managern für die Verbindung mit der Datenquelle verwenden, in der die SQL-Anweisung oder die gespeicherte Prozedur ausgeführt wird. Der Task kann die in der folgenden Tabelle aufgeführten Verbindungstypen verwenden.  
   
-|Verbindungstyp|Verbindungs-Manager|  
+|Verbindungstyp|Ziel-Editor für Dimensionsverarbeitung|  
 |---------------------|------------------------|  
 |EXCEL|[Excel-Verbindungs-Manager](../../integration-services/connection-manager/excel-connection-manager.md)|  
 |OLE DB|[OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
@@ -123,7 +124,7 @@ Weitere Informationen zur Transact-SQL-Abfragesprache finden Sie unter [Transact
  **Name**  
  Geben Sie einen eindeutigen Namen für den Task 'SQL ausführen' im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer angezeigt.  
   
- **Description**  
+ **Beschreibung**  
  Beschreiben Sie den Task 'SQL ausführen'. Es wird hierbei empfohlen, das Paket zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und einfacher zu verwalten sind.  
   
  **TimeOut**  
@@ -159,7 +160,7 @@ Weitere Informationen zur Transact-SQL-Abfragesprache finden Sie unter [Transact
   
  Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Direct input**|Legen Sie als Quelle eine Transact-SQL-Anweisung fest. Bei Auswahl dieses Wertes wird die dynamische Option **SQLStatement**angezeigt.|  
 |**File connection**|Wählen Sie eine Datei aus, die eine Transact-SQL-Anweisung enthält. Durch Festlegen dieser Option wird die dynamische Option **FileConnection**angezeigt.|  
@@ -205,7 +206,7 @@ Weitere Informationen zur Transact-SQL-Abfragesprache finden Sie unter [Transact
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>Seite „Parameterzuordnung“ – Editor für den Task „SQL ausführen“
 Mithilfe der Seite **Parameterzuordnung** des Dialogfelds **Editor für den Task 'SQL ausführen'** können Sie Parametern in der SQL-Anweisung Variablen zuordnen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Variablenname**  
  Nachdem Sie auf **Hinzufügen** geklickt und damit eine neue Parameterzuordnung hinzugefügt haben, wählen Sie in der Liste eine Systemvariable oder eine benutzerdefinierte Variable aus, oder klicken Sie auf \<**Neue Variable...**>, um mithilfe des Dialogfelds **Variable hinzufügen** eine neue Variable hinzuzufügen.  
   
@@ -236,7 +237,7 @@ Mithilfe der Seite **Parameterzuordnung** des Dialogfelds **Editor für den Task
 ## <a name="result-set-page---execute-sql-task-editor"></a>Seite „Resultset“ – Editor für den Task „SQL ausführen“
 Mithilfe der Seite **Resultset** des Dialogfelds **Editor für den Task 'SQL ausführen'** können Sie das Ergebnis der SQL-Anweisung neuen oder vorhandenen Variablen zuordnen. Die Optionen in diesem Dialogfeld sind deaktiviert, wenn auf der Seite Allgemein für **ResultSet** der Wert **Keine**festgelegt ist.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Ergebnisname**  
  Nachdem Sie durch Klicken auf **Hinzufügen**eine Resultsetzuordnung hinzugefügt haben, geben Sie einen Namen für das Ergebnis an. Je nach Resultsettyp müssen Sie bestimmte Ergebnisnamen verwenden.  
   

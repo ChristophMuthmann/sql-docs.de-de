@@ -8,25 +8,27 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfersqlserverobjectstask.f1
 - sql13.dts.designer.transfersqlserverobjects.general.f1
 - sql13.dts.designer.transfersqlserverobjects.objects.f1
-helpviewer_keywords: Transfer SQL Server Objects task [Integration Services]
+helpviewer_keywords:
+- Transfer SQL Server Objects task [Integration Services]
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 05b3013e4e0328766b0131d41d0fd9b6cd38148b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d27b4617e47266a377d2412c79d126ea0cd6dc48
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transfer-sql-server-objects-task"></a>SQL Server-Objekte kopieren (Task)
   Mit dem Task „ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte übertragen“ wird mindestens ein Typ von Objekten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank zwischen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]übertragen. Der Task kann z. B. Tabellen und gespeicherte Prozeduren kopieren. Je nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version, die als Quelle verwendet wird, stehen verschiedene Objekttypen zum Kopieren zur Verfügung. Nur eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank enthält z.B. Schemas und benutzerdefinierte Aggregate.  
@@ -131,14 +133,14 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Der Benutzer, der den Task „ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte übertragen“ erstellt, benötigt die Berechtigung, die Quellserverobjekte zum Kopieren auszuwählen sowie die Berechtigung, auf die Datenbank des Zielservers zuzugreifen, auf den die Objekte übertragen werden.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie für den Task [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte übertragen einen eindeutigen Namen ein. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
 > [!NOTE]  
 >  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
   
- **Description**  
+ **Beschreibung**  
  Geben Sie eine Beschreibung des Tasks [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte übertragen ein.  
   
 ## <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Editor für den Task 'SQL Server-Objekte übertragen' (Seite Objekte)
@@ -172,7 +174,7 @@ ms.lasthandoff: 11/20/2017
  **ExistingData**  
  Bestimmen Sie, wie die Daten auf den Zielserver kopiert werden sollen. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Ersetzen**|Daten auf dem Zielserver werden überschrieben.|  
 |**Anfügen**|Die vom Quellserver kopierten Daten werden an die vorhandenen Daten auf dem Zielserver angehängt.|  
@@ -328,7 +330,7 @@ ms.lasthandoff: 11/20/2017
  **XmlSchemaCollectionsList**  
  Klicken Sie auf diese Option, um das Dialogfeld **XML-Schemaauflistungen** auswählen zu öffnen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Editor für den Task „SQL Server-Objekte übertragen“ &#40;Seite „Allgemein“&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   

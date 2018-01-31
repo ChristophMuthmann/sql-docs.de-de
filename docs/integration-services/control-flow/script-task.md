@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Script task [Integration Services], about Script task
 - Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-caps.latest.revision: "67"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 83f4682136c01e29f034800656ee4bb27a8d62da
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 02febb9ffc5fd20842bff97edc231005a64c30dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="script-task"></a>Skripttask
   Der Skripttask stellt Code zum Ausführen von Funktionen bereit, die in den integrierten Tasks und Transformationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nicht verfügbar sind. Der Skripttask kann auch Funktionen in einem einzigen Skript zusammenfassen, statt mehrere Tasks und Transformationen zu verwenden. Sie verwenden den Skripttask für einmalige Aktionen in einem Paket (einmalig pro aufgezähltem Objekt), anstatt diese einmalig pro Datenzeile auszuführen.  
@@ -100,14 +101,14 @@ ms.lasthandoff: 11/20/2017
   
  Weitere Informationen zum Skripttask finden Sie unter [Script Task](../../integration-services/control-flow/script-task.md) und [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Informationen zum Programmieren des Skripttasks finden Sie unter [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Skripttask an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
 > [!NOTE]  
 >  Tasknamen müssen innerhalb eines Pakets eindeutig sein.  
   
- **Description**  
+ **Beschreibung**  
  Geben Sie eine Beschreibung des Skripttasks ein.  
   
 ## <a name="script-task-editor-script-page"></a>Skripttask-Editor (Seite Skript)
@@ -118,7 +119,7 @@ ms.lasthandoff: 11/20/2017
   
  Weitere Informationen zum Skripttask finden Sie unter [Script Task](../../integration-services/control-flow/script-task.md) und [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Informationen zum Programmieren des Skripttasks finden Sie unter [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **ScriptLanguage**  
  Wählen Sie die Skriptsprache für den Task aus, entweder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
   

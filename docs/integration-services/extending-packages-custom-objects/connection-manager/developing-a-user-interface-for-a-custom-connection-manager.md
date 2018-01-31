@@ -11,21 +11,22 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - custom connection managers [Integration Services], developing user interface
 - custom user interface [Integration Services], custom connection manager
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7fd1cf7b6637ed930d9a4dbc9f6cfb7e3153a7d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9d48e70032b2022e8dc0359b5cf23bd42440f54f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Verbindungs-Manager
   Nachdem Sie die Implementierung der Eigenschaften und Methoden der Basisklasse überschrieben haben, um benutzerdefinierte Funktionen bereitzustellen, möchten Sie vielleicht eine benutzerdefinierte Oberfläche für den Verbindungs-Manager erstellen. Wenn Sie keine individuelle Benutzeroberfläche erstellen, können die Benutzer den Verbindungs-Manager nur über das Eigenschaftenfenster konfigurieren.  

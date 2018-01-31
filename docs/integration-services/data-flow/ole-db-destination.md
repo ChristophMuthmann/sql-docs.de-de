@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ead74161f0527901680d4495e0feb4056c17011
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 32e0ce09ff9c804a3d7beac5e1ba251a5bc8105e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-destination"></a>OLE DB-Ziel
   Das OLE DB-Ziel lädt Daten mithilfe einer Datenbanktabelle, einer Sicht oder eines SQL-Befehls in eine Reihe von OLE DB-kompatible Datenbanken. Beispielsweise können aus der OLE DB-Quelle Daten in Tabellen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access- und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken geladen werden.  
@@ -113,7 +114,7 @@ ms.lasthandoff: 11/20/2017
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften für OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -133,7 +134,7 @@ ms.lasthandoff: 11/20/2017
 >  Die **CommandTimeout** -Eigenschaft des OLE DB-Ziels ist nicht im **Ziel-Editor für OLE DB**verfügbar, sie kann jedoch mit dem Dialogfeld **Erweiterter Editor**festgelegt werden. Darüber hinaus sind bestimmte Optionen für schnelles Laden nur im Dialogfeld **Erweiterter Editor**verfügbar. Weitere Informationen zu diesen Eigenschaften finden Sie im Abschnitt OLE DB-Ziel von [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
   
 ### <a name="static-options"></a>Statische Optionen  
- **OLE DB-Verbindungs-Manager**  
+ **Teilcache**  
  Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
  **Neu**  
@@ -142,7 +143,7 @@ ms.lasthandoff: 11/20/2017
  **Datenzugriffsmodus**  
  Gibt das Verfahren für das Laden von Daten in das Ziel an. Für das Laden von Doppelbyte-Zeichensatzdaten (Double-Byte Character Set oder DBCS) ist die Verwendung einer der Optionen für schnelles Laden erforderlich. Weitere Informationen zu Datenzugriffsmodi für schnelles Laden, die für Masseneinfügungen optimiert sind, finden Sie unter [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
   
-|Option|Beschreibung|  
+|Option|Description|  
 |------------|-----------------|  
 |Tabelle oder Sicht|Lädt Daten in eine Tabelle oder Sicht im OLE DB-Ziel.|  
 |Tabelle oder Sicht - schnelles Laden|Lädt Daten in eine Tabelle oder Sicht im OLE DB-Ziel und verwendet die Option für das schnelle Laden. Weitere Informationen zu Datenzugriffsmodi für schnelles Laden, die für Masseneinfügungen optimiert sind, finden Sie unter [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
@@ -250,7 +251,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Vom OLE DB-Ziel werden keine Parameter unterstützt. Wenn Sie eine parametrisierte INSERT-Anweisung ausführen müssen, ziehen Sie die Transformation für den OLE DB-Befehl in Betracht. Weitere Informationen finden Sie unter [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md).  
   
- **Build query**  
+ **Abfrage erstellen**  
  Mithilfe des Dialogfelds **Abfrage-Generator** können Sie die SQL-Abfrage visuell erstellen.  
   
  **Durchsuchen**  
@@ -262,7 +263,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="ole-db-destination-editor-mappings-page"></a>Ziel-Editor für OLE DB (Seite Zuordnungen)
   Auf der Seite **Zuordnungen** des Dialogfelds **Ziel-Editor für OLE DB** können Sie eine Zuordnung von Eingabe- zu Zielspalten vornehmen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
   
@@ -278,7 +279,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="ole-db-destination-editor-error-output-page"></a>Ziel-Editor für OLE DB (Seite Fehlerausgabe)
   Auf der Seite **Fehlerausgabe** des Dialogfelds **Ziel-Editor für OLE DB** geben Sie Optionen für die Fehlerbehandlung an.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Eingabe an.  
   
@@ -293,7 +294,7 @@ ms.lasthandoff: 11/20/2017
  **Abschneiden**  
  Wird nicht verwendet.  
   
- **Description**  
+ **Beschreibung**  
  Zeigt die Beschreibung des Vorgangs an.  
   
  **Diesen Wert für ausgewählte Zellen festlegen**  

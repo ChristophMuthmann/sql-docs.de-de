@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - data types [Integration Services], expressions
 - data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a4954ea582309732be9b911abc4a272a379a2227
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 66e8c901a01e3d8fc1fe2744891e17d4056d81a6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cast-ssis-expression"></a>CAST (SSIS-Ausdruck)
   Konvertiert einen Ausdruck explizit in einen anderen Datentyp. Der Umwandlungsoperator kann auch als Operator zum Abschneiden dienen.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="result-types"></a>Ergebnistypen  
  Der Datentyp von *type_spec*. Weitere Informationen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Im folgenden Diagramm werden zulässige Umwandlungsvorgänge dargestellt.  
   
  ![Zulässige und unzulässige Umwandlungen zwischen Datentypen](../../integration-services/expressions/media/data-conversion.gif "Zulässige und unzulässige Umwandlungen zwischen Datentypen")  
@@ -148,7 +149,7 @@ ms.lasthandoff: 11/20/2017
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Operatorenrangfolge und -assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)   
  [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   

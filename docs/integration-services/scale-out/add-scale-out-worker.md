@@ -9,19 +9,20 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 20e7acda9759d18c0d20d53787fdf87bd02bcd17
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 9fb097365def44d943a7fe6193a4a6498f4d9e37
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-a-scale-out-worker-with-scale-out-manager"></a>Hinzufügen eines SSIS Scale Out-Workers mit dem Manager für horizontales Hochskalieren
 

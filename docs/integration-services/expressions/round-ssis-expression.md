@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - rounding expressions
 - ROUND function [SSIS]
 ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e3b1cb2b79fe720434a6f45ee18378f31d1b581
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bc531db140527e9ec2bfd73adffb2a81f2bcfcf4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="round-ssis-expression"></a>ROUND (SSIS-Ausdruck)
   Gibt einen numerischen Ausdruck zurück, der auf die angegebene Länge oder Genauigkeit gerundet wurde. Der length-Parameter muss zu einer ganzen Zahl ausgewertet werden.  
@@ -46,7 +47,7 @@ ROUND(numeric_expression,length)
 ## <a name="result-types"></a>Ergebnistypen  
  Der Typ entspricht dem Typ von *numeric*_*expression*.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Das *length* -Argument muss zu einer positiven ganzen Zahl oder 0 (null) ausgewertet werden.  
   
  ROUND gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
@@ -59,7 +60,7 @@ ROUND(137.1574,3)
 ROUND(137.1575,3)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Funktionen &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

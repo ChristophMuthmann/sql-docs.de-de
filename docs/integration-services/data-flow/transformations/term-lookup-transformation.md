@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 11b53327292545add9678714c4901dbdad01007e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1d4c2104bf9a24def61fe2c2c77020ef6a0a4c24
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="term-lookup-transformation"></a>Transformation für Ausdruckssuche
   Die Transformation für Ausdruckssuche vergleicht aus Text in einer Transformationseingabespalte extrahierte Ausdrücke mit Ausdrücken in einer Verweistabelle. Anschließend wird gezählt, wie häufig ein Ausdruck in der Nachschlagetabelle im Eingabedataset vorkommt. Dieser Wert wird zusammen mit dem Ausdruck aus der Verweistabelle in Spalten in der Transformationsausgabe geschrieben. Mit dieser Transformation können Sie eine benutzerdefinierte Kennwortliste basierend auf dem Eingabetext erstellen, einschließlich Worthäufigkeitsstatistiken.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
  Wenn ein Suchelement Ausdrücke enthält, die sich im Verweissatz überlappen (d. h. ein Unterausdruck ist in mehreren Verweisdatensätzen zu finden), gibt die Transformation für Ausdruckssuche nur ein Suchergebnis zurück. Das folgende Beispiel zeigt das Ergebnis für den Fall, dass ein Suchelement einen sich überlappenden Unterausdruck enthält. In diesem Fall ist *Windows*der überlappende Unterausdruck, der sich in zwei Verweisausdrücken findet. Die Transformation gibt jedoch keine zwei Ergebnisse, sondern nur einen Verweisausdruck zurück: *Windows*. Der zweite Verweisausdruck, *Windows 7 Professional*, wird nicht zurückgegeben.  
   
-|Element|Wert|  
+|Element|value|  
 |----------|-----------|  
 |Eingabeausdruck|Windows 7 Professional|  
 |Verweisausdrücke|Windows, Windows 7 Professional|  
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="term-lookup-transformation-editor-term-lookup-tab"></a>Transformations-Editor für Ausdruckssuche (Registerkarte Ausdruckssuche)
   Mithilfe der Registerkarte **Ausdruckssuche** des Dialogfelds **Transformations-Editor für Ausdruckssuche** können Sie eine Eingabespalte einer Suchspalte in einer Verweistabelle zuordnen und einen Alias für jede Ausgabespalte bereitstellen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Wählen Sie mithilfe der Kontrollkästchen die Eingabespalten aus, die unverändert an die Ausgabe weitergegeben werden. Ziehen Sie eine Eingabespalte auf die Liste **Verfügbare Verweisspalten** , um sie einer Suchspalte in der Verweistabelle zuzuordnen. Die Eingabe- und Suchspalten müssen übereinstimmende, unterstützte Datentypen haben, entweder DT_NTEXT oder DT_WSTR. Wählen Sie eine Zuordnungszeile aus, und klicken Sie mit der rechten Maustaste darauf, um die Zuordnungen im Dialogfeld [Beziehungen erstellen](../../../integration-services/data-flow/transformations/create-relationships.md) zu bearbeiten.  
   
@@ -131,7 +132,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="term-lookup-transformation-editor-reference-table-tab"></a>Transformations-Editor für Ausdruckssuche (Registerkarte Verweistabelle)
   Verwenden Sie die Registerkarte **Verweistabelle** im Dialogfeld **Transformations-Editor für Ausdruckssuche** , um die Verbindung mit der Verweistabelle (Nachschlagetabelle) anzugeben.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **OLE DB-Verbindungs-Manager**  
  Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
@@ -147,14 +148,14 @@ ms.lasthandoff: 11/20/2017
 ## <a name="term-lookup-transformation-editor-advanced-tab"></a>Transformations-Editor für Ausdruckssuche (Registerkarte Erweitert)
   Auf der Registerkarte **Erweitert** des Dialogfelds **Transformations-Editor für Ausdruckssuche** können Sie angeben, ob bei der Suche nach Groß-/Kleinschreibung unterschieden wird.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Ausdruckssuche mit Unterscheidung nach Groß-/Kleinschreibung verwenden**  
  Geben Sie an, ob bei der Suche nach Groß-/Kleinschreibung unterschieden wird. Der Standardwert ist **False**.  
   
  **Fehlerausgabe konfigurieren**  
  Auf der Registerkarte [Fehlerausgabe konfigurieren](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) können Sie die Optionen zur Fehlerbehandlung von Zeilen angeben, die Fehler verursachen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Fehler- und Meldungsreferenz von Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Transformation für Ausdrucksextrahierung](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   

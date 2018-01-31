@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 57635218bc2e657b5d6f08076a572fa5caf2a2b3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 836ecde7ff2cb458b2f93aeb239d0ab83c51cb6b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="functions-ssis-expression"></a>Funktionen (SSIS-Ausdruck)
   Die Ausdruckssprache schließt Funktionen für die Verwendung in Ausdrücken ein. In einem Ausdruck kann eine einzelne Funktion verwendet werden. Normalerweise werden in einem Ausdruck Funktionen mit Operatoren kombiniert und mehrere Funktionen verwendet.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/20/2017
 |[LN &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/ln-ssis-expression.md)|Gibt den natürlichen Logarithmus eines numerischen Ausdrucks zurück.|  
 |[LOG &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/log-ssis-expression.md)|Gibt den Logarithmus eines numerischen Ausdrucks zur Basis 10 zurück.|  
 |[POWER &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/power-ssis-expression.md)|Gibt das Ergebnis eines in eine Potenz erhobenen numerischen Ausdrucks zurück.|  
-|[ROUND &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/round-ssis-expression.md)|Gibt einen numerischen Ausdruck zurück, der auf die angegebene Länge oder Genauigkeit gerundet wurde. .|  
+|[ROUND &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/round-ssis-expression.md)|Gibt einen numerischen Ausdruck zurück, der auf die angegebene Länge oder Genauigkeit gerundet wurde. zugreifen.|  
 |[SIGN &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/sign-ssis-expression.md)|Gibt das positive (+) oder negative (-) Vorzeichen oder Null (0) für einen numerischen Ausdruck zurück.|  
 |[SQUARE &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/square-ssis-expression.md)|Gibt das Quadrat eines numerischen Ausdrucks zurück.|  
 |[SQRT &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/sqrt-ssis-expression.md)|Gibt die Quadratwurzel eines numerischen Ausdrucks zurück.|  
@@ -100,7 +101,7 @@ ms.lasthandoff: 11/20/2017
   
  Ausdrucksnamen werden in Großbuchstaben dargestellt, aber bei Ausdrucksnamen wird nicht nach Groß-/Kleinschreibung unterschieden. Beispielsweise spielt es keine Rolle, ob Sie "null" oder "NULL" verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)   
  [Beispiele für erweiterte SQL Server Integration Services-Ausdrücke](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)   
  [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)  

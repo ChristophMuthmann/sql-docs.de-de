@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - GETDATE function
 - dates [Integration Services], GETDATE
 ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3351a9e7d24d039c9dac69c3c92352070e6d22a4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 290899a8b4b1bca1fb20bd18f7703d63c7bb8f51
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="getdate-ssis-expression"></a>GETDATE (SSIS-Ausdruck)
   Gibt das aktuelle Datum des Systems in einem DT_DBTIMESTAMP-Format zurück. Die GETDATE-Funktion weist keine Argumente auf.  
@@ -65,7 +66,7 @@ DATEDIFF("dd",ModifiedDate,GETDATE())
 DATEADD("Month",3,GETDATE())  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [GETUTCDATE &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/getutcdate-ssis-expression.md)   
  [Funktionen &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

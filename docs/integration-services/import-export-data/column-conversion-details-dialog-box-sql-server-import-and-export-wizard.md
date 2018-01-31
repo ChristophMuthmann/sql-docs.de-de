@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.issuedetails.f1
+f1_keywords:
+- sql13.dts.impexpwizard.issuedetails.f1
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81ff6011b40700f75dba019356e3c0d80e94f969
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5d4adb7bfee3533830b3d806b666ee8866fc57bb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Dialogfeld 'Spaltenkonvertierungsdetails' (SQL Server-Import/Export-Assistent)
   Wenn Sie auf der Seite **Datentypzuordnung überprüfen** auf die Zeile für eine einzelne Spalte doppelklicken, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import-/Export-Assistent das Dialogfeld **Spaltenkonvertierungsdetails** . Auf dieser Seite können Sie die ausführlicheren Konvertierungsinformationen für eine einzelne Spalte überprüfen. Diese Informationen umfassen die folgenden Elemente.

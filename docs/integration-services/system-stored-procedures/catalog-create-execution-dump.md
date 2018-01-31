@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8fc97f65fb17605393505c428b645994d3fd1da
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f13a1c0730b01280896b8c759aa401cf10ba875c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcreateexecutiondump"></a>catalog.create_execution_dump
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ EXEC create_execution_dump @execution_id = 88
  Wenn die gespeicherte Prozedur fehlschlägt, wird ein Fehler ausgelöst.  
   
 ## <a name="result-set"></a>Resultset  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert, dass der Benutzer Mitglied der Datenbankrolle **ssis_admin** ist.  
@@ -66,7 +67,7 @@ EXEC create_execution_dump @execution_id = 88
   
 -   Das Paket erstellt gerade eine Dumpdatei.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Generieren von Dumpdateien für die Paketausführung](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   

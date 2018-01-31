@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.welcome.f1
+f1_keywords:
+- sql13.dts.impexpwizard.welcome.f1
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
-caps.latest.revision: "74"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 36872efe2081ae755f796d4ed19e96dbcbcfe341
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2edc03674b5456f68e484f29c1bbd71c4064ca8b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>Willkommen beim SQL Server-Import/Export-Assistenten
   Beim Starten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten ist die erste Seite **Willkommen beim SQL Server-Import/Export-Assistenten**. Sie müssen auf dieser Seite keine Aktionen durchführen.
@@ -59,7 +61,7 @@ Die folgende Abbildung zeigt die Seite **Willkommen beim SQL Server-Import/Expor
 
     -   **Weitere Informationen zu den Schritten des Assistenten:** Weitere Informationen zu den einzelnen Schritten des Assistenten finden Sie auf der Seite [Steps in the SQL Server Import and Export Wizard](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md) (Schritte im SQL Server-Import/Export-Assistenten). Es ist außerdem eine eigene Dokumentationsseite für jede Seite des Assistenten verfügbar.
 
-    -   **Weitere Informationen zum Herstellen einer Verbindung mit Datenquellen und -zielen:** Um weitere Informationen zum Herstellen einer Verbindung mit Ihren Daten zu erhalten, wählen Sie aus der folgenden Liste die Seite aus, die Sie besonders interessiert: [Connect to data sources with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md) (Herstellen einer Verbindung mit Datenquellen mit dem SQL Server-Import/Export-Assistenten). Es sind separate Dokumentationsseiten für verschiedene, häufig verwendete Datenquellen verfügbar.
+    -   **Weitere Informationen zum Herstellen einer Verbindung zwischen Datenquellen und -zielen:** Wählen Sie für weitere Informationen zum Herstellen einer Verbindung mit Ihren Daten die Seite aus der Liste aus, die Sie besonders interessiert: [Connect to data sources with the SQL Server Import and Export Wizard (Herstellen einer Verbindung mit Datenquellen mit dem SQL Server Import/Export-Assistenten)](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). Es sind separate Dokumentationsseiten für verschiedene, häufig verwendete Datenquellen verfügbar.
 
 -   **Starten Sie den Assistenten.** Wenn Sie bereit sind, den Assistenten auszuführen, und nur wissen möchten, wie Sie ihn starten, lesen Sie [Starten des SQL Server-Import/Export-Assistenten](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 

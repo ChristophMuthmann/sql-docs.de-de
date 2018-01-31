@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - logical Not (!)
 - '! (logical Not)'
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8c6c84a9efe60ffc7d9ebda818ddeabf833d05a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 68cee85e74159fc68783aded9f117c415d1bd15a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-logical-not-ssis-expression"></a>! (Logisches NOT) (SSIS-Ausdruck)
   Negiert einen booleschen Operanden.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="result-types"></a>Ergebnistypen  
  DT_BOOL  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  In der folgenden Tabelle wird das Ergebnis des Operation.  
   
 |Ursprünglicher boolescher Ausdruck|Nach dem Anwenden des !- Operator|  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/20/2017
 !(@MonthNumber != MONTH(GETDATE())  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Operatorenrangfolge und -assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f586df639ab239539f21f1d94155b589cd9c865
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5a31ba153a87eddb1e65daf0aebacc317e58a455
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Verbinden mit Azure Blob Storage (SQL Server-Import/Export-Assistent)
 In diesem Artikel wird erläutert, wie Sie eine Verbindung mit einer **Azure Blob Storage**-Datenquelle über die Seiten **Datenquelle auswählen** oder **Ziel auswählen** des SQL Server-Import/Export-Assistenten herstellen.
@@ -69,6 +70,6 @@ Geben Sie den Schlüssel für das Azure-Speicherkonto ein.
  Geben Sie an, ob die erste Zeile der Daten Spaltennamen enthält.  
 
 ## <a name="see-also"></a>Siehe auch
-[Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) (Auswählen einer Datenquelle)  
-[Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md) (Auswählen eines Ziels)
+[Auswählen einer Datenquelle](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
+[Auswählen eines Ziels](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

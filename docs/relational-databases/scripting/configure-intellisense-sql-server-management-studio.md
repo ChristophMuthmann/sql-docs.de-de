@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - modifying IntelliSense options
 - IntelliSense [SQL Server], modifying options
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 88053abbed849c56c38f12a5fd7d6e8a02d0921e
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: a459fbc5ba1c1891d3583821b64d634a44fab859
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>Konfigurieren von IntelliSense (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die meisten [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense-Optionen sind standardmäßig aktiviert. Sie können eine IntelliSense-Option deaktivieren und stattdessen über einen Menübefehl oder eine Tastenkombination aufrufen.  

@@ -11,23 +11,25 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
 helpviewer_keywords:
 - Send Mail task [Integration Services]
 - Script task [Integration Services], examples
 - Script task [Integration Services], HTML mail message
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 66988188b2f0ce0550384392b6f90a0b8f93d489
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b153c58fffdf4ac0833c683555ba25d4bf2737b6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>Senden einer HTML-E-Mail mit dem Skripttask
   Der Task „Mail senden“ in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt nur E-Mails im Nur-Text-Format. Sie können jedoch problemlos HTML-E-Mails mithilfe des Skripttasks und den E-Mail-Funktionen des .NET Framework senden.  

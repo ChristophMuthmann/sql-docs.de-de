@@ -8,22 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.dataprofilingtask.profilerequests.f1
-helpviewer_keywords: Data Profiling Task Editor
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.profilerequests.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63b377a6412dc2c886f1aec2a76e6f94fa78eda5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6883b8ec802392c0ae4d3a92a41f54433d403f8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Editor für den Datenprofilerstellungs-Task (Seite 'Profilanforderungen')
   Verwenden Sie die Seite **Profilanforderungen** im **Editor für den Datenprofilerstellungs-Task** , um die Profile auszuwählen und zu konfigurieren, die Sie berechnen möchten. In einem Datenprofilerstellungs-Task können Sie mehrere Profile für mehrere Spalten oder Kombinationen von Spalten in mehreren Tabellen oder Sichten berechnen.  
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="requests-pane-options"></a>Optionen im Anforderungsbereich  
  Der Anforderungsbereich enthält die folgenden Optionen:  
   
- **Sicht**  
+ **Ansicht**  
  Wählen Sie aus, ob alle für den Task konfigurierten Profile oder nur eines der Profile angezeigt werden soll.  
   
  Die Spalten im Anforderungsbereich haben sich je nach der ausgewählten **Sicht** geändert. Weitere Informationen über jede dieser Spalten finden Sie im nächsten Abschnitt, "Spalten im Anforderungsbereich".  
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/20/2017
  **Profiltyp**  
  Wählen Sie ein Datenprofil aus folgenden Optionen:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Anforderung für Kandidatenschlüsselprofil**|Berechnen Sie ein Kandidatenschlüsselprofil.<br /><br /> Dieses Profil meldet, ob eine Spalte oder eine Gruppe von Spalten ein Schlüssel oder ein ungefährer Schlüssel für die ausgewählte Tabelle ist. Dieses Profil hilft Ihnen auch, Probleme bei den Daten zu identifizieren, z. B. doppelte Werte in einer potenziellen Schlüsselspalte.|  
 |**Anforderung für Verteilungsprofil für Spaltenlänge**|Berechnen Sie ein Verteilungsprofil für Spaltenlänge.<br /><br /> Das Verteilungsprofil für Spaltenlänge dokumentiert alle eindeutigen Längen von Zeichenfolgenwerten in der ausgewählten Spalte sowie den Prozentsatz der Zeilen in der Tabelle, die jede Länge darstellt. Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. Werte, die nicht gültig sind. Beispiel: Sie erstellen ein Profil einer Spalte mit den Codes der US-amerikanischen Bundesstaaten, die zwei Zeichen lang sind, und entdecken Werte, die länger als zwei Zeichen sind.|  
@@ -150,7 +153,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Optionen für Anforderung für Wertinklusionsprofil &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

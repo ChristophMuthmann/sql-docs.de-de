@@ -8,10 +8,12 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.precedenceconstraint.f1
+f1_keywords:
+- sql13.dts.designer.precedenceconstraint.f1
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - control flow [Integration Services], precedence constraints
@@ -20,16 +22,16 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 411d89b90a77bf704dd876b5d6ce0dc5a36233a9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 84b5d39132c85d7aa34dbb1e4bfb53d400d3cfa0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="precedence-constraints"></a>Rangfolgeneinschränkungen
   Rangfolgeneinschränkungen verknüpfen ausführbare Dateien, Container und Tasks in Paketen in einer Ablaufsteuerung und geben Bedingungen an, die bestimmen, ob ausführbare Dateien ausgeführt werden. Bei einer ausführbaren Datei kann es sich um einen For-Schleifencontainer, einen Foreach-Schleifencontainer, einen Task oder einen Ereignishandler handeln. Ereignishandler verwenden Rangfolgeneinschränkungen zum Verlinken der ausführbaren Dateien zu einer Ablaufsteuerung.  
@@ -113,11 +115,11 @@ ms.lasthandoff: 11/20/2017
 ## <a name="precedence-constraint-editor"></a>Rangfolgeneinschränkungs-Editor
 Verwenden Sie das Dialogfeld **Rangfolgeneinschränkungs-Editor** , um Rangfolgeneinschränkungen zu konfigurieren.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Auswertungsvorgang**  
  Geben Sie den Auswertungsvorgang an, den die Rangfolgeneinschränkung verwendet. Dazu zählen die folgenden Vorgänge: **Einschränkung**, **Ausdruck**, **Ausdruck und Einschränkung**und **Ausdruck oder Einschränkung**.  
   
- **Wert**  
+ **ReplTest1**  
  Geben Sie den Einschränkungswert an: **Erfolg**, **Fehler**oder **Beendigung**.  
   
 > [!NOTE]  
@@ -126,7 +128,7 @@ Verwenden Sie das Dialogfeld **Rangfolgeneinschränkungs-Editor** , um Rangfolge
  **Ausdruck**  
  Wenn Sie den Vorgang **Ausdruck**, **Ausdruck und Einschränkung**oder **Ausdruck oder Einschränkung**verwenden, geben Sie einen Ausdruck ein, oder starten Sie den Ausdrucks-Generator, um einen Ausdruck zu erstellen. Der Ausdruck muss zu einem booleschen Wert ausgewertet werden.  
   
- **Test**  
+ **Testen**  
  Überprüfen Sie den Ausdruck.  
   
  **Logisches AND**  
@@ -159,7 +161,7 @@ Verwenden Sie das Dialogfeld **Rangfolgeneinschränkungs-Editor** , um Rangfolge
     |LogicalAnd|Legen Sie **LogicalAnd** fest, um anzugeben, ob die Rangfolgeneinschränkung zusammen mit anderen Rangfolgeneinschränkungen ausgewertet wird, wenn mehrere ausführbare Dateien vorausgehen und mit der eingeschränkten ausführbaren Datei verlinkt sind.|  
     |Name|Aktualisieren des Namens der Rangfolgeneinschränkung.|  
     |ShowAnnotation|Geben Sie den Typ der zu verwendenden Anmerkung ein. Wählen Sie **Never** aus, um Anmerkungen zu deaktivieren, **AsNeeded** , um Anmerkungen bei Bedarf zu aktivieren, **ConstraintName** , um automatisch den Wert mithilfe der Name-Eigenschaft anzumerken, **ConstraintDescription** , um automatisch den Wert mithilfe der Description-Eigenschaft anzumerken, und **ConstraintOptions** , um automatisch den Wert mithilfe der Eigenschaften Value und Expression anzumerken.|  
-    |Wert|Wenn der Auswertungsvorgang in der EvalOP-Eigenschaft eine Einschränkung enthält, wählen Sie das Ausführungsergebnis der eingeschränkten ausführbaren Datei aus.|  
+    |value|Wenn der Auswertungsvorgang in der EvalOP-Eigenschaft eine Einschränkung enthält, wählen Sie das Ausführungsergebnis der eingeschränkten ausführbaren Datei aus.|  
   
 5.  Schließen Sie das Fenster Eigenschaften.  
   
@@ -178,9 +180,9 @@ Verwenden Sie das Dialogfeld **Rangfolgeneinschränkungs-Editor** , um Rangfolge
 5.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
 
 ## <a name="add-expressions-to-precedence-constraints"></a>Hinzufügen von Ausdrücken zu Rangfolgeneinschränkungen
- Eine Rangfolgeneinschränkung kann mithilfe eines Ausdrucks die Einschränkung zwischen zwei ausführbaren Dateien definieren, nämlich der ausführbaren Datei der Rangfolge und der eingeschränkten ausführbaren Datei. Bei den ausführbaren Dateien kann es sich um Tasks oder Container handeln. Der Ausdruck kann separat oder in Kombination mit dem Ausführungsergebnis der ausführbaren Datei der Rangfolge verwendet werden. Das Ausführungsergebnis einer ausführbaren Datei ist Erfolg oder Fehler. Wenn Sie das Ausführungsergebnis einer Rangfolgeneinschränkung konfigurieren, können Sie das Ausführungsergebnis auf **Success**, **Failure**oder **Completion**festlegen. Für**Success** muss die ausführbare Datei der Rangfolge erfolgreich ausgeführt werden, für **Failure** muss die ausführbare Datei der Rangfolge mit einem Fehler ausgeführt werden. **Completion** zeigt an, dass die eingeschränkte ausführbare Datei unabhängig von einer erfolgreichen Ausführung des Rangfolgentasks ausgeführt werden sollte. Weitere Informationen finden Sie unter [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
+ Eine Rangfolgeneinschränkung kann mithilfe eines Ausdrucks die Einschränkung zwischen zwei ausführbaren Dateien definieren, nämlich der ausführbaren Datei der Rangfolge und der eingeschränkten ausführbaren Datei. Bei den ausführbaren Dateien kann es sich um Tasks oder Container handeln. Der Ausdruck kann separat oder in Kombination mit dem Ausführungsergebnis der ausführbaren Datei der Rangfolge verwendet werden. Das Ausführungsergebnis einer ausführbaren Datei ist Erfolg oder Fehler. Wenn Sie das Ausführungsergebnis einer Rangfolgeneinschränkung konfigurieren, können Sie das Ausführungsergebnis auf **Success**, **Failure**oder **Completion**festlegen. Für**Success** muss die ausführbare Datei der Rangfolge erfolgreich ausgeführt werden, für **Failure** muss die ausführbare Datei der Rangfolge mit einem Fehler ausgeführt werden. **Completion** zeigt an, dass die eingeschränkte ausführbare Datei unabhängig von einer erfolgreichen Ausführung des Rangfolgentasks ausgeführt werden sollte. Weitere Informationen finden Sie unter [Rangfolgeneinschränkungen](../../integration-services/control-flow/precedence-constraints.md).  
   
- Der Ausdruck muss zu **Wahr** oder **Falsch** ausgewertet werden, und er muss ein gültiger [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Ausdruck sein. Für diesen Ausdruck sind Literale, Systemvariablen und benutzerdefinierte Variablen sowie die Funktionen und Operatoren zulässig, die von der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Ausdrucksgrammatik bereitgestellt werden. Beispielsweise verwendet der Ausdruck `@Count == SQRT(144) + 10` die **Count**-Variable, die SQRT-Funktion und die Operatoren „equal“ (==) und „add“ (+) . Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).  
+ Der Ausdruck muss zu **Wahr** oder **Falsch** ausgewertet werden, und er muss ein gültiger [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Ausdruck sein. Für diesen Ausdruck sind Literale, Systemvariablen und benutzerdefinierte Variablen sowie die Funktionen und Operatoren zulässig, die von der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Ausdrucksgrammatik bereitgestellt werden. Beispielsweise verwendet der Ausdruck `@Count == SQRT(144) + 10` die **Count**-Variable, die SQRT-Funktion und die Operatoren „equal“ (==) und „add“ (+) . Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)ausgewertet wird.  
   
  In der folgenden Abbildung sind Task A und Task B durch eine Rangfolgeneinschränkung miteinander verlinkt, die ein Ausführungsergebnis und einen Ausdruck verwendet. Der Einschränkungswert ist auf **Success** festgelegt, und der Ausdruck lautet  `@X >== @Z`. Task B, der eingeschränkte Task, wird nur ausgeführt, wenn Task A erfolgreich abgeschlossen wird und der Wert der **X** -Variablen größer oder gleich dem Wert der **Z**-Variablen ist.  
   
@@ -218,17 +220,17 @@ Verwenden Sie das Dialogfeld **Rangfolgeneinschränkungs-Editor** , um Rangfolge
 |Auswertungsvorgang|Einschränkung wird ausgewertet zu|Ausdruck wird ausgewertet zu|Eingeschränkte ausführbare Datei wird ausgeführt|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
 |Einschränkung|Wahr|–|Wahr|  
-|Einschränkung|Falsch|–|Falsch|  
+|Einschränkung|False|–|False|  
 |expression|–|Wahr|Wahr|  
-|expression|–|Falsch|Falsch|  
+|expression|–|False|False|  
 |Einschränkung und Ausdruck|Wahr|Wahr|Wahr|  
-|Einschränkung und Ausdruck|Wahr|Falsch|Falsch|  
-|Einschränkung und Ausdruck|Falsch|Wahr|Falsch|  
-|Einschränkung und Ausdruck|Falsch|Falsch|Falsch|  
+|Einschränkung und Ausdruck|Wahr|Falsch|False|  
+|Einschränkung und Ausdruck|False|Wahr|False|  
+|Einschränkung und Ausdruck|False|False|False|  
 |Einschränkung oder Ausdruck|Wahr|Wahr|Wahr|  
-|Einschränkung oder Ausdruck|Wahr|Falsch|Wahr|  
-|Einschränkung oder Ausdruck|Falsch|Wahr|Wahr|  
-|Einschränkung oder Ausdruck|Falsch|Falsch|False|  
+|Einschränkung oder Ausdruck|Wahr|False|Wahr|  
+|Einschränkung oder Ausdruck|False|Wahr|Wahr|  
+|Einschränkung oder Ausdruck|False|False|False|  
 
 
 ## <a name="complex-constraint-scenarios-with-multiple-precedence-constraints"></a>Komplexe Einschränkungsszenarien mit mehreren Rangfolgeneinschränkungen 

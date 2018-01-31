@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Recordset destination
+helpviewer_keywords:
+- Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f7cf8f2ed8875856da5756288c8e3fb707f1a397
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d18d5e683bfc30270fcf83a2002350a75da9a24c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-a-recordset-destination"></a>Verwenden eines Recordsetziels
   Das Recordsetziel speichert keine Daten in einer externen Datenquelle. Stattdessen speichert das Recordsetziel Daten im Speicher eines Recordsets, das in einer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketvariablen des Datentyps **Object** gespeichert ist. Nachdem die Daten vom Recordsetziel gespeichert wurden, verwenden Sie typischerweise einen Foreach-Schleifencontainer mit dem Foreach-ADO-Enumerator zum Verarbeiten jeweils einer Zeile des Recordsets. Der Foreach-ADO-Enumerator speichert den Wert jeder einzelnen Spalte für die aktuelle Zeile in einer separaten Paketvariablen. Anschließend lesen die im Foreach-Schleifencontainer konfigurierten Tasks diese Werte in den Variablen und führen für diese Aktionen aus.  
@@ -103,7 +105,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  Fügen Sie auf der Registerkarte **Ablaufsteuerung** des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers der Entwurfsoberfläche einen Datenflusstask hinzu.  
   
-2.  Fügen Sie dem Datenflusstask auf der Registerkarte **Datenfluss** eine OLE DB-Datenquelle hinzu, und öffnen Sie dann den **Quellen-Editor für OLE DB.**  
+2.  Fügen Sie dem Datenflusstask auf der Registerkarte **Datenfluss** tab, add an OLE DB source to the Datenfluss task, and then open the **Quellen-Editor für OLE DB**.  
   
 3.  Konfigurieren Sie auf der Seite **Verbindungs-Manager** des Editors die Quelle mit den folgenden Einstellungen:  
   

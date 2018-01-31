@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - string functions
 - Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34c666dc86e9026c5981a6a45f32fc06759de061
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3ad5ceb9c851baab0ddb229787afc23568239325
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="character-map-transformation"></a>Transformation zum Zuordnen der Zeichen
   Die Transformation zum Zuordnen der Zeichen wendet Zeichenfolgenfunktionen, wie z. B. die Konvertierung von Klein- in Großbuchstaben, auf Zeichendaten an. Diese Transformation betrifft nur Spaltendaten mit einem Zeichenfolgen-Datentyp.  
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="character-map-transformation-editor"></a>Transformations-Editor für Zeichenzuordnung
   Im Dialogfeld **Transformations-Editor für Zeichenzuordnung** können Sie die auf Spaltendaten anwendbaren Zeichenfolgenfunktionen auswählen und angeben, ob eine Zuordnung direkt geändert oder als neue Spalte hinzugefügt werden soll.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Wählen Sie mithilfe der Kontrollkästchen die Spalten aus, die mithilfe von Zeichenfolgenfunktionen transformiert werden sollen. Die getroffene Auswahl wird in der nachfolgenden Tabelle angezeigt.  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 11/20/2017
  **Ziel**  
  Geben Sie an, ob Sie die Ergebnisse der Zeichenfolgenfunktionen direkt in der vorhandenen Spalte speichern möchten, oder ob Sie die geänderten Daten in einer neuen Spalte speichern möchten.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |Neue Spalte|Speichern Sie die Daten in einer neuen Spalte. Weisen Sie der Spalte unter **Ausgabealias**einen Namen zu.|  
 |Direkte Änderung|Speichern Sie die geänderten Daten in der vorhandenen Spalte.|  
@@ -110,7 +111,7 @@ ms.lasthandoff: 11/20/2017
  **Vorgang**  
  Wählen Sie in der Liste die Zeichenfolgenfunktionen aus, die auf Spaltendaten angewendet werden sollen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |Kleinschreibung|In Kleinschreibung konvertieren.|  
 |Großschreibung|In Großschreibung konvertieren.|  

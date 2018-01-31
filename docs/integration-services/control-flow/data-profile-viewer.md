@@ -8,24 +8,26 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.dataprofileviewer.f1
+f1_keywords:
+- sql13.dts.dataprofileviewer.f1
 helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], output viewer
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f364b536b40a68565eb1dac1c8709dc28931043e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 807c980f9c561b6c4da18597b011a98e8d9992de
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profile-viewer"></a>Datenprofil-Viewer
   Das Anzeigen und Analysieren der Datenprofile ist der nächste Schritt bei der Datenprofilerstellung. Sie können diese Profile anzeigen, nachdem Sie den Datenprofilerstellungs-Task innerhalb eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets ausgeführt und die Datenprofile berechnet haben. Weitere Informationen zum Verwenden und Einrichten und Ausführen der Datenprofilerstellungs-Tasks finden Sie unter [Einrichten von Datenprofilerstellungs-Tasks](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
@@ -77,7 +79,7 @@ ms.lasthandoff: 11/20/2017
  Weitere Informationen zum Verwenden des Datenprofil-Viewers finden Sie unter [Datenprofil-Viewer](../../integration-services/control-flow/data-profile-viewer.md). Weitere Informationen zum Verwenden des Datenprofilerstellungs-Tasks, der die Profilausgabe erstellt, die Sie im Datenprofil-Viewer analysieren, finden Sie unter [Einrichten von Datenprofilerstellungs-Tasks](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
   
 ### <a name="static-options"></a>Statische Optionen  
- **Öffnen**  
+ **Datei**  
  Klicken Sie, um nach der gespeicherten Datei zu suchen, die die Ausgabe des Datenprofilerstellungs-Tasks enthält.  
   
  Bereich**Profile**   
@@ -171,7 +173,7 @@ ms.lasthandoff: 11/20/2017
  Zeigt die Anzahl der Zeilen in der Tabelle oder Sicht an.  
   
 ##### <a name="detailed-value-distribution-pane"></a>Bereich 'Detaillierte Wertverteilung'  
- **Wert**  
+ **ReplTest1**  
  Zeigt die in der Spalte, für die ein Profil erstellt wurde, gefundenen unterschiedlichen Werte an.  
   
  **Count**  
@@ -187,7 +189,7 @@ ms.lasthandoff: 11/20/2017
  Zeigt die Spalten an, die als Kandidatenschlüssel für die Profilerstellung ausgewählt wurden.  
   
  **Schlüsselstärke**  
- Zeigt die Stärke (als Prozentsatz) der Kandidatenschlüsselspalte oder Kombination von Spalten an. Eine Schlüsselstärke von weniger als 100 % gibt an, dass doppelte Werte vorhanden sind.  
+ Zeigt die Stärke (als Prozentsatz) der Kandidatenschlüsselspalte oder Kombination von Spalten an. Eine Schlüsselstärke von weniger als 100 % gibt an, dass doppelte Werte vorhanden sind.  
   
 ##### <a name="key-violations-pane"></a>Bereich 'Schlüsselverletzungen'  
  **\<Spalte1>, \<Spalte2> usw.**  

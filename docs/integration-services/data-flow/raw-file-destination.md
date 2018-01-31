@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,18 +23,18 @@ helpviewer_keywords:
 - writing raw data
 - Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07c73cd80417c61f8231932376173adb304cf1af
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1a9ce999e727a77b303b9978f59dc980b7d2ca21
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="raw-file-destination"></a>Rohdatendatei-Ziel
+# <a name="raw-file-destination"></a>Raw File Destination
   Das Rohdatendatei-Ziel schreibt Rohdaten in eine Datei. Die Daten liegen im systemeigenen Zielformat vor, sodass die Daten nicht übersetzt und kaum analysiert werden müssen. Dies bedeutet, dass das Rohdatendatei-Ziel Daten schneller als andere Ziele, wie z. B. Flatfile- und OLE DB-Ziele, schreiben kann.  
   
  Zusätzlich zur Option, Rohdatendateien in eine Datei schreiben zu können, können Sie auch das Rohdatendatei-Ziel verwenden, um eine leere Rohdatendatei zu generieren, die nur die Spalten (Nur-Metadatendatei) enthält, ohne dass das Paket ausgeführt werden muss. Mithilfe der Rohdatendatei-Quelle werden Rohdaten abgerufen, die zuvor vom Ziel geschrieben wurden. Sie können die Rohdatendatei-Quelle zudem auf die Nur-Metadaten-Datei verweisen.  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
  In der folgenden Tabelle werden die verfügbaren Optionen für die „WriteOption“-Eigenschaft beschrieben.  
   
-|Option|Beschreibung|  
+|Option|Description|  
 |------------|-----------------|  
 |Anfügen|Fügt Daten an eine vorhandene Datei an. Die Metadaten der angefügten Daten müssen mit dem Dateiformat übereinstimmen.|  
 |Immer erstellen|Erstellt immer eine neue Datei.|  
@@ -130,11 +131,11 @@ ms.lasthandoff: 11/20/2017
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften der Rohdatendatei](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Informationen zum Festlegen der Eigenschaften der Komponente finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
@@ -224,7 +225,7 @@ ms.lasthandoff: 11/20/2017
  **Ausgabealias**  
  Geben Sie einen anderen Namen an, der für die Ausgabespalte verwendet werden soll.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Rohdatendatei-Quelle](../../integration-services/data-flow/raw-file-source.md)   
  [Datenfluss](../../integration-services/data-flow/data-flow.md)  
   

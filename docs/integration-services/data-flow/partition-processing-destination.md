@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - Partition Processing destination [Integration Services]
 - destinations [Integration Services], Partition Processing
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc582d705e699d4c91c6bf89a51df444db00a04d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 20277b2aee209f1632100615d94a1fc3caec27d9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="partition-processing-destination"></a>Ziel für Partitionsverarbeitung
   Das Ziel für Partitionsverarbeitung lädt und verarbeitet eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Partition. Weitere Informationen zu Partitionen finden Sie unter [Partitionen &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften des Ziels für Partitionsverarbeitung](../../integration-services/data-flow/partition-processing-destination-custom-properties.md)  
   
@@ -69,9 +70,9 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Hier beschriebene Tasks gelten nicht für tabellarische Analysis Services-Modelle.  Sie können Partitionsspalten für tabellarische Modelle keine Eingabespalten zuordnen. Sie können stattdessen den Analysis Services-Task "DDL ausführen" [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) verwenden, um die Partition zu verarbeiten.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Connection manager**  
- Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+ Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **Analysis Services-Verbindungs-Manager hinzufügen** eine neue Verbindung.  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/20/2017
  **Verarbeitungsmethode**  
  Wählen Sie die Verarbeitungsmethode aus. Der Standardwert für diese Option ist **Vollständig**.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |Hinzufügen (inkrementell)|Führt eine inkrementelle Verarbeitung der Partition aus.|  
 |Vollständig|Führt eine vollständige Verarbeitung der Partition aus.|  
@@ -94,7 +95,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Hier beschriebene Tasks gelten nicht für tabellarische Analysis Services-Modelle.  Sie können Partitionsspalten für tabellarische Modelle keine Eingabespalten zuordnen. Sie können stattdessen den Analysis Services-Task "DDL ausführen" [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) verwenden, um die Partition zu verarbeiten.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
   
@@ -113,14 +114,14 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Hier beschriebene Tasks gelten nicht für tabellarische Analysis Services-Modelle.  Sie können Partitionsspalten für tabellarische Modelle keine Eingabespalten zuordnen. Sie können stattdessen den Analysis Services-Task "DDL ausführen" [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) verwenden, um die Partition zu verarbeiten.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Standardfehlerkonfiguration verwenden**  
  Gibt an, ob die Standardfehlerbehandlung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet werden soll. Standardmäßig ist dieser Wert **True**.  
   
  **Schlüsselfehleraktion**  
  Gibt an, wie Datensätze behandelt werden, die unzulässige Schlüsselwerte aufweisen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Konvertiert den unzulässigen Schlüsselwert in den Wert Unknown.|  
 |**DiscardRecord**|Verwirft den Datensatz.|  
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/20/2017
  **Aktion bei Fehler**  
  Gibt die Aktion an, die bei Erreichen des Fehlerschwellenwerts ausgeführt wird, wenn Sie **Bei Fehler beenden**ausgewählt haben.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**StopProcessing**|Beendet die Verarbeitung.|  
 |**StopLogging**|Beendet das Protokollieren der Fehler.|  
@@ -145,7 +146,7 @@ ms.lasthandoff: 11/20/2017
  **Schlüssel nicht gefunden**  
  Gibt die Aktion an, die beim Fehler Schlüssel nicht gefunden ausgeführt werden soll. Standardmäßig ist dieser Wert **ReportAndContinue**.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
 |**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/20/2017
  **Doppelter Schlüssel**  
  Gibt die Aktion an, die beim Fehler Doppelter Schlüssel ausgeführt werden soll. Standardmäßig ist dieser Wert **IgnoreError**.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
 |**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
@@ -163,7 +164,7 @@ ms.lasthandoff: 11/20/2017
  **NULL-Schlüssel in unbekanntes Element konvertiert**  
  Gibt die Aktion an, die ausgeführt werden soll, wenn ein NULL-Schlüssel in den Wert Unknown konvertiert wurde. Standardmäßig ist dieser Wert **IgnoreError**.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
 |**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
@@ -172,7 +173,7 @@ ms.lasthandoff: 11/20/2017
  **NULL-Schlüssel nicht zulässig**  
  Gibt die Aktion an, die ausgeführt wird, wenn NULL-Schlüssel unzulässig sind und ein NULL-Schlüssel entdeckt wurde. Standardmäßig ist dieser Wert **ReportAndContinue**.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
 |**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
@@ -184,5 +185,5 @@ ms.lasthandoff: 11/20/2017
  **Durchsuchen (…)**  
  Wählen Sie einen Pfad für das Fehlerprotokoll aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   

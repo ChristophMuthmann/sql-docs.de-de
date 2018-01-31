@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d53ac25527e482ae043adeef1c56e5024cb78eb1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 632174b48536a4111125b24cfc85503ed6868a20
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cdc-source"></a>CDC-Quelle
   Die CDC-Quelle liest einen Bereich mit Änderungsdaten aus [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Änderungstabellen und übermittelt die Änderungen an die anderen SSIS-Downstreamkomponenten.  
@@ -140,7 +141,7 @@ use <cdc-enabled-database-name>
   
 3.  Klicken Sie im **Quellen-Editor für CDC**auf **Verbindungs-Manager**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **ADO.NET-Verbindungs-Manager**  
  Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder klicken Sie auf **Neu** , um eine neue Verbindung zu erstellen. Die Verbindung muss zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank hergestellt werden, die für CDC aktiviert ist und in der sich die ausgewählte Änderungstabelle befindet.  
   
@@ -193,7 +194,7 @@ use <cdc-enabled-database-name>
   
 3.  Klicken Sie im **Quellen-Editor für CDC**auf **Spalten**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare externe Spalten**  
  Eine Liste der in der Datenquelle verfügbaren externen Spalten. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden. Wählen Sie die zu verwendenden Spalten in der Datenquelle aus. Die ausgewählten Spalten werden der Liste **Externe Spalte** in der Reihenfolge hinzugefügt, in der Sie sie auswählen.  
   
@@ -215,7 +216,7 @@ use <cdc-enabled-database-name>
   
 3.  Klicken Sie im **Quellen-Editor für CDC**auf **Fehlerausgabe**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
@@ -228,7 +229,7 @@ use <cdc-enabled-database-name>
  **Abschneiden**  
  Wählen Sie aus, wie die CDC-Quelle Kürzungen in einem Fluss behandeln soll: Fehler ignorieren, Zeile umleiten oder Komponente mit einem Fehler abbrechen.  
   
- **Description**  
+ **Beschreibung**  
  Wird nicht verwendet.  
   
  **Diesen Wert für ausgewählte Zellen festlegen**  

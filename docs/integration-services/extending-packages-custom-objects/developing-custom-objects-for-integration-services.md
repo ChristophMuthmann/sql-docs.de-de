@@ -11,21 +11,22 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - custom user interface [Integration Services]
 - custom objects [Integration Services]
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15c30b516ec8d2b19d0f54fb47281c74f7442ec0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b39c2b707ba60e41a2c103925db7a98dc08e793f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Entwickeln benutzerdefinierter Objekte für Integration Services
   Wenn die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthaltene Ablaufsteuerung und die Datenflussobjekte nicht vollständig Ihren Anforderungen entsprechen, können Sie eine Vielzahl von Typen benutzerdefinierter Objekte selbst entwickeln, darunter:  

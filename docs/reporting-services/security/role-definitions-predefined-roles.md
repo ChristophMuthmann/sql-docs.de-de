@@ -16,7 +16,7 @@ helpviewer_keywords:
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -213,7 +213,7 @@ ms.lasthandoff: 01/09/2018
 |Berichtsservereigenschaften anzeigen|Eigenschaften für den Berichtsserver anzeigen, wie z. B. den Anwendungsnamen, Standardwerte für den Berichtsverlauf sowie ob Meine Berichte aktiviert ist.<br /><br /> Wenn Sie diese Aufgabe aus der **Systembenutzer** -Rolle entfernen, ist die Seite Siteeinstellungen nicht verfügbar. Außerdem wird der Titel der Anwendung nicht oben auf jeder Seite angezeigt. Standardmäßig lautet der Titel für den Berichtsmanager "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]".|  
 |Freigegebene Zeitpläne anzeigen|Freigegebene Zeitpläne anzeigen, mit denen Berichte ausgeführt oder aktualisiert werden.<br /><br /> Wenn Sie diese Aufgabe aus der **Systembenutzer** -Rolle entfernen, können Benutzer keine freigegebenen Zeitpläne für Abonnements und sonstige geplante Vorgänge auswählen.|  
   
- Mithilfe der **Systembenutzer** -Rolle kann die Standardsicherheit ergänzt werden. Sie können die Rolle in neuen Rollenzuweisungen verwenden, die den Berichtsserverzugriff auf Berichtsbenutzer erweitern. Weitere Informationen finden Sie unter [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
+ Mithilfe der **Systembenutzer** -Rolle kann die Standardsicherheit ergänzt werden. Sie können die Rolle in neuen Rollenzuweisungen verwenden, die den Berichtsserverzugriff auf Berichtsbenutzer erweitern. Weitere Informationen finden Sie unter [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   

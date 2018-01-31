@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -35,16 +36,16 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-caps.latest.revision: "75"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81427a1ae80ddf6a3d3135e8d814dc9944413e60
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 44e9a7db02aacfbccbca74377a6f0ee33fc5d02c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="fuzzy-lookup-transformation"></a>Transformation für Fuzzysuche
   Die Transformation für Fuzzysuche führt Aufgaben zum Datencleanup durch, wie das Standardisieren von Daten, das Korrigieren von Daten und das Bereitstellen fehlender Werte.  
@@ -139,7 +140,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Weitere Informationen zum Festlegen der Eigenschaften einer Datenflusskomponente finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Transformations-Editor für Fuzzysuche (Registerkarte Verweistabelle)
@@ -151,8 +152,8 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Die **Exhaustive** - und **MaxMemoryUsage** -Eigenschaften der Transformation für Fuzzysuche sind im **Transformations-Editor für Fuzzysuche**nicht verfügbar, können jedoch mit dem Dialogfeld **Erweiterter Editor**festgelegt werden. Darüber hinaus kann ein Wert größer als 100 für **MaxOutputMatchesPerInput** nur im Dialogfeld **Erweiterter Editor**festgelegt werden. Weitere Informationen zu diesen Eigenschaften finden Sie im Abschnitt Transformation für Fuzzysuche von [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
-### <a name="options"></a>enthalten  
- **OLE DB-Verbindungs-Manager**  
+### <a name="options"></a>Tastatur  
+ **Teilcache**  
  Wählen Sie einen vorhandenen OLE DB-Verbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
  **Neu**  
@@ -187,7 +188,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>Transformations-Editor für Fuzzysuche (Registerkarte Spalten)
   Auf der Registerkarte **Spalten** des Dialogfelds **Transformations-Editor für Fuzzysuche** können Sie die Eigenschaften für die Eingabe- und Ausgabespalten festlegen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Um Eingabespalten mit verfügbaren Suchspalten zu verbinden, ziehen Sie diese auf die Suchspalten. Diese Spalten müssen übereinstimmende, unterstützte Datentypen aufweisen. Wählen Sie eine Zuordnungszeile aus, und klicken Sie mit der rechten Maustaste darauf, um die Zuordnungen im Dialogfeld [Beziehungen erstellen](../../../integration-services/data-flow/transformations/create-relationships.md) zu bearbeiten.  
   
@@ -209,7 +210,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>Transformations-Editor für Fuzzysuche (Registerkarte Erweitert)
   Auf der Registerkarte **Erweitert** des Dialogfelds **Transformations-Editor für Fuzzysuche** können Sie die Parameter für die Fuzzysuche festlegen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Maximale Anzahl von Übereinstimmungen, die pro Suche ausgegeben werden**  
  Geben Sie die maximale Anzahl der Übereinstimmungen an, die pro Eingabezeile von der Transformation zurückgegeben werden können. Der Standardwert lautet **1**.  
   
@@ -219,7 +220,7 @@ ms.lasthandoff: 11/20/2017
  **Tokentrennzeichen**  
  Geben Sie die Trennzeichen an, die von der Transformation verwendet werden, um Spaltenwerte mit Token zu versehen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Transformation für Suche](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
  [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

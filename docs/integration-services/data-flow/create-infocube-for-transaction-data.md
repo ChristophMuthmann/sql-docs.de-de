@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b08a3aceff35ab0d2473e5b0629c866220066fa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6a311e2f046d1ce00847dcc9b78f045dde0f9867
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-infocube-for-transaction-data"></a>InfoCube für Transaktionsdaten erstellen
   Verwenden Sie das Dialogfeld **InfoCube für Transaktionsdaten erstellen** , um einen neuen InfoCube für Transaktionsdaten im SAP NetWeaver BW-System zu erstellen.  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/20/2017
  **Typ**  
  Zeigt den Typ des InfoObject an, das der Datenflussspalte zugeordnet ist. In der folgenden Tabelle sind die möglichen Werte für den Typ aufgelistet.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |CHA|Merkmale|  
 |UNI|Einheiten|  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/20/2017
  **Iobject - Entfernen**  
  Heben Sie die Zuordnung zwischen dem InfoObject und der Datenflussspalte für die aktuelle Zeile auf. Um die Zuordnung aufzuheben, klicken Sie auf **Entfernen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [F1-Hilfe zum Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
