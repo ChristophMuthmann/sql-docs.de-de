@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,16 +17,16 @@ f1_keywords:
 - sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1
 - sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6dc0130006a3e8d588776fbe48e5e05572704449
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: 77e862cd82fb7eb8afc294871bfcff50e9b49dd1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configure-dialog-box"></a>Konfigurieren (Dialogfeld)
   Verwenden Sie das Dialogfeld **Konfigurieren** , um Parameter, Verbindungs-Manager und Umgebungsverweise für Pakete und Projekte zu konfigurieren.  
@@ -79,7 +80,7 @@ ms.lasthandoff: 12/12/2017
  **Eigenschaftsname**  
  Listet den Namen der Verbindungs-Manager-Eigenschaft auf.  
   
- **Wert**  
+ **ReplTest1**  
  Listet den Wert auf, der der Verbindungs-Manager-Eigenschaft zugewiesen ist. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Wert im Dialogfeld **Parameterwert festlegen** zu ändern. Sie können einen Literalwert eingeben, eine Umgebungsvariable mit dem zu verwendenden Wert zuordnen oder den Standardwert aus dem Paket verwenden.  
   
 ##  <a name="references"></a> Festlegen der Optionen auf der Seite 'Verweise'  
@@ -93,7 +94,7 @@ ms.lasthandoff: 12/12/2017
  **Umgebungsordner**  
  Listet den Ordner auf, der die Umgebung enthält.  
   
- **Öffnen**  
+ **Datei**  
  Klicken Sie hierauf, um das Dialogfeld **Umgebungseigenschaften** zu öffnen.  
   
  **Hinzufügen**  

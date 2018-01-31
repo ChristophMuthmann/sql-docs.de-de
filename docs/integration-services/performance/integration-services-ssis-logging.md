@@ -8,7 +8,8 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -31,16 +32,16 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 772217a434d69d8849fdaefd66108365c25e46e7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f1082fb2dc121b3751a14b4cf1e291c8da9425ab
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services-Protokollierung (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Protokollanbieter, mit denen Sie die Protokollierung in Paketen, Containern und Tasks implementieren können. Mit der Protokollierung können Sie Laufzeitinformationen zu einem Paket aufzeichnen, damit Sie ein Paket bei jeder Ausführung überwachen und Probleme behandeln können. Beispielsweise können in einem Protokoll der Name des Operators, der das Paket ausgeführt hat, und der Zeitpunkt, zu dem die Paketausführung begann und endete, aufgezeichnet werden.  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/20/2017
 |------------------|------------|-------------|--------------|  
 |Textdatei|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|Der vom Protokollanbieter verwendete Dateiverbindungs-Manager gibt den Pfad der Textdatei an.|  
 |SQL Server Profiler|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|Der vom Protokollanbieter verwendete Dateiverbindungs-Manager gibt den Pfad der von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]verwendeten Textdatei an.|  
-|SQL Server|DTS.LogProviderSQLServer|{94150B25-6AEB-4C0D-996D-D37D1C4FDEDA}|Der vom Protokollanbieter verwendete OLE DB-Verbindungs-Manager gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank an, die die sysssislog-Tabelle mit den Protokolleinträgen enthält.|  
+|SQL Server|DTS.LogProviderSQLServer|{94150B25-6AEB-4C0D-996D-D37D1C4FDEDA}|Der vom Protokollanbieter verwendete OLE DB-Verbindungs-Manager gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank an, die die sysssislog-Tabelle mit den Protokolleinträgen enthält.|  
 |Windows-Ereignisprotokoll|DTS.LogProviderEventLog|{071CC8EB-C343-4CFF-8D58-564B92FCA3CF}|Das Anwendungsprotokoll der Windows-Ereignisanzeige enthält die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Protokollinformationen.|  
 |XML-Datei|DTS.LogProviderXMLFile|{440945A4-2A22-4F19-B577-EAF5FDDC5F7A}|Der vom Protokollanbieter verwendete Dateiverbindungs-Manager gibt den Pfad der XML-Datei an.|  
   
@@ -285,7 +286,7 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="container"></a> Konfigurieren Sie die Optionen im Bereich "Container".  
  Mithilfe des **Container** -Bereichs des Dialogfelds **SSIS-Protokolle konfigurieren** können Sie das Paket und seine Container für das Protokollieren aktivieren.  
   
-#### <a name="options"></a>enthalten  
+#### <a name="options"></a>Tastatur  
  **Container**  
  Aktivieren Sie die Kontrollkästchen in der hierarchischen Sicht, um das Paket und seine Container für die Protokollierung zu aktivieren:  
   
@@ -300,7 +301,7 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="provider"></a> Konfigurieren Sie die Optionen auf der Registerkarte "Anbieter und Protokolle".  
  Verwenden Sie die Registerkarte **Anbieter und Protokolle** des Dialogfelds **SSIS-Protokolle konfigurieren** , um Protokolle für das Aufzeichnen von Laufzeitereignissen zu erstellen und zu konfigurieren.  
   
-#### <a name="options"></a>enthalten  
+#### <a name="options"></a>Tastatur  
  **Anbietertyp**  
  Wählen Sie einen Protokollanbietertyp aus der Liste aus.  
   
@@ -310,7 +311,7 @@ ms.lasthandoff: 11/20/2017
  **Name**  
  Aktivieren oder deaktivieren Sie Protokolle für Container und Tasks, die Sie im Bereich **Container** des Dialogfelds **SSIS-Protokolle konfigurieren** auswählen, indem Sie die Kontrollkästchen aktivieren bzw. deaktivieren. Das Feld Name kann bearbeitet werden. Verwenden Sie den Standardnamen für den Anbieter, oder geben Sie einen eindeutigen, beschreibenden Namen ein.  
   
- **Description**  
+ **Beschreibung**  
  Das Feld Beschreibung kann bearbeitet werden. Klicken Sie in das Feld und ändern Sie die Standardbeschreibung des Protokolls.  
   
  **Configuration**  
@@ -324,20 +325,20 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="detail"></a> Konfigurieren Sie die Optionen auf der Registerkarte "Details".  
  Auf der Registerkarte **Details** des Dialogfelds **SSIS-Protokolle konfigurieren** können Sie die Ereignisse für das Protokollieren sowie die zu protokollierenden Informationsdetails aktivieren. Die Informationen, die Sie auswählen, gelten für alle Protokollanbieter im Paket. Sie können z. B. nicht einige Informationen in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz und andere Informationen in eine Textdatei schreiben.  
   
-#### <a name="options"></a>enthalten  
+#### <a name="options"></a>Tastatur  
  **Ereignisse**  
  Aktivieren oder Deaktivieren von Ereignissen für die Protokollierung.  
   
- **Description**  
+ **Beschreibung**  
  Anzeigen einer Beschreibung des Ereignisses.  
   
  **Erweitert**  
  Auswählen oder Löschen zu protokollierender Ereignisse und Auswählen oder Löschen von Informationen, die für jedes Ereignis protokolliert werden sollen. Klicken Sie auf **Standard** , um alle Protokollierungsdetails mit Ausnahme der Liste der Ereignisse auszublenden. Die folgenden Informationen sind für die Protokollierung verfügbar:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Computer**|Der Name des Computers, auf dem das protokollierte Ereignis aufgetreten ist.|  
-|**Operator**|Der Benutzername der Person, die das Paket gestartet hat.|  
+|**Ist gleich**|Der Benutzername der Person, die das Paket gestartet hat.|  
 |**SourceName**|Der Name des Pakets, Containers oder Tasks, in dem das protokollierte Ereignis aufgetreten ist.|  
 |**SourceID**|GUID (Global Unique Identifier) des Pakets, Containers oder Tasks, in dem das protokollierte Ereignis aufgetreten ist.|  
 |**ExecutionID**|Der global eindeutige Bezeichner der Paketausführungsinstanz.|  
@@ -477,7 +478,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
   
  [Aufträge übertragen (Task)](#TransferJobs)  
   
- [Task „Anmeldungen übertragen“](#TransferLogins)  
+ [Task "Anmeldungen übertragen"](#TransferLogins)  
   
  [In master gespeicherte Prozeduren übertragen (Task)](#TransferMasterStoredProcedures)  
   
@@ -678,7 +679,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 |---------------|-----------------|  
 |**XMLOperation**|Stellt Informationen über den vom Task durchgeführten Vorgang bereit.|  
 
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Die folgende Liste enthält Links zu Themen, die die Ausführung von Tasks in Verbindung mit der Protokollierungsfunktion beschreiben.  
   
 -   [Durch ein Integration Services-Paket protokollierte Ereignisse](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -29,16 +30,16 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f3438dedb23fe7a168599e06b4847654853aa57b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 454bdfb2ce829153943ebef0c32f7ef80c2a2b2c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="package-management-ssis-service"></a>Paketverwaltung (SSIS-Dienst)
   Die Paketverwaltung umfasst das Überwachen, Verwalten, Importieren und Exportieren von Paketen.  
@@ -190,14 +191,14 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
   
          Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, erweitern Sie den Ordner **SSIS-Pakete** , und wählen Sie den Ordner aus, in dem Sie das Paket speichern möchten. Geben Sie optional in das Textfeld **Paketname** einen neuen Namen für das Paket ein. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  Zum Aktualisieren der Schutzebene des Pakets klicken Sie auf die Schaltfläche mit den drei Punkten **(…)** , und wählen Sie im Dialogfeld **Paketschutzebene** eine andere Schutzebene aus. Falls die Option **Sensible Daten mit einem Kennwort verschlüsseln** oder **Alle Daten mit einem Kennwort verschlüsseln** ausgewählt ist, geben Sie ein Kennwort ein, und bestätigen Sie es.  
+7.  Zum Aktualisieren der Schutzebene des Pakets klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, und wählen Sie im Dialogfeld **Paketschutzebene** eine andere Schutzebene aus. Falls die Option **Sensible Daten mit einem Kennwort verschlüsseln** oder **Alle Daten mit einem Kennwort verschlüsseln** ausgewählt ist, geben Sie ein Kennwort ein, und bestätigen Sie es.  
   
 8.  Klicken Sie auf **OK** , um den Export abzuschließen.  
 
 ## <a name="import-package-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche für Dialogfeld "Paket importieren"
   Verwenden Sie das in **verfügbare Dialogfeld** Paket importieren [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], um ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket zu importieren und die Schutzebene des Pakets festzulegen oder zu ändern.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Paketspeicherort**  
  Wählen Sie den Typ des Speicherortes, an den das Paket importiert werden soll. Die folgenden Optionen stehen zur Verfügung:  
   
@@ -219,7 +220,7 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
  **Authentifizierungstyp**  
  Wählen Sie einen Authentifizierungstyp aus.  
   
- **Benutzername**  
+ **User name**  
  Stellen Sie einen Benutzernamen bereit, falls Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
   
  **Kennwort**  
@@ -237,7 +238,7 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
 ## <a name="export-package-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche des Dialogfelds Paket exportieren
   Verwenden Sie das in **verfügbare Dialogfeld** Paket exportieren [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], um ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket an einen anderen Speicherort zu exportieren und optional die Schutzebene zu ändern.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Paketspeicherort**  
  Wählen Sie den Speichertyp aus, in den das Paket exportiert werden soll. Die folgenden Optionen stehen zur Verfügung:  
   
@@ -259,7 +260,7 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
  **Authentifizierungstyp**  
  Wählen Sie einen Authentifizierungstyp aus.  
   
- **Benutzername**  
+ **User name**  
  Stellen Sie einen Benutzernamen bereit, falls Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
   
  **Kennwort**  
@@ -289,7 +290,7 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
 ### <a name="packages-stored-in-the-file-system"></a>Im Dateisystem gespeicherte Pakete  
  Die im Dateisystem gespeicherte Sicherung von Paketen sollte in den Sicherungsplan einbezogen werden, mit dem das Dateisystem des Servers gesichert wird. Die Konfigurationsdatei des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Diensts, deren Standardname MsDtsSrvr.ini.xml lautet, enthält eine Aufstellung der Ordner auf dem Server, die vom Dienst überwacht werden. Sie sollten sicherstellen, dass diese Ordner gesichert werden. Außerdem können Pakete in anderen Ordnern auf dem Server gespeichert werden. Sie sollten sicherstellen, dass diese Ordner in den Sicherungsprozess einbezogen werden.  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Integration Services-Dienst &#40;SSIS-Dienst&#41;](../../integration-services/service/integration-services-service-ssis-service.md)  
   
   

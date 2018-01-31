@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.savedtspackage.f1
+f1_keywords:
+- sql13.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b938ef910a1c1e8c302529364ab6cfddfec54fb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f20252884bd2adc8003603107ed4efbd45c01ca9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>SSIS-Paket speichern (SQL Server-Import/Export-Assistent)
   Wenn Sie auf der Seite **Paket speichern und ausführen** angegeben haben, dass Ihre Einstellungen als SSIS-Paket (SQL Server Integration Services) gespeichert werden sollen, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistent **SSIS-Paket speichern** an. Auf dieser Seite geben Sie zusätzliche Optionen für das Speichern des vom Assistenten erstellten Pakets an.  
@@ -66,7 +68,7 @@ Stellen Sie eine Verbindung mit dem Server mithilfe der integrierten Windows-Aut
  **SQL Server-Authentifizierung verwenden**  
 Stellen Sie eine Verbindung mit dem Server mithilfe der SQL Server-Authentifizierung her.  
   
- **Benutzername**  
+ **User name**  
 Wenn Sie die SQL Server-Authentifizierung angegeben haben, geben Sie den Benutzernamen ein.  
   
  **Kennwort**  
@@ -115,7 +117,7 @@ Der folgende Screenshot zeigt die Seite **SSIS-Paket speichern** des Assistenten
 ## <a name="whats-next"></a>Wie geht es weiter?  
  Nachdem Sie zusätzliche Optionen für das Speichern des Pakets angegeben haben, ist die nächste Seite **Abschließen des Assistenten**. Auf dieser Seite überprüfen Sie die im Assistenten ausgewählten Optionen und starten dann den Vorgang. Weitere Informationen finden Sie unter [Assistenten abschließen](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md).  
  
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Speichern von Paketen](../../integration-services/save-packages.md)  
 [Ausführen von Integration Services-Paketen (SSIS)](../../integration-services/packages/run-integration-services-ssis-packages.md)  
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)

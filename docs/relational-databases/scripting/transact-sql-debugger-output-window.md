@@ -8,24 +8,26 @@ ms.service:
 ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.output
+f1_keywords:
+- vs.output
 helpviewer_keywords:
 - Output Window [Transact-SQL]
 - Output Window [SQL Server Management Studio]
 ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
-caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7fec105932cc901f932d57843639edaf7991f941
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 764c995e18349b104a3c14297fb3347d44c103c5
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="transact-sql-debugger---output-window"></a>Transact-SQL Debugger – Ausgabefenster
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In diesem Fenster werden Statusmeldungen für verschiedene Funktionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] angezeigt. Die Ausgabe des **-Debuggers, von Funktionen externer Tools oder von Befehlen, die im** Befehlsfenster [!INCLUDE[tsql](../../includes/tsql-md.md)] des Debuggers ausgeführt werden, wird an besondere Bereiche im Fenster **Ausgabe**übermittelt. Die Ausgabe externer Tools (wie z. B. von BAT- oder COM-Dateien), die normalerweise im Eingabeaufforderungsfenster angezeigt wird, ist ebenfalls verfügbar.  

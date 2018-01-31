@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb3d3f706bba3e6c0c6cbf88b5c2145e73fdaaeb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 593931ad7aa343229cfac934cd2ce2648bdddb99
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogeventmessagecontext"></a>catalog.event_message_context
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,17 +31,17 @@ ms.lasthandoff: 11/20/2017
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|Context_id|bigint|Eindeutige ID für den Fehlerkontext.|  
-|Event_message_id|bigint|Eindeutige ID für die Meldung, auf die sich der Kontext bezieht.|  
-|Context_depth|int|Je höher der Wert für die Tiefe, desto weiter entfernt vom Fehler befindet sich der Kontext. Wenn ein Fehler auftritt, startet die Kontexttiefe bei 1. Der Wert 0 gibt den Status des Pakets vor Beginn der Ausführung an.|  
+|Context_id|BIGINT|Eindeutige ID für den Fehlerkontext.|  
+|Event_message_id|BIGINT|Eindeutige ID für die Meldung, auf die sich der Kontext bezieht.|  
+|Context_depth|ssNoversion|Je höher der Wert für die Tiefe, desto weiter entfernt vom Fehler befindet sich der Kontext. Wenn ein Fehler auftritt, startet die Kontexttiefe bei 1. Der Wert 0 gibt den Status des Pakets vor Beginn der Ausführung an.|  
 |Package_path|Nvarchar(max)|Der Paketpfad für die Kontextquelle.|  
-|Context_type|smallint|Der Typ des Objekts, das als Quelle des Kontexts dient. Eine Liste der Kontexttypen finden Sie im Abschnitt **Hinweise**.|  
+|Context_type|SMALLINT|Der Typ des Objekts, das als Quelle des Kontexts dient. Eine Liste der Kontexttypen finden Sie im Abschnitt **Hinweise**.|  
 |Context_source_name|Nvarchar(4000)|Der Name des Objekts, das als Quelle des Kontexts dient.|  
 |Context_source_id|Nvarchar(38)|Die eindeutige ID des Objekts, das als Quelle des Kontexts dient.|  
 |Property_name|Nvarchar(4000)|Der Name der Eigenschaft, die der Quelle des Kontexts zugeordnet ist.|  
 |Property_value|Sql_variant|Der Eigenschaftswert, der der Quelle des Kontexts zugeordnet ist.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  In der folgenden Tabelle sind die Kontexttypen aufgeführt.  
   
 ||||  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/20/2017
 |50|Foreach-Schleife|Status einer Foreach-Schleife|  
 |60|Paket|Status des Pakets beim Auftreten eines Fehlers.|  
 |70|Variable|Variablenwert|  
-|80|Verbindungs-Manager|Eigenschaften eines Verbindungs-Managers.|  
+|80|Ziel-Editor für Dimensionsverarbeitung|Eigenschaften eines Verbindungs-Managers.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese Sicht erfordert eine der folgenden Berechtigungen:  

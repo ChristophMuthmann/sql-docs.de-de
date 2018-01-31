@@ -8,23 +8,24 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - packages view [Integration Services]
 - catalog.packages view [Integration Services]
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e544436126d299182760f94ef46304c334d448b6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 658fee9ba05b4cd0a31099c4dafe303c541bec58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,9 +35,9 @@ ms.lasthandoff: 11/20/2017
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |package_id|**bigint**|Der eindeutige Bezeichner (ID) des Pakets.|  
-|name|**nvarchar(256)**|Der eindeutige Name des Pakets.|  
+|NAME|**nvarchar(256)**|Der eindeutige Name des Pakets.|  
 |package_guid|**uniqueidentifier**|Der global eindeutige Bezeichner (Globally Unique Identifier, GUID) für das Paket.|  
-|Beschreibung|**nvarchar(1024)**|Eine optionale Beschreibung des Pakets.|  
+|description|**nvarchar(1024)**|Eine optionale Beschreibung des Pakets.|  
 |package_format_version|**int**|Die Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mit der das Paket entwickelt wurde.|  
 |version_major|**int**|Die Hauptversion des Pakets.|  
 |version_minor|**int**|Die Nebenversion des Pakets.|  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/20/2017
 |validation_status|**char(1)**|Der Status der Überprüfung.|  
 |last_validation_time|**datetimeoffset(7)**|Der Zeitpunkt der letzten Überprüfung.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  In dieser Sicht wird eine Zeile für jedes Paket im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

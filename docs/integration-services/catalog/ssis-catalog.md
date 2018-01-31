@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,16 +17,16 @@ f1_keywords:
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0a05b62e5c2ffb8c5a268ac8030e703d3a192742
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: b8812ba8a3a96fc17ab9c9ec5083699ef5a7d03b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ssis-catalog"></a>SSIS-Katalog
   Der **SSISDB**-Katalog ist der zentrale Punkt zum Arbeiten mit [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]-Projekten (SSIS), die Sie auf dem [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]-Server bereitgestellt haben. Sie legen beispielsweise Projekt- und Paketparameter fest, konfigurieren Umgebungen, um Laufzeitwerte für Pakete anzugeben, führen Pakete aus, behandeln Paketprobleme und verwalten [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] -Servervorgänge.  
@@ -84,7 +85,7 @@ ms.lasthandoff: 12/12/2017
 ###  <a name="Folder"></a> Ordner, Projekt, Umgebung  
  Beachten Sie die folgenden Regeln, wenn Sie einen Ordner, ein Projekt oder eine Umgebung umbenennen.  
   
--   Zu den ungültigen Zeichen zählen die ASCII/Unicode-Zeichen 1 bis 31, Anführungszeichen ("), kleiner als (\<), größer als (>), senkrechter Strich (|), Rücktaste (\b), Null (\0) und Tab (\t).  
+-   Zu ungültige Zeichen zählen die ASCII/Unicode-Zeichen 1 bis 31, Anführungszeichen ("), kleiner als (\<), größer als (>), senkrechter Strich (|), Rücktaste (\b), NULL (\0) und Tab (\t).  
   
 -   Der Name darf keine führenden oder nachgestellten Leerzeichen enthalten.  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 12/12/2017
 ###  <a name="EnvironmentVariable"></a> Umgebungsvariable  
  Beachten Sie die folgenden Regeln, wenn Sie eine Umgebungsvariable benennen.  
   
--   Zu den ungültigen Zeichen zählen die ASCII/Unicode-Zeichen 1 bis 31, Anführungszeichen ("), kleiner als (\<), größer als (>), senkrechter Strich (|), Rücktaste (\b), Null (\0) und Tab (\t).  
+-   Zu ungültige Zeichen zählen die ASCII/Unicode-Zeichen 1 bis 31, Anführungszeichen ("), kleiner als (\<), größer als (>), senkrechter Strich (|), Rücktaste (\b), NULL (\0) und Tab (\t).  
   
 -   Der Name darf keine führenden oder nachgestellten Leerzeichen enthalten.  
   
@@ -379,7 +380,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
   
 ###  <a name="options"></a> Konfigurieren der Optionen  
   
-#### <a name="options"></a>enthalten  
+#### <a name="options"></a>Tastatur  
  In der folgenden Tabelle werden spezifische Eigenschaften in dem Dialogfeld und die entsprechenden Eigenschaften in der catalog.catalog_property-Sicht beschrieben.  
   
 |Eigenschaftsname (Dialogfeld Katalogeigenschaften)|Eigenschaftsname (catalog.catalog_property-Sicht)|Description|  
@@ -532,7 +533,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
   
 -   Sie haben die Datenbank aus einer älteren Version von SQL Server wiederhergestellt.  
   
--   Sie haben die Datenbank vor der Aktualisierung der SQL Server-Instanz nicht aus einer Always On-Verfügbarkeitsgruppe entfernt. Diese Bedingung verhindert die automatische Aktualisierung der Datenbank. Weitere Informationen finden Sie unter [Upgrading SSISDB in an availability group](#Upgrade).  
+-   Sie haben die Datenbank vor der Aktualisierung der SQL Server-Instanz nicht aus einer Always On-Verfügbarkeitsgruppe entfernt. Diese Bedingung verhindert das automatische Upgrade der Datenbank. Weitere Informationen finden Sie unter [Upgrading SSISDB in an availability group](#Upgrade).  
   
  Der Assistent kann die Datenbank nur auf einer lokalen Serverinstanz aktualisieren.  
   

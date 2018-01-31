@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27e51e480c01395d69396656b263162d93233440
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c154da24447377cb9f2602a46a116364336e1c1e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogobjectparameters-ssisdb-database"></a>catalog.object_parameters (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/20/2017
 |data_type|**nvarchar(128)**|Der Datentyp des Parameters.|  
 |erforderlich|**bit**|Wenn der Wert `1`lautet, ist der Parameterwert erforderlich, um die Ausführung zu starten. Wenn der Wert `0`lautet, ist der Parameterwert nicht erforderlich, um die Ausführung zu starten.|  
 |sensitive|**bit**|Wenn der Wert `1`lautet, ist der Parameterwert vertraulich. Wenn der Wert `0`lautet, ist der Parameterwert nicht vertraulich.|  
-|Beschreibung|**nvarchar(1024)**|Eine optionale Beschreibung des Pakets.|  
+|description|**nvarchar(1024)**|Eine optionale Beschreibung des Pakets.|  
 |design_default_value|**sql_variant**|Der Standardwert für den Parameter, der während des Entwurfs des Projekts oder Pakets zugewiesen wurde.|  
 |default_value|**sql_variant**|Der Standardwert, der derzeit auf dem Server verwendet wird.|  
 |value_type|**char(1)**|Gibt den Typ des Parameterwerts an. In diesem Feld wird `V` angezeigt, wenn „parameter_value“ ein Literalwert ist, und `R` wird angezeigt, wenn der Wert durch Verweis auf eine Umgebungsvariable zugewiesen wird.|  

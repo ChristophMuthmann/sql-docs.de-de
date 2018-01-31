@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aed445a4a884aa07f1fa93a0f27cfe2763bfe4b4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b1f3defee5da1c6cc98e985cf6f8eb6bc30479b0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>Schritte im SQL Server-Import/Export-Assistenten
 Dieses Thema beschreibt die Abfolge der Schritte zum Importieren und Exportieren von Daten mit dem SQL Server-Import/Export-Assistenten. Es enthält auch Links zu den einzelnen Seiten der Dokumentation, die die Seiten bzw. Dialogfelder des Assistenten im Einzelnen beschreiben.
@@ -50,17 +51,17 @@ Um einen schnellen Überblick über die verschiedenen Bildschirme in einer typis
 Im Folgenden werden einige weitere grundlegenden Tasks aufgelistet.
 -   **Sehen Sie sich ein kurzes Beispiel zur Funktionsweise des Assistenten an.**
 
-    -   **Wenn Sie lieber mit Screenshots arbeiten:** Sehen Sie sich das folgende einfache vollständige Beispiel auf der Seite [Get started with this simple example of the Import and Export Wizard (Erste Schritte mit diesem einfachen Beispiel für den Import/Export-Assistenten)](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md) an.
+    -   **Wenn Sie lieber mit Screenshots arbeiten:** Sehen Sie sich das folgende einfache vollständige Beispiel auf der Seite [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md) (Erste Schritte mit diesem einfachen Beispiel für den Import/Export-Assistenten) an.
 
-    -   **Wenn Sie sich lieber ein Video ansehen möchten:** Sehen Sie sich dieses vierminütige YouTube-Video an, in dem der Assistent vorgestellt wird und klar und deutlich erklärt wird, wie Daten nach Excel exportiert werden können: [Using the SQL Server Import and Export Wizard to Export to Excel (Verwenden des SQL Server-Import/Export-Assistenten zum Exportieren nach Excel)](https://go.microsoft.com/fwlink/?linkid=829049).
+    -   **Wenn Sie sich lieber ein Video ansehen möchten:** Sehen Sie sich dieses vierminütige YouTube-Video an, in dem der Assistent vorgestellt wird und klar und deutlich erklärt wird, wie Daten nach Excel exportiert werden können: [Using the SQL Server Import and Export Wizard to Export to Excel](https://go.microsoft.com/fwlink/?linkid=829049) (Verwenden des SQL Server-Import/Export-Assistenten zum Exportieren nach Excel).
 
 -   **Weitere Informationen zur Funktionsweise des Assistenten:**
 
     -   **Weitere Informationen zum Assistenten:** Wenn Sie eine Übersicht über den Assistenten suchen, lesen Sie [Importieren und Exportieren von für SQL Server unterstützten Datenquellen](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
-    -   **Weitere Informationen zum Herstellen einer Verbindung zwischen Datenquellen und -zielen:** Um weitere Informationen zum Herstellen einer Verbindung mit Ihren Daten zu erhalten, wählen Sie aus der folgenden Liste die Seite aus, die Sie besonders interessiert: [Connect to data sources with the SQL Server Import and Export Wizard (Herstellen einer Verbindung mit Datenquellen mit dem SQL Server Import/Export-Assistenten)](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). Es sind separate Dokumentationsseiten für verschiedene, häufig verwendete Datenquellen verfügbar. 
+    -   **Weitere Informationen zum Herstellen einer Verbindung zwischen Datenquellen und -zielen:** Wählen Sie für weitere Informationen zum Herstellen einer Verbindung mit Ihren Daten die Seite aus der Liste aus, die Sie besonders interessiert: [Connect to data sources with the SQL Server Import and Export Wizard (Herstellen einer Verbindung mit Datenquellen mit dem SQL Server Import/Export-Assistenten)](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). Es sind separate Dokumentationsseiten für verschiedene, häufig verwendete Datenquellen verfügbar. 
 
--   **Starten des Assistenten:** Wenn Sie bereit sind, den Assistenten auszuführen, und nur wissen möchten, wie Sie ihn starten, lesen Sie [Starten des SQL Server-Import/Export-Assistenten](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
+-   **Starten Sie den Assistenten.** Wenn Sie bereit sind, den Assistenten auszuführen, und nur wissen möchten, wie Sie ihn starten, lesen Sie [Starten des SQL Server-Import/Export-Assistenten](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
 -     **So erhalten Sie den Wizard.** Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber nicht auf Ihrem Computer installiert ist, können Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten mit den SQL Server Data Tools (SSDT) installieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 

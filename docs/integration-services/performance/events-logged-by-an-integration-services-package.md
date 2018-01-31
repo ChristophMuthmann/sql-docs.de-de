@@ -8,23 +8,24 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - package [Integration Services], events
 - events [Integration Services], package
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec69b469565f121853755c6441c0e36e2ef78abe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 30cec734f1bf60180475e1bebc6b8c66c7686bf5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Durch ein Integration Services-Paket protokollierte Ereignisse
   Ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket protokolliert verschiedene Ereignismeldungen in das Windows-Anwendungsereignisprotokoll. Ein Paket protokolliert diese Meldungen, wenn das Paket startet, wenn das Paket anhält und wenn bestimmte Probleme auftreten.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Das Paket protokolliert die Meldungen in der folgenden Tabelle, auch wenn Sie die Protokollfunktion für das Paket nicht aktiviert haben.  
   
-|Ereignis-ID|Symbolischer Name|Text|Hinweise|  
+|Ereignis-ID|Symbolischer Name|Textmodus|Hinweise|  
 |--------------|-------------------|----------|-----------|  
 |12288|DTS_MSG_PACKAGESTART|Das Paket "" wurde gestartet.|Die Ausführung des Pakets wurde begonnen.|  
 |12289|DTS_MSG_PACKAGESUCCESS|Das Paket "" wurde erfolgreich beendet.|Das Paket wurde erfolgreich ausgeführt und wird zurzeit nicht mehr ausgeführt.|  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
 ### <a name="messages-about-the-stages-of-package-execution"></a>Meldungen zu den Phasen der Paketausführung  
   
-|Ereignis-ID|Symbolischer Name|Text|Hinweise|  
+|Ereignis-ID|Symbolischer Name|Textmodus|Hinweise|  
 |--------------|-------------------|----------|-----------|  
 |12544|DTS_MSG_EVENTLOGENTRY|Ereignisname: %1%r Meldung: %9%r Operator: %2%r Quellenname: %3%r Quellen-ID: %4%r Ausführungs-ID: %5%r Startzeit: %6%r Beendigungszeit: %7%r Datencode: %8|Dieses generische Format wird von verschiedenen Meldungen verwendet, wenn Sie die Paketprotokollierung für das Anwendungsereignisprotokoll konfigurieren.|  
 |12556|DTS_MSG_EVENTLOGENTRY_PACKAGESTART|Ereignisname: %1%r Meldung: %9%r Operator: %2%r Quellenname: %3%r Quellen-ID: %4%r Ausführungs-ID: %5%r Startzeit: %6%r Beendigungszeit: %7%r Datencode: %8|Das Paket wurde gestartet.|  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="messages-about-events-that-occur"></a>Meldungen über Ereignisse, die auftreten  
  In der folgenden Tabelle werden nur einige der Meldungen aufgeführt, die aus Ereignissen resultieren. Eine umfangreichere Liste von Fehler-, Warnungs- und Informationsmeldungen, die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet werden, finden Sie unter [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md).  
   
-|Ereignis-ID|Symbolischer Name|Text|Hinweise|  
+|Ereignis-ID|Symbolischer Name|Textmodus|Hinweise|  
 |--------------|-------------------|----------|-----------|  
 |12251|DTS_MSG_EVENTLOGENTRY_TASKFAILED|Ereignisname: %1%r Meldung: %9%r Operator: %2%r Quellenname: %3%r Quellen-ID: %4%r Ausführungs-ID: %5%r Startzeit: %6%r Beendigungszeit: %7%r Datencode: %8|Der Task ist fehlgeschlagen.|  
 |12250|DTS_MSG_EVENTLOGENTRY_ERROR|Ereignisname: %1%r Meldung: %9%r Operator: %2%r Quellenname: %3%r Quellen-ID: %4%r Ausführungs-ID: %5%r Startzeit: %6%r Beendigungszeit: %7%r Datencode: %8|Diese Meldung meldet einen Fehler, der aufgetreten ist.|  

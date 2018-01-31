@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 233eed5038eb8a2f63e89cbadc5ea738398b8d8b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e3d621273b3b45b25158d494fd9bee3d7241e1d3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,16 +73,16 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  [ @parameter_value = ] *parameter_value*  
  Der Wert des Parameters. Der *parameter_value* ist **sql_variant**.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Um die Parameterwerte zu ermitteln, die für eine bestimmte Ausführung verwendet wurden, fragen Sie die catalog.execution_parameter_values-Sicht ab.  
   
  Um den Umfang der Informationen anzugeben, die während einer Paketausführung protokolliert werden, legen Sie *parameter_name* auf LOGGING_LEVEL und *parameter_value* auf einen der folgenden Werte fest.  
   
  Legen Sie den *object_type*-Parameter auf „50“ fest.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
-|0|Keine<br /><br /> Die Protokollierung ist deaktiviert. Nur der Status der Ausführung von Paketen wird protokolliert.|  
+|0|InclusionThresholdSetting<br /><br /> Die Protokollierung ist deaktiviert. Nur der Status der Ausführung von Paketen wird protokolliert.|  
 |1|Standard<br /><br /> Alle Ereignisse werden protokolliert, außer benutzerdefinierten und Diagnose-Ereignissen. Dies ist der Standardwert.|  
 |2|Leistung<br /><br /> Nur Leistungsstatistiken sowie OnError- und OnWarning-Ereignisse werden protokolliert.|  
 |3|Ausführlich<br /><br /> Alle Ereignisse werden protokolliert, einschließlich benutzerdefinierter Ereignisse und Diagnose-Ereignissen. <br />Zu den benutzerdefinierten Ereignissen zählen auch von Integration Services-Tasks protokollierte Ereignisse. Weitere Informationen finden Sie unter [Benutzerdefinierte Meldungen für die Protokollierung](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages).|  
@@ -90,7 +91,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  Um festzulegen, dass der Integration Services-Server Dumpdateien generiert, wenn während einer Paketausführung ein Fehler auftritt, legen Sie die folgenden Parameterwerte für eine Ausführungsinstanz fest, die nicht ausgeführt wurde.  
   
-|Parameter|Wert|  
+|Parameter|value|  
 |---------------|-----------|  
 |*execution_id*|Der eindeutige Bezeichner für die Instanz der Ausführung|  
 |*object_type*|50|  
@@ -99,7 +100,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  Um festzulegen, dass der Integration Services-Server Dumpdateien generiert, wenn während einer Paketausführung Ereignisse auftreten, legen Sie die folgenden Parameterwerte für eine Ausführungsinstanz fest, die nicht ausgeführt wurde.  
   
-|Parameter|Wert|  
+|Parameter|value|  
 |---------------|-----------|  
 |*execution_id*|Der eindeutige Bezeichner für die Instanz der Ausführung|  
 |*object_type*|50|  
@@ -108,7 +109,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  Um die während einer Paketausführung auftretenden Ereignisse festzulegen, die Integration Services-Server zum Generieren von Dumpdateien veranlassen, legen Sie die folgenden Parameterwerte für eine Ausführungsinstanz fest, die nicht ausgeführt wurde. Trennen Sie mehrere Ereigniscodes mithilfe eines Semikolons.  
   
-|Parameter|Wert|  
+|Parameter|value|  
 |---------------|-----------|  
 |*execution_id*|Der eindeutige Bezeichner für die Instanz der Ausführung|  
 |*object_type*|50|  
@@ -139,7 +140,7 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
  0 (Erfolg)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
@@ -161,7 +162,7 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
   
 -   Der Datentyp des Parameterwerts stimmt nicht mit dem Datentyp des Parameters überein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [catalog.execution_parameter_values &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)   
  [Generieren von Dumpdateien für die Paketausführung](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   

@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9fa0b3192455d022288100f2997309598dae774b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c8ab77d362f9758e21a1bce78c31bc066d39f51c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer Flatfile-Datenquelle (SQL Server-Import/Export-Assistent)
 In diesem Artikel wird erläutert, wie Sie eine Verbindung mit einer **Flatfile**-Datenquelle (Textdatei) von der Seite **Datenquelle auswählen** oder **Ziel auswählen** des SQL Server-Import/Export-Assistenten herstellen. Für Flatfiles enthalten diese beiden Seiten des Assistenten verschiedene Optionen, deshalb werden in diesem Artikel die Flatfilequelle und das Flatfileziel separat beschrieben.
@@ -39,7 +40,7 @@ Seite|Empfehlung  |Typ
 ----|---------|---------
 **Allgemein**|Stellen Sie sicher, dass Sie die Optionen im Abschnitt **Format** aktualisieren.|Empfohlen    
 **Spalten**|Stellen Sie sicher, dass Sie die Spalten- und Zeilentrennzeichen (für eine durch Trennzeichen getrennte Datei) überprüfen oder die Spalten markieren (für eine Datei mit fester Breite).|Empfohlen
-**Erweitert**|Überprüfen Sie optional die Datentypen und andere Eigenschaften, die den Spalten standardmäßig zugewiesen sind.|Optional
+**Erweitert:**|Überprüfen Sie optional die Datentypen und andere Eigenschaften, die den Spalten standardmäßig zugewiesen sind.|Optional
 **Vorschau**|Zeigen Sie optional mithilfe der von Ihnen angegebenen Einstellungen die Vorschau eines Datenbeispiels an.|Optional
 
 ## <a name="general-page-source"></a>Seite „Allgemein“ (Quelle)
@@ -67,7 +68,7 @@ Seite|Empfehlung  |Typ
  **Format**  
  Wählen Sie aus, ob die Datei eine Formatierung mit Trennzeichen, fester Breite oder rechtem Flatterrand verwendet.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |Mit Trennzeichen|Spalten werden mit Trennzeichen getrennt. Geben Sie das Trennzeichen auf der Seite **Spalten** an.|  
 |Feste Breite|Spalten haben eine feste Breite.|  
@@ -82,7 +83,7 @@ Seite|Empfehlung  |Typ
  **Kopfzeilentrennzeichen**  
  Wählen Sie aus einer Liste mit Trennzeichen für Kopfzeilen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Kopfzeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Kopfzeilen dient ein Wagenrücklauf.|  
@@ -109,7 +110,7 @@ Seite|Empfehlung  |Typ
  **Zeilentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Zeilentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
@@ -123,7 +124,7 @@ Seite|Empfehlung  |Typ
  **Spaltentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Spaltentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Spalten dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Spalten dient ein Wagenrücklauf.|  
@@ -181,7 +182,7 @@ Seite|Empfehlung  |Typ
  **Zeilentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Zeilentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
@@ -222,7 +223,7 @@ Beachten Sie im Screenshot, dass die Spalte **id**, die Zahlen enthält, anfäng
 **Neu**  
  Durch Klicken auf **Neu**fügen Sie eine neue Spalte hinzu. Die neue Spalten wird beim Klicken auf **Neu** standardmäßig am Ende der Liste hinzugefügt. Ferner sind für die Schaltfläche folgende, über die Dropdownliste auswählbare Optionen verfügbar.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Spalte hinzufügen**|Fügt am Ende der Liste eine neue Spalte hinzu.|  
 |**Einfügen vor**|Fügt vor der ausgewählten Spalte eine neue Spalte ein.|  
@@ -290,7 +291,7 @@ Für ein Flatfileziel gibt es wie im folgenden Screenshot dargestellt nur eine S
  **Format**  
  Wählen Sie aus, ob die Datei eine Formatierung mit Trennzeichen, fester Breite oder rechtem Flatterrand verwendet.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |Mit Trennzeichen|Spalten werden mit Trennzeichen getrennt. Geben Sie das Trennzeichen auf der Seite **Spalten** an.|  
 |Feste Breite|Spalten haben eine feste Breite.|  

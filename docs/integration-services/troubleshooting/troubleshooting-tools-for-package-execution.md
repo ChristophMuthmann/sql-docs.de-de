@@ -8,7 +8,8 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 44b2f3e043a672fd5c258c5dd5c73c3e4f00fa5a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c38f451a062f7280413950e89aa482cea2d23125
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Behandlung von Problemen mit Paketausführungstools
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Funktionen und Tools, die Sie zur Behandlung von Problemen beim Ausführen von Paketen nach deren Fertigstellung und Bereitstellung verwenden können.  
@@ -95,7 +96,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="troubleshoot-run-time-validation-issues"></a>Behandlung von Problemen bei der Überprüfung zur Laufzeit  
  Es kann vorkommen, dass Sie keine Verbindung mit den Datenquellen herstellen können oder Teile des Pakets erst nach der Ausführung von vorausgehenden Tasks im Paket zur Laufzeit überprüft werden können. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt die folgenden Funktionen bereit, mit denen Sie die Überprüfungsfehler, die in solchen Fällen ausgelöst werden, vermeiden können:  
   
--   **Konfigurieren der DelayValidation-Eigenschaft für Paketelemente, die beim Laden des Pakets noch nicht gültig sind**. Zum Verhindern von Überprüfungsfehlern beim Laden des Pakets können Sie für Paketelemente, deren Konfigurationen zu diesem Zeitpunkt noch nicht gültig sind, **DelayValidation** auf **True** festlegen. Ein Beispiel hierfür wäre ein Datenflusstask, der eine Zieltabelle verwendet, die erst zur Laufzeit durch einen Task 'SQL ausführen' erstellt wird. Die **DelayValidation** -Eigenschaft kann auf Paketebene oder auf der Ebene der einzelnen, in den Paketen enthaltenen Tasks und Container aktiviert werden.  
+-   **Konfigurieren der DelayValidation-Eigenschaft für Paketelemente, die beim Laden des Pakets noch nicht gültig sind**. Zum Verhindern von Überprüfungsfehlern beim Laden des Pakets können Sie für Paketelemente, deren Konfigurationen zu diesem Zeitpunkt noch nicht gültig sind, **DelayValidation** auf **True** festlegen. Ein Beispiel hierfür wäre ein Datenflusstask, der eine Zieltabelle verwendet, die erst zur Laufzeit durch einen Task 'SQL ausführen' erstellt wird. Die **DelayValidation**-Eigenschaft kann auf Paketebene oder auf der Ebene der einzelnen, in den Paketen enthaltenen Tasks und Container aktiviert werden.  
   
      Die **DelayValidation** -Eigenschaft kann für einen Datenflusstask, jedoch nicht für einzelne Datenflusskomponenten festgelegt werden. Sie erreichen ein ähnliches Ergebnis, wenn Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> -Eigenschaft einzelner Datenflusskomponenten auf **FALSE**. Wenn jedoch der Wert dieser Eigenschaft auf **false**festgelegt ist, erkennt die Komponente keine Änderungen der Metadaten externer Datenquellen. Wenn der Wert auf **true**festgelegt ist, können Sie mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> -Eigenschaft Blockierungsprobleme vermeiden, die durch Sperren in der Datenbank verursacht werden, insbesondere wenn das Paket Transaktionen verwendet.  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="troubleshoot-errors-without-a-description"></a>Behandlung von Fehlern ohne Beschreibung  
  Wenn ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Fehler ohne zugehörige Beschreibung auftritt, können Sie die Beschreibung zu dem Fehler anhand seiner Fehlernummer in der Liste unter [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md) nachschlagen. Die Liste enthält zurzeit keine Informationen zur Problembehandlung.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [Debuggen des Datenflusses](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  

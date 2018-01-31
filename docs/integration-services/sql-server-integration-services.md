@@ -26,13 +26,13 @@ ms.assetid: c4398655-5657-4ae4-a690-a380790fe84f
 caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cc7137128954a11774bfa99b66ac3ca27621b67c
-ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
+ms.openlocfilehash: 48d2b81acab290fc27ca351c8e630b8a9cfc5f77
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 

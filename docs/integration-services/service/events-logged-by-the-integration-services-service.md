@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - events [Integration Services], service
 - Integration Services service, events
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc85b9b432cfccacabb6cf877e7f26edd4b0b975
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9ba7f6ab3bda7bfc40acffc54fa56131ba53514b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Ereignisprotokollierung durch den Integration Services-Dienst
   Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst protokolliert verschiedene Meldungen in das Windows-Anwendungsereignisprotokoll. Der Dienst Paket protokolliert diese Meldungen, wenn er startet, wenn er anhält und wenn bestimmte Probleme auftreten.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="service-status-messages"></a>Meldungen zur Servicequalität
  Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zur Installation auswählen, wird der Dienst [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert und gestartet, und der Starttyp wird auf Automatisch gesetzt.  
   
-|Ereignis-ID|Symbolischer Name|Text|Hinweise|  
+|Ereignis-ID|Symbolischer Name|Textmodus|Hinweise|  
 |--------------|-------------------|----------|-----------|  
 |256|DTS_MSG_SERVER_STARTING|Starten des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Diensts.|Der Dienst wird gerade gestartet.|  
 |257|DTS_MSG_SERVER_STARTED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Der  -Dienst wurde gestartet.|Der Dienst wurde gestartet.|  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="settings-file-messages"></a>Meldungen zur Einstellungsdatei  
  Einstellungen für den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst werden in einer XML-Datei gespeichert, die Sie ändern können. Weitere Informationen finden Sie unter [Integration Services-Dienst &#40;SSIS-Dienst&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
   
-|Ereignis-ID|Symbolischer Name|Text|Hinweise|  
+|Ereignis-ID|Symbolischer Name|Textmodus|Hinweise|  
 |--------------|-------------------|----------|-----------|  
 |274|DTS_MSG_SERVER_MISSING_CONFIG_REG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Dienst: %nRegistrierungseinstellung mit Angabe der Konfigurationsdatei ist nicht vorhanden. %nEs wird versucht, die Standardkonfigurationsdatei zu laden.|Der Registrierungseintrag, der den Pfad der Konfigurationsdatei enthält, ist nicht vorhanden oder leer.|  
 |272|DTS_MSG_SERVER_MISSING_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Dienst ist nicht vorhanden.%nWird mit Standardeinstellungen geladen.|Die Konfigurationsdatei ist am angegebenen Speicherort nicht vorhanden.|  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="other-messages"></a>Andere Meldungen  
   
-|Ereignis-ID|Symbolischer Name|Text|Hinweise|  
+|Ereignis-ID|Symbolischer Name|Textmodus|Hinweise|  
 |--------------|-------------------|----------|-----------|  
 |336|DTS_MSG_SERVER_STOPPING_PACKAGE|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Dienst: Ausführung des Pakets wird beendet.% nPaketinstanz-ID:%1%nPaket-ID:%2%nPaketname:%3%nPaketbeschreibung:%4%nPaket|Der Dienst versucht, ein ausgeführtes Paket zu beenden. Sie können ausgeführte Pakete in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]überwachen und anhalten. Weitere Informationen zum Verwalten von Paketen in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] finden Sie unter [Paketverwaltung &#40;SSIS-Dienst&#41;](../../integration-services/service/package-management-ssis-service.md).|  
 
@@ -101,5 +102,5 @@ ms.lasthandoff: 11/20/2017
   
 9. Klicken Sie im Menü **Datei** auf **Beenden** , um das Dialogfeld **Ereignisanzeige** zu schließen.  
  
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Informationen zum Anzeigen von Protokolleinträgen finden Sie unter [Durch ein Integration Services-Paket protokollierte Ereignisse](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 488a95178554c7caee4d44a55b03c972065bdfb0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 05b3941ccc90394999a8af6b9f8d10aaf25f0921
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,8 +33,8 @@ ms.lasthandoff: 11/20/2017
 |-----------------|---------------|-----------------|  
 |project_id|**bigint**|Der eindeutige Bezeichner (ID) des Projekts.|  
 |folder_id|**bigint**|Die eindeutige ID des Ordners, in dem sich das Projekt befindet.|  
-|name|**sysname**|Der Name des Projekts.|  
-|Beschreibung|**nvarchar(1024)**|Die optionale Beschreibung des Projekts.|  
+|NAME|**sysname**|Der Name des Projekts.|  
+|description|**nvarchar(1024)**|Die optionale Beschreibung des Projekts.|  
 |project_format_version|**int**|Die Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mit der das Projekt entwickelt wurde.|  
 |deployed_by_sid|**varbinary(85)**|Die Sicherheits-ID (SID) des Benutzers, der das Projekt installiert hat.|  
 |deployed_by_sid|**nvarchar(128)**|Der Name des Benutzers, der das Projekt installiert hat.|  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/20/2017
 |validation_status|**char(1)**|Der Überprüfungsstatus.|  
 |last_validation_time|**datetimeoffset(7)**|Der Zeitpunkt der letzten Überprüfung.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  In dieser Sicht wird eine Zeile für jedes Projekt im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
