@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="data-flow-performance-features"></a>Data Flow Performance Features
+# <a name="data-flow-performance-features"></a>Funktionen für die Datenflussleistung
   Dieses Thema bietet Vorschläge, wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete entworfen werden müssen, damit allgemeine Leistungsprobleme vermieden werden. Dieses Thema enthält zudem Informationen zu Funktionen und Tools, die Sie verwenden können, um Leistungsprobleme von Paketen zu beheben.  
   
 ## <a name="configuring-the-data-flow"></a>Konfigurieren des Datenflusses  
