@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
   
  Mithilfe dieser Transformation kann ein Paket die folgenden Datenkonvertierungstypen ausführen:  
   
--   Ändern des Datentyps. Weitere Informationen finden Sie unter [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+-   Ändern des Datentyps. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../../integration-services/data-flow/integration-services-data-types.md).  
   
     > [!NOTE]  
     >  Falls Sie Daten in einen date- oder datetime-Datentyp konvertieren, weist das Datum in der Ausgabespalte das ISO-Format auf, auch wenn für das Gebietsschema ein anderes Format angegeben ist.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/25/2018
  Geben Sie einen Alias für jede neue Spalte ein. Der Standard lautet **Copy of** , gefolgt vom Namen der Eingabespalte. Sie können jedoch auch einen eindeutigen, beschreibenden Namen auswählen.  
   
  **Datentyp**  
- Wählen Sie einen verfügbaren Datentyp aus der Liste aus. Weitere Informationen finden Sie unter [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+ Wählen Sie einen verfügbaren Datentyp aus der Liste aus. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  **Länge**  
  Legt für Zeichenfolgendaten die Spaltenlänge fest.  
