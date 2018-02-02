@@ -8,21 +8,23 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ssis.ssms.isprojectprop.versions.f1
+f1_keywords:
+- sql13.ssis.ssms.isprojectprop.versions.f1
 ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08a17d5d42312536a196ae22e6882b3d3c6aa395
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: ffd13cca1b5a96ca6e1c83734d40757c939299dd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="project-versions-dialog-box"></a>Projektversionen (Dialogfeld)
   Verwenden Sie das Dialogfeld **Projektversionen** , um Versionen eines Projekts anzuzeigen und eine frühere Version wiederherzustellen.  

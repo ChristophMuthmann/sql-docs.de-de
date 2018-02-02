@@ -8,22 +8,25 @@ ms.service:
 ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.debug.quickwatch
-helpviewer_keywords: QuickWatch Dialog [Transact-SQL]
+f1_keywords:
+- vs.debug.quickwatch
+helpviewer_keywords:
+- QuickWatch Dialog [Transact-SQL]
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4831c5a62987109aba02f29f540fdff908cee5b1
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: b3b655a3f433c0957b36dc639c3f1d7f309cd151
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Transact-SQL-Debugger – Dialogfeld „Schnellüberwachung“
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mithilfe des Dialogfelds **Schnellüberwachung** können Sie beim Debuggen von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code schnell den Datentyp und den Wert eines [!INCLUDE[tsql](../../includes/tsql-md.md)]-Ausdrucks anzeigen, wie z.B. einer Variable oder eines Parameters. Um mehrere Ausdrücke zu beobachten, können Sie den Ausdruck auch einem **Überwachungsfenster** hinzufügen.  

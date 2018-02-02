@@ -8,24 +8,26 @@ ms.service:
 ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.debug.breakpt.action
+f1_keywords:
+- vs.debug.breakpt.action
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
 - Transact-SQL debugger, breakpoint when hit action
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e45e8d2e4514d5ba254a375441d78f05d4cb8c9
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 543b2919c801ed6af696a31114bf840eff9cae05
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="specify-a-breakpoint-action"></a>Angeben einer Breakpointaktion
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die Breakpointaktion **Bei Treffer** gibt einen benutzerdefinierten Task an, den der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Debugger für einen Breakpoint ausführt. Wenn die angegebene Trefferanzahl erreicht ist und alle angegebenen Breakpointbedingungen erfüllt sind, führt der Debugger die für den Breakpoint angegebene Aktion aus.  

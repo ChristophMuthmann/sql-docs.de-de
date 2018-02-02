@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -32,16 +33,16 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: "73"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 72a38ba6fa45a5b7d6c6003100b27398c60ed522
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 834bdc1febf1f066847b33f1490f076151357e98
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="foreach-loop-container"></a>Foreach-Schleifencontainer
   Der Foreach-Schleifencontainer definiert die Wiederholung einer Ablaufsteuerung in einem Paket. Die Schleifenimplementierung ist mit der **Foreach** -Schleifenstruktur in Programmiersprachen zu vergleichen. In einem Paket wird die Schleife mithilfe eines Foreach-Enumerators ermöglicht.  Der Foreach-Schleifencontainer wiederholt die Ablaufsteuerung für jedes Mitglied eines angegebenen Enumerators.  
@@ -105,7 +106,7 @@ ms.lasthandoff: 11/20/2017
   
  Der Foreach-Schleifencontainer stellt keine Funktionalität bereit. Er stellt lediglich die Struktur bereit, in der Sie die wiederholbare Ablaufsteuerung erstellen, einen Enumeratortyp angeben und den Enumerator konfigurieren. Sie müssen mindestens einen Task in den Foreach-Schleifencontainer einschließen, um Containerfunktionalität bereitzustellen. Weitere Informationen finden Sie unter [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md).  
   
- Der Foreach-Schleifencontainer kann eine Ablaufsteuerung mit mehreren Tasks und anderen Containern einschließen. Das Hinzufügen von Tasks und Containern zu einem Foreach-Schleifencontainer ist mit dem Hinzufügen von Tasks und Containern zu einem Paket vergleichbar, außer dass Sie die Tasks und Container nicht in das Paket, sondern in den Foreach-Schleifencontainer ziehen. Falls der Foreach-Schleifencontainer mehrere Tasks oder Container einschließt, können Sie diese wie bei einem Paket mithilfe von Rangfolgeneinschränkungen verbinden. Weitere Informationen finden Sie unter [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
+ Der Foreach-Schleifencontainer kann eine Ablaufsteuerung mit mehreren Tasks und anderen Containern einschließen. Das Hinzufügen von Tasks und Containern zu einem Foreach-Schleifencontainer ist mit dem Hinzufügen von Tasks und Containern zu einem Paket vergleichbar, außer dass Sie die Tasks und Container nicht in das Paket, sondern in den Foreach-Schleifencontainer ziehen. Falls der Foreach-Schleifencontainer mehrere Tasks oder Container einschließt, können Sie diese wie bei einem Paket mithilfe von Rangfolgeneinschränkungen verbinden. Weitere Informationen finden Sie unter [Rangfolgeneinschränkungen](../../integration-services/control-flow/precedence-constraints.md).  
   
 ### <a name="add-and-configure-a-foreach-loop-container"></a>Hinzufügen und Konfigurieren eines Foreach-Schleifencontainers
   
@@ -185,14 +186,14 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
   
  Weitere Informationen für Foreach-Schleifencontainer und wie diese zu konfigurieren sind, finden Sie unter [Foreach-Schleifencontainer](../../integration-services/control-flow/foreach-loop-container.md) und [Konfigurieren eines Foreach-Schleifencontainers](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Foreach-Schleifencontainer an. Dieser Name wird als Bezeichnung des Tasksymbols und in Protokollen verwendet.  
   
 > [!NOTE]  
 >  Objektnamen müssen innerhalb eines Pakets eindeutig sein.  
   
- **Description**  
+ **Beschreibung**  
  Geben Sie eine Beschreibung des Foreach-Schleifencontainers an.  
 
 ## <a name="collection-page---foreach-loop-editor"></a>Foreach-Schleifen-Editor: Seite „Collection“
@@ -204,7 +205,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **Enumerator**  
  Wählen Sie den Enumeratortyp aus der Liste aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Foreach-Datei-Enumerator**|Zählt Dateien auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-Dateienumerator**die dynamischen Optionen angezeigt.|  
 |**Foreach-Element-Enumerator**|Zählt Werte in einem Element auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-Elementenumerator**die dynamischen Optionen angezeigt.|  
@@ -345,7 +346,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **DocumentSourceType**  
  Wählen Sie den Quelltyp des XML-Dokuments aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
 |**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
@@ -365,7 +366,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **EnumerationType**  
  Wählen Sie einen Enumerationstyp aus der Liste aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Navigator**|Die Aufzählung erfolgt mithilfe eines XPathNavigators.|  
 |**Node**|Zählt Knoten auf, die durch einen XPath-Vorgang zurückgegeben wurden.|  
@@ -375,7 +376,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **OuterXPathStringSourceType**  
  Wählen Sie den Quelltyp der XPath-Zeichenfolge aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar: 
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
 |**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
@@ -398,7 +399,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **InnerXPathStringSourceType**  
  Wählen Sie den Quelltyp der inneren XPath-Zeichenfolge aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Direct input**|Legen Sie als Quelle ein XML-Dokument fest.|  
 |**File connection**|Wählen Sie eine Datei aus, die das XML-Dokument enthält.|  
@@ -499,7 +500,7 @@ Gibt an, ob im angegebenen Verzeichnis rekursiv gesucht werden soll.
   
  Das Lernprogramm für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zum Erstellen eines einfachen ETL-Pakets enthält eine Lektion, die Ihnen zeigt, wie Sie eine Foreach-Schleife hinzufügen und konfigurieren können.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Variable**  
  Wählen Sie eine vorhandene Variable aus, oder klicken Sie auf **Neue Variable...**, um eine neue Variable zu erstellen.  
   
@@ -520,7 +521,7 @@ Gibt an, ob im angegebenen Verzeichnis rekursiv gesucht werden soll.
 ## <a name="schema-restrictions-dialog-box-adonet"></a>Dialogfeld „Schemaeinschränkungen“ (ADO.NET)
 Mit dem Dialogfeld **Schemaeinschränkungen** legen Sie die Schemaeinschränkungen fest, die für den Enumerator für das Foreach-ADO.NET-Schemarowset gelten.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Einschränkungen**  
  Wählen Sie die Einschränkungen aus, die für das Schema gelten.  
   
@@ -535,7 +536,7 @@ Mit dem Dialogfeld **Schemaeinschränkungen** legen Sie die Schemaeinschränkung
 ## <a name="for-each-item-columns-dialog-box"></a>ForEach-Elementspalten (Dialogfeld)
 Mithilfe des Dialogfelds **ForEach-Elementspalten** definieren Sie Spalten, die in den Elementen des ForEach-Elementenumerators enthalten sind.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Column**  
  Listet die Spalten auf.  
   
@@ -551,7 +552,7 @@ Mithilfe des Dialogfelds **ForEach-Elementspalten** definieren Sie Spalten, die 
  ## <a name="select-smo-enumeration-dialog-box"></a>SMO-Enumeration auswählen (Dialogfeld)
 Verwenden Sie das Dialogfeld **SMO-Enumeration auswählen** , um das aufzuzählende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects-Objekt (SMO-Objekt) für die angegebene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz anzugeben und den Enumerationstyp auszuwählen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Aufzählen**  
  Erweitern des Servers und Auswählen eines SMO-Objekts.  
   
@@ -577,7 +578,7 @@ Verwenden Sie das Dialogfeld **SMO-Enumeration auswählen** , um das aufzuzähle
   
  Das Paket sollte so konfiguriert sein, dass jeweils nur eine ausführbare Datei ausgeführt wird, um in der Schleife negative Auswirkungen einer unbestimmten Zeitvorgabe der parallelen Taskausführung zu vermeiden. Wenn beispielsweise ein Paket mehrere Tasks gleichzeitig ausführen kann, können bei einem Foreach-Schleifencontainer, der im Ordner vorhandene Dateien aufzählt, die Dateinamen abruft und dann mithilfe eines Tasks "SQL ausführen" die Dateinamen in eine Tabelle einfügt, Schreibkonflikte auftreten, falls zwei Instanzen des Tasks "SQL ausführen" versuchen, zur selben Zeit zu schreiben. Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../../integration-services/expressions/use-property-expressions-in-packages.md).  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ablaufsteuerung](../../integration-services/control-flow/control-flow.md)   
  [SQL Server Integration Services-Container](../../integration-services/control-flow/integration-services-containers.md)  
   

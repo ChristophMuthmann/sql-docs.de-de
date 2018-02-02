@@ -8,7 +8,8 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ f1_keywords:
 - sql13.ssis.ssms.isenvprop.variables.f1
 - sql13.ssis.migrationwizard.f1
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 21e9f7359e19df03dc544211ba3a39041efa0637
-ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
+ms.openlocfilehash: e69567c814248b48a7be9ce72c1e13b28a56f6c0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Bereitstellen von SQL Server Integration Services-Projekten und Paketen (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt zwei Bereitstellungsmodelle: das Projektbereitstellungsmodell und das Legacy-Paketbereitstellungsmodell. Mithilfe des Projektbereitstellungsmodells können Sie Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen.  
