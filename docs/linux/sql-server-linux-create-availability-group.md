@@ -3,7 +3,7 @@ title: "Erstellen und konfigurieren eine verfügbarkeitsgruppe für SQL Server o
 description: "Dieses Lernprogramm zeigt, wie zum Erstellen und Konfigurieren von Verfügbarkeitsgruppen für SQL Server on Linux."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 53256f0cf5e18d8fb250cb5c67ae092771585de1
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8c055558b2a1e8287272835a0a1c0d2e2dc94f02
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Erstellen und Konfigurieren einer verfügbarkeitsgruppe für SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In diesem Lernprogramm wird beschrieben, wie zum Erstellen und Konfigurieren einer verfügbarkeitsgruppe (AG) für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] unter Linux. Im Gegensatz zu [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] und zuvor auf Windows, Sie können Testreihen mit oder ohne den zugrunde liegenden Schrittmacher Cluster zuerst erstellen. Integration mit dem Cluster bei Bedarf bis zu einem späteren Zeitpunkt erfolgt nicht.
 

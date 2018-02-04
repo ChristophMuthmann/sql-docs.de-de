@@ -16,19 +16,21 @@ f1_keywords:
 - sys.dm_external_script_execution_stats_TSQL
 - dm_external_script_execution_stats
 - dm_external_script_execution_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_external_script_execution_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_external_script_execution_stats dynamic management view
 ms.assetid: 2e99f026-ceb2-42a2-a549-c71d31ed0cf4
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a80c26130d5671dd387122930e599a2c33a5db60
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8306c682ddf8e376e13629cc6fe13472e08f59b0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

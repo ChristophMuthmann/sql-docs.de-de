@@ -1,5 +1,5 @@
 ---
-title: dm_db_mirroring_connections (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_mirroring_connections (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,23 @@ f1_keywords:
 - dm_db_mirroring_connections
 - sys.dm_db_mirroring_connections_TSQL
 - dm_db_mirroring_connections_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_mirroring_connections dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_mirroring_connections dynamic management view
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
-caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a41dda4348e565a62b18349f301dd29102ff7a5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 11d696315b97009d86ff19f850064cd8ce71ebb1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="database-mirroring---sysdmdbmirroringconnections"></a>Datenbankspiegelung - dm_db_mirroring_connections
+# <a name="database-mirroring---sysdmdbmirroringconnections"></a>Database Mirroring - sys.dm_db_mirroring_connections
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt für jede für die Datenbankspiegelung hergestellte Verbindung eine Zeile zurück.  
@@ -39,13 +42,13 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|Bezeichner der Verbindung.|  
 |**transport_stream_id**|**uniqueidentifier**|Der Bezeichner der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Netzwerkschnittstelle (SNI)-Verbindung, die von dieser Verbindung für die TCP/IP-Kommunikation verwendet.|  
-|**Status**|**smallint**|Aktueller Verbindungsstatus. Mögliche Werte:<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = GESCHLOSSEN|  
+|**state**|**smallint**|Aktueller Verbindungsstatus. Mögliche Werte:<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = GESCHLOSSEN|  
 |**state_desc**|**nvarchar(60)**|Aktueller Verbindungsstatus. Mögliche Werte:<br /><br /> NEW<br /><br /> CONNECTING<br /><br /> CONNECTED<br /><br /> LOGGED_IN<br /><br /> CLOSED|  
 |**connect_time**|**datetime**|Datum und Uhrzeit der Verbindungseröffnung.|  
 |**login_time**|**datetime**|Datum und Uhrzeit der erfolgreichen Verbindungsanmeldung.|  
-|**authentication_method**|**vom Datentyp nvarchar(128)**|Name der Windows-Authentifizierungsmethode, z. B. NTLM oder KERBEROS. Dieser Wert stammt von Windows.|  
-|**principal_name**|**vom Datentyp nvarchar(128)**|Anmeldename, der auf Verbindungsberechtigungen überprüft wurde. Bei der Windows-Authentifizierung handelt es sich bei diesem Wert um den Remotebenutzernamen. Bei der Zertifikatsauthentifizierung handelt es sich bei diesem Wert um den Besitzer des Zertifikats.|  
-|**remote_user_name**|**vom Datentyp nvarchar(128)**|Name des Peer-Benutzers aus der anderen Datenbank, die von der Windows-Authentifizierung verwendet wird.|  
+|**authentication_method**|**nvarchar(128)**|Name der Windows-Authentifizierungsmethode, z. B. NTLM oder KERBEROS. Dieser Wert stammt von Windows.|  
+|**principal_name**|**nvarchar(128)**|Anmeldename, der auf Verbindungsberechtigungen überprüft wurde. Bei der Windows-Authentifizierung handelt es sich bei diesem Wert um den Remotebenutzernamen. Bei der Zertifikatsauthentifizierung handelt es sich bei diesem Wert um den Besitzer des Zertifikats.|  
+|**remote_user_name**|**nvarchar(128)**|Name des Peer-Benutzers aus der anderen Datenbank, die von der Windows-Authentifizierung verwendet wird.|  
 |**last_activity_time**|**datetime**|Datum und Uhrzeit für die letzte Verwendung der Verbindung zum Senden oder Empfangen von Informationen.|  
 |**is_accept**|**bit**|Gibt an, ob die Verbindung ursprünglich von der Remoteseite stammt.<br /><br /> 1 = Die Verbindung ist eine Anforderung, die von der Remoteinstanz angenommen wurde.<br /><br /> 0 = Die Verbindung wurde von der lokalen Instanz gestartet.|  
 |**login_state**|**smallint**|Status des Anmeldeprozesses für diese Verbindung. Mögliche Werte:<br /><br /> 0 = INITIAL<br /><br /> 1 = WAIT LOGIN NEGOTIATE<br /><br /> 2 = ONE ISC<br /><br /> 3 = ONE ASC<br /><br /> 4 = TWO ISC<br /><br /> 5 = TWO ASC<br /><br /> 6 = WAIT ISC Confirm<br /><br /> 7 = WAIT ASC Confirm<br /><br /> 8 = WAIT REJECT<br /><br /> 9 = WAIT PRE-MASTER SECRET<br /><br /> 10 = WAIT VALIDATION<br /><br /> 11 = WAIT ARBITRATION<br /><br /> 12 = ONLINE<br /><br /> 13 = ERROR|  

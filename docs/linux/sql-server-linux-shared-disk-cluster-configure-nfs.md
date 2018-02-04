@@ -3,7 +3,7 @@ title: Konfigurieren von Failover Instanz Clusterspeicher NFS - SQL Server on Li
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 1b944d36e968234d5ea77a861c595e440cbbb15b
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 25bcc2fb0ddb60198208d88ce9c19be139d6ec2f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Konfigurieren Sie Failoverclusterinstanz – NFS - SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Dieser Artikel beschreibt, wie Sie NFS-Speicher für eine Failoverclusterinstanz (FCI) unter Linux konfigurieren. 
 
@@ -40,7 +40,7 @@ Wenn Sie die Dateien auf dem NFS-Server freigegeben werden zu konfigurieren, ste
 
 Stellen Sie sicher, dass für den Zugriff auf Ihre Sicherheitsstandards erzwungen werden. Wenn Sie den Ordner konfigurieren, stellen Sie sicher, dass nur die Server, die in der FCI Einbeziehung den NFS-Ordner einsehen. Ein Beispiel für eine geänderte/etc/Exports auf einer Linux-basierten NFS-Lösung ist unten, in dem der Ordner auf FCIN1 und FCIN2 beschränkt ist.
 
-![05 nfsacl][1]
+![05-nfsacl][1]
 
 ## <a name="instructions"></a>Instructions
 
@@ -160,7 +160,7 @@ Stellen Sie sicher, dass für den Zugriff auf Ihre Sicherheitsstandards erzwunge
     
    * Geben Sie beenden, um den Stamm nicht sein.
 
-   * Starten Sie SqlServer. Wenn alles ordnungsgemäß kopiert wurde und angewendeten Sicherheitsfunktionen ordnungsgemäß, SQL Server sollte als gestartet.
+   * Start SQL Server. Wenn alles ordnungsgemäß kopiert wurde und angewendeten Sicherheitsfunktionen ordnungsgemäß, SQL Server sollte als gestartet.
 
     ```bash
     sudo systemctl start mssql-server
@@ -232,7 +232,7 @@ Stellen Sie sicher, dass für den Zugriff auf Ihre Sicherheitsstandards erzwunge
 
    * Um zu testen, erstellen Sie eine Datenbank in diesem Ordner. Im Beispiel unten verwendet Sqlcmd, erstellen Sie eine Datenbank, den Kontext zu wechseln, vergewissern Sie sich die Dateien vorhanden sind, auf der Betriebssystemebene und löscht dann das temporäre Verzeichnis. Sie können SSMS verwenden.
 
-    ![15 createtestdatabase][4]
+    ![15-createtestdatabase][4]
  
    * Heben Sie die Bereitstellung der Freigabe 
 

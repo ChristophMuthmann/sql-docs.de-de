@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_io_virtual_file_stats_TSQL
 - sys.dm_io_virtual_file_stats
 - dm_io_virtual_file_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_io_virtual_file_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_io_virtual_file_stats dynamic management function
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6890eda5969d783a6d40b27493b07e8831146aa8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2ab0b534ceea8712c9c197ea52f2da66065d3167
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +61,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 ## <a name="arguments"></a>Argumente  
 
 
- *Database_id* | NULL
+ *database_id* | NULL
 
  **GILT für:** SQL Server (ab 2008), Azure SQL-Datenbank
 
@@ -66,7 +69,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
  Die integrierte Funktion [DB_ID](../../t-sql/functions/db-id-transact-sql.md) kann angegeben werden.  
   
-*FILE_ID* | NULL
+*file_id* | NULL
 
 **GILT für:** SQL Server (ab 2008), Azure SQL-Datenbank
  
@@ -80,8 +83,8 @@ Die ID der Datei. *FILE_ID* ist "Int", hat keinen Standardwert. Eine gültige Ei
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Datenbankname.</br></br>Für SQL Data Warehouse ist dies der Name der Datenbank gespeichert, auf dem Knoten, der durch Pdw_node_id identifiziert wird. Jeder Knoten besitzt einen Tempdb-Datenbank, die über 13 Dateien verfügt. Jeder Knoten verfügt auch über eine Datenbank pro Verteilung, und jede Verteilungsdatenbank hat 5 Dateien. Jeder Knoten 4 Verteilungen enthält, zeigen die Ergebnisse z. B. 20 Dateien der Verteilungsdatenbank pro Pdw_node_id. 
 |**database_id**|**smallint**|ID der Datenbank.|  
-|**FILE_ID**|**smallint**|ID der Datei.|  
-|**sample_ms**|**bigint**|Anzahl der Millisekunden seit dem Starten des Computers. Mit dieser Spalte können verschiedene Ausgaben dieser Funktion verglichen werden.</br></br>Der Datentyp ist **Int** für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**file_id**|**smallint**|ID der Datei.|  
+|**sample_ms**|**bigint**|Anzahl der Millisekunden seit dem Starten des Computers. Mit dieser Spalte können verschiedene Ausgaben dieser Funktion verglichen werden.</br></br>Der Datentyp ist **Int** für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|Die Anzahl der Lesevorgänge, die für die Datei ausgegeben wurden.|  
 |**num_of_bytes_read**|**bigint**|Gesamtanzahl von Bytes, die aus dieser Datei gelesen wurden.|  
 |**io_stall_read_ms**|**bigint**|Gesamtzeit in Millisekunden, die die Benutzer auf Lesevorgänge gewartet haben, die für die Datei ausgegeben wurden.|  
@@ -93,7 +96,7 @@ Die ID der Datei. *FILE_ID* ist "Int", hat keinen Standardwert. Eine gültige Ei
 |**file_handle**|**varbinary**|Windows-Dateihandle für diese Datei.|  
 |**io_stall_queued_read_ms**|**bigint**|**Gilt nicht für:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Die E/A-Gesamtlatenz, die durch die Ressourcenkontrolle für E/A-Lesevorgänge eingeführt wird. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [dm_resource_governor_resource_pools &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
 |**io_stall_queued_write_ms**|**bigint**|**Gilt nicht für:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Die E/A-Gesamtlatenz, die durch die Ressourcenkontrolle für E/A-Schreibvorgänge eingeführt wird. Lässt keine NULL-Werte zu.|
-|**pdw_node_id**|**int**|**Gilt für:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Der Bezeichner des Knotens für die Verteilung.
+|**pdw_node_id**|**int**|**Gilt für:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Der Bezeichner des Knotens für die Verteilung.
  
   
 ## <a name="permissions"></a>Berechtigungen  

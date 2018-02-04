@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_index_usage_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_index_usage_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_index_usage_stats
 - sys.dm_db_index_usage_stats_TSQL
 - dm_db_index_usage_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_index_usage_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_index_usage_stats dynamic management view
 ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
-caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1bd4812468ea0c17458f2b32b653ebcbf161c1ab
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9652e093a6b358a209bb7b84f1c4aa4c6854c328
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbindexusagestats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]können dynamische Verwaltungssichten keine Informationen verfügbar machen, die sich auf die Datenbankkapselung auswirken würden oder die sich auf andere Datenbanken beziehen, auf die der Benutzer Zugriff hat. Um zu vermeiden, dass diese Informationen verfügbar gemacht werden, wird jede Zeile mit Daten, die zum verbundenen Mandanten gehören, herausgefiltert.  
   
 > [!NOTE]  
->  **Sys. dm_db_index_usage_stats** gibt keine Informationen zu speicheroptimierten Indizes zurück. Informationen zur Verwendung von speicheroptimierten Indizes finden Sie unter [dm_db_xtp_index_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
+>  **sys.dm_db_index_usage_stats** does not return information about memory-optimized indexes. Informationen zur Verwendung von speicheroptimierten Indizes finden Sie unter [dm_db_xtp_index_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
 > [!NOTE]  
 >  Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_db_index_usage_stats**.  
@@ -64,7 +67,7 @@ ms.lasthandoff: 11/17/2017
 |**last_system_scan**|**datetime**|Zeitpunkt des letzten Systemscanvorgangs.|  
 |**last_system_lookup**|**datetime**|Zeitpunkt des letzten Systemnachschlagevorgangs.|  
 |**last_system_update**|**datetime**|Zeitpunkt des letzten Systemupdates.|  
-|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
 ## <a name="remarks"></a>Hinweise  
  Jeder einzelne Such-, Scan-, Nachschlage- oder Updatevorgang für den angegebenen Index durch eine Abfrageausführung zählt als Verwendung dieses Indexes, und der entsprechende Zähler in dieser Sicht wird inkrementiert. Informationen werden für Vorgänge angezeigt, die durch Benutzerabfragen verursacht werden, und für Vorgänge, die durch intern generierte Abfragen verursacht werden, wie z. B. Scans zum Sammeln von Statistikdaten.  
@@ -83,11 +86,11 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] benötigen Premium-Ebenen d
   
 ## <a name="see-also"></a>Siehe auch  
 
- [Index-verbundene dynamische Verwaltungssichten und-Funktionen &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Index Related Dynamic Management Views and Functions (Transact-SQL) (Indexbezogene dynamische Verwaltungssichten und -funktionen (Transact-SQL))](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
- [Sys. dm_db_index_operational_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
+ [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [Sys.Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
   
   

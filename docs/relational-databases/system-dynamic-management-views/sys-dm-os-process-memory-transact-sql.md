@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_process_memory_TSQL
 - dm_os_process_memory
 - sys.dm_os_process_memory
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_process_memory dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_process_memory dynamic management view
 ms.assetid: e838130c-95d4-4605-9e3b-eb0ab71cd250
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2941cc2e290d08f8c634dc38634544f036aea79c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3031089c848bf8afeac9eeb464dee551aecd771e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosprocessmemory-transact-sql"></a>sys.dm_os_process_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 |**available_commit_limit_kb**|**bigint**|Gibt den Arbeitsspeicher an, der für den Commit durch den Prozess verfügbar ist. Lässt keine NULL-Werte zu.|  
 |**process_physical_memory_low**|**bit**|Gibt an, dass der Prozess auf Benachrichtigung zu nicht genügend physischem Arbeitsspeicher reagiert. Lässt keine NULL-Werte zu.|  
 |**process_virtual_memory_low**|**bit**|Gibt an, dass eine Bedingung nicht genügenden virtuellen Arbeitsspeichers erkannt wurde. Lässt keine NULL-Werte zu.|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  

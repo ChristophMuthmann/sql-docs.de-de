@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - resource_usage
 - sys.resource_usage
 - resource_usage_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - resource_usage
 - sys.resource_usage
 ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48a5b1046abf347c5a1239bbcd07c96da4476d98
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5af941ccad6f0736ba069c50dbff83e513f8e72a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

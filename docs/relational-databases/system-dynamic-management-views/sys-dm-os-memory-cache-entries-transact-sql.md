@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_os_memory_cache_entries (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_memory_cache_entries (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/18/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_memory_cache_entries
 - dm_os_memory_cache_entries_TSQL
 - sys.dm_os_memory_cache_entries_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_memory_cache_entries dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_memory_cache_entries dynamic management view
 ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
-caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ef1e748dd656ec9ae128a6fc26df898cf7d8171
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 81ef9160b643942fc8ce254c172077aea516fcb5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosmemorycacheentries-transact-sql"></a>sys.dm_os_memory_cache_entries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|Adresse des Caches. Lässt keine NULL-Werte zu.|  
 |**name**|**nvarchar(256)**|Name des Caches. Lässt keine NULL-Werte zu.|  
-|**Typ**|**varchar(60)**|Typ des Caches. Lässt keine NULL-Werte zu.|  
+|**type**|**varchar(60)**|Typ des Caches. Lässt keine NULL-Werte zu.|  
 |**entry_address**|**varbinary(8)**|Adresse des Deskriptors des Cacheeintrags. Lässt keine NULL-Werte zu.|  
 |**entry_data_address**|**varbinary(8)**|Adresse der Benutzerdaten im Cacheeintrag.<br /><br /> 0x00000000 = Eintragsdatenadresse ist nicht verfügbar.<br /><br /> Lässt keine NULL-Werte zu.|  
 |**in_use_count**|**int**|Anzahl gleichzeitiger Benutzer dieses Cacheeintrags. Lässt keine NULL-Werte zu.|  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 |**pages_kb**|**bigint**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Der Arbeitsspeicher, der von diesem Cacheeintrag verwendet wird, in Kilobyte (KB).  Lässt keine NULL-Werte zu.|  
 |**entry_data**|**nvarchar(2048)**|Serialisierte Darstellung des zwischengespeicherten Eintrags. Diese Informationen sind vom Cachespeicher abhängig. Lässt NULL-Werte zu.|  
 |**pool_id**|**int**|**Gilt für**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die ID des Ressourcen-Pools, der diesem Eintrag zugeordnet ist. Lässt NULL-Werte zu.<br /><br /> nicht Katmai|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   

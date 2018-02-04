@@ -8,22 +8,25 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: Policy-Based Management, system views
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Policy-Based Management, system views
 ms.assetid: e1f6123c-669e-469b-ac9a-a464d78ad60c
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bbdb7dff92ad9e31dac828d88f67ca6605aa9e51
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11b27bbfdd5c2941b61da4824b0e98c21d46177a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="policy-based-management-views-transact-sql"></a>Sichten der richtlinienbasierten Verwaltung (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

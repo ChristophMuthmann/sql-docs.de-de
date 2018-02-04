@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_xml_handles_TSQL
 - sys.dm_exec_xml_handles_TSQL
 - sys.dm_exec_xml_handles
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_xml_handles dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_xml_handles dynamic management function
 ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 739e9b9fb8f95f4e2be0331d8efa01917ac05320
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a8d9b94690a487911414fdceeb9cd173116ea9c0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecxmlhandles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]

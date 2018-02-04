@@ -2,9 +2,9 @@
 title: "Verschlüsseln von Verbindungen zu SQLServer on Linux | Microsoft Docs"
 description: "Dieses Thema beschreibt Verschlüsseln von Verbindungen zu SQL Server unter Linux."
 author: tmullaney
-ms.date: 10/02/2017
-ms.author: meetb;rickbyh
-manager: jhubbard
+ms.date: 01/30/2018
+ms.author: meetb
+manager: craigg
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -14,33 +14,34 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
-helpviewer_keywords: Linux, encrypted connections
+helpviewer_keywords:
+- Linux, encrypted connections
 ms.workload: Inactive
-ms.openlocfilehash: 57fe1aac60bdb888ccbc47ebee33687dd309c8b7
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c8d57e65d060ff6958f07fbb57ab97806d99402c
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Verschlüsseln von Verbindungen zu SQLServer on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]unter Linux können Transport Layer Security (TLS) zum Verschlüsseln von Daten, die in einem Netzwerk zwischen einer Clientanwendung und einer Instanz von übertragenen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]unterstützt die gleichen TLS-Protokolle unter Windows und Linux: TLS 1.2, 1.1 und 1.0. Die Schritte zum Konfigurieren von TLS sind jedoch speziell für das Betriebssystem auf dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unter Linux können Transport Layer Security (TLS) zum Verschlüsseln von Daten, die in einem Netzwerk zwischen einer Clientanwendung und einer Instanz von übertragenen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]unterstützt die gleichen TLS-Protokolle unter Windows und Linux: TLS 1.2, 1.1 und 1.0. Die Schritte zum Konfigurieren von TLS sind jedoch speziell für das Betriebssystem auf dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird.  
 
 ## <a name="requirements-for-certificates"></a>Anforderungen für Zertifikate 
-Bevor wir beginnen, müssen Sie sicherstellen, dass Ihre Zertifikate die folgenden Voraussetzungen erfüllen:
+Bevor Sie beginnen, müssen Sie sicherstellen, dass Ihre Zertifikate die folgenden Voraussetzungen erfüllen:
 - Die aktuelle Systemzeit muss hinter der gültig von-Eigenschaft des Zertifikats und vor gültig bis-Eigenschaft des Zertifikats sein.
 - Das Zertifikat muss für die Serverauthentifizierung vorgesehen sein. Dies erfordert die Enhanced Key Usage-Eigenschaft des Zertifikats Serverauthentifizierung (1.3.6.1.5.5.7.3.1) angeben.
-- Das Zertifikat muss mit der Option KeySpec AT_KEYEXCHANGE erstellt werden. Das Zertifikat schlüsselverwendungseigenschaft (KEY_USAGE) gehören in der Regel auch Schlüsselverschlüsselung (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
+- Das Zertifikat muss mit der Option KeySpec AT_KEYEXCHANGE erstellt werden. In der Regel enthält das Zertifikat schlüsselverwendungseigenschaft (KEY_USAGE) auch Schlüsselverschlüsselung (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
 - Der Subject-Eigenschaft des Zertifikats muss angeben, dass der allgemeine Name (CN) als den Hostnamen oder den vollqualifizierten Domänennamen (FQDN) des Servercomputers übereinstimmt. Hinweis: Zertifikate mit Platzhalter werden unterstützt. 
 
 ## <a name="overview"></a>Übersicht
-TLS ist zum Verschlüsseln von Verbindungen von einer Clientanwendung zum [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Bei ordnungsgemäßer Konfiguration bietet TLS Vertraulichkeit und Integrität der Daten für die Kommunikation zwischen dem Client und dem Server.  TLS-Verbindungen können entweder Client Intiated oder Server Initited sein. 
+TLS ist zum Verschlüsseln von Verbindungen von einer Clientanwendung zum [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Bei ordnungsgemäßer Konfiguration bietet TLS Vertraulichkeit und Integrität der Daten für die Kommunikation zwischen dem Client und dem Server.  TLS-Verbindungen können entweder vom Client initiiert oder Server initiiert werden. 
 
 
 ## <a name="client-initiated-encryption"></a>Vom Client initiierte Verschlüsselung 
-- **Generieren Sie ein Zertifikat** (CN übereinstimmen, vollqualifizierten Domänennamen der SQL Server-Hostname)
+- **Generieren Sie ein Zertifikat** (CN übereinstimmen, den vollqualifizierten Domänennamen der SQL Server-Hostname)
 
 > [!NOTE]
 > Für dieses Beispiel, dass wir ein selbstsigniertes Zertifikat verwenden sollte dies nicht für Produktionsszenarien verwendet werden. Sie sollten ZS-Zertifikate verwenden. 
@@ -63,12 +64,12 @@ TLS ist zum Verschlüsseln von Verbindungen von einer Clientanwendung zum [!INCL
 - **Registrieren des Zertifikats auf dem Clientcomputer (Windows, Linux oder MacOS)**
 
     -   Bei Verwendung von Zertifizierungsstelle signiertes Zertifikat müssen Sie das Zertifikat (Certificate Authority, CA), anstatt das Zertifikat auf den Clientcomputer kopiert. 
-    -   Wenn Sie das selbstsignierte Zertifikat nur verwenden, kopieren Sie die PEM-Datei in die folgenden Ordner je nach Verteilung, und führen Sie die Befehle aktivieren 
-        - **Ubuntu** : Copy-Zertifikat- ```/usr/share/ca-certificates/``` umbenennen Erweiterung .crt verwenden Dpkg Reconfigure Zertifizierungsstellenzertifikate, um ihn als System CA-Zertifikat zu aktivieren. 
-        - **RHEL** : Copy-Zertifikat- ```/etc/pki/ca-trust/source/anchors/``` verwenden ```update-ca-trust``` um ihn als System CA-Zertifikat zu aktivieren.
-        - **SUSE** : Copy-Zertifikat- ```/usr/share/pki/trust/anchors/``` verwenden ```update-ca-certificates``` ermöglichen dem System CA-Zertifikat.
+    -   Wenn Sie das selbstsignierte Zertifikat verwenden, kopieren Sie die PEM-Datei in die folgenden Ordner je nach Verteilung, und führen Sie die Befehle aktivieren 
+        - **Ubuntu**: Copy-Zertifikat- ```/usr/share/ca-certificates/``` umbenennen Erweiterung .crt verwenden Dpkg Reconfigure Zertifizierungsstellenzertifikate, um ihn als System CA-Zertifikat zu aktivieren. 
+        - **RHEL**: Copy-Zertifikat- ```/etc/pki/ca-trust/source/anchors/``` verwenden ```update-ca-trust``` um ihn als System CA-Zertifikat zu aktivieren.
+        - **SUSE**: Copy-Zertifikat- ```/usr/share/pki/trust/anchors/``` verwenden ```update-ca-certificates``` um ihn als System CA-Zertifikat zu aktivieren.
         - **Windows**: importieren, die die PEM-Datei als ein Zertifikat unter "aktuelle Benutzer" -> vertrauenswürdiger Stammzertifizierungsstellen-Zertifikate >
-        - **MacOS**: 
+        - **macOS**: 
            - Kopieren Sie das Zertifikat an```/usr/local/etc/openssl/certs```
            - Führen Sie den folgenden Befehl aus, um den Hashwert abzurufen:```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
            - Benennen Sie das Zertifikat in Wert. Beispiel: ```mv mssql.pem dc2dd900.0``` Stellen Sie sicher, dass dc2dd900.0 wird```/usr/local/etc/openssl/certs```

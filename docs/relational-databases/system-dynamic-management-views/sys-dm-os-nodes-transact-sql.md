@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_nodes_TSQL
 - dm_os_nodes
 - sys.dm_os_nodes_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_nodes dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_nodes dynamic management view
 ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cf36f7156f9297231fc232e8fecafee5e77427c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f2abdd42300c8264f87513f428c7c6f4aa22645d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosnodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 |online_scheduler_mask|**bigint**|Identifiziert die Prozessaffinitätsmaske für diesen Knoten.|  
 |processor_group|**smallint**|Identifiziert die Gruppe von Prozessoren für diesen Knoten.|  
 |cpu_count |**int** |Anzahl der CPUs, die für diesen Knoten verfügbar. |
-|pdw_node_id|**int**|Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.<br /><br /> **Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|pdw_node_id|**int**|Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.<br /><br /> **Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
 ## <a name="permissions"></a>Berechtigungen  
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   

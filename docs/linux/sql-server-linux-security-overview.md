@@ -4,7 +4,7 @@ description: "Dieses Thema beschreibt die SQL Server auf Linux-Einschränkungen.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
 ms.workload: Inactive
-ms.openlocfilehash: a120ed0cf8de077c3d1de6d695554b2585a7d9da
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: c197741feeec4e583272b9ef845ee4d337e742c2
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Sicherheitseinschränkungen für SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server on Linux ist zurzeit die folgenden Einschränkungen:
 
@@ -36,5 +36,4 @@ Weitere Informationen zu Sicherheitsfunktionen, die in SQL Server verfügbar sin
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Der allgemeinen Sicherheitsaufgaben finden Sie unter [erste Schritte mit Sicherheitsfeatures von SQL Server on Linux](sql-server-linux-security-get-started.md).   
-Für ein Skript so ändern Sie die TCP port-Nummer, die SQL Server-Verzeichnisse, und Konfigurieren von Traceflags oder Sortierung, finden Sie unter [konfigurieren Sie SQL Server unter Linux mit Mssql-Conf](sql-server-linux-configure-mssql-conf.md).
+Der allgemeinen Sicherheitsaufgaben finden Sie unter [erste Schritte mit Sicherheitsfeatures von SQL Server on Linux](sql-server-linux-security-get-started.md). Für ein Skript so ändern Sie die TCP port-Nummer, die SQL Server-Verzeichnisse, und Konfigurieren von Traceflags oder Sortierung, finden Sie unter [konfigurieren Sie SQL Server unter Linux mit Mssql-Conf](sql-server-linux-configure-mssql-conf.md).

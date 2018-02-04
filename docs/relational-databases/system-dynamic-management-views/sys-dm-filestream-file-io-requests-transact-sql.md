@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_filestream_file_io_requests
 - sys.dm_filestream_file_io_requests_TSQL
 - dm_filestream_file_io_requests_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_filestream_file_io_requests catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_filestream_file_io_requests catalog view
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
-caps.latest.revision: "11"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4ae89e50f6afaab2d84f8c7adb4cc0b0f3144df
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 35d32705c8bce23a9cd46c5844fdc1a20c0cf7c3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmfilestreamfileiorequests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

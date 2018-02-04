@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_clr_appdomains
 - dm_clr_appdomains_TSQL
 - sys.dm_clr_appdomains_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_clr_appdomains dynamic management dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_clr_appdomains dynamic management dynamic management view
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dfe70d96c7b85d596c3819273acf264ba59e34b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 16f729bc78a42984716d2f30fc2bf30badc1ade5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,12 +49,12 @@ ms.lasthandoff: 11/27/2017
 |**appdomain_name**|**varchar(386)**|Der Name der **AppDomain** , die von zugewiesen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**creation_time**|**datetime**|Uhrzeit der Erstellung der **AppDomain** erstellt wurde. Da **AppDomains** werden zwischengespeichert und wiederverwendet, die für eine bessere Leistung **Creation_time** ist nicht notwendigerweise dem Zeitpunkt, zu der Code ausgeführt wurde.|  
 |**db_id**|**int**|ID der Datenbank, in der diese **AppDomain** erstellt wurde. Code, die in zwei verschiedenen Datenbanken gespeichert, kann keine gemeinsame **AppDomain**.|  
-|**USER_ID**|**int**|ID des Benutzers, dessen Objekte können in diesem ausführen **AppDomain**.|  
-|**Status**|**vom Datentyp nvarchar(128)**|Ein Deskriptor für den aktuellen Status von der **AppDomain**. Eine AppDomain kann sich in verschiedenen Zuständen befinden, von Erstellung bis Löschung. Weitere Informationen finden Sie im Abschnitt "Hinweise" in diesem Thema.|  
+|**user_id**|**int**|ID des Benutzers, dessen Objekte können in diesem ausführen **AppDomain**.|  
+|**state**|**nvarchar(128)**|Ein Deskriptor für den aktuellen Status von der **AppDomain**. Eine AppDomain kann sich in verschiedenen Zuständen befinden, von Erstellung bis Löschung. Weitere Informationen finden Sie im Abschnitt "Hinweise" in diesem Thema.|  
 |**strong_refcount**|**int**|Anzahl der starken Verweise auf **AppDomain**. Dies gibt die Anzahl der derzeit ausgeführten Batches, die dieses wieder **AppDomain**. Beachten Sie, dass die Ausführung dieser Ansicht erstellen, wird eine **strong Refcount**; selbst wenn ist kein Code, der derzeit ausgeführten **Strong_refcount** wird der Wert 1 haben.|  
 |**weak_refcount**|**int**|Anzahl der schwachen Verweise auf **AppDomain**. Dies gibt an, wie viele Objekte die **AppDomain** zwischengespeichert werden. Wenn Sie ein verwaltetes Datenbankobjekt ausführen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zwischengespeichert innerhalb der **AppDomain** für die zukünftige Wiederverwendung. Dies verbessert die Leistung.|  
-|**Kosten**|**int**|Der Kosten der **AppDomain**. Je höher die Kosten, desto wahrscheinlicher dies **AppDomain** ist mit ungenügendem Arbeitsspeicher entladen wird. Kosten hängen normalerweise wie viel Arbeitsspeicher erforderlich ist, um das Neuerstellen **AppDomain**.|  
-|**Wert**|**int**|Der Wert der **AppDomain**. Je niedriger der Wert, desto wahrscheinlicher dies **AppDomain** ist mit ungenügendem Arbeitsspeicher entladen wird. Wert in der Regel wie viele Verbindungen oder Batches diese verwenden hängt **AppDomain**.|  
+|**cost**|**int**|Der Kosten der **AppDomain**. Je höher die Kosten, desto wahrscheinlicher dies **AppDomain** ist mit ungenügendem Arbeitsspeicher entladen wird. Kosten hängen normalerweise wie viel Arbeitsspeicher erforderlich ist, um das Neuerstellen **AppDomain**.|  
+|**value**|**int**|Der Wert der **AppDomain**. Je niedriger der Wert, desto wahrscheinlicher dies **AppDomain** ist mit ungenügendem Arbeitsspeicher entladen wird. Wert in der Regel wie viele Verbindungen oder Batches diese verwenden hängt **AppDomain**.|  
 |**total_processor_time_ms**|**bigint**|Gesamtprozessorzeit in Millisekunden, die von allen Threads beim Ausführen in der aktuellen Anwendungsdomäne ab dem Start des Prozesses verwendet wird. Dies entspricht dem **System.AppDomain.MonitoringTotalProcessorTime**.|  
 |**total_allocated_memory_kb**|**bigint**|Gesamtgröße, in Kilobyte, aller Speicherbelegungen durch die Anwendungsdomäne seit der Erstellung, ohne Abzug des bei Sammlungsvorgängen freigegebenen Speichers. Dies entspricht dem **System.AppDomain.MonitoringTotalAllocatedMemorySize**.|  
 |**survived_memory_kb**|**bigint**|Menge der Daten in KB, die die letzte vollständige Sammlung mit exklusivem Zugriff überdauert haben, und von denen bekannt ist, dass sie von der aktuellen Anwendungsdomäne referenziert werden. Dies entspricht dem **System.AppDomain.MonitoringSurvivedMemorySize**.|  
@@ -79,7 +82,7 @@ ms.lasthandoff: 11/27/2017
   
 |Status|Description|  
 |-----------|-----------------|  
-|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hat angefordert, dass die Common Language Runtime Entladen der **AppDomain**, in der Regel, da die Assembly, die verwalteten Datenbankobjekte enthält, geändert oder gelöscht wurde.|  
+|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat angefordert, dass die Common Language Runtime Entladen der **AppDomain**, in der Regel, da die Assembly, die verwalteten Datenbankobjekte enthält, geändert oder gelöscht wurde.|  
 |E_APPDOMAIN_UNLOADED|Die CLR entladen hat die **AppDomain**. Dies ist normalerweise das Ergebnis einer ausweitungsprozedur aufgrund **ThreadAbort**, **OutOfMemory**, oder eine nicht behandelte Ausnahme im Benutzercode.|  
 |E_APPDOMAIN_ENQUEUE_DESTROY|Die **AppDomain** wurde in CLR entladen, und Festlegen von zerstört werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |E_APPDOMAIN_DESTROY|Die **AppDomain** gerade zerstört wird durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -114,7 +117,7 @@ where appdomain_id = 15);
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [dm_clr_loaded_assemblies &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
+ [sys.dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
  [Common Language Runtime in Verbindung mit dynamischen Verwaltungssichten &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

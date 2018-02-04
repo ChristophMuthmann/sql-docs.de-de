@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_continuous_copy_status_TSQL
 - dm_continuous_copy_status
 - sys.dm_continuous_copy_status
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dm_continuous_copy_status
 - sys.dm_continuous_copy_status
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4556ca83115890372c53c28c1ee15adfb0d5d835
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 34d840580edb8bb15f4af379575bc0f24b44edcc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>Sys. dm_continuous_copy_status (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -61,7 +63,7 @@ Bei Verwendung von SQL-Datenbank V12 sollten Sie verwenden [sys.dm_geo_replicati
   
  Wenn die fortlaufende kopierbeziehung, in einer Datenbank, die Zeile für diese Datenbank in beendet wird der **Sys. dm_continuous_copy_status** -Sicht nicht mehr angezeigt.  
   
- Wie die **dm_database_copies** Ansicht **Sys. dm_continuous_copy_status** zeigt den Status der fortlaufenden kopierbeziehung in dem die Datenbank entweder eine primäre oder aktive sekundäre Datenbank ist . Im Gegensatz zu **dm_database_copies**, **Sys. dm_continuous_copy_status** enthält mehrere Spalten, die Details zu Vorgängen und Leistung bereitstellen. Diese Spalten enthalten **Last_replication**, und **Replication_lag_sec**...  
+ Wie die **dm_database_copies** Ansicht **Sys. dm_continuous_copy_status** zeigt den Status der fortlaufenden kopierbeziehung in dem die Datenbank entweder eine primäre oder aktive sekundäre Datenbank ist . Unlike **sys.dm_database_copies**, **sys.dm_continuous_copy_status** contains several columns that provide details about operations and performance. Diese Spalten enthalten **Last_replication**, und **Replication_lag_sec**...  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sys. dm_database_copies &#40; Azure SQL-Datenbank &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   

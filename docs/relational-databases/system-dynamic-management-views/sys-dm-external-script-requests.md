@@ -16,19 +16,21 @@ f1_keywords:
 - sys.dm_external_script_requests_TSQL
 - dm_external_script_requests
 - dm_external_script_requests_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_external_script_requests dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_external_script_requests dynamic management view
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
-caps.latest.revision: "4"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cde483c6fab14391f74a52bb9ad5fbcf9fee8d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 55ac900238a49bcad4c0af31b7482b7381b1aadc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +44,7 @@ Gibt eine Zeile für jedes aktive Workerkonto zurück, das ein externes Skript a
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**Eindeutiger Bezeichner**|Die ID des Prozesses, der die externe Skriptanforderung gesendet hat. Dies entspricht dem Prozess-ID beim Empfangen von[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**unique identifier**|Die ID des Prozesses, der die externe Skriptanforderung gesendet hat. Diese ID entspricht der Prozess-ID, wie sie empfangen wurde von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |Sprache|**nvarchar**|Schlüsselwort, das einer unterstützten Skriptsprache entspricht. Derzeit wird nur `R` unterstützt.|  
 |degree_of_parallelism|**int**|Zahl, die die Anzahl von parallelen Prozessen angibt, die erstellt wurden. Dieser Wert kann sich von der Anzahl von parallelen Prozessen unterscheiden, die angefordert wurden.|  
 |external_user_name|**nvarchar**|Das Windows-Workerkonto, unter dem das Skript ausgeführt wurde.|  
@@ -54,7 +56,7 @@ Gibt eine Zeile für jedes aktive Workerkonto zurück, das ein externes Skript a
 >   
 >  Benutzer, die externe Skripts ausführen, müssen die zusätzliche Berechtigung EXECUTE ANY EXTERNAL SCRIPT haben, aber diese dynamische Verwaltungssicht kann von Administratoren ohne diese Berechtigung verwendet werden. 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
 
 Diese Sicht kann über die Skriptsprachen-ID gefiltert werden.
 
@@ -87,7 +89,7 @@ external_script_request_id  |Sprache  |degree_of_parallelism  |external_user_nam
 
 
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Ausführung bezogene dynamische Verwaltungssichten und-Funktionen &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)

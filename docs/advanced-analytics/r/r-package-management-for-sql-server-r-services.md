@@ -10,24 +10,25 @@ ms.component: r
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 98c14b05-750e-44f9-8531-1298bf51e8d2
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 576178e53a28f877ac91d99f14ce9ba6a44e506d
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: cebafeabd73260f166244e963754a2bd740bfe0f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="r-package-management-for-sql-server"></a>R-paketverwaltung für SQL Server
 
 Dieser Artikel beschreibt die Funktionen für die Verwaltung von R-Paketen in SQL Server-2017 und SQL Server 2016.
 
-+ Empfohlene Methoden zum Verwalten von R-Paketen (und Python-Pakete)
++ Empfohlene Methoden zum Verwalten von R-Pakete 
 + Änderungen bei der paketverwaltung zwischen SQL Server 2016 und 2017
 
 **Gilt für:** SQL Server 2016-R-Services, SqlServer 2017 Machine Learning-Dienste

@@ -1,5 +1,5 @@
 ---
-title: dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_query_memory_grants
 - sys.dm_exec_query_memory_grants_TSQL
 - dm_exec_query_memory_grants
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_memory_grants dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_memory_grants dynamic management view
 ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2e10e979e962c7f0e2f98a8fbabff47995dc7e86
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 92b11100a0a037374871dc38844fecc8b69b0c72
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 |**session_id**|**smallint**|ID (SPID) der Sitzung, in der die Abfrage ausgeführt wird.|  
 |**request_id**|**int**|ID der Anforderung. Ist im Kontext der Sitzung eindeutig.|  
 |**scheduler_id**|**int**|ID des Zeitplanungsmoduls, der diese Abfrage plant.|  
-|**DOP**|**smallint**|Grad an Parallelität für diese Abfrage.|  
+|**dop**|**smallint**|Grad an Parallelität für diese Abfrage.|  
 |**request_time**|**datetime**|Datum und Uhrzeit, zu der die Abfrage die Arbeitsspeicherzuweisung angefordert hat.|  
 |**grant_time**|**datetime**|Datum und Uhrzeit, zu der die Arbeitsspeicherzuweisung für die Abfrage erfolgt ist. NULL, wenn noch kein Arbeitsspeicher zugewiesen wurde.|  
 |**requested_memory_kb**|**bigint**|Insgesamt angeforderter Arbeitsspeicher in Kilobytes.|  
@@ -66,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 |**pool_id**|**int**|ID des Ressourcenpools, zu dem die Arbeitsauslastungsgruppe gehört.|  
 |**is_small**|**tinyint**|Der Wert 1 gibt an, dass diese Zuweisung das kleine Ressourcensemaphor verwendet. Der Wert 0 gibt an, dass ein normales Semaphor verwendet wird.|  
 |**ideal_memory_kb**|**bigint**|Größe der Arbeitsspeicherzuweisung in Kilobyte (KB), um alles in den physischen Speicher aufzunehmen. Dieser Wert basiert auf der Kardinalitätsschätzung.|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   

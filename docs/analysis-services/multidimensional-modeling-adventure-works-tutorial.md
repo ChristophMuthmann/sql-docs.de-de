@@ -1,7 +1,7 @@
 ---
 title: Mehrdimensionale Modellierung (Adventure Works-Lernprogramm) | Microsoft Docs
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 02/02/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,21 +11,22 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 helpviewer_keywords:
 - tutorials [Analysis Services]
 - Analysis Services, tutorials
 ms.assetid: db55e226-601a-4026-8651-573195555a59
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e5955c54a3b5e92632cd421294bb85b834374ead
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 1a6323632e17efab87ecf64358b5055288dfa5db
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>Mehrdimensionale Modellierung (Adventure Works-Lernprogramm)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +53,7 @@ Darüber hinaus müssen die folgenden Berechtigungen vorhanden sein, um das Lern
   
 -   Sie müssen ein Mitglied der lokalen Administratorgruppe auf dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Computer oder ein Mitglied der Serveradministratorrolle in der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Instanz sein.  
   
--   Sie benötigen Leseberechtigungen für die **AdventureWorksDW2012** -Beispieldatenbank. Diese Beispieldatenbank ist für die [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Version geeignet.  
+-   Sie benötigen Leseberechtigungen in der **AdventureWorksDW** -Beispieldatenbank. Diese Beispieldatenbank ist für die [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Version geeignet.  
   
 ## <a name="lessons"></a>Lektionen  
 Dieses Lernprogramm umfasst die folgenden Lektionen:  

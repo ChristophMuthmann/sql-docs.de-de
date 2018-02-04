@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_cryptographic_provider_algorithms
 - sys.dm_cryptographic_provider_algorithms_TSQL
 - dm_cryptographic_provider_algorithms
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_cryptographic_provider_algorithms dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_cryptographic_provider_algorithms dynamic management function
 ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 265fba19bee60b37f5c79b113d620c1df0031202
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6e728edc7b3e246917343bdcae834a104875ed00
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmcryptographicprovideralgorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +57,7 @@ sys.dm_cryptographic_provider_algorithms ( provider_id )
 |-----------------|---------------|-----------------|  
 |algorithm_id|**int**|Die ID des Algorithmus.|  
 |algorithm_tag|**nvarchar(60)**|Das ID-Tag des Algorithmus.|  
-|key_type|**vom Datentyp nvarchar(128)**|Zeigt den Schlüsseltyp an. Gibt entweder ASYMMETRIC KEY oder SYMMETRIC KEY zurück.|  
+|key_type|**nvarchar(128)**|Zeigt den Schlüsseltyp an. Gibt entweder ASYMMETRIC KEY oder SYMMETRIC KEY zurück.|  
 |key_length|**int**|Gibt die Länge des Schlüssels in Bit an.|  
   
 ## <a name="permissions"></a>Berechtigungen  

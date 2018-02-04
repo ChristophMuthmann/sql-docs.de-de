@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitordropalert_TSQL
 - sp_dbmmonitordropalert
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - sp_dbmmonitordropalert
 ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f45644eb7c55b42c8f71109a9547afa2ffb5d1fa
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f0d44857fac9113592a14dd3dd41f85abfe95fdf
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdbmmonitordropalert-transact-sql"></a>sp_dbmmonitordropalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

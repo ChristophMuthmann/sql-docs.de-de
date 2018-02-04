@@ -3,7 +3,7 @@ title: Erste Schritte mit SQL Server-2017 auf Docker | Microsoft Docs
 description: "Dieser Schnellstart veranschaulicht, wie Docker Container-Image von SQL Server-2017 ausgeführt. Anschließend erstellen und Abfragen einer Datenbank mit Sqlcmd."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/31/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 0cfea0b32221f6aa1ebb8cb947640de3b670c79c
-ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
+ms.openlocfilehash: ecb76bb243edae6423d3605ef83a17040ceba720
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Führen Sie die 2017 von SQL Server-Container-Image mit Docker
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In diesem Schnellstart mit der Docker pull, und führen das SQL Server-2017 Container-Bild [Mssql-Server – Linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). Verbinden Sie dann mit **Sqlcmd** Ihre erste Datenbank zu erstellen und Ausführen von Abfragen.
 

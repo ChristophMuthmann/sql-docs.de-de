@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_cached_plans
 - dm_exec_cached_plans_TSQL
 - sys.dm_exec_cached_plans_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_cached_plans dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_cached_plans dynamic management view
 ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
-caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 816fcb7a7fbf362f2f531b93629508ab3ab2b76f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9ef3927340e8fc87e8d25796ae331273556c43a6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_exec_cached_plans**.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |bucketid|**int**|ID des Hashbuckets, in dem der Eintrag gespeichert ist. Der Wert gibt einen Bereich von 0 bis zur Hashtabellengröße für den Typ des Caches an.<br /><br /> Für die SQL-Plan- und Objektplancaches kann die Hashtabellengröße in 32-Bit-Systemen bis zu 10007 und in 64-Bit-Systemen bis zu 40009 betragen. Für den Cache für gebundene Strukturen kann die Hashtabellengröße in 32-Bit-Systemen bis zu 1009 und in 64-Bit-Systemen bis zu 4001 betragen. Für den Cache für erweiterte gespeicherte Prozeduren kann die Hashtabellengröße in 32-Bit-Systemen und 64-Bit-Systemen bis zu 127 betragen.|  
 |refcounts|**int**|Anzahl der Cacheobjekte, die auf dieses Cacheobjekt verweisen. **RefCounts** muss mindestens 1 sein für einen Eintrag im Cache befinden.|  
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 |objtype|**nvarchar(16)**|Typ des Objekts. Im folgenden sind die möglichen Werte und deren entsprechenden Beschreibungen.<br /><br /> Prozedur: Gespeicherte<br />Vorbereitet wird: Vorbereitete Anweisung<br />Ad-hoc-: Ad-hoc-Abfrage. Bezieht sich auf [!INCLUDE[tsql](../../includes/tsql-md.md)] als Sprachereignisse mithilfe von übermittelt **Osql** oder **Sqlcmd** anstatt als Remoteprozeduraufrufe.<br />ReplProc:--Replikationsfilterprozedur<br />Trigger: Trigger<br />Ansicht: Ansicht<br />Standard: Standard<br />UsrTab: Benutzertabelle<br />SysTab:-Systemtabelle<br />Überprüfung: CHECK-Einschränkung<br />Regel: Regel|  
 |plan_handle|**varbinary(64)**|Bezeichner für den speicherinternen Plan. Dieser Bezeichner ist vorübergehend und bleibt nur für die Dauer der Speicherung des Plans im Cache konstant. Dieser Wert kann mit den folgenden dynamischen Verwaltungsfunktionen verwendet werden:<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|Die ID des Ressourcenpools, auf die sich diese Planspeicherauslastung bezieht.|  
-|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
  <sup>1</sup>  
   
@@ -117,11 +120,11 @@ GO
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Ausführung bezogene dynamische Verwaltungssichten und-Funktionen &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Sys. dm_exec_query_plan &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [dm_exec_plan_attributes &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   
- [Sys. dm_exec_sql_text &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [Sys. dm_os_memory_objects &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)   
- [Sys. dm_os_memory_cache_entries &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)   
+ [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
+ [sys.dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys.dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)   
+ [sys.dm_os_memory_cache_entries &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_memory_clerks
 - dm_os_memory_clerks_TSQL
 - sys.dm_os_memory_clerks_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_memory_clerks dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_memory_clerks dynamic management view
 ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
-caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d79b1fada58e02416afe4bbbebd56a7553ccc1ed
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 042afaa050206507b09508ce43900ec7c993d707
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosmemoryclerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**memory_clerk_address**|**varbinary(8)**|Gibt die eindeutige Speicheradresse des Arbeitsspeicherclerks an. Dies ist die Primärschlüsselspalte. Lässt keine NULL-Werte zu.|  
-|**Typ**|**nvarchar(60)**|Gibt den Typ des Arbeitsspeicherclerks an. Jeder Clerk entspricht einem bestimmten Typ, wie z. B. dem CLR-Clerk MEMORYCLERK_SQLCLR. Lässt keine NULL-Werte zu.|  
+|**type**|**nvarchar(60)**|Gibt den Typ des Arbeitsspeicherclerks an. Jeder Clerk entspricht einem bestimmten Typ, wie z. B. dem CLR-Clerk MEMORYCLERK_SQLCLR. Lässt keine NULL-Werte zu.|  
 |**name**|**nvarchar(256)**|Gibt den intern zugewiesenen Namen des Arbeitsspeicherclerks an. Eine Komponente kann über mehrere Arbeitsspeicherclerks eines bestimmten Typs verfügen. Eine Komponente hat die Möglichkeit, bestimmte Namen zum Identifizieren von Arbeitsspeicherclerks desselben Typs zu verwenden. Lässt keine NULL-Werte zu.|  
 |**memory_node_id**|**smallint**|Gibt die ID des Speicherknotens an. Lässt keine NULL-Werte zu.|  
 |**single_pages_kb**|**bigint**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].|  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |**page_size_in_bytes**|**bigint**|Gibt die Granularität der Seitenzuordnung für diesen Arbeitsspeicherclerk an. Lässt keine NULL-Werte zu.|  
 |**page_allocator_address**|**varbinary(8)**|Gibt die Adresse der Seitenzuordnung an. Diese Adresse ist für einen Arbeitsspeicherclerk eindeutig und kann verwendet werden, **dm_os_memory_objects** zu suchen, die an diesen Clerk gebunden sind. Lässt keine NULL-Werte zu.|  
 |**host_address**|**varbinary(8)**|Gibt die Arbeitsspeicheradresse des Hosts für diesen Arbeitsspeicherclerk an. Weitere Informationen finden Sie unter [dm_os_hosts &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). Komponenten, wie z. B. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Speicherressourcen über die Hostschnittstelle.<br /><br /> 0x00000000 = Arbeitsspeicherclerk gehört zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Lässt keine NULL-Werte zu.|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
@@ -71,10 +74,10 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] benötigen Premium-Ebenen d
 
  [SQL Server-Betriebssystem in Verbindung mit dynamischen Verwaltungssichten &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [dm_exec_query_memory_grants &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [Sys. dm_exec_requests &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [Sys. dm_exec_query_plan &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [Sys. dm_exec_sql_text &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+ [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
   
   
 

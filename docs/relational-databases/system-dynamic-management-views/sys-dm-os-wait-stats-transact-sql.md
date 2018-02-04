@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,24 +17,26 @@ f1_keywords:
 - dm_os_wait_stats
 - sys.dm_os_wait_stats
 - sys.dm_os_wait_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_wait_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_wait_stats dynamic management view
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
-caps.latest.revision: "111"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 355aefa1b0cb4d8acbc215a3afc72709d8b811e9
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
-ms.translationtype: MT
+ms.openlocfilehash: c7e4859e69328535a89d0c2abc3122340176eaec
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Gibt Informationen zu allen Wartevorgängen in den Threads zurück, die ausgeführt wurden. In dieser aggregierten Sicht können Sie Leistungsprobleme bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowie bei bestimmten Abfragen und Batches diagnostizieren. [Sys. dm_exec_session_wait_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) enthält ähnliche Informationen von der Sitzung.  
+Gibt Informationen zu allen Wartevorgängen in den Threads zurück, die ausgeführt wurden. In dieser aggregierten Sicht können Sie Leistungsprobleme bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowie bei bestimmten Abfragen und Batches diagnostizieren. [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) provides similar information by session.  
   
 > [!NOTE] 
 > Aufrufen von  **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** , verwenden Sie den Namen **sys.dm_pdw_nodes_os_wait_stats**.  
@@ -45,7 +48,7 @@ Gibt Informationen zu allen Wartevorgängen in den Threads zurück, die ausgefü
 |wait_time_ms|**bigint**|Gesamtwartezeit für diesen Wartetyp (in Millisekunden). Diese Zeit beinhaltet signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Maximale Wartezeit für diesen Wartetyp.|  
 |signal_wait_time_ms|**bigint**|Differenz zwischen dem Zeitpunkt der Signalisierung des wartenden Threads und dem Beginn der Ausführung.|  
-|pdw_node_id|**int**|Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet. <br/> **Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**int**|Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet. <br/> **Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>Berechtigungen  
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
@@ -127,7 +130,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |BROKER_FORWARDER |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |BROKER_INIT |Tritt auf, wenn Service Broker in jeder aktiven Datenbank zu initialisieren. Dieser Wartetyp sollte nicht häufig auftreten.| 
 |BROKER_MASTERSTART |Tritt auf, wenn ein Task der primäre Ereignishandler von Service Broker wartet zu starten. Dieser Wartetyp sollte nur sehr kurz auftreten.| 
-|BROKER_RECEIVE_WAITFOR |Tritt auf, wenn RECEIVE WAITFOR wartet. Dies ist ein Standardwartetyp, wenn keine Nachrichten empfangen werden können.| 
+|BROKER_RECEIVE_WAITFOR |Tritt auf, wenn RECEIVE WAITFOR wartet. Dies kann bedeuten, dass keine Nachrichten in der Warteschlange empfangen werden können, oder ein Konflikt bei Sperre verhindert, dass er Nachrichten aus der Warteschlange empfangen.| 
 |BROKER_REGISTERALLENDPOINTS |Tritt auf, während der Initialisierung des Service Broker-Endpunkt-Verbindung. Dieser Wartetyp sollte nur sehr kurz auftreten.| 
 |BROKER_SERVICE |Tritt auf, wenn die Liste der Service Broker-Ziel, die einen Zieldienst zugeordnet ist, aktualisiert oder erneut priorisiert wird.| 
 |BROKER_SHUTDOWN |Tritt bei ein geplantes Herunterfahren von Service Broker. Dieser Wartetyp sollte, wenn überhaupt, nur sehr kurz auftreten.| 
@@ -169,7 +172,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |COUNTRECOVERYMGR |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CREATE_DATINISERVICE |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|CXCONSUMER |Tritt bei parallelen Abfrageplänen, wenn ein Consumerthread wartet, einen Producerthread Zeilen zu senden. Dies ist ein normaler Bestandteil parallele abfrageausführung. <br /> **Gilt für**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 und[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXCONSUMER |Tritt bei parallelen Abfrageplänen, wenn ein Consumerthread wartet, einen Producerthread Zeilen zu senden. Dies ist ein normaler Bestandteil parallele abfrageausführung. <br /> **Gilt für**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 und [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
 |CXPACKET |Tritt bei parallelen Abfrageplänen auf, wenn es sich bei den austauschiterator des Abfrageprozessors zu synchronisieren, und erzeugen und Nutzen von Zeilen. Wenn die Wartezeit zu lang ist und durch eine Abfrageoptimierung (beispielsweise durch das Hinzufügen von Indizes) nicht verkürzt werden kann, sollten Sie erwägen, den Kostenschwellenwert für Parallelität anzupassen oder den Grad an Parallelität zu verringern.<br /> **Hinweis:** In [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 und [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET nur verweist, den austauschiterator des Abfrageprozessors zu synchronisieren, und Zeilen für Consumer Threads erzeugen. Consumer-Threads werden in der Wartetyp CXCONSUMER separat nachverfolgt.| 
 |CXROWSET_SYNC |Tritt während eines parallelen Bereichsscans auf.| 
 |DAC_INIT |Tritt während des Initialisierungsvorgangs der dedizierten Administratorverbindung auf.| 
@@ -1024,7 +1027,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 ## <a name="see-also"></a>Siehe auch  
     
  [SQL Server-Betriebssystem in Verbindung mit dynamischen Verwaltungssichten &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [Sys. dm_exec_session_wait_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
+ [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
  [Sys. dm_db_wait_stats &#40; Azure SQL-Datenbank &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   
   

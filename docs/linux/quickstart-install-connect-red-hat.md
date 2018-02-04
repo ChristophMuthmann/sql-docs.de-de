@@ -3,7 +3,7 @@ title: Erste Schritte mit SQL Server-2017 unter Red Hat Enterprise Linux | Micro
 description: Dieser Schnellstart veranschaulicht 2017 von SQL Server unter Red Hat Enterprise Linux installieren und dann zu erstellen und Abfragen einer Datenbank mit Sqlcmd an.
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,22 +15,22 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.workload: Active
-ms.openlocfilehash: 1826b003083d374aa052943016296079491ae158
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: cea19257746be6e16c835764605eb6005e565dab
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>Installieren von SQL Server, und erstellen Sie eine Datenbank auf Red Hat
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In diesem Schnellstart installieren Sie zunächst SQL Server 2017 für die Red Hat Enterprise Linux (RHEL) 7.3 +. Verbinden Sie dann mit **Sqlcmd** Ihre erste Datenbank zu erstellen und Ausführen von Abfragen.
 
 > [!TIP]
 > Dieses Lernprogramm erfordert Benutzereingaben und eine Internetverbindung. Wenn Sie interessiert sind die [unbeaufsichtigte](sql-server-linux-setup.md#unattended) oder [offline](sql-server-linux-setup.md#offline) Installationsverfahren, finden Sie unter [-Installationsleitfaden für SQL Server on Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Sie benötigen eine RHEL 7.3 oder 7.4 Computer mit **mindestens 2 GB** des Arbeitsspeichers.
 
@@ -121,7 +121,7 @@ Um eine Datenbank erstellen zu können, müssen Sie die Verbindung mit einem Too
 >
 > * [SQL Server Operationen Studio (Vorschau)](../sql-operations-studio/what-is.md)
 > * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
-> * [Visual Studio-Code](sql-server-linux-develop-use-vscode.md).
+> * [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
 > * [MSSQL-Cli (Vorschau)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

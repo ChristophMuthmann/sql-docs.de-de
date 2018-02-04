@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,26 +17,28 @@ f1_keywords:
 - resource_governor_workload_groups_TSQL
 - sys.resource_governor_workload_groups_TSQL
 - resource_governor_workload_groups
-dev_langs: TSQL
-helpviewer_keywords: sys.resource_governor_workload_groups catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.resource_governor_workload_groups catalog view
 ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b5bb4505558ebc20107257acd30d57543f356e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d2bc9e45c38c8dbe50d9bd7c5d6a8c79203c4fed
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysresourcegovernorworkloadgroups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt die gespeicherte Konfiguration der Arbeitsauslastungsgruppen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück. Jede Arbeitsauslastungsgruppe kann jeweils nur einen Ressourcenpool abonnieren.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|Eindeutige ID der Arbeitsauslastungsgruppe Lässt keine NULL-Werte zu.|  
 |name|**sysname**|Name der Arbeitsauslastungsgruppe. Lässt keine NULL-Werte zu.|  

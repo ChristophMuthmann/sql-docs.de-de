@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,28 +17,29 @@ f1_keywords:
 - sys.dm_db_resource_stats_TSQL
 - dm_db_resource_stats
 - dm_db_resource_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1fa8f540e8f16d901eb41138bc7ee153339cb5a
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: 606b871aeac34ac99d239ec4a84757187e00855f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Gibt Sie Verbrauch von CPU, e/a und Arbeitsspeicher für eine [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Datenbank. Jede Zeile wird für 15 Sekunden beibehalten, auch wenn keine Aktivität in der Datenbank vorhanden ist. Verlaufsdaten werden eine Stunde lang aufbewahrt.  
   
-|Spalte|Datentyp|Description|  
+|Spalten|Datentyp|Description|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|UTC-Zeit, die das Ende des aktuellen Berichtsintervalls angibt.|  
 |avg_cpu_percent|**Decimal (5,2)**|Die durchschnittliche Servernutzung als Prozentwert der maximalen Kapazität für die Dienstebene.|  

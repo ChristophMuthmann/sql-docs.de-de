@@ -3,7 +3,7 @@ title: "Konfigurieren von mehreren Subnetzen AlwaysOn-Verfügbarkeitsgruppen und
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/1/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 2af1b8a50d446fee46418302a598de7a37f79bda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: df5182d374e41b68fe35333c6e4ab59714d8241d
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Konfigurieren von mehreren Subnetzen AlwaysOn-Verfügbarkeitsgruppen und Failoverclusterinstanzen
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Wenn eine immer auf Availability Group (AG) oder ein Failover-Clusterinstanz (FCI) mehr als ein Standort, der jeder Standort in der Regel umfasst verfügt über eigene Netzwerke aus. Dies bedeutet häufig, dass jeder Standort verfügt über eine eigene IP-Adressierung. Starten Sie Standortadressen A z. B. mit 192.168.1. *x* und Standort B-Adressen mit 192.168.2 beginnen. *X*, wobei *x* ist der Teil der IP-Adresse, die mit dem Server eindeutig ist. Ohne irgendeine auf Netzwerkebene direktes Routing werden dieser Server nicht miteinander kommunizieren können. Es gibt zwei Möglichkeiten, dieses Szenario zu behandeln: ein Netzwerk, das die zwei unterschiedlichen Subnetzen befinden, bekannt als ein VLAN verbindet einrichten oder konfigurieren Sie das routing zwischen den Subnetzen.
 

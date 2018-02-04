@@ -3,7 +3,7 @@ title: "Konfigurationsoptionen für SQL Server-2017 auf Docker | Microsoft Docs"
 description: "Untersuchen Sie verschiedene Arten der Verwendung von und Interaktion mit SQL Server-2017 von containerimages in Docker. Dies schließt beibehalten von Daten, zum Kopieren von Dateien und Problembehandlung."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: 416a05397580e6b9c609307f8b25c8014099f999
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 30ac0b58a439af47504c94669af581f5e81fd17c
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Konfigurieren von SQL Server-2017 Container Bilder auf Docker
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In diesem Thema wird erläutert, wie Sie konfigurieren und Verwenden der [Mssql-Server-Linux-Container-Abbild](https://hub.docker.com/r/microsoft/mssql-server-linux/) mit Docker. Dieses Image besteht aus SQL Server auf Grundlage 16.04 Ubuntu Linux ausgeführt wird. Sie können mit dem Docker-Modul 1.8 unter Linux oder auf Docker für Mac/Windows verwendet werden.
 
@@ -86,7 +86,7 @@ Sie können eine Verbindung herstellen und Abfragen von SQL Server in einem Cont
 
 Sie können mit der SQL Server-Instanz auf dem Docker-Computer alle externen Linux, Windows oder MacOS Tools eine Verbindung herstellen, die SQL-Verbindungen unterstützt. Einige häufig verwendete Tools umfassen:
 
-- [Sqlcmd](sql-server-linux-setup-tools.md)
+- [sqlcmd](sql-server-linux-setup-tools.md)
 - [Visual Studio-Code](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) unter Windows](sql-server-linux-develop-use-ssms.md)
 

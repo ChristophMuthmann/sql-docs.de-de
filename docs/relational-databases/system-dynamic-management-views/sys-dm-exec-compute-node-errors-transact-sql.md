@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_compute_node_errors (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_compute_node_errors (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,32 +8,34 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SYS.DM_EXEC_COMPUTE_NODE_ERRORS_TSQL
 - DM_EXEC_COMPUTE_NODE_ERRORS
 - DM_EXEC_COMPUTE_NODE_ERRORS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PolyBase
 - PolyBase, views
 - dm_exec_compute_node_errors
 - sys.dm_exec_compute_node_errors management view
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15d64d6e93258fca7245df90c429321b8ed45675
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9d7114f34dd261ce35a9213ad19090dd67a186a0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexeccomputenodeerrors-transact-sql"></a>Sys.dm_exec_compute_node_errors (Transact-SQL)
+# <a name="sysdmexeccomputenodeerrors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Gibt für PolyBase auftretenden Serverknoten an.  

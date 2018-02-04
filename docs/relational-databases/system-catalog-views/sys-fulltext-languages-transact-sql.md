@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.fulltext_languages_TSQL
 - fulltext_languages
 - fulltext_languages_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - languages [full-text search]
 - sys.fulltext_languages catalog view
 ms.assetid: 2ed6b53d-1cf2-4763-9d58-36ea24a610ef
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e128525420e741af2ddca0c2584f55a950d98c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fb66c10f797c7951f54125c7b5b99cfc25f983ee
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/17/2017
    
 |Column|Datentyp|Description|  
 |------------|---------------|-----------------|  
-|**LCID**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschemabezeichner (Locale Identifier, LCID) für die Sprache.|  
+|**lcid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschemabezeichner (LCID) für die Sprache.|  
 |**name**|**sysname**|Der Wert des Alias in [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) entsprechend dem Wert der **Lcid** oder die Zeichenfolgendarstellung des numerischen LCID-WERTS.|  
   
 ## <a name="values-returned-for-default-languages"></a>Werte, die für Standardsprachen zurückgegeben wurden  
@@ -108,7 +110,7 @@ ms.lasthandoff: 11/17/2017
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_fulltext_load_thesaurus_file &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
+ [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   

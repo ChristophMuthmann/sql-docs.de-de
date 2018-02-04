@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_clr_tasks_TSQL
 - dm_clr_tasks
 - dm_clr_tasks_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_clr_tasks dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_clr_tasks dynamic management view
 ms.assetid: 462b9061-09fa-4858-9707-03d6cc19c769
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 45aad56182dd79b9b5787e78964b23d7469344d0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2a3c99ffd172c97c5738ed2dd19bc8b07f303470
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmclrtasks-transact-sql"></a>sys.dm_clr_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,9 +43,9 @@ ms.lasthandoff: 11/17/2017
 |**task_address**|**varbinary(8)**|Adresse des CLR-Tasks.|  
 |**sos_task_address**|**varbinary(8)**|Adresse des zugrunde liegenden [!INCLUDE[tsql](../../includes/tsql-md.md)] batchtasks.|  
 |**appdomain_address**|**varbinary(8)**|Adresse der Anwendungsdomäne, in der dieser Task ausgeführt wird.|  
-|**Status**|**vom Datentyp nvarchar(128)**|Aktueller Status des Tasks.|  
-|**abort_state**|**vom Datentyp nvarchar(128)**|Status, in dem sich der Abbruch zurzeit befindet (falls der Task abgebrochen wurde). Beim Abbrechen eines Tasks durchläuft dieser einen Status nach dem anderen.|  
-|**Typ**|**vom Datentyp nvarchar(128)**|Tasktyp.|  
+|**state**|**nvarchar(128)**|Aktueller Status des Tasks.|  
+|**abort_state**|**nvarchar(128)**|Status, in dem sich der Abbruch zurzeit befindet (falls der Task abgebrochen wurde). Beim Abbrechen eines Tasks durchläuft dieser einen Status nach dem anderen.|  
+|**type**|**nvarchar(128)**|Tasktyp.|  
 |**affinity_count**|**int**|Affinität des Tasks.|  
 |**forced_yield_count**|**int**|Häufigkeit, mit der der Task gezwungen war, seine Position freizugeben.|  
   

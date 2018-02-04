@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_partition_stats_TSQL
 - sys.dm_db_partition_stats_TSQL
 - sys.dm_db_partition_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_partition_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_partition_stats dynamic management view
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b58fb8b2933e99f2eb77dc03ed7fdfbb132375a6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fd061684962fe1d779b3f35f472b35ca52f45e95
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 |**partition_id**|**bigint**|Die ID der Partition. Sie ist innerhalb einer Datenbank eindeutig. Dies ist der gleiche Wert wie die **Partition_id** in der **sys.partitions** Katalogsicht|  
 |**object_id**|**int**|Objekt-ID der Tabelle oder der indizierten Sicht, in der die Partition enthalten ist.|  
 |**index_id**|**int**|ID des Heaps oder Indexes, in dem die Partition enthalten ist.<br /><br /> 0 = Heap<br /><br /> 1 = Gruppierter Index.<br /><br /> > 1 = Nicht gruppierter Index|  
-|**Partitionsnummer**|**int**|Auf 1 basierende Partitionsnummer im Index oder Heap.|  
+|**partition_number**|**int**|Auf 1 basierende Partitionsnummer im Index oder Heap.|  
 |**in_row_data_page_count**|**bigint**|Anzahl der Seiten, die zum Speichern von Daten innerhalb einer Zeile dieser Partition verwendet werden. Falls die Partition Teil eines Heaps ist, gibt der Wert die Anzahl von Datenseiten im Heap an. Falls die Partition Teil eines Indexes ist, gibt der Wert die Anzahl der Seiten auf Blattebene an. (Seiten des inneren Blatts in der B-Struktur sind in der Zählung nicht enthalten.) IAM-Seiten (Index Allocation Map) sind in beiden Fällen nicht enthalten. Immer 0 für einen speicheroptimierten xVelocity-columnstore-Index.|  
 |**in_row_used_page_count**|**bigint**|Gesamtanzahl der Seiten, die zum Speichern und Verwalten der Daten in Zeilen in dieser Partition verwendet werden. Diese Zahl schließt Seiten des inneren Blatts B-Struktur, IAM-Seiten und alle Seiten enthalten der **In_row_data_page_count** Spalte. Immer 0 für einen columnstore-Index.|  
 |**in_row_reserved_page_count**|**bigint**|Gesamtanzahl der Seiten, die zum Speichern und Verwalten der Daten in Zeilen in dieser Partition reserviert sind, unabhängig davon, ob die Seiten verwendet werden. Immer 0 für einen columnstore-Index.|  
@@ -54,11 +57,11 @@ ms.lasthandoff: 11/17/2017
 |**used_page_count**|**bigint**|Gesamtanzahl der für die Partition verwendeten Seiten. Berechnet als **In_row_used_page_count** + **Lob_used_page_count** + **Row_overflow_used_page_count**.|  
 |**reserved_page_count**|**bigint**|Gesamtanzahl der für die Partition reservierten Seiten. Berechnet als **In_row_reserved_page_count** + **Lob_reserved_page_count** + **Row_overflow_reserved_page_count**.|  
 |**row_count**|**bigint**|Die ungefähre Anzahl von Zeilen in dieser Partition.|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
-|**distribution_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Die eindeutige numerische Id, die die Verteilung.|  
+|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|**distribution_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Die eindeutige numerische Id, die die Verteilung.|  
   
 ## <a name="remarks"></a>Hinweise  
- **Sys. dm_db_partition_stats** zeigt Informationen zum Speicherplatz, der zum Speichern und Verwalten von Daten in Zeilen LOB-Daten und zeilenüberlaufdaten für alle Partitionen in einer Datenbank. Es wird eine Zeile pro Partition angezeigt.  
+ **sys.dm_db_partition_stats** displays information about the space used to store and manage in-row data LOB data, and row-overflow data for all partitions in a database. Es wird eine Zeile pro Partition angezeigt.  
   
  Die Zahlen, auf denen die Ausgabe basiert, werden im Arbeitsspeicher zwischengespeichert oder auf einem Datenträger in unterschiedlichen Systemtabellen gespeichert.  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.pdw_column_distribution_properties (Transact-SQL) | Microsoft Docs
+title: sys.pdw_column_distribution_properties (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: 
@@ -8,23 +8,25 @@ ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 46b74f99-2e22-4dbd-872a-533fce0e239c
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 046b54a2eaa2f75cbba06802cf49c10c5025945a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e2e96fdf353c0c4b0b9839199de9487937b96929
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="syspdwcolumndistributionproperties-transact-sql"></a>Sys.pdw_column_distribution_properties (Transact-SQL)
+# <a name="syspdwcolumndistributionproperties-transact-sql"></a>sys.pdw_column_distribution_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Enthält Verteilungsinformationen zur für Spalten.  

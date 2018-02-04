@@ -8,26 +8,28 @@ ms.reviewer:
 ms.service: 
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: Azure SQL Database
+applies_to:
+- Azure SQL Database
 helpviewer_keywords:
 - dynamic management objects [Azure SQL Database]
 - geo-replication
 - dynamic management views
 - geo-replication [Azure SQL Database]
 ms.assetid: c98a06f6-c205-42f0-9f2a-4668c6103bc8
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 35713bedd3a9397a110e012995c5432773f2598f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 439fdc69f570518e01250c2d95f43ff5f7d0aa82
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="geo-replication-dynamic-management-views-and-functions-azure-sql-database"></a>Geografische Replikation dynamische Verwaltungssichten und-Funktionen (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

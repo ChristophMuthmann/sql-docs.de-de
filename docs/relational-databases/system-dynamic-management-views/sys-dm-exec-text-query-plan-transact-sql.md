@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_text_query_plan_TSQL
 - dm_exec_text_query_plan_TSQL
 - sys.dm_exec_text_query_plan
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_text_query_plan dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_text_query_plan dynamic management function
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1bd975dbb78b502df209a6763c6198284f1f5dea
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 38650de120ae1c7cb80be3d279de9bfa0da37434
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +71,7 @@ Das Planhandle kann aus den folgenden dynamischen Verwaltungsobjekten abgerufen 
   
 -  [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
-*Statement_start_offset* | 0 | STANDARDWERT  
+*statement_start_offset* | 0 | DEFAULT  
 Gibt die Startposition der Abfrage an (in Bytes), die von der Zeile im Text des zugehörigen Batches oder persistenten Objekts beschrieben wird. *Statement_start_offset* ist **Int**. Der Wert 0 gibt den Anfang des Batches an. Der Standardwert ist 0.  
   
 Der Startoffset der Anweisung kann aus den folgenden dynamischen Verwaltungsobjekten abgerufen werden:  
@@ -88,10 +91,10 @@ Der Wert -1 gibt das Ende des Batches an. Der Standardwert ist-1.
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**DBID**|**smallint**|ID der Kontextdatenbank, die gültig war, als die diesem Plan entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung kompiliert wurde. Für Ad-hoc-Anweisungen und vorbereitete SQL-Anweisungen, die ID der Datenbank, in der die Anweisungen kompiliert wurden.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
-|**ObjectID**|**int**|ID des Objekts (z. B. gespeicherte Prozedur oder benutzerdefinierte Funktion) für diesen Abfrageplan. Für Ad-hoc- und vorbereitete Batches entspricht diese Spalte dem Wert **NULL**.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
-|**Anzahl**|**smallint**|Gespeicherte Prozedur mit ganzer Zahl. Eine Gruppe von Prozeduren für die **orders** -Anwendung kann z. B. die Namen **orderproc;1**, **orderproc;2**usw. haben. Für Ad-hoc- und vorbereitete Batches entspricht diese Spalte dem Wert **NULL**.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
-|**verschlüsselt**|**bit**|Zeigt an, ob die entsprechende Prozedur verschlüsselt ist.<br /><br /> 0 = nicht verschlüsselt<br /><br /> 1 = verschlüsselt<br /><br /> NULL-Werte sind in der Spalte nicht zulässig.|  
+|**dbid**|**smallint**|ID der Kontextdatenbank, die gültig war, als die diesem Plan entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung kompiliert wurde. Für Ad-hoc-Anweisungen und vorbereitete SQL-Anweisungen, die ID der Datenbank, in der die Anweisungen kompiliert wurden.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
+|**objectid**|**int**|ID des Objekts (z. B. gespeicherte Prozedur oder benutzerdefinierte Funktion) für diesen Abfrageplan. Für Ad-hoc- und vorbereitete Batches entspricht diese Spalte dem Wert **NULL**.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
+|**number**|**smallint**|Gespeicherte Prozedur mit ganzer Zahl. Eine Gruppe von Prozeduren für die **orders** -Anwendung kann z. B. die Namen **orderproc;1**, **orderproc;2**usw. haben. Für Ad-hoc- und vorbereitete Batches entspricht diese Spalte dem Wert **NULL**.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
+|**encrypted**|**bit**|Zeigt an, ob die entsprechende Prozedur verschlüsselt ist.<br /><br /> 0 = nicht verschlüsselt<br /><br /> 1 = verschlüsselt<br /><br /> NULL-Werte sind in der Spalte nicht zulässig.|  
 |**query_plan**|**nvarchar(max)**|Enthält eine zur Kompilierzeit erstellte Showplandarstellung des Abfrageausführungsplans, der mit *plan_handle*angegeben ist. Der Showplan liegt im Textformat vor. Ein Plan generiert für jeden Batch, die, z. B. ad-hoc-enthält [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen, Aufrufe von gespeicherten Prozeduren und benutzerdefinierten Funktionsaufrufe.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -181,4 +184,4 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sys. dm_exec_query_plan &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+ [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  

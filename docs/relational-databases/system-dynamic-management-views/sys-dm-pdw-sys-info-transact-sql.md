@@ -8,23 +8,25 @@ ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 686976b4-2d5d-4d64-bf12-56eba1dc59b1
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bd97fc3499d0bb240be35ffe92ac8869fd7ccf6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a17bbe1ddde5c569c25571968cb72c72fde9e632
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmpdwsysinfo-transact-sql"></a>Sys.dm_pdw_sys_info (Transact-SQL)
+# <a name="sysdmpdwsysinfo-transact-sql"></a>sys.dm_pdw_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Stellt einen Satz von Indikatoren Appliance-Ebene, die Gesamtaktivität auf dem Gerät widerspiegeln.  

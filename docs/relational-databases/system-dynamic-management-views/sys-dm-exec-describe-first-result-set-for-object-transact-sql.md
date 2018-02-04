@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,32 +8,35 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_describe_first_result_set_for_object_TSQL
 - sys.dm_exec_describe_first_result_set_for_object
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_describe_first_result_set_for_object catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_describe_first_result_set_for_object catalog view
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f09208161dd4b36f1b798925a58fffaa475e6176
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bcdb3bd85543ae5feeb4b224350a5b72a2d95f7b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecdescribefirstresultsetforobject-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Diese dynamische Verwaltungsfunktion akzeptiert eine @object_id als Parameter und beschreibt die erste ergebnismetadaten für das Modul mit dieser ID an. Die @object_id angegeben, kann die ID des werden eine [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur oder eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Trigger. Wenn es sich um die ID eines beliebigen anderen Objekts (z. B. einer Sicht, Tabelle, Funktion oder CLR-Prozedur) handelt, wird in den Fehlerspalten des Ergebnisses ein Fehler angegeben.  
   
- **Sys. dm_exec_describe_first_result_set_for_object** hat die gleiche resultsetdefinition wie [Sys. dm_exec_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) und ähnelt [Sp_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ **sys.dm_exec_describe_first_result_set_for_object** has the same result set definition as [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) and is similar to [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,9 +67,9 @@ sys.dm_exec_describe_first_result_set_for_object
 |**system_type_id**|**int**|Enthält die System_type_id des Datentyps der Spalte, wie in sys.types angegeben. Bei CLR-Typen wird von dieser Spalte der Wert 240 zurückgegeben, obwohl von der system_type_name-Spalte NULL zurückgegeben wird.|  
 |**system_type_name**|**nvarchar(256)**|Enthält den Namen des Datentyps. Enthält Argumente, die für den Datentyp der Spalte angegeben wurden (z. B. Länge, Genauigkeit, Skala). Wenn der Datentyp ein benutzerdefinierter Aliastyp ist, wird der zugrunde liegende Systemtyp hier angegeben. Bei einem benutzerdefinierten CLR-Typ wird NULL in dieser Spalte zurückgegeben.|  
 |**max_length**|**smallint**|Maximale Länge (in Byte) für die Spalte.<br /><br /> -1 = Spaltendatentyp ist **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, oder **Xml**.<br /><br /> Für **Text** Spalten, die **Max_length** Wert ist 16 oder festlegen, indem **Sp_tableoption 'Text in Row'**.|  
-|**Genauigkeit**|**tinyint**|Die Genauigkeit der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
-|**Skalierung**|**tinyint**|Die Skalierung der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
-|**Sortierungsname**|**sysname**|Name der Sortierung der Spalte, wenn diese zeichenbasiert ist. Andernfalls wird NULL zurückgegeben.|  
+|**precision**|**tinyint**|Die Genauigkeit der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
+|**scale**|**tinyint**|Die Skalierung der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
+|**collation_name**|**sysname**|Name der Sortierung der Spalte, wenn diese zeichenbasiert ist. Andernfalls wird NULL zurückgegeben.|  
 |**user_type_id**|**int**|Enthält bei CLR- und Aliastypen die user_type_id des Datentyps der Spalte, wie in sys.types angegeben. Andernfalls NULL.|  
 |**user_type_database**|**sysname**|Enthält bei CLR- und Aliastypen den Namen der Datenbank, in der der Typ definiert wurde. Andernfalls NULL.|  
 |**user_type_schema**|**sysname**|Enthält bei CLR- und Aliastypen den Namen des Schemas, in dem der Typ definiert wurde. Andernfalls NULL.|  
@@ -80,7 +83,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**is_case_sensitive**|**bit**|Gibt 1 zurück, wenn die Spalte von einem Zeichenfolgentyp ist, bei dem die Groß-/Kleinschreibung beachtet wird, andernfalls 0.|  
 |**is_fixed_length_clr_type**|**bit**|Gibt 1 zurück, wenn die Spalte von einem CLR-Typ mit fester Länge ist, andernfalls 0.|  
 |**source_server**|**sysname**|Der Name des ursprünglichen Servers, der von der Spalte in diesem Ergebnis zurückgegeben wurde (bei einem Remoteserver). Der Name wird angegeben, wie er in "sys.servers" angezeigt wird.  Gibt NULL zurück, wenn die Spalte auf dem lokalen Server stammt oder wenn es nicht möglich bestimmt, welche Server sie stammt. Wird nur aufgefüllt, wenn die Suche nach Informationen erforderlich ist.|  
-|**Quelldatenbank**|**sysname**|Der Name der ursprünglichen Datenbank, die von der Spalte in diesem Ergebnis zurückgegeben wird. Gibt NULL zurück, wenn die Datenbank nicht ermittelt werden kann. Wird nur aufgefüllt, wenn die Suche nach Informationen erforderlich ist.|  
+|**source_database**|**sysname**|Der Name der ursprünglichen Datenbank, die von der Spalte in diesem Ergebnis zurückgegeben wird. Gibt NULL zurück, wenn die Datenbank nicht ermittelt werden kann. Wird nur aufgefüllt, wenn die Suche nach Informationen erforderlich ist.|  
 |**source_schema**|**sysname**|Der Name des ursprünglichen Schemas, das von der Spalte in diesem Ergebnis zurückgegeben wird. Gibt NULL zurück, wenn das Schema nicht bestimmt werden kann. Wird nur aufgefüllt, wenn die Suche nach Informationen erforderlich ist.|  
 |**source_table**|**sysname**|Der Name der ursprünglichen Tabelle, die von der Spalte in diesem Ergebnis zurückgegeben wird. Gibt NULL zurück, wenn die Tabelle nicht bestimmt werden kann. Wird nur aufgefüllt, wenn die Suche nach Informationen erforderlich ist.|  
 |**source_column**|**sysname**|Der Name der ursprünglichen Spalte, die von der Spalte in diesem Ergebnis zurückgegeben wird. Gibt NULL zurück, wenn die Spalte nicht bestimmt werden kann. Wird nur aufgefüllt, wenn die Suche nach Informationen erforderlich ist.|  
@@ -97,7 +100,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_state**|**int**|Enthält die von der Funktion zurückgegebene Statusmeldung. Wenn kein Fehler ist aufgetreten ist, enthält die Spalte NULL.|  
 |**error_message**|**nvarchar(4096)**|Enthält die von der Funktion zurückgegebene Meldung. Wenn kein Fehler aufgetreten ist, enthält die Spalte NULL.|  
 |**error_type**|**int**|Enthält eine ganze Zahl, die den zurückgegebenen Fehler darstellt. Wird error_type_desc zugeordnet. Siehe Liste unter Hinweisen.|  
-|**error_type_desc zugeordnet**|**nvarchar(60)**|Enthält eine kurze Zeichenfolge in Großbuchstaben, die den zurückgegebenen Fehler darstellt. Wird error_type zugeordnet. Siehe Liste unter Hinweisen.|  
+|**error_type_desc**|**nvarchar(60)**|Enthält eine kurze Zeichenfolge in Großbuchstaben, die den zurückgegebenen Fehler darstellt. Wird error_type zugeordnet. Siehe Liste unter Hinweisen.|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Funktion verwendet den gleichen Algorithmus wie **Sp_describe_first_result_set**. Weitere Informationen finden Sie unter [Sp_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
@@ -155,8 +158,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_describe_first_result_set &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [Sp_describe_undeclared_parameters &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [Sys. dm_exec_describe_first_result_set &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
+ [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
   
   

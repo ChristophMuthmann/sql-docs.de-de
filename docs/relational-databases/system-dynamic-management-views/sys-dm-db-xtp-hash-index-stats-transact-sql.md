@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/29/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_xtp_hash_index_stats_TSQL
 - dm_db_xtp_hash_index_stats
 - dm_db_xtp_hash_index_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_hash_index_stats (dynamic management view)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_hash_index_stats (dynamic management view)
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83e0b404fddcabaa9a70acda6718a3c53d7ba7de
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 00716b0d86e0f59c4b7a904ef682f92d41566742
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -44,7 +47,7 @@ ms.lasthandoff: 01/02/2018
 Hohe Kettenlängen können die Leistung aller DML-Vorgänge für einzelne Zeilen, einschließlich von SELECT oder INSERT, deutlich beeinträchtigen. Kurze Kettenlängen in Kombination mit einer hohen Anzahl von leeren Buckets weisen auf eine zu hohe Bucketanzahl hin. Dadurch wird die Leistung von Indexscans verringert.  
   
 > [!WARNING]
-> **Sys. dm_db_xtp_hash_index_stats** überprüft die gesamte Tabelle. Wenn große Tabellen in der Datenbank stehen also **dm_db_xtp_hash_index_stats** kann sehr lange dauern ausführen.  
+> **sys.dm_db_xtp_hash_index_stats** scans the entire table. Wenn große Tabellen in der Datenbank stehen also **dm_db_xtp_hash_index_stats** kann sehr lange dauern ausführen.  
   
 Weitere Informationen finden Sie unter [Hash-Indizes für Speicheroptimierte Tabellen](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   

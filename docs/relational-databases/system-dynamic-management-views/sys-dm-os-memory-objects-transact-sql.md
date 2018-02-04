@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_memory_objects
 - sys.dm_os_memory_objects_TSQL
 - dm_os_memory_objects_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_memory_objects dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_memory_objects dynamic management view
 ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 92d9fc9b94f74a08f84c6f39307a4f88e48b847b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b0a468001a048f627996e65a5743d3f136e96909
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosmemoryobjects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 |**pages_in_bytes**|**bigint**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Arbeitsspeicher in Bytes, der von dieser Instanz des Arbeitsspeicherobjekts zugeordnet wird. Lässt keine NULL-Werte zu.|  
 |**creation_options**|**int**|Nur interne Verwendung. Lässt NULL-Werte zu.|  
 |**bytes_used**|**bigint**|Nur interne Verwendung. Lässt NULL-Werte zu.|  
-|**Typ**|**nvarchar(60)**|Typ des Speicherobjekts:<br /><br /> Hiermit wird eine Komponente, der dieses Speicherobjekt gehört, oder die Funktion des Speicherobjekts. Lässt NULL-Werte zu.|  
+|**type**|**nvarchar(60)**|Typ des Speicherobjekts:<br /><br /> Hiermit wird eine Komponente, der dieses Speicherobjekt gehört, oder die Funktion des Speicherobjekts. Lässt NULL-Werte zu.|  
 |**name**|**varchar(128)**|Nur interne Verwendung. NULL-Werte sind zulässig.|  
 |**memory_node_id**|**smallint**|ID eines Speicherknotens, der von diesem Speicherobjekt verwendet wird. Lässt keine NULL-Werte zu.|  
 |**creation_time**|**datetime**|Nur interne Verwendung. Lässt NULL-Werte zu.|  
@@ -57,9 +60,9 @@ ms.lasthandoff: 11/17/2017
 |**contention_factor**|**real**|Ein Wert, Konflikte mit 0 bedeutet keine Konflikte auf dieses Speicherobjekt angeben. Der Wert wird aktualisiert, sobald eine angegebene Anzahl von speicherbelegungen spiegelnden Konflikte innerhalb dieses Zeitraums vorgenommen wurden. Gilt nur für Thread-sichere Speicherobjekt-Objekte.|  
 |**waiting_tasks_count**|**bigint**|Die Anzahl von Wartevorgängen für dieses Speicherobjekt. Dieser Indikator wird erhöht, wenn Arbeitsspeicher von diesem Speicherobjekt zugewiesen ist. Das Inkrement ist die Anzahl der Aufgaben, die derzeit für den Zugriff auf dieses Speicherobjekt wartet. Gilt nur für Thread-sichere Speicherobjekt-Objekte. Dies ist eine bewährte Aufwand Wert ohne Garantie auf Richtigkeit.|  
 |**exclusive_access_count**|**bigint**|Gibt an, wie oft dieses Speicherobjekt ausschließlich zugegriffen wurde. Gilt nur für Thread-sichere Speicherobjekt-Objekte.  Dies ist eine bewährte Aufwand Wert ohne Garantie auf Richtigkeit.|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
- **Partition_type**, **Contention_factor**, **Waiting_tasks_count**, und **Exclusive_access_count** sind noch nicht im implementiert [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **partition_type**, **contention_factor**, **waiting_tasks_count**, and **exclusive_access_count** are not yet implemented in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="permissions"></a>Berechtigungen  
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
@@ -86,7 +89,7 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
   [SQL Server-Betriebssystem in Verbindung mit dynamischen Verwaltungssichten &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [dm_os_memory_clerks &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
+ [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
   
   
 

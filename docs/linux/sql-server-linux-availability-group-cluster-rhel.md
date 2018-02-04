@@ -3,7 +3,7 @@ title: "RHEL Cluster für SQL Server-Verfügbarkeitsgruppe konfigurieren | Micro
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 06/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
-ms.openlocfilehash: 9f037f1e5c6f093582aeec4d2080a52e280718a4
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: dd997e9d3f235d841cd5706b9c81b9335360540d
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Konfigurieren von Cluster RHEL für SQL Server-Verfügbarkeitsgruppe
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Dieses Dokument erläutert das Erstellen eines drei Knoten Availability Group für SQL Server unter Red Hat Enterprise Linux. Für hohe Verfügbarkeit, eine verfügbarkeitsgruppe unter Linux erfordert drei Knoten?: Siehe [hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md). Die clustering-Ebene basiert auf Red Hat Enterprise Linux (RHEL) [HA-Add-On](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) baut auf [Schrittmacher](http://clusterlabs.org/). 
 
@@ -37,7 +37,7 @@ Weitere Informationen zur Clusterkonfiguration, Agents Ressourcenoptionen und Ve
 
 In den folgenden Abschnitten exemplarisch die Schritte zum Einrichten eines Clusters Schrittmacher und fügen Sie einer verfügbarkeitsgruppe als Ressource im Cluster für hohe Verfügbarkeit.
 
-## <a name="roadmap"></a>Roadmap für die
+## <a name="roadmap"></a>Roadmap
 
 Die Schritte zum Erstellen einer verfügbarkeitsgruppe auf Linux-Servern zwecks hoher Verfügbarkeit unterscheiden sich von den Schritten in einem Windows Server-Failovercluster. Die folgende Liste beschreibt die allgemeinen Schritte: 
 

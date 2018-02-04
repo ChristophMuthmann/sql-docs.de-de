@@ -1,6 +1,6 @@
 ---
 title: "Sicherheitsüberlegungen für Machine Learning in SQL Server | Microsoft Docs"
-ms.date: 11/16/2017
+ms.date: 02/01/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -10,16 +10,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d5065197-69e6-4fce-9654-00acaecc148b
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 67beebd9c35ddddbfbc56f606ec1b7df3671ae64
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c7262b804c1712e7ea962feefd88f3b2f64146a9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="security-considerations-for-machine-learning-in-sql-server"></a>Sicherheitsüberlegungen für Machine Learning in SQL Server
 
@@ -37,7 +37,7 @@ Es wird dringend empfohlen, dass Sie Windows-Firewall (oder eine andere Firewall
 
 ## <a name="authentication-methods-supported-for-remote-compute-contexts"></a>Für remote rechenkontexte unterstützten Authentifizierungsmethoden
 
-[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]unterstützt integrierte Windows-Authentifizierung und SQL-Anmeldungen beim Erstellen von Verbindungen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und eine remote Data Science-Client.
+[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] unterstützt integrierte Windows-Authentifizierung und SQL-Anmeldungen beim Erstellen von Verbindungen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und eine remote Data Science-Client.
 
 Angenommen Sie, Sie entwickeln eine R-Lösung auf Ihrem Laptop und Berechnungen auf dem SQL Server-Computer ausführen möchten. Sie würden in R eine SQL Server-Datenquelle erstellen, mit der **Rx** Funktionen und definieren eine Verbindungszeichenfolge basierend auf Ihren Windows-Anmeldeinformationen.
 
@@ -50,9 +50,9 @@ Die Verwendung von SQL-Anmeldungen wird auch in diesem Szenario unterstützt. Al
  Im Allgemeinen die [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] startet das externe Skriptlaufzeit und Skripts mit einem eigenen Konto ausgeführt. Jedoch, wenn die externe Laufzeit einen ODBC-Aufruf, übernimmt der [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] nimmt die Identität der Anmeldeinformationen des Benutzers, der den Befehl aus, um sicherzustellen, dass der ODBC-Aufruf nicht fehlschlägt gesendet. Dies wird als *implizite Authentifizierung* bezeichnet.
  
  > [!IMPORTANT]
- > Damit die implizite Authentifizierung erfolgreich verlaufen kann, muss die Windows-Benutzergruppe, die die Workerkonten enthält (standardmäßig **SQLRUser**) über ein Konto in der Masterdatenbank für die Instanz verfügen, und dieses Konto muss zur Verbindung mit der Instanz berechtigt sein.
+ > Für die implizite Authentifizierung erfolgreich ist, handelt es sich bei die Windows-Benutzergruppe, die die Worker-Konten enthält (standardmäßig **SQLRUserGroup**) benötigen ein Konto in der master-Datenbank aus, für die Instanz, und dieses Konto muss Berechtigungen für bestimmte Verbinden Sie mit der Instanz.
  > 
- > Die Gruppe **SQLRUser** wird auch verwendet werden, wenn Sie Python-Skripts ausführen. 
+ > Die Gruppe **SQLRUserGroup** wird auch verwendet werden, wenn Sie Python-Skripts ausführen. 
 
 Im Allgemeinen wird empfohlen, dass Sie im Vorfeld größeren Datasets in SQL Server verschieben, anstatt versuchen, Daten mithilfe von RODBC oder einer anderen Bibliothek zu lesen. Verwenden Sie außerdem eine SQL Server-Abfrage oder Sicht als die primäre Datenquelle für eine bessere Leistung. 
 

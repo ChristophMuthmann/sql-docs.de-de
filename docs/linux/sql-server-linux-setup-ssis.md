@@ -15,15 +15,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: b87a15cdec0657df6f346646ad3d0ebb8ce1111f
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: accd3a7f7abe9dd4771971e241868ef61a4f5dd0
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Installieren von SQL Server Integration Services (SSIS) unter Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Führen Sie die Schritte in diesem Artikel, um die Installation von SQL Server Integration Services (`mssql-server-is`) unter Linux. Weitere Informationen zu den Features, die in dieser Version der Integrationsdienste für Linux unterstützt, finden Sie unter der [Release Notes](sql-server-linux-release-notes.md).
 

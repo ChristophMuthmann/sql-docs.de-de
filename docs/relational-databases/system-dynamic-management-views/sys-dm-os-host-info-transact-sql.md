@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,21 +17,23 @@ f1_keywords:
 - sys.dm_os_host_info_TSQL
 - dm_os_host_info
 - dm_os_host_info_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_host_info dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_host_info dynamic management view
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63238f4148fd57f05aa0c07bb1fad92a41368c06
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 35c0163abffc8103164cc31d0d730db1a0aebb95
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmoshostinfo-transact-sql"></a>Sys.dm_os_host_info (Transact-SQL)
+# <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Gibt eine Zeile, in dem Informationen zur Betriebssystemversion angezeigt.  
@@ -39,7 +42,7 @@ Gibt eine Zeile, in dem Informationen zur Betriebssystemversion angezeigt.
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar(256)** |Der Typ des Betriebssystems: Windows- oder Linux |
 |**host_distribution** |**nvarchar(256)** |Beschreibung des Betriebssystems. |
-|**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows-Betriebssystem-Version (Versionsnummer). Eine Liste der Werte mit Beschreibungen finden Sie unter [Betriebssystemversion (Windows)](http://msdn.microsoft.com/library/ms724832\(VS.85\).aspx). <br> Für Linux zurückgegeben eine leere Zeichenfolge. |  
+|**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Betriebssystemversion (Versionsnummer). Eine Liste der Werte mit Beschreibungen finden Sie unter [Betriebssystemversion (Windows)](http://msdn.microsoft.com/library/ms724832\(VS.85\).aspx). <br> Für Linux zurückgegeben eine leere Zeichenfolge. |  
 |**host_service_pack_level**|**nvarchar(256)**|Service Pack-Ebene des Windows-Betriebssystems. <br> Für Linux zurückgegeben eine leere Zeichenfolge. |  
 |**host_sku**|**int**|Windows-SKU-ID (Stock Keeping Unit). Eine Liste mit SKU-IDs und Beschreibungen finden Sie unter [Funktion "GetProductInfo"](http://msdn.microsoft.com/library/ms724358.aspx). Lässt NULL-Werte zu. <br> Für Linux wird NULL zurückgegeben. |  
 |**os_language_version**|**int**|Windows-Gebietsschemabezeichner (LCID) des Betriebssystems. Eine Liste mit LCID-Werten und Beschreibungen finden Sie unter [Von Microsoft zugewiesene Gebietsschemabezeichner (LCIDs)](http://go.microsoft.com/fwlink/?LinkId=208080). Lässt keine NULL-Werte zu.|  
@@ -80,6 +83,6 @@ Hier ist ein beispielresultset, die unter Linux festgelegt:
   
 ## <a name="see-also"></a>Siehe auch  
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [dm_os_sys_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
+ [sys.dm_os_windows_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
  
 

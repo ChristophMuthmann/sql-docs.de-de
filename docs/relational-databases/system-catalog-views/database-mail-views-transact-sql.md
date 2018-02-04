@@ -8,10 +8,12 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - monitoring Database Mail
 - Database Mail [SQL Server], status information
@@ -20,16 +22,16 @@ helpviewer_keywords:
 - troubleshooting [SQL Server], Database Mail
 - status information [SQL Server], Database Mail
 ms.assetid: ab8728e0-803f-4b6f-b66f-9880ec37a49e
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fe3d10bfe65c2c8409b9c0f3c395f40a69d4b25
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1fd6273028d54b3aa441f84e2cf13dd73abbdae
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="database-mail-views-transact-sql"></a>Datenbank-E-Mail-Sichten (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

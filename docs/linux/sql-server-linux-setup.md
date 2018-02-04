@@ -3,7 +3,7 @@ title: Installieren von SQLServer 2017 unter Linux | Microsoft Docs
 description: Installieren, aktualisieren und Deinstallieren von SQL Server on Linux. In diesem Thema werden die online, offline und unbeaufsichtigte Szenarien behandelt.
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 180c8492531da7c3b9c15ebef28917b52e0869ce
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 114bbd717ad7d0d244b7290bd612547c9226f941
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>-Installationsleitfaden für SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In diesem Thema erläutert das installieren, aktualisieren und Deinstallieren von SQL Server-2017 unter Linux. SQL Server-2017 wird unter Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) und Ubuntu unterstützt. Es ist auch verfügbar als Docker-Image, die auf den Docker-Modul unter Linux oder Docker für Windows/Mac ausgeführt werden kann
 
@@ -39,7 +39,7 @@ SQL Server-2017 wird auf den folgenden Linux-Plattformen unterstützt:
 | **Red Hat Enterprise Linux** | 7.3 oder 7.4 | [RHEL 7.4 abrufen](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [SLES v12 SP2 abrufen](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Ubuntu 16.04 abrufen](http://www.ubuntu.com/download/server)
-| **Docker-Modul** | 1.8+ | [Abrufen von Docker](http://www.docker.com/products/overview)
+| **Docker Engine** | 1.8+ | [Abrufen von Docker](http://www.docker.com/products/overview)
 
 Microsoft unterstützt die Bereitstellung und Verwaltung von SQL Server-Container mithilfe von OpenShift und Kubernetes.
 
@@ -86,7 +86,7 @@ Beim Aktualisieren der **Mssql Server** Paket auf die neueste Version, verwenden
 
 Diese Befehle die neuesten Downloadpaket und Ersetzen Sie die Binärdateien befindet sich im `/opt/mssql/`. Der vom Benutzer generierte Datenbanken und Systemdatenbanken werden von diesem Vorgang nicht betroffen.
 
-## <a id="rollback"></a>Rollback SQLServer
+## <a id="rollback"></a> Rollback SQL Server
 
 Verwenden Sie Rollback oder Downgrade für die SQL Server auf einer früheren Version die folgenden Schritte aus:
 
@@ -172,7 +172,7 @@ Um die CU oder GDR-Repositorys zu konfigurieren, verwenden Sie die folgenden Sch
 
    | Platform | Repository | Befehl der Repository-entfernen |
    |---|---|---|
-   | RHEL | **Alle** | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
+   | RHEL | **Allee** | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
    | SLES | **CTP** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
    | | **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
    | | **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|

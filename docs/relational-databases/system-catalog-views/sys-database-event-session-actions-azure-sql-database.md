@@ -8,21 +8,23 @@ ms.reviewer:
 ms.service: 
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: Azure SQL Database
+applies_to:
+- Azure SQL Database
 ms.assetid: 32494df1-7ab7-4b88-a858-6b1021d67433
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 594515b901a0b8c284ef81fd5a426094e17a74d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bbdb8f36927b2347380ed5ff64bb7292a51d7c23
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdatabaseeventsessionactions-azure-sql-database"></a>Sys.database_event_session_actions (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 ||||  
 |-|-|-|  
 |Von|Aktion|Beziehung|  
-|Sys.database_event_session_actions.event_session_id|Sys.sys.database_event_sessions.event_session_id|n:1|  
-|Sys.database_event_session_actions.event_id<br /><br /> Sys.database_event_session_actions.event_session_id|Sys.database_event_session_events.event_session_id<br /><br /> Sys.database_event_session_events.event_id|n:1|  
+|sys.database_event_session_actions.event_session_id|sys.sys.database_event_sessions.event_session_id|n:1|  
+|sys.database_event_session_actions.event_id<br /><br /> sys.database_event_session_actions.event_session_id|sys.database_event_session_events.event_session_id<br /><br /> sys.database_event_session_events.event_id|n:1|  
   
   

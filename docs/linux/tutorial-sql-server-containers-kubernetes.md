@@ -3,7 +3,7 @@ title: "Einen SQL Server-Container in Kubernetes für hohe Verfügbarkeit konfig
 description: "In diesem Lernprogramm wird gezeigt, wie eine SQL Server-hochverfügbarkeitslösung mit Kubernetes auf Azure-Container-Dienst bereitgestellt wird."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: mvc
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 1220c85a539cdaed855d6dfd44ea4afffdd927b2
-ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
+ms.openlocfilehash: 4ada1034b64f710f4eeae995b771ef8be5bf4fe2
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>Konfigurieren Sie einen SQL Server-Container in Kubernetes für hohe Verfügbarkeit
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Informationen Sie zum Konfigurieren von SQL Server-Instanz auf Kubernetes in Azure Container Service (so) mit permanenten Speicher für hohe Verfügbarkeit (HA). Die Lösung bietet Stabilität. Wenn SQL Server-Instanz ein Fehler auftritt, erstellt erneut Kubernetes automatisch im eine neue Pod. So bietet Stabilität gegenüber einem Knotenausfall Kubernetes. 
 
@@ -37,7 +37,7 @@ Dieses Lernprogramm veranschaulicht, wie so konfigurieren Sie eine hoch verfügb
 
 ## <a name="ha-solution-that-uses-kubernetes-running-in-azure-container-service"></a>Mit hoher Verfügbarkeit verwendet Lösung, die Kubernetes im Azure-Container-Dienst ausgeführt wird
 
-Kubernetes 1.6 und höher bietet Unterstützung für [Speicherklassen](http://kubernetes.io/docs/concepts/storage/storage-classes/), [persistenten Volume Ansprüche](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims), und die [Azure Volume Datenträgertreiber](http://github.com/Azure/azurefile-dockervolumedriver). Sie können erstellen und verwalten die SQL Server-Instanzen systemintern in Kubernetes. Im Beispiel in diesem Artikel wird gezeigt, wie zum Erstellen einer [Bereitstellung](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) ähnelt einer freigegebenen Datenträger Failoverclusterinstanz Konfiguration mit hoher Verfügbarkeit zu erzielen. In dieser Konfiguration spielt Kubernetes der Rolle für den Cluster Orchestrator. Wenn eine SQL Server-Instanz in einem Container ein Fehler auftritt, startet der Orchestrator eine andere Instanz des Containers, die den gleichen persistenten Speicher zugeordnet wird.
+Kubernetes 1.6 und höher bietet Unterstützung für [Speicherklassen](http://kubernetes.io/docs/concepts/storage/storage-classes/), [persistenten Volume Ansprüche](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims), und die [Azure-Datenträger Volumetyp](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk). Sie können erstellen und verwalten die SQL Server-Instanzen systemintern in Kubernetes. Im Beispiel in diesem Artikel wird gezeigt, wie zum Erstellen einer [Bereitstellung](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) ähnelt einer freigegebenen Datenträger Failoverclusterinstanz Konfiguration mit hoher Verfügbarkeit zu erzielen. In dieser Konfiguration spielt Kubernetes der Rolle für den Cluster Orchestrator. Wenn eine SQL Server-Instanz in einem Container ein Fehler auftritt, startet der Orchestrator eine andere Instanz des Containers, die den gleichen persistenten Speicher zugeordnet wird.
 
 ![Diagramm der Kubernetes SQL Server-cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
@@ -251,6 +251,8 @@ In diesem Schritt erstellen Sie ein Manifest, um den Container, basierend auf de
    Geben Sie zum Anzeigen des Status von der Pod `kubectl get pod`.
 
    ![Screenshot des Get-Pod-Befehl](media/tutorial-sql-server-containers-kubernetes/05_get_pod_cmd.png)
+
+   In der vorherigen Abbildung die Pod weist den Status `Running`. Dieser Status gibt an, dass der Container bereit ist. Dies kann einige Minuten dauern.
 
    >[!NOTE]
    >Nachdem die Bereitstellung erstellt wurde, dauert es einige Minuten, bevor die Pod sichtbar ist. Die Verzögerung, da der Cluster abruft, wird die [Mssql-Server – Linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Image von Docker Hub. Nachdem das Image erstmalig per Pull abgerufen wird, sind möglicherweise spätere Bereitstellungen schneller, bei einer Bereitstellung mit einem Knoten, die bereits für das Bild darauf zwischengespeichert. 

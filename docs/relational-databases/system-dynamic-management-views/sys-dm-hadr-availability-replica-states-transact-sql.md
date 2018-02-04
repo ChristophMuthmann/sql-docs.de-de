@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_hadr_availability_replica_states_TSQL
 - sys.dm_hadr_availability_replica_states
 - dm_hadr_availability_replica_states_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_availability_replica_states dynamic management view
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bf08e1c4aa40e78f9a6e3cb345aff501804d5736
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9adddf8b74848948bfdd45fdf93813ed7489d40a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmhadravailabilityreplicastates-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +47,11 @@ ms.lasthandoff: 11/17/2017
 |**replica_id**|**uniqueidentifier**|Eindeutiger Bezeichner des Replikats.|  
 |**group_id**|**uniqueidentifier**|Eindeutiger Bezeichner der Verfügbarkeitsgruppe.|  
 |**is_local**|**bit**|Gibt an, ob das Replikat wird eine der:<br /><br /> 0 = Gibt ein sekundäres Remotereplikat in einer Verfügbarkeitsgruppe an, deren primäres Replikat von der lokalen Serverinstanz gehostet wird. Dieser Wert kommt nur am primären Replikatspeicherort vor.<br /><br /> 1 = gibt ein lokales Replikat. Auf sekundären Replikaten ist dies der einzige verfügbare Wert für die Verfügbarkeitsgruppe, zu der das Replikat gehört.|  
-|**Rolle ""**|**tinyint**|Aktuelle [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] Rolle ein lokales Replikat oder ein verbundenen remotereplikat, eine der:<br /><br /> 0 = Wird aufgelöst<br /><br /> 1 = Primär<br /><br /> 2 = Sekundär<br /><br /> Informationen über [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]-Rollen finden Sie unter [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
+|**role**|**tinyint**|Aktuelle [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] Rolle ein lokales Replikat oder ein verbundenen remotereplikat, eine der:<br /><br /> 0 = Wird aufgelöst<br /><br /> 1 = Primär<br /><br /> 2 = Sekundär<br /><br /> Informationen über [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]-Rollen finden Sie unter [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
 |**role_desc**|**nvarchar(60)**|Beschreibung des **Rolle**, eine von:<br /><br /> RESOLVING<br /><br /> PRIMARY<br /><br /> SECONDARY|  
 |**operational_state**|**tinyint**|Aktuellen Betriebszustand des eines Replikats:<br /><br /> 0 = Ausstehendes Failover<br /><br /> 1 = Ausstehend<br /><br /> 2 = Online<br /><br /> 3 = Offline<br /><br /> 4 = Fehler<br /><br /> 5 = Fehler, kein Quorum<br /><br /> NULL = Das Replikat ist nicht lokal.<br /><br /> Weitere Informationen finden Sie unter [Rollen und Betriebszustände](#RolesAndOperationalStates)weiter unten in diesem Thema.|  
-|**operative\_Zustand\_"DESC"**|**nvarchar(60)**|Beschreibung des **operational\_Status**, eine von:<br /><br /> PENDING_FAILOVER<br /><br /> PENDING<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> FAILED<br /><br /> FAILED_NO_QUORUM<br /><br /> NULL|  
-|**Wiederherstellung\_Integrität**|**tinyint**|Rollup der **Datenbank\_Zustand** Spalte die [Sys. dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) -verwaltungssicht. Im folgenden sind die möglichen Werte und deren Beschreibungen.<br /><br /> 0: in Bearbeitung.  Mindestens eine verknüpfte Datenbank verfügt über einen anderen Datenbankstatus als ONLINE (**Datenbank\_Zustand** ist nicht 0 ist).<br /><br /> 1: online. Alle verknüpften Datenbanken haben den Datenbankstatus ONLINE (**Database_state** ist 0).<br /><br /> NULL: **Is_local** = 0|  
+|**operational\_state\_desc**|**nvarchar(60)**|Beschreibung des **operational\_Status**, eine von:<br /><br /> PENDING_FAILOVER<br /><br /> PENDING<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> FAILED<br /><br /> FAILED_NO_QUORUM<br /><br /> NULL|  
+|**recovery\_health**|**tinyint**|Rollup der **Datenbank\_Zustand** Spalte die [Sys. dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) -verwaltungssicht. Im folgenden sind die möglichen Werte und deren Beschreibungen.<br /><br /> 0: in Bearbeitung.  Mindestens eine verknüpfte Datenbank verfügt über einen anderen Datenbankstatus als ONLINE (**Datenbank\_Zustand** ist nicht 0 ist).<br /><br /> 1: online. Alle verknüpften Datenbanken haben den Datenbankstatus ONLINE (**Database_state** ist 0).<br /><br /> NULL: **Is_local** = 0|  
 |**recovery_health_desc**|**nvarchar(60)**|Beschreibung des **Recovery_health**, eine von:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**Synchronisierung\_Integrität**|**tinyint**|Stellt ein Rollup von der datenbanksynchronisierungsstatus (**Synchronization_state**) aller verknüpften verfügbarkeitsdatenbanken (auch bekannt als *Replikate*) und den Verfügbarkeitsmodus für das Replikat () synchroner oder asynchroner Commit-Modus). Das Rollup wider der am wenigsten fehlerfreien akkumulierten Status der Datenbanken auf dem Replikat. Im folgenden sind die möglichen Werte und deren Beschreibungen.<br /><br /> 0: nicht fehlerfrei.   Mindestens eine verknüpfte Datenbank weist den Status NOT SYNCHRONIZING auf.<br /><br /> 1: teilweise fehlerfrei. Einige Replikate befinden sich nicht im Zielsynchronisierungsstatus: Replikate mit synchronem Commit sollten synchronisiert sein, und Replikate mit asynchronem Commit sollten synchronisiert werden.<br /><br /> 2: fehlerfrei. Alle Replikate befinden sich im Zielsynchronisierungsstatus: Replikate mit synchronem Commit sind synchronisiert, und Replikate mit asynchronem Commit werden synchronisiert.|  
 |**synchronization_health_desc**|**nvarchar(60)**|Beschreibung des **"synchronization_health"**, eine von:<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
@@ -93,7 +95,7 @@ ms.lasthandoff: 11/17/2017
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Überwachen von Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

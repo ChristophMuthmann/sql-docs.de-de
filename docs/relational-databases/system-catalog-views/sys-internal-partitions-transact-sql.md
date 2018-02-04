@@ -8,26 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
 - SQL Server 2016 Preview
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83cb1a2bc846f21a12b3d83b0499edf70b404656
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a3280403d6194bd3f5370985d31e672752ed8c25
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysinternalpartitions-transact-sql"></a>Sys.internal_partitions (Transact-SQL)
+# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Gibt eine Zeile für jedes Rowset, das die interne Daten für columnstore-Indizes für datenträgerbasierte Tabellen nachverfolgt. Diese Rowsets sind für columnstore-Indizes intern, und speichern nachverfolgen, die gelöschte Zeilen, Zeilengruppe Zuordnungen und Delta-Zeilengruppen. Sie verfolgen Daten für jede für jede Tabellenpartition; Jede Tabelle weist mindestens eine Partition. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die Rowsets wird neu erstellt jedes Mal, die sie den columnstore-Index neu erstellt.   
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/17/2017
  Erfordert die Mitgliedschaft in der **public** -Rolle. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]neue interne Columnstore-Indizes wird neu erstellt jedes Mal, die es erstellt oder neu erstellt einen columnstore-Index.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neue interne Columnstore-Indizes wird neu erstellt jedes Mal, die es erstellt oder neu erstellt einen columnstore-Index.  
   
 ## <a name="examples"></a>Beispiele  
   

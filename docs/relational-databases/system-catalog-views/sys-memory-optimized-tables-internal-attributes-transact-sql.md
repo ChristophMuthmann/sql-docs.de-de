@@ -1,5 +1,5 @@
 ---
-title: memory_optimized_tables_internal_attributes (Transact-SQL) | Microsoft Docs
+title: sys.memory_optimized_tables_internal_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,26 +17,28 @@ f1_keywords:
 - sys.memory_optimized_tables_internal_attributes_TSQL
 - memory_optimized_tables_internal_attributes
 - memory_optimized_tables_internal_attributes_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.memory_optimized_tables_internal_attributes catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.memory_optimized_tables_internal_attributes catalog view
 ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jodebrui
 ms.author: jodebrui
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ab05ef27e9687be506db960e628868cb08184d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 97bc9da007e21fd6f686795776b9d96ab53b3c77
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Enthält eine Zeile für jede interne speicheroptimierte Tabelle, die zum Speichern von speicheroptimierten Benutzertabellen verwendet wird. Jede Benutzertabelle entspricht mindestens einer internen Tabelle. Eine einzelne Tabelle wird für die Speicherung von Kerndaten verwendet. Zusätzliche interne Tabellen werden für die Unterstützung von Funktionen wie dem temporalen Columnstore-Index und die Speicherung außerhalb von Zeilen (LOB) für speicheroptimierte Tabellen verwendet.
  
-| Spaltenname  | Datentyp  | Beschreibung |
+| Spaltenname  | Datentyp  | Description |
 | :------ |:----------| :-----|
 |object_id  |**int**|       Die ID der Benutzertabelle. Interne speicheroptimierte Tabellen, die der Unterstützung einer Benutzertabelle dienen (wie etwa Speicherung außerhalb der Zeile oder gelöschte Zeilen im Fall von Hk/Columnstore-Kombinationen), weisen die gleiche object_id wie ihr übergeordnetes Objekt auf. |
 |xtp_object_id  |**bigint**|    In-Memory-OLTP-Objekt-ID, die der internen speicheroptimierten Tabelle entspricht, die für die Unterstützung der Benutzertabelle verwendet wird. Sie ist innerhalb der Datenbank eindeutig und kann sich im Lauf der Lebensspanne des Objekts ändern. 

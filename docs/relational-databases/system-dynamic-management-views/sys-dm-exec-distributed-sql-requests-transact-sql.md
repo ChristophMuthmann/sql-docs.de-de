@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_distributed_sql_requests (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_distributed_sql_requests (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,32 +8,34 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DM_EXEC_DISTRIBUTED_SQL_REQUESTS_TSQL
 - SYS.DM_EXEC_DISTRIBUTED_SQL_REQUESTS_TSQL
 - DM_EXEC_DISTRIBUTED_SQL_REQUESTS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PolyBase,views
 - PolyBase
 - sys.dm_exec_distributed_requests management view
 - dm_exec_distributed_requests management view
 ms.assetid: d065dc01-35d4-472f-9554-53ac41e7d104
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 922f2ce79dbabe3670b3488299a530b2a28e0cc2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5ae66757f7d7977ab91420267d6c45be205d72c4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexecdistributedsqlrequests-transact-sql"></a>Sys.dm_exec_distributed_sql_requests (Transact-SQL)
+# <a name="sysdmexecdistributedsqlrequests-transact-sql"></a>sys.dm_exec_distributed_sql_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Enthält Informationen über alle Verteilungen der SQL-Abfrage als Teil eines SQL-Schritts in der Abfrage.  In dieser Ansicht werden die Daten für die letzten 1000 Anforderungen; aktive Anforderungen haben immer die Daten in dieser Ansicht vorhanden.  

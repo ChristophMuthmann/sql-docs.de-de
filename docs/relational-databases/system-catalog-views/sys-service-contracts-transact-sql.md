@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.service_contracts_TSQL
 - sys.service_contracts
 - service_contracts
-dev_langs: TSQL
-helpviewer_keywords: sys.service_contracts catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.service_contracts catalog view
 ms.assetid: 787dd47e-4210-439d-9c4a-57a727a0dbd8
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c3ec7fe78d3592da30f723952f60f72886af1e2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e6e74ee445e81f6ac91f540696a7d9cd39897f84
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysservicecontracts-transact-sql"></a>sys.service_contracts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

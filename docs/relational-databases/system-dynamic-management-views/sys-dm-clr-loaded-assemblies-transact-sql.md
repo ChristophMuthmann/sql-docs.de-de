@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_clr_loaded_assemblies_TSQL
 - dm_clr_loaded_assemblies_TSQL
 - sys.dm_clr_loaded_assemblies
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_clr_loaded_assemblies dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_clr_loaded_assemblies dynamic management view
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44005aa828f6c8225832f961a7f32b8be8c5566e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a5c24a05e1f33512234edafd3fb6d2672a8eee6a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmclrloadedassemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -8,32 +8,34 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SYS.DM_EXEC_DMS_WORKERS_TSQL
 - DM_EXEC_DMS_WORKERS_TSQL
 - DM_EXEC_DMS_WORKERS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PolyBase,views
 - PolyBase
 - dm_exec_dms_workers management view
 - sys.dm_exec_dms_workers management view
 ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5677eb04a9a5809c2caf25d37edd288e4b1efbc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ec7edcfc352e2addf3ba69d5915a11b25f483eba
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexecdmsworkers-transact-sql"></a>Sys.dm_exec_dms_workers (Transact-SQL)
+# <a name="sysdmexecdmsworkers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Enthält Informationen zu allen Workern DMS-Schritte.  

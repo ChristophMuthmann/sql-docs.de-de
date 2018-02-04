@@ -3,7 +3,7 @@ title: "SLES Cluster für SQL Server-Verfügbarkeitsgruppe konfigurieren | Micro
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 05/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.workload: Inactive
-ms.openlocfilehash: 7bb98b8da1af1b97b9c06b58e5b8264a653547d3
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c33c1cea948e64c69e52475e8c63ecce0c52bd6d
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SLES Cluster für SQL Server-Verfügbarkeitsgruppe zu konfigurieren.
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Dieses Handbuch enthält Anweisungen, um einen Cluster mit drei Knoten für SQL Server auf SUSE Linux Enterprise Server 12 SP2 (SLES) zu erstellen. Für hohe Verfügbarkeit, eine verfügbarkeitsgruppe unter Linux erfordert drei Knoten?: Siehe [hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md). Die clustering-Ebene basiert auf SUSE [hohe Verfügbarkeit Erweiterung (HAE)](https://www.suse.com/products/highavailability) baut auf [Schrittmacher](http://clusterlabs.org/). 
 
@@ -33,7 +33,7 @@ Weitere Informationen zur Clusterkonfiguration, Ressourcenoptionen-Agent, Manage
 >SQL Server Integration in Schrittmacher unter Linux ist an diesem Punkt nicht als gekoppelten als mit WSFC unter Windows. SQL Server-Dienst unter Linux ist nicht clusterfähig. Schrittmacher steuert alle Clusterressourcen, die verfügbarkeitsgruppenressource einschließlich Orchestrierung. Unter Linux sollten Sie nicht immer auf Verfügbarkeit Gruppe dynamische Verwaltungssichten (DMVs) abhängig, die Clusterinformationen z. B. sys. dm_hadr_cluster bereitstellen. Außerdem virtuellen Netzwerknamen bezieht sich auf WSFC, es gibt keine Entsprechung in Schrittmacher identisch. Sie können einen Listener für die Verwendung für transparente wiederverbindung nach einem Failover weiterhin erstellen, jedoch müssen Sie manuell den verfügbarkeitsgruppenlistener-Namen in der DNS-Server für die IP-Adresse verwendet, um die virtuelle IP-Adressressource erstellen (wie nachstehend beschrieben) registrieren.
 
 
-## <a name="roadmap"></a>Roadmap für die
+## <a name="roadmap"></a>Roadmap
 
 Die Schritte zum Erstellen einer verfügbarkeitsgruppe auf Linux-Servern zwecks hoher Verfügbarkeit unterscheiden sich von den Schritten in einem Windows Server-Failovercluster. Die folgende Liste beschreibt auf hoher Ebene die Schritte aus: 
 
@@ -122,9 +122,9 @@ Konfigurieren der verfügbarkeitsgruppe, und konfigurieren Sie die Clusterressou
 
 3. So konfigurieren Sie die clusterkommunikationsebene (Corosync): 
 
-   a. Geben Sie eine Netzwerkadresse zum Binden an. Standardmäßig wird das Skript die Netzwerkadresse des eth0 vorzuschlagen. Alternativ geben Sie eine andere Netzwerkadresse, z. B. die Adresse des bond0 ein. 
+   A. Geben Sie eine Netzwerkadresse zum Binden an. Standardmäßig wird das Skript die Netzwerkadresse des eth0 vorzuschlagen. Alternativ geben Sie eine andere Netzwerkadresse, z. B. die Adresse des bond0 ein. 
 
-   b. Geben Sie eine Multicastadresse. Das Skript schlägt eine zufällige Adresse, die als Standard verwendet werden können. 
+   B. Geben Sie eine Multicastadresse. Das Skript schlägt eine zufällige Adresse, die als Standard verwendet werden können. 
 
    c. Geben Sie einen multicast-Port. Das Skript schlägt 5405 als Standard. 
 
@@ -147,7 +147,7 @@ Konfigurieren der verfügbarkeitsgruppe, und konfigurieren Sie die Clusterressou
 
 ## <a name="add-nodes-to-the-existing-cluster"></a>Hinzufügen von Knoten zum vorhandenen cluster
 
-Wenn Sie einen Cluster mit einem oder mehreren Knoten ausgeführt haben, fügen Sie weitere Clusterknoten mit dem bootstrap-ha-Cluster-Join-Skript hinzu. Das Skript wird nur benötigt Zugriff auf einen vorhandenen Clusterknoten und der grundlegenden Setup auf dem aktuellen Computer wird automatisch abgeschlossen. Führen Sie die folgenden Schritte aus:
+Wenn Sie einen Cluster mit einem oder mehreren Knoten ausgeführt haben, fügen Sie weitere Clusterknoten mit dem bootstrap-ha-Cluster-Join-Skript hinzu. Das Skript wird nur benötigt Zugriff auf einen vorhandenen Clusterknoten und der grundlegenden Setup auf dem aktuellen Computer wird automatisch abgeschlossen. Führen Sie dafür die folgenden Schritte aus:
 
 Wenn Sie die vorhandenen Clusterknoten mit konfiguriert haben die `YaST` cluster-Modul, stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind, vor dem Ausführen `ha-cluster-join`:
 - Der Root-Benutzer auf den vorhandenen Knoten hat SSH-Schlüssel für passwordless Anmeldung eingerichtet. 

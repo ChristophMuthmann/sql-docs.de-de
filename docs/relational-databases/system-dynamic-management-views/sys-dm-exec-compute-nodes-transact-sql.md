@@ -8,32 +8,34 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DM_EXEC_COMPUTE_NODES_TSQL
 - DM_EXEC_COMPUTE_NODES
 - SYS.DM_EXEC_COMPUTE_NODES_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_exec_compute_nodes management view
 - PolyBase, views
 - PolyBase management views
 - dm_exec_compute_nodes management view
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4affdf5cdcab66ffacab6bb40596855938ad1b98
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cdd765d5f7b46e1189357e588d8b28ddd7acd029
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexeccomputenodes-transact-sql"></a>Sys.dm_exec_compute_nodes (Transact-SQL)
+# <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Enthält Informationen zu Knoten mit PolyBase-datenverwaltung verwendet. Sie enthält eine Zeile pro Knoten.  
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |Spaltenname|Datentyp|Description|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|Eindeutige numerische Id, die dem Knoten zugeordnet. Der Schlüssel für diese Ansicht.|Für Cluster mit horizontaler Skalierung, unabhängig vom Typ eindeutig.|  
-|Typ|**nvarchar(32)**|Der Typ des Knotens.|"COMPUTE", "HEAD"|  
+|Typ|**nvarchar(32)**|Der Typ des Knotens.|'COMPUTE', ‘HEAD’|  
 |name|**nvarchar(32)**|Logischer Name des Knotens.|Eine beliebige Zeichenfolge entsprechenden Länge.|  
 |address|**nvarchar(32)**|P-Adresse dieses Knotens.|IP-Adressbereich|  
   

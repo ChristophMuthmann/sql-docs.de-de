@@ -3,7 +3,7 @@ title: Wiederherstellen einer SQL Server-Datenbank in Docker | Microsoft Docs
 description: In diesem Lernprogramm werden wiederherstellen wie einer SQL Server-datenbanksicherung in einem neuen Linux-Docker-Container.
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 35a8e5ef7b08530b54d751636c122c6455971faf
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 4b336a3800b9ccd30196f61fcd971b5fbcc0127b
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Wiederherstellen einer SQL Server-Datenbank in einem Linux-Docker-container
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Dieses Lernprogramm veranschaulicht, wie verschoben und Wiederherstellen einer SQL Server-Sicherungsdatei in einem SQL Server 2017 Linux-containerimage in Docker ausgeführt wird.
 

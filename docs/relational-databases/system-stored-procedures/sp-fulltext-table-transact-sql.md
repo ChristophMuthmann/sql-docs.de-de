@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_table_TSQL
 - sp_fulltext_table
-dev_langs: TSQL
-helpviewer_keywords: sp_fulltext_table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_fulltext_table
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6ca014dd3d76c57402fe8a3af7bb8bb33fa4fce
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1827d90dab1dc4be8acbc3cf3e00bfe97d4b1bae
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   Markiert eine Tabelle für die Volltextindizierung oder hebt die Markierung auf.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwendung [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md), und [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwendung [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md), und [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) stattdessen.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,15 +55,15 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@tabname=**] **"***Qualified_table_name***"**  
+ [ **@tabname=**] **'***qualified_table_name***'**  
  Ein ein- oder zweiteiliger Tabellenname. Die Tabelle muss in der aktuellen Datenbank vorhanden sein. *qualified_table_name* weist den Datentyp **nvarchar(517)**auf und hat keinen Standardwert.  
   
- [  **@action=**] **"***Aktion***"**  
+ [ **@action=**] **'***action***'**  
  Die Aktion, die ausgeführt werden soll. *action* ist vom Datentyp **nvarchar(50)**und hat keinen Standardwert. Die folgenden Werte sind möglich:  
   
 |Wert|Description|  
 |-----------|-----------------|  
-|**Erstellen**|Erstellt die Metadaten für einen Volltextindex für die Tabelle, auf die durch *qualified_table_name* verwiesen wird. Darüber hinaus wird angegeben, dass der Volltextindex für diese Tabelle in *fulltext_catalog_name*gespeichert werden soll. Diese Aktion legt außerdem die Verwendung von *unique_index_name* als Volltextschlüsselspalte fest. Dieser eindeutige Index muss bereits vorhanden sein und muss für eine Spalte der Tabelle definiert sein.<br /><br /> Eine Volltextsuche für diese Tabelle kann erst durchgeführt werden, wenn der Volltextkatalog aufgefüllt ist.|  
+|**Create**|Erstellt die Metadaten für einen Volltextindex für die Tabelle, auf die durch *qualified_table_name* verwiesen wird. Darüber hinaus wird angegeben, dass der Volltextindex für diese Tabelle in *fulltext_catalog_name*gespeichert werden soll. Diese Aktion legt außerdem die Verwendung von *unique_index_name* als Volltextschlüsselspalte fest. Dieser eindeutige Index muss bereits vorhanden sein und muss für eine Spalte der Tabelle definiert sein.<br /><br /> Eine Volltextsuche für diese Tabelle kann erst durchgeführt werden, wenn der Volltextkatalog aufgefüllt ist.|  
 |**Drop**|Löscht die Metadaten für den Volltextindex für *qualified_table_name*. Ist der Volltextindex aktiviert, wird er vor dem Löschen automatisch deaktiviert. Es ist nicht erforderlich, Spalten zu entfernen, bevor der Volltextindex gelöscht wird.|  
 |**Activate**|Aktiviert die Möglichkeit, Volltextindexdaten für *qualified_table_name*nach der Deaktivierung zu sammeln. Es muss mindestens eine Spalte im Volltextindex vorhanden sein, damit er aktiviert werden kann.<br /><br /> Ein Volltextindex wird automatisch (für das Auffüllen) aktiviert, sobald die erste Spalte für die Indizierung hinzugefügt wird. Wenn die letzte Spalte aus dem Index gelöscht wird, wird der Index inaktiv. Wenn die Änderungsprotokollierung aktiviert ist, wird durch Aktivieren eines inaktiven Index ein neuer Auffüllvorgang gestartet.<br /><br /> Beachten Sie, dass dadurch nicht der eigentliche Volltextindex aufgefüllt wird, sondern nur die Tabelle im Volltextkatalog des Dateisystems registriert wird, um Zeilen von *qualified_table_name* während der nächsten Volltextindexauffüllung abrufen zu können.|  
 |**Deaktivieren**|Deaktiviert den Volltextindex für *qualified_table_name* , sodass die Volltextindexdaten für *qualified_table_name*nicht mehr gesammelt werden können. Die Volltextindexmetadaten sind weiterhin vorhanden, und die Tabelle kann erneut aktiviert werden.<br /><br /> Wenn die Änderungsnachverfolgung aktiviert ist, wird der Status des Indexes durch die Deaktivierung eines aktiven Index eingefroren: derzeit ausgeführte Auffüllungsprozesse werden beendet, und dem Index werden keine Änderungen mehr hinzugefügt.|  
@@ -73,10 +76,10 @@ sp_fulltext_table
 |**start_incremental**|Startet eine inkrementelle Auffüllung des Volltextindexes für die Tabelle.|  
 |**Beenden**|Beendet das vollständige oder inkrementelle Auffüllen.|  
   
- [  **@ftcat=**] **"***Fulltext_catalog_name***"**  
+ [ **@ftcat=**] **'***fulltext_catalog_name***'**  
  Bei einer **create** -Aktion ein gültiger, vorhandener Volltextkatalogname. Bei allen anderen Aktionen muss dieser Parameter NULL sein. *fulltext_catalog_name* ist vom Datentyp **sysname**. Der Standardwert ist NULL.  
   
- [  **@keyname=**] **"***Unique_index_name***"**  
+ [ **@keyname=**] **'***unique_index_name***'**  
  Bei einer **create** *qualified_table_name* -Aktion ein gültiger, einspaltiger und eindeutiger Index ungleich NULL für. Bei allen anderen Aktionen muss dieser Parameter NULL sein. *unique_index_name* ist vom Datentyp **sysname**. Der Standardwert ist NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -137,9 +140,9 @@ GO
 ## <a name="see-also"></a>Siehe auch  
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [Sp_help_fulltext_tables &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
- [Sp_help_fulltext_tables_cursor &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
- [Sp_helpindex &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
+ [sp_help_fulltext_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
+ [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Volltextsuche und semantische Suche gespeicherte Systemprozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   

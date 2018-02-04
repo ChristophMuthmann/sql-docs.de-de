@@ -3,7 +3,7 @@ title: Erste Schritte mit SQL Server-2017 in der Cloud | Microsoft Docs
 description: "Dieser Schnellstart-Lernprogramm zeigt, wie der SQL Server-2017 unter Linux in der Cloud Ihrer Wahl ausführen."
 author: annashres
 ms.author: annashres
-manager: jhubbard
+manager: craigg
 ms.date: 10/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -11,15 +11,15 @@ ms.prod_service: database-engine
 ms.component: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 9fa5f2751b515b86574165e6f6cda8f0b9e6661a
-ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
+ms.openlocfilehash: 645c3e11621b1c9faecffc7edf76df9a6a1eabab
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="run-the-sql-server-2017-in-the-cloud"></a>Führen Sie die SQL Server-2017 in der cloud
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In diesem Schnellstart-Lernprogramm installieren Sie SQL Server-2017 unter Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) oder Ubuntu in der Cloud Ihrer Wahl. Wechseln Sie zu [Bereitstellen eines Linux SQL Server-virtuellen Computers im Azure-Portal](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) zu SQL Server unter Linux in Azure ausgeführt wird.
 
@@ -28,7 +28,7 @@ In diesem Schnellstart-Lernprogramm installieren Sie SQL Server-2017 unter Red H
 
 ## <a name="amazon-web-services"></a>Amazon Web Services
 1.  Erstellen Sie eine Linux AMI mit mindestens 2 GB Arbeitsspeicher aus dem marketplace 
-    * [RHEL 7.3 +](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
+    * [RHEL 7.3+](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  Herstellen einer Verbindung mit der AMI mit ssh
@@ -52,9 +52,9 @@ In diesem Schnellstart-Lernprogramm installieren Sie SQL Server-2017 unter Red H
     * Am oberen Rand der Systemsteuerung, befolgen Sie die **Networking** verknüpfen, und wählen Sie dann **Firewalls**
     * Fügen Sie eine eingehende Regel zum Zulassen von Datenverkehr an den Port auf dem SQL Server (standardmäßig TCP-Port 1433) lauscht hinzu
     
-## <a name="google-cloud-platform"></a>Google Cloud-Plattform
+## <a name="google-cloud-platform"></a>Google Cloud Platform
 1.  Erstellen Sie eine Linux-Image mit mindestens 2 GB Arbeitsspeicher aus dem Cloud-Startprogramm 
-    * [RHEL 7.3 +](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
+    * [RHEL 7.3+](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  Herstellen einer Verbindung mit dem Image mit ssh

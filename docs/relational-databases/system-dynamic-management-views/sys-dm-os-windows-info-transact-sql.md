@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_windows_info_TSQL
 - sys.dm_os_windows_info
 - sys.dm_os_windows_info_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_windows_info dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_windows_info dynamic management view
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 759ac050225bdc1abd78a6400152c6ee7f89dcfd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bdb100404984cd679c2899a78a655872afbf501c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmoswindowsinfo-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

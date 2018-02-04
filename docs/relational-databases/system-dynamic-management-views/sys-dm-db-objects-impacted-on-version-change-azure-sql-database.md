@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_objects_impacted_on_version_change (Azure SQL-Datenbank) | Microsoft Docs
+title: sys.dm_db_objects_impacted_on_version_change (Azure SQL Database) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: 
@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_db_objects_impacted_on_version_change
 - dm_db_objects_impacted_on_version_change_TSQL
 - sys.dm_db_objects_impacted_on_version_change
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dm_db_objects_impacted_on_version_change
 - sys.dm_db_objects_impacted_on_version_change
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab63b177449c0648f033773197ee32b48ec0d3f5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 049b26742484e432cad95a6913fa3dad10d69dbe
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -42,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 |class|**Int** NOT NULL|Die Klasse des Objekts, das betroffen sein wird:<br /><br /> **1** = Einschränkung<br /><br /> **7** = Indizes und Heaps|  
 |class_desc|**nvarchar(60)** NOT NULL|Beschreibung der Klasse:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**Int** NOT NULL|Objekt-ID der Einschränkung oder Objekt-ID der Tabelle, die den Index oder Heap enthält.|  
-|minor_id|**Int** NULL|**NULL** für Einschränkungen<br /><br /> Index_id für Indizes und Heaps|  
+|minor_id|**int** NULL|**NULL** für Einschränkungen<br /><br /> Index_id für Indizes und Heaps|  
 |Abhängigkeit|**nvarchar(60)** NOT NULL|Beschreibung der Abhängigkeit, die bewirkt, dass die Einschränkung oder der Index betroffen sind. Derselbe Wert wird auch für Warnungen verwendet, die während des Upgrades generiert werden.<br /><br /> Beispiele:<br /><br /> **Speicherplatz** (für systeminterne)<br /><br /> **Geometrie** (für System-UDT)<br /><br /> **Geography:: Parse** (für System-UDT-Methode)|  
   
 ## <a name="permissions"></a>Berechtigungen  

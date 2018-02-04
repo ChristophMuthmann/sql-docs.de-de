@@ -3,7 +3,7 @@ title: VDI-Spezifikation Backup - SQLServer on Linux | Microsoft Docs
 description: SQL Server Backup Virtual Device Interface Specification.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
-ms.openlocfilehash: 31fc2a5d96f38cbbcd0c4b616bcfc75c552c1340
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: fc2fa01902fee76b85c4b348d701166845a6d95e
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server auf Linux VDI-Client-SDK-Spezifikation
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Dieses Dokument behandelt die Schnittstellen, die von SQL Server auf Linux virtual Device Interface (VDI) Client-SDK bereitgestellt wird. Unabhängige Softwarehersteller (ISVs) können die virtuellen Sicherung Gerät Application Programming Interface (API), SQL Server in ihre Produkte integrieren. Im Allgemeinen verhält sich VDI unter Linux auf ähnliche Weise zu VDI unter Windows mit folgenden Änderungen:
 
@@ -110,7 +110,7 @@ Das Kapitel enthält Beschreibungen der einzelnen Clientfunktionen. Die Beschrei
 
 | Parameter | Argument | Erklärung
 | ----- | ----- | ------ |
-| | **Timeout** | Dies ist das Timeout in Millisekunden. Verwenden Sie INFINITE oder eine negative ganze Zahl, um Timeouts zu verhindern.
+| | **timeout** | Dies ist das Timeout in Millisekunden. Verwenden Sie INFINITE oder eine negative ganze Zahl, um Timeouts zu verhindern.
 | | **cfg** | Nach erfolgreicher Ausführung enthält diese Spalte die Konfiguration vom Server ausgewählt. Weitere Informationen finden Sie unter "Konfiguration" weiter unten in diesem Dokument.
 
 | Rückgabewerte | Argument | Erklärung
@@ -165,14 +165,14 @@ Wenn diese Funktion nicht erfolgreich ist, wird ein null-Wert durch die PpVirtua
 
 | Parameter | Argument | Erklärung
 | ----- | ----- | ------ |
-| |**Timeout** |Dies ist die Zeit in Millisekunden zu warten. Verwenden Sie Infinite, um unbegrenzt zu warten. Verwenden Sie 0 für einen Befehl abrufen. VD_E_TIMEOUT wird zurückgegeben, wenn kein Befehl derzeit verfügbar ist. Wenn das Timeout auftritt, entscheidet der Client die nächste Aktion aus.
+| |**timeout** |Dies ist die Zeit in Millisekunden zu warten. Verwenden Sie Infinite, um unbegrenzt zu warten. Verwenden Sie 0 für einen Befehl abrufen. VD_E_TIMEOUT wird zurückgegeben, wenn kein Befehl derzeit verfügbar ist. Wenn das Timeout auftritt, entscheidet der Client die nächste Aktion aus.
 | |**Timeout** |Dies ist die Zeit in Millisekunden zu warten. Verwenden Sie Infinite oder einen negativen Wert, um unbegrenzt zu warten. Verwenden Sie 0 für einen Befehl abrufen. VD_E_TIMEOUT wird zurückgegeben, wenn kein Befehl verfügbar ist, bevor das Timeout abläuft. Wenn das Timeout auftritt, entscheidet der Client die nächste Aktion aus.
 | |**ppCmd** |Wenn ein Befehl wurde erfolgreich zurückgegeben wird, wird die Adresse eines Befehls zum Ausführen von Parameters zurückgegeben. Der zurückgegebene Arbeitsspeicher ist schreibgeschützt. Wenn der Befehl abgeschlossen ist, wird dieser Zeiger an die Routine CompleteCommand übergeben. Weitere Informationen zu jedem Befehl finden Sie unter "Befehle" weiter unten in diesem Dokument.
         
 | Rückgabewerte | Argument | Erklärung
 | ----- | ----- | ------ |
 | |**NOERROR ZURÜCK** |Ein Befehl wurde abgerufen.
-| |**VD_E_CLOSE ZURÜCKGEGEBEN** |Das Gerät wurde vom Server geschlossen.
+| |**VD_E_CLOSE** |Das Gerät wurde vom Server geschlossen.
 | |**VD_E_TIMEOUT** |Es wurde kein Befehl verfügbar, und vor dem abgelaufenen Timeoutintervall.
 | |**VD_E_ABORT** |Der Client oder der Server hat die SignalAbort verwendet, um ein Herunterfahren erzwungen.
 
@@ -199,7 +199,7 @@ Wenn diese Routine blockieren muss, warten Sie einen Befehl, wird der Thread in 
 | |**pCmd** |Dies ist die Adresse eines Befehls, der zuvor von ClientVirtualDevice::GetCommand zurückgegeben wird.
 | |**completionCode** |Dies ist ein Statuscode "", der den Abschlussstatus angibt. Dieser Parameter muss für alle Befehle zurückgegeben werden. Der zurückgegebene Code sollte an den ausgeführten Befehl geeignet sein. ERROR_SUCCESS wird in allen Fällen verwendet, um einem erfolgreich ausgeführten Befehl zu kennzeichnen. Die vollständige Liste der möglichen Fehlercodes, finden Sie in der Datei vdierror.h. Eine Liste der typische Statuscodes für jeden Befehl wird in "Befehle" weiter unten in diesem Dokument.
 | |**bytesTransferred** |Dies ist die Anzahl der erfolgreich übertragenen Bytes. Dies wird nur für die Datenübertragung zurückgegeben, Befehle lesen und schreiben.
-| |**Position** |Dies ist eine Antwort auf die GetPosition-Befehl.
+| |**position** |Dies ist eine Antwort auf die GetPosition-Befehl.
         
 | Rückgabewerte | Argument | Erklärung
 | ----- | ----- | ------ |

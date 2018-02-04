@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - dm_os_sys_info
 - dm_os_sys_info_TSQL
 - sys.dm_os_sys_info
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_os_sys_info dynamic management view
 - time [SQL Server], instance started
 - starting time
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
-caps.latest.revision: "57"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7cc99a6d0f31d19909d41bde4dcd354d1e045215
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 21fe61d34a9b8823af499b64aef0eaef95c1a92e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -64,7 +66,7 @@ ms.lasthandoff: 11/17/2017
 |**scheduler_count**|**int**|Stellt die Anzahl der im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozess konfigurierten Benutzer-Zeitplanungsmodule dar. Lässt keine NULL-Werte zu.|  
 |**scheduler_total_count**|**int**|Stellt die Gesamtanzahl der Zeitplanungsmodule in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dar. Lässt keine NULL-Werte zu.|  
 |**deadlock_monitor_serial_number**|**int**|Gibt die ID der aktuellen Deadlocküberwachungssequenz an. Lässt keine NULL-Werte zu.|  
-|**: sqlserver_start_time_ms_ticks**|**bigint**|Stellt die **Ms_tick** Anzahl beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zuletzt gestartet wurde. Vergleicht diesen Wert mit dem aktuellen Wert in der ms_ticks-Spalte. Lässt keine NULL-Werte zu.|  
+|**sqlserver_start_time_ms_ticks**|**bigint**|Stellt die **Ms_tick** Anzahl beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zuletzt gestartet wurde. Vergleicht diesen Wert mit dem aktuellen Wert in der ms_ticks-Spalte. Lässt keine NULL-Werte zu.|  
 |**sqlserver_start_time**|**datetime**|Gibt das Datum und die Uhrzeit an, wann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum letzten Mal gestartet wurde. Lässt keine NULL-Werte zu.|  
 |**affinity_type**|**int**|**Gilt für: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]**  über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt den Typ der Server-CPU-Prozessaffinität an, die derzeit verwendet wird. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [ALTER SERVER CONFIGURATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-server-configuration-transact-sql.md).<br /><br /> 1 = MANUELL<br /><br /> 2 = AUTO|  
 |**affinity_type_desc**|**varchar(60)**|**Gilt für: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** .<br /><br /> Beschreibt die **Affinity_type** Spalte. Lässt keine NULL-Werte zu.<br /><br /> MANUELL = Die Affinität wurde für mindestens eine CPU festgelegt.<br /><br /> AUTO = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Threads zwischen CPUs frei verschieben.|  

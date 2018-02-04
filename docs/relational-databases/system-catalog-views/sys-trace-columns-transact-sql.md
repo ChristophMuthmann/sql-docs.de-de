@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - trace_columns
 - trace_columns_TSQL
 - sys.trace_columns_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.trace_columns catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.trace_columns catalog view
 ms.assetid: 5c48eb09-9e9b-45dd-b151-ca39b026ece5
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7405b51d9071238a237a11ef7c0ceef78e2e7119
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 382cafec0dd9ad1bb9451408277b4dd8ebb6f05d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="systracecolumns-transact-sql"></a>sys.trace_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +45,9 @@ ms.lasthandoff: 11/27/2017
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**trace_event_id**|**smallint**|Eindeutige ID dieser Spalte.|  
-|**name**|**vom Datentyp nvarchar(128)**|Eindeutiger Name dieser Spalte. Dieser Parameter ist nicht lokalisiert.|  
-|**TYPE_NAME**|**vom Datentyp nvarchar(128)**|Datentypname dieser Spalte.|  
+|**trace_column_id**|**smallint**|Eindeutige ID dieser Spalte.|  
+|**name**|**nvarchar(128)**|Eindeutiger Name dieser Spalte. Dieser Parameter ist nicht lokalisiert.|  
+|**type_name**|**nvarchar(128)**|Datentypname dieser Spalte.|  
 |**max_size**|**int**|Maximale Datengröße dieser Spalte in Bytes.|  
 |**is_filterable**|**bit**|Gibt an, ob die Spalte in einer Filterdefinition verwendet werden kann.<br /><br /> 0 = "false"<br /><br /> 1 = TRUE|  
 |**is_repeatable**|**bit**|Gibt an, ob in den Daten für wiederholte Spalten auf diese Spalte verwiesen werden kann.<br /><br /> 0 = "false"<br /><br /> 1 = TRUE|  
@@ -55,10 +58,10 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Katalogsichten für Objekte &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Sys.Traces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
- [Sys. trace_categories &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
- [trace_events &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-trace-events-transact-sql.md)   
- [Sys. trace_event_bindings &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-trace-event-bindings-transact-sql.md)   
- [trace_subclass_values &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-trace-subclass-values-transact-sql.md)  
+ [sys.traces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
+ [sys.trace_categories &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
+ [sys.trace_events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-events-transact-sql.md)   
+ [sys.trace_event_bindings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-event-bindings-transact-sql.md)   
+ [sys.trace_subclass_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-subclass-values-transact-sql.md)  
   
   

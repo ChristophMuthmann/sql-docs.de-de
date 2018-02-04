@@ -2,9 +2,9 @@
 title: Active Directory-Authentifizierung mit SQLServer on Linux | Microsoft Docs
 description: "Dieses Lernprogramm bietet die Konfigurationsschritte für AAD-Authentifizierung für SQL Server on Linux."
 author: meet-bhagdev
-ms.date: 10/09/2017
+ms.date: 01/30/2018
 ms.author: meetb
-manager: jhubbard
+manager: craigg
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -13,17 +13,18 @@ ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
-helpviewer_keywords: Linux, AAD authentication
+helpviewer_keywords:
+- Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: d412eec0c27fac301f2ac6d319666f40004da409
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7de515aa08ec73ff6c7b90e9a630e59ca6f71252
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>Active Directory-Authentifizierung mit SQLServer on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In diesem Lernprogramm wird erläutert, wie konfigurieren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unter Linux, um Active Directory (AD)-Authentifizierung, auch bekannt als integrierte Authentifizierung zu unterstützen. AD-Authentifizierung ermöglicht Clients unter Windows oder Linux zu authentifizieren, die einer Domäne [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit ihren Domänenanmeldeinformationen und das Kerberos-Protokoll.
 
@@ -48,7 +49,7 @@ Dieses Lernprogramm umfasst die folgenden Aufgaben:
 Bevor Sie AD-Authentifizierung konfigurieren, müssen Sie:
 
 * Einrichten eines AD-Domänencontrollers (Windows) in Ihrem Netzwerk  
-* Installieren[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+* Install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   * [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -56,7 +57,7 @@ Bevor Sie AD-Authentifizierung konfigurieren, müssen Sie:
 > [!IMPORTANT]
 > Einschränkungen:
 > - Zu diesem Zeitpunkt ist die einzige Authentifizierungsmethode für Datenbank-Spiegelungsendpunkt unterstützt Zertifikat. WINDOWS-Authentifizierungsmethode wird in einer zukünftigen Version aktiviert.
-> - 3rd Party AD-Tools wie Centrify, Powerbroker und Vintela werden nicht unterstützt. 
+> - AD-Tools von Drittanbietern wie Centrify Powerbroker, und Vintela werden nicht unterstützt. 
 
 ## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Host mit AD-Domäne
 
@@ -96,7 +97,7 @@ Verwenden Sie die folgenden Schritte aus, um Verknüpfen einer [!INCLUDE[ssNoVer
       ```
 
       > [!NOTE]
-      > Die Netzwerkschnittstelle (eth0) unterscheiden sich für anderes Computer. Um herauszufinden, welcher Schlüssel, die Sie verwenden, führen Sie Ifconfig, und kopieren Sie die Schnittstelle, die eine IP-Adresse und die gesendeten und empfangenen Bytes hat.
+      > Die Netzwerkschnittstelle (eth0) unterscheiden sich für die verschiedenen Computern. Um herauszufinden, welcher Schlüssel, die Sie verwenden, führen Sie Ifconfig, und kopieren Sie die Schnittstelle, die eine IP-Adresse und die gesendeten und empfangenen Bytes hat.
 
       Starten Sie nach der Bearbeitung dieser Datei den Netzwerkdienst neu:
 
@@ -104,7 +105,7 @@ Verwenden Sie die folgenden Schritte aus, um Verknüpfen einer [!INCLUDE[ssNoVer
       sudo ifdown eth0 && sudo ifup eth0
       ```
 
-      Nun überprüfen Sie, ob Ihre `/etc/resolv.conf` Datei enthält eine Zeile wie folgt:  
+      Nun überprüfen Sie, ob Ihre `/etc/resolv.conf` Datei enthält eine Zeile wie im folgenden Beispiel:  
 
       ```Code
       nameserver **<AD domain controller IP address>**
@@ -126,7 +127,7 @@ Verwenden Sie die folgenden Schritte aus, um Verknüpfen einer [!INCLUDE[ssNoVer
      sudo systemctl restart network
      ```
 
-     Nun überprüfen Sie, ob Ihre `/etc/resolv.conf` Datei enthält eine Zeile wie folgt:  
+     Nun überprüfen Sie, ob Ihre `/etc/resolv.conf` Datei enthält eine Zeile wie im folgenden Beispiel:  
 
      ```Code
      nameserver **<AD domain controller IP address>**
@@ -134,9 +135,9 @@ Verwenden Sie die folgenden Schritte aus, um Verknüpfen einer [!INCLUDE[ssNoVer
 
 1. Treten Sie zur Domäne bei
 
-   Nachdem Sie bestätigt haben, dass DNS ordnungsgemäß konfiguriert ist, treten Sie der Domäne, indem Sie den folgenden Befehl ausführen. Sie müssen die Authentifizierung mit einem AD-Konto, das über ausreichende Berechtigungen in AD, um das Hinzufügen eines neuen Computers zur Domäne verfügt.
+   Nachdem Sie bestätigt haben, dass DNS ordnungsgemäß konfiguriert ist, treten Sie der Domäne, indem Sie den folgenden Befehl ausführen. Sie müssen zur Authentifizierung, verwenden ein AD-Konto, das über ausreichende Berechtigungen in AD, um das Hinzufügen eines neuen Computers zur Domäne verfügt.
 
-   Insbesondere werden mit diesem Befehl erstellen Sie ein neues Computerkonto in AD, erstellen Sie die `/etc/krb5.keytab` hosten Keytab-Datei, und konfigurieren Sie die Domäne in `/etc/sssd/sssd.conf`:
+   Insbesondere dieser Befehl erstellt ein neues Computerkonto in Active Directory, erstellen Sie die `/etc/krb5.keytab` hosten Keytab-Datei, und konfigurieren Sie die Domäne in `/etc/sssd/sssd.conf`:
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
@@ -149,7 +150,7 @@ Verwenden Sie die folgenden Schritte aus, um Verknüpfen einer [!INCLUDE[ssNoVer
    >
    > Erhalten Sie eine Fehlermeldung, "Unzureichende Berechtigungen für den Domänenbeitritt" müssen Sie mit Domänenadministrator überprüfen Sie, ob Sie über ausreichende Berechtigungen zum Linux-Computer mit Ihrer Domäne zu verknüpfen.
    
-   > SQL Server verwendet SSSD und NSS für die Zuordnung von Benutzerkonten und-Gruppen zu Sicherheits-IDs (SID). SSSD muss konfiguriert und wird ausgeführt, damit SQL Server zum erfolgreichen Erstellen von AD-Anmeldungen. Realmd in der Regel geschieht dies automatisch als Teil einer Domäne beizutreten, aber in einigen Fällen müssen Sie separat dazu.
+   > SQL Server verwendet SSSD und NSS für die Zuordnung von Benutzerkonten und-Gruppen zu Sicherheits-IDs (SID). SSSD muss konfiguriert und wird ausgeführt, damit SQL Server zum erfolgreichen Erstellen von AD-Anmeldungen. Realmd normalerweise der Fall ist dies automatisch als Teil einer Domäne beizutreten, aber in einigen Fällen müssen hierzu Sie separat.
    >
    > Sehen Sie sich die folgenden so konfigurieren Sie [SSSD manuell](https://access.redhat.com/articles/3023951), und [NSS SSSD portzuweisung konfigurieren](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
 
@@ -203,13 +204,13 @@ Weitere Informationen finden Sie unter Red Hat-Dokumentation für [Ermitteln von
    > [!NOTE]
    > Wenn Sie einen Fehler "nicht über ausreichende Zugriffsrechte," erhalten müssen Sie mit Domänenadministrator überprüfen Sie, ob Sie über ausreichende Berechtigungen, um einen SPN für dieses Konto festlegen.
    >
-   > Wenn Sie den TCP-Port in der Zukunft ändern, müssen Sie den Befehls "Setspn" mit die neue Portnummer erneut ausführen. Sie müssen auch die neuen SPN die Keytab-Datei für SQL Server-Dienst hinzufügen, indem Sie die Schritte im nächsten Abschnitt.
+   > Wenn Sie den TCP-Port in der Zukunft ändern, müssen Sie den Befehls "Setspn" erneut ausführen, mit die neue Portnummer. Sie müssen auch die neuen SPN die Keytab-Datei für SQL Server-Dienst hinzufügen, indem Sie die Schritte im nächsten Abschnitt.
 
 3. Weitere Informationen finden Sie unter [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
 ## <a name="configure-includessnoversionincludesssnoversion-mdmd-service-keytab"></a>Konfigurieren Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Dienst Keytab-Datei
 
-1. Überprüfen Sie die Versionsnummer des Schlüssels (Kvno) für das AD-Konto, das im vorherigen Schritt erstellt haben. Sie werden in der Regel 2, aber er kann eine andere ganze Zahl sein, wenn Sie das Kennwort des Kontos mehrmals geändert haben. Auf der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Hostcomputer, führen Sie Folgendes aus:
+1. Überprüfen Sie die Versionsnummer des Schlüssels (Kvno) für das AD-Konto, das im vorherigen Schritt erstellt haben. Ist in der Regel 2, aber er kann eine andere ganze Zahl sein, wenn Sie das Kennwort des Kontos mehrmals geändert haben. Auf der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Hostcomputer, führen Sie Folgendes aus:
 
    ```bash
    kinit user@CONTOSO.COM
@@ -294,7 +295,7 @@ Die spezifische Verbindungszeichenfolgenparameter für Clients, die AD-Authentif
   
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Lernprogramm durchlaufen, wir durch die Schritte zum Einrichten von Active Directory-Authentifizierung mit SQL Server unter Linux. Sie haben gelernt, wie auf:
+In diesem Lernprogramm durchlaufen, wird durch die Schritte zum Einrichten der Active Directory-Authentifizierung mit SQL Server on Linux. Sie haben gelernt, wie auf:
 > [!div class="checklist"]
 > * Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Host mit AD-Domäne
 > * Erstellen Sie AD-Benutzer für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und Festlegen des SPN

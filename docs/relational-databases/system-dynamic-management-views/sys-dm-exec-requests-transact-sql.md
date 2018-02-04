@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_requests
 - dm_exec_requests_TSQL
 - dm_exec_requests
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_requests dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_requests dynamic management view
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
-caps.latest.revision: "67"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6295b01227c2da62599dd594530624f2672d4bdc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c66516230609677ae4f7598dc81fb8df4758e84e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Für die Ausführung von Code außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. erweiterte gespeicherte Prozeduren und verteilte Abfragen) muss ein Thread außerhalb der Steuerung des nicht präemptiven Zeitplanungsmoduls ausgeführt werden. Dazu wechselt ein Arbeitsthread in den präemptiven Modus. Zeitwerte, die von dieser dynamischen Verwaltungssicht zurückgegeben werden, schließen nicht die im präemptiven Modus verbrachte Zeit ein.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|ID der Sitzung, auf die sich diese Anforderung bezieht. Lässt keine NULL-Werte zu.|  
 |request_id|**int**|ID der Anforderung. Ist im Kontext der Sitzung eindeutig. Lässt keine NULL-Werte zu.|  
@@ -71,7 +74,7 @@ ms.lasthandoff: 11/17/2017
 |writes|**bigint**|Anzahl der von dieser Anforderung ausgeführten Schreibvorgänge. Lässt keine NULL-Werte zu.|  
 |logical_reads|**bigint**|Anzahl der von dieser Anforderung ausgeführten logischen Lesevorgänge. Lässt keine NULL-Werte zu.|  
 |text_size|**int**|TEXTSIZE-Einstellung für diese Anforderung. Lässt keine NULL-Werte zu.|  
-|Sprache|**vom Datentyp nvarchar(128)**|Spracheinstellung für die Anforderung. Lässt NULL-Werte zu.|  
+|Sprache|**nvarchar(128)**|Spracheinstellung für die Anforderung. Lässt NULL-Werte zu.|  
 |date_format|**nvarchar(3)**|DATEFORMAT-Einstellung für die Anforderung. Lässt NULL-Werte zu.|  
 |date_first|**smallint**|DATEFIRST-Einstellung für die Anforderung. Lässt keine NULL-Werte zu.|  
 |quoted_identifier|**bit**|1 = QUOTED_IDENTIFIER ist ON für die Anforderung. Andernfalls ist der Wert 0.<br /><br /> Lässt keine NULL-Werte zu.|  
@@ -91,8 +94,8 @@ ms.lasthandoff: 11/17/2017
 |granted_query_memory|**int**|Anzahl von Seiten, die der Ausführung einer Abfrage in der Anforderung zugeordnet sind. Lässt keine NULL-Werte zu.|  
 |executing_managed_code|**bit**|Gibt an, ob eine bestimmte Anforderung zurzeit CLR-Objekte (Common Language Runtime) ausführt, z. B. Routinen, Typen und Trigger. Die Festlegung gilt für die gesamte Zeit, die sich ein CLR-Objekt im Stapel befindet, selbst wenn [!INCLUDE[tsql](../../includes/tsql-md.md)] aus CLR heraus ausgeführt wird. Lässt keine NULL-Werte zu.|  
 |group_id|**int**|ID der Arbeitsauslastungsgruppe, zu der diese Abfrage gehört. Lässt keine NULL-Werte zu.|  
-|query_hash|**Binary(8)**|Binärer Hashwert, der in der Abfrage berechnet wird und zum Identifizieren von Abfragen mit ähnlicher Logik verwendet wird. Sie können den Abfragehash verwenden, um die aggregierte Ressourcennutzung für Abfragen zu ermitteln, die sich nur durch Literalwerte unterscheiden.|  
-|query_plan_hash|**Binary(8)**|Binärer Hashwert, der im Abfrageausführungsplan wird und zum Identifizieren ähnlicher Abfrageausführungspläne verwendet wird. Sie können diesen Abfrageplan-Hashwert verwenden, um die kumulierten Kosten für Abfragen mit ähnlichen Ausführungsplänen zu suchen.|  
+|query_hash|**binary(8)**|Binärer Hashwert, der in der Abfrage berechnet wird und zum Identifizieren von Abfragen mit ähnlicher Logik verwendet wird. Sie können den Abfragehash verwenden, um die aggregierte Ressourcennutzung für Abfragen zu ermitteln, die sich nur durch Literalwerte unterscheiden.|  
+|query_plan_hash|**binary(8)**|Binärer Hashwert, der im Abfrageausführungsplan wird und zum Identifizieren ähnlicher Abfrageausführungspläne verwendet wird. Sie können diesen Abfrageplan-Hashwert verwenden, um die kumulierten Kosten für Abfragen mit ähnlichen Ausführungsplänen zu suchen.|  
 |statement_sql_handle|**varbinary(64)**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> SQL-Handle die einzelne Abfrage. |  
 |statement_context_id|**bigint**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die optionale Fremdschlüssel sys.query_context_settings. |  
 |dop |**int** |**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Der Grad der Parallelität für die Abfrage. |  
@@ -152,8 +155,8 @@ GO
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Ausführung bezogene dynamische Verwaltungssichten und-Funktionen &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [dm_os_memory_clerks &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
+ [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [dm_exec_query_memory_grants &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [Sys. dm_exec_query_plan &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [Sys. dm_exec_sql_text &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+ [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  

@@ -3,7 +3,7 @@ title: "Bereitstellen ein Clusters Schrittmacher für SQL Server on Linux | Micr
 description: "Dieses Lernprogramm zeigt, wie einen Cluster Schrittmacher für SQL Server on Linux bereitstellen."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 4a014c0b7eedb96375f027674d9eb2374f38c85e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd9d35a7fa6e8a8a0e826d584a4f78ca2581d9bc
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Bereitstellen eines Clusters Schrittmacher für SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In diesem Lernprogramm werden die erforderlichen Aufgaben zum Bereitstellen eines Clusters Linux Schrittmacher für eine [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On-verfügbarkeitsgruppe (AG) oder einer Failoverclusterinstanz (FCI). Im Gegensatz zu eng gekoppelten WindowsServer /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Stapel, Schrittmacher Clustererstellung sowie verfügbarkeitsgruppenkonfiguration (AG) unter Linux kann durchgeführt werden, vor oder nach der Installation von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Die Integration und Konfiguration von Ressourcen für den Schrittmacher Teil einer Verfügbarkeitsgruppe oder einer FCI-Bereitstellung wird ausgeführt, nachdem der Cluster konfiguriert ist.
 > [!IMPORTANT]

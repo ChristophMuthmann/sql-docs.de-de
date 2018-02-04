@@ -1,5 +1,5 @@
 ---
-title: dm_exec_compute_node_status (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_compute_node_status (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,33 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DM_EXEC_COMPUTE_NODE_STATUS_TSQL
 - DM_EXEC_COMPUTE_NODE_STATUS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PolyBase,views
 - PolyBase
 - dm_exec_compute_node_status
 - sys.dm_exec_compute_node_status management view
 ms.assetid: b606f91f-3a08-4a4f-bb57-32ae155b3738
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8186b170118b57c4998769aae9443b5df436cf85
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f898f754f0b39b0f5746d8ed076c75d26354bccd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexeccomputenodestatus-transact-sql"></a>dm_exec_compute_node_status (Transact-SQL)
+# <a name="sysdmexeccomputenodestatus-transact-sql"></a>sys.dm_exec_compute_node_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Enthält zusätzliche Informationen über die Leistung und Status aller PolyBase-Knoten. Enthält eine Zeile pro Knoten an.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 |available_memory|**bigint**|Insgesamt verfügbare Arbeitsspeicher auf diesem Knoten.||  
 |process_cpu_usage|**bigint**|Insgesamt Prozess CPU-Auslastung in Ticks.||  
 |total_cpu_usage|**bigint**|Gesamter CPU-Auslastung in Ticks.||  
-|Thread_Count|**bigint**|Gesamtanzahl der Threads auf diesem Knoten verwendet.||  
+|thread_count|**bigint**|Gesamtanzahl der Threads auf diesem Knoten verwendet.||  
 |handle_count|**bigint**|Die Gesamtanzahl der Handles auf diesem Knoten verwendet.||  
 |total_elapsed_time|**bigint**|Insgesamt verstrichene Zeit seit System gestartet oder neu gestartet.|Insgesamt verstrichene Zeit seit System gestartet oder neu gestartet. Wenn Total_elapsed_time den maximalen Wert für eine ganze Zahl (24.8 Tage in Millisekunden) überschreitet, führt es Materialisierung Fehler aufgrund einer dazu, dass "Überlauf". Der maximale Wert in Millisekunden entspricht 24.8 Tage.|  
 |is_available|**bit**|Ein Flag, der angibt, ob dieser Knoten verfügbar ist.||  

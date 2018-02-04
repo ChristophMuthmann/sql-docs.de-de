@@ -3,7 +3,7 @@ title: Konfigurieren von Failover Instanz Clusterspeicher SMB - SQL Server on Li
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 8043cd57758749399500b206410694c1735b30e8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 53c1bf7265cc15b9dd9401958317d4f14ea400d1
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Konfigurieren der Failover-Clusterinstanz - SMB - SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In diesem Artikel erläutert die SMB-Speicher für eine Failoverclusterinstanz (FCI) unter Linux konfigurieren. 
  
@@ -165,7 +165,7 @@ Hier sind einige Tipps und Hinweise für die Verwendung von SMB erfolgreich:
 
    *    Geben Sie beenden, um den Stamm nicht sein.
 
-   *    Starten Sie SqlServer. Wenn alles ordnungsgemäß kopiert wurde und angewendeten Sicherheitsfunktionen ordnungsgemäß, SQL Server sollte als gestartet.
+   *    Start SQL Server. Wenn alles ordnungsgemäß kopiert wurde und angewendeten Sicherheitsfunktionen ordnungsgemäß, SQL Server sollte als gestartet.
 
     ```bash
     sudo systemctl start mssql-server

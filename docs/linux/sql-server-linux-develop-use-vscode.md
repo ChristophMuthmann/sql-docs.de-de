@@ -3,7 +3,7 @@ title: "Verwenden Sie die Visual Studio Code-Mssql-Erweiterung für SQL Server |
 description: "In diesem Lernprogramm wird gezeigt, wie die Mssql-Erweiterung für Visual Studio Code verwendet wird. Diese Erweiterung ermöglicht das Bearbeiten und Ausführen von Transact-SQL-Skripts in Visual Studio Code."
 author: erickangMSFT
 ms.author: erickang
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: 
 ms.workload: Active
-ms.openlocfilehash: f7620db7f18c07544158ba49efbead9025c7a19a
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 14119be0cc95be9f7acb324553b0c0598896c5d9
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Verwenden von Visual Studio-Code zum Erstellen und Ausführen von Transact-SQL-Skripts für SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In diesem Thema zeigt, wie die **Mssql** -Erweiterung für Visual Studio-Code (Visual Studio-Code), SQL Server-Datenbanken zu entwickeln.
 
@@ -80,7 +80,7 @@ Die **Mssql** Erweiterung Mssql-Befehle und T-SQL-IntelliSense, wenn der Modus "
 
 Die folgenden Schritte zeigen, Herstellen einer Verbindung mit SQL Server mit Visual Studio Code.
 
-1. Drücken Sie in Visual Studio-Code **STRG + UMSCHALT + P** (oder **F1**) öffnen Sie die Palette-Befehl.
+1. Drücken Sie in VS Code **STRG+UMSCHALT+P** (oder **F1**), um die Befehlspalette zu öffnen.
 
 2. Typ **Sql** Mssql-Befehle anzeigen.
 
@@ -91,7 +91,7 @@ Die folgenden Schritte zeigen, Herstellen einer Verbindung mit SQL Server mit Vi
 
 4. Wählen Sie **erstellen Verbindungsprofils**. Dadurch wird ein Profil für die SQL Server-Instanz erstellt.
 
-5. Befolgen Sie die Verbindungseigenschaften für das neue Verbindungsprofil angeben. Drücken Sie nach jeder Wert angeben, **EINGABETASTE** um den Vorgang fortzusetzen. 
+5. Befolgen Sie die Anweisungen, um die Verbindungseigenschaften für das neue Verbindungsprofil anzugeben. Nachdem Sie sämtliche Werte angegeben haben, drücken Sie die **EINGABETASTE**, um fortzufahren. 
 
    Die folgende Tabelle beschreibt die Verbindungsprofils-Eigenschaften.
 
@@ -101,18 +101,18 @@ Die folgenden Schritte zeigen, Herstellen einer Verbindung mit SQL Server mit Vi
    | **[Optional] Datenbankname** | Die Datenbank, die Sie verwenden möchten. Für die Zwecke dieses Lernprogramms, geben Sie eine Datenbank, und drücken Sie **EINGABETASTE** um den Vorgang fortzusetzen. |
    | **Benutzername** | Geben Sie den Namen eines Benutzers mit Zugriff auf eine Datenbank auf dem Server. Für dieses Lernprogramm verwenden Sie den Standardnamen **SA** Konto während der SQL Server-Setup erstellt. |
    | **Kennwort (SQL-Anmeldung)** | Geben Sie das Kennwort für den angegebenen Benutzer ein. | 
-   | **Speichern Kennwort?** | Typ **Ja** zum Speichern des Kennworts. Geben Sie andernfalls **keine** für das Kennwort jedes Mal aufgefordert werden das Verbindungsprofil verwendet wird. |
+   | **Kennwort speichern** | Typ **Ja** zum Speichern des Kennworts. Geben Sie andernfalls **keine** für das Kennwort jedes Mal aufgefordert werden das Verbindungsprofil verwendet wird. |
    | **[Optional] Geben Sie einen Namen für dieses Profil** | Der Name des Verbindungsprofils. Angenommen, nennen Sie das Profil **"localhost" Profil**. 
 
    > [!Tip] 
    > Sie können erstellen und Bearbeiten von remoteverbindungsprofilen in Benutzereinstellungen-Datei (settings.json). Öffnen Sie dazu die Einstellungsdatei **Voreinstellung** und dann **Benutzereinstellungen** im VS-Code. Weitere Informationen finden Sie unter [Verwalten von remoteverbindungsprofilen].
 
-6. Drücken Sie die **ESC** Taste, um die Info-Meldung zu schließen, die Sie informiert, dass das Profil erstellt und verbunden ist.
+6. Drücken Sie die **ESC**-Taste, um die Meldung zu schließen, in der Sie darüber informiert werden, dass das Profil erstellt und eine Verbindung hergestellt wurde.
 
    > [!TIP]
    > Wenn Sie einen Verbindungsfehler erhalten, versuchen zunächst, die diagnose des Problems aus der Fehlermeldung, in der **Ausgabe** Bereich in Visual Studio Code (Wählen Sie **Ausgabe** auf die **Ansicht** im Menü). Überprüfen Sie anschließend die [Empfehlungen zur Verbindungsproblembehandlung].
 
-7. Überprüfen Sie die Verbindung in der Statusleiste aus.
+7. Überprüfen Sie Ihre Verbindung in der Statusleiste.
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-connection-status.png" alt="Connection status" style="width: 500px;" />
 

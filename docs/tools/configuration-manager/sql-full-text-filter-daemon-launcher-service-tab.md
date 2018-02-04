@@ -8,23 +8,25 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6aad7ebe-c4be-4d37-8536-61502f51faa2
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff041f428b3b5558e0378f54785da88115c9f7c0
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 61c90f8579a4656ba3bc5be5e111afd2dabf7487
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>Startprogramm für SQL-Volltextfilterdaemon (Registerkarte Dienst)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], SQL Volltext-Filter-Startprogramm (FDHOST-Startprogramm) Inanspruchnahme von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Full-Text. Dieser Dienst muss ausgeführt werden, wenn Sie die Volltextsuche verwenden. Informationen über die Prozesse des Filterdaemonhosts finden Sie unter „Architektur der Volltextsuche“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] wird der FDHOST (SQL-Volltextfilterdaemon)-Startprogrammdienst vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltext verwendet. Dieser Dienst muss ausgeführt werden, wenn Sie die Volltextsuche verwenden. Informationen über die Prozesse des Filterdaemonhosts finden Sie unter „Architektur der Volltextsuche“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
  Verwenden Sie im Startprogramm für SQL-Volltextfilterdaemon die Registerkarte **Dienst**im Dialogfeld **Eigenschaften des SQL Full-text Filter Daemon-Programmstarters** (SQL-Volltextfilterdaemon-LauncherProperties), um die folgenden Optionen anzuzeigen oder anzugeben.  
   

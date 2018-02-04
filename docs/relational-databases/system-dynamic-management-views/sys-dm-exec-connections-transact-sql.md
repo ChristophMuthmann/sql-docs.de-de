@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_connections_TSQL
 - sys.dm_exec_connections
 - dm_exec_connections
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_connections dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_connections dynamic management view
 ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c8bee848550fb2120fd02c31b505fc0b8da90b5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ef46c3c9ffdf534b2ef76154498a4da8b11fa197
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +65,7 @@ ms.lasthandoff: 01/02/2018
 |connection_id|**uniqueidentifier**|Dient zur eindeutigen Identifizierung jeder Verbindung. Lässt keine NULL-Werte zu.|  
 |parent_connection_id|**uniqueidentifier**|Identifiziert die primäre Verbindung, die von der MARS-Sitzung verwendet wird. Lässt NULL-Werte zu.|  
 |most_recent_sql_handle|**varbinary(64)**|Das SQL-Handle der letzten Anforderung, die über diese Verbindung ausgeführt wurde. Die most_recent_sql_handle-Spalte ist immer mit der most_recent_session_id-Spalte synchronisiert. Lässt NULL-Werte zu.|  
-|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   

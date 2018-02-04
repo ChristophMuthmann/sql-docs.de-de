@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - syspolicy_conditions
 - syspolicy_conditions_TSQL
-dev_langs: TSQL
-helpviewer_keywords: syspolicy_conditions view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- syspolicy_conditions view
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0628b0913358fd5fb80f3c36fbcf8e5a5c05170
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 426c815721aa0cb49ddafb160e25a820728f00b2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syspolicyconditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 |condition_id|**int**|Bezeichner dieser Bedingung. Jede Bedingung stellt eine Auflistung eines oder mehrerer Bedingungsausdrücke dar.|  
 |name|**sysname**|Name der Bedingung.|  
 |date_created|**datetime**|Datum und Uhrzeit der Erstellung der Bedingung.|  
-|Beschreibung|**nvarchar(max)**|Beschreibung der Bedingung. Die Beschreibungsspalte ist optional und kann NULL sein.|  
+|description|**nvarchar(max)**|Beschreibung der Bedingung. Die Beschreibungsspalte ist optional und kann NULL sein.|  
 |created_by|**sysname**|Anmeldung, die die Bedingung erstellt hat.|  
 |modified_by|**sysname**|Anmeldung, die die Bedingung zuletzt geändert hat. Ist NULL, wenn nie geändert.|  
 |date_modified|**datetime**|Datum und Uhrzeit der Erstellung der Bedingung. Ist NULL, wenn nie geändert.|  

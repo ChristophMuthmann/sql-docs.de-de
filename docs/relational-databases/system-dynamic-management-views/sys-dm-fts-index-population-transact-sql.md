@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_fts_index_population
 - sys.dm_fts_index_population_TSQL
 - dm_fts_index_population_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_index_population dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_index_population dynamic management view
 ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 719da7d41ba34adcf7a3aa7ccc53a14217e657ff
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8f118b1be30119e7328ee20477a0c18808fbdc3e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 |**outstanding_batch_count**|**int**|Aktuelle Anzahl ausstehender Batches für diese Auffüllung. Weitere Informationen finden Sie unter [dm_fts_outstanding_batches &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
 |**status**|**int**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Status dieser Auffüllung. Hinweis: Einige Status sind vorübergehend. Einer der folgenden Typen:<br /><br /> 3 = Wird gestartet<br /><br /> 5 = Normal verarbeiten<br /><br /> 7 = Verarbeitung wurde angehalten<br /><br /> Dieser Status tritt zum Beispiel auf, wenn eine automatische Zusammenführung ausgeführt wird.<br /><br /> 11 = Auffüllen abgebrochen<br /><br /> 12 = Verarbeiten einer semantischen Ähnlichkeitsextraktion|  
 |**status_description**|**nvarchar(120)**|Beschreibung des Status der Auffüllung.|  
-|**COMPLETION_TYPE**|**int**|Status des Abschlusses dieser Auffüllung.|  
+|**completion_type**|**int**|Status des Abschlusses dieser Auffüllung.|  
 |**completion_type_description**|**nvarchar(120)**|Beschreibung des Abschlusstyps.|  
 |**worker_count**|**int**|Dieser Wert ist immer 0.|  
 |**queued_population_type**|**int**|Typ der Auffüllung, basierend auf Überarbeitungen, die ggf. nach der aktuellen Auffüllung folgt.|  

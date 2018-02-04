@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.type_assembly_usages_TSQL
 - type_assembly_usages_TSQL
 - type_assembly_usages
-dev_langs: TSQL
-helpviewer_keywords: sys.type_assembly_usages catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.type_assembly_usages catalog view
 ms.assetid: 79b8bf25-6e4e-4a07-ae93-7a4e44f65171
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 22fa58e81ade1f7d9a4b779f2d9afcaed4aca057
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a3ce4d7e61fb608e44d5ef9f218449981d7d49c1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="systypeassemblyusages-transact-sql"></a>sys.type_assembly_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

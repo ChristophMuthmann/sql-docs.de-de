@@ -3,7 +3,7 @@ title: "Grundlagen der SQL Server-Verfügbarkeit für Linux-Bereitstellungen | M
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: b137d8badf44bf1c7d181b490bcf6d06e2bd087f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d53e54c6e8e74970316de557ddf3bd60a09e9ffe
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Grundlagen der SQL Server-Verfügbarkeit für Linux-Bereitstellungen
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Beginnend mit [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] wird unter Linux und Windows unterstützt. Wie Sie die Windows-basierten [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Bereitstellungen [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Datenbanken und Instanzen unter Linux hochverfügbar sein müssen. Dieser Artikel behandelt die technischen Aspekte der Planung und Bereitstellung von hoch verfügbaren Linux-basierte [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Datenbanken und Instanzen sowie einige der Unterschiede zu Windows-basierten Installationen. Da [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] möglicherweise für Linux-Experten und Linux möglicherweise neu für neue [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -Experten, die Artikel Zeiten werden Konzepte vorgestellt, die möglicherweise auf einige vertraut sind und nicht an andere Personen vertraut.
 
@@ -85,23 +85,23 @@ Aufpassen, die wichtig ist, dass die Version der bereitgestellten Samba SMB 3.0 
 
 Schließlich ist das Verwenden einer Dateifreigabe im Netzwerk-System (NFS) eine Option aus. Verwenden Sie stattdessen NFS ist keine Option auf Windows-basierten Bereitstellungen von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], und kann nur für Linux-basierten Bereitstellungen verwendet werden.
 
-### <a name="configure-the-firewall"></a>Konfigurieren der Firewall
+### <a name="configure-the-firewall"></a>Konfigurieren der firewall
 Ähnlich wie bei Windows, Linux-Distributionen haben eine integrierte Firewall. Wenn Ihr Unternehmen eine externe Firewall auf dem Server verwendet wird, akzeptabel deaktivieren die Firewalls unter Linux. Allerdings unabhängig davon, in dem die Firewall aktiviert ist, müssen die Ports geöffnet werden. Die folgende Tabelle beschreibt die allgemeine Ports für hoch verfügbare [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Bereitstellungen unter Linux.
 
 | Portnummer | Typ     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS –`rpcbind/sunrpc`                                                                                                    |
+| 111         | TCP/UDP  | NFS – `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (sofern verwendet) – Endpunkt-Mapper                                                                                          |
-| 137         | UDP      | Samba (sofern verwendet) – NetBIOS-Namensdienst                                                                                      |
-| 138         | UDP      | Samba (sofern verwendet) – NetBIOS-Datagramm                                                                                          |
+| 137         | UDP      | Samba (if used) – NetBIOS Name Service                                                                                      |
+| 138         | UDP      | Samba (if used) – NetBIOS Datagram                                                                                          |
 | 139         | TCP      | Samba (sofern verwendet) – NetBIOS-Sitzung                                                                                           |
 | 445         | TCP      | Samba (sofern verwendet) – SMB über TCP                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]– Der Standardport; Falls gewünscht, können mit ändern.`mssql-conf set network.tcpport <portnumber>`                       |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – Der Standardport; Falls gewünscht, können mit ändern.`mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP, UDP | NFS (sofern verwendet)                                                                                                               |
 | 2224        | TCP      | Schrittmacher – verwendet von`pcsd`                                                                                                |
 | 3121        | TCP      | Schrittmacher – erforderlich, wenn Schrittmacher entfernten Knoten vorhanden sind                                                                    |
 | 3260        | TCP      | iSCSI-Initiator (sofern verwendet) – kann geändert werden, `/etc/iscsi/iscsid.config` (RHEL), aber der Port des iSCSI-Ziels übereinstimmen |
-| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Der Standardport für einen Endpunkt AG verwendet kann geändert werden, beim Erstellen des Endpunktes                                |
+| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -Der Standardport für einen Endpunkt AG verwendet kann geändert werden, beim Erstellen des Endpunktes                                |
 | 5403        | TCP      | Schrittmacher                                                                                                                   |
 | 5404        | UDP      | Schrittmacher – Corosync ggf. mithilfe von multicast-UDP                                                                     |
 | 5405        | UDP      | Schrittmacher – Corosync erforderlich                                                                                            |
@@ -204,7 +204,7 @@ Die `corosync.conf` Datei enthält die Konfiguration des Clusters. Befindet sich
 #### <a name="cluster-log-location"></a>Protokollspeicherort der Cluster
 Protokollspeicherorte für Schrittmacher Cluster unterscheiden sich abhängig von der Verteilung.
 -   RHEL "und" SLES-`/var/log/cluster/corosync.log`
--   Ubuntu:`/var/log/corosync/corosync.log`
+-   Ubuntu – `/var/log/corosync/corosync.log`
 
 Um den Standardspeicherort für die Protokollierung zu ändern, ändern `corosync.conf`.
 

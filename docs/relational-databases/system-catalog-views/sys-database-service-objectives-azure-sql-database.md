@@ -8,24 +8,26 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords:
 - Elastischen pool
 - elastischen Pool, Verwaltung
-f1_keywords: DATABASE_SERVICE_OBJECTIVES_TSQL
+f1_keywords:
+- DATABASE_SERVICE_OBJECTIVES_TSQL
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72cc970e8e6b37988399707b5cef77cbda3afd36
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 08c801fe0f7d917de2c520e788320ec3677d8a6e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>Sys.database_service_objectives (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -41,7 +43,7 @@ Ggf. für eine Azure SQL-Datenbank oder einer Azure SQL Data Warehouse die Editi
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|ssNoversion|Die ID der Datenbank, eindeutig innerhalb einer Instanz von Azure SQL-Datenbankserver. Mit beigetreten [sys.databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|database_id|int|Die ID der Datenbank, eindeutig innerhalb einer Instanz von Azure SQL-Datenbankserver. Mit beigetreten [sys.databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |-Edition|sysname|Die Dienstebene für die Datenbank oder vorhandenem Data Warehouse: **grundlegende**, **Standard**, **Premium** oder **Data Warehouse**.|  
 |service_objective|sysname|Der Tarif der Datenbank. Gibt zurück, wenn die Datenbank in einem elastischen Pool befindet, **ElasticPool**.<br /><br /> Auf der **grundlegende** -Ebene gibt **grundlegende**.<br /><br /> **Einzelne Datenbank in eine standard-Dienstebene** gibt einen der folgenden zurück: S0, S1, S2 oder S3.<br /><br /> **Einzelne Datenbank in einem Premium-Dienstebene** gibt Folgendes zurück: P1, P2, P4, P6/P3 oder P11.<br /><br /> **SQL Data Warehouse** DW100 über DW2000 zurückgibt.|  
 |elastic_pool_name|sysname|Der Name des der [elastischen Pool](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) , die die Datenbank angehört. Gibt **NULL** , wenn die Datenbank eine einzelne Datenbank oder eine Warehoue Daten ist.|  

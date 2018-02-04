@@ -3,7 +3,7 @@ title: "Erstellen und Ausführen von Aufträgen für SQL Server on Linux | Micro
 description: "In diesem Lernprogramm wird gezeigt, wie SQL Server-Agent-Auftrag auf dem Linux ausgeführt wird."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.workload: Inactive
-ms.openlocfilehash: fe2705d9d1bfefd9953ff03da123621dd4ef95f3
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 526375f9f9f96c9ea0402dcb84f20a2c214fd13f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Erstellen und Ausführen von SQL Server-Agent-Aufträge unter Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server-Aufträge werden verwendet, um regelmäßig die gleiche Sequenz von Befehlen in der SQL Server-Datenbank ausführen. Dieses Lernprogramm enthält ein Beispiel zum Erstellen eines SQL Server-Agent-Auftrags unter Linux mit Transact-SQL und SQL Server Management Studio (SSMS).
 

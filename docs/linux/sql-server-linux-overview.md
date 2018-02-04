@@ -3,7 +3,7 @@ title: "Übersicht über SQLServer on Linux | Microsoft Docs"
 description: "In diesem Thema wird beschrieben, wie SQL Server auf dem Linux ausgeführt wird, und enthält Informationen zum mehr zu erfahren."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: b6e34da74f96e8941fff67afe24cdbc271381fa7
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 8804f2e9748c692e8489a3aed837e08b7d28ab1e
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sql-server-on-linux"></a>SQL Server unter Linux
 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - trace_subclass_values_TSQL
 - sys.trace_subclass_values_TSQL
 - trace_subclass_values
-dev_langs: TSQL
-helpviewer_keywords: sys.trace_subclass_values catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.trace_subclass_values catalog view
 ms.assetid: 542b19ca-61c8-41ca-aa2e-0aba8906cc24
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b14cffaa6984e45345bd5435ea8af29a8c0f77b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3a10de348efe0473927305dbb9ed6a636355de13
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="systracesubclassvalues-transact-sql"></a>sys.trace_subclass_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +45,9 @@ ms.lasthandoff: 11/27/2017
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**trace_column_id**|**smallint**|ID des Ablaufverfolgungsereignisses. Dieser Parameter ist auch in der **trace_events** -Katalogsicht angezeigt.|  
-|**trace_event_id**|**smallint**|ID der Ablaufverfolgungsspalte, die für die Enumeration verwendet wird. Dieser Parameter ist auch in der **trace_columns** -Katalogsicht angezeigt.|  
-|**SUBCLASS_NAME**|**vom Datentyp nvarchar(128)**|Bedeutung des Spaltenwerts.|  
+|**trace_event_id**|**smallint**|ID des Ablaufverfolgungsereignisses. Dieser Parameter ist auch in der **trace_events** -Katalogsicht angezeigt.|  
+|**trace_column_id**|**smallint**|ID der Ablaufverfolgungsspalte, die für die Enumeration verwendet wird. Dieser Parameter ist auch in der **trace_columns** -Katalogsicht angezeigt.|  
+|**subclass_name**|**nvarchar(128)**|Bedeutung des Spaltenwerts.|  
 |**subclass_value**|**smallint**|Spaltenwert|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -52,10 +55,10 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Katalogsichten für Objekte &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Sys.Traces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
- [Sys. trace_categories &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
- [trace_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   
- [trace_events &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-trace-events-transact-sql.md)   
- [Sys. trace_event_bindings &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-trace-event-bindings-transact-sql.md)  
+ [sys.traces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
+ [sys.trace_categories &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
+ [sys.trace_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   
+ [sys.trace_events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-events-transact-sql.md)   
+ [sys.trace_event_bindings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-event-bindings-transact-sql.md)  
   
   

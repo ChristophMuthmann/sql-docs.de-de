@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,23 @@ f1_keywords:
 - dm_tran_commit_table_TSQL
 - sys.dm_tran_commit_table
 - sys.dm_tran_commit_table_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_commit_table dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_commit_table dynamic management view
 ms.assetid: 732d23c5-1f6c-4e96-bc85-8f29b520cf0e
-caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a295065d2986925f5d3cda145a1880f6f0ad6519
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 17e42e8bf81db76b3034c6bf1e2e0111a6fc9671
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="change-tracking---sysdmtrancommittable"></a>"Änderungen nachverfolgen" - dm_tran_commit_table
+# <a name="change-tracking---sysdmtrancommittable"></a>Change Tracking - sys.dm_tran_commit_table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Zeigt eine Zeile für jede Transaktion, die ein Commit für eine Tabelle ausgeführt wird, die von nachverfolgt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Änderungen nachverfolgen". Die dm_tran_commit_table Ansicht "Verwaltung", die aus Gründen der unterstützbarkeit bereitgestellt wird, und macht die transaktionsbezogenen Informationen, die änderungsnachverfolgung werden in der Systemtabelle sys.syscommittab speichert. Die Tabelle sys.syscommittab ermöglicht eine effiziente persistente Zuordnung zwischen einer datenbankspezifischen Transaktions-ID und den Commit-Protokollfolgenummern (Log Sequence Number, LSN) und den Commit-Timestamps der Transaktion. Die Daten, die in der sys.syscommittab-Tabelle gespeichert und in dieser verwaltungssicht verfügbar gemacht werden unterliegen Cleanup gemäß der Beibehaltungsdauer angegeben, wenn das Nachverfolgen von Änderungen wurde konfiguriert.  
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 |commit_lbn|**bigint**|Die Nummer des Protokollblocks, der den Protokolldatensatz für den Commit der Transaktion enthält.|  
 |commit_csn|**bigint**|Die instanzspezifische Commitfolgenummer für die Transaktion.|  
 |commit_time|**smalldatetime**|Der Zeitpunkt, zu dem für die Transaktion ein Commit ausgeführt wurde.|  
-|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

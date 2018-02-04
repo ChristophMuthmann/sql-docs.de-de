@@ -9,7 +9,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,17 +18,19 @@ f1_keywords:
 - dm_exec_query_optimizer_memory_gateways
 - sys.dm_exec_query_optimizer_memory_gateways_TSQL
 - sys.dm_exec_query_optimizer_memory_gateways
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_optimizer_memory_gateways dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_optimizer_memory_gateways dynamic management view
 author: josack
 ms.author: josack
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf31a066798e1c88d0d6d475edda87f2df08ba05
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b65e22d1cd2f403e2ed3aa1bd1dc14faa90079b9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>Sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,7 +45,7 @@ Gibt den aktuellen Status der Ressource Semaphore verwendet, um gleichzeitige ab
 |**active_count**|**int**|Die Anzahl der derzeit aktiven Kompilierungen ein, die in dieses gate|
 |**waiter_count**|**int**|Die Anzahl der Wartevorgänge in dieses gate|
 |**threshold_factor**|**bigint**|Schwellenwertfaktor, der der maximale Arbeitsspeicheranteil verwendet, durch die abfrageoptimierung definiert.  Für das kleine Gateway gibt Threshold_factor die maximale Optimierer Auslastung des Speichers in Bytes für eine Abfrage an, bevor ein Zugriff in das small-Gateway muss.  Für das Gateway mittelgroßen und großen zeigt Threshold_factor den Teil des gesamten Serverspeichers für dieses Gate verfügbar. Es wird als Divisor verwendet, bei der Berechnung der nutzungsschwellenwert für Speicher für das Gate.|
-|**Schwellenwert**|**bigint**|Nächste Schwellenwert-Speicher in Bytes.  Die Abfrage ist erforderlich, um einen Zugriff auf dieses Gateway zu erhalten, wenn ihren Arbeitsspeicherverbrauch dieser Schwellenwert erreicht.  "1", wenn die Abfrage nicht erforderlich ist, um einen Zugriff auf dieses Gateway zu erhalten.|
+|**threshold**|**bigint**|Nächste Schwellenwert-Speicher in Bytes.  Die Abfrage ist erforderlich, um einen Zugriff auf dieses Gateway zu erhalten, wenn ihren Arbeitsspeicherverbrauch dieser Schwellenwert erreicht.  "1", wenn die Abfrage nicht erforderlich ist, um einen Zugriff auf dieses Gateway zu erhalten.|
 |**is_active**|**bit**|Gibt an, ob die Abfrage erforderlich ist, um die aktuellen Gate oder nicht übergeben.|
 
 

@@ -3,7 +3,7 @@ title: "Red Hat Enterprise Linux freigegebenen Clusterdatenträger für SQL Serv
 description: "Red Hat Enterprise Linux freigegebene Datenträgercluster für SQL Server konfigurieren, um hohe Verfügbarkeit zu implementieren."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: 1d2731e55c9add5cfa06d70297793f4f7d5fef48
-ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
+ms.openlocfilehash: 519728819aa79534a1c8cc3a079164d276924a44
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Konfigurieren Sie Red Hat Enterprise Linux freigegebene Datenträgercluster für SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Dieses Handbuch enthält Anweisungen zum Erstellen eines freigegebenen Datenträgers zwei Knoten-Clusters für SQL Server unter Red Hat Enterprise Linux. Die clustering-Ebene basiert auf Red Hat Enterprise Linux (RHEL) [HA-Add-On](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) baut auf [Schrittmacher](http://clusterlabs.org/). SQL Server-Instanz ist auf einem "Node" oder anderen aktiv.
 
@@ -43,7 +43,7 @@ Zum Verwenden einer Verbindungszeichenfolge, die auf einem Zeichenfolgennamen f�
 
 In den folgenden Abschnitten exemplarisch die Schritte zum Einrichten einer Lösung mit Failovercluster. 
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Zum Abschließen der End-to-End-Szenarios unten benötigen Sie zwei Computer, der zwei Knoten-Cluster und einem anderen Server so konfigurieren Sie die NFS-Server bereitstellen. Unten aufgeführten Schritten dargestellt, wie diesen Servern konfiguriert werden kann.
 

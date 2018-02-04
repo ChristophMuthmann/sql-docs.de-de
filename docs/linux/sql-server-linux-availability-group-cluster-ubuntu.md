@@ -3,8 +3,8 @@ title: "Ubuntu-Cluster für SQL Server-Verfügbarkeitsgruppe konfigurieren | Mic
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.date: 03/17/2017
+manager: craigg
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,26 +15,26 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 797cc24d46fc5a51f514508dd35226d07cda74f4
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ac48c6a17ea16ab99774cdeb80cecf726185f68f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu-Cluster und die Verfügbarkeitsgruppenressource konfigurieren
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Dieses Dokument erläutert, wie Sie einen Cluster mit drei Knoten auf Ubuntu erstellen, und fügen eine zuvor erstellte verfügbarkeitsgruppe als Ressource im Cluster. Für hohe Verfügbarkeit, eine verfügbarkeitsgruppe unter Linux erfordert drei Knoten?: Siehe [hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md).
 
 > [!NOTE] 
-> SQL Server Integration in Schrittmacher unter Linux ist an diesem Punkt nicht als gekoppelten als mit WSFC unter Windows. Aus SQL, besteht keine Kenntnisse über das Vorhandensein des Clusters, alle Orchestrierung befindet sich im außerhalb und der Dienst wird als eigenständige Instanz von Schrittmacher gesteuert. Außerdem virtuellen Netzwerknamen bezieht sich auf WSFC, es gibt keine Entsprechung in Schrittmacher identisch. Always On-dynamische Verwaltungssichten, die Clusterinformationen Abfragen gibt leere Zeilen zurück. Sie können einen Listener für die Verwendung für transparente wiederverbindung nach einem Failover weiterhin erstellen, jedoch müssen Sie manuell den verfügbarkeitsgruppenlistener-Namen in der DNS-Server für die IP-Adresse verwendet, um die virtuelle IP-Adressressource erstellen (wie nachstehend beschrieben) registrieren.
+> SQL Server Integration in Schrittmacher unter Linux ist an diesem Punkt nicht als gekoppelten als mit WSFC unter Windows. Von SQL, besteht keine Kenntnisse über das Vorhandensein des Clusters, alle Orchestrierung befindet sich im außerhalb und der Dienst wird als eigenständige Instanz von Schrittmacher gesteuert. Außerdem virtuellen Netzwerknamen bezieht sich auf WSFC, es gibt keine Entsprechung in Schrittmacher identisch. Always On-dynamische Verwaltungssichten, die Clusterinformationen Abfragen gibt leere Zeilen zurück. Sie können einen Listener für die Verwendung für transparente wiederverbindung nach einem Failover weiterhin erstellen, jedoch müssen Sie manuell den verfügbarkeitsgruppenlistener-Namen in der DNS-Server für die IP-Adresse verwendet, um die virtuelle IP-Adressressource erstellen (wie nachstehend beschrieben) registrieren.
 
 In den folgenden Abschnitten exemplarisch die Schritte zum Einrichten einer Lösung mit Failovercluster. 
 
 ## <a name="roadmap"></a>Roadmap
 
-Die Schritte zum Erstellen einer verfügbarkeitsgruppe auf Linux-Servern zwecks hoher Verfügbarkeit unterscheiden sich von den Schritten in einem Windows Server-Failovercluster. Die folgende Liste beschreibt auf hoher Ebene die Schritte aus: 
+Die Schritte zum Erstellen einer verfügbarkeitsgruppe auf Linux-Servern zwecks hoher Verfügbarkeit unterscheiden sich von den Schritten in einem Windows Server-Failovercluster. Die folgende Liste beschreibt die allgemeinen Schritte: 
 
 1. [Konfigurieren von SQL Server auf den Clusterknoten](sql-server-linux-setup.md).
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. Erstellen des Clusters an. 
 
    >[!WARNING]
-   >Aufgrund eines bekannten Problems, die Hersteller des clustering untersuchen, beginnend schlägt der Cluster ("Pcs Cluster Start") mit folgenden Fehler fehl. Dies ist die Protokolldatei in /etc/corosync/corosync.conf der wird erstellt, wenn die Cluster-Setup-Befehlsoption wird ausgeführt, ist falsch konfiguriert. Zur Umgehung dieses Problems die Protokolldatei zu ändern: /var/log/corosync/corosync.log. Alternativ können Sie die /var/log/cluster/corosync.log-Datei erstellen.
+   >Aufgrund eines bekannten Problems, die Hersteller des clustering untersuchen, beginnend schlägt der Cluster ("Pcs Cluster Start") mit folgenden Fehler fehl. Dies ist die Protokolldatei in /etc/corosync/corosync.conf der wird erstellt, wenn die Cluster-Setup-Befehlsoption wird ausgeführt, ist falsch konfiguriert. Um dieses Problem zu umgehen, ändern Sie die Protokolldatei: /var/log/corosync/corosync.log. Alternativ können Sie die /var/log/cluster/corosync.log-Datei erstellen.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
@@ -139,7 +139,7 @@ Der folgende Befehl erstellt einen Cluster mit drei Knoten. Bevor Sie das Skript
 
 Schrittmacher Cluster Lieferanten erfordern STONITH aktiviert werden und ein Fencing Gerät für ein unterstütztes Clustersetup konfiguriert. Wenn der Cluster-Ressourcen-Manager den Status eines Knotens oder einer Ressource auf einem Knoten nicht ermitteln kann, wird Fencing verwendet, auf den Cluster erneut in einen bekannten Zustand zu versetzen. Ressource Ebene Zäune hauptsächlich wird sichergestellt, dass es keine beschädigte Daten bei einem Ausfall durch Konfigurieren einer Ressource. Können Sie Ressourcen Ebene Zäune, z. B. mit DRBD (Distributed repliziert Blockgerät), um den Datenträger auf einem Knoten, wie wenn veraltet zu markieren der kommunikationsverbindung ausfällt. Knoten Ebene Zäune wird sichergestellt, dass alle Ressourcen von ein Knoten nicht ausgeführt werden kann. Dies erfolgt durch das Zurücksetzen des Knotens, und die Implementierung Schrittmacher davon STONITH (Dies steht für "den andere Knoten im Kopf Schießen") aufgerufen. Schrittmacher unterstützt eine große Anzahl von Fencing Geräte, z. B. eine unterbrechungsfreie Stromversorgung oder Management Netzwerkschnittstellenkarten für Server. Weitere Informationen finden Sie unter [Schrittmacher Clustern von Grund auf Neu](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) und [Fencing und Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
 
-Da Knotenebene Zauns Konfiguration stark von der Umgebung abhängig ist, wird sie für dieses Lernprogramm deaktivieren wir (es kann zu einem späteren Zeitpunkt konfiguriert). Führen Sie das folgende Skript auf dem primären Knoten aus: 
+Da Knotenebene Zauns Konfiguration stark von der Umgebung abhängig ist, deaktivieren wir für dieses Lernprogramm (es kann zu einem späteren Zeitpunkt konfiguriert). Führen Sie das folgende Skript auf dem primären Knoten aus: 
 
 ```bash
 sudo pcs property set stonith-enabled=false
@@ -160,7 +160,7 @@ sudo pcs property set start-failure-is-fatal=false
 
 
 >[!WARNING]
->Nach der ein automatisches Failover bei `start-failure-is-fatal = true` der Ressourcen-Manager versucht, die Ressource zu starten. Wenn sie beim ersten Versuch fehlschlägt, müssen Sie manuell ausführen, `pcs resource cleanup <resourceName>` Cleanup der Anzahl der Ressourcen-Fehler und Zurücksetzen der Konfiguration.
+>Nach der ein automatisches Failover bei `start-failure-is-fatal = true` der Ressourcen-Manager versucht, die Ressource zu starten. Wenn sie beim ersten Versuch fehlschlägt, müssen Sie manuell ausführen, `pcs resource cleanup <resourceName>` bereinigen Sie die Anzahl der Ressourcen-Fehler, und setzen Sie die Konfiguration zurück.
 
 ## <a name="install-sql-server-resource-agent-for-integration-with-pacemaker"></a>Installieren von SQL Server-Agent-Ressource für die Integration mit Schrittmacher
 

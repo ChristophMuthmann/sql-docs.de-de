@@ -3,7 +3,7 @@ title: "Always On-Verfügbarkeitsgruppen für SQLServer on Linux | Microsoft Doc
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: 3c708d4e06f32515b96b22099990007d58db20f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d7f9dec114fd17025081c4a139537b11dd4fde45
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On-Verfügbarkeitsgruppen unter Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Dieser Artikel beschreibt die Merkmale der AlwaysOn-Verfügbarkeitsgruppen (Testreihen) unter Linux-basierte [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Installationen. Dazu gehören auch Unterschiede zwischen Linux- und Windows Server-Failovercluster (WSFC)-Basis Testreihen. Finden Sie unter der [Dokumentation zu Windows-basierten](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) für die Grundlagen der-Verfügbarkeitsgruppen identisch unter Windows und Linux außer dem WSFC Arbeit.
 
@@ -153,7 +153,7 @@ Eine AG mit einem Cluster keine möglich seiner Replikate OS-hinweg, gelten, dam
 
 Eine verteilte Verfügbarkeitsgruppe kann auch OS Grenzen überqueren. Die zugrunde liegenden Testreihen durch die Regeln gebunden sind, für deren, wie z. B. mit externen wird konfiguriert Konfiguration nur Linux, jedoch die Verfügbarkeitsgruppe, der er angehört könnte mit einem WSFC konfiguriert werden. Das folgende Beispiel soll dies erläutern:
 
-![Hybride Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
+![Hybrid Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 
 <!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article “x”].
 

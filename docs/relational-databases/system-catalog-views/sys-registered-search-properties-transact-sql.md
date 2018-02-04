@@ -1,5 +1,5 @@
 ---
-title: Sys. registered_search_properties (Transact-SQL) | Microsoft Docs
+title: sys.registered_search_properties (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - registered_search_properties
 - sys.registered_search_properties_TSQL
 - registered_search_properties_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search properties [SQL Server]
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - search property lists [SQL Server], viewing registered properties
 - sys.registered_search_properties catalog view
 ms.assetid: 1b9a7a5c-8c05-4819-83c3-7487dd08fcf7
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a52fb947477e4a25cf5784ed4861071e21ba769c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3aee06ae6a5be4cf7c0aa6e37288dc71aee8a108
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysregisteredsearchproperties-transact-sql"></a>sys.registered_search_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |**property_list_id**|**int**|Die ID der Sucheigenschaftenliste, zu der diese Eigenschaft gehört.|  
 |**property_set_guid**|**uniqueidentifier**|Die GUID, mit der der Eigenschaftensatz identifiziert wird, zu dem die Sucheigenschaft gehört.|  
 |**property_int_id**|**int**|Ganzzahl, die die Sucheigenschaft innerhalb des Eigenschaftensatzes identifiziert. **Property_int_id** innerhalb des Eigenschaftensatzes eindeutig ist.|  
-|**Eigenschaftsname**|**nvarchar(64)**|Ein Name, mit dem die Sucheigenschaft in der Sucheigenschaftenliste eindeutig identifiziert werden kann.<br /><br /> Hinweis: Um eine Eigenschaft zu suchen, geben Sie den Eigenschaftsnamen im die [CONTAINS](../../t-sql/queries/contains-transact-sql.md) Prädikat.|  
+|**property_name**|**nvarchar(64)**|Ein Name, mit dem die Sucheigenschaft in der Sucheigenschaftenliste eindeutig identifiziert werden kann.<br /><br /> Hinweis: Um eine Eigenschaft zu suchen, geben Sie den Eigenschaftsnamen im die [CONTAINS](../../t-sql/queries/contains-transact-sql.md) Prädikat.|  
 |**property_description**|**nvarchar(512)**|Beschreibung der Eigenschaft.|  
 |**property_id**|**int**|Interne Eigenschaften-ID der Sucheigenschaft innerhalb der sucheigenschaftenliste identifizierte der **Property_list_id** Wert.<br /><br /> Wenn einer Sucheigenschaftenliste eine Eigenschaft hinzugefügt wird, registriert das Volltextmodul die Eigenschaft und weist ihr eine interne Eigenschaften-ID zu, die für diese Eigenschaftenliste spezifisch ist. Die interne Eigenschaften-ID stellt eine ganze Zahl dar und ist für eine bestimmte Sucheigenschaftenliste eindeutig. Wenn eine bestimmte Eigenschaft für mehrere Sucheigenschaftenlisten registriert wird, kann für jede Sucheigenschaftenliste eine andere interne Eigenschaften-ID zugewiesen werden.<br /><br /> Hinweis: Die interne Eigenschaften-ID unterscheidet sich von der ganzzahlige Eigenschaftsbezeichner, die angegeben wird, wenn die Eigenschaft der sucheigenschaftenliste hinzugefügt. Weitere Informationen finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> So zeigen Sie allen eigenschaftsbezogenen Inhalte in den Volltextindex an: <br />                  [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)|  
   
@@ -70,7 +72,7 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
- [Sys. fulltext_indexes &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
+ [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
  [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   

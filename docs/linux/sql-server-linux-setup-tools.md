@@ -3,7 +3,7 @@ title: Installieren von SQL Server-Befehlszeilentools unter Linux | Microsoft Do
 description: Dieses Thema beschreibt, wie die SQL Server-Verwaltungstools unter Linux zu installieren.
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: fa96adb2d8a3cf5430ca09b636007887b7863df1
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 16a2366541809237609c88f8458a3930a5569c3a
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installieren Sie die SQL Server-Befehlszeilentools Sqlcmd und Bcp unter Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Die folgenden Schritte installieren Sie die Befehlszeilentools, Microsoft ODBC-Treiber und ihre Abhängigkeiten. Die **Mssql-Tools** Paket enthält:
 
@@ -196,7 +196,7 @@ brew install --no-sandbox mssql-tools
 #ACCEPT_EULA=y brew install --no-sandbox mssql-tools
 ```
 
-## <a id="docker"></a>Docker
+## <a id="docker"></a> Docker
 
 Beginnend mit SQL Server 2017 CTP 2.0, sind die SQL Server-Befehlszeilentools in der Docker-Images enthalten. Wenn Sie das Image mit einer interaktiven Eingabeaufforderung anfügen, können Sie die Tools lokal ausführen.
 
@@ -206,7 +206,7 @@ Beginnend mit SQL Server 2017 CTP 2.0, sind die SQL Server-Befehlszeilentools in
 
 Die folgende Tabelle enthält den Speicherort für die neuesten Tools Pakete:
 
-| Tools-Paket | Versionsoptionen | Herunterladen |
+| Tools-Paket | Version | Herunterladen |
 |-----|-----|-----|
 | Red Hat-RPM-Tools-Paket | 14.0.5.0-1 | [MSSQL-Tools-RPM-Paket](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
 | SLES RPM-Tools-Paket | 14.0.5.0-1 | [MSSQL-Tools-RPM-Paket](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
@@ -215,7 +215,7 @@ Die folgende Tabelle enthält den Speicherort für die neuesten Tools Pakete:
 
 Diese Pakete richten sich nach **Msodbcsql**, und muss zunächst installiert werden. Die **Msodbcsql** Paket besteht eine Abhängigkeit auf **UnixODBC-entwickl** (RPM) oder **Unixodbc-Dev** (Debian). Der Speicherort, der die **Msodbcsql** Pakete werden in der folgenden Tabelle aufgeführt:
 
-| Msodbcsql-Paket | Versionsoptionen | Herunterladen |
+| Msodbcsql-Paket | Version | Herunterladen |
 |-----|-----|-----|
 | Red Hat-RPM-Msodbcsql-Paket | 13.1.6.0-1 | [Msodbcsql-RPM-Paket](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
 | SLES RPM-Msodbcsql-Paket | 13.1.6.0-1 | [Msodbcsql-RPM-Paket](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 

@@ -12,20 +12,20 @@ ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7131eec581f973738d1cacb45dd355e2b7168aeb
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 8d0f5fe75b65efbea49df143e573316b50675a93
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Dieser Artikel zeigt unterstützte Bereitstellungskonfigurationen für SQL Server Always On-Verfügbarkeitsgruppen für Linux-Servern. Eine verfügbarkeitsgruppe unterstützt hohe Verfügbarkeit und Schutz von Daten. Automatische fehlererkennung, automatisches Failover und transparente wiederverbindung nach einem Failover bereitstellen hohen Verfügbarkeit. Synchronisierte Replikate bereitzustellen Datenschutz. 
 

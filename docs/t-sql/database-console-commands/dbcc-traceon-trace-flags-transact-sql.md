@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - trace flags [SQL Server], about trace flags
 - trace flags [SQL Server]
@@ -21,16 +23,16 @@ helpviewer_keywords:
 - performance [SQL Server], trace
 - debugging [SQL Server], trace flags
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
-caps.latest.revision: "171"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6011c66716e96347b295325ab020739e41c04370
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 396216c00fc4c474164d98e47d0185f479e61b48
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - Ablaufverfolgungsflags (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -143,6 +145,7 @@ In der folgenden Tabelle werden die in [!INCLUDE[ssNoVersion](../../includes/ssn
 |**9567**|Ermöglicht die Komprimierung des Datenstroms für AlwaysOn-Verfügbarkeitsgruppen während des automatischen Seedings. Die Komprimierung kann die Übertragungszeit während des automatischen Seedings erheblich reduzieren und erhöht sich die Auslastung für den Prozessor. Weitere Informationen finden Sie unter [Automatisches Initialisieren der AlwaysOn-verfügbarkeitsgruppe](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md) und [Optimieren der Komprimierung für die verfügbarkeitsgruppe](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Bereich**: global oder Sitzung|
 |**9591**|Deaktiviert die anmelden AlwaysOn-Verfügbarkeitsgruppen Block Komprimierung. Block protokollkomprimierung ist das Standardverhalten verwendet, die mit synchronen und asynchronen Replikaten in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], Komprimierung wird nur mit der asynchronen Replikate verwendet. <br /><br />**Bereich**: global oder Sitzung|
 |**9592**|Aktiviert die Protokollierung von Protokolldatenstrom-Komprimierung für synchrone Verfügbarkeitsgruppen. Diese Funktion ist standardmäßig auf synchrone Verfügbarkeitsgruppen deaktiviert, da Komprimierung die Latenz erhöht. Weitere Informationen finden Sie unter [Optimieren der Komprimierung für die Verfügbarkeitsgruppe](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Bereich**: global oder Sitzung| 
+|**9929**|Die In-Memory-Prüfpunktdateien reduziert auf 1 MB. Weitere Informationen finden Sie in diesem [Microsoft Support-Artikel](http://support.microsoft.com/kb/3147012).<br /><br />**Bereich**: globale nur|  
 |**9939**|Ermöglicht parallele Pläne und parallelen Scanvorgang von speicheroptimierten Tabellen und Tabellenvariablen in DML-Vorgänge, die auf Speicheroptimierte Tabellen oder Tabellenvariablen verweisen, solange sie nicht das Ziel des DML-Vorgangs im sind [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Weitere Informationen finden Sie in diesem [Microsoft Support-Artikel](http://support.microsoft.com/kb/4013877).<br /><br />**Hinweis:** Ablaufverfolgungsflag 9939 ist nicht erforderlich, wenn das Ablaufverfolgungsflag 4199 auch explizit aktiviert ist.<br /><br />**Bereich**: global oder Sitzung oder diesen Abfragebereich|   
 |**10204**|Deaktiviert die Zusammenführung/fallweise während der Neuorganisation für columnstore-Index. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], wenn ein columnstore-Index neu organisiert wird, es gibt neuer Funktionen zum Zusammenführen automatisch alle kleinen komprimierten Zeilengruppen in größeren komprimierten Zeilengruppen eingefügt, auch als komprimiert alle Zeilengruppen, die über eine große Anzahl von Zeilen gelöscht.<br /><br />**Hinweis:** das Ablaufverfolgungsflag 10204 gilt nicht für columnstore-Indizes, die auf Speicheroptimierte Tabellen erstellt werden.<br /><br />**Bereich**: global oder Sitzung|   
 |**10316**|Ermöglicht das Erstellen von zusätzlichen Indizes auf [interne Speicheroptimierte Stagingtabelle temporaltabelle](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md), neben der Standardhandler. Wenn Sie bestimmte Abfragemuster verfügen, die Spalten enthält, die nicht durch den Standardindex abgedeckt werden sollten Sie zusätzliche hinzufügen.<br /><br />**Hinweis:** der systemversionsverwaltung unterliegende temporale Tabellen für die speicheroptimierten Tabellen zu hohen Transaktionsdurchsatz vorgesehen sind. Denken Sie daran, dass zusätzliche Indizes erstellen Aufwand für DML-Vorgängen entstehen kann, die zu aktualisieren oder Löschen von Zeilen in der aktuellen Tabelle. Mit den zusätzlichen Indizes sollten Sie versuchen Sie, das richtige Gleichgewicht zwischen der Leistung von temporalen Abfragen und DML-Mehraufwand zu suchen.<br /><br />**Bereich**: global oder Sitzung|

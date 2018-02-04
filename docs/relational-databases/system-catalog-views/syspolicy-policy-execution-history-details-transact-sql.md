@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - syspolicy_policy_execution_history_details
 - syspolicy_policy_execution_history_details_TSQL
-dev_langs: TSQL
-helpviewer_keywords: syspolicy_policy_execution_history_details view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- syspolicy_policy_execution_history_details view
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bb2d7ba198275e14344be70df82e59153e341bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f560563cb2f558a55d9aeafd1e8a9d6071dfffb6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syspolicypolicyexecutionhistorydetails-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

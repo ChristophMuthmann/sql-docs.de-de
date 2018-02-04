@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_xtp_checkpoint_files (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_checkpoint_files (Transact-SQL) | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
@@ -8,7 +8,8 @@ ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_xtp_checkpoint_files_TSQL
 - dm_db_xtp_checkpoint_files_TSQL
 - sys.dm_db_xtp_checkpoint_files
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_checkpoint_files dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_checkpoint_files dynamic management view
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cad5ae59687c3658ef60e0a984fdc2ce94e24ad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fff8a7cff566b555c0cc28ff6e60c67815956738
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  Eine Speicheroptimierte Dateigruppe verwendet intern nur Anhängen-Dateien um eingefügten und gelöschten Zeilen für speicherinterne Tabellen zu speichern. Es gibt zwei Typen von Dateien. Eine Datendatei enthält eingefügte Zeilen an, während eine Änderungsdatei Verweise auf gelöschte Zeilen enthält. 
   
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]unterscheidet sich deutlich von neueren Versionen und wird unten im Thema zur erläutert [SQL Server 2014](#bkmk_2014).  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterscheidet sich deutlich von neueren Versionen und wird unten im Thema zur erläutert [SQL Server 2014](#bkmk_2014).  
   
  Weitere Informationen finden Sie unter [erstellen und Verwalten von Speicher für arbeitsspeicheroptimierte Objekte](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
@@ -88,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 |deleted_row_count|**bigint**|Die Anzahl der gelöschten Zeilen in der Änderungsdatei.|  
 |drop_table_deleted_row_count|**bigint**|Die Anzahl der Zeilen in den Datendateien, auf die sich die Tabellenlöschung auswirkt. Gilt für Datendateien, wenn die Zustandsspalte gleich 1 ist.<br /><br /> Zeigt die Anzahl der aus gelöschten Tabellen gelöschten Zeilen an. Statistiken drop_table_deleted_row_count werden kompiliert, nachdem die Arbeitsspeicher-Garbage Collection für die Zeilen aus gelöschten Tabellen abgeschlossen und ein Prüfpunkt erstellt wurde. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu starten, bevor die Statistiken zu gelöschten Tabellen in dieser Spalte angezeigt werden, werden sie im Rahmen der Wiederherstellung aktualisiert. Bei der Wiederherstellung werden keine Zeilen aus gelöschten Tabellen geladen. Statistiken zu gelöschten Tabellen werden während der Ladephase kompiliert und in dieser Spalte wiedergegeben, sobald die Wiederherstellung abgeschlossen ist.|  
 |state|**int**|0 – PRECREATED<br /><br /> 1 – UNDER CONSTRUCTION<br /><br /> 2 - ACTIVE<br /><br /> 3 – MERGE TARGET<br /><br /> 4 – MERGED SOURCE<br /><br /> 5 – REQUIRED FOR BACKUP/HA<br /><br /> 6 – IN TRANSITION TO TOMBSTONE<br /><br /> 7 – TOMBSTONE|  
-|state_desc|**nvarchar(60)**|PRECREATED – Eine kleine Menge von Daten- und Änderungsdateipaaren, auch bekannt als Prüfpunktdateipaare (Checkpoint File Pairs, CFPs), wird dauerhaft vorab zugeordnet, um während der Ausführung von Transaktionen Wartezeiten bei der Zuordnung neuer Dateien zu minimieren oder zu vermeiden.. Dabei handelt es sich um Datendateien mit der vollständigen Größe von 128 MB und 8 MB große Änderungsdateien, die jedoch keine Daten enthalten. Die Anzahl der CFPs wird aus der Anzahl von logischen Prozessoren oder Zeitplanungsmodulen (einer pro Kern, kein Höchstwert) berechnet und beträgt mindestens 8. Dies ist ein fester Speichermehraufwand in Datenbanken mit speicheroptimierten Tabellen.<br /><br /> UNDER CONSTRUCTION – Eine Anzahl von CFPs, in denen neu eingefügte Datenzeilen und Datenzeilen, die seit dem letzten Prüfpunkt möglicherweise gelöscht wurden, gespeichert werden.<br /><br /> ACTIVE – Diese enthalten die eingefügten und gelöschten Zeilen aus den vorherigen geschlossenen Prüfpunkten. Diese CFPs enthalten alle erforderlichen eingefügten und gelöschten Zeilen, bevor der aktive Teil des Transaktionsprotokolls beim Neustart der Datenbank angewendet wird. Diese CFPs sind etwa doppelt so groß wie die In-Memory-Größe speicheroptimierter Tabellen, vorausgesetzt, die Zusammenführung hält mit der Transaktionsarbeitsauslastung mit.<br /><br /> MERGE TARGET – Das CFP speichert die konsolidierten Datenzeilen aus den CFPs, die von der Zusammenführungsrichtlinie identifiziert wurden. Nachdem die Zusammenführung installiert wurde, befinden sich die MERGE TARGET-Übergänge im Status ACTIVE.<br /><br /> MERGED SOURCE – Nachdem der Zusammenführungsvorgang installiert wurde, sind die Quell-CFPs als MERGED SOURCE gekennzeichnet. Beachten Sie, dass die Auswertung der Zusammenführungsrichtlinie mehrere Zusammenführungen identifizieren kann, ein CFP jedoch nur an einem Zusammenführungsvorgang beteiligt sein darf.<br /><br /> REQUIRED FOR BACKUP/HA – Sobald die Zusammenführung installiert ist und das MERGE TARGET-CFP einem dauerhaften Prüfpunkt angehört, gehen die CFPs der Zusammenführungsquelle in diesen Zustand über. CFPs in diesem Zustand werden benötigt, um die nahtlose Verwendung der Datenbank mit der speicheroptimierten Tabelle sicherzustellen.  Dies gilt beispielsweise für die Wiederherstellung von einem dauerhaften Prüfpunkt, um zu einem früheren Zustand zurückzukehren. Ein CFP kann für die Garbage Collection gekennzeichnet werden, sobald der Protokollkürzungspunkt hinter dem Transaktionsbereich liegt.<br /><br /> IN TRANSITION TO TOMBSTONE – Diese CFPs werden nicht vom In-Memory-OLTP-Modul benötigt und können durch die Garbage Collection bereinigt werden. Dieser Status gibt an, dass diese CFPs warten, bis sie vom Hintergrundthread in den nächsten Zustand (d. h. TOMBSTONE) versetzt werden.<br /><br /> TOMBSTONE – Diese CFPs warten, bis sie vom FILESTREAM-Garbage Collector durch eine Garbage Collection bereinigt werden. ([Sp_filestream_force_garbage_collection &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md))|  
+|state_desc|**nvarchar(60)**|PRECREATED – Eine kleine Menge von Daten- und Änderungsdateipaaren, auch bekannt als Prüfpunktdateipaare (Checkpoint File Pairs, CFPs), wird dauerhaft vorab zugeordnet, um während der Ausführung von Transaktionen Wartezeiten bei der Zuordnung neuer Dateien zu minimieren oder zu vermeiden. Dabei handelt es sich um Datendateien mit der vollständigen Größe von 128 MB und 8 MB große Änderungsdateien, die jedoch keine Daten enthalten. Die Anzahl der CFPs wird aus der Anzahl von logischen Prozessoren oder Zeitplanungsmodulen (einer pro Kern, kein Höchstwert) berechnet und beträgt mindestens 8. Dies ist ein fester Speichermehraufwand in Datenbanken mit speicheroptimierten Tabellen.<br /><br /> UNDER CONSTRUCTION – Eine Anzahl von CFPs, in denen neu eingefügte Datenzeilen und Datenzeilen, die seit dem letzten Prüfpunkt möglicherweise gelöscht wurden, gespeichert werden.<br /><br /> ACTIVE – Diese enthalten die eingefügten und gelöschten Zeilen aus den vorherigen geschlossenen Prüfpunkten. Diese CFPs enthalten alle erforderlichen eingefügten und gelöschten Zeilen, bevor der aktive Teil des Transaktionsprotokolls beim Neustart der Datenbank angewendet wird. Diese CFPs sind etwa doppelt so groß wie die In-Memory-Größe speicheroptimierter Tabellen, vorausgesetzt, die Zusammenführung hält mit der Transaktionsarbeitsauslastung mit.<br /><br /> MERGE TARGET – Das CFP speichert die konsolidierten Datenzeilen aus den CFPs, die von der Zusammenführungsrichtlinie identifiziert wurden. Nachdem die Zusammenführung installiert wurde, befinden sich die MERGE TARGET-Übergänge im Status ACTIVE.<br /><br /> MERGED SOURCE – Nachdem der Zusammenführungsvorgang installiert wurde, sind die Quell-CFPs als MERGED SOURCE gekennzeichnet. Beachten Sie, dass die Auswertung der Zusammenführungsrichtlinie mehrere Zusammenführungen identifizieren kann, ein CFP jedoch nur an einem Zusammenführungsvorgang beteiligt sein darf.<br /><br /> REQUIRED FOR BACKUP/HA – Sobald die Zusammenführung installiert ist und das MERGE TARGET-CFP einem dauerhaften Prüfpunkt angehört, gehen die CFPs der Zusammenführungsquelle in diesen Zustand über. CFPs in diesem Zustand werden benötigt, um die nahtlose Verwendung der Datenbank mit der speicheroptimierten Tabelle sicherzustellen.  Dies gilt beispielsweise für die Wiederherstellung von einem dauerhaften Prüfpunkt, um zu einem früheren Zustand zurückzukehren. Ein CFP kann für die Garbage Collection gekennzeichnet werden, sobald der Protokollkürzungspunkt hinter dem Transaktionsbereich liegt.<br /><br /> IN TRANSITION TO TOMBSTONE – Diese CFPs werden nicht vom In-Memory-OLTP-Modul benötigt und können durch die Garbage Collection bereinigt werden. Dieser Status gibt an, dass diese CFPs warten, bis sie vom Hintergrundthread in den nächsten Zustand (d. h. TOMBSTONE) versetzt werden.<br /><br /> TOMBSTONE – Diese CFPs warten, bis sie vom FILESTREAM-Garbage Collector durch eine Garbage Collection bereinigt werden. ([Sp_filestream_force_garbage_collection &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md))|  
 |lower_bound_tsn|**bigint**|Die untere Grenze für Transaktionen, die in der Datei enthalten sind. NULL, wenn die Zustandsspalte ungleich 2, 3 oder 4 ist.|  
 |upper_bound_tsn|**bigint**|Die obere Grenze für Transaktionen, die in der Datei enthalten sind. NULL, wenn die Zustandsspalte ungleich 2, 3 oder 4 ist.|  
 |last_backup_page_count|**int**|Die logische Seitenanzahl, die bei der letzten Sicherung bestimmt wird. Diese gilt, wenn die Zustandsspalte auf 2, 3, 4 oder 5 festgelegt ist. NULL, wenn die Seitenanzahl unbekannt ist.|  

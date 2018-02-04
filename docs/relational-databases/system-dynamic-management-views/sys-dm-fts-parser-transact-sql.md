@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_fts_parser
 - dm_fts_parser_TSQL
 - sys.dm_fts_parser
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_fts_parser dynamic management function
 - troubleshooting [SQL Server], full-text search
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6dad0375eeffff881c1887fea3c82343202f6b77
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 97e1eb8f7c4b37e8f1d3bb84ff7b1607712f729c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +49,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Abfragezeichenfolge*  
+ *query_string*  
  Die zu analysierende Abfrage. *Abfragezeichenfolge* kann eine Zeichenfolgenkette mit [CONTAINS](../../t-sql/queries/contains-transact-sql.md) -syntaxunterstützung. Sie können z. B. Flexionsformen, einen Thesaurus und logische Operatoren einschließen.  
   
  *lcid*  

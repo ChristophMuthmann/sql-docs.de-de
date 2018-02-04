@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,23 @@ f1_keywords:
 - sys.dm_exec_input_buffer _tsql
 - dm_exec_input_buffer
 - dm_exec_input_buffer_tsql
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_input_buffer dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_input_buffer dynamic management function
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 147ac7627ba30a8a249e00cbf03e37887368de09
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 456ae8af5d366f8fb5be006f944f1f704e382488
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexecinputbuffer-transact-sql"></a>Sys. dm_exec_input_buffer (Transact-SQL)
+# <a name="sysdmexecinputbuffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
   Gibt Informationen zu Anweisungen, die mit einer Instanz von übermittelt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -59,7 +62,7 @@ Die Request_id von [Sys. dm_exec_requests](../../relational-databases/system-dyn
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**event_type**|**nvarchar(256)**|Der Typ des Ereignisses im Eingabepuffer für die angegebene Spid.|  
-|**Parameter**|**smallint**|Alle Parameter für die Anweisung bereitgestellt.|  
+|**parameters**|**smallint**|Alle Parameter für die Anweisung bereitgestellt.|  
 |**event_info**|**nvarchar(max)**|Der Text der Anweisung im Eingabepuffer für die angegebene Spid.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -93,6 +96,6 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausführung bezogene dynamische Verwaltungssichten und-Funktionen &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Sys. dm_exec_sessions &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [Sys. dm_exec_requests &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)  

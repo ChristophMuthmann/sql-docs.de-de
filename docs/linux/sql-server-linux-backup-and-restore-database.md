@@ -3,7 +3,7 @@ title: Sichern und Wiederherstellen von SQL Server-Datenbanken unter Linux | Mic
 description: Informationen Sie zum Sichern und Wiederherstellen von SQL Server-Datenbanken unter Linux.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.workload: On Demand
-ms.openlocfilehash: 0b12200da9b4e0967c8057d807d19919fb07f331
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9a0a1243ede149ada6a1042a246006929370a4b2
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Sichern und Wiederherstellen der SQL Server-Datenbanken unter Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Sie können Sicherungen der Datenbanken von SQL Server-2017 unter Linux mit den gleichen Tools wie andere Plattformen schalten. Auf einem Linux-Server, können Sie **Sqlcmd** zum Herstellen einer Verbindung mit SQL Server und Sicherungen. Sie können von Windows Herstellen einer Verbindung mit SQL Server on Linux und Sicherungen mit der Benutzeroberfläche. Die Sicherungsfunktion für entspricht dem über Plattformen hinweg. Beispielsweise können Sie Datenbanken sichern, lokal, remote-Laufwerke oder zu [Microsoft Azure Blob-Speicherdienst](../relational-databases/backup-restore/sql-server-backup-to-url.md).
 

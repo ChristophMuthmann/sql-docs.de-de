@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_database_copies
 - dm_database_copies
 - sys.dm_database_copies_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dm_database_copies
 - sys.dm_database_copies
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9ea0a5834ae83cd49deec2731f6ce2c3f8ccacc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fb6240f63ab72ae0e6ddbc28d2afe7e6ef24ef82
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdatabasecopies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,11 +45,11 @@ Informationen zur geografischen Replikation Links zurückgeben möchten, verwend
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Die ID der aktuellen Datenbank in der `sys.databases`-Sicht.|  
-|**' Startdatum '.**|**datetimeoffset**|Die UTC-Zeit in einem regionalen [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Datencenter, zu der das Kopieren der Datenbank initiiert wurde.|  
+|**start_date**|**datetimeoffset**|Die UTC-Zeit in einem regionalen [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Datencenter, zu der das Kopieren der Datenbank initiiert wurde.|  
 |**modify_date**|**datetimeoffset**|Die UTC-Zeit im regionalen [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Datencenter, zu der das Kopieren der Datenbank abgeschlossen wurde. Die neue Datenbank ist ab diesem Zeitpunkt im Hinblick auf Transaktionen konsistent mit der primären Datenbank. Die Informationen über den Abschluss wird jede Minute aktualisiert.<br /><br />UTC-Zeit die letzte Aktualisierung des Felds Percent_complete reflektieren.|  
 |**percent_complete**|**real**|Der Prozentsatz der kopierten Bytes. Mögliche Werte liegen zwischen 0 und 100 aus. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] wird nach einigen Fehlern wie Failovern u. U. automatisch weiter ausgeführt und startet das Kopieren der Datenbank erneut. In diesem Fall würde percent_complete bei 0 neu starten.|  
-|**Fehlercode**|**int**|Wenn der Wert größer als 0 ist, gibt der Code den Fehler an, der beim Kopieren aufgetreten ist. Der Wert ist gleich 0, wenn keine Fehler aufgetreten sind.|  
-|**error_desc-Spalte**|**nvarchar(4096)**|Beschreibung des Fehlers, der beim Kopieren aufgetreten ist.|  
+|**error_code**|**int**|Wenn der Wert größer als 0 ist, gibt der Code den Fehler an, der beim Kopieren aufgetreten ist. Der Wert ist gleich 0, wenn keine Fehler aufgetreten sind.|  
+|**error_desc**|**nvarchar(4096)**|Beschreibung des Fehlers, der beim Kopieren aufgetreten ist.|  
 |**error_severity**|**int**|Gibt 16 zurück, wenn das Kopieren der Datenbank fehlgeschlagen ist.|  
 |**error_state**|**int**|Gibt 1 zurück, wenn der Kopiervorgang fehlgeschlagen ist.|  
 |**copy_guid**|**uniqueidentifier**|Eindeutige ID des Vorgangs zum Kopieren.|  

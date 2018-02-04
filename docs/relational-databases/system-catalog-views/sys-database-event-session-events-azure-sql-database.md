@@ -8,21 +8,23 @@ ms.reviewer:
 ms.service: 
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: Azure SQL Database
+applies_to:
+- Azure SQL Database
 ms.assetid: f4c9eb0a-173c-4c66-8dd8-6f7176b2657f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: deb6b14739b47dda369c457ad7a2bddc70ca3fcc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 62552b796e4d2207ccb97c30e2d3244b409fc4d6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdatabaseeventsessionevents-azure-sql-database"></a>Sys.database_event_session_events (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -52,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 ||||  
 |-|-|-|  
 |Von|Aktion|Beziehung|  
-|Sys.database_event_session_events.event_session_id|Sys.database_event_sessions.event_session_id|n:1|  
+|sys.database_event_session_events.event_session_id|sys.database_event_sessions.event_session_id|n:1|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)  

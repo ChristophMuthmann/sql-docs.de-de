@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_sentitems_TSQL
 - sysmail_sentitems
-dev_langs: TSQL
-helpviewer_keywords: sysmail_sentitems database mail view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_sentitems database mail view
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b9dabd7adad6155d6acac5ffc5aab112a2a9551
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5545beff62c4c5e46664bcfe570f5cb147122744
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailsentitems-transact-sql"></a>sysmail_sentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,17 +42,17 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Der Bezeichner des E-Mail-Elements in der E-Mail-Warteschlange.|  
 |**profile_id**|**int**|Der Bezeichner des Profils, das zum Senden der Nachricht verwendet wurde.|  
-|**Empfänger**|**varchar(max)**|Die E-Mail-Adressen der Nachrichtenempfänger.|  
+|**recipients**|**varchar(max)**|Die E-Mail-Adressen der Nachrichtenempfänger.|  
 |**copy_recipients**|**varchar(max)**|Die E-Mail-Adressen derer, die Kopien der Nachricht erhalten.|  
 |**blind_copy_recipients**|**varchar(max)**|Die E-Mail-Adressen derer, die Kopien der Nachricht erhalten, deren Namen jedoch nicht im Nachrichtenkopf angezeigt werden.|  
-|**Betreff**|**nvarchar(510)**|Die Betreffzeile der Nachricht.|  
-|**Nachrichtentext**|**varchar(max)**|Der Textkörper der Nachricht.|  
+|**subject**|**nvarchar(510)**|Die Betreffzeile der Nachricht.|  
+|**body**|**varchar(max)**|Der Textkörper der Nachricht.|  
 |**body_format**|**varchar(20)**|Das Textkörperformat der Nachricht. Die möglichen Werte sind **TEXT** und **HTML**.|  
-|**Bedeutung**|**varchar(6)**|Die **Wichtigkeit** -Parameter der Nachricht.|  
-|**Sensitivität**|**varchar(12)**|Die **Empfindlichkeit** -Parameter der Nachricht.|  
+|**importance**|**varchar(6)**|Die **Wichtigkeit** -Parameter der Nachricht.|  
+|**sensitivity**|**varchar(12)**|Die **Empfindlichkeit** -Parameter der Nachricht.|  
 |**file_attachments**|**varchar(max)**|Eine durch Semikolons getrennte Liste der Dateinamen, die an die E-Mail-Nachricht angehängt wurden.|  
 |**attachment_encoding**|**varchar(20)**|Der Typ der E-Mail-Anlage.|  
-|**Abfrage**|**varchar(max)**|Die Abfrage, die vom E-Mail-Programm ausgeführt wurde.|  
+|**query**|**varchar(max)**|Die Abfrage, die vom E-Mail-Programm ausgeführt wurde.|  
 |**execute_query_database**|**sysname**|Der Datenbankkontext, in dem das E-Mail-Programm die Abfrage ausgeführt hat.|  
 |**attach_query_result_as_file**|**bit**|Bei einem Wert von 0 wurden die Abfrageergebnisse hinter dem Inhalt des Textkörpers in den Textkörper der E-Mail-Nachricht eingeschlossen. Bei einem Wert von 1 wurden die Ergebnisse als Anlage zurückgegeben.|  
 |**query_result_header**|**bit**|Bei einem Wert von 1 enthielten die Abfrageergebnisse Spaltenheader. Bei einem Wert von 0 enthielten die Abfrageergebnisse keine Spaltenheader.|  

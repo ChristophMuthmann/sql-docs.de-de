@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,23 @@ f1_keywords:
 - trusted_assemblies
 - sys.trusted_assemblies_TSQL
 - sys.trusted_assemblies
-dev_langs: TSQL
-helpviewer_keywords: sys.trusted_assemblies
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.trusted_assemblies
 ms.assetid: 
 caps.latest.revision: 
 author: tmullaney
 ms.author: thmullan;rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ef97b33df620457102d79ad9535a3550014aa55
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 827e0d356114bf2254ebd265ca7ee29e0a00f595
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="systrustedassemblies-transact-sql"></a>Sys.trusted_assemblies (Transact-SQL)  
+# <a name="systrustedassemblies-transact-sql"></a>sys.trusted_assemblies (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Enthält eine Zeile für jede vertrauenswürdige Assembly für den Server an.
@@ -41,7 +44,7 @@ Enthält eine Zeile für jede vertrauenswürdige Assembly für den Server an.
 |Spaltenname |Datentyp |Description |
 |--- |--- |--- |
 |Hashindizes |varbinary(8000) |SHA2_512-Hash des Inhalts Assembly. |
-|Beschreibung |nvarchar(4000) |Optionale benutzerdefinierte Beschreibung der Assembly. Microsoft empfiehlt die Verwendung des kanonischen Namens, der den einfachen Namen, Versionsnummer, Kultur, öffentlicher Schlüssel und Architektur der Assembly, vertrauen codiert. Dieser Wert eindeutig kennzeichnet die Assembly, auf der Seite der common Language Runtime (CLR) und entspricht der Wert Clr_name in sys.assemblies. |
+|description |nvarchar(4000) |Optionale benutzerdefinierte Beschreibung der Assembly. Microsoft empfiehlt die Verwendung des kanonischen Namens, der den einfachen Namen, Versionsnummer, Kultur, öffentlicher Schlüssel und Architektur der Assembly, vertrauen codiert. Dieser Wert eindeutig kennzeichnet die Assembly, auf der Seite der common Language Runtime (CLR) und entspricht der Wert Clr_name in sys.assemblies. |
 |create_date |datetime2 |Datum, an die Assembly der Liste der vertrauenswürdigen Assemblys hinzugefügt wurde. |
 |created_by |nvarchar(128) |Der Anmeldename des Prinzipals, der die Assembly der Liste hinzugefügt. |
 | | | |

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_faileditems
 - sysmail_faileditems_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_faileditems database mail view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_faileditems database mail view
 ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9872591d38bfedcd0b6c4e0f28a7922ace26b849
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3147c846a4a69f199e5b3ae8c0cea931429254fc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailfaileditems-transact-sql"></a>sysmail_faileditems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,14 +42,14 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Der Bezeichner des E-Mail-Elements in der E-Mail-Warteschlange.|  
 |**profile_id**|**int**|Der Bezeichner des Profils, das zum Übermitteln der Nachricht verwendet wurde.|  
-|**Empfänger**|**varchar(max)**|Die E-Mail-Adressen der Nachrichtenempfänger.|  
+|**recipients**|**varchar(max)**|Die E-Mail-Adressen der Nachrichtenempfänger.|  
 |**copy_recipients**|**varchar(max)**|Die E-Mail-Adressen derer, die Kopien der Nachricht erhalten.|  
 |**blind_copy_recipients**|**varchar(max)**|Die E-Mail-Adressen derer, die Kopien der Nachricht erhalten, deren Namen jedoch nicht im Nachrichtenkopf angezeigt werden.|  
-|**Betreff**|**nvarchar(510)**|Die Betreffzeile der Nachricht.|  
-|**Nachrichtentext**|**varchar(max)**|Der Textkörper der Nachricht.|  
+|**subject**|**nvarchar(510)**|Die Betreffzeile der Nachricht.|  
+|**body**|**varchar(max)**|Der Textkörper der Nachricht.|  
 |**body_format**|**varchar(20)**|Das Textkörperformat der Nachricht. Mögliche Werte sind TEXT und HTML.|  
-|**Bedeutung**|**varchar(6)**|Die **Wichtigkeit** -Parameter der Nachricht.|  
-|**Sensitivität**|**varchar(12)**|Die **Empfindlichkeit** -Parameter der Nachricht.|  
+|**importance**|**varchar(6)**|Die **Wichtigkeit** -Parameter der Nachricht.|  
+|**sensitivity**|**varchar(12)**|Die **Empfindlichkeit** -Parameter der Nachricht.|  
 |**file_attachments**|**varchar(max)**|Eine durch Semikolons getrennte Liste der Dateinamen, die an die E-Mail-Nachricht angehängt wurden.|  
 |**Attachment_encoding**|**varchar(20)**|Der Typ der E-Mail-Anlage.|  
 |**Abfrage**|**varchar(max)**|Die Abfrage, die vom E-Mail-Programm ausgeführt wurde.|  

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_stats_histogram (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_stats_histogram (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,21 +17,23 @@ f1_keywords:
 - sys.dm_db_stats_histogram_TSQL
 - dm_db_stats_histogram
 - dm_db_stats_histogram_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_stats_histogram dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_stats_histogram dynamic management function
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
-caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f43afdac5972dd5f01c192dbbc755911a83a341
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4ce36dbcac1e0df3f8cbe4020e87fc32af36920a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmdbstatshistogram-transact-sql"></a>Sys.dm_db_stats_histogram (Transact-SQL)
+# <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Gibt das statistikhistogramm für das angegebene Datenbankobjekt (Tabelle oder indizierte Sicht) in der aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank. Ähnlich wie `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
@@ -59,9 +62,9 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |stats_id |**int**|Die ID des Statistikobjekts. Diese ist innerhalb der Tabelle oder indizierten Sicht eindeutig. Weitere Informationen finden Sie unter [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
 |step_number |**int** |Die Anzahl der Schritte im Histogramm. |
 |range_high_key |**sql_variant** |Oberer Spaltengrenzwert für einen Histogrammschritt. Der Spaltenwert wird auch als Schlüsselwert bezeichnet.|
-|RANGE_ROWS |**real** |Geschätzte Anzahl von Zeilen, deren Spaltenwerte innerhalb eines Histogrammschritts liegen, ohne den oberen Grenzwert. |
+|range_rows |**real** |Geschätzte Anzahl von Zeilen, deren Spaltenwerte innerhalb eines Histogrammschritts liegen, ohne den oberen Grenzwert. |
 |equal_rows |**real** |Geschätzte Anzahl von Zeilen, deren Spaltenwerte der Obergrenze des Histogrammschritts entsprechen. |
-|DISTINCT_RANGE_ROWS |**bigint** |Geschätzte Anzahl von Zeilen mit einem unterschiedlichen Spaltenwert innerhalb eines Histogrammschritts ohne den oberen Grenzwert. |
+|distinct_range_rows |**bigint** |Geschätzte Anzahl von Zeilen mit einem unterschiedlichen Spaltenwert innerhalb eines Histogrammschritts ohne den oberen Grenzwert. |
 |average_range_rows |**real** |Durchschnittliche Anzahl von Zeilen mit doppelten Spaltenwerten in einem Histogrammschritt, ohne den oberen Grenzwert (`RANGE_ROWS / DISTINCT_RANGE_ROWS` für `DISTINCT_RANGE_ROWS > 0`). |
   
  ## <a name="remarks"></a>Hinweise  
@@ -150,4 +153,4 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
 ## <a name="see-also"></a>Siehe auch  
 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [Objektbezogene dynamische Verwaltungssichten und-Funktionen (Transact-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
-[Sys. dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
+[sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

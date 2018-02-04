@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_workers_TSQL
 - dm_os_workers
 - sys.dm_os_workers
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_workers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_workers dynamic management view
 ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
-caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4451ba929c34137f285aadb615a1b286fd38e28e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: fb27268dbfb21cf2fed3b1b7b728cd9eeb4ee495
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosworkers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,7 +80,7 @@ ms.lasthandoff: 01/02/2018
 |signal_worker_address|**varbinary(8)**|Speicheradresse des Arbeitsthreads, der dieses Objekt zuletzt signalisiert hat. Weitere Informationen finden Sie unter [dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |scheduler_address|**varbinary(8)**|Speicheradresse des Zeitplanungsmoduls. Weitere Informationen finden Sie unter [DM_OS_SCHEDULERS &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
 |processor_group|**smallint**|Speichert die Prozessorgruppen-ID, die diesem Thread zugewiesen ist.|  
-|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn sich der Arbeitsthread im Status RUNNING befindet und der Arbeitsthread nicht präemptiv ausgeführt wird, stimmt die Adresse des Arbeitsthreads mit active_worker_address in sys.dm_os_schedulers überein.  

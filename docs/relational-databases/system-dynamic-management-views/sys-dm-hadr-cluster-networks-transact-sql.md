@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - sys.dm_hadr_cluster_networks_TSQL
 - sys.dm_hadr_cluster_networks
 - dm_hadr_cluster_networks_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_cluster_networks dynamic management view
 ms.assetid: ece32b15-d63f-4f93-92b7-e2930333e97a
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77d2eaee6ce6ac28370a2c825eece9ade0440df0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8f0c6ccec0c4b4025d7696a888d7bfb036dd1203
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmhadrclusternetworks-transact-sql"></a>sys.dm_hadr_cluster_networks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**member_name**|**vom Datentyp nvarchar(128)**|Der Computername eines Knotens im WSFC-Cluster.|  
+|**member_name**|**nvarchar(128)**|Der Computername eines Knotens im WSFC-Cluster.|  
 |**network_subnet_ip**|**nvarchar(48)**|Die Netzwerk-IP-Adresse des Subnetzes, zu der der Computer gehört. Dies kann eine IPv4- oder eine IPv6-Adresse sein.|  
 |**network_subnet_ipv4_mask**|**nvarchar(45)**|Die Netzwerksubnetz-Maske, die das Subnetz angibt, zu dem die IP-Adresse gehört. **network_subnet_ipv4_mask** DHCP < Network_subnet_option >-Optionen in einer mit DHCP-Klausel an die [CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md) oder [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung.<br /><br /> NULL = IPv6-Subnetz.|  
 ||||  
@@ -60,8 +62,8 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Failoverclustering und Always On-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
- [Überwachen von Verfügbarkeitsgruppen (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Sys. dm_os_cluster_nodes &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
+ [Überwachen von Verfügbarkeitsgruppen &#40; Transact-SQL &#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [sys.dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
  [Abfragen von SQL Server-Systemkatalogs – häufig gestellte Fragen](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

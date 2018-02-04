@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_missing_index_columns (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_missing_index_columns (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,26 +17,27 @@ f1_keywords:
 - sys.dm_db_missing_index_columns_TSQL
 - sys.dm_db_missing_index_columns
 - dm_db_missing_index_columns
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_missing_index_columns dynamic management function
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_columns dynamic management function
 ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
-caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f2f358532d43453242fea591ab9ac12024230f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f0778fe8698d486d8535eb17fe1d10e6fd812984
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbmissingindexcolumns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt Informationen zu Spalten von Datenbanktabellen zurück, für die kein Index vorhanden ist, mit Ausnahme von räumlichen Indizes. **Sys. dm_db_missing_index_columns** ist eine dynamische Verwaltungsfunktion.  
+  Gibt Informationen zu Spalten von Datenbanktabellen zurück, für die kein Index vorhanden ist, mit Ausnahme von räumlichen Indizes. **sys.dm_db_missing_index_columns** is a dynamic management function.  
 
 ## <a name="syntax"></a>Syntax  
   
@@ -48,17 +50,17 @@ sys.dm_db_missing_index_columns(index_handle)
  *index_handle*  
  Eine ganze Zahl, die einen fehlenden Index eindeutig identifiziert. Sie kann aus den folgenden dynamischen Verwaltungsobjekten abgerufen werden:  
   
- [Sys. dm_db_missing_index_details &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)  
+ [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)  
   
- [Sys. dm_db_missing_index_groups &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)  
+ [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|ID der Spalte.|  
-|**Spaltenname**|**sysname**|Name der Tabellenspalte.|  
-|**column_usage**|**varchar(20)**|Art der Verwendung der Spalte durch die Abfrage. Die möglichen Werte und deren Beschreibungen sind:<br /><br /> Gleichheit: Spalte wird in ein Prädikat, das Gleichheit, von dem Formular drückt einbezogen: <br />                        *Table.Column* = *für Constant_value*<br /><br /> UNGLEICHHEITSOPERATOR: Spalte trägt zur ein Prädikat, das Ungleichheit, z. B. ausdrückt ein Prädikat im Format: *table.column* > *für Constant_value*. Jeder Vergleichsoperator außer "=" drückt Ungleichheit aus.<br /><br /> INCLUDE: Spalte wird nicht verwendet werden, um die Auswertung eines Prädikats, aber er ist einem anderen Grund verwendet, z. B. zum Abdecken einer Abfrage.|  
+|**column_name**|**sysname**|Name der Tabellenspalte.|  
+|**column_usage**|**varchar(20)**|Art der Verwendung der Spalte durch die Abfrage. Die möglichen Werte und deren Beschreibungen sind:<br /><br /> Gleichheit: Spalte wird in ein Prädikat, das Gleichheit, von dem Formular drückt einbezogen: <br />                        *table.column* = *constant_value*<br /><br /> UNGLEICHHEITSOPERATOR: Spalte trägt zur ein Prädikat, das Ungleichheit, z. B. ausdrückt ein Prädikat im Format: *table.column* > *für Constant_value*. Jeder Vergleichsoperator außer "=" drückt Ungleichheit aus.<br /><br /> INCLUDE: Spalte wird nicht verwendet werden, um die Auswertung eines Prädikats, aber er ist einem anderen Grund verwendet, z. B. zum Abdecken einer Abfrage.|  
   
 ## <a name="remarks"></a>Hinweise  
  Zurückgegebene Informationen **dm_db_missing_index_columns** wird aktualisiert, wenn eine Abfrage vom Abfrageoptimierer optimiert wird, und wird nicht beibehalten. Informationen zu fehlenden Indizes werden nur bis zum Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufbewahrt. Datenbankadministratoren sollten regelmäßig Sicherungskopien der Informationen zu fehlenden Indizes erstellen, wenn Sie sie nach dem Wiederverwenden des Servers beibehalten möchten.  
@@ -89,8 +91,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sys. dm_db_missing_index_details &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [Sys. dm_db_missing_index_groups &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
- [Sys. dm_db_missing_index_group_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
+ [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [sys.dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_column_store_row_group_operational_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_column_store_row_group_operational_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,23 +8,25 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 31b71c68-50a0-4fd8-a7fe-2d2292be1163
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db242a2add7add3528e5fe2743a78f13e40b8b43
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f062c426525c8c6692fd56d5599bc5fac0f589ec
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmdbcolumnstorerowgroupoperationalstats-transact-sql"></a>Sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)
+# <a name="sysdmdbcolumnstorerowgroupoperationalstats-transact-sql"></a>sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Gibt aktuelle e/a, Sperren auf Zeilenebene und Zugriff auf die Aktivität für komprimierte Zeilengruppen in einem columnstore-Index. Verwendung **sys.dm_db_column_store_row_group_operational_stats** zum Verfolgen der Zeitdauer eine Benutzerabfrage warten, bis die Lese- und Schreibvorgänge für eine komprimierte Zeilengruppe oder eine Partition eines columnstore-Indexes muss, und welche Zeilengruppen, die auftreten hohen e/a-Aktivitäten oder Hotspots.  
@@ -36,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Die ID der Tabelle mit der columnstore-Index.|  
 |**index_id**|**int**|ID des columnstore-Indexes.|  
-|**Partitionsnummer**|**int**|Auf 1 basierende Partitionsnummer im Index oder Heap.|  
+|**partition_number**|**int**|Auf 1 basierende Partitionsnummer im Index oder Heap.|  
 |**row_group_id**|**int**|Die ID der Zeilengruppe im columnstore-Index. Dies ist eindeutig innerhalb einer Partition.|  
 |**scan_count**|**int**|Anzahl von Scanvorgängen durch die Zeilengruppe seit dem letzten Neustart der SQL.|  
 |**delete_buffer_scan_count**|**int**|Anzahl der Häufigkeit, mit die löschpuffers verwendet wurde, um gelöschte Zeilen in dieser Zeilengruppe zu bestimmen. Dies schließt den Zugriff auf die Hashtabelle im Arbeitsspeicher und der zugrunde liegenden Btree.|  
@@ -60,13 +62,13 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Index-verbundene dynamische Verwaltungssichten und-Funktionen &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Index Related Dynamic Management Views and Functions (Transact-SQL) (Indexbezogene dynamische Verwaltungssichten und -funktionen (Transact-SQL))](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
- [Sys. dm_db_index_usage_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [Sys. dm_os_latch_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)   
- [Sys. dm_db_partition_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [Sys. allocation_units &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)   
+ [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_pdw_network_credentials (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_network_credentials (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,23 +8,25 @@ ms.reviewer:
 ms.service: 
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21935bde6ebefe2b30743a4961ba05e3092539d6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4bddbdd676ab829f1468866c09d745919d1fe97d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmpdwnetworkcredentials-transact-sql"></a>Sys.dm_pdw_network_credentials (Transact-SQL)
+# <a name="sysdmpdwnetworkcredentials-transact-sql"></a>sys.dm_pdw_network_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Gibt eine Liste aller Netzwerkanmeldeinformationen, in gespeichert der [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Appliance für alle Zielserver. Für den Knoten, und jeder Serverknoten sind die Ergebnisse aufgeführt.  

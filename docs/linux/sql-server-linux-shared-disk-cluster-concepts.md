@@ -3,7 +3,7 @@ title: Failoverclusterinstanzen - SQLServer on Linux | Microsoft Docs
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: c99b850b9733eba6baadb1d5bb893e6479fe4dea
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 3731e8fd8d5a90b063bf27c012e7cb5670193b23
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Failoverclusterinstanzen - SQLServer on Linux
 

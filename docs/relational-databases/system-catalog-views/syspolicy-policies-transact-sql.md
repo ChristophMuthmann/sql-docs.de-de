@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - syspolicy_policies_TSQL
 - syspolicy_policies
-dev_langs: TSQL
-helpviewer_keywords: syspolicy_policies view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- syspolicy_policies view
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8daf45292562d5569212c1a0208ba7c032d8d13e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 620a626b78521b23c015389ca635a95ebfe0cf33
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syspolicypolicies-transact-sql"></a>syspolicy_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 |execution_mode|**int**|Auswertungsmodus für die Richtlinie. Mögliche Werte sind wie folgt aus:<br /><br /> 0 = Bedarfsgesteuert<br /><br /> Dieser Modus wertet die Richtlinie aus, wenn sie vom Benutzer direkt angegeben wird.<br /><br /> 1 = Bei Änderung: Verhindern<br /><br /> Dieser automatisierte Modus verwendet DDL-Trigger, um Richtlinienverstöße zu verhindern.<br /><br /> 2 = Bei Änderung: Nur protokollieren<br /><br /> Dieser automatisierte Modus verwendet die Ereignisbenachrichtigung, um eine Richtlinie dann auszuwerten, wenn eine relevante Änderung auftritt. Die Richtlinienverstöße werden protokolliert.<br /><br /> 4 = Nach Zeitplan<br /><br /> Dieser automatisierte Modus verwendet einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag, um eine Richtlinie in regelmäßigen Abständen auszuwerten. In diesem Modus werden Richtlinienverstöße protokolliert.<br /><br /> Hinweis: Der Wert 3 ist kein mögliche Wert.|  
 |policy_category|**int**|ID der Richtlinienkategorie der richtlinienbasierten Verwaltung, zu der diese Richtlinie gehört. Ist NULL, wenn sie sich in der Standardrichtliniengruppe befindet.|  
 |schedule_uid|**uniqueidentifier**|Enthält die ID des Zeitplans, wenn execution_mode den Wert Nach Zeitplan aufweist. Ist andernfalls NULL.|  
-|Beschreibung|**nvarchar(max)**|Beschreibung der Richtlinie. Die Beschreibungsspalte ist optional und kann NULL sein.|  
+|description|**nvarchar(max)**|Beschreibung der Richtlinie. Die Beschreibungsspalte ist optional und kann NULL sein.|  
 |help_text|**nvarchar(4000)**|Der Linktext, der zu help_link gehört.|  
 |help_link|**nvarchar(2083)**|Der zusätzliche Hilfelink, der der Richtlinie vom Richtlinienersteller zugewiesen wird.|  
 |object_set_id|**int**|ID des Objektsatzes, den die Richtlinie auswertet.|  

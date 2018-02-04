@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_hadr_database_replica_cluster_states (Transact-SQL) | Microsoft Docs
+title: sys.dm_hadr_database_replica_cluster_states (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - dm_hadr_database_replica_cluster_states_TSQL
 - sys.dm_hadr_database_replica_cluster_states_TSQL
 - dm_hadr_database_replica_cluster_states
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_database_replica_cluster_states dynamic management view
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 797a83b3f0493a2fb7d65e9c7c541a0e6b64e253
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 69737d323e06a7224334abbe89e0970e7f1e706e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmhadrdatabasereplicaclusterstates-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +46,12 @@ ms.lasthandoff: 11/17/2017
   
 -   Bei welchem sekundären Replikat wäre der Datenverlust am geringsten, wenn es zum primären Replikat würde, weil das primäre Replikat derzeit nicht verfügbar wäre?  
   
--   Wenn der Wert der [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**Log_reuse_wait_desc** Spalte ist "AVAILABILITY_REPLICA", welches sekundäres Replikat in einer verfügbarkeitsgruppe kürzungen von Transaktionsprotokollen in einer bestimmten primären Datenbank aufhält ?     
+-   Wenn der Wert der [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**Log_reuse_wait_desc** Spalte ist "AVAILABILITY_REPLICA", welches sekundäres Replikat in einer verfügbarkeitsgruppe kürzungen von Transaktionsprotokollen in einer bestimmten primären Datenbank aufhält ?  
    
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**replica_id**|**uniqueidentifier**|Der Bezeichner des Verfügbarkeitsreplikats in der Verfügbarkeitsgruppe.|  
-|**entspricht dem group_database_id**|**uniqueidentifier**|Der Bezeichner der Datenbank in der Verfügbarkeitsgruppe. Dieser Bezeichner ist auf jedem Replikat, mit dem diese Datenbank verknüpft ist, identisch.|  
+|**group_database_id**|**uniqueidentifier**|Der Bezeichner der Datenbank in der Verfügbarkeitsgruppe. Dieser Bezeichner ist auf jedem Replikat, mit dem diese Datenbank verknüpft ist, identisch.|  
 |**database_name**|**sysname**|Der Name der Datenbank, die zur Verfügbarkeitsgruppe gehört.|  
 |**is_failover_ready**|**bit**|Gibt an, ob die sekundäre Datenbank mit der entsprechenden primären Datenbank synchronisiert ist. Angaben sind möglich:<br /><br /> 0 = Die Datenbank ist im Cluster nicht als synchronisiert gekennzeichnet. Die Datenbank ist nicht zu einem Failover bereit.<br /><br /> 1 = Die Datenbank ist im Cluster als synchronisiert gekennzeichnet. Die Datenbank ist zu einem Failover bereit.|  
 |**is_pending_secondary_suspend**|**bit**|Gibt an, ob das Anhalten der Datenbank nach einem erzwungenen Failover ansteht. Die möglichen Werte sind:<br /><br /> 0 = Beliebiger Status außer HADR_SYNCHRONIZED_ SUSPENDED.<br /><br /> 1 = HADR_SYNCHRONIZED_ SUSPENDED. Wenn ein erzwungenes Failover abgeschlossen wird, wird jede der sekundären Datenbanken auf HADR_SYNCHONIZED_SUSPENDED festgelegt und bleibt in diesem Status, bis das neue primäre Replikat von dieser sekundären Datenbank eine Bestätigung für die SUSPEND-Meldung empfängt.<br /><br /> NULL = Unbekannt (kein Quorum)|  
@@ -65,8 +67,8 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen für Always On-Verfügbarkeitsgruppen (Transact-SQL)](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Katalogsichten Always On-Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Überwachen von Verfügbarkeitsgruppen (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Überwachen von Verfügbarkeitsgruppen &#40; Transact-SQL &#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
+ [Sys. dm_hadr_database_replica_states &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
   
