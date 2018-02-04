@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_hadr_database_replica_states (Transact-SQL) | Microsoft Docs
+title: sys.dm_hadr_database_replica_states (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/08/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_hadr_database_states
 - dm_hadr_database_states
 - dm_hadr_database_states_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-caps.latest.revision: "84"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b57d7550f007eb4a85f7db698aae84f133726c9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b9c0d53a9d2a339b59f9696aa02dd0e409d8e95a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmhadrdatabasereplicastates-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +47,13 @@ ms.lasthandoff: 11/17/2017
 |**database_id**|**int**|Der Bezeichner der Datenbank, der innerhalb einer Instanz von SQL Server eindeutig ist. Dies ist der gleiche Wert wie angezeigt, in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) -Katalogsicht angezeigt.|  
 |**group_id**|**uniqueidentifier**|Der Bezeichner der Verfügbarkeitsgruppe, zu der die Datenbank gehört.|  
 |**replica_id**|**uniqueidentifier**|Der Bezeichner des Verfügbarkeitsreplikats in der Verfügbarkeitsgruppe.|  
-|**entspricht dem group_database_id**|**uniqueidentifier**|Der Bezeichner der Datenbank in der Verfügbarkeitsgruppe. Dieser Bezeichner ist auf jedem Replikat, mit dem diese Datenbank verknüpft ist, identisch.|  
+|**group_database_id**|**uniqueidentifier**|Der Bezeichner der Datenbank in der Verfügbarkeitsgruppe. Dieser Bezeichner ist auf jedem Replikat, mit dem diese Datenbank verknüpft ist, identisch.|  
 |**is_local**|**bit**|Gibt an, ob die Verfügbarkeitsdatenbank lokal ist. Folgende Werte sind möglich:<br /><br /> 0 = Die Datenbank ist für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz nicht lokal.<br /><br /> 1 = Die Datenbank ist für die Serverinstanz lokal.|  
 |**is_primary_replica**|**bit**|Gibt 1 zurück, wenn das Replikat primär ist, oder 0 bei einem sekundären Replikat. Zutreffend, auf SQLServer 2014 und höher.|  
 |**synchronization_state**|**tinyint**|Status der datenverschiebung, einen der folgenden Werte.<br /><br /> 0 = nicht synchronisiert. Gibt bei einer primären Datenbank an, dass die Datenbank nicht bereit ist, das Transaktionsprotokoll mit den entsprechenden sekundären Datenbanken zu synchronisieren. Gibt bei einer sekundären Datenbank an, dass die Protokollsynchronisierung für die Datenbank aufgrund eines Verbindungsproblems nicht gestartet wurde oder beim Start oder einem Rollenwechsel verschiedene Übergangsstatuswerte durchläuft.<br /><br /> 1 = wird synchronisiert. Gibt bei einer primären Datenbank an, dass diese Datenbank bereit ist, eine Scananforderung von einer sekundären Datenbank zu akzeptieren. Gibt bei einer sekundären Datenbank an, dass eine aktive Datenverschiebung für die Datenbank erfolgt.<br /><br /> 2 = Synchronized. Primäre Datenbanken werden mit dem Status SYNCHRONISIERT und nicht mit dem Status WIRD SYNCHRONISIERT angezeigt. Eine sekundäre Datenbank mit synchronem Commit wird als SYNCHRONISIERT angezeigt, wenn gemäß dem lokalen Cache die Datenbank für das Failover bereit ist und eine Synchronisierung erfolgt.<br /><br /> 3 = zurücksetzen. Gibt die Rollbackphase an, wenn eine sekundäre Datenbank aktiv Seiten von der primären Datenbank abruft. **Vorsicht:** Wenn eine Datenbank auf einem sekundären Replikat im Status REVERTING befindet, das Erzwingen eines Failovers zum sekundären Replikat belässt die Datenbank in einem Zustand, in dem er als primäre Datenbank gestartet werden kann nicht. Entweder muss erneut eine Verbindung mit der Datenbank als sekundäre Datenbank hergestellt werden, oder Sie müssen neue Protokolldatensätze aus einer Protokollsicherung übernehmen.<br /><br /> 4 = wird initialisiert. Gibt die Rollbackphase an, wenn das Transaktionsprotokoll (erforderlich, um eine sekundäre Datenbank auf den gleichen Stand wie die Rückgängig-LSN zu bringen) übermittelt und auf einem sekundären Replikat festgeschrieben wird. **Vorsicht:** Wenn eine Datenbank auf einem sekundären Replikat den Status INITIALIZING aufweist, ist das Erzwingen eines Failovers auf dem sekundären Replikat bewirkt, dass der Datenbank in einem Zustand in der sie als primäre Datenbank gestartet werden. Entweder muss erneut eine Verbindung mit der Datenbank als sekundäre Datenbank hergestellt werden, oder Sie müssen neue Protokolldatensätze aus einer Protokollsicherung übernehmen.|  
 |**synchronization_state_desc**|**nvarchar(60)**|Beschreibung des Datenverschiebungsstatus. Folgende Werte sind möglich:<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
 |**is_commit_participant**|**bit**|0 = Ein Transaktionscommit wird nicht in Bezug auf diese Datenbank synchronisiert.<br /><br /> 1 = Ein Transaktionscommit wird in Bezug auf diese Datenbank synchronisiert.<br /><br /> Für eine Datenbank mit einem Verfügbarkeitsreplikat für asynchrone Commits muss dieser Wert immer 0 sein.<br /><br /> Bei einer Datenbank mit einem Verfügbarkeitsreplikat für synchrone Commits ist dieser Wert nur für die primäre Datenbank genau.|  
-|**"synchronization_health"**|**tinyint**|Stellt den Synchronisierungsstatus einer Datenbank, die mit der verfügbarkeitsgruppe auf dem verfügbarkeitsreplikat verknüpft ist und den Verfügbarkeitsmodus des verfügbarkeitsreplikats (synchroner oder asynchroner Commit-Modus), eines der folgende Werte.<br /><br /> 0 = nicht fehlerfrei. Die **Synchronization_state** der Datenbank ist 0 (nicht synchronisiert).<br /><br /> 1 = teilweise fehlerfrei. Eine Datenbank auf ein verfügbarkeitsreplikat für synchrone Commits wird als teilweise fehlerfrei angesehen Wenn **Synchronization_state** 1 ist (SYNCHRONIZING).<br /><br /> 2 = Healthy. Eine Datenbank auf einem verfügbarkeitsreplikat für synchrone Commits wird als fehlerfrei angesehen, wenn **Synchronization_state** ist 2 (synchronisiert) und eine Datenbank auf einem verfügbarkeitsreplikat für asynchrone Commits wird als fehlerfrei angesehen, wenn **Synchronization_state** 1 ist (SYNCHRONIZING).|  
+|**synchronization_health**|**tinyint**|Stellt den Synchronisierungsstatus einer Datenbank, die mit der verfügbarkeitsgruppe auf dem verfügbarkeitsreplikat verknüpft ist und den Verfügbarkeitsmodus des verfügbarkeitsreplikats (synchroner oder asynchroner Commit-Modus), eines der folgende Werte.<br /><br /> 0 = nicht fehlerfrei. Die **Synchronization_state** der Datenbank ist 0 (nicht synchronisiert).<br /><br /> 1 = teilweise fehlerfrei. Eine Datenbank auf ein verfügbarkeitsreplikat für synchrone Commits wird als teilweise fehlerfrei angesehen Wenn **Synchronization_state** 1 ist (SYNCHRONIZING).<br /><br /> 2 = Healthy. Eine Datenbank auf einem verfügbarkeitsreplikat für synchrone Commits wird als fehlerfrei angesehen, wenn **Synchronization_state** ist 2 (synchronisiert) und eine Datenbank auf einem verfügbarkeitsreplikat für asynchrone Commits wird als fehlerfrei angesehen, wenn **Synchronization_state** 1 ist (SYNCHRONIZING).|  
 |**synchronization_health_desc**|**nvarchar(60)**|Beschreibung der **"synchronization_health"** der verfügbarkeitsdatenbank.<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
 |**database_state**|**tinyint**|0 = Online<br /><br /> 1 = Wird wiederhergestellt<br /><br /> 2 = Wiederherstellung wird ausgeführt<br /><br /> 3 = Wiederherstellung steht aus<br /><br /> 4 = Fehlerverdächtig<br /><br /> 5 = Notfall<br /><br /> 6 = Offline<br /><br /> **Hinweis:** wie **Zustand** Spalte in ' sys.Databases '.|  
 |**database_state_desc**|**nvarchar(60)**|Beschreibung der **Database_state** des verfügbarkeitsreplikats.<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> EMERGENCY<br /><br /> OFFLINE<br /><br /> **Hinweis:** wie **Zustand** Spalte in ' sys.Databases '.|  

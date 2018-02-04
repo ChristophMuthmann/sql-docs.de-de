@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_notification
 - sp_help_notification_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_notification
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e54750ac4174f054d87c5a1994f40bd3b5cfeec0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 542ffbb8b2bf6c51b31da93dc654a3a71b3fa401
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +51,14 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@object_type =**] **"***Object_type***"**  
+ [ **@object_type =**] **'***object_type***'**  
  Der Typ der Informationen, die zurückgegeben werden sollen. *Object_type*ist **char(9)**, hat keinen Standardwert. *Object_type* sind ALERTS, womit die dem angegebenen Operator zugewiesenen Warnungen aufgelistet*,* oder OPERATORS, womit die für die angegebene Warnung verantwortlichen Operatoren aufgelistet*.*  
   
- [  **@name =**] **"***Namen***"**  
+ [ **@name =**]  **'***name***'**  
  Ein Operatorname (Wenn *Object_type* OPERATOREN ist) oder ein Warnungsname (Wenn *Object_type* gleich ALERTS ist). *Namen* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@enum_type =**] **"***Enum_type***"**  
- Die *Object_type*Informationen, die zurückgegeben wird. *Enum_type* tatsächlich in den meisten Fällen ist. *Enum_type*ist **char(10)**, hat keinen Standardwert und kann einen der folgenden Werte sein.  
+ [ **@enum_type =**] **'***enum_type***'**  
+ Die *Object_type*Informationen, die zurückgegeben wird. *Enum_type* tatsächlich in den meisten Fällen ist. *enum_type*is **char(10)**, with no default, and can be one of these values.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -63,7 +66,7 @@ sp_help_notification
 |ALL|Listet alle die*object_types auf* einschließlich derer, die nicht zugeordnet sind *Namen*.|  
 |TARGET|Listet nur die *object_types auf* entsprechen die bereitgestellten *Target_name*, unabhängig von der Zuordnung mit*Namen*.|  
   
- [  **@notification_method =**] *Notification_method*  
+ [ **@notification_method =**] *notification_method*  
  Ein numerischer Wert, der die Spalten der Benachrichtigungsmethode bestimmt, die zurückgegeben werden sollen. *Notification_method* ist **"tinyint"**, und kann einen der folgenden Werte.  
   
 |Wert|Beschreibung|  
@@ -73,7 +76,7 @@ sp_help_notification
 |**4**|NetSend: Gibt nur die **Use_netsend** Spalte.|  
 |**7**|Alle: Alle Spalten werden zurückgegeben.|  
   
- [  **@target_name =**] **"***Target_name***"**  
+ [ **@target_name =**] **'***target_name***'**  
  Ein Warnungsname zu suchende (Wenn *Object_type* gleich ALERTS ist) oder ein Operatorname zu suchende (Wenn *Object_type* OPERATOREN ist). *Target_name* ist nur erforderlich, wenn *Enum_type* Ziel ist. *Target_name* ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="return-code-valves"></a>Rückgabecode Ventile  
@@ -98,7 +101,7 @@ sp_help_notification
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|Operator-ID zurück.|  
-|**Operatorname**|**sysname**|Name des Operators|  
+|**operator_name**|**sysname**|Name des Operators|  
 |**use_email**|**int**|E-Mail wird zum Senden der Benachrichtigung des Operators verwendet:<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
 |**use_pager**|**int**|Pager wird zum Senden der Benachrichtigung des Operators verwendet:<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
 |**use_netsend**|**int**|Eine Netzwerk-Popupnachricht wird zur Benachrichtigung des Operators verwendet werden:<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
@@ -145,9 +148,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_add_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [Sp_delete_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [Sp_update_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+ [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_update_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_delete_policy_category_TSQL
 - sp_syspolicy_delete_policy_category
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_delete_policy_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_delete_policy_category
 ms.assetid: e09d0d50-94d5-48fd-b284-445ddea6dfcd
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9872ac6107af895f648c72697f767411ce0a660e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 49bfa4aa420b69aa4e6c123f4317d63668f35a4f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicydeletepolicycategory-transact-sql"></a>sp_syspolicy_delete_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +46,10 @@ sp_syspolicy_delete_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@name=** ] **"***Namen***"**  
+ [ **@name=** ] **'***name***'**  
  Ist der Name der Richtlinienkategorie. *Namen* ist **Sysname**, und muss angegeben werden, wenn *Policy_category_id* ist NULL.  
   
- [  **@policy_category_id=** ] *Policy_category_id*  
+ [ **@policy_category_id=** ] *policy_category_id*  
  Der Bezeichner für die Richtlinienkategorie. *Policy_category_id* ist **Int**, und muss angegeben werden, wenn *Namen* ist NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -76,7 +79,7 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [Richtlinienbasierte Verwaltung gespeicherte Systemprozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [Sp_syspolicy_add_policy_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-transact-sql.md)   
- [Sp_syspolicy_update_policy_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md)  
+ [sp_syspolicy_add_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-transact-sql.md)   
+ [sp_syspolicy_update_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md)  
   
   

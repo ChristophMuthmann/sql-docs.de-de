@@ -8,30 +8,33 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2008)
+applies_to:
+- SQL Server (starting with 2008)
 f1_keywords:
 - fn_all_changes
 - sys.fn_all_changes
 - fn_all_changes_TSQL
 - sys.fn_all_changes_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_all_changes_<capture_instance>
 - sys.fn_all_changes_<capture_instance>
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29f9560f7308fef45468c7ce67a6f8a15e120a3b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 381609e65ed354ee61d059da2e92d8fe3b7c114b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>Sys.fn_all_changes_&lt;Capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,8 +96,8 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|Die Commit-LSN der Transaktion, die der Änderung zugeordnet ist. Alle Änderungen, die in der gleichen Transaktion ein Commit ausgeführt werden, verwenden dieselbe Commit-LSN.|  
 |__CDC_SEQVAL|**binary(10)**|Sequenzwert, mit dem Zeilenänderungen in einer Transaktion sortiert werden.|  
-|\<Spalten aus @column_list>|**variiert**|Die Spalten, die im identifiziert werden die *Column_list* Argument für sp_cdc_generate_wrapper_function angegebenen, wenn sie aufgerufen wird, um das Skript zu generieren, die Wrapperfunktion erstellt.|  
-|__CDC_OPERATION|**nvarchar(2)**|Ein Vorgangscode, der den Vorgang angibt, der zum Anwenden der Zeile auf die Zielumgebung erforderlich ist. Sie richten sich nach dem Wert des Arguments *Row_filter_option* im Aufruf angegebenen:<br /><br /> *Row_filter_option* = 'all'<br /><br /> 'D' - Löschvorgang<br /><br /> 'I' - Einfügevorgang<br /><br /> 'UN' - Updatevorgang, neue Werte<br /><br /> *Row_filter_option* = 'all update old'<br /><br /> 'D' - Löschvorgang<br /><br /> 'I' - Einfügevorgang<br /><br /> 'UN' - Updatevorgang, neue Werte<br /><br /> 'UO' - Updatevorgang, alte Werte|  
+|\<Spalten aus @column_list>|**varies**|Die Spalten, die im identifiziert werden die *Column_list* Argument für sp_cdc_generate_wrapper_function angegebenen, wenn sie aufgerufen wird, um das Skript zu generieren, die Wrapperfunktion erstellt.|  
+|__CDC_OPERATION|**nvarchar(2)**|Ein Vorgangscode, der den Vorgang angibt, der zum Anwenden der Zeile auf die Zielumgebung erforderlich ist. Sie richten sich nach dem Wert des Arguments *Row_filter_option* im Aufruf angegebenen:<br /><br /> *row_filter_option* = 'all'<br /><br /> 'D' - Löschvorgang<br /><br /> 'I' - Einfügevorgang<br /><br /> 'UN' - Updatevorgang, neue Werte<br /><br /> *Row_filter_option* = 'all update old'<br /><br /> 'D' - Löschvorgang<br /><br /> 'I' - Einfügevorgang<br /><br /> 'UN' - Updatevorgang, neue Werte<br /><br /> 'UO' - Updatevorgang, alte Werte|  
 |\<Spalten aus @update_flag_list>|**bit**|Ein Bitflag, das durch Anfügen von _uflag an den Spaltennamen benannt wird. Das Flag ist immer auf NULL, wenn festgelegt \__CDC_OPERATION d ', 'I' oder 'uo'. Wenn \__CDC_OPERATION ist un ', es wird auf 1 festgelegt, wenn das Update eine Änderung an der entsprechenden Spalte erzeugt. Andernfalls ist es 0.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -117,7 +120,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
  Die Change Data Capture-Konfigurationsvorlage 'Instantiate CDC Wrapper TVFs for Schema' veranschaulicht die Verwendung der gespeicherten Prozedur sp_cdc_generate_wrapper_function zum Abrufen von CREATE-Skripts für alle Wrapperfunktionen für die definierten Abfragefunktionen eines Schemas. Diese Skripts werden dann von der Vorlage erstellt. Weitere Informationen zu Vorlagen finden Sie unter [Vorlagen-Explorer](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sys. sp_cdc_generate_wrapper_function &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [CDC. fn_cdc_get_all_changes_ &#60; Capture_instance &#62;  &#40; Transact-SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+ [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

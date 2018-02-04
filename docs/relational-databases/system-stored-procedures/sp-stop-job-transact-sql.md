@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_stop_job_TSQL
 - sp_stop_job
-dev_langs: TSQL
-helpviewer_keywords: sp_stop_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_stop_job
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7e84b7df3ec1ae8d504a026569d75ee8fa379715
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1276a936bece39cc875e5f80e8da5465f51bb4ee
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +51,19 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@job_name =**] **"***Job_name***"**  
+ [ **@job_name =**] **'***job_name***'**  
  Der Name des Auftrags, der beendet werden soll. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@job_id =**] *Job_id*  
+ [ **@job_id =**] *job_id*  
  Die ID des Auftrags, der beendet werden soll. *Job_id* ist **"uniqueidentifier"**, hat den Standardwert NULL.  
   
- [  **@originating_server =**] **"***Master_server***"**  
+ [ **@originating_server =**] **'***master_server***'**  
  Der Name des Masterservers. Wenn angegeben, werden alle Multiserveraufträge beendet. *Master_server* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL. Geben Sie diesen Parameter nur, wenn aufgerufen **Sp_stop_job** an einen Zielserver.  
   
 > [!NOTE]  
 >  Es kann jeweils nur einer der ersten drei Parameter angegeben werden.  
   
- [  **@server_name =**] **"***Target_server***"**  
+ [ **@server_name =**] **'***target_server***'**  
  Der Name des Zielservers, auf dem ein Multiserverauftrag beendet werden soll. *Target_server* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL. Geben Sie diesen Parameter nur, wenn aufgerufen **Sp_stop_job** auf einem Masterserver für einen Multiserverauftrag.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -100,10 +103,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_delete_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [Sp_help_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [Sp_start_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
- [Sp_update_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

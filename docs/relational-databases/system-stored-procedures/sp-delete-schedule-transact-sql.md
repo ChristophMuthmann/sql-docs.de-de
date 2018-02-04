@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_schedule
 - sp_delete_schedule_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_schedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_schedule
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6b01f4f3c3487fbd9f68c899e2c9e71dae7efd0b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dc8bc8efb8d9382a0e7c1ab1c24b5534ff6786f0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +47,17 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@schedule_id=** ] *Schedule_id*  
+ [ **@schedule_id=** ] *schedule_id*  
  Die Zeitplan-ID des zu löschenden Zeitplans. *Schedule_id* ist **Int**, hat den Standardwert NULL.  
   
 > **Hinweis:** entweder *Schedule_id* oder *Schedule_name* muss angegeben werden, aber beide können nicht angegeben werden.  
   
- [  **@schedule_name=** ] **"***Schedule_name***"**  
+ [ **@schedule_name=** ] **'***schedule_name***'**  
  Der Name des zu löschenden Zeitplan. *Schedule_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > **Hinweis:** entweder *Schedule_id* oder *Schedule_name* muss angegeben werden, aber beide können nicht angegeben werden.  
   
- [  **@force_delete**  =] *Force_delete*  
+ [ **@force_delete** = ] *force_delete*  
  Gibt an, ob die Prozedur einen Fehler verursachen soll, wenn der Zeitplan an einen Auftrag angefügt wird. *Force_delete* bit und hat den Standardwert **0**. Wenn *Force_delete* ist **0**, die gespeicherte Prozedur fehlschlägt, wenn der Zeitplan einem Auftrag angefügt ist. Wenn *Force_delete* ist **1**, der Zeitplan gelöscht, unabhängig davon, ob der Zeitplan einem Auftrag angefügt ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

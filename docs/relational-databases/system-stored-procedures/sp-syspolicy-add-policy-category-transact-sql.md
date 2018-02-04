@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_add_policy_category
 - sp_syspolicy_add_policy_category_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_add_policy_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_add_policy_category
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
-caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4335d14562eaa6abbc6854cf9916c51b74779c0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 90e8fdea1ed8f177526574c5911e69fd1bc01bff
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyaddpolicycategory-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +48,13 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@name=** ] **"***Namen***"**  
+ [ **@name=** ] **'***name***'**  
  Ist der Name der Richtlinienkategorie. *Namen* ist **Sysname**, und es ist erforderlich. *Namen* darf nicht NULL oder eine leere Zeichenfolge.  
   
- [  **@mandate_database_subscriptions =** ] *Mandate_database_subscriptions*  
+ [ **@mandate_database_subscriptions =** ] *mandate_database_subscriptions*  
  Bestimmt, ob das Datenbankabonnement für die Richtlinienkategorie beauftragt wird. *Mandate_database_subscriptions* ist ein **Bit** -Wert, mit dem Standardwert 1 (aktiviert).  
   
- [  **@policy_category_id=** ] *Policy_category_id*  
+ [ **@policy_category_id=** ] *policy_category_id*  
  Der Bezeichner für die Richtlinienkategorie. *Policy_category_id* ist **Int**, und wird als OUTPUT zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -82,7 +85,7 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [Richtlinienbasierte Verwaltung gespeicherte Systemprozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [Sp_syspolicy_add_policy_category_subscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
- [Sp_syspolicy_delete_policy_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)  
+ [sp_syspolicy_add_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
+ [sp_syspolicy_delete_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)  
   
   

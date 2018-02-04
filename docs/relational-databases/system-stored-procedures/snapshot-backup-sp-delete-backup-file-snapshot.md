@@ -8,21 +8,23 @@ ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 5afe5530-a404-4fa5-af3c-bc7c3ca43ce6
-caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cf8bf8484e77c15c951ca548ce00baccfaf5b38
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7d62063bb3214534ccf8d1d99c46ae6129000cc9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="snapshot-backup---spdeletebackupfilesnapshot"></a>Momentaufnahmesicherung - sp_delete_backup_file_snapshot
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +47,14 @@ sys.sp_delete_backup_file_snapshot
  *[ @db_name =] Datenbankname*  
  Der Name der Datenbank mit der Momentaufnahme gelöscht, werden als Unicode-Zeichenfolge bereitgestellt werden.  
   
- *[ @snapshot_url =] Snapshot_url*  
+ *[ @snapshot_url = ] snapshot_url*  
  Die URL der Momentaufnahme gelöscht, als eine Unicode-Zeichenfolge bereitgestellt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER ANY DATABASE-Berechtigung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sys. fn_db_backup_file_snapshots &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   
+ [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   
  [sp_delete_backup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
   
   

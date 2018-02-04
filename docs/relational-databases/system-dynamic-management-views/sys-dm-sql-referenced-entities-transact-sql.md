@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_sql_referenced_entities
 - sys.dm_sql_referenced_entities
 - sys.dm_sql_referenced_entities_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_sql_referenced_entities dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba6329fb017dd398e9ff17586c8bbbab8f3ba455
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8af92c77cf5ab1f1c43f5c4cb529fe97b7de787a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,12 +71,12 @@ sys.dm_sql_referenced_entities (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ *Schema_name*. ] *Referencing_entity_name*  
+ [ *schema_name*. ] *referencing_entity_name*  
  Der Name der verweisenden Entität. *Schema_name* ist erforderlich, wenn die verweisende Klasse OBJECT ist.  
   
  *schema_name.referencing_entity_name* ist **nvarchar(517)**.  
   
- *< Referencing_class >* :: = {OBJECT | DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER}  
+ *<referencing_class>* ::=  { OBJECT | DATABASE_DDL_TRIGGER   | SERVER_DDL_TRIGGER }  
  Klasse der angegebenen verweisenden Entität. Pro Anweisung kann nur eine Klasse angegeben werden.  
   
  *< Referencing_class >* ist **nvarchar(60)**.  
@@ -124,15 +127,15 @@ sys.dm_sql_referenced_entities (
 |Entitätstyp|Verweisende Entität|Entität, auf die verwiesen wird|  
 |-----------------|------------------------|-----------------------|  
 |Tabelle|Ja*|ja|  
-|Anzeigen|ja|ja|  
-|In [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur**|ja|ja|  
+|Sicht|ja|ja|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur **|ja|ja|  
 |Gespeicherte CLR-Prozedur|nein|ja|  
-|Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|ja|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] Benutzerdefinierte Funktion (user-defined function)|ja|ja|  
 |CLR-benutzerdefinierte Funktion|nein|ja|  
 |CLR-Trigger (DML und DDL)|nein|nein|  
-|DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|nein|  
-|DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|nein|  
-|DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|nein|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML-Trigger|ja|nein|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL-Trigger auf Datenbankebene|ja|nein|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL-Trigger auf Serverebene|ja|nein|  
 |Erweiterte gespeicherte Prozeduren|nein|ja|  
 |Warteschlange|nein|ja|  
 |Synonym|nein|ja|  

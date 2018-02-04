@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6f344eb67b56558467303535964b5ca97d172bb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 64aafbee1cae4cbdf8a2d43c7367fdbae6e40b27
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spspecialcolumns100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Datawarehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -47,27 +49,27 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @table_name=] '*Table_name*"  
+ [ @table_name=] '*table_name*'  
  Der Name der Tabelle zur Rückgabe von Kataloginformationen. *Namen* ist **Sysname**, hat keinen Standardwert. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt.  
   
- [ @table_owner=] '*Table_owner*"  
+ [ @table_owner=] '*table_owner*'  
  Der Tabellenbesitzer für die Tabelle zum Zurückgeben von Kataloginformationen. *Besitzer* ist **Sysname**, hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden nicht unterstützt. Wenn *Besitzer* nicht angegeben ist, werden die Standardregeln für die Sichtbarkeit von Tabellen des zugrunde liegenden DBMS angewendet.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die Spalten einer Tabelle zurückgegeben, wenn der aktuelle Benutzer diese Tabelle mit dem angegebenen Namen besitzt. Wenn *Besitzer* nicht angegeben wird und der aktuelle Benutzer besitzt nicht die eine Tabelle mit dem angegebenen *Namen*, diese Prozedur sucht eine Tabelle mit dem angegebenen *Namen* im Besitz der Datenbank Besitzer. Wenn die Tabelle vorhanden ist, werden dessen Spalten zurückgegeben.  
   
- [ @qualifier=] '*Qualifizierer*"  
+ [ @qualifier=] '*qualifier*'  
  Der Name des Tabellenqualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*qualifier.owner.name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
- [ @col_type=] '*Col_type*"  
+ [ @col_type=] '*col_type*'  
  Ist der Spaltentyp. *Col_type* ist **Char (**1**)**, hat den Standardwert von r Typ R Gibt die optimale(n) Spalte(n) oder eine Gruppe von Spalten zurück, der durch Aufrufen der entsprechenden Werte die Spalte(n), können Sie für jede Zeile in der angegebenen die Tabelle eindeutig identifiziert werden. Bei einer Spalte kann es sich entweder um eine Pseudospalte handeln, die speziell zu diesem Zweck erstellt wurde, oder um die Spalte(n) eines eindeutigen Index für die Tabelle. Der Typ "V" gibt ggf. die Spalte(n) in der angegebenen Tabelle zurück, die automatisch von der Datenquelle aktualisiert werden, sobald ein Wert in der Zeile durch eine Transaktion aktualisiert wird.  
   
  [ @scope=] '*Bereich*"  
  Der mindestens erforderliche Bereich der ROWID. *Bereich* ist **Char (**1**)**, hat den Standardwert von t Bereich C gibt an, dass die ROWID nur gültig, wenn in dieser Zeile positioniert ist. Der Bereich "T" gibt an, dass die ROWID für die Transaktion gültig ist.  
   
- [ @nullable=] '*NULL-Werte zu*"  
+ [ @nullable=] '*nullable*'  
  Gibt an, ob die speziellen Spalten einen NULL-Wert akzeptieren können. *NULL-Werte zulassen* ist **Char (**1**)**, hat den Standardwert + u O gibt spezielle Spalten, die keine null-Werte zulassen. "U" definiert Spalten, die teilweise NULL zulassen.  
   
- [ @ODBCVer=] '*ODBCVer*"  
+ [ @ODBCVer=] '*ODBCVer*'  
  Ist die ODBC-Version verwendet wird. *ODBCVer* ist **Int (**4**)**, Standardwert ist 2. Dieser gibt ODBC, Version 2.0, an. Weitere Informationen zu den Unterschieden zwischen ODBC, Version 2.0 und ODBC, Version 3.0 finden Sie unter der ODBC-SQLSpecialColumns-Spezifikation für ODBC, Version 3.0.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

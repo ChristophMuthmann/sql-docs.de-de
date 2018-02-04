@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,30 +17,32 @@ f1_keywords:
 - dbo.sysoperators
 - dbo.sysoperators_TSQL
 - sysoperators_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysoperators system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysoperators system table
 ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0b48cdf057e17d0c043f2716071868b9188874d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4196ed656febfa2ea8f3815bb1819e2426280a7d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Enthält eine Zeile für jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Operator.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID des Operators.|  
 |**name**|**sysname**|Name des Operators.|  
-|**aktiviert**|**tinyint**|Status der Warnbenachrichtigungen (Boolesch). Beträgt der Wert **1**, kann dieser Operator Benachrichtigungen erhalten, wenn eine Warnung auftritt.|  
+|**enabled**|**tinyint**|Status der Warnbenachrichtigungen (Boolesch). Beträgt der Wert **1**, kann dieser Operator Benachrichtigungen erhalten, wenn eine Warnung auftritt.|  
 |**email_address**|**nvarchar(100)**|E-Mail-Adresse für diesen Operator.|  
 |**last_email_date**|**int**|Datum, an dem dieser Operator zuletzt eine Warnbenachrichtigung per E-Mail erhalten hat.|  
 |**last_email_time**|**int**|Tageszeit, zu der dieser Operator zuletzt eine Warnbenachrichtigung per E-Mail erhalten hat.|  

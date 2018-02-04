@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_schedule
 - sp_help_schedule_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_schedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_schedule
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7f3e942063e67a1aa896e14a2f195696572ef63
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 59223cb9ba6fd0a7129966fa49aef4d8e7e67eb3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpschedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +50,16 @@ sp_help_schedule
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@schedule_id =** ] *Id*  
+ [ **@schedule_id =** ] *id*  
  Der Bezeichner des Zeitplans, der aufgelistet werden soll. *Schedule_name* ist **Int**, hat keinen Standardwert. Entweder *Schedule_id* oder *Schedule_name* kann angegeben werden.  
   
- [  **@schedule_name =** ] **"***Schedule_name***"**  
+ [ **@schedule_name =** ] **'***schedule_name***'**  
  Der Name des Zeitplans, der aufgelistet werden soll. *Schedule_name* ist **Sysname**, hat keinen Standardwert. Entweder *Schedule_id* oder *Schedule_name* kann angegeben werden.  
   
- [  **@attached_schedules_only**  =] *Attached_schedules_only* ]  
+ [ **@attached_schedules_only** = ] *attached_schedules_only* ]  
  Gibt an, ob nur Zeitpläne angezeigt werden sollen, denen ein Auftrag angefügt ist. *Attached_schedules_only* ist **Bit**, hat den Standardwert **0**. Wenn *Attached_schedules_only* ist **0**, alle Zeitpläne angezeigt. Wenn *Attached_schedules_only* ist **1**, das Resultset enthält nur Zeitpläne, die einem Auftrag angefügt sind.  
   
- [  **@include_description**  =] *Include_description*  
+ [ **@include_description** = ] *include_description*  
  Gibt an, ob das Resultset Beschreibungen enthalten soll. *Include_description* ist **Bit**, hat den Standardwert **0**. Wenn *Include_description* ist **0**, *Schedule_description* Spalte des Resultsets enthält einen Platzhalter. Wenn *Include_description* ist **1**, ist die Beschreibung des Zeitplans im Resultset enthalten.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -70,7 +73,7 @@ sp_help_schedule
 |**schedule_id**|**int**|ID des Zeitplans.|  
 |**schedule_uid**|**uniqueidentifier**|Bezeichner für den Zeitplan.|  
 |**schedule_name**|**sysname**|Name des Zeitplans.|  
-|**aktiviert**|**int**|Ob der Zeitplan aktiviert (**1**) oder nicht aktiviert (**0**).|  
+|**enabled**|**int**|Ob der Zeitplan aktiviert (**1**) oder nicht aktiviert (**0**).|  
 |**freq_type**|**int**|Der Wert, der angibt, wann der Auftrag ausgeführt werden.<br /><br /> **1** = einmal<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ zu den **Freq_interval**<br /><br /> **64** = Ausführung, wenn der SQLServerAgent-Dienst gestartet wird.|  
 |**freq_interval**|**int**|Tage, wenn der Auftrag ausgeführt wird. Der Wert hängt vom Wert der **Freq_type**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_type**|**int**|Einheiten für **Freq_subday_interval**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
@@ -127,9 +130,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [Sp_attach_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [Sp_delete_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [Sp_detach_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

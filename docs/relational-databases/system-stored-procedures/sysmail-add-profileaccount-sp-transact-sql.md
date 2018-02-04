@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_profileaccount_sp
 - sysmail_add_profileaccount_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_add_profileaccount_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_add_profileaccount_sp
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
-caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fae8f7a99a01260eeee820fd85b4c3c7c61d6975
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a7755f8285ad6a9afcab7a79ce1eecc777fd4e1f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailaddprofileaccountsp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,19 +48,19 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@profile_id**  =] *Profile_id*  
+ [ **@profile_id** = ] *profile_id*  
  Die Profil-ID, der das Konto hinzugefügt wird. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
- [  **@profile_name**  =] **"***Profile_name***"**  
+ [ **@profile_name** = ] **'***profile_name***'**  
  Der Profilname, dem das Konto hinzugefügt wird. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
- [  **@account_id**  =] *Account_id*  
+ [ **@account_id** = ] *account_id*  
  Die Konto-ID, die dem Profil hinzugefügt wird. *account_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *account_id* oder *account_name* angegeben werden.  
   
  [  **@account_name**  =] **"***Account_name***"**  
  Der Name des Kontos, das dem Profil hinzugefügt wird. *account_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *account_id* oder *account_name* angegeben werden.  
   
- [  **@sequence_number**  =] *Sequence_number*  
+ [ **@sequence_number** = ] *sequence_number*  
  Die Sequenznummer des Kontos innerhalb des Profils. *sequence_number* ist vom Datentyp **int**und hat keinen Standardwert. Über die Sequenznummer wird die Reihenfolge festgelegt, in der Konten im Profil verwendet werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

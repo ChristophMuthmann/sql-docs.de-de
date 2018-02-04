@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs
+title: sys.dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_sql_referencing_entities_TSQL
 - sys.dm_sql_referencing_entities_TSQL
 - dm_sql_referencing_entities
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_sql_referencing_entities dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 26d13446ff128a00b31677c78d7e205ba40b0e94
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 35e2f1be36365c2b1f5c8801a9e0d7749c70de7d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +66,7 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *schema_name.referenced*_*Entity_name*  
+ *schema_name.referenced*_*entity_name*  
  Der Name der Entität, auf die verwiesen wird.  
   
  *Schema_name* außer erforderlich, wenn die referenzierte Klasse PARTITION_FUNCTION ist.  
@@ -105,15 +108,15 @@ sys.dm_sql_referencing_entities (
 |Entitätstyp|Verweisende Entität|Entität, auf die verwiesen wird|  
 |-----------------|------------------------|-----------------------|  
 |Tabelle|Ja*|ja|  
-|Anzeigen|ja|ja|  
-|In [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur**|ja|ja|  
+|Sicht|ja|ja|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur **|ja|ja|  
 |Gespeicherte CLR-Prozedur|nein|ja|  
-|Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|ja|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] Benutzerdefinierte Funktion (user-defined function)|ja|ja|  
 |CLR-benutzerdefinierte Funktion|nein|ja|  
 |CLR-Trigger (DML und DDL)|nein|nein|  
-|DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|nein|  
-|DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|nein|  
-|DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|nein|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML-Trigger|ja|nein|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL-Trigger auf Datenbankebene|ja|nein|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL-Trigger auf Serverebene|ja|nein|  
 |Erweiterte gespeicherte Prozeduren|nein|ja|  
 |Warteschlange|nein|ja|  
 |Synonym|nein|ja|  

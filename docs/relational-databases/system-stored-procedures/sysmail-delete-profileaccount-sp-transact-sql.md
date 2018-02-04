@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_profileaccount_sp
 - sysmail_delete_profileaccount_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_delete_profileaccount_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_delete_profileaccount_sp
 ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
-caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67c1f60356209a9f39d0ac902fea41b5f6ec2f2a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 26daacbb43092e81ec4798d8199d69f67fe067f1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmaildeleteprofileaccountsp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +47,13 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@profile_id**  =] *Profile_id*  
+ [ **@profile_id** = ] *profile_id*  
  Die Profil-ID des Profils, das gelöscht werden soll. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es kann entweder *profile_id* oder *profile_name* angegeben werden.  
   
- [  **@profile_name**  =] **"***Profile_name***"**  
+ [ **@profile_name** = ] **'***profile_name***'**  
  Der Name des Profils, das gelöscht werden soll. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es kann entweder *profile_id* oder *profile_name* angegeben werden.  
   
- [  **@account_id**  =] *Account_id*  
+ [ **@account_id** = ] *account_id*  
  Die zu löschende Konto-ID. *account_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es kann entweder *account_id* oder *account_name* angegeben werden.  
   
  [  **@account_name**  =] **"***Account_name***"**  

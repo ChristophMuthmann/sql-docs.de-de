@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_targetserver
 - sp_delete_targetserver_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_targetserver
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_targetserver
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9fbe2a49724fd45ac8c635fc758323b5d34b8eb9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5f95d6489635c40a7ba478e4100cb672dc6938c2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +48,13 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@server_name=** ] **"***Server***"**  
+ [ **@server_name=** ] **'***server***'**  
  Der Name des Servers, der als verfügbarer Zielserver entfernt werden soll. *Server* ist **nvarchar(30)**, hat keinen Standardwert.  
   
- [  **@clear_downloadlist=** ] *Clear_downloadlist*  
+ [ **@clear_downloadlist=** ] *clear_downloadlist*  
  Gibt an, ob die Downloadliste für den Zielserver gelöscht werden soll. *Clear_downloadlist* Typ **Bit**, hat den Standardwert **1**. Wenn *Clear_downloadlist* ist **1**, die Prozedur löscht die Downloadliste für den Server, bevor der Server gelöscht. Wenn *Clear_downloadlist* ist **0**, die Downloadliste nicht deaktiviert ist.  
   
- [  **@post_defection=** ] *Post_defection*  
+ [ **@post_defection=** ] *post_defection*  
  Gibt an, ob eine Austrittsanweisung auf dem Zielserver bereitgestellt werden soll. *Post_defection* Typ **Bit**, hat den Standardwert 1. Wenn *Post_defection* ist **1**, die Prozedur sendet eine austrittsanweisung auf dem Zielserver sein, bevor der Server gelöscht. Wenn *Post_defection* ist **0**, bucht die Prozedur eine austrittsanweisung auf dem Zielserver nicht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -79,8 +82,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_help_targetserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
- [Sp_msx_defect &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
+ [sp_help_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
+ [sp_msx_defect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

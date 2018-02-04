@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_proxy
 - sp_help_proxy_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_proxy
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf5dd28e001919a43d39685e2e50eaeb03e877af
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 19f4df348037b923ac5e7daf643b5ed114256324
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +50,10 @@ sp_help_proxy
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@proxy_id**  =] *Id*  
+ [ **@proxy_id** = ] *id*  
  Die Proxy-ID des Proxys, zu dem die Informationen aufgelistet werden sollen. Die *Proxy_id* ist **Int**, hat den Standardwert NULL. Entweder die *Id* oder *Proxy_name* kann angegeben werden.  
   
- [  **@proxy_name**  =] **"***Proxy_name***"**  
+ [ **@proxy_name** = ] **'***proxy_name***'**  
  Der Name des Proxys, zu dem Informationen aufgelistet werden sollen. Die *Proxy_name* ist **Sysname**, hat den Standardwert NULL. Entweder die *Id* oder *Proxy_name* kann angegeben werden.  
   
  [  **@subsystem_name**  =] '*Subsystem_name*"  
@@ -85,9 +88,9 @@ sp_help_proxy
 |**proxy_id**|**int**|ID des Proxys.|  
 |**name**|**sysname**|Der Name des Proxys.|  
 |**credential_identity**|**sysname**|Der Microsoft Windows-Domänenname und -Benutzername für die dem Proxy zugeordneten Anmeldeinformationen.|  
-|**aktiviert**|**tinyint**|Gibt an, ob dieser Proxy aktiviert ist. { **0** = nicht aktiviert, **1** = aktiviert}|  
-|**Beschreibung**|**nvarchar(1024)**|Die Beschreibung des Proxys.|  
-|**user_sid**|**varbinary (85)**|Die Windows-SID des Windows-Benutzers für diesen Proxy.|  
+|**enabled**|**tinyint**|Gibt an, ob dieser Proxy aktiviert ist. { **0** = nicht aktiviert, **1** = aktiviert}|  
+|**description**|**nvarchar(1024)**|Die Beschreibung des Proxys.|  
+|**user_sid**|**varbinary(85)**|Die Windows-SID des Windows-Benutzers für diesen Proxy.|  
 |**credential_id**|**int**|Die ID für die dem Proxy zugeordneten Anmeldeinformationen.|  
 |**credential_identity_exists**|**int**|Gibt an, ob credential_identity vorhanden ist. { 0 = ist nicht vorhanden, 1 = ist vorhanden }|  
   
@@ -131,7 +134,7 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server-Agent-gespeicherte Prozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [Sp_add_proxy &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [Sp_delete_proxy &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
+ [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
   
   

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_detach_schedule
 - sp_detach_schedule_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_detach_schedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_detach_schedule
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08518b0ce80bfb9912c7967d1c1fb80e4f1a70b7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 784a8439519ad3a99edd35a085f306e838227151
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,25 +49,25 @@ sp_detach_schedule
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@job_id=** ] *Job_id*  
+ [ **@job_id=** ] *job_id*  
  Die ID des Auftrags, aus dem der Zeitplan entfernt werden soll. *Job_id* ist **"uniqueidentifier"**, hat den Standardwert NULL.  
   
- [  **@job_name=** ] **"***Job_name***"**  
+ [ **@job_name=** ] **'***job_name***'**  
  Der Name des Auftrags, aus dem der Zeitplan entfernt werden soll. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden.  
   
- [  **@schedule_id=** ] *Schedule_id*  
+ [ **@schedule_id=** ] *schedule_id*  
  Die ID des Zeitplans, der aus dem Auftrag entfernt werden soll. *Schedule_id* ist **Int**, hat den Standardwert NULL.  
   
- [  **@schedule_name=** ] **"***Schedule_name***"**  
+ [ **@schedule_name=** ] **'***schedule_name***'**  
  Der Name des Zeitplans, der aus dem Auftrag entfernt werden soll. *Schedule_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Entweder *Schedule_id* oder *Schedule_name* muss angegeben werden, aber beide können nicht angegeben werden.  
   
- [  **@delete_unused_schedule=** ] *Delete_unused_schedule*  
+ [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
  Gibt an, ob nicht verwendete Auftragszeitpläne gelöscht werden sollen. *Delete_unused_schedule* ist **Bit**, hat den Standardwert **0**, was bedeutet, dass alle Zeitpläne beibehalten werden, auch wenn keine Aufträge auf sie verweist. Wenn auf festgelegt **1**, werden nicht verwendete Auftragszeitpläne gelöscht, wenn keine Aufträge auf sie verweist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -86,7 +89,7 @@ sp_detach_schedule
   
  Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft, ob der Benutzer der Besitzer des Zeitplans ist. Nur Mitglieder der **Sysadmin** -Serverrolle kann Zeitpläne von Aufträgen, die im Besitz eines anderen Benutzers trennen.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft, um festzustellen, ob der Benutzer Besitzer des Zeitplans ist. Nur Mitglieder der **Sysadmin** -Serverrolle kann Zeitpläne von Aufträgen, die im Besitz eines anderen Benutzers trennen.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine Zuordnung zwischen einem `'NightlyJobs'`-Zeitplan und einem `'BackupDatabase'`-Auftrag entfernt.  
@@ -102,8 +105,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [Sp_attach_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [Sp_delete_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

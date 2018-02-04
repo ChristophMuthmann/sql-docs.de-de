@@ -1,5 +1,5 @@
 ---
-title: Sp_syscollector_update_collection_set (Transact-SQL) | Microsoft Docs
+title: sp_syscollector_update_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_set_TSQL
 - sp_syscollector_update_collection_set
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90f034f59bc7430e059fb276ec0111a4af2f807c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9863651eca95bcd4eafd263b205ddeef5ba4e438
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +62,7 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@collection_set_id =** ] *Collection_set_id*  
+ [ **@collection_set_id =** ] *collection_set_id*  
  Der eindeutige lokale Bezeichner für den Sammlungssatz. *Collection_set_id* ist **Int** und muss einen Wert aufweisen, wenn *Namen* ist NULL.  
   
  [  **@name =** ] "*Namen*"  
@@ -69,10 +71,10 @@ sp_syscollector_update_collection_set
  [  **@new_name =** ] "*New_name*"  
  Entspricht dem neuen Namen des Sammlungssatzes. *New_name* ist **Sysname**, und kann nicht verwendet, eine leere Zeichenfolge sein. *New_name* muss eindeutig sein. Wenn Sie eine Liste der aktuellen Namen von Sammlungssätzen abrufen möchten, fragen Sie die syscollector_collection_sets-Systemsicht ab.  
   
- [  **@target =** ] "*Ziel*"  
+ [ **@target =** ] '*target*'  
  Zur künftigen Verwendung reserviert.  
   
- [  **@collection_mode =** ] *Collection_mode*  
+ [ **@collection_mode =** ] *collection_mode*  
  Entspricht dem Typ der zu verwendenden Datenauflistung. *Collection_mode* ist **"smallint"** und kann einen der folgenden Werte aufweisen:  
   
  0 - Modus mit Zwischenspeicherung. Für Datensammlung und -upload werden separate Zeitpläne verwendet. Geben Sie den Modus mit Zwischenspeicherung für eine fortlaufende Sammlung an.  
@@ -81,17 +83,17 @@ sp_syscollector_update_collection_set
   
  Ändern Sie im Modus ohne Zwischenspeicherung in den Modus mit Zwischenspeicherung (0), müssen Sie auch angeben entweder *Schedule_uid* oder *Schedule_name*.  
   
- [  **@days_until_expiration=** ] *Days_until_expiration*  
+ [ **@days_until_expiration=** ] *days_until_expiration*  
  Ist die Anzahl der Tage, die gesammelten Daten im Verwaltungs-Datawarehouse gespeichert werden. *Days_until_expiration* ist **"smallint"**. *Days_until_expiration* muss 0 oder eine positive ganze Zahl sein.  
   
- [  **@proxy_id =** ] *Proxy_id*  
+ [ **@proxy_id =** ] *proxy_id*  
  Ist der eindeutige Bezeichner für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Proxykonto. *Proxy_id* ist **Int**.  
   
- [  **@proxy_name =** ] "*Proxy_name*"  
+ [ **@proxy_name =** ] '*proxy_name*'  
  Ist der Name des Proxys. *Proxy_name* ist **Sysname** und NULL-Werte zulässt.  
   
- [  **@schedule_uid**  =] '*Schedule_uid*"  
- Entspricht dem GUID, der auf einen Zeitplan zeigt. *Schedule_uid* ist **"uniqueidentifier"**.  
+ [ **@schedule_uid** = ] '*schedule_uid*'  
+ Entspricht dem GUID, der auf einen Zeitplan zeigt. *schedule_uid* is **uniqueidentifier**.  
   
  Zum Abrufen *Schedule_uid*, Fragen Sie die Sysschedules-Systemtabelle.  
   
@@ -100,7 +102,7 @@ sp_syscollector_update_collection_set
  [  **@schedule_name =** ] "*Schedule_name*"  
  Ist der Name des Zeitplans. *Schedule_name* ist **Sysname** und NULL-Werte zulässt. Wenn angegeben, *Schedule_uid* muss NULL sein. Zum Abrufen *Schedule_name*, Fragen Sie die Sysschedules-Systemtabelle.  
   
- [  **@logging_level =** ] *Logging_level*  
+ [ **@logging_level =** ] *logging_level*  
  Entspricht dem Protokolliergrad. *Logging_level* ist **"smallint"** mit einem der folgenden Werte:  
   
  0 - Informationen zur Protokollausführung und zu den [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Ereignissen, die Folgendes nachverfolgen:  
@@ -123,7 +125,7 @@ sp_syscollector_update_collection_set
   
  Der Standardwert für *Logging_level* ist 1.  
   
- [  **@description =** ] "*Beschreibung*"  
+ [ **@description =** ] '*description*'  
  Die Beschreibung für den Sammlungssatz. *Beschreibung* ist **nvarchar(4000)**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -198,7 +200,7 @@ GO
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)   
- [Syscollector_collection_sets &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
- [dbo.sysschedules &#40; Transact-SQL &#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
+ [dbo.sysschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

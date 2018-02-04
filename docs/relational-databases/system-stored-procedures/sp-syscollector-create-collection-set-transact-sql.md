@@ -1,5 +1,5 @@
 ---
-title: Sp_syscollector_create_collection_set (Transact-SQL) | Microsoft Docs
+title: sp_syscollector_create_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collection_set_TSQL
 - sp_syscollector_create_collection_set
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_create_collection_set
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23015f77f4d2bc9dafe10fb12b660cec31484985
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 50e5c77d8af3ae4ab42ef74ee18f7b49db2a7c57
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,10 +67,10 @@ sp_syscollector_create_collection_set
   
  *Namen* muss eindeutig sein. Wenn Sie eine Liste der aktuellen Namen von Sammlungssätzen abrufen möchten, fragen Sie die syscollector_collection_sets-Systemsicht ab.  
   
- [  **@target =** ] "*Ziel*"  
+ [ **@target =** ] '*target*'  
  Zur künftigen Verwendung reserviert. *Namen* ist **vom Datentyp nvarchar(128)** hat den Standardwert NULL.  
   
- [  **@collection_mode =** ] *Collection_mode*  
+ [ **@collection_mode =** ] *collection_mode*  
  Gibt die Art und Weise an, in der die Daten gesammelt und gespeichert werden. *Collection_mode* ist **"smallint"** und kann einen der folgenden Werte aufweisen:  
   
  0 - Modus mit Zwischenspeicherung. Für Datensammlung und -upload werden separate Zeitpläne verwendet. Geben Sie den Modus mit Zwischenspeicherung für eine fortlaufende Sammlung an.  
@@ -77,16 +79,16 @@ sp_syscollector_create_collection_set
   
  Der Standardwert für *Collection_mode* ist 0. Wenn *Collection_mode* ist 0, *Schedule_uid* oder *Schedule_name* muss angegeben werden.  
   
- [  **@days_until_expiration =** ] *Days_until_expiration*  
+ [ **@days_until_expiration =** ] *days_until_expiration*  
  Ist die Anzahl der Tage, die gesammelten Daten im Verwaltungs-Datawarehouse gespeichert werden. *Days_until_expiration* ist **"smallint"** hat den Standardwert 730 (zwei Jahre). *Days_until_expiration* muss 0 oder eine positive ganze Zahl sein.  
   
- [  **@proxy_id =** ] *Proxy_id*  
+ [ **@proxy_id =** ] *proxy_id*  
  Ist der eindeutige Bezeichner für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Proxykonto. *Proxy_id* ist **Int** hat den Standardwert NULL. Wenn angegeben, *Proxy_name* muss NULL sein. Zum Abrufen *Proxy_id*, Fragen Sie die Sysproxies-Systemtabelle. Die feste Datenbankrolle dc_admin muss über die Berechtigung für den Zugriff auf den Proxy verfügen. Weitere Informationen finden Sie unter [Erstellen eines SQL Server-Agent-Proxys](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988).  
   
- [  **@proxy_name =** ] "*Proxy_name*"  
+ [ **@proxy_name =** ] '*proxy_name*'  
  Der Name des Proxykontos. *Proxy_name* ist **Sysname** hat den Standardwert NULL. Wenn angegeben, *Proxy_id* muss NULL sein. Zum Abrufen *Proxy_name*, Fragen Sie die Sysproxies-Systemtabelle.  
   
- [  **@schedule_uid =** ] "*Schedule_uid*"  
+ [ **@schedule_uid =** ] '*schedule_uid*'  
  Entspricht dem GUID, der auf einen Zeitplan zeigt. *Schedule_uid* ist **"uniqueidentifier"** hat den Standardwert NULL. Wenn angegeben, *Schedule_name* muss NULL sein. Zum Abrufen *Schedule_uid*, Fragen Sie die Sysschedules-Systemtabelle.  
   
  Wenn *Collection_mode* ist auf 0 festgelegt, *Schedule_uid* oder *Schedule_name* muss angegeben werden. Wenn *Collection_mode* ist auf 1 festgelegt, *Schedule_uid* oder *Schedule_name* wird ignoriert, wenn angegeben.  
@@ -94,7 +96,7 @@ sp_syscollector_create_collection_set
  [  **@schedule_name =** ] "*Schedule_name*"  
  Ist der Name des Zeitplans. *Schedule_name* ist **Sysname** hat den Standardwert NULL. Wenn angegeben, *Schedule_uid* muss NULL sein. Zum Abrufen *Schedule_name*, Fragen Sie die Sysschedules-Systemtabelle.  
   
- [  **@logging_level =** ] *Logging_level*  
+ [ **@logging_level =** ] *logging_level*  
  Entspricht dem Protokolliergrad. *Logging_level* ist **"smallint"** mit einem der folgenden Werte:  
   
  0 – Informationen zur Protokollausführung und zu den [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Ereignissen, die Folgendes nachverfolgen:  
@@ -113,18 +115,18 @@ sp_syscollector_create_collection_set
   
 -   Warnungsereignisse von [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
- 2 – Protokollierung Stufe 1 sowie ausführliche Ereignisinformationen von [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
+ 2 - Protokollierung Stufe 1 sowie ausführliche Ereignisinformationen von [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
  Der Standardwert für *Logging_level* ist 1.  
   
- [  **@description =** ] "*Beschreibung*"  
+ [ **@description =** ] '*description*'  
  Die Beschreibung für den Sammlungssatz. *Beschreibung* ist **nvarchar(4000)** hat den Standardwert NULL.  
   
- [  **@collection_set_id =** ] *Collection_set_id*  
+ [ **@collection_set_id =** ] *collection_set_id*  
  Der eindeutige lokale Bezeichner für den Sammlungssatz. *Collection_set_id* ist **Int** mit OUTPUT und ist erforderlich.  
   
- [  **@collection_set_uid =** ] "*Collection_set_uid*"  
- GUID für den Sammlungssatz. *Collection_set_uid* ist **"uniqueidentifier"** mit Ausgabe hat den Standardwert NULL.  
+ [ **@collection_set_uid =** ] '*collection_set_uid*'  
+ GUID für den Sammlungssatz. *collection_set_uid* is **uniqueidentifier** with OUTPUT with a default value of NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

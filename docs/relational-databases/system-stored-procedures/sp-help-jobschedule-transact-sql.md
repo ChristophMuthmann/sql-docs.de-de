@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobschedule
 - sp_help_jobschedule_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobschedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobschedule
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f111a04bfe27fad284157082ec1bbbeadfb92c8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 87131f3a5347f24593798bbb81e9f81494897593
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,21 +50,21 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@job_id=** ] *Job_id*  
+ [ **@job_id=** ] *job_id*  
  Die Auftrags-ID *Job_id*ist **"uniqueidentifier"**, hat den Standardwert NULL.  
   
- [  **@job_name=** ] **"***Job_name***"**  
+ [ **@job_name=** ] **'***job_name***'**  
  Der Name des Auftrags. *Job_name*ist **Sysname**, hat den Standardwert NULL.  
   
 > **Hinweis:** entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden.  
   
- [  **@schedule_name=** ] **"***Schedule_name***"**  
+ [ **@schedule_name=** ] **'***schedule_name***'**  
  Der Name des Zeitplanelements für den Auftrag. *Schedule_name*ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@schedule_id=** ] *Schedule_id*  
+ [ **@schedule_id=** ] *schedule_id*  
  Die Identifikationsnummer des Zeitplanelements für den Auftrag. *Schedule_id*ist **Int**, hat den Standardwert NULL.  
   
- [  **@include_description=** ] *Include_description*  
+ [ **@include_description=** ] *include_description*  
  Gibt an, ob die Beschreibung des Zeitplans in das Resultset eingeschlossen werden soll. *Include_description* ist **Bit**, hat den Standardwert **0**. Wenn *Include_description* ist **0**, die Beschreibung des Zeitplans ist nicht im Resultset enthalten. Wenn *Include_description* ist **1**, ist die Beschreibung des Zeitplans im Resultset enthalten.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -73,7 +76,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|ID des Zeitplans.|  
 |**schedule_name**|**sysname**|Name des Zeitplans.|  
-|**aktiviert**|**int**|Ob der Zeitplan aktiviert (**1**) oder nicht aktiviert (**0**).|  
+|**enabled**|**int**|Ob der Zeitplan aktiviert (**1**) oder nicht aktiviert (**0**).|  
 |**freq_type**|**int**|Der Wert, der angibt, wann der Auftrag ausgeführt werden.<br /><br /> **1** = einmal<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ zu den **Freq_interval**<br /><br /> **64** = ausgeführt werden, wenn **SQLServerAgent** -Dienst gestartet wird.|  
 |**freq_interval**|**int**|Tage, wenn der Auftrag ausgeführt wird. Der Wert hängt vom Wert der **Freq_type**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_type**|**int**|Einheiten für **Freq_subday_interval**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
@@ -91,7 +94,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|Bezeichner für den Zeitplan.|  
 |**job_count**|**int**|Die Anzahl der zurückgegebenen Aufträge.|  
   
-> **Hinweis:****Sp_help_jobschedule** gibt Werte aus der **dbo.sysjobschedules** und **dbo.sysschedules** -Systemtabellen in **Msdb** .   **Sysjobschedules** wird alle 20 Minuten aktualisiert. Dies kann Auswirkungen auf die Werte haben, die von dieser gespeicherten Prozedur zurückgegeben werden.  
+> **Hinweis:****Sp_help_jobschedule** gibt Werte aus der **dbo.sysjobschedules** und **dbo.sysschedules** -Systemtabellen in **Msdb** . **Sysjobschedules** wird alle 20 Minuten aktualisiert. Dies kann Auswirkungen auf die Werte haben, die von dieser gespeicherten Prozedur zurückgegeben werden.  
   
 ## <a name="remarks"></a>Hinweise  
  Die Parameter der **Sp_help_jobschedule** können nur in bestimmten Kombinationen verwendet werden. Wenn *Schedule_id* angegeben ist, weder *Job_id* noch *Job_name* kann angegeben werden. Andernfalls die *Job_id* oder *Job_name* Parameter können verwendet werden, mit *Schedule_name*.  
@@ -151,9 +154,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [Sp_delete_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [Sp_update_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

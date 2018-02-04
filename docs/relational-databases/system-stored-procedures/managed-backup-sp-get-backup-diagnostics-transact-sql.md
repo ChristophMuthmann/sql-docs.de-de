@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sp_get_backup_diagnostics
 - smart_admin.sp_get_backup_diagnostics_TSQL
 - smart_admin.sp_get_backup_diagnostics
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_get_backup_diagnostics
 - smart_admin.sp_get_backup_diagnostics
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 282ee88abfd5ba5a040851f036e363d604bc4b6d
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 088d3232ef47888c0615e7b8a7638eb26f2817a2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +67,11 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 ||||  
 |-|-|-|  
 |Spaltenname|Datentyp|Description|  
-|event_type|VOM DATENTYP NVARCHAR(512)|Typ des erweiterten Ereignisses.|  
-|Ereignis|VOM DATENTYP NVARCHAR(512)|Die Zusammenfassung der Ereignisprotokolle.|  
-|Timestamp|timestamp|Der Zeitstempel des Ereignisses, der angibt, zu welchem Zeitpunkt das Ereignis ausgelöst wurde.|  
+|event_type|NVARCHAR(512)|Typ des erweiterten Ereignisses.|  
+|Ereignis|NVARCHAR(512)|Die Zusammenfassung der Ereignisprotokolle.|  
+|Timestamp|TIMESTAMP|Der Zeitstempel des Ereignisses, der angibt, zu welchem Zeitpunkt das Ereignis ausgelöst wurde.|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert **EXECUTE** Berechtigungen für die gespeicherte Prozedur. Darüber hinaus müssen **VIEW SERVER STATE** Berechtigungen, da er intern andere Systemobjekte aufruft, diese Berechtigung erfordern.  

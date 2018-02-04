@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorhelpalert_TSQL
 - sp_dbmmonitorhelpalert
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_dbmmonitorhelpalert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66d80f6b202be75f1e3dd66bf1f9ab48a0829c13
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: aa31d747ebfd9fbf56aee874f477468212bc161b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +51,7 @@ sp_dbmmonitorhelpalert database_name
  *database_name*  
  Gibt die Datenbank an.  
   
- [ *Alert_id* ]  
+ [ *alert_id* ]  
  Ein ganzzahliger Wert, der die zurückzugebende Warnung identifiziert. Wird das Argument nicht angegeben, werden alle Warnungen zurückgegeben, aber nicht die Beibehaltungsdauer.  
   
  Geben Sie einen der folgenden Werte an, um eine bestimmte Warnung zurückzugeben:  
@@ -73,8 +75,8 @@ sp_dbmmonitorhelpalert database_name
 |Column|Datentyp|Description|  
 |------------|---------------|-----------------|  
 |**alert_id**|**int**|Die folgende Tabelle listet die **Alert_id** Wert für jede Leistungsmetrik und als Maßeinheit der Metrik angezeigt, der **Sp_dbmmonitorresults** Resultset:|  
-|**Schwellenwert**|**int**|Der Schwellenwert für die Warnung. Wenn der Rückgabewert beim Aktualisieren des Spiegelungsstatus diesen Schwellenwert überschreitet, wird ein Eintrag im Windows-Ereignisprotokoll generiert. Der Wert stellt je nach Warnung KB, Minuten oder Millisekunden dar. Ist der Schwellenwert aktuell nicht festgelegt, lautet der Wert NULL.<br /><br /> **Hinweis:** um die aktuellen Werte anzuzeigen, führen Sie die [Sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) gespeicherte Prozedur.|  
-|**aktiviert**|**bit**|0 = Ereignis ist deaktiviert.<br /><br /> 1 = Ereignis ist aktiviert.<br /><br /> **Hinweis:** Beibehaltungsdauer ist immer aktiviert.|  
+|**threshold**|**int**|Der Schwellenwert für die Warnung. Wenn der Rückgabewert beim Aktualisieren des Spiegelungsstatus diesen Schwellenwert überschreitet, wird ein Eintrag im Windows-Ereignisprotokoll generiert. Der Wert stellt je nach Warnung KB, Minuten oder Millisekunden dar. Ist der Schwellenwert aktuell nicht festgelegt, lautet der Wert NULL.<br /><br /> **Hinweis:** um die aktuellen Werte anzuzeigen, führen Sie die [Sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) gespeicherte Prozedur.|  
+|**enabled**|**bit**|0 = Ereignis ist deaktiviert.<br /><br /> 1 = Ereignis ist aktiviert.<br /><br /> **Hinweis:** Beibehaltungsdauer ist immer aktiviert.|  
   
 |Wert|Leistungsmetrik|Einheit|  
 |-----------|------------------------|----------|  
@@ -102,11 +104,11 @@ EXEC sp_dbmmonitorhelpalert AdventureWorks2012;
   
 ## <a name="see-also"></a>Siehe auch  
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Sp_dbmmonitorchangealert &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)   
- [Sp_dbmmonitorchangemonitoring &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
- [Sp_dbmmonitordropalert &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)   
- [Sp_dbmmonitorupdate &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)   
- [Sp_dbmmonitorhelpmonitoring &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
+ [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)   
+ [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
+ [sp_dbmmonitordropalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)   
+ [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)   
+ [sp_dbmmonitorhelpmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
  [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
   

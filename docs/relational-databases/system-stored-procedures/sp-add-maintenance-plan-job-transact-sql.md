@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_maintenance_plan_job_TSQL
 - sp_add_maintenance_plan_job
-dev_langs: TSQL
-helpviewer_keywords: sp_add_maintenance_plan_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_maintenance_plan_job
 ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89b05f5e2a9f4fb2d2e60938d24c191412b28d67
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4aef3cee7653141917e8b5e9ab97c156f8a95e36
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddmaintenanceplanjob-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +51,10 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@plan_id =**] **"***" Plan_id "***"**  
+ [ **@plan_id =**] **'***plan_id***'**  
  Gibt die ID des Wartungsplans an. *plan_id* ist vom Datentyp **uniqueidentifier**und muss eine gültige ID sein.  
   
- [  **@job_id =**] **"***Job_id***"**  
+ [ **@job_id =**] **'***job_id***'**  
  Gibt die ID des Auftrags an, der dem Wartungsplan zugeordnet werden soll. *job_id* ist vom Datentyp **uniqueidentifier**und muss eine gültige ID sein. Um einen oder mehrere Aufträge zu erstellen, führen Sie **sp_add_job**aus, oder verwenden Sie SQL Server Management Studio.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

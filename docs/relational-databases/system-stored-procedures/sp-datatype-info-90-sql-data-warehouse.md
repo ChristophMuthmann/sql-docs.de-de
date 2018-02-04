@@ -8,23 +8,25 @@ ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71d31ffc47781bac881e8d1af0116d3adf0731d0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0989c6224160fdad3059083358eb2ef84b5990e3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Datawarehouse)
+# <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Gibt Informationen zu den von der aktuellen Umgebung unterstützten Datentypen zurück.  
@@ -41,10 +43,10 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@data_type=** ] *Data_type*  
+ [ **@data_type=** ] *data_type*  
  Die Codenummer für den angegebenen Datentyp. Um eine Liste aller Datentypen abzurufen, lassen Sie diesen Parameter weg. *Data_type* ist **Int**, hat den Standardwert 0.  
   
- [  **@ODBCVer=** ] *Odbc_version*  
+ [ **@ODBCVer=** ] *odbc_version*  
  Die verwendete ODBC-Version. *Odbc_version* ist **"tinyint"**, Standardwert ist 2.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

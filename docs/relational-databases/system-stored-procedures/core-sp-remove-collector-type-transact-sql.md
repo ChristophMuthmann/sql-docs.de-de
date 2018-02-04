@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_remove_collector_type
 - sp_remove_collector_type_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - core.sp_remove_collector_type stored procedure
 - management data warehouse, data collector stored procedures
 - sp_remove_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 88ceba25-e41a-405f-a416-bb68918a0024
-caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0dd2c17ff84bfb04e3223a59fb60869fc7a8562
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: de833b4bbe04311b411daff27142269b96b841d2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="corespremovecollectortype-transact-sql"></a>core.sp_remove_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,8 +51,8 @@ core.sp_remove_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @collector_type_uid =] '*Collector_type_uid*"  
- Die GUID für den Sammlertyp. *Collector_type_uid* ist **"uniqueidentifier"**, verfügt über keinen Standardwert.  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
+ Die GUID für den Sammlertyp. *collector_type_uid* is **uniqueidentifier**, with no default value.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

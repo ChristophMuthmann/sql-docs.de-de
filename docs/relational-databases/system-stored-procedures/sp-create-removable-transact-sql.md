@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_create_removable
 - sp_create_removable_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_create_removable
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_create_removable
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 792413d9fc09f565dba0b73bbe5d10824e5ddd28
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e7b5a66828c1ee49734e720137d3a0ededc0098e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   Erstellt eine Datenbank für austauschbare Medien. Erstellt drei oder mehr Dateien (eine für die Systemkatalogtabellen, eine für das Transaktionsprotokoll und eine oder mehrere für die Datentabellen) und platziert die Datenbank in diesen Dateien.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Wir empfehlen die Verwendung [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Wir empfehlen die Verwendung [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) stattdessen.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,36 +62,36 @@ sp_create_removable
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@dbname=** ] **"***Dbname***"**  
+ [ **@dbname=** ] **'***dbname***'**  
  Der Name der Datenbank, die zur Verwendung auf austauschbaren Medien erstellt werden soll. *Dbname* ist **Sysname**.  
   
- [  **@syslogical=** ] **"***Syslogical***"**  
+ [ **@syslogical=** ] **'***syslogical***'**  
  Der logische Name der Datei, die die Systemkatalogtabellen enthält. *Syslogical* ist **Sysname**.  
   
- [  **@sysphysical=** ] **"***Sysphysical***"**  
+ [ **@sysphysical=** ] **'***sysphysical***'**  
  Der physische Name (einschließlich vollständiger Pfadangabe) der Datei, die die Datentabellen enthält. Enthält einen vollqualifizierten Pfad der Datei, die die Systemkatalogtabellen enthält. *Sysphysical* ist **nvarchar(260)**.  
   
- [  **@syssize=** ] *Syssize*  
+ [ **@syssize=** ] *syssize*  
  Die in MB angegebene Größe der Datei, die die Systemkatalogtabellen enthält. *Syssize* ist **Int**. Die minimale *Syssize* ist 1.  
   
- [  **@loglogical=** ] **"***Loglogical***"**  
+ [ **@loglogical=** ] **'***loglogical***'**  
  Der logische Name der Datei, die das Transaktionsprotokoll enthält. *Loglogical* ist **Sysname**.  
   
- [  **@logphysical=** ] **"***Logphysical***"**  
+ [ **@logphysical=** ] **'***logphysical***'**  
  Der physische Name (einschließlich vollständiger Pfadangabe) der Datei, die die Datentabellen enthält. Enthält einen vollqualifizierten Pfad der Datei, die die Transaktionsprotokolltabellen enthält. *Logphysical* ist **nvarchar(260)**.  
   
- [  **@logsize=** ] *Logsize*  
+ [ **@logsize=** ] *logsize*  
  Die in MB angegebene Größe der Datei, die das Transaktionsprotokoll enthält. *Logsize* ist **Int**. Die minimale *Logsize* ist 1.  
   
- [  **@datalogical1=** ] **"***Datalogical***"**  
+ [ **@datalogical1=** ] **'***datalogical***'**  
  Der logische Name der Datei, die die Datentabellen enthält. *Datalogical* ist **Sysname**.  
   
  Die Anzahl von Datendateien muss zwischen 1 und 16 liegen. In der Regel wird mehr als eine Datendatei erstellt, wenn zu erwarten ist, dass die Datenbank umfangreich wird und auf mehrere Datenträger verteilt werden muss.  
   
- [  **@dataphysical1=** ] **"***Dataphysical***"**  
+ [ **@dataphysical1=** ] **'***dataphysical***'**  
  Der physische Name (einschließlich vollständiger Pfadangabe) der Datei, die die Datentabellen enthält. Enthält einen vollqualifizierten Pfad der Datei, die die Datentabellen enthält. *Dataphysical* ist **nvarchar(260)**.  
   
- [  **@datasize1=** ] **"***Datasize***"**  
+ [ **@datasize1=** ] **'***datasize***'**  
  Die in MB angegebene Größe der Datei, die die Datentabellen enthält. *Datasize* ist **Int**. Die minimale *Datasize* ist 1.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -115,7 +118,7 @@ sp_create_removable
 |Wiederherstellen|Getrennt|  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legt keine Berechtigungen für Daten und Protokolldateien fest.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keine Daten und Protokolldateien fest führt Berechtigungen Datei.  
   
 ## <a name="examples"></a>Beispiele  
  In diesem Beispiel wird die `inventory`-Datenbank als austauschbare Datenbank erstellt.  
@@ -134,12 +137,12 @@ EXEC sp_create_removable 'inventory',
   
 ## <a name="see-also"></a>Siehe auch  
  [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [Sp_certify_removable &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
+ [sp_certify_removable &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Sp_dbremove &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
- [Sp_detach_db &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [Sp_helpfile &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [Sp_helpfilegroup &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
+ [sp_dbremove &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [sp_helpfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_apply_job_to_targets
 - sp_apply_job_to_targets_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_apply_job_to_targets
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_apply_job_to_targets
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f0b538c726a324709c35807c8e0f6bdc8bc3b607
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 341a14b2ae6aa3d551ab90d4ff2f931d617aa3f2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,22 +49,22 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@job_id =**] *Job_id*  
+ [ **@job_id =**] *job_id*  
  Die ID des Auftrags, der für die angegebenen Zielserver oder Zielservergruppen ausgeführt werden sollen. *Job_id* ist **"uniqueidentifier"**, hat den Standardwert NULL.  
   
- [  **@job_name =**] **"***Job_name***"**  
+ [ **@job_name =**] **'***job_name***'**  
  Der Name des Auftrags, der für die angegebenen Zielserver oder Zielservergruppen ausgeführt werden sollen. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden.  
   
- [  **@target_server_groups =**] **"***Target_server_groups***"**  
- Eine durch Trennzeichen getrennte Liste von Zielservergruppen, für die der angegebene Auftrag ausgeführt werden soll. *Target_server_groups* ist **nvarchar(2048)**, hat den Standardwert NULL.  
+ [ **@target_server_groups =**]  **'***target_server_groups***'**  
+ Eine durch Trennzeichen getrennte Liste von Zielservergruppen, für die der angegebene Auftrag ausgeführt werden soll. *target_server_groups* is **nvarchar(2048)**, with a default of NULL.  
   
- [  **@target_servers=** ] **"***target_server***"**  
- Eine durch Trennzeichen getrennte Liste von Zielservern, für die der angegebene Auftrag ausgeführt werden soll. *target_server*ist **nvarchar(2048)**, hat den Standardwert NULL.  
+ [ **@target_servers=** ] **'***target_servers***'**  
+ Eine durch Trennzeichen getrennte Liste von Zielservern, für die der angegebene Auftrag ausgeführt werden soll. *target_servers*is **nvarchar(2048)**, with a default of NULL.  
   
- [  **@operation=** ] **"***Vorgang***"**  
+ [ **@operation=** ]  **'***operation***'**  
  Gibt an, ob der angegebene Auftrag für die genannten Zielserver oder Zielservergruppen ausgeführt oder davon entfernt werden soll. *Vorgang*ist **vom Datentyp varchar(7)**, hat den Standardwert übernehmen. Gültige Vorgänge sind **übernehmen** und **entfernen**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -88,9 +91,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_add_jobserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [Sp_delete_jobserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [Sp_remove_job_from_targets &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
+ [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_remove_job_from_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

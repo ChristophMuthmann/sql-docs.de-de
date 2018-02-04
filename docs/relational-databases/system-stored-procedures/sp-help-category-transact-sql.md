@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_category
 - sp_help_category_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efec4c1ef04ef95e74ef13479b5f51cfe2d84bdb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: debc3b8cef2aeb0a9f4893ff5e9287a2a5fdd016
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +49,16 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@class=**] **"***Klasse***"**  
+ [ **@class=**] **'***class***'**  
  Die Klasse, zu der Informationen angefordert werden. *Klasse* ist **varchar(8)**, hat den Standardwert des **Auftrag**. *Klasse* kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
-|**AUFTRAG**|Stellt Informationen zu einer Auftragskategorie bereit.|  
+|**JOB**|Stellt Informationen zu einer Auftragskategorie bereit.|  
 |**WARNUNG**|Stellt Informationen zu einer Warnungskategorie bereit.|  
 |**OPERATOR**|Stellt Informationen zu einer Operatorkategorie bereit.|  
   
- [  **@type=** ] **"***Typ***"**  
+ [ **@type=** ] **'***type***'**  
  Der Typ der Kategorie, für die Informationen angefordert werden. *Typ* ist **varchar(12)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
@@ -64,10 +67,10 @@ sp_help_category [ [ @class = ] 'class' ]
 |**MULTI-SERVER**|Multiserver-Auftragskategorie|  
 |**NONE**|Kategorie für eine andere Klasse als **Auftrag**.|  
   
- [  **@name=** ] **"***Namen***"**  
+ [ **@name=** ] **'***name***'**  
  Der Name der Kategorie, für die Informationen angefordert werden. *name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
- [  **@suffix=** ] *Suffix*  
+ [ **@suffix=** ] *suffix*  
  Gibt an, ob die **Category_type** Spalte im Resultset wird eine ID oder einen Namen. *Suffix* ist **Bit**, hat den Standardwert **0**. **1** zeigt die **Category_type** als einen Namen und **0** angezeigt wird, eine ID ein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -134,9 +137,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_add_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [Sp_delete_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [Sp_update_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

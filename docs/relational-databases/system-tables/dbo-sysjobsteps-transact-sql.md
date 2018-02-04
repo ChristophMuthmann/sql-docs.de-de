@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dbo.sysjobsteps_TSQL
 - sysjobsteps
 - sysjobsteps_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysjobsteps system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysjobsteps system table
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4f316e40cc6bf89cf7296b5a2d864406142f7f87
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f29d3ef22b724abc095da01ea5eef70aa9c447dd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +43,9 @@ ms.lasthandoff: 11/17/2017
 |**job_id**|**uniqueidentifier**|ID des Auftrags.|  
 |**step_id**|**int**|ID des Schritts im Auftrag.|  
 |**step_name**|**sysname**|Der Name des Auftragsschritts.|  
-|**Subsystem**|**nvarchar(40)**|Name des vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent zur Ausführung des Auftragsschritts verwendeten Subsystems.|  
+|**subsystem**|**nvarchar(40)**|Name des vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent zur Ausführung des Auftragsschritts verwendeten Subsystems.|  
 |**Befehl**|**nvarchar(max)**|Der Befehl ausgeführt werden soll **Subsystem**.|  
-|**Flags**|**int**|Reserviert.|  
+|**flags**|**int**|Reserviert.|  
 |**additional_parameters**|**ntext**|Reserviert.|  
 |**cmdexec_success_code**|**int**|Fehlerebene Rückgabewert von **CmdExec** -Subsystemschritten, um den Erfolg anzugeben.|  
 |**on_success_action**|**tinyint**|Aktion, die nach erfolgreicher Ausführung eines Schritts durchzuführen ist.|  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |**retry_attempts**|**int**|Anzahl der Wiederholungsversuche, wenn der Schritt einen Fehler erzeugt.|  
 |**retry_interval**|**int**|Zeit, die zwischen Wiederholungsversuchen gewartet wird.|  
 |**os_run_priority**|**int**|Reserviert.|  
-|**Ausgabedateiname**|**nvarchar(200)-Datentyp gepackt ist**|Name der Datei, in dem die Ausgabe des Schritts, gespeichert wird, wenn **Subsystem** Wert TSQL, PowerShell oder **CmdExec***.*|  
+|**output_file_name**|**nvarchar(200)**|Name der Datei, in dem die Ausgabe des Schritts, gespeichert wird, wenn **Subsystem** Wert TSQL, PowerShell oder **CmdExec ***.*|  
 |**last_run_outcome**|**int**|Ergebnis der vorherigen Ausführung des Auftragsschritts.<br /><br /> **0** = Fehler<br /><br /> **1** = war erfolgreich<br /><br /> **2** = wiederholen<br /><br /> **3** = abgebrochen<br /><br /> **5** = unbekannt|  
 |**last_run_duration**|**int**|Dauer (hhmmss) der letzten Ausführung des Schritts.|  
 |**last_run_retries**|**int**|Anzahl der Wiederholungsversuche bei der letzten Ausführung des Auftragsschritts.|  

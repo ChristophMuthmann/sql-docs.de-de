@@ -8,28 +8,30 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - backupset
 - backupset_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backupset system table
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-caps.latest.revision: "70"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe7e9f7e942a2c7dcf39b61d7d162123f191a1b7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dd98b3e7e120e186901d8120243a35d620411ba2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,17 +52,17 @@ ms.lasthandoff: 11/17/2017
 |**last_media_number**|**smallint**|Mediennummer des Mediums, bei dem der Sicherungssatz endet. Kann den Wert NULL haben.|  
 |**catalog_family_number**|**tinyint**|Familiennummer des Mediums, das den Beginn des Sicherungssatzverzeichnisses enthält. Kann den Wert NULL haben.|  
 |**catalog_media_number**|**smallint**|Mediennummer des Mediums, das den Beginn des Sicherungssatzverzeichnisses enthält. Kann den Wert NULL haben.|  
-|**Position**|**int**|Position des Sicherungssatzes, die in dem Wiederherstellungsvorgang zum Suchen nach dem geeigneten Sicherungssatz und den geeigneten Dateien verwendet wird. Kann den Wert NULL haben. Weitere Informationen finden Sie in der Datei in [BACKUP &#40; Transact-SQL &#41; ](../../t-sql/statements/backup-transact-sql.md).|  
+|**position**|**int**|Position des Sicherungssatzes, die in dem Wiederherstellungsvorgang zum Suchen nach dem geeigneten Sicherungssatz und den geeigneten Dateien verwendet wird. Kann den Wert NULL haben. Weitere Informationen finden Sie in der Datei in [BACKUP &#40; Transact-SQL &#41; ](../../t-sql/statements/backup-transact-sql.md).|  
 |**expiration_date**|**datetime**|Datum und Uhrzeit des Zeitpunkts, zu dem die Gültigkeit des Sicherungssatzes endet. Kann den Wert NULL haben.|  
 |**software_vendor_id**|**int**|ID des Softwareanbieters, der den Sicherungsmedienheader schreibt. Kann den Wert NULL haben.|  
-|**name**|**vom Datentyp nvarchar(128)**|Name des Sicherungssatzes. Kann den Wert NULL haben.|  
-|**Beschreibung**|**nvarchar(255)**|Beschreibung des Sicherungssatzes. Kann den Wert NULL haben.|  
-|**Benutzername**|**vom Datentyp nvarchar(128)**|Name des Benutzers, der den Sicherungsvorgang durchführt. Kann den Wert NULL haben.|  
-|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Hauptversionsnummer. Kann den Wert NULL haben.|  
-|**software_minor_version**|**tinyint**|Nebenversionsnummer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Kann den Wert NULL haben.|  
-|**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Buildnummer. Kann den Wert NULL haben.|  
+|**name**|**nvarchar(128)**|Name des Sicherungssatzes. Kann den Wert NULL haben.|  
+|**description**|**nvarchar(255)**|Beschreibung des Sicherungssatzes. Kann den Wert NULL haben.|  
+|**user_name**|**nvarchar(128)**|Name des Benutzers, der den Sicherungsvorgang durchführt. Kann den Wert NULL haben.|  
+|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hauptversionsnummer. Kann den Wert NULL haben.|  
+|**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nummer der Nebenversion. Kann den Wert NULL haben.|  
+|**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Buildnummer. Kann den Wert NULL haben.|  
 |**time_zone**|**smallint**|Unterschied zwischen der Ortszeit (am Standort, an dem der Sicherungsvorgang stattfindet) und der UTC (Coordinated Universal Time, Koordinierte Weltzeit) in 15-Minuten-Intervallen. Die Werte können zwischen -48 und +48 (einschließlich) liegen. Durch den Wert 127 wird angegeben, dass die Abweichung nicht bekannt ist. So entspricht z. B. der Wert -20 der Eastern Standard Time (EST) bzw. einer Zeit, die fünf Stunden nach der UTC liegt. Kann den Wert NULL haben.|  
-|**mtf_minor_version**|**tinyint**|Nebenversionsnummer von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format. Kann den Wert NULL haben.|  
+|**mtf_minor_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Band Nebenversionsnummer Format an. Kann den Wert NULL haben.|  
 |**first_lsn**|**numeric(25,0)**|Protokollfolgenummer des ersten oder ältesten Protokolldatensatzes im Sicherungssatz. Kann den Wert NULL haben.|  
 |**last_lsn**|**numeric(25,0)**|Protokollfolgenummer des nächsten Protokolldatensatzes nach dem Sicherungssatz. Kann den Wert NULL haben.|  
 |**checkpoint_lsn**|**numeric(25,0)**|Protokollfolgenummer des Protokolldatensatzes, bei dem die Wiederholung beginnen muss. Kann den Wert NULL haben.|  
@@ -68,19 +70,19 @@ ms.lasthandoff: 11/17/2017
 |**database_creation_date**|**datetime**|Datum und Uhrzeit des ursprünglichen Erstellens der Datenbank. Kann den Wert NULL haben.|  
 |**backup_start_date**|**datetime**|Datum und Uhrzeit des Beginns des Sicherungsvorgangs. Kann den Wert NULL haben.|  
 |**backup_finish_date**|**datetime**|Datum und Uhrzeit des Endes des Sicherungsvorgangs. Kann den Wert NULL haben.|  
-|**Typ**|**char(1)**|Art der Sicherung. Mögliche Werte sind:<br /><br /> D = Datenbank<br /><br /> I = Datenbank differenziell<br /><br /> L = Protokoll<br /><br /> F = Datei oder Dateigruppe<br /><br /> G = Datei differenziell<br /><br /> P = Teilweise<br /><br /> Q = Teilweise differenziell<br /><br /> Kann den Wert NULL haben.|  
-|**Sortierreihenfolge**|**smallint**|Sortierreihenfolge des Servers, der den Sicherungsvorgang durchführt. Kann den Wert NULL haben. Weitere Informationen zu Sortierreihenfolgen und Sortierungen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).|  
+|**type**|**char(1)**|Art der Sicherung. Mögliche Werte sind:<br /><br /> D = Datenbank<br /><br /> I = Datenbank differenziell<br /><br /> L = Protokoll<br /><br /> F = Datei oder Dateigruppe<br /><br /> G = Datei differenziell<br /><br /> P = Teilweise<br /><br /> Q = Teilweise differenziell<br /><br /> Kann den Wert NULL haben.|  
+|**sort_order**|**smallint**|Sortierreihenfolge des Servers, der den Sicherungsvorgang durchführt. Kann den Wert NULL haben. Weitere Informationen zu Sortierreihenfolgen und Sortierungen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |**Codepage**|**smallint**|Codepage des Servers, der den Sicherungsvorgang durchführt. Kann den Wert NULL haben. Weitere Informationen über Codepages finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).|  
-|**COMPATIBILITY_LEVEL**|**tinyint**|Einstellung des Kompatibilitätsgrades für die Datenbank. Mögliche Werte sind:<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Kann den Wert NULL haben.<br /><br /> Weitere Informationen zu den Kompatibilitätsgraden finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|  
+|**compatibility_level**|**tinyint**|Einstellung des Kompatibilitätsgrades für die Datenbank. Mögliche Werte sind:<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Kann den Wert NULL haben.<br /><br /> Weitere Informationen zu den Kompatibilitätsgraden finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|  
 |**database_version**|**int**|Versionsnummer der Datenbank. Kann den Wert NULL haben.|  
 |**backup_size**|**numeric(20,0)**|Größe des Sicherungssatzes in Bytes. Kann den Wert NULL haben. VSS-Sicherungen ist Backup_size einen geschätzten Wert.|  
-|**database_name**|**vom Datentyp nvarchar(128)**|Name der an dem Sicherungsvorgang beteiligten Datenbank. Kann den Wert NULL haben.|  
-|**Servername**|**vom Datentyp nvarchar(128)**|Name des Servers, der den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungsvorgang ausführt. Kann den Wert NULL haben.|  
-|**Computername**|**vom Datentyp nvarchar(128)**|Name des Computers, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird. Kann den Wert NULL haben.|  
-|**Flags**|**int**|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **Flags** Spalte wurde als veraltet markiert und wird mit den folgenden Bitspalten ersetzt wird:<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **backupset** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> Kann den Wert NULL haben.<br /><br /> In Sicherungssätzen früherer Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] haben die Flagbits folgende Bedeutung:<br />1 = Die Sicherung enthält minimal protokollierte Daten. <br />2 = WITH SNAPSHOT wurde verwendet. <br />4 = Die Datenbank war zum Zeitpunkt der Sicherung schreibgeschützt.<br />8 = Die Datenbank befand sich zum Zeitpunkt der Sicherung im Einzelbenutzermodus.|  
+|**database_name**|**nvarchar(128)**|Name der an dem Sicherungsvorgang beteiligten Datenbank. Kann den Wert NULL haben.|  
+|**server_name**|**nvarchar(128)**|Name des Servers, der den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungsvorgang ausführt. Kann den Wert NULL haben.|  
+|**machine_name**|**nvarchar(128)**|Name des Computers, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird. Kann den Wert NULL haben.|  
+|**flags**|**int**|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **Flags** Spalte wurde als veraltet markiert und wird mit den folgenden Bitspalten ersetzt wird:<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> Kann den Wert NULL haben.<br /><br /> In Sicherungssätzen früherer Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] haben die Flagbits folgende Bedeutung:<br />1 = Die Sicherung enthält minimal protokollierte Daten. <br />2 = WITH SNAPSHOT wurde verwendet. <br />4 = Die Datenbank war zum Zeitpunkt der Sicherung schreibgeschützt.<br />8 = Die Datenbank befand sich zum Zeitpunkt der Sicherung im Einzelbenutzermodus.|  
 |**unicode_locale**|**int**|Unicode-Gebietsschema. Kann den Wert NULL haben.|  
 |**unicode_compare_style**|**int**|Unicode-Vergleichsstil. Kann den Wert NULL haben.|  
-|**Sortierungsname**|**vom Datentyp nvarchar(128)**|Sortierungsname. Kann den Wert NULL haben.|  
+|**collation_name**|**nvarchar(128)**|Sortierungsname. Kann den Wert NULL haben.|  
 |**Is_password_protected**|**bit**|Gibt an, ob der Sicherungssatz<br /><br /> kennwortgeschützt ist:<br /><br /> 0 = Nicht geschützt<br /><br /> 1 = Geschützt|  
 |**recovery_model**|**nvarchar(60)**|Wiederherstellungsmodell für die Datenbank:<br /><br /> FULL<br /><br /> BULK-LOGGED<br /><br /> SIMPLE|  
 |**has_bulk_logged_data**|**bit**|1 = Die Sicherung enthält massenprotokollierte Daten.|  
@@ -90,7 +92,7 @@ ms.lasthandoff: 11/17/2017
 |**has_backup_checksums**|**bit**|1 = Die Sicherung enthält Sicherungsprüfsummen.|  
 |**is_damaged**|**bit**|1 = Beim Erstellen dieser Sicherung wurde eine Beschädigung der Datenbank festgestellt. Der Sicherungsvorgang sollte jedoch trotz der Fehler fortgesetzt werden.|  
 |**begins_log_chain**|**bit**|1 = Die erste in einer kontinuierlichen Kette von Protokollsicherungen. Eine Protokollkette beginnt mit der ersten Protokollsicherung, die erstellt wurde, nachdem die Datenbank angelegt wurde oder nachdem ein Wechsel vom einfachen zum vollständigen oder massenprotokollierten Wiederherstellungsmodell erfolgt ist.|  
-|**backupset**|**bit**|1 = Eine Sicherung des Protokollfragments mit unvollständigen Metadaten. Weitere Informationen finden Sie unter [Protokollfragmentsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).|  
+|**has_incomplete_metadata**|**bit**|1 = Eine Sicherung des Protokollfragments mit unvollständigen Metadaten. Weitere Informationen finden Sie unter [Protokollfragmentsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).|  
 |**is_force_offline**|**bit**|1 = Beim Erstellen der Sicherung wurde die Datenbank mithilfe der Option NORECOVERY offline geschaltet.|  
 |**is_copy_only**|**bit**|1 = Eine Kopiesicherung. Weitere Informationen finden Sie unter [Kopiesicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).|  
 |**first_recovery_fork_guid**|**uniqueidentifier**|ID des ersten Wiederherstellungs-Verzweigungspunkts. Dies entspricht **FirstRecoveryForkID** von RESTORE HEADERONLY.<br /><br /> Bei datensicherungen ist **First_recovery_fork_guid** gleich **Last_recovery_fork_guid**.|  
@@ -103,7 +105,7 @@ ms.lasthandoff: 11/17/2017
 |**compressed_backup_size**|**Numeric(20,0)**|Gesamtbytezahl der auf einem Datenträger gespeicherten Sicherung.<br /><br /> Um der Komprimierungsrate verwenden **Compressed_backup_size** und **Backup_size**.<br /><br /> Während einer **Msdb** ein Upgrade ausführen, wird dieser Wert auf NULL festgelegt. Dies gibt eine nicht komprimierte Sicherung an.|  
 |**key_algorithm**|**nvarchar(32)**|Der Verschlüsselungsalgorithmus, der zum Verschlüsseln der Sicherung verwendet wird. Der NO_Encryption-Wert gab an, dass die Sicherung nicht verschlüsselt wurde.|  
 |**encryptor_thumbprint**|**varbinary(20)**|Der Fingerabdruck der Verschlüsselung, der verwendet werden kann, um das Zertifikat oder den asymmetrischen Schlüssel in der Datenbank zu ermitteln. Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
-|**encryptor_type**|**nvarchar(32)**|Der verwendete Verschlüsselungstyp: Zertifikat oder Asymmetrischer Schlüssel. zugreifen. Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
+|**encryptor_type**|**nvarchar(32)**|Der verwendete Verschlüsselungstyp: Zertifikat oder Asymmetrischer Schlüssel. aus. Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
   
 ## <a name="remarks"></a>Hinweise  
  RESTORE VERIFYONLY FROM *Backup_device* WITH LOADHISTORY füllt die Spalte von der **Backupmediaset** Tabelle mit den entsprechenden Werten aus dem mediensatzheader.  

@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - backupfile
 - backupfile_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f51eff63650e1cf3572b7b2e8ea77a89eb4a8265
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 84b26ca09b8cd537ed40f0af8844f3f0c7627c86
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,17 +42,17 @@ ms.lasthandoff: 11/17/2017
 |**backup_set_id**|**int**|Eindeutige ID der Datei, die den Sicherungssatz enthält. Verweise **backupset(backup_set_id)**.|  
 |**first_family_number**|**tinyint**|Familiennummer des ersten Mediums, das diese Sicherungsdatei enthält. Kann den Wert NULL haben.|  
 |**first_media_number**|**smallint**|Mediennummer des ersten Mediums, das diese Sicherungsdatei enthält. Kann den Wert NULL haben.|  
-|**filegroup_name**|**vom Datentyp nvarchar(128)**|Name der Dateigruppe, die eine gesicherte Datenbankdatei enthält. Kann den Wert NULL haben.|  
+|**filegroup_name**|**nvarchar(128)**|Name der Dateigruppe, die eine gesicherte Datenbankdatei enthält. Kann den Wert NULL haben.|  
 |**page_size**|**int**|Größe der Seite in Bytes.|  
 |**file_number**|**numeric(10,0)**|Datei-ID eindeutig innerhalb einer Datenbank (entspricht **Sys. database_files**. **FILE_ID**).|  
 |**backed_up_page_count**|**numeric(10,0)**|Anzahl der gesicherten Seiten. Kann den Wert NULL haben.|  
 |**file_type**|**char(1)**|Die gesicherte Datei. Folgende Werte sind möglich:<br /><br /> D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datendatei.<br /><br /> L = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokolldatei.<br /><br /> F = Volltextkatalog.<br /><br /> Kann den Wert NULL haben.|  
 |**source_file_block_size**|**numeric(10,0)**|Medium, auf dem sich die ursprüngliche Daten- bzw. Protokolldatei befand, als sie gesichert wurde. Kann den Wert NULL haben.|  
 |**file_size**|**numeric(20,0)**|Länge der gesicherten Datei in Bytes. Kann den Wert NULL haben.|  
-|**logical_name**|**vom Datentyp nvarchar(128)**|Logischer Name der Datei, die gesichert wird. Kann den Wert NULL haben.|  
+|**logical_name**|**nvarchar(128)**|Logischer Name der Datei, die gesichert wird. Kann den Wert NULL haben.|  
 |**physical_drive**|**nvarchar(260)**|Name des physischen Laufwerks oder der physischen Partition. Kann den Wert NULL haben.|  
 |**physical_name**|**nvarchar(260)**|Rest des physischen (Betriebssystem-) Dateinamens. Kann den Wert NULL haben.|  
-|**Status**|**tinyint**|Status der Datei. Folgende Werte sind möglich:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = GELÖSCHT<br /><br /> Hinweis: Der Wert 5 wird übersprungen, sodass diese Werte den Werten für den Datenbankstatus entsprechen.|  
+|**state**|**tinyint**|Status der Datei. Folgende Werte sind möglich:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = GELÖSCHT<br /><br /> Hinweis: Der Wert 5 wird übersprungen, sodass diese Werte den Werten für den Datenbankstatus entsprechen.|  
 |**state_desc**|**nvarchar(64)**|Beschreibung des Dateistatus. Folgende Werte sind möglich:<br /><br /> ONLINE RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|Protokollfolgenummer, bei der die Datei erstellt wurde.|  
 |**drop_lsn**|**numeric(25,0)**|Protokollfolgenummer, bei der die Datei gelöscht wurde. Kann den Wert NULL haben.<br /><br /> Wurde die Datei nicht gelöscht, ist dieser Wert NULL.|  
@@ -75,6 +77,6 @@ ms.lasthandoff: 11/17/2017
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [Systemtabellen &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

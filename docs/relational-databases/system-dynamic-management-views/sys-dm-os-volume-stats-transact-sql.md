@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_volume_stats
 - sys.dm_os_volume_stats
 - sys.dm_os_volume_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_volume_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_volume_stats dynamic management function
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 43d9ead206eb4f5a83d0006c3b23626346b04fe5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 647c47f57e8f6eb7f756ec5a6263ae5d5059b674
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,21 +50,21 @@ sys.dm_os_volume_stats (database_id, file_id)
  *database_id*  
  Die ID der Datenbank. *database_id* ist vom Datentyp **int**und hat keinen Standardwert. Lässt keine NULL-Werte zu.  
   
- *FILE_ID*  
+ *file_id*  
  Die ID der Datei. *file_id* ist vom Datentyp **int**und hat keinen Standardwert. Lässt keine NULL-Werte zu.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
 ||||  
 |-|-|-|  
-|**Column**|**Datentyp**|**Description**|  
+|**Column**|**Datentyp**|**Beschreibung**|  
 |**database_id**|**int**|Die ID der Datenbank. Lässt keine NULL-Werte zu.|  
-|**FILE_ID**|**int**|Die ID der Datei. Lässt keine NULL-Werte zu.|  
+|**file_id**|**int**|Die ID der Datei. Lässt keine NULL-Werte zu.|  
 |**volume_mount_point**|**nvarchar(512)**|Der Einbindungspunkt, der das Stammverzeichnis des Volumes darstellt. Kann eine leere Zeichenfolge zurückgeben.|  
 |**volume_id**|**nvarchar(512)**|Die ID des Betriebssystemvolumes. Kann eine leere Zeichenfolge zurückgeben.|  
 |**logical_volume_name**|**nvarchar(512)**|Der Name des logischen Volumes. Kann eine leere Zeichenfolge zurückgeben.|  
-|**Dateisystemtyp**|**nvarchar(512)**|Der Typ des Dateisystemvolumes (z. B. NTFS, FAT, RAW). Kann eine leere Zeichenfolge zurückgeben.|  
-|**"total_bytes"**|**bigint**|Die Gesamtgröße des Volumes in Bytes. Lässt keine NULL-Werte zu.|  
+|**file_system_type**|**nvarchar(512)**|Der Typ des Dateisystemvolumes (z. B. NTFS, FAT, RAW). Kann eine leere Zeichenfolge zurückgeben.|  
+|**total_bytes**|**bigint**|Die Gesamtgröße des Volumes in Bytes. Lässt keine NULL-Werte zu.|  
 |**available_bytes**|**bigint**|Der verfügbare freie Speicherplatz auf dem Volume. Lässt keine NULL-Werte zu.|  
 |**supports_compression**|**bit**|Gibt an, ob das Volume eine Komprimierung durch das Betriebssystem unterstützt. Lässt keine NULL-Werte zu.|  
 |**supports_alternate_streams**|**bit**|Gibt an, ob das Volume alternative Datenströme unterstützt. Lässt keine NULL-Werte zu.|  
@@ -95,7 +98,7 @@ CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sys. master_files &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   
   

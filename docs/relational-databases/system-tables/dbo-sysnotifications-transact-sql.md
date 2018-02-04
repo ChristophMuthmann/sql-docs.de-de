@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sysnotifications
 - sysnotifications_TSQL
 - dbo.sysnotifications
-dev_langs: TSQL
-helpviewer_keywords: sysnotifications system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysnotifications system table
 ms.assetid: c5150d18-e8b7-48a7-ada7-77c583af6e41
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61f9e69444b8df91a7c92f38ecc4b9b577b7b405
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ea3f7a24c97a2ee0fd9664df0b81eb5b03f7f4b0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysnotifications-transact-sql"></a>dbo.sysnotifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +42,6 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|ID der Warnung.|  
 |**operator_id**|**int**|ID des Operators, an den diese Benachrichtigung gesendet werden soll.|  
-|**notification_method**|**tinyint**|Benachrichtigungsmethode:<br /><br /> **1** = E-mail<br /><br /> **2** = Pager<br /><br /> **4** = **Netsend**<br /><br /> **7** = all|  
+|**notification_method**|**tinyint**|Benachrichtigungsmethode:<br /><br /> **1** = E-mail<br /><br /> **2** = Pager<br /><br /> **4** = **netsend**<br /><br /> **7** = all|  
   
   

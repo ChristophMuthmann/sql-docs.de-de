@@ -1,5 +1,5 @@
 ---
-title: CDC. fn_cdc_get_all_changes_&lt;Capture_instance&gt; (Transact-SQL) | Microsoft Docs
+title: cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,33 +8,36 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2008)
-dev_langs: TSQL
+applies_to:
+- SQL Server (starting with 2008)
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_cdc_get_all_changes_<capture_instance>
 - change data capture [SQL Server], querying metadata
 - cdc.fn_cdc_get_all_changes_<capture_instance>
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 111fab345e7679745e72ebe874dabcca3bed62fb
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 64f2b849c833a1e7f84ad6a30b9371f7657d85ee
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>CDC. fn_cdc_get_all_changes_&lt;Capture_instance&gt; (Transact-SQL)
+# <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt eine Zeile für jede auf die Quelltabelle innerhalb des angegebenen Bereichs der Protokollfolgenummer (Log Sequence Number, LSN) angewendete Änderung an. Wenn an einer Quellzeile während des Intervalls mehrere Änderungen vorgenommen wurden, wird jede Änderung im zurückgegebenen Resultset dargestellt. Zusätzlich zum Zurückgeben der Änderungsdaten stellen vier Metadatenspalten die Informationen bereit, die Sie zum Anwenden der Änderungen auf eine andere Datenquelle benötigen. Über Zeilenfilterungsoptionen werden der Inhalt der Metadatenspalten sowie die im Resultset zurückgegebenen Zeilen bestimmt. Wenn die Filteroption 'all' angegeben ist, verfügt jede Änderung über genau eine Zeile, um die Änderung zu identifizieren. Wenn die Option 'all update old' angegeben ist, werden die Updatevorgänge in zwei Zeilen dargestellt: Eine enthält die Werte der aufgezeichneten Spalten vor dem Update und die andere enthält die Werte der aufgezeichneten Spalten nach dem Update.  
   
- Diese Enumerationsfunktion wird zu dem Zeitpunkt erstellt, zu dem eine Quelltabelle für Change Data Capture aktiviert wird. Der Funktionsname wird abgeleitet und verwendet das Format **CDC. fn_cdc_get_all_changes_***Capture_instance* , in denen *Capture_instance* der angegebene Wert für die Erfassung -Instanz, wenn die Quelltabelle für Change Data Capture aktiviert ist.  
+ Diese Enumerationsfunktion wird zu dem Zeitpunkt erstellt, zu dem eine Quelltabelle für Change Data Capture aktiviert wird. Der Funktionsname wird abgeleitet und verwendet das Format **cdc.fn_cdc_get_all_changes_***capture_instance* , in denen *Capture_instance* ist der Wert für die Aufzeichnungsinstanz angegeben werden, wenn die Quelltabelle ist für Change Data Capture aktiviert.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,12 +55,12 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>Argumente  
  *from_lsn*  
- Der LSN-Wert, der den unteren Endpunkt des LSN-Bereichs darstellt, der im Resultset enthalten sein soll. *From_lsn* ist **("Binary(10)")**.  
+ Der LSN-Wert, der den unteren Endpunkt des LSN-Bereichs darstellt, der im Resultset enthalten sein soll. *from_lsn* is **binary(10)**.  
   
  Nur Zeilen aus der [cdc. &#91; Capture_instance &#93; _CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderungstabelle mit einem Wert in **__ $Start_lsn** größer als oder gleich *From_lsn* befinden sich die Resultset.  
   
  *to_lsn*  
- Der LSN-Wert, der den oberen Endpunkt des LSN-Bereichs darstellt, der im Resultset enthalten sein soll. *To_lsn* ist **("Binary(10)")**.  
+ Der LSN-Wert, der den oberen Endpunkt des LSN-Bereichs darstellt, der im Resultset enthalten sein soll. *to_lsn* is **binary(10)**.  
   
  Nur Zeilen aus der [cdc. &#91; Capture_instance &#93; _CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderungstabelle mit einem Wert in **__ $Start_lsn** kleiner als oder gleich *From_lsn* oder gleich*To_lsn* im Resultset enthalten sind.  
   
@@ -80,7 +83,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 |**__$seqval**|**binary(10)**|Sequenzwert, der verwendet wird, um Änderungen an einer Zeile innerhalb einer Transaktion zu sortieren.|  
 |**__$operation**|**int**|Identifiziert den Vorgang der Datenbearbeitungssprache (Data Manipulation Language, DML), der erforderlich ist, um die Zeile der Änderungsdaten auf die Zieldatenquelle anzuwenden. Kann einen der folgenden Werte annehmen:<br /><br /> 1 = Löschen<br /><br /> 2 = Einfügen<br /><br /> 3 = Update (die aufgezeichneten Spaltenwerte liegen vor dem Updatevorgang). Dieser Wert ist nur gültig, wenn die Zeilenfilteroption 'all update old' angegeben ist.<br /><br /> 4 = Update (die aufgezeichneten Spaltenwerte liegen nach dem Updatevorgang).|  
 |**__$update_mask**|**varbinary(128)**|Eine Bitmaske mit einem Bit, das den einzelnen aufgezeichneten Spalten entspricht, die für die Aufzeichnungsinstanz identifiziert wurden. Dieser Wert sind alle definierten Bits auf 1 festgelegt **__ $Operation** = 1 oder 2. Wenn **__ $Operation** = 3 oder 4, werden nur die geänderten Spalten entsprechend bits auf 1 festgelegt.|  
-|**\<erfasste quelltabellenspalten >**|variiert|Bei den verbleibenden Spalten, die von der Funktion zurückgegeben werden, handelt es sich um die aufgezeichneten Spalten, die beim Erstellen der Aufzeichnungsinstanz identifiziert wurden. Wenn in der Liste der aufgezeichneten Spalten keine Spalten angegeben wurden, werden alle Spalten in der Quelltabelle zurückgegeben.|  
+|**\<erfasste Quelltabellenspalten>**|variiert|Bei den verbleibenden Spalten, die von der Funktion zurückgegeben werden, handelt es sich um die aufgezeichneten Spalten, die beim Erstellen der Aufzeichnungsinstanz identifiziert wurden. Wenn in der Liste der aufgezeichneten Spalten keine Spalten angegeben wurden, werden alle Spalten in der Quelltabelle zurückgegeben.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **Sysadmin** feste Serverrolle oder **Db_owner** festen Datenbankrolle "". Für alle anderen Benutzer ist die SELECT-Berechtigung für alle aufgezeichneten Spalten in der Quelltabelle und, wenn eine Gatingrolle für die Aufzeichnungsinstanz definiert wurde, eine Mitgliedschaft in dieser Datenbankrolle erforderlich. Wenn der Aufrufer keine Berechtigung zum Anzeigen der Quelldaten, den die Funktion Fehler 229 zurück ("die SELECT-Berechtigung für das Objekt 'Fn_cdc_get_all_changes_...', Datenbank verweigert wurde"\<DatabaseName >', 'cdc'-Schema. ").  
@@ -111,11 +114,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [CDC. fn_cdc_get_net_changes_ &#60; Capture_instance &#62; &#40; Transact-SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [Sys. fn_cdc_map_time_to_lsn &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
- [sp_cdc_get_ddl_history &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)   
- [sp_cdc_get_captured_columns &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
- [sp_cdc_help_change_data_capture &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [sys.fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
+ [sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)   
+ [sys.sp_cdc_get_captured_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [Über Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

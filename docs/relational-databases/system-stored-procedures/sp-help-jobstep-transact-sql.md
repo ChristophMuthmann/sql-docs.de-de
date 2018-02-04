@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobstep_TSQL
 - sp_help_jobstep
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobstep
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobstep
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 316436c8c2607ef6c759efaa444d7f78e2de6834
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: bb316ee70ad1cf1f98898fd08edbb7cfb9622f56
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,22 +49,22 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@job_id =**] **"***Job_id***"**  
+ [ **@job_id =**] **'***job_id***'**  
  Die ID des Auftrags, zu dem Auftragsinformationen zurückgegeben werden sollen. *Job_id* ist **"uniqueidentifier"**, hat den Standardwert NULL.  
   
- [  **@job_name =**] **"***Job_name***"**  
+ [ **@job_name =**] **'***job_name***'**  
  Der Name des Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden.  
   
- [  **@step_id =**] *Step_id*  
+ [ **@step_id =**] *step_id*  
  Die ID des Auftragsschritts. Wenn diese nicht angegeben wird, sind alle Schritte im Auftrag eingeschlossen. *Step_id* ist **Int**, hat den Standardwert NULL.  
   
- [  **@step_name =**] **"***Step_name***"**  
+ [ **@step_name =**] **'***step_name***'**  
  Der Name des Schritts im Auftrag. *Step_name* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@suffix =**] *Suffix*  
+ [ **@suffix =**] *suffix*  
  Ein Flag, das angibt, ob eine textbeschreibung, um angefügt wird die **Flags** Spalte in der Ausgabe. *Suffix*ist **Bit**, hat den Standardwert **0**. Wenn *Suffix* ist **1**, eine Beschreibung angefügt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -73,9 +76,9 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|Eindeutiger Bezeichner für den Schritt.|  
 |**step_name**|**sysname**|Name des Auftragsschritts.|  
-|**Subsystem**|**nvarchar(40)**|Subsystem, in dem der Schrittbefehl ausgeführt werden soll|  
+|**subsystem**|**nvarchar(40)**|Subsystem, in dem der Schrittbefehl ausgeführt werden soll|  
 |**Befehl**|**nvarchar(max)**|Befehl, der in dem Schritt ausgeführt wird.|  
-|**Flags**|**int**|Bitmaske der Werte, die das Schrittverhalten steuern.|  
+|**flags**|**int**|Bitmaske der Werte, die das Schrittverhalten steuern.|  
 |**cmdexec_success_code**|**int**|Für eine **CmdExec** Schritt, dies ist der Prozessexitcode eines erfolgreichen Befehls.|  
 |**on_success_action**|**tinyint**|Auszuführende Aktion, wenn der Schritt erfolgreich ist:<br /><br /> **1** = Auftrag mit Erfolgsmeldung beenden.<br /><br /> **2** = Auftrag mit Fehlermeldung beenden.<br /><br /> **3** = weiter mit dem nächsten Schritt fort.<br /><br /> **4** = Gehe zu Schritt.|  
 |**on_success_step_id**|**int**|Wenn **On_success_action** 4 ist, wird hiermit der nächste auszuführende Schritt.|  
@@ -87,7 +90,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_attempts**|**int**|Die maximale Anzahl von Wiederholungsversuchen für den Befehl (falls er nicht erfolgreich ist).|  
 |**retry_interval**|**int**|Das Intervall (in Minuten) zwischen den Wiederholungsversuchen.|  
 |**os_run_priority**|**int**|Reserviert.|  
-|**Ausgabedateiname**|**nvarchar(200)-Datentyp gepackt ist**|Datei in die Befehlsausgabe geschrieben werden soll ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, und **PowerShell** nur Schritte).|  
+|**output_file_name**|**nvarchar(200)**|Datei in die Befehlsausgabe geschrieben werden soll ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, und **PowerShell** nur Schritte).|  
 |**last_run_outcome**|**int**|Ergebnis der letzten Ausführung des Schritts:<br /><br /> **0** = Fehler<br /><br /> **1** = war erfolgreich<br /><br /> **2** = wiederholen<br /><br /> **3** = abgebrochen<br /><br /> **5** = unbekannt|  
 |**last_run_duration**|**int**|Die Ausführungsdauer (in Sekunden) des Schritts bei der letzten Ausführung.|  
 |**last_run_retries**|**int**|Anzahl der Wiederholungsversuche für den Befehl bei der letzten Ausführung des Schritts|  
@@ -139,10 +142,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_add_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [Sp_delete_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [Sp_help_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [Sp_update_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
+ [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: dm_db_xtp_checkpoint_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_checkpoint_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_xtp_checkpoint_stats_TSQL
 - sys.dm_db_xtp_checkpoint_stats
 - sys.dm_db_xtp_checkpoint_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_checkpoint_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_checkpoint_stats dynamic management view
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a9dff499f4e0fd7182ee7d018532a386233f42c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a3bce2f4337894c86e251e53c9fc0546f2e69253
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -101,9 +104,9 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |new_log_wait_time_in_ms|**bigint**|Kumulierte Wartezeit für neues Protokoll.|  
 |log_generated_since_last_checkpoint_in_bytes|**bigint**|Umfang des seit dem letzten In-Memory OLTP-Prüfpunkt generierten Protokolls.|  
 |ms_since_last_checkpoint|**bigint**|Zeit in Millisekunden seit dem letzten In-Memory OLTP-Prüfpunkt.|  
-|checkpoint_lsn|**Numeric (38)**|Die Protokollfolgenummer (LSN) der Wiederherstellung, die dem zuletzt abgeschlossenen OLTP-Prüfpunkt im Arbeitsspeicher zugeordnet ist.|  
-|current_lsn|**Numeric (38)**|Die LSN des Protokolldatensatzes, der gerade verarbeitet wird.|  
-|end_of_log_lsn|**Numeric (38)**|Die LSN des Protokollendes.|  
+|checkpoint_lsn|**numeric (38)**|Die Protokollfolgenummer (LSN) der Wiederherstellung, die dem zuletzt abgeschlossenen OLTP-Prüfpunkt im Arbeitsspeicher zugeordnet ist.|  
+|current_lsn|**numeric (38)**|Die LSN des Protokolldatensatzes, der gerade verarbeitet wird.|  
+|end_of_log_lsn|**numeric (38)**|Die LSN des Protokollendes.|  
 |task_address|**varbinary(8)**|Die Adresse von SOS_Task. Stellen Sie einen Join mit sys.dm_os_tasks her, um weitere Informationen zu suchen.|  
   
 ## <a name="permissions"></a>Berechtigungen  

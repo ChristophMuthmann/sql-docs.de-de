@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_repl_traninfo
 - sys.dm_repl_traninfo_TSQL
 - dm_repl_traninfo_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_repl_traninfo dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_repl_traninfo dynamic management view
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8667321964f457ae05c6b7768be4b22220b50da
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 45fd6246b7a98f16c86a6f7e2c7052c70b2af039
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,15 +47,15 @@ ms.lasthandoff: 11/17/2017
 |**fsinfo_address**|**varbinary(8)**|Speicherinterne Adresse der zwischengespeicherten FILESTREAM-Informationsstruktur.|  
 |**begin_lsn**|**nvarchar(64)**|Protokollsequenznummer (Log Sequence Number, LSN) des Protokolleintrags für den Beginn der Transaktion.|  
 |**commit_lsn**|**nvarchar(64)**|LSN des Protokolldatensatz für den Commit der Transaktion.|  
-|**DBID**|**smallint**|Datenbank-ID|  
-|**Zeilen**|**int**|ID des replizierten Befehls in der Transaktion.|  
+|**dbid**|**smallint**|Datenbank-ID|  
+|**rows**|**int**|ID des replizierten Befehls in der Transaktion.|  
 |**xdesid**|**nvarchar(64)**|Transaktions-ID|  
 |**artcache_table_address**|**varbinary(8)**|Speicherinterne Adresse der zwischengespeicherten Artikeltabellenstruktur, die zuletzt für diese Transaktion verwendet wurde.|  
 |**server**|**nvarchar(514)**|Servername.|  
 |**server_len_in_bytes**|**smallint**|Zeichenlänge des Servernamens (in Bytes).|  
 |**database**|**nvarchar(514)**|Datenbankname.|  
 |**db_len_in_bytes**|**smallint**|Zeichenlänge des Datenbanknamens (in Bytes).|  
-|**Absender**|**nvarchar(514)**|Name des Servers, von dem die Transaktion stammt.|  
+|**originator**|**nvarchar(514)**|Name des Servers, von dem die Transaktion stammt.|  
 |**originator_len_in_bytes**|**smallint**|Zeichenlänge des Servernamens (in Bytes), von dem die Transaktion stammt.|  
 |**orig_db**|**nvarchar(514)**|Name der Datenbank, von der die Transaktion stammt.|  
 |**orig_db_len_in_bytes**|**smallint**|Zeichenlänge der Datenbank (in Bytes), von der die Transaktion stammt.|  

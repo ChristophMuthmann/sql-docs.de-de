@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_secondary_database
 - sp_add_log_shipping_secondary_database_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_log_shipping_secondary_database
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_log_shipping_secondary_database
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e66faa24b29b3d3279b3d85b5c834f7420b96abf
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 965f2191ba9dbdbba5be91412c1459064972c22c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddlogshippingsecondarydatabase-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,22 +60,22 @@ sp_add_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@secondary_database**  =] '*Secondary_database*"  
+ [ **@secondary_database** = ] '*secondary_database*'  
  Der Name der sekundären Datenbank. *secondary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
- [  **@primary_server**  =] '*Primary_server*"  
+ [ **@primary_server** = ] '*primary_server*'  
  Der Name der primären Instanz von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokollversandkonfiguration. *primary_server* ist vom Datentyp **sysname** und darf nicht NULL sein.  
   
- [  **@primary_database**  =] '*Primary_database*"  
+ [ **@primary_database** = ] '*primary_database*'  
  Der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
- [  **@restore_delay**  =] '*Restore_delay*"  
+ [ **@restore_delay** = ] '*restore_delay*'  
  Die Zeit in Minuten, die der sekundäre Server vor dem Wiederherstellen einer bestimmten Sicherungsdatei wartet. *Restore_delay* ist **Int** und darf nicht NULL sein. Der Standardwert ist 0.  
   
- [  **@restore_all**  =] '*Restore_all*"  
+ [ **@restore_all** = ] '*restore_all*'  
  Falls 1, stellt der sekundäre Server bei Ausführung des Wiederherstellungsauftrags alle verfügbaren Sicherungen des Transaktionsprotokolls wieder her. Andernfalls wird der Vorgang nach der Wiederherstellung einer Datei beendet. *Restore_all* ist **Bit** und darf nicht NULL sein.  
   
- [  **@restore_mode**  =] '*Restore_mode*"  
+ [ **@restore_mode** = ] '*restore_mode*'  
  Der Wiederherstellungsmodus für die sekundäre Datenbank.  
   
  0 = Das Protokoll wird mit NORECOVERY wiederhergestellt.  
@@ -81,16 +84,16 @@ sp_add_log_shipping_secondary_database
   
  *Wiederherstellen* ist **Bit** und darf nicht NULL sein.  
   
- [  **@disconnect_users**  =] '*Disconnect_users*"  
+ [ **@disconnect_users** = ] '*disconnect_users*'  
  Falls 1, werden Benutzer beim Ausführen eines Wiederherstellungsvorgangs von der sekundären Datenbank getrennt. Standard = 0. *Trennen Sie* Benutzer **Bit** und darf nicht NULL sein.  
   
- [  **@block_size**  =] '*Block_size*"  
+ [ **@block_size** = ] '*block_size*'  
  Die Größe in Bytes, die als Blockgröße für das Sicherungsmedium verwendet wird. *Block_size* ist **Int** hat den Standardwert "-1".  
   
- [  **@buffer_count**  =] '*Buffer_count*"  
+ [ **@buffer_count** = ] '*buffer_count*'  
  Die Gesamtanzahl der beim Sicherungs- oder Wiederherstellungsvorgang verwendeten Puffer. *Buffer_count* ist **Int** hat den Standardwert "-1".  
   
- [  **@max_transfer_size**  =] '*Max_transfer_size*"  
+ [ **@max_transfer_size** = ] '*max_transfer_size*'  
  Die Größe der maximalen Eingabe- oder Ausgabeanforderung in Bytes, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an das Sicherungsmedium ausgegeben wird. *Max_transfersize* ist **Int** und kann NULL sein.  
   
  [  **@restore_threshold**  =] '*Restore_threshold*"  
@@ -143,7 +146,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Über den Protokollversand &#40; SQLServer &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

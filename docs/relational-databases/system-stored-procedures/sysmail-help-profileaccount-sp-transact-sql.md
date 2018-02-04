@@ -1,5 +1,5 @@
 ---
-title: Sysmail_help_profileaccount_sp (Transact-SQL) | Microsoft Docs
+title: sysmail_help_profileaccount_sp (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_profileaccount_sp_TSQL
 - sysmail_help_profileaccount_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_profileaccount_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_profileaccount_sp
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30af309db029d4d969fe39eb87e15503b590dfae
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dfe0115ca0e641ca0b6397cd624d093f7d94acff
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +50,13 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@profile_id**  =] *Profile_id*  
+ [ **@profile_id** = ] *profile_id*  
  Die ID des Profils, das aufgelistet werden soll. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
- [  **@profile_name**  =] **"***Profile_name***"**  
+ [ **@profile_name** = ] **'***profile_name***'**  
  Der Name des Profils, das aufgelistet werden soll. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
- [  **@account_id**  =] *Account_id*  
+ [ **@account_id** = ] *account_id*  
  Die ID des Kontos, das aufgelistet werden soll. *account_id* ist vom Datentyp **int**und hat den Standardwert NULL. Wenn *account_id* sowie *account_name* NULL sind, werden alle Konten im Profil aufgelistet.  
   
  [  **@account_name**  =] **"***Account_name***"**  
@@ -69,7 +72,7 @@ sysmail_help_profileaccount_sp
 |-|-|-|  
 |Spaltenname|Datentyp|Description|  
 |**profile_id**|**int**|Die Profil-ID des Profils.|  
-|**Profilname**|**sysname**|Der Name des Profils.|  
+|**profile_name**|**sysname**|Der Name des Profils.|  
 |**account_id**|**int**|Die Konto-ID des Kontos.|  
 |**account_name**|**sysname**|Der Name des Kontos.|  
 |**sequence_number**|**int**|Die Sequenznummer des Kontos innerhalb des Profils.|  

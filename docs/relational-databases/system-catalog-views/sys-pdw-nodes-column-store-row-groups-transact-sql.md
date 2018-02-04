@@ -1,5 +1,5 @@
 ---
-title: Sys.pdw_nodes_column_store_row_groups (Transact-SQL) | Microsoft Docs
+title: sys.pdw_nodes_column_store_row_groups (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: 
@@ -8,35 +8,37 @@ ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31eb71e09e041f6d23c0c88e1ca1423f3693faa7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 75e4229fde3cae66cdd2172c0f2bea0cbf63bf10
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>Sys.pdw_nodes_column_store_row_groups (Transact-SQL)
+# <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Enthält Informationen zu gruppierten columnstore-Indizes auf Segmentbasis der Administrator System Management in Entscheidungen [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **Sys.pdw_nodes_column_store_row_groups** verfügt über eine Spalte für die Gesamtzahl der physisch gespeicherten Zeilen (einschließlich jenen, als gelöscht markiert) und eine Spalte für die Anzahl der Zeilen, die als gelöscht markiert. Verwendung **sys.pdw_nodes_column_store_row_groups** um zu bestimmen, welche Gruppen, haben Sie einen hohen Prozentsatz der gelöschten Zeilen, und sollte neu erstellt.  
+  Enthält Informationen zu gruppierten columnstore-Indizes auf Segmentbasis der Administrator System Management in Entscheidungen [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **sys.pdw_nodes_column_store_row_groups** has a column for the total number of rows physically stored (including those marked as deleted) and a column for the number of rows marked as deleted. Verwendung **sys.pdw_nodes_column_store_row_groups** um zu bestimmen, welche Gruppen, haben Sie einen hohen Prozentsatz der gelöschten Zeilen, und sollte neu erstellt.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Die ID der zugrunde liegenden Tabelle. Dies ist der physische Tabelle auf den Computeknoten nicht die Objekt-ID für die logische Tabelle auf den Knoten "Zugriffssteuerung". Object_id stimmt beispielsweise nicht mit Object_id in sys.tables überein.<br /><br /> Verwenden Sie zum Verknüpfen mit sys.tables sys.pdw_index_mappings.|  
 |**index_id**|**int**|ID des gruppierten columnstore-Indexes auf *Object_id* Tabelle.|  
-|**Partitionsnummer**|**int**|ID der Tabellenpartition, die Zeilengruppe enthält *Row_group_id*. Sie können *Partition_number* auf diese DMV mit sys.partitions zu verknüpfen.|  
+|**partition_number**|**int**|ID der Tabellenpartition, die Zeilengruppe enthält *Row_group_id*. Sie können *Partition_number* auf diese DMV mit sys.partitions zu verknüpfen.|  
 |**row_group_id**|**int**|ID der dieser Zeilengruppe. Diese ist innerhalb der Partition eindeutig.|  
 |**dellta_store_hobt_id**|**bigint**|Die hobt_id für Deltazeilengruppen oder NULL, wenn der Zeilengruppentyp nicht Delta ist. Eine Deltazeilengruppe ist eine Zeilengruppe mit Lese-/Schreibzugriff, die neue Datensätze akzeptiert. Eine deltazeilengruppe hat die **öffnen** Status. Eine Deltazeilengruppe befindet sich weiterhin im rowstore-Format und wurde nicht in das columnstore-Format komprimiert.|  
-|**Status**|**tinyint**|Die der state_description zugeordnete ID.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
+|**state**|**tinyint**|Die der state_description zugeordnete ID.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
 |**state_desccription**|**nvarchar(60)**|Beschreibung des persistenten Status der Zeilengruppe:<br /><br /> OPEN: Eine Zeilengruppe mit Lese-/Schreibzugriff, die neue Datensätze akzeptiert. Eine offene Zeilengruppe befindet sich weiterhin im rowstore-Format und wurde nicht in das columnstore-Format komprimiert.<br /><br /> CLOSED: Eine Zeilengruppe, die aufgefüllt, aber vom Tupelverschiebungsprozess noch nicht komprimiert wurde.<br /><br /> COMPRESSED: Eine Zeilengruppe, die aufgefüllt und komprimiert wurde.|  
 |**total_rows**|**bigint**|Gesamtzahl der Zeilen, die in der Zeilengruppe physisch gespeichert sind. Einige wurden u. U. gelöscht, sind aber weiterhin gespeichert. Die maximale Anzahl der Zeilen in einer Zeilengruppe beträgt 1.048.576 (hexadezimal FFFFF).|  
 |**deleted_rows**|**bigint**|Anzahl der Zeilen in der Zeilengruppe physisch gespeichert, die zum Löschen markiert sind.<br /><br /> Die Zeile immer 0 für DELTA-Gruppen.|  
@@ -111,8 +113,8 @@ ORDER BY 1, 2
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Datawarehouse und Parallel Datawarehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [Erstellen Sie columnstore-INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [Sys.pdw_nodes_column_store_segments &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [Sys.pdw_nodes_column_store_dictionaries &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
+ [sys.pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
+ [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_plan_attributes_TSQL
 - dm_exec_plan_attributes
 - sys.dm_exec_plan_attributes
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_plan_attributes dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ae58f948d5219316c59022de477f147cdd4584b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c9a90a964bd8c1fce911e62ac9081b47d349e0a5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +60,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 Aus der obigen Tabelle **Attribut** können die folgenden Werte aufweisen:
 
-|attribute|Datentyp|Description|  
+|Attribut|Datentyp|Description|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|Gibt die Optionswerte an, mit denen der Plan kompiliert wurde.|  
 |objectid|**int**|Einer der Hauptschlüssel zur Suche nach einem Objekt im Cache. Dies ist die Objekt-ID, in gespeichert [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) für Datenbankobjekte (Prozeduren, Sichten, Trigger usw.). Für Pläne vom Typ "Adhoc" oder "Prepared" ist dies ein interner Hash des Batchtexts.|  
@@ -80,7 +83,7 @@ Aus der obigen Tabelle **Attribut** können die folgenden Werte aufweisen:
 |hits_cursors|**int**|Die Anzahl der Vorgänge, bei denen ein inaktiver Cursor aus dem zwischengespeicherten Plan abgerufen und wiederverwendet wurde. Der Wert ist ein aggregierter Wert für alle bisherigen Batchausführungen.|  
 |misses_cursors|**int**|Die Anzahl der Vorgänge, bei denen im Cache kein inaktiver Cursor gefunden werden konnte.|  
 |removed_cursors|**int**|Die Anzahl der Cursor, die aufgrund ungenügenden Arbeitsspeichers für den zwischengespeicherten Plan entfernt wurden.|  
-|sql_handle|**Varbinary**(64)|Das SQL-Handle für den Batch.|  
+|sql_handle|**varbinary**(64)|Das SQL-Handle für den Batch.|  
 |merge_action_type|**smallint**|Der Typ des Triggerausführungsplans, der als Ergebnis einer MERGE-Anweisung verwendet wird.<br /><br /> 0 gibt einen Nicht-Triggerplan an, einen Triggerplan, der nicht als Ergebnis einer MERGE-Anweisung ausgeführt wird, oder einen Triggerplan, der als Ergebnis einer MERGE-Anweisung ausgeführt wird, die nur eine DELETE-Aktion angibt.<br /><br /> 1 gibt einen INSERT-Triggerplan an, der als Ergebnis einer MERGE-Anweisung ausgeführt wird.<br /><br /> 2 gibt einen UPDATE-Triggerplan an, der als Ergebnis einer MERGE-Anweisung ausgeführt wird.<br /><br /> 3 gibt einen DELETE-Triggerplan an, der als Ergebnis einer MERGE-Anweisung ausgeführt wird, die eine entsprechende INSERT- oder UPDATE-Aktion enthält.<br /><br /> Bei geschachtelten Triggern, die durch kaskadierende Aktionen ausgeführt werden, ist dieser Wert die Aktion der MERGE-Anweisung, durch die das Kaskadieren verursacht wurde.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -96,7 +99,7 @@ Aus der obigen Tabelle **Attribut** können die folgenden Werte aufweisen:
 ### <a name="evaluating-set-options"></a>Auswerten von SET-Optionen  
  Um den zurückgegebenen Wert zu übersetzen **Set_options** mit den Optionen, mit denen der Plan kompiliert wurde, subtrahieren Sie die Werte aus der **Set_options** Wert, beginnend mit den größtmöglichen Wert, bis Sie 0 zu erreichen. Jeder subtrahierte Wert entspricht einer Option, die im Abfrageplan verwendet wurde. Beispielsweise, wenn der Wert in **Set_options** 251 lautet, sind die Optionen, die mit der Plan kompiliert wurde, ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS(32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), Parallel Plan(2) und ANSI_PADDING (1).  
   
-|Option|value|  
+|Option|Wert|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |Paralleler Plan|2|  
@@ -116,7 +119,7 @@ Aus der obigen Tabelle **Attribut** können die folgenden Werte aufweisen:
 |DATEFORMAT|32768|  
 |LanguageID|65536|  
 |UPON<br /><br /> Gibt an, dass die Datenbankoption PARAMETERIZATION beim Kompilieren des Plans auf FORCED festgelegt wurde.|131072|  
-|ROWCOUNT|**Gilt für:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] an[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
+|ROWCOUNT|**Gilt für:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] an [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
 ## <a name="cursors"></a>Cursor  
  Inaktive Cursor werden in einem kompilierten Plan zwischengespeichert, sodass der zum Speichern des Cursors verwendete Arbeitsspeicher von gleichzeitigen Benutzern des Cursors wiederverwendet werden kann. Angenommen, dass ein Cursor von einem Batch deklariert und verwendet wird, ohne dass seine Zuordnung aufgehoben wird. Wenn zwei Benutzer denselben Batch ausführen, sind zwei aktive Cursor vorhanden. Sobald die Zuordnung der Cursor aufgehoben ist (möglicherweise in unterschiedlichen Batches), wird der Arbeitsspeicher zum Speichern des Cursors zwischengespeichert und nicht freigegeben. Der Liste der inaktiven Cursor wird im kompilierten Plan beibehalten. Bei der nächsten Ausführung des Batches durch einen Benutzer wird der zwischengespeicherte Arbeitsspeicher für den Cursor wiederverwendet und als aktiver Cursor ordnungsgemäß initialisiert.  
@@ -124,9 +127,9 @@ Aus der obigen Tabelle **Attribut** können die folgenden Werte aufweisen:
 ### <a name="evaluating-cursor-options"></a>Auswerten von Cursoroptionen  
  Um den zurückgegebenen Wert zu übersetzen **Required_cursor_options** und **Acceptable_cursor_options** mit den Optionen, mit denen der Plan kompiliert wurde, subtrahieren Sie die Werte vom Spaltenwert, beginnend mit den größtmöglichen Wert bis 0 fortsetzen. Jeder subtrahierte Wert entspricht einer Cursoroption, die im Abfrageplan verwendet wurde.  
   
-|Option|value|  
+|Option|Wert|  
 |------------|-----------|  
-|InclusionThresholdSetting|0|  
+|Keine|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  
@@ -174,9 +177,9 @@ GO
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Ausführung bezogene dynamische Verwaltungssichten und-Funktionen &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [dm_exec_cached_plans &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [Sys.Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

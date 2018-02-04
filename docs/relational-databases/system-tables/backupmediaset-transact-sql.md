@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - backupmediaset
 - backupmediaset_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backup media [SQL Server], backupmediaset system table
 - backupmediaset system table
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
-caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e86380a170009fbfd8ee7fd2f891dc210cab856
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 334c7cbcb3afb00685049aafbb2c0a290ba97a2a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +43,9 @@ ms.lasthandoff: 11/17/2017
 |**media_set_id**|**int**|Eindeutige Mediensatz-ID zurück. Identität, Primärschlüssel.|  
 |**media_uuid**|**uniqueidentifier**|UUID des Mediensatzes. Alle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Mediensätze haben eine UUID.<br /><br /> Für frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]jedoch, wenn ein Mediensatz nur eine Medienfamilie enthält die **Media_uuid** Spalte kann NULL sein (**Media_family_count** 1).|  
 |**media_family_count**|**tinyint**|Die Anzahl der Medienfamilien im Mediensatz. Kann den Wert NULL haben.|  
-|**name**|**vom Datentyp nvarchar(128)**|Name des Mediensatzes. Kann den Wert NULL haben.<br /><br /> Weitere Informationen finden Sie unter MEDIANAME und MEDIADESCRIPTION in [BACKUP &#40; Transact-SQL &#41; ](../../t-sql/statements/backup-transact-sql.md).|  
-|**Beschreibung**|**nvarchar(255)**|Textbeschreibung des Mediensatzes. Kann den Wert NULL haben.<br /><br /> Weitere Informationen finden Sie unter MEDIANAME und MEDIADESCRIPTION in [BACKUP &#40; Transact-SQL &#41; ](../../t-sql/statements/backup-transact-sql.md).|  
-|**Ändern Sie anschließend**|**vom Datentyp nvarchar(128)**|Name der Sicherungssoftware, mit der die Medienbezeichnung geschrieben wurde. Kann den Wert NULL haben.|  
+|**name**|**nvarchar(128)**|Name des Mediensatzes. Kann den Wert NULL haben.<br /><br /> Weitere Informationen finden Sie unter MEDIANAME und MEDIADESCRIPTION in [BACKUP &#40; Transact-SQL &#41; ](../../t-sql/statements/backup-transact-sql.md).|  
+|**description**|**nvarchar(255)**|Textbeschreibung des Mediensatzes. Kann den Wert NULL haben.<br /><br /> Weitere Informationen finden Sie unter MEDIANAME und MEDIADESCRIPTION in [BACKUP &#40; Transact-SQL &#41; ](../../t-sql/statements/backup-transact-sql.md).|  
+|**software_name**|**nvarchar(128)**|Name der Sicherungssoftware, mit der die Medienbezeichnung geschrieben wurde. Kann den Wert NULL haben.|  
 |**software_vendor_id**|**int**|ID des Softwareanbieters, der die Sicherungsmedienbezeichnung geschrieben hat. Kann den Wert NULL haben.<br /><br /> Der Wert für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hexadezimal 0 x 1200 ist.|  
 |**MTF_major_version**|**tinyint**|Hauptversionsnummer von MTF ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format), das zum Generieren dieses Mediensatzes verwendet wurde. Kann den Wert NULL haben.|  
 |**mirror_count**|**tinyint**|Anzahl der Spiegel im Mediensatz.|  
@@ -62,6 +64,6 @@ ms.lasthandoff: 11/17/2017
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [Systemtabellen &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysdtspackages90_TSQL
 - sysdtspackages90
-dev_langs: TSQL
-helpviewer_keywords: sysssispackages system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysssispackages system table
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: spelluru
 ms.author: spelluru
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b694a277a235b373f1051878551ccca9537623f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 067fdf60b735cc1aad15b2fbfa3b5a7361a9f734
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,23 +41,23 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der eindeutige Bezeichner des Pakets.|  
 |**id**|**uniqueidentifier**|GUID des Pakets|  
-|**Beschreibung**|**nvarchar**|Eine optionale Beschreibung des Pakets.|  
-|**CREATEDATE**|**datetime**|Erstellungsdatum des Pakets|  
-|**folderID**|**uniqueidentifier**|Die GUID des logischen Ordners, in dem das Paket von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aufgelistet ist.|  
+|**description**|**nvarchar**|Eine optionale Beschreibung des Pakets.|  
+|**createdate**|**datetime**|Erstellungsdatum des Pakets|  
+|**folderid**|**uniqueidentifier**|Die GUID des logischen Ordners, in dem das Paket von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aufgelistet ist.|  
 |**ownersid**|**varbinary**|Die eindeutige Sicherheits-ID des Benutzers, der das Paket erstellt hat|  
 |**packagedata**|**image**|Das Paket.|  
 |**packageformat**|**int**|Das Format, in dem das Paket gespeichert wird:<br /><br /> Der Wert 2 Gibt an, in das Paket gespeichert werden, die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Format.<br /><br /> Der Wert 3 gibt an, das Paket gespeichert wird, im Format der [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]oder höher.|  
-|**PackageType**|**int**|Der Client, der das Paket erstellt hat. Die folgenden Werte sind möglich:<br /><br /> 0 (Standardwert)<br /><br /> 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent)<br /><br /> 3 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replikation)<br /><br /> 5 ([!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer)<br /><br /> 6 (Wartungsplan-Designer oder -Assistent).<br /><br /> <br /><br /> Beachten Sie, die die Werte in dieser Spalte entsprechen der <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType> Enumeration.|  
-|**VerMajor**|**int**|Die aktuelle Hauptversion des Pakets.|  
-|**VerMinor**|**int**|Die aktuelle Nebenversion des Pakets.|  
+|**packagetype**|**int**|Der Client, der das Paket erstellt hat. Die folgenden Werte sind möglich:<br /><br /> 0 (Standardwert)<br /><br /> 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent)<br /><br /> 3 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replikation)<br /><br /> 5 ([!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer)<br /><br /> 6 (Wartungsplan-Designer oder -Assistent).<br /><br /> <br /><br /> Beachten Sie, die die Werte in dieser Spalte entsprechen der <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType> Enumeration.|  
+|**vermajor**|**int**|Die aktuelle Hauptversion des Pakets.|  
+|**verminor**|**int**|Die aktuelle Nebenversion des Pakets.|  
 |**verbuild**|**int**|Das letzte Build des Pakets.|  
 |**vercomments**|**nvarchar**|Kommentare zur Paketversion|  
-|**Verid**|**uniqueidentifier**|GUID der Paketversion|  
-|**"IsEncrypted"**|**bit**|Ein boolescher Wert, der angibt, ob das Paket verschlüsselt ist|  
+|**verid**|**uniqueidentifier**|GUID der Paketversion|  
+|**isencrypted**|**bit**|Ein boolescher Wert, der angibt, ob das Paket verschlüsselt ist|  
 |**readrolesid**|**varbinary**|Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rolle, die Pakete laden kann|  
 |**writerolesid**|**varbinary**|Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rolle, die Pakete speichern kann|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integration Services-Pakete &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)  
+ [Integrationsservices &#40; SSIS &#41; Pakete](../../integration-services/integration-services-ssis-packages.md)  
   
   

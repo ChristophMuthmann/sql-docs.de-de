@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_jobsteplog
 - sp_delete_jobsteplog_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_jobsteplog
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_jobsteplog
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c06ba83c4a9c501d6533e63fa439df92025e790
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c5f5bf88c8b02b51dac095dcd0445d3324e23e5e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,26 +50,26 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@job_id =**] **"***Job_id***"**  
+ [ **@job_id =**] **'***job_id***'**  
  Die ID des Auftrags, der das zu entfernende Auftragsschrittprotokoll enthält. *Job_id* ist **Int**, hat den Standardwert NULL.  
   
- [  **@job_name =**] **"***Job_name***"**  
+ [ **@job_name =**] **'***job_name***'**  
  Der Name des Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > **Hinweis:** entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden.  
   
- [  **@step_id =**] *Step_id*  
+ [ **@step_id =**] *step_id*  
  Die ID des Schritts im Auftrag, für den das Auftragsschrittprotokoll gelöscht werden soll. Wenn nicht angegeben ist, werden alle Auftragsschrittprotokolle im Auftrag gelöscht, es sei denn,  **@older_than**  oder  **@larger_than**  angegeben werden. *Step_id* ist **Int**, hat den Standardwert NULL.  
   
- [  **@step_name =**] **"***Step_name***"**  
+ [ **@step_name =**] **'***step_name***'**  
  Der Name des Schritts im Auftrag, für den das Auftragsschrittprotokoll gelöscht werden soll. *Step_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > **Hinweis:** entweder *Step_id* oder *Step_name* kann angegeben werden, aber beide können nicht angegeben werden.  
   
- [  **@older_than =**] **"***Datum***"**  
+ [ **@older_than =**] **'***date***'**  
  Das Datum und die Uhrzeit des ältesten Auftragsschrittprotokolls, das beibehalten werden soll. Alle Auftragsschrittprotokolle vor diesem Datum und dieser Uhrzeit werden entfernt. *Datum* ist **"DateTime"**, hat den Standardwert NULL. Beide  **@older_than**  und  **@larger_than**  kann angegeben werden.  
   
- [  **@larger_than =**] **"***Size_in_bytes***"**  
+ [ **@larger_than =**] **'***size_in_bytes***'**  
  Die maximale Größe in Byte für das Auftragsschrittprotokoll, das beibehalten werden soll. Alle Auftragsschrittprotokolle, die diese Größe überschreiten, werden entfernt. Beide  **@larger_than**  und  **@older_than**  kann angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -135,7 +138,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_help_jobsteplog &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
+ [sp_help_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
  [SQL Server-Agent-gespeicherte Prozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

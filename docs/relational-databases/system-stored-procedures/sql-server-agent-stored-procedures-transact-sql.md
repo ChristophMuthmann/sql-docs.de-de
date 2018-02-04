@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - system stored procedures [SQL Server], SQL Server Agent
 - SQL Server Agent, stored procedures
 ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7830797defc55eee9d3f7876412cca9ad137fdbe
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bd5c3618c0aa44e538a614248a8d0eb76f0c758e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-agent-stored-procedures-transact-sql"></a>Gespeicherte Prozeduren des SQL Server-Agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die folgenden gespeicherten Systemprozeduren, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent zum Verwalten geplanter oder ereignisgesteuerter Aktivitäten verwendet werden.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die folgenden gespeicherten Systemprozeduren, mit denen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zum Verwalten geplanter und ereignisgesteuerter Aktivitäten.  
   
 |||  
 |-|-|  
@@ -56,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |[sp_delete_jobserver](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)|[sp_notify_operator](../../relational-databases/system-stored-procedures/sp-notify-operator-transact-sql.md)|  
 |[sp_delete_jobstep](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)|[sp_post_msx_operation](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)|  
 |[sp_delete_jobsteplog](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)|[sp_purge_jobhistory](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)|  
-|[sp_delete_notification](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)|[Sp_remove_job_from_targets](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)s|  
+|[sp_delete_notification](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)|[sp_remove_job_from_targets](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)s|  
 |[sp_delete_operator](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)|[sp_resync_targetserver](../../relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)|  
 |[sp_delete_proxy](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)|[sp_revoke_login_from_proxy](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)|  
 |[sp_delete_schedule](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)|[sp_revoke_proxy_from_subsystem](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)|  

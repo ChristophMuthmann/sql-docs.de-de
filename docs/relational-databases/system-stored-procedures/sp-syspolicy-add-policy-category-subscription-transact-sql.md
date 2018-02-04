@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_add_policy_category_subscription
 - sp_syspolicy_add_policy_category_subscription_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_add_policy_category_subscription
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_add_policy_category_subscription
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec357296ce840bad84b6a0f1985858684f610a2b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: bf76a1f42289d52919605c85733304ba58024ca1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyaddpolicycategorysubscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +49,19 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@target_type=** ] **"***Target_type***"**  
+ [ **@target_type=** ] **'***target_type***'**  
  Der Zieltyp des Kategorieabonnements. *Target_type* ist **Sysname**ist erforderlich und muss auf 'DATABASE' festgelegt werden.  
   
- [  **@target_object=** ] **"***Target_object***"**  
+ [ **@target_object=** ] **'***target_object***'**  
  Ist der Name der Datenbank, die die Kategorie abonniert. *Target_object* ist **Sysname**, und es ist erforderlich.  
   
- [  **@policy_category=** ] **"***Policy_category***"**  
+ [ **@policy_category=** ] **'***policy_category***'**  
  Ist der Name der Richtlinienkategorie zu abonnieren. *Policy_category* ist **Sysname**, und es ist erforderlich.  
   
  Zum Abrufen von Werten für *Policy_category*, Fragen Sie die Systemsicht syspolicy_policy_categories ab.  
   
- [  **@policy_category_subscription_id=** ] *Policy_category_subscription_id*  
- Der Bezeichner für das Kategorieabonnement. *Policy_category_subscription_id* ist **Int**, und wird als OUTPUT zurückgegeben.  
+ [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
+ Der Bezeichner für das Kategorieabonnement. *policy_category_subscription_id* is **int**, and is returned as OUTPUT.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -84,7 +87,7 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [Richtlinienbasierte Verwaltung gespeicherte Systemprozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [Sp_syspolicy_update_policy_category_subscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
- [Sp_syspolicy_unsubscribe_from_policy_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
+ [sp_syspolicy_update_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
+ [sp_syspolicy_unsubscribe_from_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
   
   

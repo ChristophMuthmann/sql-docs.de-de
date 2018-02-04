@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_mailitems_sp_TSQL
 - sysmail_delete_mailitems_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_delete_mailitems_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_delete_mailitems_sp
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a0142e48fba0338c1271da1eb7aa0edc13a4847f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6a7843e44e42de868c3748dbf31794d4c69e361e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +47,10 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@sent_before=** ] **"***Sent_before***"**  
+ [ **@sent_before=** ] **'***sent_before***'**  
  Löscht E-mails bis zu dem Datum und Uhrzeit als die *Sent_before* Argument. *Sent_before* ist **"DateTime"** und hat den Standardwert NULL. NULL steht für alle Daten.  
   
- [  **@sent_status=** ] **"***Sent_status***"**  
+ [ **@sent_status=** ] **'***sent_status***'**  
  Löscht E-mails mit den vom angegebenen Typ *Sent_status*. *Sent_status* ist **varchar(8)** hat keinen Standardwert. Gültige Einträge sind **gesendet**, **unsent**, **Wiederholung**, und **Fehler**. NULL steht für alle Status.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -92,9 +95,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sysmail_allitems &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
- [Sysmail_event_log &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
- [Sysmail_mailattachments &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
+ [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
+ [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
  [Erstellen eines Auftrags des SQL Server-Agents zum Archivieren von Datenbank-E-Mail-Nachrichten und Ereignisprotokollen](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

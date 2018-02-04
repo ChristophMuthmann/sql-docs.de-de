@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_filestream_force_garbage_collection
 - sp_filestream_force_garbage_collection_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba1b60621e23160ce9e951e17cf4777b016fe90f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d424bb470ac9da5edc6b314e62ffaa2e1e72b923
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="filestream-and-filetable---spfilestreamforcegarbagecollection"></a>FileStream- und FileTable - sp_filestream_force_garbage_collection
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +49,7 @@ sp_filestream_force_garbage_collection
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **@dbname** = *Database_name***"**  
+ **@dbname** = *database_name***'**  
  Gibt den Namen der Datenbank an, für die der Garbage Collector ausgeführt werden soll.  
   
 > [!NOTE]  
@@ -68,7 +70,7 @@ sp_filestream_force_garbage_collection
   
 |Wert|Description|  
 |-----------|-----------------|  
-|*Dateiname*|Gibt den Namen des FILESTREAM-Containers an|  
+|*file_name*|Gibt den Namen des FILESTREAM-Containers an|  
 |*num_collected_items*|Gibt die Anzahl der FILESTREAM-Elemente (Dateien/Verzeichnisse) an, die vom Garbage Collector in diesem Container erfasst (gelöscht) wurden.|  
 |*num_marked_for_collection_items*|Gibt die Anzahl der FILESTREAM-Elemente (Dateien/Verzeichnisse) an, die für den Garbage Collector in diesem Container markiert wurden. Diese Elemente wurden noch nicht gelöscht, aber möglicherweise für die Löschung nach der Garbage Collection-Phase geeignet.|  
 |*num_unprocessed_items*|Gibt die Anzahl der FILESTREAM-Elemente (Dateien oder Verzeichnisse) an, die nicht von der Garbage Collection in diesem FILESTREAM-Container erfasst wurden. Elemente können aus unterschiedlichen Gründen nicht verarbeitet werden:<br /><br /> Dateien, die festgesetzt werden müssen, da noch keine Protokollsicherung oder CheckPoint ausgeführt wurden.<br /><br /> Dateien im FULL- oder BULK_LOGGED-Wiederherstellungsmodell.<br /><br /> Es liegt eine aktive Transaktion mit langer Ausführungszeit vor.<br /><br /> Der Replikationsprotokollleser-Auftrag wurde nicht ausgeführt. Finden Sie im Whitepaper [FILESTREAM-Speicherung in SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=209156) für Weitere Informationen.|  

@@ -26,13 +26,13 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4ac4372d753bdc9fde231d2ec08daa957771dc46
-ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
+ms.openlocfilehash: efaffab66cba6d95d76d7c5371e43db1aca9f744
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ fn_get_audit_file ( file_pattern,
  Gibt einen bekannten Speicherort mit der für initial_file_name angegebenen Datei an. Wenn dieses Argument verwendet wird, beginnt die Funktion mit dem Lesen beim ersten Datensatz des Puffers, der direkt nach dem festgelegten Offset folgt.  
   
 > [!NOTE]  
->  Die *"audit_record_offset" stellen* Argument muss gültige Einträge oder muss entweder die standardmäßige enthalten | NULL-Wert. Der Typ ist **Bitint**.  
+>  Die *"audit_record_offset" stellen* Argument muss gültige Einträge oder muss entweder die standardmäßige enthalten | NULL-Wert. Der Typ ist **"bigint"**.  
   
 ## <a name="tables-returned"></a>Zurückgegebene Tabellen  
  In der folgenden Tabelle wird der Inhalt der Überwachungsdatei beschrieben, die von dieser Funktion zurückgegeben werden kann.  

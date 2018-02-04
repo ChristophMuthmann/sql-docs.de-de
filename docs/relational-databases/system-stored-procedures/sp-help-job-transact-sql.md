@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_job_TSQL
 - sp_help_job
-dev_langs: TSQL
-helpviewer_keywords: sp_help_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae0dc39a2fe09d6dd4441f378d225a0f4e6ddf67
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9d91594f032409dbe2597dd859a549c17b795e04
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,42 +59,42 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@job_id =**] *Job_id*  
+ [ **@job_id =**] *job_id*  
  Die Auftrags-ID *Job_id* ist **"uniqueidentifier"**, hat den Standardwert NULL.  
   
- [  **@job_name =**] **"***Job_name***"**  
+ [ **@job_name =**] **'***job_name***'**  
  Der Name des Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden.  
   
- [  **@job_aspect =**] **"***Job_aspect***"**  
+ [ **@job_aspect =**] **'***job_aspect***'**  
  Das Auftragsattribut, das angezeigt werden soll. *Job_aspect* ist **varchar(9)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
 |**ALL**|Auftragsaspektinformationen|  
-|**AUFTRAG**|Auftragsinformationen|  
+|**JOB**|Auftragsinformationen|  
 |**ZEITPLÄNE**|Zeitplaninformationen|  
-|**SCHRITTE**|Auftragsschrittinformationen|  
-|**ZIELE**|Zielinformationen|  
+|**STEPS**|Auftragsschrittinformationen|  
+|**TARGETS**|Zielinformationen|  
   
- [  **@job_type =**] **"***Job_type***"**  
+ [ **@job_type =**] **'***job_type***'**  
  Der Typ von Aufträgen, die im Bericht enthalten sein sollen. *Der Standardwert ist* ist **varchar(12)**, hat den Standardwert NULL. *Der Standardwert ist* kann **lokale** oder **mit mehreren Servern**.  
   
- [  **@owner_login_name =**] **"***Login_name***"**  
+ [ **@owner_login_name =**] **'***login_name***'**  
  Der Anmeldename für den Besitzer des Auftrags. *Login_name* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@subsystem =**] **"***Subsystem***"**  
+ [ **@subsystem =**] **'***subsystem***'**  
  Der Name des Subsystems. *Subsystem* ist **nvarchar(40)**, hat den Standardwert NULL.  
   
- [  **@category_name =**] **"***Kategorie***"**  
+ [ **@category_name =**] **'***category***'**  
  Der Name der Kategorie. *Kategorie* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@enabled =**] *aktiviert*  
+ [ **@enabled =**] *enabled*  
  Eine Zahl, die angibt, ob Informationen für aktivierte oder deaktivierte Aufträge angezeigt werden. *aktiviert* ist **"tinyint"**, hat den Standardwert NULL. **1** zeigt aktivierte Aufträge und **0** zeigt deaktivierte Aufträge.  
   
- [  **@execution_status =**] *Status*  
+ [ **@execution_status =**] *status*  
  Der Ausführungsstatus der Aufträge. *Status* ist **Int**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
 |Wert|Beschreibung|  
@@ -104,17 +107,17 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Unterbrochen|  
 |**7**|Abschlussaktionen werden ausgeführt|  
   
- [  **@date_comparator =**] **"***Date_comparison***"**  
+ [ **@date_comparator =**] **'***date_comparison***'**  
  Der Vergleichsoperator, Vergleiche von *Date_created* und *Date_modified*. *Date_comparison* ist **char(1)**, und kann =, \<, oder >.  
   
- [  **@date_created =**] *Date_created*  
+ [ **@date_created =**] *date_created*  
  Das Datum, an dem der Auftrag erstellt wurde. *Date_created*ist **"DateTime"**, hat den Standardwert NULL.  
   
- [  **@date_last_modified =**] *Date_modified*  
+ [ **@date_last_modified =**] *date_modified*  
  Das Datum, an dem der Auftrag zuletzt geändert wurde. *DATE_MODIFIED* ist **"DateTime"**, hat den Standardwert NULL.  
   
- [  **@description =**] **"***ist NULL***"**  
- Die Beschreibung des Auftrags. *ist NULL* ist **vom Datentyp nvarchar(512)**, hat den Standardwert NULL. *ist NULL* kann die SQL Server-Platzhalterzeichen für den Mustervergleich enthalten.  
+ [ **@description =**] **'***description_pattern***'**  
+ Die Beschreibung des Auftrags. *description_pattern* is **nvarchar(512)**, with a default of NULL. *ist NULL* kann die SQL Server-Platzhalterzeichen für den Mustervergleich enthalten.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -127,22 +130,22 @@ sp_help_job { [ @job_id = ] job_id
 |**job_id**|**uniqueidentifier**|Die eindeutige ID des Auftrags.|  
 |**originating_server**|**nvarchar(30)**|Name des Servers, von dem der Auftrag stammt|  
 |**name**|**sysname**|Name des Auftrags.|  
-|**aktiviert**|**tinyint**|Zeigt an, ob der Auftrag für die Ausführung aktiviert ist.|  
-|**Beschreibung**|**nvarchar(512)**|Beschreibung für den Auftrag.|  
+|**enabled**|**tinyint**|Zeigt an, ob der Auftrag für die Ausführung aktiviert ist.|  
+|**description**|**nvarchar(512)**|Beschreibung für den Auftrag.|  
 |**start_step_id**|**int**|ID des Schrittes in dem Auftrag, bei dem die Ausführung beginnen soll.|  
-|**Kategorie**|**sysname**|Auftragskategorie|  
+|**category**|**sysname**|Auftragskategorie|  
 |**Besitzer**|**sysname**|Auftragsbesitzer|  
 |**notify_level_eventlog**|**int**|**Bitmaske** , der angibt, unter welchen Umständen ein Benachrichtigungsereignis in das Microsoft Windows-Anwendungsprotokoll protokolliert werden sollen. Einer der folgenden Werte sind möglich:<br /><br /> **0** = Nie<br /><br /> **1** = bei erfolgreicher Ausführung des Auftrags<br /><br /> **2** = Bei Fehlschlagen des Auftrags<br /><br /> **3** = Immer, wenn der Auftrag abgeschlossen ist (unabhängig vom Ergebnis des Auftrags)|  
 |**notify_level_email**|**int**|**Bitmaske** , der angibt, unter welchen Umständen bei Abschluss eines Auftrags eine Benachrichtigung per E-mail gesendet werden soll. Mögliche Werte sind die gleichen wie für **Notify_level_eventlog**.|  
 |**notify_level_netsend**|**int**|**Bitmaske** , der angibt, unter welchen Umständen bei Abschluss eines Auftrags eine Netzwerknachricht gesendet werden soll. Mögliche Werte sind die gleichen wie für **Notify_level_eventlog**.|  
-|**notify_level_page enthält**|**int**|**Bitmaske** , der angibt, unter welchen Umständen bei Abschluss eines Auftrags eine Seite gesendet werden soll. Mögliche Werte sind die gleichen wie für **Notify_level_eventlog**.|  
+|**notify_level_page**|**int**|**Bitmaske** , der angibt, unter welchen Umständen bei Abschluss eines Auftrags eine Seite gesendet werden soll. Mögliche Werte sind die gleichen wie für **Notify_level_eventlog**.|  
 |**notify_email_operator**|**sysname**|E-Mail-Name des Operators, der benachrichtigt werden soll.|  
 |**notify_netsend_operator**|**sysname**|Name des Computers oder Benutzers, der beim Senden von Netzwerkmeldungen verwendet wird|  
 |**notify_page_operator**|**sysname**|Name des Computers oder Benutzers, der beim Senden einer Pagerbenachrichtigung verwendet wird|  
-|**Auftrag nie gelöscht**|**int**|**Bitmaske** , der angibt, unter welchen Umständen bei Abschluss eines Auftrags der Auftrag gelöscht werden soll. Mögliche Werte sind die gleichen wie für **Notify_level_eventlog**.|  
+|**delete_level**|**int**|**Bitmaske** , der angibt, unter welchen Umständen bei Abschluss eines Auftrags der Auftrag gelöscht werden soll. Mögliche Werte sind die gleichen wie für **Notify_level_eventlog**.|  
 |**date_created**|**datetime**|Datum, an dem der Auftrag erstellt wurde.|  
-|**DATE_MODIFIED**|**datetime**|Datum, an dem der Auftrag zuletzt geändert wurde.|  
-|**Versionsnummer**|**int**|Version des Auftrags (wird automatisch jedes Mal aktualisiert, wenn der Auftrag geändert wird)|  
+|**date_modified**|**datetime**|Datum, an dem der Auftrag zuletzt geändert wurde.|  
+|**version_number**|**int**|Version des Auftrags (wird automatisch jedes Mal aktualisiert, wenn der Auftrag geändert wird)|  
 |**last_run_date**|**int**|Datum, an dem die Ausführung des Auftrags zuletzt gestartet wurde|  
 |**last_run_time**|**int**|Uhrzeit, zu der die Ausführung des Auftrags zuletzt gestartet wurde|  
 |**last_run_outcome**|**int**|Ergebnis des Auftrags bei der letzten Ausführung:<br /><br /> **0** = Fehler<br /><br /> **1** = war erfolgreich<br /><br /> **3** = abgebrochen<br /><br /> **5** = unbekannt|  
@@ -155,7 +158,7 @@ sp_help_job { [ @job_id = ] job_id
 |**has_step**|**int**|Anzahl der Auftragsschritte des Auftrags|  
 |**has_schedule**|**int**|Anzahl der Auftragszeitpläne des Auftrags|  
 |**has_target**|**int**|Die Anzahl der Zielserver des Auftrags.|  
-|**Typ**|**int**|Auftragstyp:<br /><br /> 1 = Lokaler Auftrag<br /><br /> **2** = Multiserverauftrag.<br /><br /> **0** = Auftrag hat keine Zielserver.|  
+|**type**|**int**|Auftragstyp:<br /><br /> 1 = Lokaler Auftrag<br /><br /> **2** = Multiserverauftrag.<br /><br /> **0** = Auftrag hat keine Zielserver.|  
   
  Wenn *Job_id* oder *Job_name* angegeben wird, **Sp_help_job** gibt die folgenden zusätzlichen Resultsets für Auftragsschritte, Auftragszeitpläne und Auftragszielserver zurück.  
   
@@ -165,9 +168,9 @@ sp_help_job { [ @job_id = ] job_id
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|Eindeutiger Bezeichner (für diesen Auftrag) für den Schritt|  
 |**step_name**|**sysname**|Name des Schritts|  
-|**Subsystem**|**nvarchar(40)**|Subsystem, in dem der Schrittbefehl ausgeführt werden soll|  
+|**subsystem**|**nvarchar(40)**|Subsystem, in dem der Schrittbefehl ausgeführt werden soll|  
 |**Befehl**|**nvarchar(3200)**|Auszuführender Befehl|  
-|**Flags**|**nvarchar(4000)**|**Bitmaske** von Werten, die das Schrittverhalten steuern.|  
+|**flags**|**nvarchar(4000)**|**Bitmaske** von Werten, die das Schrittverhalten steuern.|  
 |**cmdexec_success_code**|**int**|Für eine **CmdExec** Schritt, dies ist der Prozessexitcode eines erfolgreichen Befehls.|  
 |**on_success_action**|**nvarchar(4000)**|Mögliche Aktionen, wenn der Schritt erfolgreich durchgeführt wird:<br /><br /> **1** = beenden mit Erfolg.<br /><br /> **2** = beenden mit Fehler.<br /><br /> **3** = Gehe zum nächsten Schritt fort.<br /><br /> **4** = Gehe zu Schritt.|  
 |**on_success_step_id**|**int**|Wenn **On_success_action** ist **4**, dadurch wird der nächste auszuführende Schritt angegeben.|  
@@ -179,7 +182,7 @@ sp_help_job { [ @job_id = ] job_id
 |**retry_attempts**|**int**|Die maximale Anzahl von Wiederholungsversuchen für den Befehl (falls er nicht erfolgreich ist), bevor der Schritt als fehlgeschlagen angesehen wird|  
 |**retry_interval**|**int**|Das Intervall (in Minuten) zwischen den Wiederholungsversuchen|  
 |**os_run_priority**|**varchar(4000)**|Reserviert.|  
-|**Ausgabedateiname**|**varchar(200)**|Datei in die Befehlsausgabe geschrieben werden soll ([!INCLUDE[tsql](../../includes/tsql-md.md)] und **CmdExec** nur Schritte).|  
+|**output_file_name**|**varchar(200)**|Datei in die Befehlsausgabe geschrieben werden soll ([!INCLUDE[tsql](../../includes/tsql-md.md)] und **CmdExec** nur Schritte).|  
 |**last_run_outcome**|**int**|Ergebnis der letzten Ausführung des Schritts:<br /><br /> **0** = Fehler<br /><br /> **1** = war erfolgreich<br /><br /> **3** = abgebrochen<br /><br /> **5** = unbekannt|  
 |**last_run_duration**|**int**|Die Ausführungsdauer (in Sekunden) des Schritts bei der letzten Ausführung.|  
 |**last_run_retries**|**int**|Anzahl der Wiederholungsversuche für den Befehl bei der letzten Ausführung des Schritts|  
@@ -193,7 +196,7 @@ sp_help_job { [ @job_id = ] job_id
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Bezeichner des Zeitplans (eindeutig für alle Aufträge)|  
 |**schedule_name**|**sysname**|Name des Zeitplans (eindeutig nur für diesen Auftrag)|  
-|**aktiviert**|**int**|Gibt an, ob der Zeitplan aktiv ist (**1**) oder nicht (**0**).|  
+|**enabled**|**int**|Gibt an, ob der Zeitplan aktiv ist (**1**) oder nicht (**0**).|  
 |**freq_type**|**int**|Zeigt an, wann der Auftrag ausgeführt werden soll:<br /><br /> **1** = einmal<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ zu den **Freq_interval**<br /><br /> **64** = ausgeführt werden, wenn **SQLServerAgent** -Dienst gestartet wird.|  
 |**freq_interval**|**int**|Tage, wenn der Auftrag ausgeführt wird. Der Wert hängt vom Wert der **Freq_type**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_subday_type**|**Int**|Einheiten für **Freq_subday_interval**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
@@ -216,7 +219,7 @@ sp_help_job { [ @job_id = ] job_id
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Bezeichner des Zielservers|  
-|**Servername**|**nvarchar(30)**|Computername des Zielservers|  
+|**server_name**|**nvarchar(30)**|Computername des Zielservers|  
 |**enlist_date**|**datetime**|Datum, an dem der Zielserver auf dem Masterserver eingetragen wurde|  
 |**last_poll_date**|**datetime**|Datum, an dem der Zielserver den Masterserver zuletzt abgerufen hat|  
 |**last_run_date**|**int**|Datum, an dem die Ausführung des Auftrags auf diesem Zielserver zuletzt gestartet wurde|  
@@ -281,8 +284,8 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [Sp_delete_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [Sp_update_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

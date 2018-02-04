@@ -1,5 +1,5 @@
 ---
-title: Sp_help_fulltext_system_components (Transact-SQL) | Microsoft Docs
+title: sp_help_fulltext_system_components (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_components_TSQL
 - sp_help_fulltext_components
-dev_langs: TSQL
-helpviewer_keywords: sp_help_fulltext_system_components
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_fulltext_system_components
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54f529fcb0130479ef30af742fe58fd05b4bc4d1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8bb8278204aa3b710875d3bab91a41abfe43a553
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -48,20 +51,20 @@ sp_help_fulltext_system_components
  'all'  
  Gibt Informationen für alle Volltextkomponenten zurück.  
   
- [  **@component_type=** ] *Component_type*  
+ [ **@component_type=** ] *component_type*  
  Gibt den Komponententyp an. *Component_type* kann eines der folgenden sein:  
   
--   **wörtertrennung**  
+-   **wordbreaker**  
   
 -   **filter**  
   
 -   **Protokollhandler**  
   
--   **Vollständiger Pfad**  
+-   **fullpath**  
   
  Wenn ein vollständiger Pfad angegeben wird, *Param* muss auch angegeben werden, durch den vollständigen Pfad zur Komponenten-DLL, oder es wird eine Fehlermeldung zurückgegeben.  
   
- [  **@param=** ] *Param*  
+ [ **@param=** ] *param*  
  Abhängig vom Komponententyp kann dies Folgendes sein: ein Gebietsschemabezeichner (LCID), die Dateierweiterung mit "."-Präfix, der vollständige Komponentenname des Protokollhandlers oder der vollständige Pfad der Komponenten-DLL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -72,18 +75,18 @@ sp_help_fulltext_system_components
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**Gültigkeitsdauer von componentType**|**sysname**|Typ der Komponente. Einer der folgenden Typen:<br /><br /> filter<br /><br /> Protokollhandler<br /><br /> Wörtertrennung|  
-|**Komponentenname**|**sysname**|Name der Komponente.|  
-|**CLSID**|**uniqueidentifier**|Klassenbezeichner der Komponente.|  
-|**Vollständiger Pfad**|**nvarchar(256)**|Pfad zum Speicherort der Komponente.<br /><br /> NULL = Aufrufer ist kein Mitglied der festen Serverrolle **serveradmin** .|  
+|**componenttype**|**sysname**|Typ der Komponente. Einer der folgenden Typen:<br /><br /> filter<br /><br /> Protokollhandler<br /><br /> Wörtertrennung|  
+|**componentname**|**sysname**|Name der Komponente.|  
+|**clsid**|**uniqueidentifier**|Klassenbezeichner der Komponente.|  
+|**fullpath**|**nvarchar(256)**|Pfad zum Speicherort der Komponente.<br /><br /> NULL = Aufrufer ist kein Mitglied der festen Serverrolle **serveradmin** .|  
 |**version**|**nvarchar(30)**|Version der Komponente.|  
-|**Hersteller**|**sysname**|Name des Herstellers der Komponente.|  
+|**manufacturer**|**sysname**|Name des Herstellers der Komponente.|  
   
  Das folgende Resultset wird nur zurückgegeben, wenn ein oder mehr als ein Volltextkatalog vorhanden ist, verwendet *Component_type*.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**DBID**|**int**|Die ID der Datenbank.|  
+|**dbid**|**int**|Die ID der Datenbank.|  
 |**ftcatid**|**int**|ID des Volltextkatalogs.|  
   
 ## <a name="permissions"></a>Berechtigungen  

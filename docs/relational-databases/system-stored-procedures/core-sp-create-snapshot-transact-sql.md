@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_create_snapshot
 - sp_create_snapshot_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - management data warehouse, data collector stored procedures
 - data collector [SQL Server], stored procedures
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 674968b7b981755ea0f67f8657116537d2a5791c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 559eed3c2ae0a5bada1453e21347fee791625eb5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,11 +54,11 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @collection_set_uid =] '*Collection_set_uid*"  
- Die GUID für den Sammlungssatz. *Collection_set_uid* ist **"uniqueidentifier"** verfügt über keinen Standardwert. Um die GUID zu erhalten, fragen Sie die dbo.syscollector_collection_sets-Sicht in der MSDB-Datenbank ab.  
+ [ @collection_set_uid = ] '*collection_set_uid*'  
+ Die GUID für den Sammlungssatz. *collection_set_uid* is **uniqueidentifier** with no default value. Um die GUID zu erhalten, fragen Sie die dbo.syscollector_collection_sets-Sicht in der MSDB-Datenbank ab.  
   
- [ @collector_type_uid =] '*Collector_type_uid*"  
- Die GUID für einen Sammlertyp. *Collector_type_uid* ist **"uniqueidentifier"** verfügt über keinen Standardwert. Um die GUID zu erhalten, fragen Sie die dbo.syscollector_collector_types-Sicht in der MSDB-Datenbank ab.  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
+ Die GUID für einen Sammlertyp. *collector_type_uid* is **uniqueidentifier** with no default value. Um die GUID zu erhalten, fragen Sie die dbo.syscollector_collector_types-Sicht in der MSDB-Datenbank ab.  
   
  [ @machine_name=] '*Machine_name*"  
  Der Name des Servers, auf dem sich der Sammlungssatz befindet. *Computername* ist **Sysname**, verfügt über keinen Standardwert.  
@@ -64,10 +66,10 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  [ @named_instance=] '*Named_instance*"  
  Der Name der Instanz für den Sammlungssatz. *Named_instance* ist **Sysname**, verfügt über keinen Standardwert.  
   
- [ @log_id =] *Log_id*  
+ [ @log_id = ] *log_id*  
  Der eindeutige Bezeichner, der dem Ereignisprotokoll des Sammlungssatzes auf dem Server zugeordnet ist, der die Daten gesammelt hat. *Log_id* ist **"bigint"** verfügt über keinen Standardwert. Zum Abrufen des Werts für *Log_id*, Fragen Sie die syscollector_execution_log-Sicht in der Msdb-Datenbank.  
   
- [ @snapshot_id =] *Snapshot_id*  
+ [ @snapshot_id = ] *snapshot_id*  
  Der eindeutige Bezeichner für eine Zeile, die in der core.snapshots-Sicht eingefügt wird. *Snapshot_id* ist **Int** und wird als OUTPUT zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

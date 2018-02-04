@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_schedule_TSQL
 - sp_attach_schedule
-dev_langs: TSQL
-helpviewer_keywords: sp_attach_schedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_attach_schedule
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8359436d7e220c7bef3068ad9e73ded455ea497
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d78d6c73d28325771460a1c055a6fb0b491c264c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +49,19 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@job_id=** ] *Job_id*  
+ [ **@job_id=** ] *job_id*  
  Die Auftrags-ID des Auftrags, zu dem der Zeitplan hinzugefügt wird. *Job_id*ist **"uniqueidentifier"**, hat den Standardwert NULL.  
   
- [  **@job_name =** ] **"***Job_name***"**  
+ [ **@job_name =** ] **'***job_name***'**  
  Der Name des Auftrags, zu dem der Zeitplan hinzugefügt wird. *Job_name*ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden.  
   
- [  **@schedule_id =** ] *Schedule_id*  
+ [ **@schedule_id =** ] *schedule_id*  
  Die Zeitplan-ID des für den Auftrag festgelegten Zeitplans. *Schedule_id*ist **Int**, hat den Standardwert NULL.  
   
- [  **@schedule_name =** ] **"***Schedule_name***"**  
+ [ **@schedule_name =** ] **'***schedule_name***'**  
  Der Name des für den Auftrag festzulegenden Zeitplans. *Schedule_name*ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
@@ -84,7 +87,7 @@ sp_attach_schedule
   
  Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prüft, ob der Benutzer Besitzer sowohl des Auftrags als auch des Zeitplans ist.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft, ob der Benutzer den Auftrag und den Zeitplan besitzt.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird ein Zeitplan mit dem Namen `NightlyJobs` erstellt. Aufträge, die diesen Zeitplan verwenden, werden jeden Tag zur Serveruhrzeit `01:00` Uhr ausgeführt. Im Beispiel wird der Zeitplan den Aufträgen `BackupDatabase` und `RunReports` angefügt.  
@@ -115,8 +118,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [Sp_detach_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
- [Sp_delete_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

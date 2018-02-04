@@ -8,23 +8,25 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ccb4a7798b1517d21e8a3c656cb94b9b4a9a8a4
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 0a0b573dcb4b68c8becf86c8e847b10d5df5ed1a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-properties-advanced-tab"></a>SQL Server-Eigenschaften (Registerkarte Erweitert)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die folgenden Eigenschaften werden auf die **erweitert** Registerkarte standardmäßig. Wenn Eigenschaften vom Benutzer definiert wurden, werden sie mit den entsprechenden Werten auch auf dieser Registerkarte angezeigt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Die folgenden Eigenschaften werden standardmäßig auf der Registerkarte **Erweitert** angezeigt. Wenn Eigenschaften vom Benutzer definiert wurden, werden sie mit den entsprechenden Werten auch auf dieser Registerkarte angezeigt.  
   
 ## <a name="options"></a>enthalten  
  **Gruppiert**  

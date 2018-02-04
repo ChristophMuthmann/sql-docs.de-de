@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritytable
 - semanticsimilaritytable_TSQL
-dev_langs: TSQL
-helpviewer_keywords: semanticsimilaritytable function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- semanticsimilaritytable function
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2944708e70d9cc71cddcad33ff060df8a223530d
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8ba25daf71db106e5ecd8877e83edda6e43a5286
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +81,7 @@ SEMANTICSIMILARITYTABLE
 |**source_column_id**|**int**|ID der Spalte, aus der ein Quelldokument zum Suchen von ähnlichen Dokumenten verwendet wurde.<br /><br /> Im Abschnitt über die COL_NAME-Funktion und COLUMNPROPERTY-Funktion finden Sie ausführliche Informationen zum Abrufen des Spaltennamens aus "column_id" und umgekehrt.|  
 |**matched_column_id**|**int**|ID der Spalte, in der ein ähnliches Dokument gefunden wurde.<br /><br /> Im Abschnitt über die COL_NAME-Funktion und COLUMNPROPERTY-Funktion finden Sie ausführliche Informationen zum Abrufen des Spaltennamens aus "column_id" und umgekehrt.|  
 |**matched_document_key**|**\***<br /><br /> Dieser Schlüssel stimmt mit dem Typ des eindeutigen Schlüssels in der Quelltabelle überein.|Eindeutiger Schlüsselwert für die Volltext- und semantische Extraktion des Dokuments oder der Zeile, das bzw. die Ähnlichkeit mit dem angegebenen Dokument in der Abfrage aufweist.|  
-|**Bewertung**|**ECHTE**|Ein relativer Ähnlichkeitswert für dieses Dokument bezogen auf alle anderen ähnlichen Dokumente.<br /><br /> Der Wert ist eine Dezimalzahl im Bereich [0,0; 1,0], wobei ein höheres Ergebnis eine höhere Übereinstimmung und 1,0 ein perfektes Ergebnis darstellt.|  
+|**score**|**REAL**|Ein relativer Ähnlichkeitswert für dieses Dokument bezogen auf alle anderen ähnlichen Dokumente.<br /><br /> Der Wert ist eine Dezimalzahl im Bereich [0,0; 1,0], wobei ein höheres Ergebnis eine höhere Übereinstimmung und 1,0 ein perfektes Ergebnis darstellt.|  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Weitere Informationen finden Sie unter [Suchen von ähnlichen und verwandten Dokumenten mit Semantischer Suche](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
@@ -93,7 +96,7 @@ SEMANTICSIMILARITYTABLE
   
 -   [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigungen für die Basistabelle, für die der Volltextindex und der semantische Index erstellt wurden.  

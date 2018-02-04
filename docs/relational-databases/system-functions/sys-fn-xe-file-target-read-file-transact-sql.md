@@ -1,5 +1,5 @@
 ---
-title: Sys. fn_xe_file_target_read_file (Transact-SQL) | Microsoft Docs
+title: sys.fn_xe_file_target_read_file (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/22/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - fn_xe_file_target_read_file
 - sys.fn_xe_file_target_read_file_TSQL
 - sys.fn_xe_file_target_read_file
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - extended events [SQL Server], functions
 - fn_xe_file_target_read_file function
 - sys.fn_xe_file_target_read_file function
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 603253fffd3d3ea6d5a42b37f9d7f4fc8a3edccd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b21b45c9d4932ca82de404fcb3b984ef2149034a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   Liest Dateien, die vom asynchronen Dateiziel der erweiterten Ereignisse erstellt werden. Pro Zeile wird ein Ereignis im XML-Format zurückgegeben.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]und [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] akzeptieren im XEL- und XEM-Format generierte Ablaufverfolgungsergebnisse. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Erweiterte Ereignisse-unterstützen nur Ablaufverfolgungsergebnisse im XEL-Format. Verwenden Sie SQL Server Management Studio, um Ablaufverfolgungsergebnisse im XEL-Format lesen zu können.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] akzeptieren im XEL- und XEM-Format generierte Ablaufverfolgungsergebnisse. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Erweiterte Ereignisse-unterstützen nur Ablaufverfolgungsergebnisse im XEL-Format. Verwenden Sie SQL Server Management Studio, um Ablaufverfolgungsergebnisse im XEL-Format lesen zu können.    
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,23 +53,23 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Pfad*  
+ *path*  
  Der Pfad zu den zu lesenden Dateien. *Pfad* kann Platzhalter und enthalten den Namen einer Datei. *Pfad* ist **nvarchar(260)**. Es gibt keinen Standardwert. Im Kontext der Azure SQL-Datenbank ist dieser Wert eine HTTP-URL in eine Datei im Azure-Speicher.
   
  *mdpath*  
  Der Pfad zur Metadatendatei, die die Datei oder die angegebenen Dateien entspricht der *Pfad* Argument. *Mdpath* ist **nvarchar(260)**. Es gibt keinen Standardwert. Beginnend mit SQL Server 2016, kann dieser Parameter als null angegeben werden.
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]erfordert keine der *Mdpath* Parameter. Er wird jedoch beibehalten, um die Abwärtskompatibilität für in früheren Versionen von SQL Server erstellte Protokolldateien aufrechtzuerhalten.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] erfordert keine der *Mdpath* Parameter. Er wird jedoch beibehalten, um die Abwärtskompatibilität für in früheren Versionen von SQL Server erstellte Protokolldateien aufrechtzuerhalten.  
   
- *"initial_file_name"*  
- Die erste Datei zum Lesen aus *Pfad*. *"initial_file_name"* ist **nvarchar(260)**. Es gibt keinen Standardwert. Wenn **null** wird angegeben, wie das Argument, das alle Dateien aus *Pfad* gelesen werden.  
+ *initial_file_name*  
+ Die erste Datei zum Lesen aus *Pfad*. *initial_file_name* is **nvarchar(260)**. Es gibt keinen Standardwert. Wenn **null** wird angegeben, wie das Argument, das alle Dateien aus *Pfad* gelesen werden.  
   
 > [!NOTE]  
 >  *"initial_file_name"* und *Initial_offset* werden paarargumente. Wenn Sie einen Wert für eines der beiden Argumente angeben, müssen Sie auch einen Wert für das andere Argument angeben.  
   
  *initial_offset*  
- Wird verwendet, um den letzten zuvor gelesenen Offset anzugeben und überspringt alle Ereignisse bis (einschließlich) des Offsets. Die Ereignisenumeration startet nach dem angegebenen Offset. *Initial_offset* ist **"bigint"**. Wenn **null** wird angegeben, wie das Argument die gesamte Datei gelesen werden.  
+ Wird verwendet, um den letzten zuvor gelesenen Offset anzugeben und überspringt alle Ereignisse bis (einschließlich) des Offsets. Die Ereignisenumeration startet nach dem angegebenen Offset. *initial_offset* is **bigint**. Wenn **null** wird angegeben, wie das Argument die gesamte Datei gelesen werden.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   

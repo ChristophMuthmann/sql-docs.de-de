@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_secondary_database
 - sp_help_log_shipping_secondary_database_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_log_shipping_secondary_database
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_log_shipping_secondary_database
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 705a2600f0012716a529925f2ec97b2685e2195f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8bb243bd5d35293df828be305dba20cb405ad926
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +50,10 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@secondary_database =** ] "*Secondary_database*"  
+ [ **@secondary_database =** ] '*secondary_database*'  
  Der Name der sekundären Datenbank. *secondary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
- [  **@secondary_id =** ] "*Secondary_id*"  
+ [ **@secondary_id =** ] '*secondary_id*'  
  Die ID für den sekundären Server in der Protokollversandkonfiguration. *Secondary_id* ist **"uniqueidentifier"** und darf nicht NULL sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -66,7 +69,7 @@ sp_help_log_shipping_secondary_database
 |**backup_source_directory**|Das Verzeichnis, in dem die Dateien der Transaktionsprotokollsicherung gespeichert werden.|  
 |**backup_destination_directory**|Das Verzeichnis auf dem sekundären Server, in das Sicherungsdateien kopiert werden|  
 |**file_retention_period**|Gibt an, wie lange (in Minuten) eine Sicherungsdatei auf dem sekundären Server aufbewahrt wird, bevor sie gelöscht wird|  
-|**copy_ job_id**|Die dem Kopierauftrag zugeordnete ID auf dem sekundären Server|  
+|**copy_job_id**|Die dem Kopierauftrag zugeordnete ID auf dem sekundären Server|  
 |**restore_job_id**|Die dem Wiederherstellungsauftrag zugeordnete ID auf dem sekundären Server|  
 |**monitor_server**|Der Name der Instanz von der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] als Überwachungsserver in der Protokollversandkonfiguration verwendet wird.|  
 |**monitor_server_security_mode**|Der Sicherheitsmodus, der zum Herstellen einer Verbindung mit dem Überwachungsserver verwendet wird.<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.|  
@@ -100,7 +103,7 @@ sp_help_log_shipping_secondary_database
   
 ## <a name="see-also"></a>Siehe auch  
  [Sp_help_log_shipping_secondary_primary &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
- [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Über den Protokollversand &#40; SQLServer &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

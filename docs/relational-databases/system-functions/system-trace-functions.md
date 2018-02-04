@@ -8,21 +8,23 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 166426e1-555d-4ce4-bae3-248dcac56883
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 171ff3cbd372e80a047127ca249457e0623f1502
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fe54c063eb4cdf4bc8f01c054f9d7a1ed04cce2d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="system-trace-functions"></a>Systemnachverfolgungsfunktionen
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,6 +38,6 @@ ms.lasthandoff: 11/17/2017
   
  [fn_trace_getinfo](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)  
   
- [' fn_trace_gettable '](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
+ [fn_trace_gettable](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
   
   

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_monitor_TSQL
 - sp_help_log_shipping_monitor
-dev_langs: TSQL
-helpviewer_keywords: sp_help_log_shipping_monitor
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_log_shipping_monitor
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85677235addc7a6508f482dfa7f944518efddd0d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 96e9b3f2fa8e040789b15e0969fbb4de6ccb9e00
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelplogshippingmonitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +60,7 @@ sp_help_log_shipping_monitor
 |**server**|**sysname**|Der Name des primären oder sekundären Servers, auf dem sich diese Datenbank befindet.|  
 |**database_name**|**sysname**|Der Datenbankname.|  
 |**time_since_last_backup**|**int**|Die Zeitdauer in Minuten seit der letzten Protokollsicherung.<br /><br /> NULL = Die Informationen sind nicht verfügbar oder nicht von Bedeutung.|  
-|**Spalten last_backup_file**|**nvarchar(500)**|Der Name der letzten erfolgreich erstellten Protokollsicherungsdatei.<br /><br /> NULL = Die Informationen sind nicht verfügbar oder nicht von Bedeutung.|  
+|**last_backup_file**|**nvarchar(500)**|Der Name der letzten erfolgreich erstellten Protokollsicherungsdatei.<br /><br /> NULL = Die Informationen sind nicht verfügbar oder nicht von Bedeutung.|  
 |**backup_threshold**|**int**|Die Zeit (in Minuten) seit der letzten Sicherung, nach der ein threshold_alert-Fehler ausgelöst wird. **backup_threshold** ist **int**, mit einem Standardwert von **60 Minuten**.<br /><br /> NULL = Die Informationen sind nicht verfügbar oder nicht von Bedeutung.<br /><br /> Dieser Wert kann geändert werden, mithilfe von [Sp_add_log_shipping_primary_database &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
 |**is_backup_alert_enabled**|**bit**|Gibt an, ob eine Warnung ausgelöst wird, wenn **backup_threshold** überschritten wird. Der Standardwert**1**bedeutet, dass die Warnung ausgelöst wird.<br /><br /> NULL = Die Informationen sind nicht verfügbar oder nicht von Bedeutung.<br /><br /> Dieser Wert kann geändert werden, mithilfe von [Sp_add_log_shipping_primary_database &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
 |**time_since_last_copy**|**int**|Die Zeitdauer in Minuten seit der letzten Kopie der Protokollsicherung.<br /><br /> NULL = Die Informationen sind nicht verfügbar oder nicht von Bedeutung.|  
@@ -75,7 +78,7 @@ sp_help_log_shipping_monitor
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
   
 ## <a name="see-also"></a>Siehe auch  
- [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Über den Protokollversand &#40; SQLServer &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -8,30 +8,32 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_sequence_get_range
 - sp_sequence_get_range_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sequence number object, sp_sequence_get_range procedure
 - sp_sequence_get_range
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2af750abc8715d2bcf2240ef08f765c6d2d7bff3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 58c36ec947eab4fbcc9511c67efae1af858ab6d0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   Gibt einen Bereich von Sequenzwerten eines Sequenzobjekts zurück. Das Sequenzobjekt generiert die angeforderte Anzahl der Werte, gibt diese aus und stellt Metadaten bezüglich des Bereichs für die Anwendung bereit.  
   
@@ -58,25 +60,25 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
  [  **@sequence_name**  =] **N**"*Sequenz*"  
  Der Name des Sequenzobjekts. Das Schema ist optional. *Sequence_name* ist **nvarchar(776)**.  
   
- [  **@range_size**  =] *Range_size*  
+ [ **@range_size** = ] *range_size*  
  Die Anzahl der Werte, die aus der Sequenz abgerufen werden sollen. **@range_size**ist **"bigint"**.  
   
- [  **@range_first_value**  =] *Range_first_value*  
+ [ **@range_first_value** = ] *range_first_value*  
  Der Ausgabeparameter gibt den ersten Wert (Minimal- oder Maximalwert) des Sequenzobjekts zurück, mit dem der angeforderte Bereich berechnet wurde. **@range_first_value**ist **Sql_variant** mit demselben Basistyp wie für das Sequenzobjekt, das in der Anforderung verwendet.  
   
- [  **@range_last_value**  =] *Range_last_value*  
+ [ **@range_last_value** = ] *range_last_value*  
  Der optionale Ausgabeparameter gibt den letzten Wert des angeforderten Bereichs zurück. **@range_last_value**ist **Sql_variant** mit demselben Basistyp wie für das Sequenzobjekt, das in der Anforderung verwendet.  
   
- [  **@range_cycle_count**  =] Range_cycle_count  
+ [ **@range_cycle_count** = ] range_cycle_count  
  Der optionale Ausgabeparameter gibt die Anzahl der Durchläufe für das Sequenzobjekt zur Rückgabe des angeforderten Bereichs zurück. **@range_cycle_count**ist **Int**.  
   
- [  **@sequence_increment**  =] *Sequence_increment*  
+ [ **@sequence_increment** = ] *sequence_increment*  
  Der optionaler Ausgabeparameter gibt den inkrementellen Wert des Sequenzobjekts zurück, mit dem der angeforderte Bereich berechnet wird. **@sequence_increment**ist **Sql_variant** mit demselben Basistyp wie für das Sequenzobjekt, das in der Anforderung verwendet.  
   
- [  **@sequence_min_value**  =] *Sequence_min_value*  
+ [ **@sequence_min_value** = ] *sequence_min_value*  
  Der optionale Ausgabeparameter gibt den Minimalwert des Sequenzobjekts zurück. **@sequence_min_value**ist **Sql_variant** mit demselben Basistyp wie für das Sequenzobjekt, das in der Anforderung verwendet.  
   
- [  **@sequence_max_value**  =] *Sequence_max_value*  
+ [ **@sequence_max_value** = ] *sequence_max_value*  
  Der optionale Ausgabeparameter gibt den Maximalwert des Sequenzobjekts zurück. **@sequence_max_value**ist **Sql_variant** mit demselben Basistyp wie für das Sequenzobjekt, das in der Anforderung verwendet.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -193,10 +195,10 @@ Console.WriteLine(firstValueInRange.Value);
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [DROP SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [NÄCHSTEN Wert für &#40; Transact-SQL &#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
+ [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
  [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

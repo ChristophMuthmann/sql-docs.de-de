@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_configure_sp
 - sysmail_help_configure_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_configure_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_configure_sp
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d799b3d4d319bfda84014e8b520008acdb2c6a30
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 13f768cd5e1cbbbcfa3f5b74d7ae52d2e9f357e1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@parameter_name**  =] **"***Parameter_name***"**  
+ [**@parameter_name** = ] **'***parameter_name***'**  
  Der Name der abzurufenden Konfigurationseinstellung. Wenn angegeben, wird der Wert der Konfigurationseinstellung zurückgegeben, der  **@parameter_value**  OUTPUT-Parameter. Wenn kein  **@parameter_name**  angegeben ist, wird diese gespeicherte Prozedur gibt ein Resultset mit allen Database Mail Konfigurationseinstellungen in der Instanz zurück.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -55,9 +58,9 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ||||  
 |-|-|-|  
 |Spaltenname|Datentyp|Description|  
-|**paramName**|**nvarchar(256)**|Der Name des Konfigurationsparameters.|  
-|**Das ParamValue-Objekt**|**nvarchar(256)**|Der Wert des Konfigurationsparameters.|  
-|**Beschreibung**|**nvarchar(256)**|Die Beschreibung des Konfigurationsparameters.|  
+|**paramname**|**nvarchar(256)**|Der Name des Konfigurationsparameters.|  
+|**paramvalue**|**nvarchar(256)**|Der Wert des Konfigurationsparameters.|  
+|**description**|**nvarchar(256)**|Die Beschreibung des Konfigurationsparameters.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die gespeicherte Prozedur **sysmail_help_configure_sp** führt die aktuellen Konfigurationseinstellungen für Datenbank-E-Mail für die Instanz auf.  

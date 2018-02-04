@@ -14,17 +14,19 @@ ms.topic: language-reference
 f1_keywords:
 - sp_rxPredict
 - sp_rxPredict_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_rxPredict procedure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_rxPredict procedure
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2bf07247f63962e5692325e2e7518a78445f0a8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f4e397cf366cc0f12b738a369556e91de3e83878
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +51,7 @@ sp_rxPredict  ( @model, @input )
 
 Ein vortrainierte Modell in einem unterstützten Format. 
 
-**Eingabe**
+**input**
 
 Eine gültige SQL-Abfrage
 
@@ -71,7 +73,7 @@ Der Benutzer muss `EXECUTE` Berechtigung für die Datenbank.
 
 Erfordert eine der folgenden Editionen:  
 - SQL Server 2017 Machine Learning Services (einschließlich Microsoft R Server 9.1.0)  
-- Microsoft Machine Learning-Server  
+- Microsoft Machine Learning Server  
 - SQL Server R Services 2016 mit einer Aktualisierung der R-Services-Instanz für Microsoft R Server 9.1.0 oder höher  
 
 ### <a name="supported-algorithms"></a>Algorithmen unterstützt:

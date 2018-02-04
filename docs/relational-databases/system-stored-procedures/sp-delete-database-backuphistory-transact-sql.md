@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_database_backuphistory
 - sp_delete_database_backuphistory_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_database_backuphistory
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_database_backuphistory
 ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c622d04c578288c02f038c69dd4ec4e28daa5046
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4f99ce19664ed3ee6ddcc2158d7c4edd8b81cc42
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletedatabasebackuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@database_name=** ] *Database_name*  
+ [ **@database_name=** ] *database_name*  
  Gibt den Namen der in den Sicherungs- und Wiederherstellungsvorgängen verwendeten Datenbank an. *Database_name* ist **Sysname**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -87,7 +90,7 @@ EXEC sp_delete_database_backuphistory @database_name = 'AdventureWorks2012';
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_delete_backuphistory &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
+ [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
  [Sicherungsverlauf und Headerinformationen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

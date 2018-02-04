@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_profile_sp_TSQL
 - sysmail_help_profile_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_profile_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_profile_sp
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
-caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6b2e503789cf2ad564132f34af4e9ab61464332a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 486d0b8e494cd4602c519cc6659460ea6ebef5b7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpprofilesp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +46,10 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@profile_id**  =] *Profile_id*  
+ [ **@profile_id** = ] *profile_id*  
  Die Profil-ID, zu der Informationen zurückgegeben werden sollen. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
- [  **@profile_name**  =] **"***Profile_name***"**  
+ [ **@profile_name** = ] **'***profile_name***'**  
  Der Profilname, zu dem Informationen zurückgegeben werden sollen. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -60,7 +63,7 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 |Spaltenname|Datentyp|Description|  
 |**profile_id**|**int**|Die Profil-ID des Profils.|  
 |**name**|**sysname**|Der Profilname des Profils.|  
-|**Beschreibung**|**nvarchar(256)**|Die Beschreibung des Profils.|  
+|**description**|**nvarchar(256)**|Die Beschreibung des Profils.|  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn ein Profilname oder eine Profil-ID angegeben ist, gibt **sysmail_help_profile_sp** Informationen zu diesem Profil zurück. Andernfalls **Sysmail_help_profile_sp** gibt Informationen zu jedem Profil in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz.  

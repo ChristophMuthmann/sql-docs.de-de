@@ -8,23 +8,25 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1b29eb621016e256cc0e5633de0e34089432571
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: f0e9a3e76e2ac271926170afc2bd359864d679a3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="report-server-properties-log-on-tab"></a>Berichtsserver-Eigenschaften (Registerkarte Anmelden)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Verwenden der **anmelden** auf der Registerkarte die **Berichtsservereigenschaften** (Dialogfeld), um das vom Berichtsserver-Diensts verwendete Konto anzugeben und zu starten und Beenden des Diensts.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Verwenden Sie im Dialogfeld **Berichtsservereigenschaften** die Registerkarte **Anmelden** , um das vom Berichtsserverdienst verwendete Konto anzugeben und den Dienst zu starten und zu beenden.  
   
 ## <a name="options"></a>enthalten  
  **Lokales System**  

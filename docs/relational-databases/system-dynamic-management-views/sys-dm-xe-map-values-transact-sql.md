@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,28 +17,29 @@ f1_keywords:
 - dm_xe_map_values
 - dm_xe_map_values_TSQL
 - sys.dm_xe_map_values_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_xe_map_values dynamic management view
 - xe
 ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
-caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 314025b6acd55071dc9cad2cbcaa450314037669
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1ee0a395c49835a5635afb56bd10949d9c9f59e4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxemapvalues-transact-sql"></a>sys.dm_xe_map_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt eine Zuordnung von internen numerischen Schlüsseln auf für den Benutzer lesbaren Text zurück.  
  
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|Der Name der Zuordnung. Name ist im lokalen System eindeutig. Lässt keine NULL-Werte zu.|  
 |object_package_guid|**uniqueidentifier**|Die GUID des Pakets, das die Zuordnung enthält. Lässt keine NULL-Werte zu.|  

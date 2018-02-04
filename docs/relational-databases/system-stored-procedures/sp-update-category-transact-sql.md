@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_category
 - sp_update_category_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_update_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_update_category
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fad21c3db995f5eaa57d3f31c6ed057b7c9790b8
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: fab5ea9aea708af028114ef59e9274931c8257f9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdatecategory-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +49,19 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@class =**] **"***Klasse***"**  
+ [ **@class =**] **'***class***'**  
  Die Klasse der zu aktualisierenden Kategorie. *Klasse*ist **varchar(8)**, hat keinen Standardwert und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
 |**WARNUNG**|Aktualisiert eine Warnungskategorie.|  
-|**AUFTRAG**|Aktualisiert eine Auftragskategorie.|  
+|**JOB**|Aktualisiert eine Auftragskategorie.|  
 |**OPERATOR**|Aktualisiert eine Operatorkategorie.|  
   
- [  **@name =**] **"***Old_name***"**  
+ [ **@name =**] **'***old_name***'**  
  Der aktuelle Name der Kategorie. *Old_name*ist **Sysname**, hat keinen Standardwert.  
   
- [  **@new_name =**] **"***New_name***"**  
+ [ **@new_name =**] **'***new_name***'**  
  Der neue Name der Kategorie. *New_name*ist **Sysname**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -85,9 +88,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_add_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [Sp_delete_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [Sp_help_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

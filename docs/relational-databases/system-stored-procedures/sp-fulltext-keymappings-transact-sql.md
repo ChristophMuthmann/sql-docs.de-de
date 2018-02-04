@@ -8,28 +8,30 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_keymappings_TSQL
 - sp_fulltext_keymappings
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - full-text indexes [SQL Server], key column
 - sp_fulltext_keymappings
 - full-text indexes [SQL Server], troubleshooting
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0f99180f5b55808bc1bb7602d7dec7800febe68
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9d0a2bb541e1984e8d992ae00303d47838204ed5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -52,7 +54,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
  *docid*  
  Ein interner Dokumentbezeichner (DocId), der dem Schlüsselwert entspricht. Ein ungültiger *docid* -Wert gibt keine Ergebnisse zurück.  
   
- *Schlüssel*  
+ *key*  
  Der Wert des Volltextschlüssels aus der angegebenen Tabelle. Ein ungültiger *key* -Wert gibt keine Ergebnisse zurück. Informationen zum Volltext-Schlüsselwerte finden Sie unter [Verwalten von Volltextindizes](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
   
 > [!IMPORTANT]  
@@ -79,7 +81,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 |Diese Parameterliste ...|Hat dieses Ergebnis ...|  
 |--------------------------|----------------------|  
 |*table_id*|Wenn mit nur durch das Aufrufen der *Table_id* Parameter Sp_fulltext_keymappings gibt alle Werte der Volltextschlüssel (Key) aus der angegebenen Basistabelle sowie die DocId, der jedem Schlüssel entspricht. Dies schließt auch Schlüssel mit ein, für die ein Löschvorgang aussteht.<br /><br /> Diese Funktion ist hilfreich zur Behebung zahlreicher Probleme. Insbesondere bietet sie sich zum Anzeigen des Inhalts des Volltextindex an, wenn der ausgewählte Volltextschlüssel keinen ganzzahligen Datentyp aufweist. Dies schließt den Join der Ergebnisse von Sp_fulltext_keymappings mit den Ergebnissen der **dm_fts_index_keywords_by_document**. Weitere Informationen finden Sie unter [dm_fts_index_keywords_by_document &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> Im Allgemeinen sollten Sie jedoch , falls möglich, sp_fulltext_keymappings mit Parametern ausführen, die einen bestimmten Volltextschlüssel oder DocId angeben. Dies ist erheblich effizienter als eine gesamte Schlüsselzuordnung zurückzugeben, insbesondere für eine sehr große Tabelle, für die die Leistungskosten der Rückgabe der gesamten Schlüsselzuordnung erheblich sein könnten.|  
-|*Table_id*, *Docid*|Wenn nur die *Table_id* und *Docid* angegeben sind, *Docid* nicht NULL sein müssen, und geben Sie eine gültige DocId in der angegebenen Tabelle. Diese Funktion ist hilfreich, um den benutzerdefinierten Volltextschlüssel aus der Basistabelle zu isolieren, die der DocId eines bestimmten Volltextindex entspricht.|  
+|*table_id*, *docid*|Wenn nur die *Table_id* und *Docid* angegeben sind, *Docid* nicht NULL sein müssen, und geben Sie eine gültige DocId in der angegebenen Tabelle. Diese Funktion ist hilfreich, um den benutzerdefinierten Volltextschlüssel aus der Basistabelle zu isolieren, die der DocId eines bestimmten Volltextindex entspricht.|  
 |*Table_id*, NULL, *Schlüssel*|Wenn drei Parameter vorhanden sind, muss der zweite Parameter NULL sein und *Schlüssel* nicht NULL sein müssen, und geben Sie einen gültigen Volltext-Schlüssel-Wert aus der angegebenen Tabelle. Diese Funktion ist hilfreich, um die DocID zu isolieren, die einem bestimmten Volltextschlüssel aus der Basistabelle entspricht.|  
   
  Wenn eine der folgenden Bedingungen zutrifft, wird ein Fehler zurückgegeben:  

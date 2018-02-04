@@ -8,23 +8,25 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 846806609d926aef8bfc7f9c15238dfec069727c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3c98aeb3ebc26d6ffd762e301c915b1522ce888a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmpdwrequeststeps-transact-sql"></a>Sys.dm_pdw_request_steps (Transact-SQL)
+# <a name="sysdmpdwrequeststeps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Enthält Informationen über alle Schritte, die eine bestimmte Anforderung erstellen oder Abfragen [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Eine Zeile pro abfrageschritt aufgeführt.  
@@ -34,8 +36,8 @@ ms.lasthandoff: 11/17/2017
 |request_id|**nvarchar(32)**|Request_id und Step_index bilden zusammen den Schlüssel für diese Ansicht.<br /><br /> Eindeutige numerische Id der Anforderung zugeordnet ist.|Finden Sie unter Request_id in [sys.dm_pdw_exec_requests &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Request_id und Step_index bilden zusammen den Schlüssel für diese Ansicht.<br /><br /> Die Position dieses Schritts in der Abfolge von Schritten, die die Anforderung bilden.|0 bis (n-1) für eine Anforderung mit n Schritten.|  
 |operation_type|**nvarchar(35)**|Der Typ des Vorgangs, die durch diesen Schritt dargestellt.|**DMS-Plan Abfrageoperationen:** "ReturnOperation" "PartitionMoveOperation" "MoveOperation" "BroadcastMoveOperation" "ShuffleMoveOperation" "TrimMoveOperation" "CopyOperation", "DistributeReplicatedTableMoveOperation"<br /><br /> **SQL-Abfrage-Plan-Vorgänge:** "OnOperation", "RemoteOperation"<br /><br /> **Andere Plan Abfrageoperationen:** "MetaDataCreateOperation", "RandomIDOperation"<br /><br /> **Externe Vorgänge für Lesevorgänge:** "HadoopShuffleOperation", "HadoopRoundRobinOperation", "HadoopBroadcastOperation"<br /><br /> **Externe Vorgänge für MapReduce:** "HadoopJobOperation", "HdfsDeleteOperation"<br /><br /> **Externe Vorgänge für Schreibvorgänge:** "ExternalExportDistributedOperation", "ExternalExportReplicatedOperation", "ExternalExportControlOperation"<br /><br /> Weitere Informationen finden Sie unter "Grundlegendes zu Abfragepläne" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].|  
-|distribution_type|**nvarchar(32)**|Die Art der Verteilung, die diesen Schritt unterzogen wird.|"AllNodes", "AllDistributions", "AllComputeNodes", 'ComputeNode', 'Distribution', 'SubsetNodes', 'SubsetDistributions","Nicht angegeben"|  
-|location_type|**nvarchar(32)**|Gibt an, in dem der Schritt ausgeführt wird.|"Compute", "Control", "DMS"|  
+|distribution_type|**nvarchar(32)**|Die Art der Verteilung, die diesen Schritt unterzogen wird.|'AllNodes', 'AllDistributions', 'AllComputeNodes', 'ComputeNode', 'Distribution', 'SubsetNodes', 'SubsetDistributions', 'Unspecified'|  
+|location_type|**nvarchar(32)**|Gibt an, in dem der Schritt ausgeführt wird.|'Compute', 'Control', 'DMS'|  
 |status|**nvarchar(32)**|Der Status dieses Schritts.|Ausstehend "," ausgeführt wird, abgeschlossen, fehlgeschlagen, UndoFailed, PendingCancel abgebrochen, rückgängig gemacht, abgebrochen|  
 |error_id|**nvarchar(36)**|Eindeutige Id des Fehlers bei diesem Schritt verknüpft sind, sofern vorhanden.|Finden Sie unter Fehler-ID des [sys.dm_pdw_errors &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). NULL, wenn kein Fehler aufgetreten ist.|  
 |start_time|**datetime**|Zeitpunkt, zu dem der Schritt Ausführung begonnen hat.|Kleiner oder gleich der aktuellen Uhrzeit und größer oder gleich End_compile_time der Abfrage zu der dieser Schritt gehört. Weitere Informationen zu Abfragen finden Sie unter [sys.dm_pdw_exec_requests &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  

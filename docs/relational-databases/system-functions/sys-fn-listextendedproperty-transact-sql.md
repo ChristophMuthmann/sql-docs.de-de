@@ -8,13 +8,15 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - fn_listextendedproperty
 - fn_listextendedproperty_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_listextendedproperty function
 - displaying extended properties
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - extended properties [SQL Server], columns
 - table extended properties [SQL Server]
 ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 24cf6367e6326500a8dc76d91125d4e648956ff0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8402b831a4f74aebd67df3dcf7050663a2d0c3fa
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,10 +63,10 @@ fn_listextendedproperty (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- {Standard | "*Property_name*" | NULL}  
+ { default | '*property_name*' | NULL}  
  Ist der Name der Eigenschaft. *Property_name* ist **Sysname**. Eine gültige Eingabe ist default, NULL oder ein Eigenschaftsname.  
   
- {Standard | "*level0_object_type*" | NULL}  
+ { default | '*level0_object_type*' | NULL}  
  Der Benutzer oder benutzerdefinierte Typ. *level0_object_type* ist **varchar(128)**, hat den Standardwert NULL. Gültige Eingaben sind ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER und NULL.  
   
 > [!IMPORTANT]  
@@ -73,8 +75,8 @@ fn_listextendedproperty (
  {Standard | "*level0_object_name*" | NULL}  
  Der Name des angegebenen Objekttyps der Ebene 0. *level0_object_name* ist **Sysname** hat den Standardwert NULL. Eine gültige Eingabe ist default, NULL oder ein Objektname.  
   
- {Standard | "*level1_object_type*" | NULL}  
- Der Typ des Objekts der Ebene 1. *level1_object_type* ist **varchar(128)** hat den Standardwert NULL. Gültige Eingabewerte sind AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION und NULL.  
+ { default | '*level1_object_type*' | NULL }  
+ Der Typ des Objekts der Ebene 1. *level1_object_type* is **varchar(128)** with a default of NULL. Gültige Eingabewerte sind AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION und NULL.  
   
 > [!NOTE]  
 >  default ergibt NULL, und 'default' ergibt den Objekttyp DEFAULT.  
@@ -82,8 +84,8 @@ fn_listextendedproperty (
  {Standard | "*level1_object_name*" | NULL}  
  Der Name des angegebenen Objekttyps der Ebene 1. *level1_object_name* ist **Sysname** hat den Standardwert NULL. Eine gültige Eingabe ist default, NULL oder ein Objektname.  
   
- {Standard | "*level2_object_type*" | NULL}  
- Der Typ des Objekts der Ebene 2. *level2_object_type* ist **varchar(128)** hat den Standardwert NULL. Gültige Eingaben sind DEFAULT, default (ergibt NULL) und NULL. Gültige Eingabewerte für *level2_object_type* Spalte, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER und NULL sind.  
+ { default | '*level2_object_type*' |NULL }  
+ Der Typ des Objekts der Ebene 2. *level2_object_type* is **varchar(128)** with a default of NULL. Gültige Eingaben sind DEFAULT, default (ergibt NULL) und NULL. Gültige Eingabewerte für *level2_object_type* Spalte, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER und NULL sind.  
   
  {Standard | "*level2_object_name*" | NULL}  
  Der Name des angegebenen Objekttyps der Ebene 2. *level2_object_name* ist **Sysname** hat den Standardwert NULL. Eine gültige Eingabe ist default, NULL oder ein Objektname.  
@@ -96,7 +98,7 @@ fn_listextendedproperty (
 |objtype|**sysname**|  
 |objname|**sysname**|  
 |name|**sysname**|  
-|value|**sql_variant**|  
+|Wert|**sql_variant**|  
   
  Wenn die zurückgegebene Tabelle leer ist, besitzt das Objekt keine erweiterten Eigenschaften oder der Benutzer hat keine Berechtigungen zum Auflisten der erweiterten Eigenschaften des Objekts. Beim Zurückgeben erweiterter Eigenschaften für die Datenbank selbst weisen die Spalten objtype und objname den Wert NULL auf.  
   
@@ -182,9 +184,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_addextendedproperty &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
- [Sp_dropextendedproperty &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [Sp_updateextendedproperty &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
- [Sys. extended_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
+ [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
+ [sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

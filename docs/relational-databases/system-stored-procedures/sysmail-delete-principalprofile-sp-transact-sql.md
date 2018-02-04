@@ -1,5 +1,5 @@
 ---
-title: Sysmail_delete_principalprofile_sp (Transact-SQL) | Microsoft Docs
+title: sysmail_delete_principalprofile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_principalprofile_sp_TSQL
 - sysmail_delete_principalprofile_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_delete_principalprofile_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_delete_principalprofile_sp
 ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 02e8d78d6807a2432b0b94f208f532bcd5279c21
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 204daab0d90b050237d864c23729cf2544d68fe4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +47,16 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@principal_id**  =] *Principal_id*  
+ [ **@principal_id** = ] *principal_id*  
  Die ID des Datenbankbenutzers oder der Rolle in der **Msdb** Datenbank für die Zuordnung zu löschen. *principal_id* ist vom Datentyp **int**und hat den Standardwert NULL. Um ein privates Profil für ein öffentliches Profil festzulegen, geben Sie die Prinzipal-ID **0** oder den Prinzipalnamen **'public'**. Es muss entweder *principal_id* oder *principal_name* angegeben werden.  
   
- [  **@principal_name**  =] **"***Principal_name***"**  
+ [ **@principal_name** = ] **'***principal_name***'**  
  Der Name des Datenbankbenutzers oder der Rolle in der **Msdb** Datenbank für die Zuordnung zu löschen. *principal_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Um ein privates Profil für ein öffentliches Profil festzulegen, geben Sie die Prinzipal-ID **0** oder den Prinzipalnamen **'public'**. Es muss entweder *principal_id* oder *principal_name* angegeben werden.  
   
- [  **@profile_id**  =] *Profile_id*  
+ [ **@profile_id** = ] *profile_id*  
  Die ID des Profils für die Zuordnung, die gelöscht werden soll. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
- [  **@profile_name**  =] **"***Profile_name***"**  
+ [ **@profile_name** = ] **'***profile_name***'**  
  Der Name des Profils für die Zuordnung, die gelöscht werden soll. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysdtslog90_TSQL
 - sysdtslog90
-dev_langs: TSQL
-helpviewer_keywords: sysssislog system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysssislog system table
 ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: spelluru
 ms.author: spelluru
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2073eac1ce40cd735b4fde72744e5bc56f24686f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 479c6158f7c26cde133fae66164dda89b9a39888
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +37,10 @@ ms.lasthandoff: 11/17/2017
   Enthält eine Zeile für jeden Protokollierungseintrag, der von Paketen oder deren Tasks und Containern zur Laufzeit generiert wird. Diese Tabelle wird in der MSDB-Datenbank erstellt, wenn Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installieren. Wenn Sie die Protokollierung so konfigurieren, dass eine andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank protokolliert wird, wird in der angegebenen Datenbank eine sysssislog-Tabelle mit diesem Format erstellt.  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Schreibt Protokolleinträge in diese Tabelle **nur** Pakete beim Verwenden der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Protokollanbieter.  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Schreibt Protokolleinträge in diese Tabelle **nur** Pakete beim Verwenden der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Protokollanbieter.  
   
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Der eindeutige Bezeichner des Protokollierungseintrags.|  
 |Ereignis|**sysname**|Der Name des Ereignisses, das den Protokollierungseintrag generiert hat.|  
@@ -53,6 +56,6 @@ ms.lasthandoff: 11/17/2017
 |message|**nvarchar**|Eine Beschreibung des Ereignisses sowie die mit dem Ereignis verknüpften Informationen.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md)   
+ [Integrationsservices &#40; SSIS &#41; Protokollierung](../../integration-services/performance/integration-services-ssis-logging.md)   
   
   

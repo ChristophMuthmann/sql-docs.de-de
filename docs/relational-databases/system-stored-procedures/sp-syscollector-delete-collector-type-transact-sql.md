@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_collector_type
 - sp_syscollector_delete_collector_type_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_delete_collector_type
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9aff09b2400158d36f590422c2ec7883bc24d99
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 14bfab3376da20b677414106e293ad21103e52dc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +48,10 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@collector_type_uid =** ] **"***Collector_type_uid***"**  
- Ist die GUID für den sammlertyp. *Collector_type_uid* ist **"uniqueidentifier"** und muss einen Wert aufweisen, wenn *Namen* ist NULL.  
+ [ **@collector_type_uid =** ] **'***collector_type_uid***'**  
+ Ist die GUID für den sammlertyp. *collector_type_uid* is **uniqueidentifier** and must have a value if *name* is NULL.  
   
- [  **@name =** ] **"***Namen***"**  
+ [ **@name =** ] **'***name***'**  
  Der Name des Sammlertyps. *Namen* ist **Sysname** und muss einen Wert aufweisen, wenn *Collector_type_uid* ist NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

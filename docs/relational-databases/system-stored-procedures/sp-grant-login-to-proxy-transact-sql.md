@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_grant_login_to_proxy
 - sp_grant_login_to_proxy_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_grant_login_to_proxy
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_grant_login_to_proxy
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a1d3fb0ea64fc6e6545c5eb5754853d667ff4110
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b5a4788da049ef1d3c69f604aacdf9000f9ed624
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spgrantlogintoproxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +57,13 @@ sp_grant_login_to_proxy
  [  **@fixed_server_role** =] **"***Fixed_server_role***"**  
  Die feste Serverrolle, für die der Zugriff gewährt werden soll. *fixed_server_role* ist vom Datentyp **nvarchar(256)**und hat den Standardwert NULL. Einer der  **@login_name** ,  **@fixed_server_role** , oder  **@msdb_role**  muss angegeben werden, oder die gespeicherte Prozedur fehlschlägt.  
   
- [  **@msdb_role** =] '*Msdb_role*"  
+ [ **@msdb_role**= ] '*msdb_role*'  
  Die Datenbankrolle in der **msdb** -Datenbank, für die der Zugriff gewährt werden soll. *msdb_role* ist vom Datentyp **nvarchar(256)**und hat den Standardwert NULL. Einer der  **@login_name** ,  **@fixed_server_role** , oder  **@msdb_role**  muss angegeben werden, oder die gespeicherte Prozedur fehlschlägt.  
   
- [  **@proxy_id** =] *Id*  
+ [ **@proxy_id**= ] *id*  
  Der Bezeichner des Proxys, für den der Zugriff erteilt werden soll. *id* ist vom Datentyp **int**und hat den Standardwert NULL. Einer der  **@proxy_id**  oder  **@proxy_name**  muss angegeben werden, oder die gespeicherte Prozedur fehlschlägt.  
   
- [  **@proxy_name** =] **"***Proxy_name***"**  
+ [ **@proxy_name**= ] **'***proxy_name***'**  
  Der Name des Proxys, für den der Zugriff erteilt werden soll. *proxy_name* ist vom Datentyp **nvarchar(256)**und hat den Standardwert NULL. Einer der  **@proxy_id**  oder  **@proxy_name**  muss angegeben werden, oder die gespeicherte Prozedur fehlschlägt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -87,7 +90,7 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [Sp_add_proxy &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [Sp_revoke_login_from_proxy &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
+ [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   
   

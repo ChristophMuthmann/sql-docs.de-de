@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobhistory_TSQL
 - sp_help_jobhistory
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobhistory
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobhistory
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c927767e00429c9ccdbe3143ade99cbe363950d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: de1836ee52354e96341386db5dfd33297f2d9be6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,37 +60,37 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@job_id=** ] *Job_id*  
+ [ **@job_id=** ] *job_id*  
  Die Auftrags-ID *Job_id* ist **"uniqueidentifier"**, hat den Standardwert NULL.  
   
- [  **@job_name=** ] **"***Job_name***"**  
+ [ **@job_name=** ] **'***job_name***'**  
  Der Name des Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@step_id=** ] *Step_id*  
+ [ **@step_id=** ] *step_id*  
  Die Schritt-ID. *Step_id* ist **Int**, hat den Standardwert NULL.  
   
- [  **@sql_message_id=** ] *Sql_message_id*  
+ [ **@sql_message_id=** ] *sql_message_id*  
  Die ID der Fehlermeldung, die von Microsoft SQL Server beim Ausführen des Auftrags zurückgegeben wurde. *Sql_message_id* ist **Int**, hat den Standardwert NULL.  
   
- [  **@sql_severity=** ] *Sql_severity*  
+ [ **@sql_severity=** ] *sql_severity*  
  Der Schweregrad der Fehlermeldung, die von SQL Server beim Ausführen des Auftrags zurückgegeben wurde. *Sql_severity* ist **Int**, hat den Standardwert NULL.  
   
- [  **@start_run_date=** ] *Start_run_date*  
+ [ **@start_run_date=** ] *start_run_date*  
  Das Datum, an dem der Auftrag gestartet wurde. *Start_run_date*ist **Int**, hat den Standardwert NULL. *Start_run_date* muss, werden die im Formular eingegebenen YYYYMMDD, wobei YYYY ein vier Zeichen bestehende Jahreszahl ist, MM ein zwei Zeichen bestehenden Monatsnamen und DD ein zwei Zeichen-Tagesname ist.  
   
- [  **@end_run_date=** ] *End_run_date*  
+ [ **@end_run_date=** ] *end_run_date*  
  Das Datum, an dem der Auftrag abgeschlossen wurde. *End_run_date* ist **Int**, hat den Standardwert NULL. *End_run_date*muss, werden die im Formular eingegebenen YYYYMMDD, wobei YYYY ein vierstelliges Jahr ist, MM ein zwei Zeichen bestehenden Monatsnamen und DD ein zwei Zeichen-Tagesname ist.  
   
- [  **@start_run_time=** ] *Start_run_time*  
+ [ **@start_run_time=** ] *start_run_time*  
  Die Uhrzeit, zu der der Auftrag gestartet wurde. *Start_run_time* ist **Int**, hat den Standardwert NULL. *Start_run_time*muss, werden die im Formular eingegebenen HHMMSS, wobei "hh" ein zwei Zeichen Stunde des Tages ist, MM eine zwei Zeichen des Tages, und SS eine zwei Zeichen Sekunde des Tages handelt es sich.  
   
- [  **@end_run_time=** ] *End_run_time*  
+ [ **@end_run_time=** ] *end_run_time*  
  Die Uhrzeit, zu der die Ausführung des Auftrags abgeschlossen wurde. *End_run_time* ist **Int**, hat den Standardwert NULL. *End_run_time*muss, werden die im Formular eingegebenen HHMMSS, wobei "hh" ein zwei Zeichen Stunde des Tages ist, MM eine zwei Zeichen des Tages, und SS eine zwei Zeichen Sekunde des Tages handelt es sich.  
   
  [  **@minimum_run_duration=** ] *Minimum_run_duration*  
  Die minimale Zeit für den Abschluss des Auftrags. *Minimum_run_duration* ist **Int**, hat den Standardwert NULL. *Minimum_run_duration*muss, werden die im Formular eingegebenen HHMMSS, wobei "hh" ein zwei Zeichen Stunde des Tages ist, MM eine zwei Zeichen des Tages, und SS eine zwei Zeichen Sekunde des Tages handelt es sich.  
   
- [  **@run_status=** ] *Run_status*  
+ [ **@run_status=** ] *run_status*  
  Der Ausführungsstatus des Auftrags. *Run_status* ist **Int**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
 |Wert|Beschreibung|  
@@ -102,13 +105,13 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
  [  **@minimum_retries=** ] *Minimum_retries*  
  Die Mindestanzahl von Wiederholungsversuchen für die Ausführung eines Auftrags. *Minimum_retries* ist **Int**, hat den Standardwert NULL.  
   
- [  **@oldest_first=** ] *Oldest_first*  
+ [ **@oldest_first=** ] *oldest_first*  
  Gibt an, ob bei der Ausgabe die ältesten Aufträge zuerst angezeigt werden sollen. *Oldest_first* ist **Int**, hat den Standardwert **0**, der die neuesten Aufträge zuerst dargestellt. **1** die ältesten Aufträge zuerst präsentiert.  
   
- [  **@server=** ] **"***Server***"**  
+ [ **@server=** ] **'***server***'**  
  Der Name des Servers, auf dem der Auftrag ausgeführt wurde. *Server* ist **nvarchar(30)**, hat den Standardwert NULL.  
   
- [  **@mode=** ] **"***Modus***"**  
+ [ **@mode=** ] **'***mode***'**  
  Gibt an, ob SQL Server alle Spalten im Resultset ausgegeben wird (**vollständige**) oder eine Zusammenfassung der Spalten. *Modus* ist **vom Datentyp varchar(7)**, hat den Standardwert **Zusammenfassung**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -119,7 +122,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**"instance_id"**|**int**|Verlaufseintrags-ID|  
+|**instance_id**|**int**|Verlaufseintrags-ID|  
 |**job_id**|**uniqueidentifier**|ID des Auftrags.|  
 |**job_name**|**sysname**|Name des Auftrags.|  
 |**step_id**|**int**|Schritt-ID (werden **0** für einen Auftragsverlauf).|  

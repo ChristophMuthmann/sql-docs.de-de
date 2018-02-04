@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - smart admin functions
 - functions, smart admin
 ms.assetid: 1d513d9c-05af-446d-8eba-42f55efcc221
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fbba1c20f48ddf4b93be39803c2a7d83b1a52c6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e591d091e6588d1f3f2366a1481b06d90f9b720d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="managed-backup-functions-transact-sql"></a>Verwaltete Sicherung Funktionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bietet die folgenden Funktionen für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet die folgenden Funktionen für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [managed_backup.fn_backup_db_config &#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-backup-db-config-transact-sql.md)  

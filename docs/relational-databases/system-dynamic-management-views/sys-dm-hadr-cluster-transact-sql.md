@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - dm_hadr_cluster_HADR
 - sys.dm_hadr_cluster_TSQL
 - dm_hadr_cluster
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_cluster catalog view
 - Availability Groups [SQL Server], WSFC clusters
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea7fef3018ef9e7c88100c1a0c3a7b444bfaeac7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 545712f1469d46c2d82dc2f36bd0084ceaf94daf
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmhadrcluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**Clustername**|**vom Datentyp nvarchar(128)**|Der Name des WSFC-Clusters, der die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-fähigen Instanzen von [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] hostet.|  
+|**cluster_name**|**nvarchar(128)**|Der Name des WSFC-Clusters, der die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-fähigen Instanzen von [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] hostet.|  
 |**quorum_type**|**tinyint**|Der Typ des Quorums, der von diesem WSFC-Cluster verwendet wird. Folgende Werte sind möglich:<br /><br /> 0 = Knotenmehrheit Diese Quorumkonfiguration kann Fehler bei der Hälfte der Knoten (aufgerundet) minus einem tolerieren. In einem Cluster mit sieben Knoten kann diese Quorumkonfiguration z. B. drei Knotenfehler tolerieren.<br /><br /> 1 = Knoten- und Datenträgermehrheit Wenn der Datenträgerzeuge online bleibt, kann diese Quorumkonfiguration Fehler bei der Hälfte der Knoten (aufgerundet) tolerieren. So kann ein Cluster mit sechs Knoten, in dem der Datenträgerzeuge online ist, beispielsweise drei Knotenfehler tolerieren. Wenn der Datenträgerzeuge offline geht oder ein Datenträgerzeugenfehler auftritt, kann diese Quorumkonfiguration Fehler bei der Hälfte der Knoten (aufgerundet) minus einem Knoten tolerieren. Ein Cluster mit sechs Knoten, in dem ein Datenträgerzeugenfehler aufgetreten ist, kann beispielsweise zwei (3 minus 1 = 2) Knotenfehler tolerieren.<br /><br /> 2 = Knoten- und Dateifreigabemehrheit Diese Quorumkonfiguration funktioniert auf eine ähnliche Weise wie die Knoten- und Datenträgermehrheit, verwendet aber einen Dateifreigabenzeugen statt eines Datenträgerzeugen.<br /><br /> 3 = Keine Mehrheit: Nur Datenträger Wenn der Quorumdatenträger online ist, kann diese Quorumkonfiguration Fehler bei allen Knoten außer einem tolerieren.|  
 |**quorum_type_desc**|**varchar(50)**|Beschreibung von **quorum_type**. Folgende Werte sind möglich:<br /><br /> NODE_MAJORITY<br /><br /> NODE_AND_DISK_MAJORITY<br /><br /> NODE_AND_FILE_SHARE_MAJORITY<br /><br /> NO_MAJORITY:_DISK_ONLY|  
 |**quorum_state**|**tinyint**|Status des WSFC-Quorums. Folgende Werte sind möglich:<br /><br /> 0 = Unbekannter Quorumstatus<br /><br /> 1 = Normales Quorum<br /><br /> 2 = Erzwungenes Quorum|  
@@ -54,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen für Always On-Verfügbarkeitsgruppen (Transact-SQL)](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Katalogsichten Always On-Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Überwachen von Verfügbarkeitsgruppen (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Überwachen von Verfügbarkeitsgruppen &#40; Transact-SQL &#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)  
   
   

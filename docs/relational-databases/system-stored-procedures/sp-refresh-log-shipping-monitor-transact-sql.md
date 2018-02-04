@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_refresh_log_shipping_monitor
 - sp_refresh_log_shipping_monitor_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_refresh_log_shipping_monitor
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_refresh_log_shipping_monitor
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a2533d1ecd4617fe1aea38e08be16f2b293b386
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7731ce78547a36284e95a43d80464c8e84ceccba
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +50,10 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@agent_id=** ] **"***Agent_id***"**  
+ [ **@agent_id=** ] **'***agent_id***'**  
  Die primäre ID für Sicherungsvorgänge oder die sekundäre ID für Kopier- oder Wiederherstellungsvorgänge. *agent_id* ist vom Datentyp **uniqueidentifier** und darf nicht NULL sein.  
   
- [  **@agent_type=** ] **"***Agent_type***"**  
+ [ **@agent_type=** ] **'***agent_type***'**  
  Der Typ des Protokollversandauftrags.  
   
  0 = Sicherungsauftrag  
@@ -61,7 +64,7 @@ sp_refresh_log_shipping_monitor
   
  *agent_type* ist vom Datentyp **tinyint** und kann nicht NULL sein.  
   
- [  **@database=** ] **"***Datenbank***"**  
+ [ **@database=** ] **'***database***'**  
  Die primäre oder sekundäre Datenbank, die von der Protokollierung oder von Sicherungs- oder Wiederherstellungs-Agents verwendet wird.  
   
  [ **@mode** ] *n*  
@@ -86,7 +89,7 @@ sp_refresh_log_shipping_monitor
  Nur Mitglieder der festen Serverrolle **sysadmin** können diese Prozedur ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Über den Protokollversand &#40; SQLServer &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

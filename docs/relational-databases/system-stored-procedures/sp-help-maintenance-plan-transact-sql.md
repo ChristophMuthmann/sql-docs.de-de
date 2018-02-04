@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_maintenance_plan_TSQL
 - sp_help_maintenance_plan
-dev_langs: TSQL
-helpviewer_keywords: sp_help_maintenance_plan
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_maintenance_plan
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a48991c0baec6c8466d0ce33bee730d0948c97e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e5669438c159010e1b5011418df913c3c2743aff
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +51,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@plan_id =**] **"***" Plan_id "***"**  
+ [ **@plan_id =**] **'***plan_id***'**  
  Gibt die Plan-ID des Wartungsplans an. *"Plan_id"* ist **"uniqueidentifier"**. Die Standardeinstellung ist NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -61,7 +64,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**"Plan_id"**|**uniqueidentifier**|ID des Wartungsplans.|  
+|**plan_id**|**uniqueidentifier**|ID des Wartungsplans.|  
 |**plan_name**|**sysname**|Name des Wartungsplans.|  
 |**date_created**|**datetime**|Erstellungsdatum des Wartungsplans.|  
 |**Besitzer**|**sysname**|Besitzer des Wartungsplans.|  

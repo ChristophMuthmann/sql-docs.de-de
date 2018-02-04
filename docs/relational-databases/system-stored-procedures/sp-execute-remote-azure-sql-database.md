@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - remote execution
 - queries, remote execution
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1fabc150e92d9ca23196fbc838e5691267e9f38
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a63fcd61563499894205c3cc55323480e8a805d7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>Sp_execute_remote (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  [ @data_source_name =] *Datasourcename*  
  Identifiziert die externe Datenquelle, in dem die Anweisung ausgeführt wird. Finden Sie unter [externe Datenquelle erstellen &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md). Die externe Datenquelle kann vom Typ "RDBMS" oder "SHARD_MAP_MANAGER" sein.  
   
- [ @stmt=] *Anweisung*  
+ [ @stmt= ] *statement*  
  Ist eine Unicode-Zeichenfolge, enthält eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder eines Batches. @stmteine Unicode-Konstante oder eine Unicode-Variable muss sein. Komplexere Unicodeausdrücke, wie z. B. die Verkettung von zwei Zeichenfolgen mit dem +-Operator, sind nicht zulässig. Zeichenkonstanten sind nicht zulässig. Wenn eine Unicode-Konstante angegeben wird, muss er mit vorangestellt ein **N**. Beispielsweise die Unicode-Konstante **N 'Sp_who'** gültig ist, aber die Zeichenkonstante **'Sp_who'** nicht. Die Länge der Zeichenfolge wird nur durch den verfügbaren Arbeitsspeicher des Datenbankservers begrenzt. Auf 64-Bit-Servern, die Größe der Zeichenfolge ist auf 2 GB sind, die maximale Größe des beschränkt **nvarchar(max)**.  
   
 > [!NOTE]  
@@ -61,10 +62,10 @@ sp_execute_remote [ @data_source_name = ] datasourcename
   
  Für jeden Parameter in @stmt ist ein entsprechender Eintrag in der @params-Parameterdefinitionsliste und in der Parameterwerteliste erforderlich.  
   
- [ @params=] N'@*Parameter_name**Data_type* [,... *n* ] '  
+ [ @params= ] N'@*parameter_name**data_type* [ ,... *n* ] '  
  Eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in @stmt eingebettet wurden. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n*ist ein Platzhalter, der zusätzliche Parameterdefinitionen. Jeder Parameter im angegebenen @stmtmust definiert werden, @params. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung bzw. ein solcher Batch in @stmt keine Parameter enthält, ist @params nicht erforderlich. Der Standardwert für diesen Parameter ist NULL.  
   
- [ @param1=] '*value1*"  
+ [ @param1= ] '*value1*'  
  Der Wert für den ersten Parameter, der in der Parameterzeichenfolge definiert ist. Bei diesem Wert kann es sich um eine Unicode-Konstante oder eine Unicode-Variable handeln. Für jeden Parameter in @stmt muss ein Parameterwert angegeben werden. Die Werte sind nicht erforderlich, wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder der -Batch in @stmt keine Parameter aufweist.  
   
  *n*  
@@ -111,5 +112,5 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 ## <a name="see-also"></a>Siehe auch:
 
 [ERSTELLEN VON DATENBANKWEITE ANMELDEINFORMATIONEN](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
-[Erstellen der EXTERNEN Datenquelle (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
+[CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
     

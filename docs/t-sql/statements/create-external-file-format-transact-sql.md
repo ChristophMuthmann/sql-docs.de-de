@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL FILE FORMAT
 - CREATE_EXTERNAL_FILE_FORMAT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - External
 - External, file format
 - PolyBase, external file format
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ab389a5c811f915ff497057a5daf12374f1cedb7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8fd2fa33a8a9107c86cfda7e0a628ab282efa534
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -106,22 +108,22 @@ WITH (
  *file_format_name*  
  Gibt einen Namen für das externe Dateiformat an.
   
- FORMAT_TYPE gibt das Format der externen Daten.
+ FORMAT_TYPE = [ PARQUET | ORC | RCFILE | PARQUET] Specifies the format of the external data.
   
- PARQUET gibt ein Parquet-Format an.
+   -   PARQUET gibt ein Parquet-Format an.
   
- ORC  
- Gibt ein Format optimiert Zeile Einspaltig (ORC). Diese Option erfordert Hive 0,11 oder höher auf dem externen Hadoop-Cluster. Hadoop bietet das Dateiformat ORC eine bessere Leistung als das Dateiformat RCFILE und Komprimierung.
-  
- RCFILE (in Kombination mit SERDE_METHOD = *SERDE_method*) gibt einen Datensatz Einspaltig Dateiformat (RcFile). Diese Option müssen Sie eine Hive-Serialisierungsprogramm, das Deserialisierungsprogramm (SerDe)-Methode angeben. Diese Anforderung ist identisch, wenn Sie in Hadoop Hive/HiveQL, zum Abfragen der RC-Dateien verwenden. Beachten Sie, dass die SerDe-Methode für die Groß-/Kleinschreibung beachtet wird.
-  
- Beispiele zur Angabe von RCFile mit zwei SerDe-Methoden, die PolyBase unterstützt.
-  
--   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
-  
--   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
-  
- DELIMITEDTEXT gibt ein Textformat mit Spaltentrennzeichen, so genannte Feldabschlusszeichen.
+   -   ORC  
+   Gibt ein Format optimiert Zeile Einspaltig (ORC). Diese Option erfordert Hive 0,11 oder höher auf dem externen Hadoop-Cluster. Hadoop bietet das Dateiformat ORC eine bessere Leistung als das Dateiformat RCFILE und Komprimierung.
+
+   -   RCFILE (in Kombination mit SERDE_METHOD = *SERDE_method*) gibt einen Datensatz Einspaltig Dateiformat (RcFile). Diese Option müssen Sie eine Hive-Serialisierungsprogramm, das Deserialisierungsprogramm (SerDe)-Methode angeben. Diese Anforderung ist identisch, wenn Sie in Hadoop Hive/HiveQL, zum Abfragen der RC-Dateien verwenden. Beachten Sie, dass die SerDe-Methode für die Groß-/Kleinschreibung beachtet wird.
+
+   Beispiele zur Angabe von RCFile mit zwei SerDe-Methoden, die PolyBase unterstützt.
+
+    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
+
+    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
+
+   -   DELIMITEDTEXT gibt ein Textformat mit Spaltentrennzeichen, so genannte Feldabschlusszeichen.
   
  Feldabschlusszeichen = *Feldabschlusszeichen* gilt nur für durch Trennzeichen getrennten Textdateien. Das Feldabschlusszeichen gibt ein oder mehrere Zeichen, die kennzeichnen das Ende jedes Feld (Spalte) in der Datei mit Texttrennzeichen an. Die Standardeinstellung ist der Pipe-Zeichen ꞌ auf | ꞌ auf. Garantierte Unterstützung wird empfohlen, mindestens ein ASCII-Zeichen.
   
@@ -152,7 +154,7 @@ WITH (
   
 -   STRING_DELIMITER = '0x7E0x7E'  -- Two tildes (for example, ~~)
   
- Datum\_FORMAT = *Datetime_format* gibt ein benutzerdefiniertes Format für alle Datums- und Zeitdaten, die in einer durch Trennzeichen getrennte Textdatei angezeigt werden. Wenn die Quelldatei "DateTime" Standardformate verwendet wird, ist diese Option nicht erforderlich. Pro Datei ist nur eine benutzerdefinierte Datetime-Format zulässig. Sie können nicht mehrere benutzerdefinierte Datetime-Formate pro Datei angeben. Allerdings können Sie mehrere Datetime-Formate verwenden, ist jeweils das Standardformat für den jeweiligen Datentyp in der externen Tabellendefinition.
+Datum\_FORMAT = *Datetime_format* gibt ein benutzerdefiniertes Format für alle Datums- und Zeitdaten, die in einer durch Trennzeichen getrennte Textdatei angezeigt werden. Wenn die Quelldatei "DateTime" Standardformate verwendet wird, ist diese Option nicht erforderlich. Pro Datei ist nur eine benutzerdefinierte Datetime-Format zulässig. Sie können nicht mehrere benutzerdefinierte Datetime-Formate pro Datei angeben. Allerdings können Sie mehrere Datetime-Formate verwenden, ist jeweils das Standardformat für den jeweiligen Datentyp in der externen Tabellendefinition.
 
 PolyBase verwendet nur die benutzerdefinierten Datumsformat für das Importieren von Daten. Das benutzerdefinierte Format wird nicht zum Schreiben von Daten in eine externe Datei verwendet.
 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dbo.sysjobhistory
 - sysjobhistory
 - sysjobhistory_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysjobhistory system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysjobhistory system table
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1d4790ab20c01be27868696b989ed8228acec6c6
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 70897838b8fa8ce10c83308829cd1f5cba87e40d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +42,7 @@ ms.lasthandoff: 01/02/2018
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**"instance_id"**|**int**|Eindeutiger Bezeichner für die Zeile.|  
+|**instance_id**|**int**|Eindeutiger Bezeichner für die Zeile.|  
 |**job_id**|**uniqueidentifier**|Auftrags-ID.|  
 |**step_id**|**int**|ID des Schritts im Auftrag.|  
 |**step_name**|**sysname**|Name des Schritts|  

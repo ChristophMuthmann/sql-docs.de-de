@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collector_type
 - sp_syscollector_create_collector_type_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_syscollector_create_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc3ab586c49fa7dad4aa9886944b89655e98cbfd
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4165bdb2ddf2bdfa713fb88a787221a9838bce97
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,23 +53,23 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @collector_type_uid =] '*Collector_type_uid*"  
- Ist die GUID für den sammlertyp. *Collector_type_uid* ist **"uniqueidentifier"** und wenn er NULL ist, es wird automatisch erstellt und als Ausgabe zurückgegeben.  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
+ Ist die GUID für den sammlertyp. *collector_type_uid* is **uniqueidentifier** and if it is NULL it will be automatically created and returned as OUTPUT.  
   
- [ @name =] '*Namen*"  
+ [ @name = ] '*name*'  
  Der Name des Sammlertyps. *Namen* ist **Sysname** und muss angegeben werden.  
   
- [ @parameter_schema =] '*Parameter_schema*"  
+ [ @parameter_schema = ] '*parameter_schema*'  
  Das XML-Schema für diesen Sammlertyp. *Parameter_schema* ist **Xml** hat den Standardwert NULL.  
   
- [ @parameter_formatter =] '*Parameter_formatter*"  
+ [ @parameter_formatter = ] '*parameter_formatter*'  
  Die Vorlage, mit der das XML für die Eigenschaftenseite des Sammlungssatzes umgewandelt werden kann. *Parameter_formatter* ist **Xml** hat den Standardwert NULL.  
   
- [@collection_package_id =] *Collection_package_id*  
- Ein eindeutiger lokaler Bezeichner, der auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Sammlungspaket verweist, das vom Sammlungssatz verwendet wird. *Collection_package_id* ist **uniqueidentifier** und ist erforderlich.  
+ [@collection_package_id = ] *collection_package_id*  
+ Ein eindeutiger lokaler Bezeichner, der auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Sammlungspaket verweist, das vom Sammlungssatz verwendet wird. *collection_package_id* is **uniqueidentifer** and is required.  
   
- [@upload_package_id =] *Upload_package_id*  
- Ein eindeutiger lokaler Bezeichner, der auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Uploadpaket verweist, das vom Sammlungssatz verwendet wird. *Upload_package_id* ist **"uniqueidentifier"** und ist erforderlich.  
+ [@upload_package_id = ] *upload_package_id*  
+ Ein eindeutiger lokaler Bezeichner, der auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Uploadpaket verweist, das vom Sammlungssatz verwendet wird. *upload_package_id* is **uniqueidentifier** and is required.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

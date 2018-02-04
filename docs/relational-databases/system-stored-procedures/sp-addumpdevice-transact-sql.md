@@ -8,32 +8,34 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_addumpdevice_TSQL
 - sp_addumpdevice
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa3e7996f56f71b3028022b869b3e3c3a5480fb5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dad0547ea803cfbf709b36f078d552435c848900
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
 
 Fügt einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Sicherungsmedium hinzu.  
   
@@ -52,18 +54,18 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@devtype=** ] **"***Device_type***"**  
+ [ **@devtype=** ] **'***device_type***'**  
  Ist der Typ des Sicherungsmediums. *Device_type* ist **varchar(20)**, hat keinen Standardwert und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
-|**Datenträger**|Festplattendatei als Sicherungsmedium.|  
-|**Band**|Alle von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows unterstützten Bandmedien.<br /><br /> Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
+|**disk**|Festplattendatei als Sicherungsmedium.|  
+|**tape**|Alle von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows unterstützten Bandmedien.<br /><br /> Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird.|  
   
  [  **@logicalname =** ] **"***Logical_name***"**  
  Der logische Name des Sicherungsmediums, das in der BACKUP- und in der RESTORE-Anweisung verwendet wird. *Logical_name* ist **Sysname**, hat keinen Standardwert und darf nicht NULL sein.  
   
- [  **@physicalname =** ] **"***Physical_name***"**  
+ [ **@physicalname =** ] **'***physical_name***'**  
  Der physische Name des Sicherungsmediums. Physische Namen müssen den Regeln für Dateinamen des Betriebssystems oder den UNC-Konventionen für Netzwerkgeräte entsprechen und einen vollständigen Pfad angeben. *Physical_name* ist **nvarchar(260)**, hat keinen Standardwert-Wert und darf nicht NULL sein.  
   
  Beim Erstellen eines Sicherungsmediums auf einem Remotenetzwerk-Speicherort sollten Sie sicherstellen, dass das Benutzerkonto, unter dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] gestartet wurde, über entsprechende Schreibberechtigungen auf dem Remotecomputer verfügt.  
@@ -73,10 +75,10 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 > [!NOTE]  
 >  Diese Prozedur gibt den angegebenen physischen Namen in den Katalog ein. Die Prozedur nimmt jedoch keine Erstellung des Mediums und keinen Zugriff auf das Medium vor.  
   
- [  **@cntrltype =** ] **"***Controller_type***"**  
+ [ **@cntrltype =** ] **'***controller_type***'**  
  Veraltet. Dieser Parameter wird ignoriert, wenn er angegeben wird. Er wird lediglich aus Gründen der Abwärtskompatibilität unterstützt. Neuen Implementierungen von **Sp_addumpdevice** sollte dieser Parameter weggelassen.  
   
- [  **@devstatus =** ] **"***Device_status***"**  
+ [ **@devstatus =** ] **'***device_status***'**  
  Veraltet. Dieser Parameter wird ignoriert, wenn er angegeben wird. Er wird lediglich aus Gründen der Abwärtskompatibilität unterstützt. Neuen Implementierungen von **Sp_addumpdevice** sollte dieser Parameter weggelassen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

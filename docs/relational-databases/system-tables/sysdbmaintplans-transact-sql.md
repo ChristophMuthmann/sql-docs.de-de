@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysdbmaintplans_TSQL
 - sysdbmaintplans
-dev_langs: TSQL
-helpviewer_keywords: sysdbmaintplans system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysdbmaintplans system table
 ms.assetid: 0363296a-3082-48a9-9eb5-a1020b2f541a
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c9e9dd779b6a84f76844d27cef19ae8ff7c7f9d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6297a26f046c82b628bc65de8131bc21dd6f59fd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdbmaintplans-transact-sql"></a>sysdbmaintplans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**"Plan_id"**|**uniqueidentifier**|ID des Datenbankwartungsplans.|  
+|**plan_id**|**uniqueidentifier**|ID des Datenbankwartungsplans.|  
 |**plan_name**|**sysname**|Name des Datenbankwartungsplans.|  
 |**date_created**|**datetime**|Erstellungsdatum des Datenbankwartungsplans.|  
 |**Besitzer**|**sysname**|Besitzer des Datenbankwartungsplans.|  

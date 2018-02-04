@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_schedule
 - sp_update_schedule_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_update_schedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_update_schedule
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
-caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: caeb6cf9ecf16a77b25bbb9b6a42ae865b077792
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 23d1d4b4cfdc7fb19cffff63de8cae84b2606d6e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdateschedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,19 +62,19 @@ sp_update_schedule
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@schedule_id =** ] *Schedule_id*  
+ [ **@schedule_id =** ] *schedule_id*  
  Der Bezeichner des Zeitplans, der geändert werden soll. *Schedule_id* ist **Int**, hat keinen Standardwert. Entweder *Schedule_id* oder *Schedule_name* muss angegeben werden.  
   
- [  **@name =** ] **"***Schedule_name***"**  
+ [ **@name =** ]  **'***schedule_name***'**  
  Der Name des zu ändernden Zeitplan. *Schedule_name*ist **Sysname**, hat keinen Standardwert. Entweder *Schedule_id* oder *Schedule_name* muss angegeben werden.  
   
  [  **@new_name** =] *Neuer_Name*  
  Der neue Name des Zeitplans. *New_name* ist **Sysname**, hat den Standardwert NULL. Wenn *New_name* NULL ist, der Namen des Zeitplans bleibt unverändert.  
   
- [  **@enabled =** ] *aktiviert*  
+ [ **@enabled =** ] *enabled*  
  Gibt den aktuellen Status des Zeitplans an. *aktiviert*ist **"tinyint"**, hat den Standardwert **1** (aktiviert). Wenn **0**, der Zeitplan ist nicht aktiviert. Wenn der Zeitplan nicht aktiviert ist, werden über diesen Zeitplan keine Aufträge ausgeführt.  
   
- [  **@freq_type =** ] *Freq_type*  
+ [ **@freq_type =** ] *freq_type*  
  Ein Wert, der angibt, wann ein Auftrag ausgeführt werden soll. *Freq_type*ist **Int**, hat den Standardwert **0**, und kann einen der folgenden Werte sein.  
   
 |Wert|Beschreibung|  
@@ -84,7 +87,7 @@ sp_update_schedule
 |**64**|Ausführen beim Start des SQLServerAgent-Diensts|  
 |**128**|Ausführen, wenn sich der Computer im Leerlauf befindet|  
   
- [  **@freq_interval =** ] *Freq_interval*  
+ [ **@freq_interval =** ] *freq_interval*  
  Die Tage, an denen ein Auftrag ausgeführt wird. *Freq_interval* ist **Int**, hat den Standardwert **0**, und hängt vom Wert der *Freq_type*.  
   
 |Wert des *Freq_type*|Auswirkung auf *Freq_interval*|  
@@ -97,20 +100,20 @@ sp_update_schedule
 |**64** (wenn der SQLServerAgent-Dienst startet)|*Freq_interval* wird nicht verwendet.|  
 |**128**|*Freq_interval* wird nicht verwendet.|  
   
- [  **@freq_subday_type =** ] *Freq_subday_type*  
- Gibt die Einheiten für *Freq_subday_interval**.* *Freq_subday_type*ist **Int**, hat den Standardwert **0**, und kann einen der folgenden Werte sein.  
+ [ **@freq_subday_type =** ] *freq_subday_type*  
+ Gibt die Einheiten für *Freq_subday_interval **.* *Freq_subday_type*ist **Int**, hat den Standardwert **0**, und kann einen der folgenden Werte sein.  
   
 |Wert|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
-|**0 x 1**|Zum angegebenen Zeitpunkt|  
-|**0 x 2**|Sekunden|  
-|**0 x 4**|Minuten|  
-|**0 x 8**|Stunden|  
+|**0x1**|Zum angegebenen Zeitpunkt|  
+|**0x2**|Sekunden|  
+|**0x4**|Minuten|  
+|**0x8**|Stunden|  
   
- [  **@freq_subday_interval =** ] *Freq_subday_interval*  
+ [ **@freq_subday_interval =** ] *freq_subday_interval*  
  Die Anzahl der *Freq_subday_type* -Perioden zwischen den einzelnen Ausführungen eines Auftrags auftreten. *Freq_subday_interval*ist **Int**, hat den Standardwert **0**.  
   
- [  **@freq_relative_interval =** ] *Freq_relative_interval*  
+ [ **@freq_relative_interval =** ] *freq_relative_interval*  
  Ein Einzelvorgang des *Freq_interval* in jedem Monat, wenn *Freq_interval* ist **32** (mit relativem Monatsintervall). *Freq_relative_interval*ist **Int**, hat den Standardwert **0**, und kann einen der folgenden Werte sein.  
   
 |Wert|Beschreibung (Einheit)|  
@@ -121,27 +124,27 @@ sp_update_schedule
 |**8**|Vierter|  
 |**16**|Letzter|  
   
- [  **@freq_recurrence_factor =** ] *Freq_recurrence_factor*  
- Die Anzahl der Wochen oder Monate zwischen der geplanten Ausführung eines Auftrags. *Freq_recurrence_factor* wird nur verwendet, wenn *Freq_type* ist **8**, **16**, oder **32**. *Freq_recurrence_factor*ist **Int**, hat den Standardwert **0**.  
+ [ **@freq_recurrence_factor =** ] *freq_recurrence_factor*  
+ Die Anzahl der Wochen oder Monate zwischen der geplanten Ausführung eines Auftrags. *freq_recurrence_factor* is used only if *freq_type* is **8**, **16**, or **32**. *Freq_recurrence_factor*ist **Int**, hat den Standardwert **0**.  
   
- [  **@active_start_date =** ] *Active_start_date*  
+ [ **@active_start_date =** ]  *active_start_date*  
  Das Datum, an dem die Ausführung eines Auftrags beginnen kann. *Active_start_date*ist **Int**, hat den Standardwert NULL, womit des heutigen Datums. Das Datum wird das Format YYYYMMDD. Wenn *Active_start_date* ist nicht NULL ist, muss das Datum größer oder gleich 19900101 sein.  
   
  Überprüfen Sie nach dem Erstellen des Zeitplans, ob das Startdatum korrekt ist. Weitere Informationen finden Sie im Abschnitt "Planen von Startdaten" in [erstellen und Zuweisen von Zeitplänen zu Aufträgen](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5).  
   
- [  **@active_end_date =** ] *Active_end_date*  
+ [ **@active_end_date =** ] *active_end_date*  
  Das Datum, an dem die Ausführung eines Auftrags beendet werden kann. *Active_end_date*ist **Int**, hat den Standardwert **99991231**, womit der 31. Dezember 9999 angegeben. Im Format JJJJMMTT.  
   
- [  **@active_start_time =** ] *Active_start_time*  
+ [ **@active_start_time =** ] *active_start_time*  
  Die Zeit an einem beliebigen Tag zwischen *Active_start_date* und *Active_end_date* die Ausführung eines Auftrags beginnen soll. *Active_start_time*ist **Int**, hat den Standardwert 000000, womit 00:00:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
- [  **@active_end_time =** ] *Active_end_time*  
+ [ **@active_end_time =** ] *active_end_time*  
  Die Zeit an einem beliebigen Tag zwischen *Active_start_date* und *Active_end_date* zu der die Ausführung eines Auftrags. *Active_end_time*ist **Int**, hat den Standardwert **235959**, womit 23:59:59 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
  [  **@owner_login_name** =] **"***Owner_login_name***"**]  
  Der Name des Serverprinzipals, der Besitzer des Zeitplans ist. *Owner_login_name* ist **Sysname**, hat den Standardwert NULL, gibt an, dass der Zeitplan im Besitz des Erstellers ist.  
   
- [  **@automatic_post =**] *Automatic_post*  
+ [ **@automatic_post =**] *automatic_post*  
  Reserviert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -182,10 +185,10 @@ GO
  [Planen eines Auftrags](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)   
  [Erstellen Sie einen Zeitplan](http://msdn.microsoft.com/library/8c7ef3b3-c06d-4a27-802d-ed329dc86ef3)   
  [SQL Server-Agent-gespeicherte Prozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [Sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [Sp_add_jobschedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
- [Sp_delete_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [Sp_help_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_add_jobschedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_help_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

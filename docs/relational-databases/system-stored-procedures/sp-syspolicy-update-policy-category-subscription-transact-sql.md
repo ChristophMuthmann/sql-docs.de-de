@@ -1,5 +1,5 @@
 ---
-title: Sp_syspolicy_update_policy_category_subscription (Transact-SQL) | Microsoft Docs
+title: sp_syspolicy_update_policy_category_subscription (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_update_policy_category_subscription_TSQL
 - sp_syspolicy_update_policy_category_subscription
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_update_policy_category_subscription
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_update_policy_category_subscription
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
-caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0131962e5f69fcb2090b95151c360cc2cb0fce7d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 58b441f56ca079e5665a60c0c1904e5070c1c033
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,18 +49,18 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@policy_category_subscription_id=** ] *Policy_category_subscription_id*  
- Der Bezeichner des Richtlinienkategorieabonnements, das Sie aktualisieren möchten. *Policy_category_subscription_id* ist **Int**, und es ist erforderlich.  
+ [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
+ Der Bezeichner des Richtlinienkategorieabonnements, das Sie aktualisieren möchten. *policy_category_subscription_id* is **int**, and is required.  
   
- [  **@target_type=** ] **"**Target_type**"**  
+ [ **@target_type=** ] **'**target_type**'**  
  Der Zieltyp des Kategorieabonnements. *Target_type* ist **Sysname**, hat den Standardwert NULL.  
   
  Bei Angabe von *Target_type*, der Wert muss auf 'DATABASE' festgelegt werden.  
   
- [  **@target_object=** ] **"**Target_object**"**  
+ [ **@target_object=** ] **'**target_object**'**  
  Ist der Name der Datenbank, die die Richtlinienkategorie abonniert. *Target_object* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@policy_category=** ] **"**Policy_category**"**  
+ [ **@policy_category=** ] **'**policy_category**'**  
  Der Name der Richtlinienkategorie, die die Datenbank abonnieren soll. *Policy_category* ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -95,7 +98,7 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [Richtlinienbasierte Verwaltung gespeicherte Systemprozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [Sp_syspolicy_add_policy_category_subscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
- [Sp_syspolicy_delete_policy_category_subscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-subscription-transact-sql.md)  
+ [sp_syspolicy_add_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
+ [sp_syspolicy_delete_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-subscription-transact-sql.md)  
   
   

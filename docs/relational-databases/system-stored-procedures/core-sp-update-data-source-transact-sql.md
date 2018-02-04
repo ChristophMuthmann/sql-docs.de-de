@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_data_source
 - sp_update_data_source_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_update_data_source
 - management data warehouse, data collector stored procedures
 - core.sp_update_data_source stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 959c9cc843480a3f1d5d4b5ca414b67ac27807d4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 913701521f913542356ea11bc916e6af3a971fe8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="corespupdatedatasource-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,8 +53,8 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @collection_set_uid =] '*Collection_set_uid*"  
- Die GUID für den Sammlungssatz. *Collection_set_uid* ist **"uniqueidentifier"**, verfügt über keinen Standardwert. Um die GUID zu erhalten, fragen Sie die dbo.syscollector_collection_sets-Sicht in der MSDB-Datenbank ab.  
+ [ @collection_set_uid = ] '*collection_set_uid*'  
+ Die GUID für den Sammlungssatz. *collection_set_uid* is **uniqueidentifier**, with no default value. Um die GUID zu erhalten, fragen Sie die dbo.syscollector_collection_sets-Sicht in der MSDB-Datenbank ab.  
   
  [ @machine_name =] '*Machine_name*"  
  Der Name des Servers, auf dem sich der Sammlungssatz befindet. *Computername* ist **Sysname** verfügt über keinen Standardwert.  
@@ -63,10 +65,10 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 > [!NOTE]  
 >  *Named_instance* muss der vollqualifizierte Instanzname sein, besteht aus den Computernamen und den Instanznamen im Format *Computername*\\*Instancename*.  
   
- [ @days_until_expiration =] *Days_until_expiration*  
+ [ @days_until_expiration = ] *days_until_expiration*  
  Die Anzahl der Tage, die in der Beibehaltungsdauer für Momentaufnahmedaten verbleiben. *Days_until_expiration* ist **"smallint"**.  
   
- [ @source_id =] *Source_id*  
+ [ @source_id = ] *source_id*  
  Der eindeutige Bezeichner für die Quelle des Updates. *Source_ID* ist **Int** und wird als OUTPUT zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

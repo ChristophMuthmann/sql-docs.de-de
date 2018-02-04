@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_job
 - sp_delete_job_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_job
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 323029d08f890a7013691090f6478b65dc6e3274
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dc32f2328e4153f79a7eb1c7e4115e455078791c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,24 +49,24 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@job_id=** ] *Job_id*  
+ [ **@job_id=** ] *job_id*  
  Die ID des Auftrags, der gelöscht werden soll. *Job_id* ist **"uniqueidentifier"**, hat den Standardwert NULL.  
   
- [  **@job_name=** ] **"***Job_name***"**  
+ [ **@job_name=** ] **'***job_name***'**  
  Der Name des Auftrags, der gelöscht werden soll. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Entweder *Job_id* oder *Job_name*muss angegeben werden, beide können nicht angegeben werden.  
   
- [  **@originating_server=** ] **"***Server***"**  
+ [ **@originating_server=** ] **'***server***'**  
  Für die interne Verwendung.  
   
- [  **@delete_history=** ] *Delete_history*  
+ [ **@delete_history=** ] *delete_history*  
  Gibt an, ob der Verlauf für den Auftrag gelöscht werden soll. *Delete_history* ist **Bit**, hat den Standardwert **1**. Wenn *Delete_history* ist **1**, wird der Auftragsverlauf für den Auftrag gelöscht. Wenn *Delete_history* ist **0**, wird der Auftragsverlauf nicht gelöscht.  
   
  Beachten Sie, dass wenn ein Auftrag wird gelöscht, und der Verlauf wird nicht gelöscht, die Verlaufsinformationen für den Auftrag nicht in angezeigt werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] grafische Schnittstelle im Auftragsverlauf-Agents, aber die Informationen noch befindet sich in der **Sysjobhistory**-Tabelle in der **Msdb** Datenbank.  
   
- [  **@delete_unused_schedule=** ] *Delete_unused_schedule*  
+ [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
  Gibt an, ob die an diesen Auftrag angefügten Zeitpläne gelöscht werden sollen, falls sie nicht an einen anderen Auftrag angefügt sind. *Delete_unused_schedule* ist **Bit**, hat den Standardwert **1**. Wenn *Delete_unused_schedule* ist **1**, diesen Auftrag angefügten Zeitpläne werden gelöscht, wenn keine anderen Aufträge mit Verweisen auf den Zeitplan. Wenn *Delete_unused_schedule* ist **0**, die Zeitpläne werden nicht gelöscht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -108,8 +111,8 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [Sp_help_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [Sp_update_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

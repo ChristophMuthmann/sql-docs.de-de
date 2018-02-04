@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_fts_active_catalogs
 - dm_fts_active_catalogs_TSQL
 - sys.dm_fts_active_catalogs
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_active_catalogs dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_active_catalogs dynamic management view
 ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3712a9cb104058d46cc0f2b9b21d1ad0f5bf062c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c6031073091f63185f58cd256900719c25d8a7ae
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |**database_id**|**int**|ID der Datenbank, die den aktiven Volltextkatalog enthält.|  
 |**catalog_id**|**int**|ID des aktiven Volltextkatalogs.|  
 |**memory_address**|**varbinary(8)**|Adresse von Speicherpuffern, die für Auffüllungsaktivitäten im Zusammenhang mit diesem Volltextkatalog zugeordnet wurden.|  
-|**name**|**vom Datentyp nvarchar(128)**|Name des aktiven Volltextkatalogs.|  
+|**name**|**nvarchar(128)**|Name des aktiven Volltextkatalogs.|  
 |**is_paused**|**bit**|Gibt an, ob das Auffüllen des aktiven Volltextkatalogs angehalten wurde.|  
 |**status**|**int**|Aktueller Status des Volltextkatalogs. Einer der folgenden Typen:<br /><br /> 0 = Wird initialisiert<br /><br /> 1 = Bereit<br /><br /> 2 = Angehalten<br /><br /> 3 = Temporärer Fehler<br /><br /> 4 = Erneute Einbindung erforderlich<br /><br /> 5 = Herunterfahren<br /><br /> 6 = Übernehmen von Änderungen zu Sicherungszwecken<br /><br /> 7 = Sicherung erfolgt über Katalog<br /><br /> 8 = Katalog ist beschädigt|  
 |**status_description**|**nvarchar(120)**|Beschreibung des aktuellen Status des aktiven Volltextkatalogs.|  

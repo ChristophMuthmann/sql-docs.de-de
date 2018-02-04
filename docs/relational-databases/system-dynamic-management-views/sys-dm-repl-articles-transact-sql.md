@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_repl_articles
 - dm_repl_articles_TSQL
 - sys.dm_repl_articles
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_repl_articles dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_repl_articles dynamic management function
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a28b7a4e6b49427fff970bbc0a793f2fcc30d6dd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 99ec6ab0d4feb697092002fb0c7354625dd9da83
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |**artcache_schema_address**|**varbinary(8)**|Speicherinterne Adresse der zwischengespeicherten Artikelschemastruktur für den veröffentlichten Tabellenartikel.|  
 |**artcache_article_address**|**varbinary(8)**|Speicherinterne Adresse der zwischengespeicherten Artikelstruktur für den veröffentlichten Tabellenartikel.|  
 |**artid**|**bigint**|Identifiziert jeden Eintrag in dieser Tabelle eindeutig.|  
-|**Artfilter**|**bigint**|Die ID der zum horizontalen Filtern des Artikels verwendeten gespeicherten Prozedur.|  
+|**artfilter**|**bigint**|Die ID der zum horizontalen Filtern des Artikels verwendeten gespeicherten Prozedur.|  
 |**artobjid**|**bigint**|ID des veröffentlichten Objekts.|  
 |**artpubid**|**bigint**|ID der Veröffentlichung, zu der der Artikel gehört.|  
 |**artstatus**|**tinyint**|Die Bitmaske der Artikeloptionen und der Status, der das Ergebnis der bitweisen logischen OR-Operation von mindestens einem der folgenden Werte sein kann:<br /><br /> **1** = Artikel ist aktiv.<br /><br /> **8** = Den Spaltennamen in INSERT-Anweisungen einschließen.<br /><br /> **16** = Parametrisierte Anweisungen verwenden.<br /><br /> **24** = Sowohl den Spaltennamen in INSERT-Anweisungen einschließen als auch parametrisierte Anweisungen verwenden.<br /><br /> Ein aktiver Artikel, der parametrisierte Anweisungen verwendet, würde in dieser Spalte beispielsweise den Wert 17 anzeigen. Der Wert 0 gibt an, dass der Artikel inaktiv ist und keine zusätzlichen Eigenschaften definiert wurden.|  

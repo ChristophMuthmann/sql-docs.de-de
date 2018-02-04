@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_account_sp_TSQL
 - sysmail_help_account_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_account_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_account_sp
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
-caps.latest.revision: "48"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfc032a279abad7949e67f4c232cbe30219baa30
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b811fef9f1c2a89590e1e03f4fbe1b214ddc902d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpaccountsp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@account_id**  =] *Account_id*  
+ [ **@account_id** = ] *account_id*  
  Die Konto-ID des Kontos, für das Informationen aufgelistet werden sollen. *account_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
  [  **@account_name**  =] **"***Account_name***"**  
@@ -60,14 +63,14 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |Spaltenname|Datentyp|Description|  
 |**account_id**|**int**|ID des Kontos|  
 |**name**|**sysname**|Der Name des Kontos.|  
-|**Beschreibung**|**nvarchar(256)**|Beschreibung des Kontos|  
-|**email_address**|**vom Datentyp nvarchar(128)**|E-Mail-Adresse, von der aus Nachrichten versandt werden|  
-|**Anzeigename**|**vom Datentyp nvarchar(128)**|Der Anzeigename des Kontos.|  
-|**replyto_address**|**vom Datentyp nvarchar(128)**|Adresse, an die Antworten auf die Nachrichten von diesem Konto versandt werden|  
-|**Servertyp**|**sysname**|Typ des E-Mail-Servers für das Konto|  
-|**Servername**|**sysname**|Name des E-Mail-Servers für das Konto|  
+|**description**|**nvarchar(256)**|Beschreibung des Kontos|  
+|**email_address**|**nvarchar(128)**|E-Mail-Adresse, von der aus Nachrichten versandt werden|  
+|**display_name**|**nvarchar(128)**|Der Anzeigename des Kontos.|  
+|**replyto_address**|**nvarchar(128)**|Adresse, an die Antworten auf die Nachrichten von diesem Konto versandt werden|  
+|**servertype**|**sysname**|Typ des E-Mail-Servers für das Konto|  
+|**servername**|**sysname**|Name des E-Mail-Servers für das Konto|  
 |**port**|**int**|Portnummer, die der E-Mail-Server verwendet|  
-|**Benutzername**|**vom Datentyp nvarchar(128)**|Der Benutzername für die Anmeldung am E-Mail-Server, wenn der E-Mail-Server eine Authentifizierung verwendet. Wenn **username** den Wert NULL hat, verwendet Datenbank-E-Mail keine Authentifizierung für dieses Konto.|  
+|**username**|**nvarchar(128)**|Der Benutzername für die Anmeldung am E-Mail-Server, wenn der E-Mail-Server eine Authentifizierung verwendet. Wenn **username** den Wert NULL hat, verwendet Datenbank-E-Mail keine Authentifizierung für dieses Konto.|  
 |**use_default_credentials**|**bit**|Gibt an, ob E-Mail mithilfe der Anmeldeinformationen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] an den SMTP-Server gesendet wird. **use_default_credentials** ist vom Datentyp bit und hat keinen Standardwert. Wenn dieser Parameter 1 ist, verwendet Datenbank-Mail die Anmeldeinformationen des der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Dienst. Wenn dieser Parameter 0 ist, Database Mail verwendet die  **@username**  und  **@password**  für die Authentifizierung auf dem SMTP-Server. Wenn  **@username**  und  **@password**  NULL sind, und klicken Sie dann Database Mail anonyme Authentifizierung verwendet. Wenden Sie sich an Ihren SMTP-Administrator, bevor Sie diesen Parameter angeben.|  
 |**enable_ssl**|**bit**|Gibt an, ob Datenbank-E-Mail die Kommunikation mithilfe von SSL (Secure Sockets Layer) verschlüsselt. Verwenden Sie diese Option, wenn auf dem SMTP-Server SSL erforderlich ist. **enable_ssl** ist vom Datentyp bit und hat keinen Standardwert. 1 gibt an, dass Datenbank-E-Mail die Kommunikation mit SSL verschlüsselt. 0 gibt an, dass Datenbank-E-Mail die E-Mail ohne SSL-Verschlüsselung sendet.|  
   
