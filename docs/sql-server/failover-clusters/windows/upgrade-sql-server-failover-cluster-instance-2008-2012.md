@@ -1,11 +1,12 @@
 ---
 title: Aktualisieren von SQL Server-Instanzen auf Windows Server 2008/2008 R2/2012-Clustern | Microsoft-Dokumentation
-ms.date: 11/10/2017
+ms.date: 1/25/2018
 ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: database engine
 ms.component: failover-clustuers
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bac006539f14341ff07d6af2ba7fd73c1e73a917
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 3337f1c438f303775d923ec12b14891c13b36c03
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Aktualisieren von SQL Server-Instanzen auf Windows Server 2008/2008 R2/2012-Clustern
 
@@ -29,7 +30,6 @@ ms.lasthandoff: 01/09/2018
 ## <a name="prerequisites"></a>Voraussetzungen
 
 -   Bevor Sie eine der Migrationsstrategien durchführen, muss ein paralleler Windows Server-Failovercluster mit Windows Server 2016/2012 R2 vorbereitet werden. Alle Knoten, aus denen die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Failoverclusterinstanzen (FCIs) bestehen, müssen zum Windows-Cluster mit den parallelen FCIs hinzugefügt werden. Eigenständige Computer dürfen **nicht** vor der Migration zum Windows-Failovercluster hinzugefügt werden. Benutzerdatenbanken sollten vor der Migration in der neuen Umgebung synchronisiert werden.
-
 -   Auf allen Zielinstanzen muss die gleiche Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] als parallele Instanz in der ursprünglichen Umgebung mit gleichem Instanznamen und -ID ausgeführt werden. Zudem müssen die gleichen Features auf diesen Instanzen installiert sein. Installationspfade und Verzeichnisstrukturen sollten auf den Zielcomputern identisch sein. Dies gilt nicht für Namen von virtuellen Netzwerken von FCIs, die vor der Migration anders sein müssen. Alle Features, die auf der ursprünglichen Instanz aktiviert sind (Always On, FILESTREAM usw.), sollten auch auf der Zielinstanz aktiviert sein.
 
 -   [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)] darf vor der Migration nicht auf dem parallelen Cluster installiert sein.
@@ -41,7 +41,6 @@ ms.lasthandoff: 01/09/2018
 -   Alle Netzwerkdateifreigaben und dem Netzwerk zugeordnete Laufwerke, die in der ursprünglichen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Clusterumgebung verwendet werden, müssen noch vorhanden sein. Außerdem müssen sie für Zielcluster mit den gleichen Berechtigungen wie für die ursprünglichen Instanzen zugänglich sein.
 
 -   Alle TCP/IP-Ports, die von der ursprünglichen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Instanz aufgelistet werden, dürfen nicht verwendet werden und müssen eingehenden Datenverkehr auf dem Zielcomputer erlauben.
-
 -   Alle Dienste, die mit SQL in Verbindung stehen, müssen vom gleichen Windows-Benutzer installiert und ausgeführt werden.
 
 -   Die Zielinstanzen müssen mit dem gleichen Gebietsschema wie die ursprünglichen Instanzen installiert werden.
@@ -57,8 +56,8 @@ Die angemessene Migrationsstrategie hängt von einigen Parametern der ursprüngl
 | **Der Cluster verwendet eigenständige Instanzen** | [Szenario 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [Szenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [Szenario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Szenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
 \* Dies schließt nicht den Listenernamen der Verfügbarkeitsgruppe ein.
 
-## <a name="scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1"></a>Szenario 1: Der zu migrierende Cluster verwendet nur Verfügbarkeitsgruppen (Windows Server 2008 R2 SP1 und höher)
-Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] eingerichtet haben, das nur Verfügbarkeitsgruppen verwendet, können Sie zu einem neuen Cluster migrieren, indem Sie ein paralleles [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Setup auf einem anderen Cluster mit Windows Server 2016/2012 R2 erstellen. Anschließend können Sie eine verteilte Verfügbarkeitsgruppe erstellen, wo der Zielcluster der sekundäre Cluster des Produktionsclusters ist. Dafür ist es erforderlich, dass der Benutzer ein Upgrade auf [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] oder höher durchführt.
+## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>Szenario 1: Windows-Cluster mit SQL Server-Verfügbarkeitsgruppen und keinen FCIs (Failoverclusterinstanzen)
+Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] eingerichtet haben, das Verfügbarkeitsgruppen und keine FCIs verwendet, können Sie zu einem neuen Cluster migrieren, indem Sie eine parallele [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Bereitstellung auf einem anderen Cluster mit Windows Server 2016/2012 R2 durchführen. Anschließend können Sie eine verteilte Verfügbarkeitsgruppe erstellen, wo der Zielcluster der sekundäre Cluster des Produktionsclusters ist. Dafür ist es erforderlich, dass der Benutzer ein Upgrade auf [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] oder höher durchführt.
 
 ###  <a name="to-perform-the-upgrade"></a>So führen Sie ein Upgrade durch
 
@@ -69,7 +68,7 @@ Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] eingerichtet 
 3.  Erstellen Sie eine verteilte Verfügbarkeitsgruppe, wo der Zielcluster die sekundäre Verfügbarkeitsgruppe ist.
 
     >[!NOTE]
-    >Der Parameter LISTENER\_URL der erstellten Abfrage einer verteilten Verfügbarkeitsgruppe verhält sich für Verfügbarkeitsgruppen etwas anders, die über eine FCI verfügen, die als primäre Instanz dient. Ist dies der Fall bei der primären oder sekundären Verfügbarkeitsgruppe, verwenden Sie den VNN der primären SQL-FCI als Listener-URL an Stelle des Netzwerknamens des Listeners, wobei Sie beide Male den Port des Datenbankspiegelungsendpunkts verwenden.
+    >Der Parameter LISTENER\_URL für die T-SQL „Verteilte Verfügbarkeitsgruppe erstellen“ verhält sich für Verfügbarkeitsgruppen etwas anders, die über eine SQL-FCI verfügen, die als primäre Instanz dient. Ist dies der Fall bei der primären oder sekundären Verfügbarkeitsgruppe, verwenden Sie den VNN der primären SQL-FCI als Listener-URL an Stelle des Netzwerknamens des Listeners gemeinsam mit dem Port des Datenbankspiegelungsendpunkts.
 
 4.  Verknüpfen Sie die sekundäre Verfügbarkeitsgruppe mit dem verteilten Cluster.
 
@@ -80,7 +79,7 @@ Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] eingerichtet 
 
 6.  Unterbrechen Sie den Datenverkehr an die primäre Verfügbarkeitsgruppe, und synchronisieren Sie die sekundäre.
 
-7.  Ändern Sie die Commitrichtlinie für beide Verfügbarkeitsgruppen in SYNCHRONOUS\_COMMIT, und führen Sie ein Failover auf den Zielcluster durch, sobald der Status SYNCHRONIZED lautet.
+7.  Ändern Sie die Commitrichtlinie für beide Verfügbarkeitsgruppen in SYNCHRONOUS_COMMIT, und führen Sie ein Failover auf den Zielcluster durch, sobald der Status SYNCHRONIZED lautet.
 
 8.  Löschen Sie die verteilte Verfügbarkeitsgruppe.
 
@@ -93,9 +92,9 @@ Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] eingerichtet 
 
 11. Stellen Sie den Datenverkehr zum Listener wieder her.
 
-## <a name="scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag"></a>Szenario 2: Der zu migrierende Cluster verfügt nur über SQL-FCIs und nicht über Verfügbarkeitsgruppen
+## <a name="scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis"></a>Szenario 2: Windows-Cluster mit SQL Server-FCIs (Failoverclusterinstanzen)
 
-Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] eingerichtet haben, das keine eigenständigen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Instanzen, also nur SQL-FCIs, verwendet, können Sie zu einem neuen Cluster migrieren, indem Sie ein paralleles [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Setup auf einem anderen Cluster mit Windows Server 2016/2012 R2 erstellen. Die Migration zum Zielcluster führen Sie durch, indem Sie die VNNs der alten SQL-FCIs „stehlen“ und sie auf dem neuen Cluster laden. Dabei kann es zu zusätzlicher Downtime kommen, die davon abhängig ist, wie viel Zeit die DNS-Verteilung in Anspruch nimmt.
+Wenn Sie über eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Umgebung mit nur SQL-FCI-Instanzen verfügen, können Sie zu einem neuen Cluster migrieren, indem Sie eine parallele [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Umgebung auf einem anderen Windows-Cluster mit Windows Server 2016/2012 R2 erstellen. Die Migration zum Zielcluster führen Sie durch, indem Sie die VNNs der alten SQL-FCIs „stehlen“ und sie auf dem neuen Cluster laden. Dabei kann es zu zusätzlicher Downtime kommen, die davon abhängig ist, wie viel Zeit die DNS-Verteilung in Anspruch nimmt.
 
 ###  <a name="to-perform-the-upgrade"></a>So führen Sie ein Upgrade durch
 
@@ -126,7 +125,7 @@ Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] eingerichtet 
 
 12. Starten Sie alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-FCI-Rollen in Failovercluster-Manager, während die Computer nach dem Neustart wieder online gehen.
 
-## <a name="scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups"></a>Szenario 3: Der Cluster weist nur SQL-FCIs auf und verwendet Verfügbarkeitsgruppen
+## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>Szenario 3: Windows-Cluster mit SQL-FCIs und SQL Server-Verfügbarkeitsgruppen
 
 Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] eingerichtet haben, das keine eigenständigen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Instanzen sondern nur SQL-FCIs verwendet, die in mindestens einer Verfügbarkeitsgruppe enthalten sind, können Sie eine Migration zu einem neuen Cluster mit ähnlichen Methoden wie unter „no Availability Group, no standalone instance“ (keine Verfügbarkeitsgruppe, keine eigenständige Instanz) beschrieben durchführen. Vor dem Kopieren von Systemtabellen auf freigegebene FCI-Datenträger müssen Sie alle Verfügbarkeitsgruppen in der ursprünglichen Umgebung löschen. Erstellen Sie die Verfügbarkeitsgruppen mit den gleichen Schema- und Listenernamen erneut, nachdem alle Datenbanken zum Zielcomputer migriert wurden. Dadurch werden die Windows Server-Failoverclusterressourcen ordnungsgemäß auf den Zielclustern erstellt und verwaltet. **Die Option „Always On“ muss in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] Configuration Manager auf jedem Computer in der Zielumgebung vor der Migration aktiviert werden.**
 
@@ -164,7 +163,7 @@ Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] eingerichtet 
 
 16. Erstellen Sie einen Listener in der neuen Verfügbarkeitsgruppe mit dem Listenernamen des Listeners der ursprünglichen Verfügbarkeitsgruppe.
 
-## <a name="scenario-4-cluster-has-some-non-fci-and-no-availability-groups"></a>Szenario 4: Der Cluster weist einige Nicht-FCIs und keine Verfügbarkeitsgruppen auf
+## <a name="scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups"></a>Szenario 4: Windows-Cluster mit eigenständigen SQL Server-Instanzen und ohne Verfügbarkeitsgruppen
 
 Die Migration eines Clusters mit eigenständigen Instanzen ähnelt der Migration eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-Clusters, der nur FCIs aufweist. Statt jedoch den VNN der Netzwerknamenclusterressource der FCI zu ändern, ändern Sie den Computernamen des ursprünglichen eigenständigen Computers und „stehlen“ den Namen des alten Computers auf dem Zielcomputer. Dadurch kommt es zu zusätzlicher Downtime abhängig von nicht eigenständigen Szenarios, da Sie den eigenständigen Zielcomputer nicht zum Windows Server-Failovercluster hinzufügen können, bis Sie den Netzwerknamen des alten Computers kennen.
 
@@ -200,9 +199,9 @@ Die Migration eines Clusters mit eigenständigen Instanzen ähnelt der Migration
 
 15. Starten Sie alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]-FCI-Rollen in Failovercluster-Manager, während die Computer nach dem Neustart wieder online gehen.
 
-## <a name="scenario-5-cluster-has-some-non-fci-and-uses-availability-groups"></a>Szenario 5: Der Cluster weist einige Nicht-FCIs auf und verwendet Verfügbarkeitsgruppen
+## <a name="scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups"></a>Szenario 5: Windows-Cluster mit eigenständigen SQL Server-Instanzen und Verfügbarkeitsgruppen
 
-Die Migration eines Clusters, der Verfügbarkeitsgruppen mit eigenständigen Replikaten verwendet, ähnelt der Migration eines Clusters, der nur FCIs mit Verfügbarkeitsgruppen verwendet. Sie müssen weiterhin die ursprünglichen Verfügbarkeitsgruppen löschen und sie auf dem Zielcluster erneut erstellen. Allerdings kommt es durch den Mehraufwand bei der Migration eigenständiger Instanzen zu zusätzlicher Downtime. **Die Option „Always On“ muss vor der Migration auf jeder FCI in der Zielumgebung aktiviert werden.**
+Die Migration eines Clusters, der Verfügbarkeitsgruppen mit eigenständigen Replikaten verwendet, ähnelt der Migration eines Clusters, der FCIs mit Verfügbarkeitsgruppen verwendet. Sie müssen weiterhin die ursprünglichen Verfügbarkeitsgruppen löschen und sie auf dem Zielcluster erneut erstellen. Allerdings kommt es durch den Mehraufwand bei der Migration eigenständiger Instanzen zu zusätzlicher Downtime. **Die Option „Always On“ muss vor der Migration auf jeder FCI in der Zielumgebung aktiviert werden.**
 
 ###  <a name="to-perform-the-upgrade"></a>So führen Sie ein Upgrade durch
 

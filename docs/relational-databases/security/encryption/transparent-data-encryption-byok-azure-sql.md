@@ -19,91 +19,105 @@ ms.devlang: na
 ms.topic: article
 ms.date: 11/15/2017
 ms.author: aliceku
-ms.openlocfilehash: 5aaa55cc04e4844889266dc434ac92a0ed22ed00
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 5621bbaf20f30371ffabafddc0520dd15b8e4723
+ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption mit Bring Your Own Key-Unterstützung (Vorschau) für Azure SQL-Datenbank und Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-Die Unterstützung von BYOK für [Transparent Data Encryption (TDE)](transparent-data-encryption.md) erlaubt Ihnen, die Kontrolle über Ihre TDE-Verschlüsselungsschlüssel zu übernehmen und einzuschränken, wer auf diese zugreifen kann und zu welchem Zeitpunkt. [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault), das cloudbasierte externe Schlüsselverwaltungssystem von Azure, ist der erste Schlüsselverwaltungsdienst, bei dem die BYOK-Unterstützung in TDE integriert ist. Mit BYOK ist der Datenbank-Verschlüsselungsschlüssel durch einen asymmetrischen Schlüssel geschützt, der in Key Vault gespeichert ist. Der asymmetrische Schlüssel ist auf Serverebene festgelegt und wird von allen Datenbanken unter diesem Server geerbt. Diese Funktion befindet sich derzeit in der Vorschauversion. Es wird empfohlen, dieses bis zur allgemeinen Verfügbarkeit nicht für Produktionsworkloads zu verwenden.
+Mithilfe der Unterstützung von Bring Your Own Key (BYOK) für die [Transparent Data Encryption (TDE)](transparent-data-encryption.md) können Sie den Datenbank-Verschlüsselungsschlüssel (Database Encryption Key, DEK) mit einem dem asymmetrischen Schlüssel „TDE Protector“ verschlüsseln.  Der TDE Protector ist in [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault) gespeichert. Dabei handelt es sich um das cloudbasierte Verwaltungssystem von externen Schlüsseln von Azure. Bei Azure Key Vault handelt es sich um den ersten Verwaltungsdienst für Schlüssel, in dem die Unterstützung von BYOK in TDE integriert ist. Der TDE-DEK ist auf der Startseite der Datenbank gespeichert und wird vom TDE Protector verschlüsselt und entschlüsselt. Der TDE Protector ist in Azure Key Vault gespeichert und bleibt auch dort erhalten. Wenn dem Server der Zugriff auf den Schlüsseltresor entzogen wird, können Datenbanken nicht entschlüsselt und im Speicher gelesen werden.  Der TDE Protector ist auf der Ebene des logischen Servers platziert und wird von allen Datenbanken geerbt, die diesem Server zugeordnet sind. 
 
-Mit der BYOK-Unterstützung können Benutzer nun Schlüsselverwaltungsaufgaben steuern, einschließlich Schlüsselrotationen, Schlüsseltresorberechtigungen, das Löschen von Schlüsseln und Aktivieren der Überwachung/Berichterstellung auf allen Verschlüsselungsschlüsseln. Key Vault bietet eine zentrale Schlüsselverwaltung, nutzt die streng überwachten Hardwaresicherheitsmodule (HSMs) und ermöglicht die Trennung der Pflichten zwischen dem Verwalten von Schlüsseln und Daten, um gesetzliche Bestimmungen einzuhalten. 
+Mit der BYOK-Unterstützung können Benutzer jetzt Schlüsselverwaltungsaufgaben steuern, einschließlich Schlüsselrotationen, Schlüsseltresorberechtigungen, Löschen von Schlüsseln und Aktivieren der Überwachung/Berichterstellung auf allen TDE Protectors, die die Funktionen von Azure Key Vault verwenden. Key Vault bietet eine zentrale Schlüsselverwaltung, nutzt die streng überwachten Hardwaresicherheitsmodule (HSMs) und ermöglicht die Trennung der Pflichten zwischen dem Verwalten von Schlüsseln und Daten, um gesetzliche Bestimmungen einzuhalten.  
+
 
 TDE mit BYOK bietet folgende Vorteile:
 - Erhöhte Transparenz und eine präzise Steuerung mit der Möglichkeit, die TDE-Schutzvorrichtung selbst zu verwalten   
-- Zentrale Verwaltung der TDE-Verschlüsselungsschlüssel (zusammen mit anderen Schlüsseln und Geheimnissen, die in anderen Azure-Diensten verwendet werden) durch das Hosten derselben in Key Vault
-- Trennung von Schlüsseln und Datenverwaltungsrollen innerhalb der Organisation, um die Trennung der Pflichten zu unterstützen
+- Zentrale Verwaltung des TDE-Protectors (zusammen mit anderen Schlüsseln und Geheimnissen, die in anderen Azure-Diensten verwendet werden) durch das Hosten in Key Vault
+- Trennung von Schlüsseln und Datenverwaltungsverantwortlichkeiten innerhalb der Organisation, um die Trennung der Pflichten zu unterstützen
 - Mehr Vertrauen von Ihren eigenen Kunden, da Key Vault so konzipiert ist, dass Microsoft keine Verschlüsselungsschlüssel sehen oder extrahieren kann. 
 - Unterstützung für die Schlüsselrotation
 
 > [!IMPORTANT]
-> Für diejenigen, die die von einem Dienst verwaltete TDE verwenden und nun Key Vault verwenden möchten, wird TDE während des Wechselns zu einem Schlüssel in Key Vault beibehalten. Es gibt keine Ausfallzeiten oder eine erneute Verschlüsselung der Datenbankdateien. Das Wechseln von einem Schlüssel, der von einem Dienst verwaltet wird, zu einem Key Vault-Schlüssel erfordert eine erneute Verschlüsselung des Datenbank-Verschlüsselungsschlüssels. Dieser Vorgang erfolgt schnell und online.
+> Für diejenigen, die die von einem Dienst verwaltete TDE verwenden und jetzt Key Vault verwenden möchten, wird TDE während des Wechselns zu einem Schlüssel in Key Vault beibehalten. Es gibt keine Downtime oder eine erneute Verschlüsselung der Datenbankdateien. Das Wechseln von einem Schlüssel, der von einem Dienst verwaltet wird, zu einem Key Vault-Schlüssel erfordert eine erneute Verschlüsselung des Datenbank-Verschlüsselungsschlüssels. Dieser Vorgang erfolgt schnell und online. 
 >
 
 ## <a name="how-does-tde-with-byok-support-work"></a>Wie funktioniert TDE mit BYOK-Unterstützung?
  
 ![Authentifizierung des Servers für Key Vault](./media/transparent-data-encryption-byok-azure-sql/tde-byok-server-authentication-flow.PNG)
 
-Wenn TDE dafür konfiguriert wird, einen Schlüssel von Key Vault zu verwenden, sendet der Server einen Datenbank-Verschlüsselungsschlüssel für jede TDE-aktivierte Datenbank an Key Vault, um eine *Schlüssel packen*-Anforderung durchzuführen. Key Vault gibt den verschlüsselten Datenbank-Verschlüsselungsschlüssel zurück, der in der Benutzerdatenbank gespeichert ist. 
+Wenn TDE dafür konfiguriert wird, einen TDE Protector von Key Vault zu verwenden, sendet der Server einen Datenbank-Verschlüsselungsschlüssel für jede TDE-aktivierte Datenbank an Key Vault, um eine „Schlüssel packen“-Anforderung durchzuführen. Key Vault gibt den verschlüsselten Datenbank-Verschlüsselungsschlüssel zurück, der in der Benutzerdatenbank gespeichert ist.  
 
-Beachten Sie, dass **ein Schlüssel, sobald er in Key Vault gespeichert ist, Key Vault nie verlässt**. Ein in einem Hardwaresicherheitsmodul (HSM) gespeicherter Schlüssel in Key Vault verlässt nie die HSM-Sicherheitsgrenze. Der Server kann Anforderungen für Schlüsselvorgänge nur an das Schlüsselmaterial der TDE-Schutzvorrichtung innerhalb von Key Vault senden. Der Key Vault-Administrator ist dazu berechtigt, die Key Vault-Berechtigungen für den Server jederzeit aufzuheben. In diesem Fall werden alle Verbindungen zum Server abgeschnitten. 
+>[!IMPORTANT]
+>Beachten Sie, dass **TDE Protectors immer in Azure Key Vault verbleiben, wenn sie einmal dort gespeichert werden**. Der logische Server kann Anforderungen für Schlüsselvorgänge nur an das Schlüsselmaterial des TDE Protectors innerhalb von Key Vault senden und **greift niemals auf den TDE Protector zu oder speichert ihn zwischen**. Der Key Vault-Administrator ist dazu berechtigt, die Key Vault-Berechtigungen für den Server jederzeit aufzuheben. In diesem Fall werden alle Verbindungen zum Server getrennt. 
+>
 
-## <a name="considerations"></a>Weitere Überlegungen
 
-Das Verwenden von TDE mit BYOK bietet Ihnen sowohl zusätzliche Aufgaben für die Schlüsselverwaltung als auch die zugehörigen Kosten für das Verwenden des Schlüsseltresors selbst. Diese Überlegungen werden in den nächsten zwei Abschnitten erläutert.
+## <a name="guidelines-for-configuring-tde-with-byok"></a>Richtlinien für das Konfigurieren von TDE mit BYOK
 
-### <a name="key-management-responsibilities"></a>Aufgaben bei der Schlüsselverwaltung
+### <a name="general-guidelines"></a>Allgemeine Richtlinien
+- Vergewissern Sie sich, dass Azure Key Vault und Azure SQL-Datenbank in demselben Mandanten gespeichert werden.  Mandantenübergreifende Interaktionen von Key Vaults und Servern **werden nicht unterstützt**.
 
-Das Übernehmen der Verwaltung für Verschlüsselungsschlüssel von den Ressourcen einer Anwendung ist eine wichtige Aufgabe. Indem Sie TDE mit BYOK über Key Vault verwenden, können Sie von folgenden Aufgaben bei der Schlüsselverwaltung ausgehen:
-- **Schlüsselrotationen:** Die TDE-Schutzvorrichtungen sollten gemäß der internen Richtlinien oder Kompatibilitätsanforderungen rotiert werden. Schlüsselrotationen können über den Schlüsseltresor der TDE-Schutzvorrichtung durchgeführt werden.  
-- **Schlüsseltresorberechtigungen**: Berechtigungen innerhalb von Key Vault werden über einen Schlüsseltresor und auf Serverebene bereitgestellt. Die Berechtigung eines Servers für einen Schlüsseltresor kann jederzeit aufgehoben werden, indem die Zugriffsrichtlinien des Schlüsseltresors verwendet werden.
-- **Schlüsseltresorredundanzen:** Da das Schlüsselmaterial Azure Key Vault nie verlässt und der Server keinen Zugriff auf zwischengespeicherte Kopien außerhalb des Schlüsseltresors besitzt, müssen Sie die Georeplikation von Azure Key Vault so konfigurieren, dass der Zugriff auf das Schlüsselmaterial gewährleistet ist, falls in einer Region von Azure Key Vault ein Ausfall auftritt.  Georeplizierte Datenbanken verlieren den Zugriff auf deren Schlüsselmaterial, wenn diese von einem einzigen Azure-Schlüsseltresor abhängig sind.
-- **Löschen von Schlüsseln**: Schlüssel können von Key Vault und SQL Server für zusätzliche Sicherheit oder zur Einhaltung der Kompatibilitätsanforderungen gelöscht werden.
-- **Überwachung/Berichterstellung auf allen Verschlüsselungsschlüsseln**: Key Vault stellt Protokolle bereit, die leicht in andere Tools für Sicherheitsinformationen und Ereignisverwaltung (SIEM) eingefügt werden können. Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) ist ein Beispieldienst, der bereits integriert ist.
+- Legen Sie fest, welche Abonnements für die erforderlichen Ressourcen verwendet werden sollen. Wenn Sie dem Server später anderen Abonnements zuweisen, ist ein erneutes Setup von TDE mit BYOK erforderlich.
+- Konfigurieren Sie Azure Key Vault in einem Einzelabonnement, das sich nur auf TDE Protectors für SQL-Datenbank beschränkt.  Alle Datenbanken, die einem logischen Server zugewiesen sind, verwenden denselben TDE Protector. Denken Sie daher über die Gruppierung von Datenbanken auf einem logischen Server nach. 
+- Empfehlung: Speichern Sie lokal eine Kopie des TDE Protectors.  Dafür benötigen Sie ein HSM-Gerät, um einen TDE Protector lokal zu erstellen, und ein Schlüsselhinterlegungssystem zum Speichern der lokalen Kopie des TDE Protectors.
 
-### <a name="pricing-considerations"></a>Überlegungen zu Preisen 
 
-TDE mit BYOK-Unterstützung ist eine Sicherheitsfunktion, die in Azure SQL-Datenbank und Data Warehouse ohne zusätzliche Gebühren integriert ist. Es gibt jedoch mit der Nutzung von Key Vault verbundene Kosten. Key Vault-Vorgänge, die vom Server durchgeführt werden, werden als normale Vorgänge in Ihrem Tresor berechnet. Dabei werden die [Preise](https://azure.microsoft.com/pricing/details/key-vault/) von Key Vault befolgt. Der Server sendet Anforderungen an Key Vault für die folgenden Ereignisse:
-- Neustarts von SQL-Instanzen
-- Schlüsselrollover
-- Alle sechs Stunden, um zu überprüfen, ob irgendwelche Änderungen an den Berechtigungen des Servers für den Schlüsseltresor vorgenommen wurden
+### <a name="guidelines-for-configuring-azure-key-vault"></a>Richtlinien für das Konfigurieren von Azure Key Vault
 
-## <a name="important-warnings"></a>Wichtige Warnungen
+- Verwenden Sie einen Schlüsseltresor, für den [vorläufiges Löschen](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) aktiviert ist, um sich vor Datenverlusten zu schützen, falls der Schlüssel bzw. der Schlüsseltresor aus Versehen gelöscht wird:  
+  - Vorläufig gelöschte Ressourcen bleiben für einen Zeitraum von 90 Tagen weiter gespeichert. In diesem Zeitraum können sie wiederhergestellt oder endgültig gelöscht werden.
+  - Den Aktionen **Wiederherstellen** und **Endgültig löschen** sind über Zugriffsrichtlinien für den Schlüsseltresor eigene Berechtigungen zugewiesen. 
+- Erteilen Sie dem logischen Server über dessen Azure Active Directory-Identität Zugriff auf den Schlüsseltresor.  Wenn die Benutzeroberfläche des Portals verwendet wird, wird die Azure Active Directory-Identität automatisch erstellt, und dem Server werden die Zugriffsberechtigungen des Schlüsseltresors erteilt.  Wenn PowerShell verwendet wird, um TDE mit BYOK zu konfigurieren, muss die Azure Active Directory-Identität erstellt, und der Abschluss des Vorgangs sollte überprüft werden. Wenn Sie PowerShell verwenden, finden Sie detaillierte Anweisungen unter [Konfigurieren von TDE mit BYOK](transparent-data-encryption-byok-azure-sql-configure.md).
 
-### <a name="loss-of-access-to-keys"></a>Verlust des Zugriffs auf Schlüssel
+  >[!NOTE]
+  >Wenn die Azure Active Directory-Identität **aus Versehen gelöscht werden sollte oder die Berechtigung des Servers widerrufen werden**, kann der Server nicht mehr auf den Schlüsseltresor zugreifen, wenn die Zugriffsrichtlinie des Schlüsseltresors verwendet wird.
+  >
+  
+- Aktivieren Sie die Überwachung und die Berichterstellung auf allen Verschlüsselungsschlüsseln: Key Vault stellt Protokolle bereit, die leicht in andere Tools für Sicherheitsinformationen und Ereignisverwaltung (SIEM) eingefügt werden können. Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) ist ein Beispieldienst, der bereits integriert ist.
+- Konfigurieren Sie alle logischen Server mit jeweils zwei Azure Key Vaults, die sich in verschiedenen Regionen befinden, um die Hochverfügbarkeit von verschlüsselten Datenbanken zu gewährleisten.
 
-Sobald ein Server keine Verbindung mehr zur TDE-Schutzvorrichtung hat (entweder durch entfernte Key Vault-Berechtigungen oder einen gelöschten Schlüssel), **werden alle Verbindungen zu den verschlüsselten Datenbanken auf dem Server blockiert, und diese Datenbanken werden offline geschaltet und innerhalb von 24 Stunden gelöscht**. Auf alte Sicherungen, die mit dem nicht verfügbaren Schlüsseln verschlüsselt sind, kann nicht mehr zugegriffen werden. Wenn die Möglichkeit besteht, dass ein Schlüssel kompromittiert ist (z.B. durch unautorisierten Zugriff auf den Schlüssel durch einen Dienst oder Benutzer), sollte dieser Schlüssel gemäß den Richtlinien unter [Entfernen einer TDE-Schutzvorrichtung (Transparent Data Encryption) mithilfe von PowerShell](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md) gelöscht werden. Die Datenbanken müssen gelöscht werden, bevor eine aktive TDE-Schutzvorrichtung gelöscht wird, um einen möglichen Datenverlust von bis zu zehn Minuten zu verhindern.  
 
-### <a name="expired-keys"></a>Abgelaufene Schlüssel
+### <a name="guidelines-for-configuring-the-tde-protector-asymmetric-key-stored-in-azure-key-vault"></a>Richtlinien zum Konfigurieren des TDE Protectors (asymmetrischer Schlüssel), der in Azure Key Vault gespeichert ist
 
-Da die Verfügbarkeit der TDE-Schutzvorrichtung sich direkt auf die Verfügbarkeit der Datenbank auswirkt, kann ein Schlüssel mit Ablaufdatum nicht zu einem SQL-Server hinzugefügt werden. Wenn ein Schlüssel bereits als TDE-Schutzvorrichtung für einen Server verwendet wird und dieser später mit einem Ablaufdatum in Azure Key Vault konfiguriert wird, **haben die verschlüsselten Datenbanken keinen Zugriff mehr auf ihre TDE-Schutzvorrichtung und werden innerhalb von 24 Stunden gelöscht, sobald der Schlüssel abgelaufen ist**.
+- Erstellen Sie Ihren Verschlüsselungsschlüssel lokal auf einem lokalen HSM-Gerät. Stellen Sie sicher, dass dies ein asymmetrischer RSA-2048-Schlüssel ist, damit er in Azure Key Vault gespeichert werden kann.
+- Hinterlegen Sie den Schlüssel in einem Schlüsselhinterlegungssystem.  
+- Importieren Sie die Datei für den Verschlüsselungsschlüssel (PFX, BYOK oder BACKUP) in Azure Key Vault. 
+    
+    >[!NOTE] 
+    >Wenn Sie einen Test durchführen möchten, können Sie einen Schlüssel mit Azure Key Vault erstellen. Dieser Schlüssel kann dann allerdings nicht hinterlegt werden, da der private Schlüssel immer im Schlüsseltresor verbleiben muss.  Sichern und hinterlegen Sie immer die Schlüssel, die zum Verschlüsseln von Produktionsdaten verwendet werden, da es zu nicht wiederherstellbaren Datenverlusten kommen kann, wenn der Schlüssel verloren gehen sollte (z.B. wenn er aus Versehen aus dem Schlüsseltresor gelöscht wird oder abläuft).
+    >
+    
+- Verwenden Sie Schlüssel ohne Ablaufdatum und legen Sie niemals ein Ablaufdatum für einen Schlüssel fest, der bereits verwendet wird: **Sobald der Schlüssel abläuft, können die verschlüsselten Datenbanken nicht mehr auf ihre TDE Protectors zugreifen und werden innerhalb von 24 Stunden gelöscht.**
+- Vergewissern Sie sich, das der Schlüssel aktiviert ist und die Berechtigungen hat, um die Vorgänge *Abrufen*, *Schlüssel packen* und *Schlüssel entpacken* durchzuführen.
+- Bevor Sie den Schlüssel zum ersten Mal in Azure Key Vault verwenden, erstellen Sie eine Azure Key Vault-Schlüsselsicherung. Erhalten Sie weitere Informationen zum Befehl [Backup-AzureKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/backup-azurekeyvaultkey?view=azurermps-5.1.1) .
+- Erstellen Sie jedes Mal eine neue Sicherung, wenn Änderungen an dem Schlüssel vorgenommen werden – z.B. wenn ACLs, Tags oder Schlüsselattribute hinzugefügt werden.
+- **Behalten Sie frühere Versionen des Schlüssels** im Schlüsseltresor, wenn Sie Schlüssel rotieren, damit Datenbanksicherungen wiederhergestellt werden können. Wenn der TDE Protector für eine Datenbank geändert wird, werden alte Sicherungen von Datenbanken **nicht** für das Verwenden des neuesten TDE Protectors aktualisiert.  Für jede Sicherung wird der TDE Protector benötigt, mit dem diese zum Zeitpunkt der Wiederherstellung erstellt wurde. Schlüsselrotationen können ausgeführt werden, indem Sie die Anweisungen unter [Rotieren einer Transparent Data Encryption-Schutzvorrichtung (TDE) mithilfe von PowerShell](transparent-data-encryption-byok-azure-sql-key-rotation.md) befolgen.
+- Behalten Sie alle zuvor benutzen Schlüssel in Azure Key Vault, wenn Sie zurück zu Schlüsseln wechseln, die von einem Dienst verwaltet werden.  Dadurch wird sichergestellt, dass Datenbankwiederherstellungen über die TDE Protectors, die in Azure Key Vault gespeichert sind, wiederhergestellt werden können.  TDE Protectors, die mit Azure Key Vault erstellt wurden, müssen so lange verwaltet werden, bis alle gespeicherten Sicherungen mit Schlüsseln erstellt worden sind, die von einem Dienst verwaltet werden.  
+- Erstellen Sie wiederherstellbare Sicherungskopien dieser Schlüssel über [Backup-AzureKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/backup-azurekeyvaultkey?view=azurermps-5.1.1).
+- Wenn Sie einen möglicherweise kompromittierten Schlüssel im Zusammenhang mit einem Sicherheitsproblem entfernen möchten, ohne dabei einen Datenverlust zu riskieren, führen Sie die Schritte unter [Entfernen einer TDE-Schutzvorrichtung (Transparent Data Encryption) mithilfe von PowerShell](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md) aus.
 
-### <a name="deleted-server-identities"></a>Gelöschte Serveridentitäten 
 
-Der Zugriff eines Servers auf Key Vault wird durch die eindeutige AAD-Identität (Azure Active Directory) des Servers verwaltet. Deshalb verliert der Server den Zugriff auf seine Schlüsseltresore, wenn seine Identität aus AAD gelöscht wird. Dies hat zur Folge, dass **alle Verbindungen zu den verschlüsselten Datenbanken auf dem Server blockiert und diese Datenbanken offline geschaltet und innerhalb von 24 Stunden gelöscht werden**.
-
-## <a name="limitations"></a>Einschränkungen
-
-Schlüsseltresore, die für TDE verwendet werden, müssen sich im selben AAD-Mandanten wie die SQL-Datenbank oder der Data Warehouse-Server befinden. Mandantenübergreifende Interaktionen von Schlüsseltresoren und Servern werden nicht unterstützt. Eine Ressource, die mit einem Schlüssel von Key Vault verschlüsselt wird, kann nicht über Azure-Abonnements verschoben werden. Das Verschieben der Ressource über Abonnements unterbricht die notwendigen Zugriffssteuerungen von Key Vault, die TDE mit BYOK ermöglicht haben. Wenn eine Ressource auf ein anderes Abonnement verschoben werden muss, ändern Sie den TDE-Modus von BYOK zu [Vom Dienst verwaltete TDE](transparent-data-encryption-azure-sql.md). 
-
-Eindeutige TDE-Schutzvorrichtungen für Datenbanken oder Data Warehouse werden nicht unterstützt. Die TDE-Schutzvorrichtung ist auf Serverebene festgelegt und wird von allen Ressourcen auf dem Server geerbt. 
-
-## <a name="guidelines-for-managing-encrypted-databases"></a>Richtlinien zum Verwalten von verschlüsselte Datenbanken
+## <a name="high-availability-geo-replication-and-backup--restore"></a>Hochverfügbarkeit, Georeplikation und Sichern bzw. Wiederherstellen
 
 ### <a name="high-availability-and-disaster-recovery"></a>Hochverfügbarkeit und Notfallwiederherstellung
-  
-Die Georeplikation muss für den Schlüsseltresor konfiguriert sein, um die Hochverfügbarkeit des Schlüsselmaterials in Azure Key Vault zu gewährleisten:
 
-- **Redundante Schlüsseltresore:** Jeder georeplizierte Server besitzt Zugriff auf einen separaten Schlüsseltresor, der sich idealerweise in derselben Azure-Region befindet. Dabei handelt es sich um die empfohlene Konfiguration, da jeder Server über seine eigene Kopie der TDE-Schutzvorrichtung für die verschlüsselten, georeplizierten Datenbanken verfügt. Wenn die Azure-Regionen eines Servers offline geschaltet werden, können die anderen Server weiterhin auf die georeplizierten Datenbanken zugreifen.  Diese Konfiguration muss sorgfältig durchgeführt werden, um sicherzustellen, dass der Server auf die Sicherung der TDE-Schutzvorrichtung in einem anderen Schlüsseltresor zugreifen kann, falls ein Schlüsseltresor nicht verfügbar ist.     
+Die Art und Weise, auf die Hochverfügbarkeit mit Azure Key Vault konfiguriert werden kann, ist davon abhängig, wie Ihre Datenbank und Ihr logischer Server konfiguriert sind. Im Folgenden werden die empfohlenen Konfigurationen für zwei unterschiedliche Fälle beschrieben.  Im ersten Fall handelt es sich um eine eigenständige Datenbank oder einen logischen Server, der ohne Georedundanz konfiguriert ist.  Im zweiten Fall handelt es sich um eine Datenbank oder einen logischen Server, der mit Failovergruppen oder Georedundanz konfiguriert ist. Dabei muss gewährleistet sein, das jede Kopie mit Georedundanz über einen lokalen Azur Key Vault innerhalb der Failovergruppe verfügt, damit die Geofailovers funktionieren können. Im ersten Fall wird empfohlen, den Server so zu konfigurieren, dass er zwei verschiedene Schlüsseltresore in zwei verschiedenen Regionen mit demselben Schlüsselmaterial verwendet, wenn Hochverfügbarkeit einer Datenbank und eines logischen Servers ohne konfigurierte Georedundanz erforderlich ist.  Dies können Sie tun, indem Sie einen TDE Protector erstellen, der den primären Schlüsseltresor verwendet, der sich in derselben Region wie der logische Server befindet und den Schlüssel in den Schlüsseltresor in einer anderen Azure-Region klonen, sodass der Server Zugriff auf einem zweiten Schlüsseltresor hat, wenn der primäre Schlüsseltresor ausfallen sollte, während die Datenbank weiter funktioniert. Verwenden Sie das Cmdlet „Backup-AzureKeyVaultKey“, um den Schlüssel aus dem primären Schlüsseltresor im verschlüsselten Format abzurufen und dann das Cmdlet „Restore-AzureKeyVaultKey“ zu verwenden und einen Schlüsseltresor in der zweiten Region anzugeben.
 
 
-Verwenden Sie zum Einstieg das Cmdlet [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey), um den Key Vault-Schlüssel jedes Servers zu den anderen Servern im Link der Georeplikation hinzuzufügen.  
-(Beispiel für eine Schlüssel-ID von Key Vault: *https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h*)
+![Hochverfügbarkeit für einen einzelnen Server und fehlende Georedundanz](./media/transparent-data-encryption-byok-azure-sql/SingleServer_HA_Config.PNG)
 
-   ```powershell
+Im zweiten Fall ist es erforderlich, redundante Azure Key Vaults anhand der vorhandenen SQL-Datenbank-Failovergruppen oder der Kopien der aktiven Georedundanz von Datenbanken zu konfigurieren, um die Hochverfügbarkeit der TDE Protectors in Azure Key Vault zu erhalten.  Jeder georeplizierte Server erfordert einen separaten Schlüsseltresor, der sich idealerweise in derselben Azure-Region befindet wie der Server. Wenn es in einer Region zu einem Ausfall kommen sollte, nach dem nicht mehr auf die primäre Datenbank zugegriffen werden kann und ein Failover ausgelöst wird, kann die sekundäre Datenbank einspringen und den sekundären Schlüsseltresor verwenden.  
+
+![Failovergruppen und Georedundanz](./media/transparent-data-encryption-byok-azure-sql/Geo_DR_Config.PNG)
+
+Wenn Sie sicherstellen wollen, dass ohne Einschränkungen während eines Failovers auf den TDE Protector in Azur Key Vault zugegriffen werden kann, muss dies konfiguriert werden, bevor eine Datenbank repliziert wird oder ein Failover auf einen sekundären Server ausgeführt wird. Sowohl der primäre als auch der sekundäre Server muss Kopien der TDE Protectors in allen anderen Azure Key Vaults speichern. Das bedeutet in diesem Fall, dass dieselben Schlüssel in beiden Schlüsseltresoren gespeichert werden.
+
+Wenn Sie einen in einem Schlüsseltresor vorhandenen Schlüssel einem anderen Schlüsseltresor hinzufügen möchten, verwenden Sie das Cmdlet [Add-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey).
+
+ ```powershell
    <# Include the version guid in the KeyId #>
    Add-AzureRmSqlServerKeyVaultKey `
    -KeyId <KeyVaultKeyId> `
@@ -114,8 +128,9 @@ Verwenden Sie zum Einstieg das Cmdlet [Add-AzureRmSqlServerKeyVaultKey](/powersh
 >[!NOTE]
 >Die kombinierte Zeichenlänge des Schlüsseltresornamens und des Schlüsselnamens darf nicht über 94 Zeichen hinausgehen.
 >
+ 
+Befolgen Sie die Schritte in [Active geo-replication overview (Übersicht über die aktive Georeplikation)](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview), um die aktive Georeplikation mit diesen Servern zu konfigurieren und ein Failover auszulösen. 
 
-Befolgen Sie die Schritte in [Active geo-replication overview (Übersicht über die aktive Georeplikation)](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview), um die aktive Georeplikation mit diesen Servern zu konfigurieren und ein Failover auszulösen.  
 
 ### <a name="backup-and-restore"></a>Sichern und Wiederherstellen
 
@@ -125,7 +140,7 @@ Versichern Sie sich zum Wiederherstellen einer Sicherung, die mit einer TDE-Schu
 
 Wenn ein Schlüssel, der möglicherweise für das Wiederherstellen einer Sicherung benötigt wird, sich nicht mehr in seinem ursprünglichen Schlüsseltresor befindet, wird die folgende Fehlermeldung zurückgegeben: "Target server <Servername> does not have access to all AKV Uris created between <Timestamp #1> and <Timestamp #2>. Please retry operation after restoring all AKV Uris." (Zielserver hat keinen Zugriff auf alle AKV-URIs, die zwischen <Zeitstempel #1> und <Zeitstempel #2> erstellt wurden. Bitte wiederholen Sie den Vorgang nach der Wiederherstellung aller AKV-URIs ).
 
-Führen Sie zur Umgehung dieses Fehlers das Cmdlet [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey) aus, um die Liste der Key Vault-Schlüssel zurückzugeben, die dem Server hinzugefügt wurden. Versichern Sie sich, dass der Zielserver für die Sicherung auf all diese Schlüssel zugreifen kann, um sicherzustellen, dass alle Sicherungen wiederhergestellt werden können.
+Führen Sie zur Umgehung dieses Fehlers das Cmdlet [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey) aus, um die Liste der Key Vault-Schlüssel zurückzugeben, die dem Server hinzugefügt wurden (wenn sie nicht bereits von einem Benutzer gelöscht wurden). Vergewissern Sie sich, dass der Zielserver für die Sicherung auf all diese Schlüssel zugreifen kann, um sicherzustellen, dass alle Sicherungen wiederhergestellt werden können.
 
    ```powershell
    Get-AzureRmSqlServerKeyVaultKey `
@@ -133,28 +148,3 @@ Führen Sie zur Umgehung dieses Fehlers das Cmdlet [Get-AzureRmSqlServerKeyVault
    -ResourceGroup <SQLDatabaseResourceGroupName>
    ```
 Weitere Informationen zum Wiederherstellen von Sicherungen für SQL-Datenbank finden Sie unter [Recover an Azure SQL database (Wiederherstellen von Azure SQL-Datenbank)](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups). Weitere Informationen zum Wiederherstellen von Sicherungen für SQL Data Warehouse finden Sie unter [Recover an Azure SQL Data Warehouse (Wiederherstellen von Azure SQL Data Warehouse)](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-restore-database-overview).
-
-## <a name="best-practices"></a>Bewährte Methoden
-
-### <a name="key-management"></a>Schlüsselverwaltung 
-
-Es wird Folgendes empfohlen, um die schnelle Wiederherstellung von Schlüsseln sicherzustellen und den Zugriff auf Ihre Daten außerhalb von Azure zu ermöglichen:
-- Erstellen Sie Ihren Verschlüsselungsschlüssel lokal auf einem lokalen HSM-Gerät. (Stellen Sie sicher, dass dies ein asymmetrischer RSA-2048-Schlüssel ist, damit er in Azure Key Vault gespeichert werden kann.)
-- Importieren Sie die Datei für den Verschlüsselungsschlüssel (PFX, BYOK oder BACKUP) in Azure Key Vault. Erwägen Sie die Verwendung eines Schlüsseltresors mit aktiviertem [vorläufigen Löschen](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) für Wiederherstellungsschutz bei versehentlichem Löschen von Schlüsseln.
-- Bevor Sie den Schlüssel zum ersten Mal in Azure Key Vault verwenden, erstellen Sie eine Azure Key Vault-Schlüsselsicherung. Erhalten Sie weitere Informationen zum Befehl [Backup-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) .
-- Sobald Änderungen am Schlüssel vorgenommen werden (z.B. durch Hinzufügen von ACLs, Tags oder Schlüsselattributen), müssen Sie sicherstellen, dass Sie eine weitere Azure Key Vault-Schlüsselsicherung erstellen.
-- **Behalten Sie frühere Versionen des Schlüssels** im Schlüsseltresor während eines Schlüsselrollovers bei, sodass Datenbanksicherungen wiederhergestellt werden können. 
-
-Für Produktionsszenarios wird dringend empfohlen, zuerst den TDE-Verschlüsselungsschlüssel lokal zu erstellen und den asymmetrischen Schlüssel zu importieren, da der Administrator dann den Schlüssel in einem Schlüsselhinterlegungssystem hinterlegen kann. Wenn der asymmetrische Schlüssel in Azure Key Vault erstellt wird, kann er nicht hinterlegt werden, da der private Schlüssel nie den Tresor verlassen kann. Schlüssel zum Schützen wichtiger Daten sollten hinterlegt werden. Der Verlust eines asymmetrischen Schlüssels führt dazu, dass Daten dauerhaft nicht wiederhergestellt werden können.
-
-### <a name="pre-configuration-for-replicated-databases"></a>Vorkonfiguration für replizierte Datenbanken
-
-Wenn eine verschlüsselte Datenbank auf einen anderen Server repliziert werden soll, versichern Sie sich, dass der Server Zugriff auf eine Kopie des Key Vault-Schlüsselmaterials hat, das für den anderen Server verwendet wird, **bevor** Sie die Datenbank verschieben oder replizieren.  
-
-Es wird empfohlen, dass jeder Server Zugriff auf das Key Vault-Schlüsselmaterial hat, das für den anderen Server verwendet wird. Dies wird in einem separaten Schlüsseltresor gespeichert (idealerweise jeweils innerhalb derselben Azure-Region wie der Server). Bei diesem Setup verfügt jeder Server über seine eigene Kopie der TDE-Schutzvorrichtung für die verschlüsselten, georeplizierten Datenbanken. Wenn die Azure-Region eines Servers offline geschaltet wird, können die anderen Server weiterhin auf die replizierten Datenbanken zugreifen.
-
-## <a name="next-steps"></a>Nächste Schritte
-
-- Erste Schritte mit der Bring Your Own Key-Unterstützung für TDE: [Turn on TDE using your own key from Key Vault using PowerShell (Aktivieren von TDE für das Verwenden Ihres eigenen Schlüssels von Key Vault mithilfe von PowerShell)](transparent-data-encryption-byok-azure-sql-configure.md)
-- Erfahren Sie, wie Sie die TDE-Schutzvorrichtung eines Servers rotieren können, damit dieser den Sicherheitsrichtlinien entspricht: [Rotieren einer Transparent Data Encryption-Schutzvorrichtung (TDE) mithilfe von PowerShell](transparent-data-encryption-byok-azure-sql-key-rotation.md).
-- Im Fall eines Sicherheitsvorfalls erfahren Sie unter [Entfernen einer TDE-Schutzvorrichtung (Transparent Data Encryption) mithilfe von PowerShell](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md), wie Sie eine möglicherweise kompromittierte TDE-Schutzvorrichtung entfernen können. 
