@@ -8,24 +8,27 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-ole
+ms.technology:
+- dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: OLE Automation [SQL Server], examples
+helpviewer_keywords:
+- OLE Automation [SQL Server], examples
 ms.assetid: e59f75a9-ed41-4f12-888e-ffc57f9b3882
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99b9e3c7e3bd0e75e80418f26cfbc9f9bafb8562
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5d2a76d1009cede00b373eac16b143743332d8fe
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="ole-automation-sample-script"></a>OLE-Automatisierungsbeispielskript
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dieses Thema enthält ein Beispiel für einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungsbatch, der mithilfe von gespeicherten OLE-Automatisierungsprozeduren ein SQL-DMO SQLServer-Objekt in der lokalen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] erstellt und verwendet. Teile des Codes werden als Beispiele in den Referenzthemen zu den gespeicherten Systemprozeduren der OLE-Automatisierung verwendet.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Dieses Thema enthält ein Beispiel für einen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungsbatch, der mithilfe von gespeicherten OLE-Automatisierungsprozeduren ein SQL-DMO SQLServer-Objekt in der lokalen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]erstellt und verwendet. Teile des Codes werden als Beispiele in den Referenzthemen zu den gespeicherten Systemprozeduren der OLE-Automatisierung verwendet.  
   
 ```  
 USE AdventureWorks2012;  
