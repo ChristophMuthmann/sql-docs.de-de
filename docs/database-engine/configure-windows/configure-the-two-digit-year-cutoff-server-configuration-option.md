@@ -8,23 +8,24 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - two digit year cutoff option
 - four-digit years [SQL Server]
 ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ea6f7de3504b806b46c9c9e36284993e5786708
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6c04eb2a0831bb5dd2c5c143dbd293cebce414fc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Umstellungsjahr für Angaben mit zwei Ziffern
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +52,11 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
--   Diese Option ist eine erweiterte Option und sollte ausschließlich von einem erfahrenen Datenbankadministrator oder einem zertifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Techniker geändert werden.  
+-   Diese Option ist eine erweiterte Option und sollte ausschließlich von einem erfahrenen Datenbankadministrator oder einem zertifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Experten geändert werden.  
   
--   OLE-Automatisierungsobjekte verwenden 2030 als Umstellungsjahr für Angaben mit zwei Ziffern. Mithilfe der Option **Umstellungsjahr für Angaben mit zwei Ziffern** können Sie Konsistenz zwischen den Datenwerten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Clientanwendungen herstellen. Wenn Sie die Mehrdeutigkeit von Daten vermeiden möchten, sollten Sie allerdings vierstellige Jahre verwenden.  
+-   OLE-Automatisierungsobjekte verwenden 2030 als Umstellungsjahr für Angaben mit zwei Ziffern. Mithilfe der Option **Umstellungsjahr für Angaben mit zwei Ziffern** können Sie Konsistenz zwischen den Datenwerten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Clientanwendungen herstellen. 
+
+-   Um Mehrdeutigkeit von Datumsangaben zu vermeiden, sollten Sie in Daten immer vierstellige Jahre verwenden.  
   
 ###  <a name="Security"></a> Sicherheit  
   

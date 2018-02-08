@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - max degree of parallelism option
 - MaxDop
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c7ec7ad3e80b49a7514b61f9fa36392a6aa982b0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 03d28f2701a077e8f822c6e174a8a6d61de7f6c2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
--   Diese Option ist eine erweiterte Option und sollte ausschließlich von einem erfahrenen Datenbankadministrator oder einem zertifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Techniker geändert werden.  
+-   Diese Option ist eine erweiterte Option und sollte ausschließlich von einem erfahrenen Datenbankadministrator oder einem zertifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Experten geändert werden.  
   
 -   Um den Server für die Ermittlung des maximalen Parallelitätsgrads zu aktivieren, legen Sie diese Option auf den Standardwert 0 fest. Durch das Festlegen des maximalen Parallelitätsgrads auf 0 kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle verfügbaren Prozessoren verwenden (bis maximal 64 Prozessoren). Legen Sie **Max. Grad an Parallelität** auf 1 fest, um das Generieren paralleler Pläne zu unterdrücken. Legen Sie den Wert auf eine Zahl von 1 bis 32.767 fest, um die maximale Anzahl von Prozessorkernen anzugeben, die von einer einzelnen Abfrageausführung verwendet werden können. Wenn ein Wert angegeben wird, der über der Anzahl der verfügbaren Prozessoren liegt, wird die tatsächliche Anzahl der Prozessoren verwendet. Verfügt der Computer nur über einen Prozessor, wird der Wert von **Max. Grad an Parallelität** ignoriert.  
   

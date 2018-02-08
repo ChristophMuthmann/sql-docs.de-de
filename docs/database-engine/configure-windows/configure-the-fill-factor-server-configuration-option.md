@@ -8,21 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: fill factor option [SQL Server]
+helpviewer_keywords:
+- fill factor option [SQL Server]
 ms.assetid: b920ec34-ba8b-4bb8-af53-a3ffd06bafa6
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c2d751750d6a4a94222f93c80bada7233136f101
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4dfe652ae06e85e796e4fc173ab994561991b15f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-fill-factor-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Füllfaktor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +51,7 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
--   Diese Option ist eine erweiterte Option und sollte ausschließlich von einem erfahrenen Datenbankadministrator oder einem zertifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Techniker geändert werden.  
+-   Diese Option ist eine erweiterte Option und sollte ausschließlich von einem erfahrenen Datenbankadministrator oder einem zertifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Experten geändert werden.  
   
 ###  <a name="Security"></a> Sicherheit  
   

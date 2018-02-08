@@ -8,23 +8,24 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - languages [full-text search]
 - default full-text language option
 ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d5b89afac82a740aac4d22abb5fcaf0acdfb562
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e513093dbd54ae0054029a0c2965acf50c521135
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Volltext-Standardsprache
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
--   Diese Option ist eine erweiterte Option und sollte ausschließlich von einem erfahrenen Datenbankadministrator oder einem zertifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Techniker geändert werden.  
+-   Diese Option ist eine erweiterte Option und sollte ausschließlich von einem erfahrenen Datenbankadministrator oder einem zertifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Experten geändert werden.  
   
 -   Die Option **Volltext-Standardsprache** erfordert einen LCID-Wert. Eine Liste mit unterstützten LCIDs und den dazugehörigen Sprachen finden Sie unter [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)konfiguriert wird. Andere Sprachen können beispielsweise von unabhängigen Softwareherstellern verfügbar sein. Wenn keine spezielle Sprache gefunden wird, schaltet das Volltextsuchmodul automatisch in die primäre Sprache.  
   

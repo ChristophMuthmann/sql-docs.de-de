@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - maximum number of simultaneous user connections
 - connections [SQL Server], simultaneous
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b800031c9467a8b57851675b3e99e10b41c0b21f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 51eb56b34a8f3aa18ab0a115954e7a4004aca74e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Benutzerverbindungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
--   Diese Option ist eine erweiterte Option und sollte ausschließlich von einem erfahrenen Datenbankadministrator oder einem zertifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Techniker geändert werden.  
+-   Diese Option ist eine erweiterte Option und sollte ausschließlich von einem erfahrenen Datenbankadministrator oder einem zertifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Experten geändert werden.  
   
 -   Durch die Option **Benutzerverbindungen** kann eine Überlastung des Servers durch zu viele gleichzeitige Verbindungen vermieden werden. Sie können die Anzahl der Verbindungen anhand der System- und Benutzeranforderungen schätzen. So ist es beispielsweise bei einem System mit vielen Benutzern nicht notwendig, dass jeder Benutzer über eine eindeutige Verbindung verfügt. Verbindungen können von Benutzern gemeinsam genutzt werden. Benutzer, die OLE DB-Anwendungen ausführen, benötigen eine Verbindung für jedes geöffnete Verbindungsobjekt. Benutzer, die ODBC-Anwendungen (Open Database Connectivity) ausführen, benötigen eine Verbindung für jedes aktive Verbindungshandle in der Anwendung. Benutzer, die DB-Library-Anwendungen ausführen, benötigen eine Verbindung für jeden gestarteten Prozess, der die **dbopen** -Funktion von DB-Library aufruft.  
   

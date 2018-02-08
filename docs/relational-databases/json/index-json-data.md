@@ -7,23 +7,24 @@ ms.prod_service: database-engine, sql-database
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-json
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - JSON, indexing JSON data
 - indexing JSON data
 ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 559847d392fa744b32fc2aa0cdb70eeb9b2c4ebd
-ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
+ms.openlocfilehash: 0b6df549ab64edfcc766b4839cf17cc1814efa36
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="index-json-data"></a>Indizieren von JSON-Daten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -152,5 +153,18 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  Da die Anordnung der Werte im Index nicht mit den französischen Sortierungsregeln übereinstimmt, kann SQL Server den Index nicht verwenden, um Ergebnisse zu ordnen. Daher wird ein Sort-Operator hinzugefügt, der Ergebnisse nach den französischen Sortierungsregeln sortiert.  
  
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
-Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank von Jovan Popovic, Program Manager bei Microsoft.
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Weitere Informationen zu JSON in SQL Server und Azure SQL-Datenbank  
+  
+### <a name="microsoft-blog-posts"></a>Microsoft-Blogbeiträge  
+  
+Spezielle Lösungen, Anwendungsfälle und Empfehlungen finden Sie in den [Blogbeiträgen über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank.  
+
+### <a name="microsoft-videos"></a>Microsoft-Videos
+
+Eine visuelle Einführung in die JSON-Unterstützung, die in SQL Server und Azure SQL-Datenbank integriert ist, finden Sie in den folgenden Videos:
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)

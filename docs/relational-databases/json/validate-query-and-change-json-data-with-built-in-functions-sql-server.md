@@ -7,23 +7,24 @@ ms.prod_service: database-engine, sql-database
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-json
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - JSON, built-in functions
 - functions (JSON)
 ms.assetid: 6b6c7673-d818-4fa9-8708-b4ed79cb1b41
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 737ed53b4c69a797a11b38c59a4939c244af7b98
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: c6803992992cf2a62afe741df536c0fa87a5fe2d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>Überprüfen, Abfragen und Ändern von JSON-Daten mit integrierten Funktionen (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -119,7 +120,7 @@ In diesem Beispiel-JSON-Text sind die Datenelemente „a“ und „c“ Zeichenf
 |**$.c**|hi|NULL oder Fehler|  
   
 ## <a name="test-jsonvalue-and-jsonquery-with-the-adventureworks-sample-database"></a>Testen von JSON_VALUE und JSON_QUERY mit der AdventureWorks-Beispieldatenbank  
-Testen Sie die integrierten Funktionen, die in diesem Thema beschrieben werden, indem Sie die folgenden Beispiele mit der AdventureWorks-Beispieldatenbank ausführen. Informationen zum Herunterladen von AdventureWorks und Informationen zum Hinzufügen von JSON-Daten für Testzwecke durch Ausführen eines Skripts finden Sie unter [Test drive built-in JSON support (Testen des in die JSON-Unterstützung integrierten Laufwerks)](json-data-sql-server.md#test-drive-built-in-json-support).
+Testen Sie die integrierten Funktionen, die in diesem Thema beschrieben werden, indem Sie die folgenden Beispiele mit der AdventureWorks-Beispieldatenbank ausführen. Informationen zum Herunterladen von AdventureWorks und Informationen zum Hinzufügen von JSON-Daten für Testzwecke durch Ausführen eines Skripts finden Sie unter [Test drive built-in JSON support (Testen des in die JSON-Unterstützung integrierten Laufwerks)](json-data-sql-server.md#test-drive-built-in-json-support-with-the-adventureworks-sample-database).
   
 Im folgenden Beispiel enthält die `Info`-Spalte in der Tabelle `SalesOrder_json` den JSON-Text.  
   
@@ -169,8 +170,21 @@ SET @info = JSON_MODIFY(@jsonInfo, "$.info.address[0].town", 'London')
   
  Weitere Informationen finden Sie unter [JSON_MODIFY &#40;Transact-SQL&#41;](../../t-sql/functions/json-modify-transact-sql.md).  
   
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
-Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie in SQL Server und in der Azure SQL-Daten im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) von Jovan Popovic, Program Manager bei Microsoft.
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Weitere Informationen zu JSON in SQL Server und Azure SQL-Datenbank  
+  
+### <a name="microsoft-blog-posts"></a>Microsoft-Blogbeiträge  
+  
+Spezielle Lösungen, Anwendungsfälle und Empfehlungen finden Sie in den [Blogbeiträgen über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank.  
+
+### <a name="microsoft-videos"></a>Microsoft-Videos
+
+Eine visuelle Einführung in die JSON-Unterstützung, die in SQL Server und Azure SQL-Datenbank integriert ist, finden Sie in den folgenden Videos:
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ISJSON &#40;Transact-SQL&#41;](../../t-sql/functions/isjson-transact-sql.md)   

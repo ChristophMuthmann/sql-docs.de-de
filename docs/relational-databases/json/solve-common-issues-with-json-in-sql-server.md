@@ -7,21 +7,23 @@ ms.prod_service: database-engine, sql-database
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-json
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: JSON, FAQ
+helpviewer_keywords:
+- JSON, FAQ
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8e378e61462797274d7d6e9401816c865ca22eaa
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: b3a0913d611bfa5e55ae285461da4e09fa09703b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>Lösen häufiger Probleme mit JSON in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -147,5 +149,18 @@ WHERE [key] = 'color'
   
  **Antwort:** In JSON-Pfaden müssen Sie diese in Anführungszeichen einschließen. Beispiel: `JSON_VALUE(@json, '$."$info"."First Name".value')`.
  
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
-Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank von Jovan Popovic, Program Manager bei Microsoft.
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Weitere Informationen zu JSON in SQL Server und Azure SQL-Datenbank  
+  
+### <a name="microsoft-blog-posts"></a>Microsoft-Blogbeiträge  
+  
+Spezielle Lösungen, Anwendungsfälle und Empfehlungen finden Sie in den [Blogbeiträgen über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank.  
+
+### <a name="microsoft-videos"></a>Microsoft-Videos
+
+Eine visuelle Einführung in die JSON-Unterstützung, die in SQL Server und Azure SQL-Datenbank integriert ist, finden Sie in den folgenden Videos:
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)

@@ -8,21 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: cursor threshold option
+helpviewer_keywords:
+- cursor threshold option
 ms.assetid: 189f2067-c6c4-48bd-9bd9-65f6b2021c12
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09edc2b444c6c5f49e913b6c60f72f3d490c5e6f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c758a083bea646322bae5654b521d9f187020b04
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-cursor-threshold-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Cursorschwellenwert
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +59,7 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
--   Diese Option ist eine erweiterte Option und sollte ausschließlich von einem erfahrenen Datenbankadministrator oder einem zertifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Techniker geändert werden.  
+-   Diese Option ist eine erweiterte Option und sollte ausschließlich von einem erfahrenen Datenbankadministrator oder einem zertifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Experten geändert werden.  
   
 -   Wenn Sie den **Cursorschwellenwert** auf -1 festlegen, werden alle Keysets synchron generiert, was für kleine Cursorsets vorteilhaft ist. Wenn Sie **Cursorschwellenwert** auf 0 festlegen, werden alle Cursor-Keysets asynchron generiert. Bei anderen Werten vergleicht der Abfrageoptimierer die Anzahl der erwarteten Zeilen im Cursorset und erstellt das Keyset asynchron, wenn die Anzahl der in **Cursorschwellenwert**festgelegten Zeilen überschritten wird. Sie sollten die Option **Cursorschwellenwert** nicht zu niedrig festlegen, da es besser ist, kleine Resultsets synchron zu erstellen.  
   

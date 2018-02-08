@@ -8,24 +8,26 @@ ms.service:
 ms.component: views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-views
+ms.technology:
+- dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: views [SQL Server], creating
+helpviewer_keywords:
+- views [SQL Server], creating
 ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe4fd77f53ba3bf19a8f8ad0e3936fe0793b9527
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a740bee23d84fc92097bac5a385c01236f688e16
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-views"></a>Erstellen von Sichten
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)] Sie können in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] Sichten erstellen. Eine Sicht kann für folgende Zwecke verwendet werden:  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+Sie können in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]Sichten erstellen. Eine Sicht kann für folgende Zwecke verwendet werden:  
   
 -   Um die Darstellung einer Datenbank für jeden einzelnen Benutzer einzuschränken, zu vereinfachen und anzupassen.  
   
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So erstellen Sie eine Sicht mit:**  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Eine Sicht kann nur in der aktuellen Datenbank erstellt werden.  
@@ -59,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die CREATE VIEW-Berechtigung in der Datenbank und die ALTER-Berechtigung für das Schema, in dem die Sicht erstellt wird.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-view-by-using-the-query-and-view-designer"></a>So erstellen Sie eine Sicht mit dem Abfrage- und Sicht-Designer  
   
@@ -75,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  Wählen Sie im **Kriterienbereich**zusätzliche Sortier- oder Filterkriterien für die Spalten aus.  
   
-7.  Klicken Sie im Menü **Datei** auf **Speichern***view name*.  
+7.  Klicken Sie im Menü **Datei** auf **Speichern***Ansichtsname*.  
   
 8.  Geben Sie im Dialogfeld **Namen auswählen** einen Namen für die neue Sicht ein, und klicken Sie auf **OK**.  
   

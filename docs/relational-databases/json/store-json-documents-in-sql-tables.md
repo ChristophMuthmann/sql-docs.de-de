@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0ee36f96183a8b2e2a099402b500523345585460
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.openlocfilehash: 9042b6cf7cb7298e5f327ab96c77cf625eee3872
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Speichern von JSON-Dokumenten in SQL Server oder SQL-Datenbank
 SQL Server und Azure SQL-Datenbank verfügen über native JSON-Funktionen, mit denen Sie JSON-Dokumente durch die standardmäßige SQL-Sprache analysieren können. Jetzt können Sie JSON-Dokumente in SQL Server oder SQL-Datenbank speichern und JSON-Daten wie in einer NoSQL-Datenbank abfragen. Dieser Artikel beschreibt die Optionen zum Speichern von JSON-Dokumenten in SQL Server oder SQL-Datenbank.
@@ -166,5 +166,18 @@ Diese nativ kompilierte Prozedur erstellt anhand der Abfrage einen DLL-Code, der
 
 Durch native JSON-Funktionen in SQL Server und SQL-Datenbank können JSON-Dokumente wie in NoSQL-Datenbanken verarbeitet werden. Datenbanken – ganz gleich, ob relationale oder NoSQL-Datenbanken – weisen Vor- und Nachteile hinsichtlich der Verarbeitung von JSON-Daten auf. Der größte Vorteil bei der Speicherung von JSON-Dokumenten in SQL Server oder SQL-Datenbank besteht in der vollständigen Unterstützung für SQL-Sprachen. Sie können mithilfe der umfangreichen Transact-SQL-Sprache Daten verarbeiten und eine Vielzahl von Speicheroptionen konfigurieren (von Columnstore-Indizes für umfangreiche Komprimierungen und schnelle Analysen bis hin zu speicheroptimierten Tabellen für eine Verarbeitung ohne Sperren). Gleichzeitig profitieren Sie von ausgereiften Sicherheits- und Internationalisierungsfeatures, die Sie in Ihrem NoSQL-Szenario einfach wiederverwenden können. Die in diesem Artikel beschriebenen Gründe sind überzeugende Argumente dafür, die Speicherung von JSON-Dokumenten in SQL Server oder SQL-Datenbank in Erwägung zu ziehen.
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
-Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank von Jovan Popovic, Program Manager bei Microsoft.
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Weitere Informationen zu JSON in SQL Server und Azure SQL-Datenbank  
+  
+### <a name="microsoft-blog-posts"></a>Microsoft-Blogbeiträge  
+  
+Spezielle Lösungen, Anwendungsfälle und Empfehlungen finden Sie in den [Blogbeiträgen über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank.  
+
+### <a name="microsoft-videos"></a>Microsoft-Videos
+
+Eine visuelle Einführung in die JSON-Unterstützung, die in SQL Server und Azure SQL-Datenbank integriert ist, finden Sie in den folgenden Videos:
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)

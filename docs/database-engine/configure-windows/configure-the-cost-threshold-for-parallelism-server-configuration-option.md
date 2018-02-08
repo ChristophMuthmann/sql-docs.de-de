@@ -8,21 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: cost threshold for parallelism option
+helpviewer_keywords:
+- cost threshold for parallelism option
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c13052e7d28cec8609abcc07d0580849e337a5be
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f81d5323ba6d967cd81b8fcf0382f32066168a1d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Kostenschwellenwert für Parallelität
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,9 +73,11 @@ FROM sys.dm_os_sys_info
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
--   Diese Option ist eine erweiterte Option und sollte ausschließlich von einem erfahrenen Datenbankadministrator oder einem zertifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Techniker geändert werden.  
+-   Diese Option ist eine erweiterte Option und sollte ausschließlich von einem erfahrenen Datenbankadministrator oder einem zertifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Experten geändert werden.  
   
 -   In bestimmten Fällen kann ein paralleler Plan ausgewählt werden, obwohl der Kostenplan der Abfrage unter dem aktuellen Wert der Option **Kostenschwellenwert für Parallelität** liegt. Dieser Fall kann eintreten, wenn die Entscheidung zum Verwenden eines parallelen oder seriellen Plans auf einer Kostenabschätzung basiert, die vor dem Abschluss der vollständigen Optimierung zur Verfügung gestellt wurde.  
+
+-   Während der Standardwert von 5 aus Gründen der Abwärtskompatibilität beibehalten wird, ist es wahrscheinlich, dass für aktuelle Systeme ein größerer Wert geeignet ist. Viele SQL Server-Experten schlagen einen Wert von 25 oder 50 als Ausgangspunkt vor und schlagen vor, die Anwendung mit größeren und kleineren Werten zu testen, um die Anwendungsleistung zu optimieren.
   
 ###  <a name="Security"></a> Sicherheit  
   

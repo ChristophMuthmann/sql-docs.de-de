@@ -8,27 +8,30 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
-helpviewer_keywords: xp_cmdshell
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- xp_cmdshell
 ms.assetid: c147c9e1-b81d-49c8-b800-3019f4d86a13
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 26f411ba59dba9213e5432cd1ef36f346caed509
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5bfdb40617fe5620854ff7c953736c63a2e31ca0
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="xpcmdshell-server-configuration-option"></a>xp_cmdshell (Serverkonfigurationsoption)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Die **xp_cmdshell** -Option ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Serverkonfigurationsoption, mit der Systemadministratoren steuern können, ob auf einem System die erweiterte gespeicherte Prozedur **xp_cmdshell** ausgeführt werden kann. Die Option **xp_cmdshell** ist in neuen Installationen standardmäßig deaktiviert. Sie kann mithilfe der richtlinienbasierten Verwaltung oder durch Ausführen der gespeicherten Systemprozedur **sp_configure** aktiviert werden, wie im folgenden Beispiel dargestellt:  
+  Die **xp_cmdshell** -Option ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Serverkonfigurationsoption, mit der Systemadministratoren steuern können, ob auf einem System die erweiterte gespeicherte Prozedur **xp_cmdshell** ausgeführt werden kann. In neuen Installationen ist die **xp_cmdshell**-Option standardmäßig deaktiviert. Bevor Sie diese Option aktivieren, müssen Sie die möglichen Sicherheitsrisiken berücksichtigen, die mit der Verwendung dieser Option verbunden sind. In neu entwickeltem Code sollte diese Option nicht verwendet werden, weil sie grundsätzlich deaktiviert bleiben sollte. Für einige ältere Anwendungen muss sie aktiviert sein. Kann eine Anwendung nicht so geändert werden, dass auf ein Aktivieren dieser Option verzichtet werden kann, sollte die Option über die richtlinienbasierte Verwaltung oder durch Ausführen der gespeicherten Systemprozedur **sp_configure** aktiviert werden, wie dies im folgenden Codebeispiel gezeigt ist:  
   
 ```  
 -- To allow advanced options to be changed.  
