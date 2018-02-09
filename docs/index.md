@@ -8,11 +8,11 @@ ms.author: barbkess
 ms.topic: article
 ms.technology:
 - database-engine
-ms.openlocfilehash: 0c31054b67eb93594f015dcb2fa6377bcb7d2be2
-ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
+ms.openlocfilehash: 3d3fb586dab22c8f3e8c7a8a3b4f4b9c94bd31be
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 02/09/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -38,8 +38,8 @@ ms.lasthandoff: 01/26/2018
                                                 <h4>SQL</h4>
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation">SQL Server (2016, 2017)</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/hh278311(v=sql.10).aspx">SQL Server 2014</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/dn197878(v=sql.10).aspx">SQL Server 2012</a></li>
+                                                    <li><a class="barLink" href="https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx">SQL Server 2014</a></li>
+                                                    <li><a class="barLink" href="https://msdn.microsoft.com/library/hh278312(v=sql.10).aspx">SQL Server 2012</a></li>
                                                     <li><a class="barLink" href="/azure/sql-database/sql-database-design-first-database">Azure SQL-Datenbank</a></li>
                                                     <li><a class="barLink" href="/azure/sql-data-warehouse/sql-data-warehouse-get-started-tutorial">Azure SQL Data Warehouse</a></li>
                                                     <li><a class="barLink" href="/sql/analytics-platform-system/index">Analyseplattformsystem – Parallel Data Warehouse</a><li>
