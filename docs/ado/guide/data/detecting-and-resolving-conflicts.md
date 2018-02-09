@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23ed1396e76f0339c2fdda92501aca751d2d4559
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 61f54b700be8ec03e56bf63999dc7f93b8d5fcdb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Erkennen und Lösen von Konflikten
 Wenn Sie das Recordset in unmittelbarer Modus arbeiten, ist wesentlich weniger fehleranfällig für Parallelitätsprobleme auftreten. Andererseits, wenn Ihre Anwendung BatchUpdates Modus verwendet, liegt möglicherweise eine gute chance, dass ein Benutzer ändert einen Datensatz, vor dem Speichern von Änderungen, die von einem anderen Benutzer, die den gleichen Datensatz bearbeiten vorgenommen wurden. In diesem Fall sollten Sie die Anwendung den Konflikt Datenbindungsvorgängen erfolgreich behandelt. Sie können Ihr Wunsch sein, die letzte Person, die ein Update an den Server senden "gewinnt". Oder Sie können die letzten Benutzer, um zu entscheiden, welche Vorrang haben soll, indem ihm mithilfe einer Auswahl zwischen den beiden in Konflikt stehenden Werten bereitstellen möchten.  

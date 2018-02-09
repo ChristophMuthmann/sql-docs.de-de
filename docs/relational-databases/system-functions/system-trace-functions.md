@@ -16,15 +16,15 @@ dev_langs:
 - TSQL
 ms.assetid: 166426e1-555d-4ce4-bae3-248dcac56883
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe54c063eb4cdf4bc8f01c054f9d7a1ed04cce2d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1cffae99e9dd656a4ec42fcd2355e1761a0f7430
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="system-trace-functions"></a>Systemnachverfolgungsfunktionen
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

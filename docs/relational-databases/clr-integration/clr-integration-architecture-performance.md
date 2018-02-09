@@ -16,19 +16,20 @@ helpviewer_keywords:
 - common language runtime [SQL Server], compilation process
 - performance [CLR integration]
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5dd392ca57706e595b6df5f44b512cf11dacdff
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 327c531d44fc883afa144252dda3ba43d188682a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-architecture----performance"></a>Architektur der CLR-Integration - Leistung
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In diesem Artikel werden einige der Entwurfsoptionen, die die Leistung verbessern [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Integration in die [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework common Language Runtime (CLR).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+In diesem Artikel werden einige der Entwurfsoptionen, die die Leistung verbessern [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Integration in die [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework common Language Runtime (CLR).  
   
 ## <a name="the-compilation-process"></a>Der Kompilierungsprozess  
  Wenn während der Kompilierung von SQL-Ausdrücken ein Verweis auf eine verwaltete Routine gefunden wird, wird ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Intermediate Language (MSIL)-Stub generiert. Dieser Stub enthält Code zum Marshallen der Routineparameter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu CLR, zum Aufrufen der Funktion und zur Rückgabe des Ergebnisses. Dieser "Verbindungscode" basiert auf dem Parametertyp und der Parameterrichtung (IN, OUT oder Verweis).  
@@ -58,7 +59,7 @@ ms.lasthandoff: 01/08/2018
  Wenn [!INCLUDE[tsql](../../includes/tsql-md.md)]-Cursor Daten traversieren müssen, die als Array einfacher auszudrücken sind, kann verwalteter Code verwendet und die Leistung dadurch gesteigert werden.  
   
 ### <a name="string-data"></a>Zeichenfolgendaten  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Zeichendaten, wie z. B. **Varchar**, kann vom Typ SqlString oder SqlChars in verwalteten Funktionen sein. SqlString-Variablen erstellen im Arbeitsspeicher eine Instanz des gesamten Werts. SqlChars-Variablen stellen eine Streamingschnittstelle bereit, mit der eine höhere Leistung und bessere Skalierbarkeit erreicht wird, die jedoch nicht zum Erstellen einer Instanz des gesamten Werts im Arbeitsspeicher verwendet werden kann. Dies ist besonders für Daten großer Objekte (Large Objects, LOB) wichtig. Darüber hinaus durch eine streamingschnittstelle zurückgegebene XML-Serverdaten zugegriffen werden kann **SqlXml.CreateReader()**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeichendaten, wie z. B. **Varchar**, kann vom Typ SqlString oder SqlChars in verwalteten Funktionen sein. SqlString-Variablen erstellen im Arbeitsspeicher eine Instanz des gesamten Werts. SqlChars-Variablen stellen eine Streamingschnittstelle bereit, mit der eine höhere Leistung und bessere Skalierbarkeit erreicht wird, die jedoch nicht zum Erstellen einer Instanz des gesamten Werts im Arbeitsspeicher verwendet werden kann. Dies ist besonders für Daten großer Objekte (Large Objects, LOB) wichtig. Darüber hinaus durch eine streamingschnittstelle zurückgegebene XML-Serverdaten zugegriffen werden kann **SqlXml.CreateReader()**.  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR und Erweiterte gespeicherte Prozeduren  
  Die Microsoft.SqlServer.Server-APIs (Application Programming Interfaces), die es verwalteten Prozeduren ermöglichen, Resultsets zurück an den Client zu senden, sind leistungsfähiger als die von erweiterten gespeicherten Prozeduren verwendeten Open Data Services(ODS)-APIs. Darüber hinaus die System.Data.SqlServer-APIs unterstützen Datentypen wie z. B. **Xml**, **varchar(max)**, **nvarchar(max)**, und **varbinary(max)**, die mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], während ODS-APIs nicht erweitert wurde, um die neuen Datentypen unterstützen.  

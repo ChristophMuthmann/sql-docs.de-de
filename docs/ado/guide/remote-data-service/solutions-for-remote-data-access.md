@@ -4,32 +4,34 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RDS [ADO]
+helpviewer_keywords:
+- RDS [ADO]
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dda25c24c657656ee092ca32645dc143d1d1510e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2377f7a33f8426d7081806980618c432a56bba42
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="solutions-for-remote-data-access"></a>Lösungen für Remotedatenzugriff
 ## <a name="the-issue"></a>Das Problem  
  ADO kann die Anwendung direkt Zugriff auf und Ändern von Datenquellen (mitunter als ein 2-Ebenen-System). Beispielsweise ist die Verbindung mit der Datenquelle, die Ihre Daten enthält, ist, die eine direkte Verbindung in einem zweistufigen System.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Möglicherweise möchten jedoch indirekt über einen Mittler z. B. Microsoft® Internet Information Services (IIS) den Zugriff auf Datenquellen. Diese Anordnung wird manchmal eine dreistufige System bezeichnet. IIS ist ein Client/Server-System, das eine effiziente Möglichkeit für eine lokale oder Client-Anwendung zum Aufrufen eines Programms Remote- oder Server, über das Internet oder Intranet bereitstellt. Die Server-Anwendung erhält Zugriff auf die Datenquelle und optional die erfassten Daten verarbeitet.  
   

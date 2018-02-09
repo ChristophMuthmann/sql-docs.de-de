@@ -15,19 +15,20 @@ helpviewer_keywords:
 - host protection attributes [CLR integration]
 - common language runtime [SQL Server], host protection attributes
 ms.assetid: 45f55646-4bf1-4493-9f72-d1363c9a9ac6
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6b088d8e47da5aa23522143810a2b8c329ab643
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: aa73452301aa045406ebd9c7a8bf3d4de0389e58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Unzulässige Typen und Elemente in "Microsoft.VisualBasic.dll"
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common Language-integrationsprogrammierung (CLR) lässt die Verwendung von einem Typ oder Member mit einem **HostProtectionAttribute** , die angibt, eine **System.Security.Permissions.HostProtectionResource**  -Enumeration mit dem Wert des **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**,  **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**,  **Synchronisierung**, oder **UI**. Die folgende Tabelle enthält die Elemente und Typen von der **"Microsoft.VisualBasic.dll"** Assembly, deren Host Schutz Attribut () hostschutzattributwerte sind nicht zulässig.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Common Language-integrationsprogrammierung (CLR) lässt die Verwendung von einem Typ oder Member mit einem **HostProtectionAttribute** , die angibt, eine **System.Security.Permissions.HostProtectionResource** Enumeration, mit dem Wert **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronisierung** , oder **UI**. Die folgende Tabelle enthält die Elemente und Typen von der **"Microsoft.VisualBasic.dll"** Assembly, deren Host Schutz Attribut () hostschutzattributwerte sind nicht zulässig.  
   
 > [!NOTE]  
 >  Diese Liste wurde von den unterstützten Assemblys generiert. Weitere Informationen finden Sie unter [unterstützt .NET Framework-Bibliotheken](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
@@ -89,6 +90,6 @@ ms.lasthandoff: 01/08/2018
  [Unzulässige Typen und Member in "mscorlib.dll"](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
  [Unzulässige Typen und Member in "System.dll"](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
  [Unzulässige Typen und Member in "System.Data.dll"](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)   
- [Unzulässige Typen und Elemente in „System.Core.dll“](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
+ [Unzulässige Typen und Member in "System.Core.dll"](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
   
   

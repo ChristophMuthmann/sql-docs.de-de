@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: enumerated constants [ADO]
+helpviewer_keywords:
+- enumerated constants [ADO]
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bbbd8cdea692ed5ed6117ea2e3afc72b90c7b89
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a350235fd7afd0c9423c164f08bc076191aa97cd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-enumerated-constants"></a>ADO--Enumerationskonstanten
 Um das Debuggen zu erleichtern, Liste der ADO-Enumerationen einen Wert für jede Konstante. Dieser Wert ist nur eine Empfehlung und kann von einer Version von ADO auf einen anderen ändern. Der Code sollte nur auf den Namen, die nicht den tatsächlichen Wert, der jede Enumerationskonstante abhängig sein.  

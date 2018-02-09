@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69cb7375808e3c11dd8d92bab48a3588693e30e8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5341eac5d18d222e2e0d1f97a006179ffa8927d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="records-and-provider-supplied-fields"></a>Datensätze und Felder Anbieter bereitgestellte
 Wenn eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt geöffnet ist, werden seine Quelle kann die aktuelle Zeile eines geöffneten [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), eine absolute URL oder eine relative URL in Verbindung mit einem geöffneten [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt .  
@@ -71,7 +72,7 @@ Wenn eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objek
 |RESOURCE_CONTENTTYPE|AdVarWChar|Zeigt die häufige Verwendung des Dokuments an – beispielsweise einen Anwalt kurze des. Dies kann die Office-Projektvorlage entsprechen, der verwendet wurde, um das Dokument zu erstellen.|  
 |RESOURCE_CONTENTCLASS|AdVarWChar|Gibt den MIME-Typ des Dokuments, der angibt, wie z. B. auf des Formats "`text/html`".|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|Gibt die Sprache, in der der Inhalt gespeichert wird.|  
-|RESOURCE_CREATIONTIME|AdFileTime|Schreibgeschützt. Gibt eine FILETIME-Struktur, die den Zeitpunkt enthält, an den die Ressource erstellt wurde. Die Zeit wird im Format der koordinierten Weltzeit (Coordinated Universal Time, UTC) gemeldet.|  
+|RESOURCE_CREATIONTIME|adFileTime|Schreibgeschützt. Gibt eine FILETIME-Struktur, die den Zeitpunkt enthält, an den die Ressource erstellt wurde. Die Zeit wird im Format der koordinierten Weltzeit (Coordinated Universal Time, UTC) gemeldet.|  
 |RESOURCE_LASTACCESSTIME|AdFileTime|Schreibgeschützt. Gibt eine FILETIME-Struktur, die den Zeitpunkt enthält, den die Ressource zuletzt zugegriffen wurde. Die Uhrzeit wird im UTC-Format. FILETIME-Elemente sind 0 (null), wenn der Anbieter diese Zeitelement nicht unterstützt.|  
 |RESOURCE_LASTWRITETIME|AdFileTime|Schreibgeschützt. Gibt eine FILETIME-Struktur, die den Zeitpunkt enthält, den die Ressource des letzten Schreibvorgangs an. Die Uhrzeit wird im UTC-Format. FILETIME-Elemente sind 0 (null), wenn der Anbieter diese Zeitelement nicht unterstützt.|  
 |RESOURCE_STREAMSIZE|asUnsignedBigInt|Schreibgeschützt. Gibt die Größe des Ressource-Standard-Streams in Bytes an.|  
@@ -83,5 +84,5 @@ Wenn eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objek
 |RESOURCE_ISROOT|AdBoolean|Schreibgeschützt. "True", wenn die Ressource der Stamm einer Auflistung oder strukturierte Dokument ist.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Das Datensatzobjekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Anhang A: Daten und Dienstanbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

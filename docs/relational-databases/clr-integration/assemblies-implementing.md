@@ -11,21 +11,23 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: assemblies [CLR integration], implementing
+helpviewer_keywords:
+- assemblies [CLR integration], implementing
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c37fa6946f4b400b666d43040fe805c50053a2f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3739ec98683810b683bf644912268d22efe6e261
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies---implementing"></a>Assemblys - Implementierung
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dieses Thema enthält Informationen zu den folgenden Bereichen zum Implementieren und Arbeiten mit Assemblys in der Datenbank:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Dieser Abschnitt enthält Informationen zu folgenden Themen, die Sie hilfreich beim Implementieren und Arbeiten mit Assemblys in der Datenbank sind:  
   
 -   Erstellen von Assemblys  
   
@@ -98,7 +100,7 @@ ms.lasthandoff: 01/08/2018
   
  Nur Mitglieder der **Db_owner** und **Db_ddlowner** feste Datenbankrolle können run ALTER ASSEMBLY mithilfe der WITH UNCHECKED DATA-Klausel ausführen.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sendet eine Meldung an das Windows-Anwendungsereignisprotokoll, die angibt, dass die Assembly mit ungeprüften Daten in den Tabellen geändert wurde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] markiert anschließend alle Tabellen mit Daten, die von der Assembly abhängen, als ungeprüft. Die **Has_unchecked_assembly_data** Spalte die **sys.tables** -Katalogsicht enthält den Wert 1 für Tabellen, die nicht überprüfte Daten und 0 für Tabellen ohne nicht überprüfte Daten enthalten.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sendet eine Meldung an das Windows-Anwendungsereignisprotokoll, dass die Assembly mit ungeprüften Daten in den Tabellen geändert wurde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] markiert anschließend alle Tabellen mit Daten, die von der Assembly abhängen, als ungeprüft. Die **Has_unchecked_assembly_data** Spalte die **sys.tables** -Katalogsicht enthält den Wert 1 für Tabellen, die nicht überprüfte Daten und 0 für Tabellen ohne nicht überprüfte Daten enthalten.  
   
  Um die Integrität der nicht überprüften Daten zu beheben, führen Sie DBCC CHECKDB mit EXTENDED_LOGICAL_CHECKS für jede Tabelle mit nicht überprüften Daten. Wenn DBCC CHECKDB mit EXTENDED_LOGICAL_CHECKS fehlschlägt, müssen Sie entweder löschen die Tabellenzeilen, die sind ungültig, oder ändern den Assemblycode zur Beseitigung von Problemen, und klicken Sie dann weitere ALTER ASSEMBLY-Anweisungen ausgeben.  
   

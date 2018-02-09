@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - _Table::get_DateModified
 - _Table::DateModified
 - _Table::GetDateModified
-helpviewer_keywords: DateModified property [ADOX]
+helpviewer_keywords:
+- DateModified property [ADOX]
 ms.assetid: fed09266-1547-4bda-9088-c254d81cc738
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e334d9c316b8655b475f24554e3e3f6843bd884
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 733de516ee160bb26cba4568cbe34b76277e511d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="datemodified-property-adox"></a>DateModified-Eigenschaft (ADOX)
 Gibt das Datum, an das Objekt zuletzt geändert wurde.  

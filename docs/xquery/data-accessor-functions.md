@@ -8,23 +8,27 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
-helpviewer_keywords: data-accessor functions [XQuery]
+applies_to:
+- SQL Server
+dev_langs:
+- XML
+helpviewer_keywords:
+- data-accessor functions [XQuery]
 ms.assetid: 31bad04f-7c74-4773-9f83-612704fdd21c
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed2c535c046fe7d2fc9d830eb2c3f9e3cfd9a7bf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7a6b3cc974ae32047d88e1355a870cc97806c22d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="data-accessor-functions"></a>Data Accessor-Funktionen
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

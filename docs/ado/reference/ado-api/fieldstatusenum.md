@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,26 +13,28 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: FieldStatusEnum
-helpviewer_keywords: FieldStatusEnum enumeration [ADO]
+f1_keywords:
+- FieldStatusEnum
+helpviewer_keywords:
+- FieldStatusEnum enumeration [ADO]
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12e543a4baa7bbcc46ea39e906d57d001ea5f078
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e04f98c5691a66b02a4c5daa8d745f529a9820e0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 Gibt an, die [Status](../../../ado/reference/ado-api/status-property-ado-field.md) von einem [Field-Objekt](../../../ado/reference/ado-api/field-object.md).  
   
  Die **AdFieldPending\***  Werte geben die Operation, die aufgrund des Status festgelegt ist, und kann mit anderen Statuswerte kombiniert werden.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|Gibt an, dass das angegebene Feld bereits vorhanden ist.|  
 |**adFieldBadStatus**|12|Gibt an, dass ein gültiger Wert von ADO mit dem OLE DB-Anbieter gesendet wurde. Mögliche Ursachen sind ein OLE DB 1.0 oder 1.1-Anbieter oder eine falsche Kombination von [Wert](../../../ado/reference/ado-api/value-property-ado.md) und [Status](../../../ado/reference/ado-api/status-property-ado-field.md).|  

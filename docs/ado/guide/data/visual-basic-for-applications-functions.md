@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - Visual Basic for applications functions [ADO]
 - data shaping [ADO], Visual Basic for Applications functions
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 835dfeb15a84529baf553ce1daa171d02e8faca7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bdf33a21339147c9e6b24ff35f08fb2b483bb8f1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic für Applikationen-Funktionen
 Im folgende Visual Basic für Applikationen-Funktionen können in Daten strukturieren CALC-Ausdrücken verwendet werden:  
@@ -35,20 +37,20 @@ Im folgende Visual Basic für Applikationen-Funktionen können in Daten struktur
 |Abs|Asc|ArcTan|ZBool|ZByte|ZCurrrency|  
 |ZDate|CDbl|Zchn|ChrB|ChrW|Zchn$|  
 |ChrB$|ZInteger|ZLong|Cos|ZSingle|CStr|  
-|Cvar|ZVarDat|CVErr|date|Datum$|DateAdd|  
+|Cvar|ZVarDat|CVErr|Datum|Datum$|DateAdd|  
 |DateDiff|DatTeil|DatSeriell|DatWert|Day|GDA|  
 |Fehler|Error$|Exponential|Fix|Format|Format$|  
 |ZW|Hex|Hex$|Hour|IIF|InStr|  
 |int|ZINSZ|IKV|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|Kleinbst|Kleinbst$|Left|  
-|LINKSB|Links$|LINKSB$|Len|Log|LGlätten|  
+|LINKSB|Links$|LeftB$|Len|Log|LGlätten|  
 |LGlätten$|Mid|Teil$|Minute|QIKV|Month|  
 |jetzt|ZZR|NBW|Oct|Oktal$|RMZ|  
 |KAPZ|BW|QBColor|ZINS|RGB|Right|  
-|RECHTSB|Rechts$|RECHTSB$|ZZG|RGlätten|RTrim$|  
+|RECHTSB|Rechts$|RightB$|ZZG|RGlätten|RTrim$|  
 |Zweimal|Vorzchn|Sin|LIA|LeerZchn|LeerZchn$|  
-|QWurzel|Str|Str$|StrVgl|StrKonv|Zeichenfolge|  
-|String$|DIA|Tan|Uhrzeit|Time$|Zeitgeber|  
+|QWurzel|Str|Str$|StrVgl|StrKonv|String|  
+|String$|DIA|Tan|Zeit|Time$|Zeitgeber|  
 |ZeitSeriell|ZeitSeriellStr|Glätten|Glätten$|TypName|Großbst|  
 |Großbst$|Val|VarType|Arbeitstag|Year||  
   

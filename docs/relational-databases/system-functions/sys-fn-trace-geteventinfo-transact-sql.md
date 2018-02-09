@@ -24,15 +24,15 @@ helpviewer_keywords:
 - status information [SQL Server], events
 ms.assetid: 5b1c858a-ca43-4e2b-9d67-8654daaf0cc5
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c3d2f2f087f556e9cb7673710fd83a83a589db2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6edca5d67d22522418dfa5f8d1b08ef94623756e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sysfntracegeteventinfo-transact-sql"></a>sys.fn_trace_geteventinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -26,15 +26,15 @@ helpviewer_keywords:
 - sys.fn_virtualservernodes function
 ms.assetid: 257f3b8d-93c0-4444-87f1-ea211bd8cad0
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcb3e3e0da28a607720a65e33cbe431fd47c58ed
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 918966abed033f139e666922ff3835140feea981
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sysfnvirtualservernodes-transact-sql"></a>sys.fn_virtualservernodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]

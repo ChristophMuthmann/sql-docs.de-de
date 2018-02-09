@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,20 +16,21 @@ apitype: COM
 f1_keywords:
 - Procedures
 - Catalog::Procedures
-helpviewer_keywords: Procedures collection [ADOX]
+helpviewer_keywords:
+- Procedures collection [ADOX]
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c47ecb896cd96a014fba211dc4d310da17d009ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5c02ac401065cfb605bcf097b8305d3e5cbb424a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="procedures-collection-adox"></a>Prozeduren-Auflistung (ADOX)
+# <a name="procedures-collection-adox"></a>Procedures Collection (ADOX)
 Enthält alle [Prozedur](../../../ado/reference/adox-api/procedure-object-adox.md) Objekte eines Katalogs.  
   
 ## <a name="remarks"></a>Hinweise  

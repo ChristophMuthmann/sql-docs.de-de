@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - _Connection::Cancel
 - Command25::Cancel
 - _Stream::Cancel
-helpviewer_keywords: Cancel method [ADO]
+helpviewer_keywords:
+- Cancel method [ADO]
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b9a22787f40d4ac0104db19db0e95d25999e27c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d9dd6f6c62d9ee20f75dabc8b28831b7376fc00b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cancel-method-ado"></a>Cancel-Methode (ADO)
 Bricht die Ausführung eines ausstehenden asynchronen Methodenaufrufs ab.  
@@ -48,11 +50,11 @@ object.Cancel
   
 |Wenn *Objekt* ist ein|Der letzte asynchrone Aufruf dieser Methode wird beendet.|  
 |----------------------|-------------------------------------------------------------|  
-|[Befehl](../../../ado/reference/ado-api/command-object-ado.md)|[Ausführen](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
+|[Befehl](../../../ado/reference/ado-api/command-object-ado.md)|[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
 |[Verbindung](../../../ado/reference/ado-api/connection-object-ado.md)|[Führen Sie](../../../ado/reference/ado-api/execute-method-ado-connection.md) oder [öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
-|[Datensatz](../../../ado/reference/ado-api/record-object-ado.md)|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), oder [öffnen](../../../ado/reference/ado-api/open-method-ado-record.md)|  
-|[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|[Datei](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|[Datei](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
+|[Record](../../../ado/reference/ado-api/record-object-ado.md)|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), or [Open](../../../ado/reference/ado-api/open-method-ado-record.md)|  
+|[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|[Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
+|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|[Öffnen](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
   
 ## <a name="applies-to"></a>Gilt für  
   

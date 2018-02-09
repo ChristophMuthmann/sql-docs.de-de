@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RDS tutorial [ADO]
+helpviewer_keywords:
+- RDS tutorial [ADO]
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43835c09a245725ad169e037abd0080f7794d6ab
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b9918088a748a778fb31d064b73ccdc70eae61bb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-tutorial"></a>RDS-Lernprogramm
 Dieses Lernprogramm veranschaulicht das Verwenden der RDS-Programmiermodell zum Abfragen und Aktualisieren einer Datenquelle. Zunächst wird hier beschrieben, die zur Ausführung dieser Aufgabe erforderlichen Schritte. Das Lernprogramm wird dann in Microsoft® Visual Basic Scripting Edition (mit ADO für Windows Foundation Classes (ADO/WFC)) wiederholt.  
@@ -34,7 +36,7 @@ Dieses Lernprogramm veranschaulicht das Verwenden der RDS-Programmiermodell zum 
 -   Wenn Sie eine bestimmte Funktion von RDS unsicher sind, und Sie, etwas wissen von einer anderen Sprache können Sie möglicherweise auf Ihre Frage zu beheben, indem Sie die Suche nach der gleichen Funktion in einer anderen Sprache ausgedrückt.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="how-the-tutorial-is-presented"></a>Die Darstellung des Lernprogramms  
  Dieses Lernprogramm basiert auf dem RDS-Programmiermodell. Es wird jedes Schritts das Programmiermodell einzeln erläutert. Darüber hinaus veranschaulicht er jeden Schritt mit einem Visual Basic-Code-Fragment.  

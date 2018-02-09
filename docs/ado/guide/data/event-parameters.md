@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0d73ed8eda955b5b027b662e3e5c80c50730b7f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e4d3eb6b7ae6cc3902af3cbb4b3c818b91bbb562
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="event-parameters"></a>Ereignisparameter
 Jeder Ereignishandler hat einen Status-Parameter, der steuert, den Ereignishandler an. Für Ereignisse durch Abschluss wird dieser Parameter auch verwendet, um anzugeben, den Erfolg oder Misserfolg des Vorgangs, der das Ereignis generiert hat. Möglichst lückenlos Ereignisse enthalten auch einen Fehlerparameter enthalten Informationen zu Fehlern, die möglicherweise aufgetreten und einen oder mehrere Objektparameter, die an den ADO-Objekten, die zum Ausführen des Vorgangs zu verweisen. Z. B. die [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) Ereignis enthält die Objektparameter für die **Befehl**, **Recordset**, und **Verbindung** Objekte mit dem Ereignis verknüpft sind. Im folgenden Beispiel von Microsoft® Visual Basic® finden Sie unter der pCommand pCommand und pConnection-Objekten, die darstellen der **Befehl**, **Recordset**, und **Verbindung** Objekte, mit denen, die **Execute** Methode.  
@@ -49,7 +50,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>Status-Parameter  
  Wenn die Ereignishandler-Routine aufgerufen wird, die *Status* Parameter auf einen der folgenden Werte festgelegt ist.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**adStatusOK**|Übergeben wird und Ereignisse durch Abschluss. Dieser Wert bedeutet, dass den Vorgang, der das Ereignis wurde erfolgreich abgeschlossen verursacht.|  
 |**adStatusErrorsOccurred**|Um nur Ereignisse durch Abschluss übergeben. Dieser Wert bedeutet, dass der Vorgang, der das Ereignis verursacht hat, nicht erfolgreich war, oder ein Ereignisses wird der Vorgang wurde abgebrochen. Überprüfen Sie die *Fehler* -Parameter für weitere Details.|  
@@ -59,7 +60,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  Wenn Sie ein Ereignis verarbeitet nicht mehr verwenden möchten, legen Sie *Status* auf **AdStatusUnwantedEvent** und Ihre Anwendung nicht mehr benachrichtigt, wenn das Ereignis empfangen. Beachten Sie jedoch, dass einige Ereignisse, die mehr als ein Grund ausgelöst werden können. In diesem Fall müssen Sie angeben **AdStatusUnwantedEvent** für jede mögliche Ursache. Beispielsweise zum Beenden des Empfangs der Benachrichtigung über ausstehende **RecordChange** Ereignisse, die Sie festlegen müssen die *Status* Parameter **AdStatusUnwantedEvent** für  **AdRsnAddNew**, **AdRsnDelete**, **AdRsnUpdate**, **AdRsnUndoUpdate**, **AdRsnUndoAddNew**, **AdRsnUndoDelete**, und **AdRsnFirstChange** , wenn sie auftreten.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**adStatusUnwantedEvent**|Fordern Sie an, dass dieser Ereignishandler keine weiteren Benachrichtigungen erhalten.|  
 |**adStatusCancel**|Anfordern der Abbruch des Vorgangs, die durchgeführt wird.|  

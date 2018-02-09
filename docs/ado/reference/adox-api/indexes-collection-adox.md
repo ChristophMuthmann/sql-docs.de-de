@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,20 +16,21 @@ apitype: COM
 f1_keywords:
 - Table::Indexes
 - Indexes
-helpviewer_keywords: Indexes collection [ADOX]
+helpviewer_keywords:
+- Indexes collection [ADOX]
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08ffb7ade832341b9158164e90d7e601668a7dd6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d465c0aad483a55bfe1b2560f23a5de91ff5a754
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="indexes-collection-adox"></a>Auflistung von Indizes (ADOX)
+# <a name="indexes-collection-adox"></a>Indexes Collection (ADOX)
 Enthält alle [Index](../../../ado/reference/adox-api/index-object-adox.md) Objekte einer Tabelle.  
   
 ## <a name="remarks"></a>Hinweise  

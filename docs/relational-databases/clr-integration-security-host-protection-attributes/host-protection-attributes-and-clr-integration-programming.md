@@ -19,19 +19,20 @@ helpviewer_keywords:
 - common language runtime [SQL Server], disallowed types and members
 - HPAs [CLR integration]
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68732b099e87a8d890d99e35e17bfff3b1452092
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 40bbb7d901b54cd406b7b322fd59e8378298e9fe
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Hostschutzattribute und Programmierung der CLR-Integration
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die common Language Runtime (CLR) bietet einen Mechanismus, um verwaltete Anwendungsprogrammierschnittstellen (APIs) zu kommentieren, die Teil von .NET Framework mit bestimmten Attributen, die für einen Host der CLR, von Interesse, wie z. B. sein können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Beispiele für solche Hostschutzattribute sind:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Die CLR (Common Language Runtime) stellt Mechanismen zur Verfügung, um verwaltete Anwendungsprogrammierschnittstellen (Application Programming Interfaces, APIs), die Teil von .NET Framework sind, mit Anmerkungen in Form von bestimmten Attributen zu versehen, die für einen Host der CLR, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], von Interesse sein können. Beispiele für solche Hostschutzattribute sind:  
   
 -   **SharedState**, der angibt, ob die-API bietet die Möglichkeit zum Erstellen oder Verwalten des Freigabezustand (z. B. statische Klassenfelder).  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Sie können zur Destabilisierung des Serverprozesses führen.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lässt einen Typ oder Member mit einer **HostProtectionAttribute** , die angibt, eine **System.Security.Permissions.HostProtectionResource** -Enumeration mit dem Wert des  **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**,  **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronisierung**, oder **UI**. Dies verhindert, dass Assemblys Elemente aufrufen, die die Freigabe des Zustands aktivieren, Synchronisierungen durchführen, einen Ressourcenverlust bei der Beendigung hervorrufen oder die Integrität des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses beeinträchtigen.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt einen Typ oder Member mit einer **HostProtectionAttribute** , die angibt, eine **System.Security.Permissions.HostProtectionResource** -Enumeration mit dem Wert des  **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**,  **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronisierung**, oder **UI**. Dies verhindert, dass Assemblys Elemente aufrufen, die die Freigabe des Zustands aktivieren, Synchronisierungen durchführen, einen Ressourcenverlust bei der Beendigung hervorrufen oder die Integrität des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses beeinträchtigen.  
   
 ### <a name="disallowed-types-and-members"></a>Unzulässige Typen und Member  
  In den folgenden Themen zu identifizieren, Typen und Membern, deren **HostProtectionResource** Werte nicht zulässig sind, indem Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -61,24 +62,24 @@ ms.lasthandoff: 01/08/2018
 >  Die Listen in diesen Themen wurden von den unterstützten Assemblys generiert.  Weitere Informationen finden Sie unter [unterstützt .NET Framework-Bibliotheken](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Unzulässige Typen und Elemente in „Microsoft.VisualBasic.dll“](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)  
+ [Unzulässige Typen und Member in "Microsoft.VisualBasic.dll"](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)  
  Listet die Typen und Elemente in Microsoft.VisualBasic.dll auf, deren Hostschutzattributwerte nicht zugelassen werden.  
   
- [Unzulässige Typen und Elemente in „mscorlib.dll“](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)  
+ [Unzulässige Typen und Member in "mscorlib.dll"](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)  
  Listet die Typen und Elemente in mscorlib.dll auf, deren Hostschutzattributwerte nicht zugelassen werden.  
   
- [Unzulässige Typen und Elemente in „System.dll“](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)  
+ [Unzulässige Typen und Member in "System.dll"](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)  
  Listet die Typen und Elemente in System.dll auf, deren Hostschutzattributwerte nicht zugelassen werden.  
   
- [Unzulässige Typen und Elemente in „System.Data.dll“](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)  
+ [Unzulässige Typen und Member in "System.Data.dll"](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)  
  Listet die Typen und Elemente in System.Data.dll auf, deren Hostschutzattributwerte nicht zugelassen werden.  
   
- [Unzulässige Typen und Elemente in „System.Core.dll“](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
+ [Unzulässige Typen und Member in "System.Core.dll"](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
  Listet die Typen und Elemente in System.Core.dll auf, deren Hostschutzattributwerte nicht zugelassen werden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [CLR-Integration Einschränkungen des Programmiermodells](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
- [Erstellen von Assemblys](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
+ [Erstellen einer Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
   
   

@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: e2ce8a7cd87e188fce0f1b0f62bde148324373a5
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 9d8528d227f45e212141e97308718082d6c59cea
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Konfigurieren einer SQL Server-Verfügbarkeitsgruppe für das Skalieren von Lesevorgängen unter Linux
 
@@ -36,21 +36,21 @@ Sie können eine SQL Server immer auf Verfügbarkeit Gruppe (AG) für das Skalie
 
 Erstellen der Verfügbarkeitsgruppe. Set `CLUSTER_TYPE = NONE`. Darüber hinaus legen Sie jedes Replikat mit `FAILOVER_MODE = NONE`. Clientanwendungen, die Ausführung der Analyse oder reporting Arbeitslasten können direkt eine Verbindung herstellen, auf die sekundären Datenbanken. Sie können auch eine schreibgeschützte Routingliste erstellen. Verbindungen mit dem primären Replikat weiterleiten Auslesen der Routingliste im Round-Robin-verbindungsanforderungen an jede der sekundären Replikate.
 
-Die folgende Transact-SQL-Skript erstellt eine Verfügbarkeitsgruppe mit dem Namen `ag1`. Das Skript konfiguriert die Replikaten AG mit `SEEDING_MODE = AUTOMATIC`. Diese Einstellung bewirkt, dass SQL Server die Datenbank automatisch in jeder sekundären Serverinstanz erstellt wird, nachdem sie der Verfügbarkeitsgruppe hinzugefügt wird. Aktualisieren Sie das folgende Skript für Ihre Umgebung. Ersetzen Sie die `**<node1>**` und `**<node2>**` Werte mit den Namen der SQL Server-Instanzen, die die Replikate hosten. Ersetzen Sie die `**<5022>**` Wert mit dem Port, die Sie für den Endpunkt festlegen. Führen Sie das folgende Transact-SQL-Skript auf dem primären SQL Server-Replikat:
+Die folgende Transact-SQL-Skript erstellt eine Verfügbarkeitsgruppe mit dem Namen `ag1`. Das Skript konfiguriert die Replikaten AG mit `SEEDING_MODE = AUTOMATIC`. Diese Einstellung bewirkt, dass SQL Server die Datenbank automatisch in jeder sekundären Serverinstanz erstellt wird, nachdem sie der Verfügbarkeitsgruppe hinzugefügt wird. Aktualisieren Sie das folgende Skript für Ihre Umgebung. Ersetzen Sie die `<node1>` und `<node2>` Werte mit den Namen der SQL Server-Instanzen, die die Replikate hosten. Ersetzen Sie die `<5022>` Wert mit dem Port, die Sie für den Endpunkt festlegen. Führen Sie das folgende Transact-SQL-Skript auf dem primären SQL Server-Replikat:
 
 ```SQL
 CREATE AVAILABILITY GROUP [ag1]
     WITH (CLUSTER_TYPE = NONE)
     FOR REPLICA ON
-        N'**<node1>**' WITH (
-            ENDPOINT_URL = N'tcp://**<node1>:**<5022>**',
+        N'<node1>' WITH (
+            ENDPOINT_URL = N'tcp://<node1>:<5022>',
             AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
             FAILOVER_MODE = MANUAL,
             SEEDING_MODE = AUTOMATIC,
                     SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL)
             ),
-        N'**<node2>**' WITH ( 
-            ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**', 
+        N'<node2>' WITH ( 
+            ENDPOINT_URL = N'tcp://<node2>:<5022>', 
             AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
             FAILOVER_MODE = MANUAL,
             SEEDING_MODE = AUTOMATIC,

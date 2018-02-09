@@ -27,15 +27,15 @@ helpviewer_keywords:
 - SQL handles
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad0861b72965936dfb673774a339ab7769f63689
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 941417a97ce739173e2aba195d51ec845848186f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

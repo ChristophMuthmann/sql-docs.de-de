@@ -21,15 +21,15 @@ helpviewer_keywords:
 - GetPathLocator function
 ms.assetid: 78b7e220-445b-4fdf-811b-7253f4f2b058
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d74dda3f9ee67c76e90967d3ced6c43951a225a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a94f9be78e3acf4d5ea91ec3f538a021890aff16
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getpathlocator-transact-sql"></a>GetPathLocator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

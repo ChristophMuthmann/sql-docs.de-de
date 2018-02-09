@@ -26,15 +26,15 @@ helpviewer_keywords:
 - sys.fn_cdc_get_column_ordinal
 ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ec42b760f80dbd30d78cc1cf24acc90d829ca65
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6e88823842c7c8868923bfa1ae29adb3c2afd16b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sysfncdcgetcolumnordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

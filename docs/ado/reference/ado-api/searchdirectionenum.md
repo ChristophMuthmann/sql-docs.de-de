@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: SearchDirectionEnum
-helpviewer_keywords: SearchDirectionEnum enumeration [ADO]
+f1_keywords:
+- SearchDirectionEnum
+helpviewer_keywords:
+- SearchDirectionEnum enumeration [ADO]
 ms.assetid: 81272ae3-2165-4f4e-adfe-9ede0368cb17
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 647dc72033d44c9b2b015506875b6939e531a8e3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 46b8e127ed67c71a733cf232e92e967a031b4314
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="searchdirectionenum"></a>SearchDirectionEnum
 Gibt die Richtung einer Datensatz Suche innerhalb einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adSearchBackward**|-1|Sucht nach hinten, beenden am Anfang der **Recordset**. Wenn eine Übereinstimmung gefunden wird, wird am Zeiger für den Datensatz positioniert [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md).|  
 |**adSearchForward**|1|Sucht vorwärts, beenden am Ende der **Recordset**. Wenn eine Übereinstimmung gefunden wird, wird am Zeiger für den Datensatz positioniert [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md).|  

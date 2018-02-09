@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,25 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Execute21 method [RDS]
+helpviewer_keywords:
+- Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b94d4cdb75cbdcfaa2dfece8d7172e2935d6759d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fd79bbbd0ccce5e5e2f2bef181ba958c76f6afb5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute21-method-rds"></a>Execute21-Methode (RDS)
 Führt die Anforderung aus und erstellt ein ADO-Recordset für die Verwendung in ADO 2.1.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,13 +41,13 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *"ConnectionString"*  
+ *ConnectionString*  
  Eine Zeichenfolge verwendet, um mit dem OLE DB-Anbieter hergestellt, in dem die Anforderung für die Ausführung gesendet werden. Wenn ein Ereignishandler mithilfe des Parameters *HandlerString*, es bearbeiten oder die Verbindungszeichenfolge ersetzen kann.  
   
  *HandlerString*  
  Die Zeichenfolge identifiziert den Handler, die mit dieser Ausführung verwendet werden. Die Zeichenfolge besteht aus zwei Teilen. Der erste Teil enthält den Namen (ProgID) des Handlers verwendet werden. Der zweite Teil der Zeichenfolge enthält Argumente, die an den Ereignishandler übergeben werden. Wie die Argumentzeichenfolge interpretiert wird, ist bestimmten Handler. Die beiden Teile werden durch die erste Instanz eines Kommas in der Zeichenfolge getrennt, (obwohl die Argumentzeichenfolge zusätzliche Kommas enthalten kann). Die Argumente sind optional.  
   
- *Abfragezeichenfolge*  
+ *QueryString*  
  Ein Befehl in der Befehlssprache unterstützt die OLE DB-Anbieter, die in der Verbindungszeichenfolge angegeben wird. Für SQL-basierte Anbieter, er enthält möglicherweise eine [!INCLUDE[tsql](../../../includes/tsql_md.md)] Befehls-Anweisung, jedoch für nicht-SQL-Anbieter (z. B. MSDataShape) dies u. u. keine [!INCLUDE[tsql](../../../includes/tsql_md.md)] abfrageanweisung.  
   
  Wenn ein Ereignishandler verwendet wird (und es wird dringend empfohlen, dass ein Handler verwendet werden), kann der Handler auch, ändern oder Ersetzen Sie den Wert, der hier angegebenen. Der Ereignishandler beispielsweise in der Regel ersetzt *QueryString* mit einer Abfragezeichenfolge aus der INI-Datei. Standardmäßig wird die Datei "Msdfmap.ini" verwendet.  

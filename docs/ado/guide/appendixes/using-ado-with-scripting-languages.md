@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7551fd26f6c0862115f0212777fb738a68e548a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 804365750839fd3b9830a9573ab2cf397b529187
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-ado-with-scripting-languages"></a>Verwenden von ADO mit Skriptsprachen
 Innerhalb einer skriptumgebung können mit ADO Daten über die serverseitigen Skripts verfügbar machen. In diesem Szenario ADO, die zugrunde liegenden OLE DB-Anbieter, die es verwendet, und beliebige andere Komponenten, die erforderlich sind, um auf einen bestimmten Datenspeicher verweisen auf einem Server mit Internetinformationsdienste (Internet Information Services, IIS) installiert sind. ADO ist mithilfe von Active Server Pages (ASP), ist eine Komponente, die in ein Skript, das HTML-Daten, z. B. generieren kann verwiesen wird. Diese HTML-Inhalt kann über HTTP auf einen Webbrowser für den Client übergeben werden. Mithilfe von Skripts können auf der Webseite Aktionen zurück an das serverseitige Skript gestattet aktualisieren, durchsuchen und anzeigen bestimmte Daten gesendet.  
@@ -35,7 +36,7 @@ Innerhalb einer skriptumgebung können mit ADO Daten über die serverseitigen Sk
 |------------|-------------------------|  
 |ADO-Verbindung|ja|  
 |ADO-Befehl|nein|  
-|ADO-Parameter|nein|  
+|ADO Parameter|nein|  
 |ADO-Recordset|ja|  
 |ADO-Datensatz|ja|  
 |ADO-Datenstrom|ja|  
@@ -51,7 +52,7 @@ Innerhalb einer skriptumgebung können mit ADO Daten über die serverseitigen Sk
 |Anbieter|Speichern für Skripting?|  
 |--------------|-------------------------|  
 |Form|ja|  
-|Beibehalten|ja|  
+|Persist|ja|  
 |Remote|ja|  
 |OLE DB-Anbieter für SQLServer (SQLOLEDB)|nein|  
 |OLE DB-Anbieter für ODBC (MSDASQL)|nein|  

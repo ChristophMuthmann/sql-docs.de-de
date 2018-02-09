@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - client-side cursors [ADO]
 - cursors [ADO], server-side
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5b39610496e4ff897365dd16d0a48e7057c18ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 71af2e383a1ee598e00789aae5045d5e475948e3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="the-significance-of-cursor-location"></a>Die Bedeutung der Cursorposition
 Jeder Cursor verwendet temporäre Ressourcen zum Speichern der Daten. Diese Ressourcen können Speicher, eine Auslagerungsdatei des Datenträgers, temporäre Datenträgerdateien oder sogar temporären Speicherplatz in der Datenbank sein. Der Cursor wird aufgerufen, eine *clientseitige* Cursor, wenn diese Ressourcen auf dem Clientcomputer gespeichert werden. Der Cursor wird aufgerufen, eine *serverseitige* Cursor, wenn diese Ressourcen auf dem Server gespeichert sind.  

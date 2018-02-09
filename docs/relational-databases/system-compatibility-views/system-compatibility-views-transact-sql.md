@@ -8,10 +8,12 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - compatibility views [SQL Server]
 - system tables [SQL Server], compatibility views
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - compatibility [SQL Server], system tables
 - user IDs [SQL Server]
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
-caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1337914bca53cde4aa374d838b22a08ace940a79
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0d05a2c3c720b1acbd806f2898c9bf160083aa70
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="system-compatibility-views-transact-sql"></a>Kompatibilität Systemsichten (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,20 +48,20 @@ ms.lasthandoff: 11/17/2017
   
 |Spaltenname|Kompatibilitätssicht|SQL Server 2005-Sicht|  
 |-----------------|------------------------|--------------------------|  
-|**xusertype**|**"syscolumns"**|**sys.columns**|  
-|**Benutzertyp**|**"syscolumns"**|**sys.columns**|  
-|**memberuid**|**Sysmembers**|**sys.database_role_members**|  
-|**groupuid**|**Sysmembers**|**sys.database_role_members**|  
-|**UID**|**sysobjects**|**sys.objects**|  
-|**UID**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
-|**GRANTOR**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
+|**xusertype**|**syscolumns**|**sys.columns**|  
+|**usertype**|**syscolumns**|**sys.columns**|  
+|**memberuid**|**sysmembers**|**sys.database_role_members**|  
+|**groupuid**|**sysmembers**|**sys.database_role_members**|  
+|**uid**|**sysobjects**|**sys.objects**|  
+|**uid**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
+|**grantor**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**xusertype**|**systypes**|**sys.types**|  
-|**UID**|**systypes**|**sys.types**|  
-|**UID**|**sysusers**|**sys.database_principals**|  
+|**uid**|**systypes**|**sys.types**|  
+|**uid**|**sysusers**|**sys.database_principals**|  
 |**altuid**|**sysusers**|**sys.database_principals**|  
-|**GID**|**sysusers**|**sys.database_principals**|  
-|**UID**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
-|**UID**|**sysprocesses**|**sys.dm_exec_requests**|  
+|**gid**|**sysusers**|**sys.database_principals**|  
+|**uid**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
+|**uid**|**sysprocesses**|**sys.dm_exec_requests**|  
   
  Wenn in einer Benutzerdatenbank verwiesen, Systemtabellen der in SQL Server 2000 veraltet erklärt wurden (z. B. **"syslanguages"** oder **Syscacheobjects**), werden jetzt in der Back-kompatibilitätssicht gebunden der **Sys** Schema. Da die SQL Server 2000-Systemtabellen für mehrere Versionen als veraltetet markiert wurden, wird diese Änderung nicht als wichtige Änderung eingestuft.  
   

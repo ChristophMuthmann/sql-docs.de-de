@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,16 +13,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a6b693060ad00f8b18268c503a7d0a96f3e5e62a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 76892d6ae394b41c64852cd721e22f494aee51af
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-fundamentals"></a>ADO-Grundlagen
 ADO bietet Entwicklern ein leistungsfähiges, logisches Objektmodell zum programmgesteuerten Zugriff auf, bearbeiten und Aktualisieren von Daten aus einer Vielzahl von Datenquellen über OLE DB-Schnittstellen. Die häufigste Verwendung von ADO ist zum Abfragen einer Tabelle oder Tabellen in einer relationalen Datenbank, abrufen und Anzeigen der Ergebnisse in einer Anwendung und vielleicht können Benutzer vornehmen und Änderungen an den Daten speichern. Andere Aufgaben sind folgende:  

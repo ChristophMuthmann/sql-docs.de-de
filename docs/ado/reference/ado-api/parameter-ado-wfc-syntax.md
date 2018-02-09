@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Parameter collection [ADO], ADO/WFC syntax
+helpviewer_keywords:
+- Parameter collection [ADO], ADO/WFC syntax
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 370528b6a58ab987f95ae551ab5473f3b8e549e7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 05f3e2f6f6b3985c1c68604e6e9829c1b1f3eef1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Parameter (ADO - WFC-Syntax)
 ## <a name="package-commswfcdata"></a>Paket com.ms.wfc.data  
@@ -74,7 +76,7 @@ public AdoProperties getProperties()
   
  ADO/WFC implementiert die **Wert** Eigenschaft mit dem **GetValue** Methode, die einen VARIANT-Objekt zurückgibt und die **SetValue** Methode, die einen Variant-Wert als Argument akzeptiert. Varianten sind sehr effizient in bestimmten Sprachen, z. B. Microsoft Visual Basic.  
   
- Zusätzlich zu den **Wert** Eigenschaft ADO/WFC bietet *Accessor* Methoden, die mit Java-Datentypen abrufen und Festlegen des Inhalts von **Parameter** Objekte. Die meisten dieser Methoden haben Namen im Format **abrufen***DataType* oder **festgelegt***DataType*.  
+ Zusätzlich zu den **Wert** Eigenschaft ADO/WFC bietet *Accessor* Methoden, die mit Java-Datentypen abrufen und Festlegen des Inhalts von **Parameter** Objekte. Die meisten dieser Methoden haben Namen im Format **abrufen *** DataType* oder **festgelegt *** DataType*.  
   
  Eine wichtige Ausnahme besteht: besteht keine **GetNull** Eigenschaft; stattdessen wird ein **IsNull** -Eigenschaft, die einen booleschen Wert, der angibt, ob das Feld null zurückgibt.  
   

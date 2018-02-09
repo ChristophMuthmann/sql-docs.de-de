@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: IsolationLevelEnum
-helpviewer_keywords: IsolationLevelEnum enumeration [ADO]
+f1_keywords:
+- IsolationLevelEnum
+helpviewer_keywords:
+- IsolationLevelEnum enumeration [ADO]
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81659537335129e820a5bc610e05fce2d2bca081
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 98a9f6213af3fbfb523701f0a8dda1de80cc2d93
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 Gibt die Ebene der Isolation jeder Transaktion für eine [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adXactUnspecified**|-1|Gibt an, dass der Anbieter eine andere Isolationsstufe verwendet wird, als angegeben, aber die Ebene nicht bestimmt werden kann.|  
 |**adXactChaos**|16|Gibt an, dass die ausstehenden Änderungen durch Transaktionen mehr hoch isolierten nicht überschrieben werden kann.|  

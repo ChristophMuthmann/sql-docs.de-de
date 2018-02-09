@@ -22,15 +22,15 @@ helpviewer_keywords:
 - sys.fn_trace_gettable function
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8babbdce1e0ab090af85a39f163965d322ac38f7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2624c7ea8a3c118f1bb1da2e456bd03cbbdbe968
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sysfntracegettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

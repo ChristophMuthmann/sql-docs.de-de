@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Catalog::raw_Create
 - _Catalog::Create
-helpviewer_keywords: Create method [ADOX]
+helpviewer_keywords:
+- Create method [ADOX]
 ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb1e3dfcf4152060c5828133444ec72ce0994249
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 81c480c08a9d214ab8d35730c4aa34465d418d27
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-method-adox"></a>Create-Methode (ADOX)
 Wird einen neuen Katalog erstellt.  

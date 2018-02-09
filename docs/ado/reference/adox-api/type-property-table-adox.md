@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - _Table::Type
 - _Table::GetType
 - _Table::get_Type
-helpviewer_keywords: Type property [ADOX]
+helpviewer_keywords:
+- Type property [ADOX]
 ms.assetid: 7b6e14bb-fb69-4d74-aaca-f5d380f4d887
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad5329e78a883d53eec808b4c3423644a011ad39
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4688b88d1bb4397c3e270d868fc0879ec56b5a2f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="type-property-table-adox"></a>Type-Eigenschaft (Tabelle) (ADOX)
 Gibt den Typ einer Tabelle.  

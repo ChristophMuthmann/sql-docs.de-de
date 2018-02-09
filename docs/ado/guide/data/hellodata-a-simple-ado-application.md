@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - HelloData sample application [ADO]
 - ADO, samples
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1c2733381221139373764577df07afa22e40e49
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 007f2842279607c722f6216d771751209ff723bc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: Eine einfache ADO-Anwendung
 Diese einfache Anwendung schrittweise jeden der vier wichtigsten ADO-Vorgänge: Abrufen, untersuchen, bearbeiten und Aktualisieren von Daten. Diese Vorgänge werden für die Beispieldatenbank Northwind, die Sie mit Microsoft® SQL Server ausgeführt. Im Beispiel für die Fehlerbehandlung ist minimal, auf die Grundlagen von ADO konzentrieren und Code übersichtliche zu verhindern.  
@@ -48,12 +49,12 @@ Diese einfache Anwendung schrittweise jeden der vier wichtigsten ADO-Vorgänge: 
   
  ![Zeigt Form1 für die HelloData VB-Anwendung](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|Steuerelementtyp|Eigenschaft|value|  
+|Steuerelementtyp|Eigenschaft|Wert|  
 |------------------|--------------|-----------|  
 |Form|Name|Form1|  
 ||Höhe|6500|  
 ||Breite|6500|  
-|MS-DataGrid|Name|grdDisplay1|  
+|MS DataGrid|Name|grdDisplay1|  
 |Textfeld|Name|txtDisplay1|  
 ||Mehrzeilige|true|  
 |Befehlsschaltfläche|Name|cmdGetData|  

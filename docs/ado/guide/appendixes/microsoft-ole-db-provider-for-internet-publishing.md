@@ -1,10 +1,11 @@
 ---
-title: "Microsoft OLE DB-Anbieter für Internet Publishing | Microsoft Docs"
+title: Microsoft OLE DB Provider for Internet Publishing | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,18 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Internet publishing
 - Internet Publishing provider [ADO]
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81b34a20948dc53bb16bdd2c9442895af711adb2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f86280c8c9b01e8482500fa174784d6d752b7d9e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB-Anbieter für Internet Publishing (Übersicht)
+# <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for Internet Publishing Overview
 Microsoft OLE DB-Anbieter für Internet Publishing ermöglicht ADO den Zugriff auf Ressourcen, die von Microsoft FrontPage oder Microsoft Internet Information Server bedient. Ressourcen gehören Web-Quelldateien, z. B. HTML-Dateien oder Ordner für Windows 2000-Webserver.
 
 ## <a name="connection-string-parameters"></a>Parameter für Verbindungszeichenfolgen
@@ -56,7 +57,7 @@ MSDAIPP.DSO
 
 |Schlüsselwort|Description|
 |-------------|-----------------|
-|**Anbieter**|Gibt die OLE DB-Anbieter für Internet Publishing.|
+|**Provider**|Gibt die OLE DB-Anbieter für Internet Publishing.|
 |**Datenquelle** -"oder" - **URL**|Gibt die URL einer Datei oder eines Verzeichnisses in einem Webordner veröffentlicht.|
 |**Benutzer-ID**|Gibt den Benutzernamen an.|
 |**Kennwort**|Gibt das Kennwort des Benutzers an.|

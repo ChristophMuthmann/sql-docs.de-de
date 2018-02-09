@@ -17,19 +17,20 @@ helpviewer_keywords:
 - calculations [CLR integration]
 - user-defined functions [CLR integration]
 ms.assetid: bad9b7e8-5967-4afa-8dc8-6d840faf9372
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 33746938a6121e0caaa94f2f71c84f400d5faace
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7a21a1ef44ac6898740b75daf5b087e76415d904
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-user-defined-aggregates"></a>Benutzerdefinierte CLR-Aggregate
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Aggregatfunktionen führen Berechnungen für eine Gruppe von Werten und einen einzelnen Wert zurückgeben. Bisher [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nur integrierte Aggregatfunktionen, wie z. B. **Summe** oder **MAX**, die einen Satz von skalaren Eingabewerten arbeiten und eine einzelne gesamtverstärkung generieren der Wert aus dieser Gruppe. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Integration in die [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework common Language Runtime (CLR) ermöglicht jetzt die Entwickler benutzerdefinierte Aggregatfunktionen in verwaltetem Code zu erstellen und sich diese Funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)] oder anderen verwalteten Code.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Aggregatfunktionen führen Berechnungen für eine Wertemenge durch und geben einen einzelnen Wert zurück. Bisher [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nur integrierte Aggregatfunktionen, wie z. B. **Summe** oder **MAX**, die einen Satz von skalaren Eingabewerten arbeiten und eine einzelne gesamtverstärkung generieren der Wert aus dieser Gruppe. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Integration in die [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework common Language Runtime (CLR) ermöglicht jetzt die Entwickler benutzerdefinierte Aggregatfunktionen in verwaltetem Code zu erstellen und sich diese Funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)] oder anderen verwalteten Code.  
   
  In der folgenden Tabelle sind die Themen dieses Abschnitts aufgeführt.  
   

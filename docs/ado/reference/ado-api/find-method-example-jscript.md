@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: JScript
-helpviewer_keywords: Find method [ADO], JScript example
+dev_langs:
+- JScript
+helpviewer_keywords:
+- Find method [ADO], JScript example
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 238e90e2a1630838a8a264db5bf7ef9ecdbb65e9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 71fc2a1180d702cf0324aefd7769f1fb6d7c0dec
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="find-method-example-jscript"></a>Find Methodenbeispiel (JScript)
 Dieses Beispiel verwendet die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) des Objekts [suchen](../../../ado/reference/ado-api/find-method-ado.md) Methode zum Suchen und Anzeigen von Unternehmen in die ***Northwind*** Datenbank, deren Name mit dem Buchstaben beginnt, und fügen Sie Im folgenden code in Editor oder einem anderen Texteditor, und speichern Sie sie als **g**.  

@@ -16,41 +16,42 @@ helpviewer_keywords:
 - status information [SQL Server], assemblies
 - metadata [SQL Server], assemblies
 ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: faae880f2751179d5cc0903714062b47893e2dfe
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c96fde4198ff475f53aa94e09a400e62f26fc8b3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies---getting-information"></a>Assemblys - abrufen von Informationen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die folgenden Katalogsichten und Funktionen können für Metadaten zu Assemblys abgefragt werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Die folgenden Katalogsichten und Funktionen können nach Metadaten zu Assemblys abgefragt werden.  
   
  **Beim Abrufen von Informationen zu einzelnen Assemblys**  
   
--   [ASSEMBLYPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/assemblyproperty-transact-sql.md)  
+-   [ASSEMBLYPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/assemblyproperty-transact-sql.md)  
   
  **Zum Abrufen von Informationen zu allen Assemblys in der Datenbank**  
   
--   [Sys.Assemblies &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
+-   [sys.assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   
  **Zum Abrufen von Informationen zu Assemblydateien, einschließlich assemblybinärdateien,-Quelldateien und -Debugdateien**  
   
--   [Sys. assembly_files &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)  
+-   [sys.assembly_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)  
   
  **Beim Abrufen von Informationen zu assemblyübergreifenden verweisen**  
   
--   [Sys. assembly_references &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)  
+-   [sys.assembly_references &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)  
   
  **Rufen Sie Informationen zu benutzerdefinierten Typen abgerufen.**  
   
--   [Sys. assembly_types &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)  
+-   [sys.assembly_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)  
   
--   [Sys.Types &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
+-   [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   
  **Zum Abrufen von Assemblyinformationen zu common Language gespeicherte Common Language Runtime (CLR), Prozeduren, Triggern und Funktionen**  
   

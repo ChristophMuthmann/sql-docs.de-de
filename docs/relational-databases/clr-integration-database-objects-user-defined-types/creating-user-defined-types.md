@@ -11,24 +11,26 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - user-defined types [CLR integration], creating
 - UDTs [CLR integration], creating
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a98e8438ab41e1f8dad5dd333d033d86ffcc4da2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c9b8c9781e445e55b1b59d60db5d8e054da0d060
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-user-defined-types"></a>Erstellen von benutzerdefinierten Typen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Um einen benutzerdefinierten Typ (UDT) in installiert werden kann erstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], müssen Sie zuerst eine Klasse erstellen, in einem der unterstützten .NET Framework-Programmiersprachen wie Visual c# oder Visual Basic, die den Spezifikationen zum Erstellen von UDTs entspricht. Die Klasse kann dann in eine DLL (Dynamic Link Library) kompiliert werden, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen werden kann. Sie können UDTs auch mit Visual Studio erstellen und bereitstellen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Um einen benutzerdefinierten Typ (User-Defined Type, UDT) zu erstellen, der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert werden kann, müssen Sie zuerst in einer der unterstützten .NET Framework-Programmiersprachen, z. B. Visual C# oder Visual Basic, eine Klasse definieren, die den Spezifikationen für die Erstellung von UDTs entspricht. Die Klasse kann dann in eine DLL (Dynamic Link Library) kompiliert werden, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen werden kann. Sie können UDTs auch mit Visual Studio erstellen und bereitstellen.  
   
  Die Funktion zum Ausführen von CLR-Code (Common Language Runtime) ist in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standardmäßig deaktiviert. Die CLR kann aktiviert werden, mithilfe der **Sp_configure** gespeicherte Systemprozedur, wie im folgenden gezeigt [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen:  
   
@@ -335,7 +337,7 @@ Imports System.Text
 End Structure  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Benutzerdefinierte CLR-Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

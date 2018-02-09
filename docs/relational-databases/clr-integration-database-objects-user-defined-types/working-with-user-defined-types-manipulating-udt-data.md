@@ -11,7 +11,8 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CAST function
 - data deletions [CLR integration]
@@ -30,19 +31,20 @@ helpviewer_keywords:
 - invoking UDT methods
 - inserting data
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
-caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e4067f2a0eedee1f06031ccdbc9bb9b85f97e0d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 365c7171b4bc00f718add4261ebcebab1cd5dfd2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>Arbeiten mit benutzerdefinierten Typen: Bearbeiten von UDT-Daten
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] stellt keine spezialisierte Syntax für INSERT-, Update- oder DELETE-Anweisungen, beim Ändern von Daten in eine benutzerdefinierte Typspalten (UDTS). Die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen CAST oder CONVERT werden verwendet, um systemeigene Datentypen in den benutzerdefinierten Typ (UDT) umzuwandeln.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] stellt keine spezialisierte Syntax für INSERT-, UPDATE- oder DELETE-Anweisungen zum Ändern von Daten in Spalten vom benutzerdefinierten Typ (User-defined Type, UDT) bereit. Die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen CAST oder CONVERT werden verwendet, um systemeigene Datentypen in den benutzerdefinierten Typ (UDT) umzuwandeln.  
   
 ## <a name="inserting-data-in-a-udt-column"></a>Einfügen von Daten in eine UDT-Spalte  
  Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen fügen drei Zeilen Beispieldaten in die **Punkte** Tabelle. Die **Punkt** Datentyp besteht aus X- und Y-Ganzzahlwerten, werden als Eigenschaften des UDT verfügbar gemacht. Verwenden Sie entweder die CAST- oder CONVERT-Funktion, um die durch Kommas getrennten X- und Y-Werte in der **Punkt** Typ. Die ersten beiden Anweisungen verwenden die CONVERT-Funktion zum Konvertieren eines Zeichenfolgenwertes in der **Punkt** Typ und die dritte Anweisung verwendet die CAST-Funktion:  
@@ -269,6 +271,6 @@ WHERE ID = 2
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit benutzerdefinierten Typen in SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
+ [Arbeiten mit benutzerdefinierten Typen in SQLServer](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
   
   

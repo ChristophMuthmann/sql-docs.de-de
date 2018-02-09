@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 661c3797ef0881efd49921231c2899f5391e4e27
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: e8160ec17a856a3c14d1177085c95c329e5d2b3b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Versionshinweise für SQL Server-2017 unter Linux
 
@@ -58,7 +58,7 @@ In der folgenden Tabelle werden die Revisionsverlauf für SQL Server-2017 aufgel
 
 ## <a id="cuinstall"></a>Installieren von kumulativen updates
 
-Wenn Sie das kumulative Update Repository konfiguriert haben, erhalten Sie das neueste kumulative Update von SQL Server-Paketen beim Ausführen von Neuinstallationen. Das kumulative Update-Repository ist die Standardeinstellung für alle Artikel der Paket-Installation für SQL Server on Linux. Weitere Informationen zum Repository-Konfiguration finden Sie unter [Quelle des Repositorys](sql-server-linux-setup.md#repositories).
+Wenn Sie das kumulative Update Repository konfiguriert haben, erhalten Sie das neueste kumulative Update von SQL Server-Paketen beim Ausführen von Neuinstallationen. Das kumulative Update-Repository ist die Standardeinstellung für alle Artikel der Paket-Installation für SQL Server on Linux. Weitere Informationen zum Repository-Konfiguration finden Sie unter [konfigurieren Repositorys für SQL Server on Linux](sql-server-linux-change-repo.md).
 
 Wenn Sie vorhandene SQL Server-Pakete aktualisieren, führen Sie das entsprechende Update-Befehl für jedes Paket, das neueste kumulative Update zu erhalten. Bestimmte Update-Anweisungen für jedes Paket finden Sie unter den folgenden Handbüchern zur Installation:
 

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: RuleEnum
-helpviewer_keywords: RuleEnum enumeration [ADOX]
+f1_keywords:
+- RuleEnum
+helpviewer_keywords:
+- RuleEnum enumeration [ADOX]
 ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a66a44d39e8e7ef4b99b668faaf6baa3b60519e5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5a727bf73e4602aa231b1fe064b294137566e3ba
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="ruleenum"></a>Diesen zurück
+# <a name="ruleenum"></a>RuleEnum
 Gibt die Regel beim Verfolgen von einem [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) wird gelöscht.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adRICascade**|1|CASCADE; kaskadierende Änderungen.|  
 |**adRINone**|0|Standard. Es wird keine Aktion ausgeführt.|  

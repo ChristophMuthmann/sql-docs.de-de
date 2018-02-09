@@ -1,41 +1,34 @@
 ---
 title: Aktualisiert - Verbindung mit SQL Server-Dokumentation | Microsoft Docs
 description: "Codeausschnitte anzeigen aktualisierter Inhalt in zuletzt geänderten Dokumentation für die Verbindung mit Microsoft SQL Server herstellen."
-services: na
-documentationcenter: 
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: 
-ms.suite: sql
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.topic: article
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: connect-to-sql
-ms.openlocfilehash: d8fb5f5cfbd94cc9d2bd86c4dfe1cbc15bc68d34
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: connect
+ms.date: 02/03/2018
+ms.openlocfilehash: cc4eb05dc4dcd74623c8ce7dfa7b7842449d79b6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-connect-to-sql-server"></a>Neue und kürzlich aktualisierte: Herstellen einer Verbindung mit SQLServer
 
 
 
-Beinahe jeden Tag aktualisiert Microsoft einige der vorhandenen Artikel auf der Dokumentationswebsite [Docs.Microsoft.com](http://docs.microsoft.com/). In diesem Artikel werden Auszüge aus den zuletzt aktualisierten Artikeln wiedergegeben. Links zu den neuen Artikel werden ggf. ebenfalls aufgeführt.
+Beinahe jeden Tag Microsoft updates einige vorhandene Artikel auf dessen [Docs.Microsoft.com](http://docs.microsoft.com/) Dokumentationswebsite. Dieser Artikel zeigt Auszüge aus den zuletzt aktualisierten Artikel. Links zu den neuen Artikel, möglicherweise ebenfalls aufgeführt.
 
-Dieser Artikel wurde im Rahmen eines Programms erstellt, das in regelmäßigen Abständen erneut ausgeführt wird. Gelegentlich kann ein Auszug mit falscher Formatierung oder als Markdown aus dem Quellartikel angezeigt werden. Bilder werden hier nie wiedergegeben.
+In diesem Artikel wird von einem Programm generiert, die in regelmäßigen Abständen erneut ausgeführt wird. Gelegentlich kann ein Auszug aus dem Quellartikel mit sich Formatierung oder als Markdown angezeigt. Bilder werden hier nicht angezeigt.
 
-Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeldet:
+Neueste Updates werden für folgenden Datumsbereich und Betreff gemeldet:
 
 
 
-- *Datumsbereich des Updates*: &nbsp; **28.09.2017** &nbsp; – bis – &nbsp; **02.12.2017**
+- *Datumsbereich des Updates:* &nbsp; **2017-12-03** &nbsp; - zu - &nbsp; **2018-02-03**
 - *Bereich für die Themenbereichsdatenbank:* &nbsp; **Herstellen einer Verbindung mit SQL Server**.
 
 
@@ -43,28 +36,24 @@ Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeld
 
 &nbsp;
 
-## <a name="new-articles-created-recently"></a>Neue Artikel, die vor kurzem erstellt wurden
+## <a name="new-articles-created-recently"></a>Neue Artikel, die vor kurzem erstellt
 
 Die folgenden Links leiten Sie zu den neuen Artikeln weiter, die erst kürzlich erstellt wurden.
 
 
-1. [Data Source-Assistentenbildschirm 1](odbc/windows/dsn-wizard-1.md)
-2. [Data Source-Assistent (Bildschirm 2)](odbc/windows/dsn-wizard-2.md)
-3. [Assistent Datenquellenbildschirm 3](odbc/windows/dsn-wizard-3.md)
-4. [Data Source-Assistent (Bildschirm 4)](odbc/windows/dsn-wizard-4.md)
-5. [Dialogfeld "SQL Server-Anmeldung" (ODBC)](odbc/windows/sql-server-login-dialog.md)
+***Dieses Mal sind keine neuen Artikel aufgeführt.***
 
 
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>Aktualisierte Artikel mit Auszügen
+## <a name="updated-articles-with-excerpts"></a>Aktualisierte Artikel mit Auszüge
 
 In diesem Abschnitt werden die Auszüge der Updates aus den Artikeln dargestellt, die vor Kurzem umfassend aktualisiert wurden.
 
-Die Auszüge hier werden getrennt vom richtigen semantischen Kontext angezeigt. Darüber hinaus wird ein Auszug manchmal getrennt von der wichtigen Markdownsyntax wiedergegeben, die ihn im ursprünglichen Artikel umgibt. Aus diesem Grund sind diese Auszüge nur allgemeine Anleitungen. Anhand dieser Auszüge sollen Sie nur entscheiden können, ob Sie sich die Zeit nehmen und den eigentlichen Artikel besuchen möchten.
+Die hier angezeigten Auszüge werden getrennt vom richtigen semantische kontextabhängig angezeigt. Darüber hinaus wird manchmal ein Auszug vom wichtige Markdown-Syntax getrennt, die sie in den tatsächlichen Artikel umgibt. Aus diesem Grund sind diese Auszüge nur allgemeine Anleitungen. Die Auszüge können nur Sie wissen, ob Ihre Interessen dauert rechtfertigen, klicken Sie auf, und besuchen den tatsächlichen Artikel.
 
-Kopieren Sie aus diesem und anderen Gründen auf gar keinen Fall Code aus diesen Auszügen, und gehen Sie bei keinem Textauszug von einer 100-prozentigen Richtigkeit der Informationen aus. Besuchen Sie stattdessen den eigentlichen Artikel.
+Kopieren Sie für diese und andere Gründe Code nicht von diesen verwendet, und nehmen Sie nicht als genaue Wahrheit alle Textauszug. Besuchen Sie stattdessen den tatsächlichen Artikel aus.
 
 
 
@@ -74,14 +63,11 @@ Kopieren Sie aus diesem und anderen Gründen auf gar keinen Fall Code aus diesen
 
 <a name="compactupdatedlist"/>
 
-### <a name="compact-list-of-articles-updated-recently"></a>Kompakte Liste der Artikel, die vor Kurzem aktualisiert wurden
+### <a name="compact-list-of-articles-updated-recently"></a>Compact Liste von Artikeln, die vor kurzem aktualisiert
 
 Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Abschnitt Auszüge aufgeführt sind.
 
-1. [PDOStatement::bindParam](#TitleNum_1)
-2. [PDOStatement::bindValue](#TitleNum_2)
-3. [sqlsrv_prepare](#TitleNum_3)
-4. [sqlsrv_query](#TitleNum_4)
+1. [Mit "immer verschlüsselt" mit dem ODBC-Treiber für SQLServer](#TitleNum_1)
 
 
 
@@ -92,189 +78,41 @@ Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Absch
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-pdostatementbindparamphppdostatement-bindparammd"></a>1. &nbsp;[Pdostatement:: Bindparam](php/pdostatement-bindparam.md)
+### <a name="1-nbsp-using-always-encrypted-with-the-odbc-driver-for-sql-serverodbcusing-always-encrypted-with-the-odbc-drivermd"></a>1. &nbsp;[Using Always Encrypted with the Odbcdriver für SQLServer](odbc/using-always-encrypted-with-the-odbc-driver.md)
 
-*Aktualisiert: 2017-10-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Weiter](#TitleNum_2))
+*Aktualisiert: 2018-01-22* &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
 
-<!-- Source markdown line 119.  ms.author= "genemi".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 2792d149331f5326f6914721c86687d545685488 e363544e2c6f73277b7f2ca05b9269a4139d1fac  (PR=3663  ,  Filename=pdostatement-bindparam.md  ,  Dirpath=docs\connect\php\  ,  MergeCommitSha40=e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1) -->
-
-
-
-> [!NOTE]
-> Es wird empfohlen, die Zeichenfolgen als Eingaben zu verwenden, wenn Werte zum Binden einer [decimal oder numeric-Spalte](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) und Genauigkeit sichergestellt werden, wie Sie PHP mit eingeschränkter Genauigkeit für [Gleitkommazahlen](http://php.net/manual/en/language.types.float.php).
-
-**Beispiel**
-
-In diesem Codebeispiel wird gezeigt, wie einen decimal-Wert als Eingabeparameter gebunden werden.
-
-```php
-<?php
-$database = "Test";
-$server = "(local)";
-$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");
-
-// Assume TestTable exists with a decimal field
-$input = 9223372036854.80000;
-$stmt = $conn->prepare("INSERT INTO TestTable (DecimalCol) VALUES (?)");
-// by default it is PDO::PARAM_STR, rounding of a large input value may
-// occur if PDO::PARAM_INT is specified
-$stmt->bindParam(1, $input, PDO::PARAM_STR);
-$stmt->execute();
-```
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_2"/>
-
-### <a name="2-nbsp-pdostatementbindvaluephppdostatement-bindvaluemd"></a>2. &nbsp;[PDOStatement::bindValue](php/pdostatement-bindvalue.md)
-
-*Aktualisiert: 2017-10-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([vorherigen](#TitleNum_1) | [Weiter](#TitleNum_3))
-
-<!-- Source markdown line 77.  ms.author= "genemi".  -->
+<!-- Source markdown line 524.  ms.author= "v-chojas".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 c1d5ff4d5bfdbfbf1635cf14d71b4d583164075a 6cd5fc88860ae9ffca25ee15e8eeaeba29991fda  (PR=3663  ,  Filename=pdostatement-bindvalue.md  ,  Dirpath=docs\connect\php\  ,  MergeCommitSha40=e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1) -->
+<!-- git diff --ignore-all-space --unified=0 a52abae2a8f27c3b5bc411ef758610116a608f9f 352368eb269b98ab5ca3a9791fae2e70bf26277a  (PR=4686  ,  Filename=using-always-encrypted-with-the-odbc-driver.md  ,  Dirpath=docs\connect\odbc\  ,  MergeCommitSha40=82c9868b5bf95e5b0c68137ba434ddd37fc61072) -->
 
 
 
-> [!NOTE]
-> Es wird empfohlen, die Zeichenfolgen als Eingaben zu verwenden, wenn Werte zum Binden einer [decimal oder numeric-Spalte](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) und Genauigkeit sichergestellt werden, wie Sie PHP mit eingeschränkter Genauigkeit für [Gleitkommazahlen](http://php.net/manual/en/language.types.float.php).
+**Abrufen von Daten in Teilen mit SQLGetData**
 
-**Beispiel**
+Bevor verschlüsselt 17 von ODBC-Treiber für SQL Server können Zeichen und binärer Spalten in Teilen mit SQLGetData abgerufen werden. Nur ein Aufruf von SQLGetData kann vorgenommen werden, mit einem Puffer, der ausreichend lang ist, um die gesamte Spalte Daten enthalten.
 
-In diesem Codebeispiel wird gezeigt, wie einen decimal-Wert als Eingabeparameter gebunden werden.
+**Senden von Daten mit SQLPutData Teilen**
 
-```php
-<?php
-$database = "Test";
-$server = "(local)";
-$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");
+Daten einfügen oder Vergleich können nicht in Teilen mit SQLPutData gesendet werden. Nur ein Aufruf von SQLPutData kann vorgenommen werden, mit einem Puffer, die gesamten Daten enthält. Verwenden Sie zum Einfügen von long-Daten in verschlüsselten Spalten ein, API für das Massenkopieren, mit einer Eingabe-Datendatei im nächsten Abschnitt beschrieben.
 
-// Assume TestTable exists with a decimal field
-$input = 9223372036854.80000;
-$stmt = $conn->prepare("INSERT INTO TestTable (DecimalCol) VALUES (?)");
-// by default it is PDO::PARAM_STR, rounding of a large input value may
-// occur if PDO::PARAM_INT is specified
-$stmt->bindValue(1, $input, PDO::PARAM_STR);
-$stmt->execute();
-```
+**Verschlüsselte Money und smallmoney**
+
+Verschlüsselt **Money** oder **Smallmoney** von Parametern keine Spalten angewendet werden, da es ist keine bestimmte ODBC-Datentyp die Zuordnungen für diese Typen, wodurch Fehler Operand Typ in Konflikt stehen.
+
+**Massenkopieren von verschlüsselten Spalten**
 
 
+Verwenden der [SQL-Massenkopieren Funktionen](odbc/../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) und **Bcp** -Hilfsprogramm wird seit 17 der ODBC-Treiber für SQL Server mit Always Encrypted unterstützt. Nur-Text (auf verschlüsselte und entschlüsselte auf) und Chiffretext (wörtlich übertragen) eingefügt werden kann und das Massenkopieren (Bcp_ *) APIs mit abgerufen und die **Bcp** Hilfsprogramm.
 
-&nbsp;
+- Chiffretext varbinary(max) Format (z. B. für den Massenimport in eine andere Datenbank laden) abgerufen werden, zu verbinden, ohne die `ColumnEncryption` Option (oder legen sie den `Disabled`) und führen Sie einen BCP OUT-Vorgang.
 
-&nbsp;
+- Zum Einfügen und Abrufen von nur-Text und den Treiber transparent Durchführen von Verschlüsselung und Entschlüsselung als Einstellung für erforderlich ist, können `ColumnEncryption` zu `Enabled` ist ausreichend. Die Funktionalität der BCP-API ist andernfalls nicht geändert.
 
----
-
-<a name="TitleNum_3"/>
-
-### <a name="3-nbsp-sqlsrvpreparephpsqlsrv-preparemd"></a>3. &nbsp; [Sqlsrv_prepare](php/sqlsrv-prepare.md)
-
-*Aktualisiert: 2017-10-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([vorherigen](#TitleNum_2) | [Weiter](#TitleNum_4))
-
-<!-- Source markdown line 219.  ms.author= "genemi".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 7811e459efec90ef79340375d5fb34364130466b 3d28b3d320dc7fe5df12300da5cb9579abf6839a  (PR=3663  ,  Filename=sqlsrv-prepare.md  ,  Dirpath=docs\connect\php\  ,  MergeCommitSha40=e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1) -->
-
-
-
-> [!NOTE]
-> Es wird empfohlen, die Zeichenfolgen als Eingaben zu verwenden, wenn Werte zum Binden einer [decimal oder numeric-Spalte](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) und Genauigkeit sichergestellt werden, wie Sie PHP mit eingeschränkter Genauigkeit für [Gleitkommazahlen](http://php.net/manual/en/language.types.float.php).
-
-**Beispiel**
-
-In diesem Codebeispiel wird gezeigt, wie einen decimal-Wert als Eingabeparameter gebunden werden.
-
-```php
-<?php
-$serverName = "(local)";
-$connectionInfo = array("Database"=>"YourTestDB");
-$conn = sqlsrv_connect($serverName, $connectionInfo);
-if ($conn === false) {
-    echo "Could not connect.\n";
-    die(print_r(sqlsrv_errors(), true));
-}
-
-// Assume TestTable exists with a decimal field
-$input = "9223372036854.80000";
-$params = array($input);
-$stmt = sqlsrv_prepare($conn, "INSERT INTO TestTable (DecimalCol) VALUES (?)", $params);
-sqlsrv_execute($stmt);
-
-sqlsrv_free_stmt($stmt);
-sqlsrv_close($conn);
-
-?>
-```
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_4"/>
-
-### <a name="4-nbsp-sqlsrvqueryphpsqlsrv-querymd"></a>4. &nbsp; [Sqlsrv_query](php/sqlsrv-query.md)
-
-*Aktualisiert: 2017-10-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([vorherigen](#TitleNum_3))
-
-<!-- Source markdown line 163.  ms.author= "genemi".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 07a84878c07af0b6ad7e247337be5b4567ce03c3 127af26a8a054a45dda51d90f43f08652949ba18  (PR=3663  ,  Filename=sqlsrv-query.md  ,  Dirpath=docs\connect\php\  ,  MergeCommitSha40=e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1) -->
-
-
-
-> [!NOTE]
-> Es wird empfohlen, die Zeichenfolgen als Eingaben zu verwenden, wenn Werte zum Binden einer [decimal oder numeric-Spalte](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) und Genauigkeit sichergestellt werden, wie Sie PHP mit eingeschränkter Genauigkeit für [Gleitkommazahlen](http://php.net/manual/en/language.types.float.php).
-
-**Beispiel**
-
-In diesem Codebeispiel wird gezeigt, wie einen decimal-Wert als Eingabeparameter gebunden werden.
-
-```php
-<?php
-$serverName = "(local)";
-$connectionInfo = array("Database"=>"YourTestDB");
-$conn = sqlsrv_connect($serverName, $connectionInfo);
-if ($conn === false) {
-     echo "Could not connect.\n";
-     die(print_r(sqlsrv_errors(), true));
-}
-
-// Assume TestTable exists with a decimal field
-$input = "9223372036854.80000";
-$params = array($input);
-$stmt = sqlsrv_query($conn, "INSERT INTO TestTable (DecimalCol) VALUES (?)", $params);
-
-sqlsrv_free_stmt($stmt);
-sqlsrv_close($conn);
-
-?>
-```
+- Einfügen von verschlüsseltem Text transformiert varbinary(max) Format (z. B. wie oben abgerufen), legen Sie die `BCPMODIFYENCRYPTED` auf "true" aus, und führen Sie einen Vorgang BCP IN. Sicherstellen Sie in der Reihenfolge für die resultierenden Daten zu entschlüsselnden, dass das Ziel Spaltenwerts CEK identisch, von dem der verschlüsselte Text ursprünglich erhalten wurde.
 
 
 
@@ -282,47 +120,45 @@ sqlsrv_close($conn);
 
 
 
-
-## <a name="similar-articles"></a>Ähnliche Artikel
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>Ähnliche Artikel Informationen zu neuen oder aktualisierten Artikeln
 
 Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Artikel in anderen Themenbereichen innerhalb des gleichen GitHub-Repositorys: [MicrosoftDocs/sql-docs-pr](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Themenbereiche, die über neue oder kürzlich aktualisierte Artikel verfügen
 
-- [Neu + Aktualisiert (3+14): Dokumente zu **Advanced Analytics für SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (1+0): **Analysis Services for SQL** docs (Neu + Aktualisiert (1+0): Analysis Services für SQL-Dokumente)](../analysis-services/new-updated-analysis-services.md)
-- [Neu + Aktualisiert (87+0): Dokumente zu **Analyseplattformsystem für SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Neu + Aktualisiert (5+4): Dokumente zu **Herstellen einer Verbindung mit SQL**](../connect/new-updated-connect.md)
-- [Neu + Aktualisiert (0+1): Dokumente zum **Datenbankmodul für SQL**](../database-engine/new-updated-database-engine.md)
-- [Neu + Aktualisiert (2+2):Dokumente zu **Integration Services für SQL**](../integration-services/new-updated-integration-services.md)
-- [Neu + Aktualisiert (10+9): Dokumente zu **Linux für SQL**](../linux/new-updated-linux.md)
-- [Neu + Aktualisiert (2+4): Dokumente zu **Relationale Datenbanken für SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Neu + Aktualisiert (4+2): Dokumente zu **Reporting Services für SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Neu + Aktualisiert (0+1): Dokumente zu **Beispiele für SQL**](../sample/new-updated-sample.md)
-- [Neu + Aktualisiert (21+0): Dokumente zu **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Neu + Aktualisiert (5+1): Dokumente zu **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1): **SQL Server Data Tools (SSDT)** docs (Neu + Aktualisiert (0+1): SQL Server Data Tools-Dokumente (SSDT))](../ssdt/new-updated-ssdt.md)
-- [Neu + Aktualisiert (1+0): Dokumente zu **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
-- [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs (Neu + Aktualisiert (0+1): SQL Server Management Studio-Dokumente (SSMS))](../ssms/new-updated-ssms.md)
-- [Neu + Aktualisiert (0+2): Dokumente zu **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Bereiche für die Themenbereichsdatenbank, *führen* wurden neue oder vor kurzem aktualisiert Artikel
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Themenbereiche, die über keine neuen oder kürzlich aktualisierten Artikel verfügen
+
+- [Neue und aktualisierte (1 + 3):&nbsp; **Advanced Analytics für SQL** Docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Neue und aktualisierte (0 + 1):&nbsp; **Analyseplattformsystem für SQL** Docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Neue und aktualisierte (0 + 1):&nbsp; **Herstellen einer Verbindung mit SQL** Docs](../connect/new-updated-connect.md)
+- [Neue und aktualisierte (0 + 1):&nbsp; **für SQL-Datenbank-Engine** Docs](../database-engine/new-updated-database-engine.md)
+- [Neue und aktualisierte (12 + 1): **Integration Services für SQL** Docs](../integration-services/new-updated-integration-services.md)
+- [Neue und aktualisierte (6 + 2):&nbsp; **Linux für SQL** Docs](../linux/new-updated-linux.md)
+- [Neue und aktualisierte (15 + 0): **PowerShell für SQL** Docs](../powershell/new-updated-powershell.md)
+- [Neue und aktualisierte (2 + 9):&nbsp; **relationale Datenbanken für SQL** Docs](../relational-databases/new-updated-relational-databases.md)
+- [Neue und aktualisierte (1 + 0):&nbsp; **Reporting Services für SQL** Docs](../reporting-services/new-updated-reporting-services.md)
+- [Neue und aktualisierte (1 + 1):&nbsp; **SQL Operations Studio** Docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Neue und aktualisierte (1 + 1):&nbsp; **Microsoft SQL Server** Docs](../sql-server/new-updated-sql-server.md)
+- [Neue und aktualisierte (0 + 1):&nbsp; **SQL Server Data Tools (SSDT)** Docs](../ssdt/new-updated-ssdt.md)
+- [Neue und aktualisierte (1 + 2):&nbsp; **SQL Server Management Studio (SSMS)** Docs](../ssms/new-updated-ssms.md)
+- [Neue und aktualisierte (0 + 2):&nbsp; **Transact-SQL** Docs](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Bereiche, die für die Themenbereichsdatenbank *nicht* haben eine neue oder vor kurzem aktualisiert Artikel
+
 
 - [Neu + Aktualisiert (0+0): Dokumente zu **Data Migration Assistant (DMA) für SQL**](../dma/new-updated-dma.md)
-- [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs (Neu + Aktualisiert (0+0): ActiveX Data Objects (ADO) für SQL-Dokumente)](../ado/new-updated-ado.md)
-- [New + Updated (0+0): **Data Quality Services for SQL** docs (Neu + Aktualisiert (0+0): Data Quality Services für SQL-Dokumente)](../data-quality-services/new-updated-data-quality-services.md)
-- [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs (Neu + Aktualisiert (0+0): Data Mining-Erweiterungen (DMX) für SQL)](../dmx/new-updated-dmx.md)
+- [Neue und aktualisierte (0 + 0): **ActiveX Data Objects (ADO) für SQL** Docs](../ado/new-updated-ado.md)
+- [New + Updated (0+0): **Analysis Services for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Analysis Services für SQL)](../analysis-services/new-updated-analysis-services.md)
+- [Neue und aktualisierte (0 + 0): **Data Quality Services für SQL** Docs](../data-quality-services/new-updated-data-quality-services.md)
+- [Neue und aktualisierte (0 + 0): **Data Mining Extensions (DMX) für SQL** Docs](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Master Data Services (MDS) für SQL)](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs (Neu + Aktualisiert (0+0): Mehrdimensionale Ausdrücke für SQL)](../mdx/new-updated-mdx.md)
-- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs (Neu + Aktualisiert (0+0): Open Database Connectivity für SQL-Dokumente)](../odbc/new-updated-odbc.md)
-- [New + Updated (0+0): **PowerShell for SQL** docs (Neu + Aktualisiert (0+0): PowerShell für SQL-Dokumente)](../powershell/new-updated-powershell.md)
+- [Neue und aktualisierte (0 + 0): **MDX (Multidimensional Expressions) für SQL** Docs](../mdx/new-updated-mdx.md)
+- [Neue und aktualisierte (0 + 0): **ODBC (Open Database Connectivity) für SQL** Docs](../odbc/new-updated-odbc.md)
+- [Neue und aktualisierte (0 + 0): **Samples for SQL** Docs](../sample/new-updated-sample.md)
+- [Neue und aktualisierte (0 + 0): **SQL Server Migration Assistant (SSMA)** Docs](../ssma/new-updated-ssma.md)
 - [Neu + Aktualisiert (0+0): Dokumentation zu **Tools für SQL**](../tools/new-updated-tools.md)
-- [New + Updated (0+0): **XQuery for SQL** docs (Neu + Aktualisiert (0+0): XQuery für SQL-Dokumente)](../xquery/new-updated-xquery.md)
+- [Neue und aktualisierte (0 + 0): **XQuery für SQL** Docs](../xquery/new-updated-xquery.md)
 
 

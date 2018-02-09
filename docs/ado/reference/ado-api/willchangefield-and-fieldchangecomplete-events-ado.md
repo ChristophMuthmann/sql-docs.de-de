@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - WillChangeField event [ADO]
 - fieldchangecomplete event [ADO]
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c30a41b18016515f97ba044eb0d36724a59a351
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 98b5b27b9a6111768f2ef2c5e9470b4b87fa9acc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField- und FieldChangeComplete-Ereignisse (ADO)
 Die **WillChangeField** Ereignis wird aufgerufen, bevor ein ausstehender Vorgang verwendet den Wert einer oder mehrerer ändert [Feld](../../../ado/reference/ado-api/field-object.md) Objekte in der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Die **FieldChangeComplete** Ereignis wird aufgerufen, nachdem der Wert aus einem oder mehreren **Feld** Objekte wurde geändert.  
@@ -64,7 +65,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
   
  Vor dem **FieldChangeComplete** zurückgegeben wird, legen Sie diesen Parameter auf **AdStatusUnwantedEvent** um nachfolgende Benachrichtigungen zu verhindern.  
   
- *pCommand*  
+ *pRecordset*  
  Ein **Recordset** Objekt. Die **Recordset** für die dieses Ereignis aufgetreten ist.  
   
 ## <a name="remarks"></a>Hinweise  

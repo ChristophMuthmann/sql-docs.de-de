@@ -1,33 +1,40 @@
 ---
 title: Neuheiten bei Data Migration Assistant (SQL Server) | Microsoft Docs
 ms.custom: 
-ms.date: 10/03/2017
+ms.date: 02/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-dma
+ms.technology:
+- sql-dma
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: 
-helpviewer_keywords: Data Migration Assistant, new features
+helpviewer_keywords:
+- Data Migration Assistant, new features
 ms.assetid: 
 caps.latest.revision: 
 author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07d72eb6c4d40c3e61f4292616f9eda99d6d4742
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9b72ea21423b96a1dbd19eb5fb8f0a3b99c59e0d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Neuigkeiten im Daten-Migrations-Assistent
 
 In diesem Thema werden die Ergänzungen in jeder Version von Data Migration Assistant (DMA) aufgelistet.
+
+## <a name="dma-v34"></a>DMA v3.4
+Die v3.4 Version DMA umfasst die folgenden Hinzufügungen:
+- Unterstützung für SQL Server-2017 als Quelle für die Migration zu Azure SQL-Datenbank.
+- Verbesserungen an Stabilität, Leistung und Bewertung Regel auf Richtigkeit.
 
 ## <a name="dma-v33"></a>DMA v3. 3
 Die v3. 3-Version von DMA ermöglicht die Migration einer lokalen SQL Server-Instanz auf die neue Version von SQL Server 2017 unter Windows und Linux. Während der gesamten Migrationsworkflow für Windows und Linux identisch ist, sind das Verschieben in SQL Server-2017 für Linux einige zusätzliche Überlegungen erforderlich.
@@ -51,7 +58,7 @@ Die v3. 2-Version von DMA umfasst die folgenden Hinzufügungen:
 
 - DMA während der Migration zu Azure SQL-Datenbank Schema Skripts Datenbankobjekte für die Quelle, bietet Anleitungen, mögliche Kompatibilitätsprobleme zu beheben und anschließend wird das Schema auf Azure bereitgestellt.
 
-## <a name="dma-v31"></a>DMA v3. 1
+## <a name="dma-v31"></a>DMA v3.1
 Die v3. 1-Version von DMA umfasst die folgenden Hinzufügungen:
 
 - Verbesserte Assessment-Empfehlungen für Azure SQL-Datenbanken in Bezug auf die datenbanksortierungen, die Verwendung von nicht unterstützten gespeicherten Systemprozeduren und CLR-Objekte.
@@ -65,7 +72,7 @@ Die v3. 0-Version von DMA erweitert die Bewertung der Azure SQL-Datenbank um ein
 
 - Teilweise oder nicht unterstützte Features und Funktionen.
 
-## <a name="dma-v21"></a>DMA v2. 1
+## <a name="dma-v21"></a>DMA v2.1
 Die v2. 1-Version von DMA umfasst die folgenden Hinzufügungen:
 - Befehlszeilen-Unterstützung zum Ausführen von Bewertungen in einem unbeaufsichtigten Modus, was dabei hilft, Bewertungen Größenordnungen ausführen. Weitere Einzelheiten finden Sie unter [ausführen Daten Migrations-Assistenten über die Befehlszeile](dma-commandline.md).
 
@@ -85,7 +92,7 @@ Die v1. 0-Version von DMA ist die erste Version, und bietet für:
 
 - Ermittlung von neuen Funktionen in der Ziel-SQL Server-Plattform, die ein Upgrade die Datenbank profitieren kann. Alle Ergebnisse werden als Funktion Empfehlungen beschrieben, und sie werden in der folgenden Bereiche kategorisiert:
     - Leistung
-    - Security
+    - Sicherheit
     - Speicherung
 
 -   Moderne Benutzeroberfläche, um Bewertungen ausführen.

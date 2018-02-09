@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Current property
 - Transaction class
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be30c3c81333080fdcf3bc40bd6abad7c7449d5b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: abcc68d96e7516b31a231efeb4c5c851b10dee45
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="accessing-the-current-transaction"></a>Zugriff auf die aktuelle Transaktion
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Wenn eine Transaktion aktiv ist, an die Stelle, an die common Language Runtime (CLR)-Code auf ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist eingegeben haben, wird die Transaktion durch verfügbar gemacht der **"System.Transactions.Transaction"** Klasse. Mit der **Transaction.Current** -Eigenschaft wird auf die aktuelle Transaktion zugegriffen. In den meisten Fällen ist es nicht notwendig, explizit auf die Transaktion zuzugreifen. Bei Datenbankverbindungen überprüft ADO.NET **Transaction.Current** automatisch beim Aufruf der **Connection.Open** -Methode, und trägt die Verbindung automatisch in diese Transaktion ein (sofern für das Schlüsselwort **Enlist** in der Verbindungszeichenfolge nicht false angegeben wurde).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Wenn eine Transaktion aktiv ist, an die Stelle, an die common Language Runtime (CLR)-Code auf ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist eingegeben haben, wird die Transaktion durch verfügbar gemacht der **"System.Transactions.Transaction"** Klasse. Mit der **Transaction.Current** -Eigenschaft wird auf die aktuelle Transaktion zugegriffen. In den meisten Fällen ist es nicht notwendig, explizit auf die Transaktion zuzugreifen. Bei Datenbankverbindungen überprüft ADO.NET **Transaction.Current** automatisch beim Aufruf der **Connection.Open** -Methode, und trägt die Verbindung automatisch in diese Transaktion ein (sofern für das Schlüsselwort **Enlist** in der Verbindungszeichenfolge nicht false angegeben wurde).  
   
  In den folgenden Szenarien sollten Sie das **Transaction** -Objekt direkt verwenden:  
   
@@ -207,6 +208,6 @@ Go
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [CLR-Integration und -Transaktionen](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
+ [CLR-Integration und Transaktionen](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

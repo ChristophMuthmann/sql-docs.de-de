@@ -1,6 +1,22 @@
-Jede Verfügbarkeitsgruppe hat nur ein primäres Replikat. Das primäre Replikat lässt Lese- und Schreibvorgänge zu. Zum Ändern, welches Replikat ein Primärschlüssel ist, können Sie ein Failover ausführen. In einer Verfügbarkeitsgruppe für Hochverfügbarkeit automatisiert der Cluster-Manager den Failovervorgang. In einer Verfügbarkeitsgruppe zur Leseskalierung wird der Failovervorgang manuell ausgeführt. 
+---
+title: "Erzwingen, dass SQL Server-Failover für die verfügbarkeitsgruppe"
+description: "Erzwingen Sie ein Failover für die Verfügbarkeitsgruppe mit Clustertyp None"
+services: 
+author: MikeRayMSFT
+ms.service: 
+ms.topic: include
+ms.date: 02/05/2018
+ms.author: mikeray
+ms.custom: include file
+ms.openlocfilehash: 10a2af2cb5bc9e98605a3ee988439e3c3be60c1e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/09/2018
+---
+Jede AG über nur ein primäres Replikat verfügt. Das primäre Replikat lässt Lese- und Schreibvorgänge zu. Zum Ändern, welches Replikat ein Primärschlüssel ist, können Sie ein Failover ausführen. In einer Verfügbarkeitsgruppe für hohe Verfügbarkeit automatisiert die Cluster-Manager während des Failovervorgangs. In einer Verfügbarkeitsgruppe mit Clustertyp NONE erfolgt während des Failovervorgangs manuell. 
 
-Es gibt zwei Möglichkeiten, die das primäre Replikat in einer Skalieren von Lesevorgängen verfügbarkeitsgruppe ein Failover aus:
+Es gibt zwei Möglichkeiten, die das primäre Replikat in einer Verfügbarkeitsgruppe ein Failover mit Clustertyp NONE:
 
 - Erzwungenes Manuelles Failover ohne Datenverlust
 - Manuelles Failover ohne Datenverlust
@@ -25,7 +41,7 @@ Um manuell ein Failover ohne Datenverlust ausführen:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
-        MODIFY REPLICA ON N'**<node2>*' 
+        MODIFY REPLICA ON N'<node2>' 
         WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
 
@@ -46,7 +62,7 @@ Um manuell ein Failover ohne Datenverlust ausführen:
 
 3. Update `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` auf 1.
 
-   Das folgende Skript legt `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` auf 1 für eine verfügbarkeitsgruppe mit dem Namen `ag1`. Bevor Sie das folgende Skript ausführen, ersetzen Sie `ag1` durch den Namen der verfügbarkeitsgruppe:
+   Das folgende Skript legt `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` auf 1 auf einer Verfügbarkeitsgruppe mit dem Namen `ag1`. Bevor Sie das folgende Skript ausführen, ersetzen Sie `ag1` durch den Namen der Verfügbarkeitsgruppe:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -69,4 +85,4 @@ Um manuell ein Failover ohne Datenverlust ausführen:
    ```  
 
    > [!NOTE] 
-   > Verwenden Sie zum Löschen einer verfügbarkeitsgruppe [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). Für eine verfügbarkeitsgruppe mit CLUSTER_TYPE NONE oder extern erstellt wurden muss der Befehl auf allen Replikaten ausgeführt werden, die Teil der verfügbarkeitsgruppe sind.
+   > Verwenden Sie zum Löschen einer AG [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). Geben Sie für eine Verfügbarkeitsgruppe mit Cluster erstellt keine oder extern, der Befehl muss auf allen Replikaten, die Teil der Verfügbarkeitsgruppe ausgeführt werden.

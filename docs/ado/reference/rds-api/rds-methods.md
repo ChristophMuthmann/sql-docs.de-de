@@ -1,6 +1,7 @@
 ---
 title: RDS-Methoden | Microsoft Docs
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -14,20 +15,20 @@ helpviewer_keywords:
 - RDS methods [ADO]
 - methods [ADO], RDS
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb8a99f35605a9ae46e6d6d32eddf380fda57826
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 5b2f4f52ffde70ad0d045acf5228045ad3baf84c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-methods"></a>RDS-Methoden
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 |||  
 |-|-|  
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/20/2017
 |[MoveFirst, MoveLast, MoveNext, MovePrevious (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|Wechselt zum ersten, letzten, nächsten oder vorherigen Datensatz in einem angegebenen **Recordset** Objekt.|  
 |[Abfrage (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|Eine gültige SQL-Abfragezeichenfolge zurückzugebenden verwendet eine **Recordset**.|  
 |[Aktualisieren (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)|Fragt die Datenquelle angegeben, der **verbinden** Eigenschaft und aktualisiert die Ergebnisse der Abfrage.|  
-|[Zurücksetzen (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|Führt Sie der Sortier- oder Filtereigenschaften für eine clientseitige **Recordset**basierend auf den angegebenen Eigenschaften der sortieren und filtern.|  
+|[Reset (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|Führt Sie der Sortier- oder Filtereigenschaften für eine clientseitige **Recordset**basierend auf den angegebenen Eigenschaften der sortieren und filtern.|  
 |[SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Ausstehende Änderungen von der lokal zwischengespeicherten und aktualisierbare übermittelt **Recordset** mit der Datenquelle angegeben, der **verbinden** Eigenschaft.|  
 |[Synchronize-Methode (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Synchronisieren Sie das angegebene Recordset mit der Datenbank, die durch die Verbindungszeichenfolge (zur Verwendung mit ADO 2.5 und höher) angegeben.|  
 |[Synchronize21-Methode (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Synchronisieren Sie das angegebene Recordset, mit der Datenbank, die durch die Verbindungszeichenfolge (zur Verwendung mit ADO 2.1) angegeben.|

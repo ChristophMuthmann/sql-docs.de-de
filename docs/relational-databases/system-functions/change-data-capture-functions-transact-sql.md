@@ -18,15 +18,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], functions
 ms.assetid: e5270557-aca3-44ab-8715-daccd498b88d
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f144ddb11c9cab91b8caaf1903f57f13a6f1180e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 36d2d3a46745c731b6da3835de4fbaffe384a839
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="change-data-capture-functions-transact-sql"></a>Change Data Capture-Funktionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - Connection15::put_Provider
 - Connection15::GetProvider
 - Connection15::Provider
-helpviewer_keywords: Provider property [ADO]
+helpviewer_keywords:
+- Provider property [ADO]
 ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e764a6b8b3a11f6705ce047680e5884aed89bf8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 40cf90e63ac27fd6d6b088a4405db3e44d3c5b65
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="provider-property-ado"></a>Anbietereigenschaft (ADO)
 Gibt den Namen des Anbieters für einen [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt.  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Member
-helpviewer_keywords: Member object [ADO MD], members
+f1_keywords:
+- Member
+helpviewer_keywords:
+- Member object [ADO MD], members
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6624e44343ef680c317338ea1fe32ead2aa0d9d0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c7b34e45ff23a1a71c1a45b1190d923e94328154
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="member-object-ado-md"></a>Member-Objekt (ADO MD)
 Stellt ein Element einer Ebene in einem Cube die untergeordneten Elemente eines Elements einer Ebene oder ein Mitglied einer Position auf einer Achse eines cellSets dar.  
@@ -86,7 +89,7 @@ Stellt ein Element einer Ebene in einem Cube die untergeordneten Elemente eines 
 |MemberGUID|Die GUID des Elements.|  
 |MemberName|Der Name des Elements.|  
 |MemberOrdinal|Die Ordinalzahl des Elements.|  
-|MemberType-Element|Der Typ des Elements.|  
+|MemberType|Der Typ des Elements.|  
 |MemberUniqueName|Der eindeutige Name des Elements.|  
 |ParentCount|Die Anzahl der übergeordneten Elemente dieses Elements.|  
 |ParentLevel|Die Nummer der Ebene des übergeordneten Element.|  

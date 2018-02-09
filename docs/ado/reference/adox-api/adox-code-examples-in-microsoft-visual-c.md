@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: ADOX code examples, Visual C++
+dev_langs:
+- C++
+helpviewer_keywords:
+- ADOX code examples, Visual C++
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97ac5aa3978ff14f37ec02d72b41982cda2fff5e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 77b07593f8bfe98cf58c8a5a591e8f76df3f4df4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>ADOX-Codebeispiele in Microsoft Visual C++
 Die folgenden Themen enthalten Beispielcode, um die zum Verständnis der Vorgehensweise ADOX verwenden. Alle Codebeispiele werden mithilfe von Microsoft Visual C++ geschrieben.  

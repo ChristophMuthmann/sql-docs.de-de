@@ -11,22 +11,23 @@ ms.service:
 ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - libraries [ADO]
 - referencing libraries in a Visual Basic application[ADO]
 - ADO, libraries
 ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eee5dea5945d48b4fd9a2d40380c61c632d02410
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 937934fd297c876fa023ddae89ac027068bb20c9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Verweisen auf die ADO-Bibliotheken In Visual Basic 6-Anwendungen
 Um die ADO-Bibliotheken in eine Microsoft Visual Basic 6-Anwendung importieren, müssen Sie einen Verweis in Visual Basic-Projekt festlegen.  
@@ -45,16 +46,16 @@ Um die ADO-Bibliotheken in eine Microsoft Visual Basic 6-Anwendung importieren, 
   
 6.  Klicken Sie auf **OK** abgeschlossen, die Verweise festlegen.  
   
-## <a name="backward-compatibility"></a>Backward Compatibility  
+## <a name="backward-compatibility"></a>Abwärtskompatibilität  
  Installieren von ADO wird außerdem die folgenden Typbibliotheken früherer Versionen kopiert:  
   
 -   *msado27.tlb*, Version 2.7 ADO-Typbibliothek  
   
--   *msado26.tlb*, ADO 2.6-Typbibliothek  
+-   *msado26.tlb*, ADO 2.6 Type Library  
   
 -   *msado25.tlb*, ADO 2.5-Typbibliothek  
   
--   *MSADO21*, 2,1 ADO-Typbibliothek  
+-   *msado21.tlb*, ADO 2.1 Type Library  
   
 -   *msado20.tlb*, ADO-2.0-Typbibliothek  
   

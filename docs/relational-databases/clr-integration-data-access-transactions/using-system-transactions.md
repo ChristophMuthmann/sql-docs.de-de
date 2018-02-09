@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Dispose method
 - System.Transactions namespace
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e365b0ffd041b8457fff3035fbbe4e19f5bcee6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 28edabefb40a43db17bb69a484c97e2c55f64274
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-systemtransactions"></a>Verwenden von 'System.Transactions'
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die **System.Transactions** Namespace bietet ein Transaktionsframework, die vollständig in ADO.NET integriert ist und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration der common Language Runtime (CLR). Die **System.Transactions.TransactionScope** -Klasse bewirkt, dass ein Codeblock transaktional wird, indem sie Verbindungen implizit in einer verteilten Transaktion einträgt. Sie müssen am Ende des Codeblocks, der durch **Complete** markiert wird, die **TransactionScope**-Methode aufrufen. Die **Dispose** -Methode wird aufgerufen, wenn die Programmausführung einen Codeblock verlässt, was dazu führt, dass die Transaktion nicht fortgeführt wird, wenn die **Complete** -Methode nicht aufgerufen wird. Wenn eine Ausnahme ausgelöst wurde, die dazu führt, dass der Code den Bereich verlässt, wird die Transaktion als nicht fortgeführt betrachtet.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Durch den **System.Transactions** -Namespace wird ein neues Transaktionsframework bereitgestellt, das voll in ADO.NET und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR (Common Language Runtime) integriert ist. Die **System.Transactions.TransactionScope** -Klasse bewirkt, dass ein Codeblock transaktional wird, indem sie Verbindungen implizit in einer verteilten Transaktion einträgt. Sie müssen am Ende des Codeblocks, der durch **Complete** markiert wird, die **TransactionScope**-Methode aufrufen. Die **Dispose** -Methode wird aufgerufen, wenn die Programmausführung einen Codeblock verlässt, was dazu führt, dass die Transaktion nicht fortgeführt wird, wenn die **Complete** -Methode nicht aufgerufen wird. Wenn eine Ausnahme ausgelöst wurde, die dazu führt, dass der Code den Bereich verlässt, wird die Transaktion als nicht fortgeführt betrachtet.  
   
  Wir empfehlen die Verwendung eines **using** -Blocks um sicherzustellen, dass die **Dispose** -Methode für das **TransactionScope** -Objekt aufgerufen wird, wenn der **using** -Block verlassen wird. Wird für ausstehende Transaktionen kein Commit oder Rollback ausgeführt, wird die Leistung unter Umständen stark beeinträchtigt, da der Timeout für **TransactionScope** standardmäßig eine Minute beträgt. Wenn Sie keine **using** -Anweisung verwenden, müssen Sie alle Arbeiten in einem **Try** -Block ausführen und die **Dispose** -Methode im **Finally** -Block explizit aufrufen.  
   
@@ -112,6 +113,6 @@ using (TransactionScope transScope = new TransactionScope())
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [CLR-Integration und -Transaktionen](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
+ [CLR-Integration und Transaktionen](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

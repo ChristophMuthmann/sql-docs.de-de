@@ -25,19 +25,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
-caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fae91b291c11e3993b2182414bf4845fb91969fb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ac456dc7617804afbc78ca423ff8e4651c5ccef5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Zugreifen auf benutzerdefinierte Typen – Aktualisieren von UDT-Spalten mit "DataAdapters"
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Benutzerdefinierte Typen (UDTs) werden unterstützt, mit einem **System.Data.DataSet** und ein **System.Data.SqlClient.SqlDataAdapter** abrufen und Ändern von Daten.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Benutzerdefinierte Typen (UDTs) werden unterstützt, mit einem **System.Data.DataSet** und ein **System.Data.SqlClient.SqlDataAdapter** abrufen und Ändern von Daten.  
   
 ## <a name="populating-a-dataset"></a>Auffüllen eines Datasets  
  Mit einer [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung können Sie UDT-Spaltenwerte zum Auffüllen eines Datasets mit einem Datenadapter auswählen. Im folgende Beispiel wird davon ausgegangen, dass Sie haben eine **Punkte** Tabelle mit der folgenden Struktur und einigen Beispieldaten definiert. Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen erstellen die **Punkte** Tabelle und einige Zeilen eingefügt.  

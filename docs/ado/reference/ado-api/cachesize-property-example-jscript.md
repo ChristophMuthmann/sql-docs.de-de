@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: JScript
-helpviewer_keywords: CacheSize property [ADO], JScript example
+dev_langs:
+- JScript
+helpviewer_keywords:
+- CacheSize property [ADO], JScript example
 ms.assetid: 3675f641-b4b1-48ff-ba33-8d9ea064cd04
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7489d2bc20cea493f0314c6efb6d70f186541f38
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 94ead7b4512c3a66f32494a016fc4457758ad5fd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cachesize-property-example-jscript"></a>Beispiel für CacheSize-Eigenschaft (JScript)
 Dieses Beispiel verwendet die [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) Eigenschaft für den Unterschied bei der Leistung für einen Vorgang ausgeführt wird, mit und ohne eine 30-Record-Cache. Ausschneiden und fügen Sie den folgenden Code in Editor oder einem anderen Texteditor und speichern Sie diese als **CacheSizeJS.asp**.  

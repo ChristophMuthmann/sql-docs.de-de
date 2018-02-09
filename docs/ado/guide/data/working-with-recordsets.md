@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Recordset object [ADO]
+helpviewer_keywords:
+- Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a861030b8ec30e176d7535d6e2f7976a87c0832a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b29d34907c7e4dcccc8494101c819cca05c02066
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="working-with-recordsets"></a>Arbeiten mit Recordsets
 Die **Recordset** Objekt verfügt über integrierte Funktionen, mit denen Sie die Reihenfolge der Daten in das Resultset für die Suche nach einem bestimmten Datensatz basierend auf Kriterien, die Sie bereitstellen und sogar diese Suchvorgänge mithilfe von Indizes optimieren ändern können. Gibt an, ob diese Funktionen zur Verfügung stehen, hängt von den Anbieter sowie in einigen Fällen –, beispielsweise von der [Index](../../../ado/reference/ado-api/index-property.md) Eigenschaft – die Struktur der Datenquelle selbst.  
@@ -119,7 +121,7 @@ Die **Recordset** Objekt verfügt über integrierte Funktionen, mit denen Sie di
 |Konstante|Description|  
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|Filter für die Anzeige von nur Datensätze, die von der letzten betroffenen **löschen**, **Resync**, **UpdateBatch**, oder **CancelBatch** aufrufen.|  
-|**vorliegt**|Filter für die Anzeige der Datensätze, die die letzte Batchaktualisierung fehlgeschlagen ist.|  
+|**adFilterConflictingRecords**|Filter für die Anzeige der Datensätze, die die letzte Batchaktualisierung fehlgeschlagen ist.|  
 |**adFilterFetchedRecords**|Filter für die Anzeige der Datensätze im aktuellen Cache – d. h. die Ergebnisse der dem letzten Aufruf von Datensätzen aus der Datenbank abzurufen.|  
 |**adFilterNone**|Entfernt den aktuellen Filter und alle Datensätze für die Anzeige wiederhergestellt.|  
 |**adFilterPendingRecords**|Filter für die Anzeige von Datensätzen, die geändert wurden, aber noch nicht an den Server gesendet wurden. Gilt nur für Batch-Updatemodus.|  

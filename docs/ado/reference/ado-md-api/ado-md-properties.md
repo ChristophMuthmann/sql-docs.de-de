@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - ADO MD, properties
 - properties [ADO MD]
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c59077cbb3604cca9ef352c348a49e6301ace6df
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ae381b20c4073ff5da87b6e3d26a964ed6a6ca60
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-md-properties"></a>ADO MD-Eigenschaften
 |||  
@@ -33,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 |[Beschriftung](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Gibt an, die textbeschriftung, verwenden Sie beim Anzeigen einer **Ebene** oder **Member** Objekt.|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|Gibt die Anzahl der Elemente für den aktuellen **Member** Objekt ist das übergeordnete Element in einer Hierarchie.|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|Gibt eine Auflistung von **Elemente** für den aktuellen **Member** ist das übergeordnete Element in der Hierarchie.|  
-|[Anzahl](../../../ado/reference/ado-api/count-property-ado.md)|Gibt die Anzahl der Objekte in einer Auflistung an.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Gibt die Anzahl der Objekte in einer Auflistung an.|  
 |[Tiefe](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Gibt die Anzahl von Ebenen zwischen den **Ebene** und den Stamm der Hierarchieebene.|  
 |[Beschreibung](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Gibt eine Erläuterung der Text des aktuellen Objekts zurück.|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|Gibt die Anzahl der Dimensionen auf einer Achse an.|  
@@ -53,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 |[Status](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Gibt den aktuellen Status der das Cellset an.|  
 |[Typ](../../../ado/reference/ado-md-api/type-property-ado-md.md)|Gibt den Typ des aktuellen Elements an.|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|Gibt einen eindeutigen Namen für das aktuelle Objekt an.|  
-|[ReplTest1](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Gibt den Wert der aktuellen Zelle.|  
+|[Wert](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Gibt den Wert der aktuellen Zelle.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [ADO MD-API-Referenz](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   

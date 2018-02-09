@@ -18,15 +18,15 @@ helpviewer_keywords:
 - FileTables [SQL Server], system functions
 ms.assetid: 71f729df-d340-4cf9-9a6d-305fcb39b009
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7aea668cbdaaf39329618fd7b0460157717c9fc2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a7382a9c4c4ed059651649cc2c5cc0e204da55c4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filestream-and-filetable-functions-transact-sql"></a>Filestream- und FileTable-Funktionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

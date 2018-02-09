@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.syslanguages_TSQL
 - syslanguages
 - syslanguages_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - syslanguages system table
 - sys.syslanguages compatibility view
 ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5d0a0b2a001f40b8884faa1c8c22415708ba377f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 47eb77543c650a16650680435e5d0db7d395eade
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|Eindeutige Sprachen-ID.|  
-|dateformat|**NCHAR(3)**|Reihenfolge in Datumsangaben, z. B. DMY.|  
+|dateformat|**nchar(3)**|Reihenfolge in Datumsangaben, z. B. DMY.|  
 |datefirst|**tinyint**|Erster Tag der Woche: 1 für Montag, 2 für Dienstag usw., bis 7 für Sonntag.|  
 |upgrade|**int**|Ist für das System reserviert.|  
 |name|**sysname**|Offizieller Sprachenname, z. B. Français.|  
@@ -49,11 +51,11 @@ ms.lasthandoff: 11/17/2017
 |shortmonths|**nvarchar(132)**|Liste mit durch Trennzeichen getrennten abgekürzten Monatsnamen, in der Reihenfolge Januar bis Dezember. Jeder Name kann bis zu 9 Zeichen lang sein.|  
 |days|**nvarchar(217)**|Liste mit durch Trennzeichen getrennten Wochentagsnamen, in der Reihenfolge von Montag bis Sonntag. Jeder Name kann bis zu 30 Zeichen lang sein.|  
 |lcid|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschema-ID für die Sprache.|  
-|msglangid|**smallint**|ID der Meldungsgruppe von [!INCLUDE[ssDE](../../includes/ssde-md.md)]|  
+|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] meldungsgruppe von|  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] enthält die folgenden installierten Sprachen.  
   
-|Name auf Deutsch|Windows-LCID|ID der Meldungsgruppe von [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
+|Name auf Deutsch|Windows-LCID|[!INCLUDE[ssDE](../../includes/ssde-md.md)] ID der Systemmeldungsgruppe.|  
 |---------------------|------------------|-----------------------------------------|  
 |Englisch|1033|1033|  
 |Deutsch|1031|1031|  

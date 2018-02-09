@@ -18,15 +18,15 @@ helpviewer_keywords:
 - system stored functions [SQL Server]
 ms.assetid: 8ad860e7-e054-4186-80a2-03977e42531d
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dd4411dea47af18907caf8058e47c75339ad17f9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 19d3881db4d3c5e199c1c34c10af14d369936459
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="system-functions-for-transact-sql"></a>Systemfunktionen für Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

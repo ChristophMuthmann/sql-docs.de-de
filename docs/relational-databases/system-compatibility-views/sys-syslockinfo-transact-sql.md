@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.syslockinfo_TSQL
 - sys.syslockinfo
 - syslockinfo
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - syslockinfo system table
 - sys.syslockinfo compatibility view
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 410d07a73d4a5b96c3fa5805208735055bc36174
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4b58420c47d73e1eff9bb895ccab1fab0be82844
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +47,10 @@ ms.lasthandoff: 11/27/2017
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**rsc_text**|**NCHAR(32)**|Textbeschreibung einer Sperrressource. Enthält einen Teil des Ressourcennamens.|  
-|**rsc_bin**|**Binary(16)**|Binäre Sperrressource. Enthält die tatsächliche Sperrressource, die im Sperren-Manager enthalten ist. Diese Spalte wurde für Tools, mit denen das Ressourcenformat Sperre für das Erstellen einer eigenen erfahren Sperrressource formatierten sowie zur Durchführung von Selbstjoins auf **Syslockinfo**.|  
-|**rsc_valblk**|**Binary(16)**|Sperrwertblock. Einige Ressourcentypen enthalten möglicherweise zusätzliche Daten in der Sperrressource, für die vom Sperren-Manager kein Hashvorgang ausgeführt wurde, um den Besitzer einer bestimmten Sperrressource zu bestimmen. So gehören z. B. Seitensperren nicht einer bestimmten Objekt-ID an. Zur Sperrenausweitung und für andere Zwecke. Die Objekt-ID einer Seitensperre kann jedoch im Sperrenwertblock platziert werden.|  
-|**Tripel rsc_dbid**|**smallint**|Zur Ressource zugeordnete Datenbank-ID.|  
+|**rsc_text**|**nchar(32)**|Textbeschreibung einer Sperrressource. Enthält einen Teil des Ressourcennamens.|  
+|**rsc_bin**|**binary(16)**|Binäre Sperrressource. Enthält die tatsächliche Sperrressource, die im Sperren-Manager enthalten ist. Diese Spalte wurde für Tools, mit denen das Ressourcenformat Sperre für das Erstellen einer eigenen erfahren Sperrressource formatierten sowie zur Durchführung von Selbstjoins auf **Syslockinfo**.|  
+|**rsc_valblk**|**binary(16)**|Sperrwertblock. Einige Ressourcentypen enthalten möglicherweise zusätzliche Daten in der Sperrressource, für die vom Sperren-Manager kein Hashvorgang ausgeführt wurde, um den Besitzer einer bestimmten Sperrressource zu bestimmen. So gehören z. B. Seitensperren nicht einer bestimmten Objekt-ID an. Zur Sperrenausweitung und für andere Zwecke. Die Objekt-ID einer Seitensperre kann jedoch im Sperrenwertblock platziert werden.|  
+|**rsc_dbid**|**smallint**|Zur Ressource zugeordnete Datenbank-ID.|  
 |**rsc_indid**|**smallint**|Zur Ressource zugeordnete Index-ID, falls zutreffend.|  
 |**rsc_objid**|**int**|Zur Ressource zugeordnete Objekt-ID, falls zutreffend.|  
 |**rsc_type**|**tinyint**|Ressourcentyp:<br /><br /> 1 = NULL-Ressource (nicht verwendet)<br /><br /> 2 = Datenbank<br /><br /> 3 = Datei<br /><br /> 4 = Index<br /><br /> 5 = Tabelle<br /><br /> 6 = Seite<br /><br /> 7 = Schlüssel<br /><br /> 8 = Block<br /><br /> 9 = RID (Zeilen-ID)<br /><br /> 10 = Anwendung|  

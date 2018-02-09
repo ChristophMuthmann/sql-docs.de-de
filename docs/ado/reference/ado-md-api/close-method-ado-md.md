@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Close
 - Cellset::Close
-helpviewer_keywords: Close method [ADO MD]
+helpviewer_keywords:
+- Close method [ADO MD]
 ms.assetid: a3aa594d-f9d4-4654-8625-ec20153ff5d9
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73cfa5ac30f9b7ac4e5e7d616b5e4f9eba4a2bef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e0607ee2889b32906968a5948138191d1fc67bb4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="close-method-ado-md"></a>Close-Methode (ADO MD)
 Schließt eine offene Cellset dar.  

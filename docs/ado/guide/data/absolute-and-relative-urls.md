@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f0bbd79ff71ffe17c9fb33903501ab7302766fbf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3564236b7b6bee2ae21f1b78a4275fb615aa2e4e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="absolute-and-relative-urls"></a>Absoluten und relativen URLs
 Eine URL gibt den Speicherort der ein Ziel auf einem Computer lokal oder im Netzwerk gespeichert. Das Ziel kann eine Datei, Verzeichnis, HTML-Seite, Bild, Programm usw.*.*  
@@ -38,16 +39,16 @@ Eine URL gibt den Speicherort der ein Ziel auf einem Computer lokal oder im Netz
   
  Eine relative URL in der Regel besteht ausschließlich aus der *Pfad*, und optional die *Ressource*, aber keine *Schema* oder *Server*. In den folgenden Tabellen definieren die einzelnen Bestandteile von der vollständigen URL-Format.  
   
- *Partitionsschema*  
+ *scheme*  
  Gibt an, wie die *Ressource* erfolgen muss.  
   
  *server*  
  Gibt den Namen des Computers, auf dem die *Ressource* befindet.  
   
- *Pfad*  
+ *path*  
  Gibt die Sequenz von Verzeichnissen an das Ziel. Wenn *Ressource* wird weggelassen, ist das Ziel der letzten Verzeichnisses in *Pfad*.  
   
- *Ressource*  
+ *resource*  
  Wenn enthalten, *Ressource* ist das Ziel, und ist in der Regel der Name einer Datei. Möglicherweise eine *einfache Datei* , enthält einen einzelnen binären Datenstrom von Bytes, oder ein *strukturierte Dokument* , eine oder mehrere Speicher und binäre Streams von Bytes enthält.  
   
 ## <a name="url-scheme-registration"></a>URL-Schema-Registrierung  
@@ -95,5 +96,5 @@ recordset.Open "", "URL=http://YourServer/Winnt/",,,adCmdTableDirect
   
 ## <a name="see-also"></a>Siehe auch  
  [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Das Datensatzobjekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

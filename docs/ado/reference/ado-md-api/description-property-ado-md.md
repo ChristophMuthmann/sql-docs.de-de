@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,18 +20,19 @@ f1_keywords:
 - Hierarchy::Description
 - Description
 - Dimension::Description
-helpviewer_keywords: Description property [ADO MD]
+helpviewer_keywords:
+- Description property [ADO MD]
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 173b5c3ac03ad7a472fa3e0f82617da20f281d73
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0f3052ab5b0ad05c1a792ff348e77ea0b32c7484
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="description-property-ado-md"></a>Description-Eigenschaft (ADO MD)
 Gibt eine Erläuterung der Text des aktuellen Objekts zurück.  

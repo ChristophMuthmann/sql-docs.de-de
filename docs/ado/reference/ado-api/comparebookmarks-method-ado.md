@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - CompareBookmarks
 - Recordset20::CompareBookmarks
 - Recordset20::raw_CompareBookmarks
-helpviewer_keywords: CompareBookmarks method [ADO]
+helpviewer_keywords:
+- CompareBookmarks method [ADO]
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e4c3ebb53e34b8e17ae7bc3740bc33d1bfce4fe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 431ffdb1a2be03404b4d0c3636f547b6c8cf8514
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks-Methode (ADO)
 Vergleicht zwei Textmarken und gibt eine Angabe über das Verhältnis der entsprechenden Werte zurück.  

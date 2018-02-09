@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: RecordStatusEnum
-helpviewer_keywords: RecordStatusEnum enumeration [ADO]
+f1_keywords:
+- RecordStatusEnum
+helpviewer_keywords:
+- RecordStatusEnum enumeration [ADO]
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 979193ebce93f2cc7fee232f5928c898e4f15b30
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2315d18add9b25aab826d47346d8725aaa2af6e7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 Gibt an, die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) eines Datensatzes in Bezug auf BatchUpdates und andere Massenvorgänge.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|Gibt an, dass der Datensatz wurde nicht gespeichert werden, da der Vorgang abgebrochen wurde.|  
 |**adRecCantRelease**|0x400|Gibt an, dass der neue Datensatz wurde nicht gespeichert werden, da die vorhandene Datensatz gesperrt wurde.|  

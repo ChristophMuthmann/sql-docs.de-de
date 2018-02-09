@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - AdLockOptimistic [ADO]
 - AdLockPessimistic [ADO]
 ms.assetid: 12a978c0-b8a0-4ef0-87f0-a43c13659272
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a84610a43966d4861b1227131e0c7aee3b828b3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9bec4523ea458998ff19481de467cc6493d03ed2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="types-of-locks"></a>Typen von Sperren
 ## <a name="adlockbatchoptimistic"></a>adLockBatchOptimistic  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: LockTypeEnum
-helpviewer_keywords: LockTypeEnum enumeration [ADO]
+f1_keywords:
+- LockTypeEnum
+helpviewer_keywords:
+- LockTypeEnum enumeration [ADO]
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 48c9909bf228a6bad0ad7e6d44415a1499fd5ea5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f9fe62c251092eb182925de0fa7b6d70c359a25d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 Gibt den Typ der Sperre, die auf Datensätze, die während der Bearbeitung platziert werden.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|Gibt die vollständige BatchUpdates an. Für Batchmodus-Update erforderlich.|  
 |**adLockOptimistic**|3|Gibt an, Parallelität, Datensatz nach dem anderen. Der Anbieter verwendet eingeschränktes Sperren, Sperren von Datensätzen nur bei Aufruf der [Update](../../../ado/reference/ado-api/update-method.md) Methode.|  

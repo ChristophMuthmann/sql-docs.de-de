@@ -21,26 +21,27 @@ helpviewer_keywords:
 - building database objects [CLR integration], data types
 - mapping data types [CLR integration]
 ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf47c53748e56fa455a62e8489839321e960493b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a5b47f3caa1e500664560ff8e6683e6064575699
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>SQL Server-Datentypen in .NET Framework
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die **SqlTypes** -Bibliothek ist Teil der Basisklassenbibliothek von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Sie stellt Datentypen mit derselben Semantik und Präzision wie die in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank bereit. In diesem Thema wird beschrieben, die neue Semantik für .NET Framework-Programmierer und stellt die Typen implementiert, die der **System.Data.SqlTypes** Namespace, der in enthalten ist das **"System.Data"** Bibliothek.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Die **SqlTypes** -Bibliothek ist Teil der Basisklassenbibliothek von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Sie stellt Datentypen mit derselben Semantik und Präzision wie die in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank bereit. In diesem Thema wird beschrieben, die neue Semantik für .NET Framework-Programmierer und stellt die Typen implementiert, die der **System.Data.SqlTypes** Namespace, der in enthalten ist das **"System.Data"** Bibliothek.  
   
  In der folgenden Tabelle sind die Themen in diesem Abschnitt aufgeführt.  
   
- [Zulässigkeit von NULL-Werten und Vergleiche mit dreiwertiger Logik](../../relational-databases/clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md)  
+ [NULL-Zulässigkeit und Vergleiche mit Dreiwertiger Logik](../../relational-databases/clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md)  
  Erläutert, wie NULL-Werte mit CLR-Integrationsdatentypen (Common Language Runtime) behandelt werden.  
   
- [Sortierung und Datentypen für die CLR-Integration](../../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md)  
+ [Sortierung und Datentypen für CLR-Integration](../../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md)  
  Beschreibt, wie Sortierungen bei der CLR-Integration behandelt werden.  
   
  [Behandlung von Large Object &#40; LOB &#41; Parameter in der CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  

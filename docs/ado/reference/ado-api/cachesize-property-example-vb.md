@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: CacheSize property [ADO], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- CacheSize property [ADO], Visual Basic example
 ms.assetid: a237ffdb-6e5b-47c6-9901-d5cdbe8625f3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31c27a9bd613dbb54f198eb98fdcb41340838356
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7a0c1a44346fdfcaa771359920405aabc701d176
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cachesize-property-example-vb"></a>CacheSize (VB-Beispiel)
 Dieses Beispiel verwendet die [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) Eigenschaft für den Unterschied bei der Leistung für einen Vorgang ausgeführt wird, mit und ohne eine 30-Record-Cache.  

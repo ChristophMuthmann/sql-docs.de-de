@@ -19,19 +19,20 @@ helpviewer_keywords:
 - in-process data access providers [CLR integration]
 - extensions [CLR integration]
 ms.assetid: 781b812e-eb14-472a-85fa-aa4cdb929bee
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8f08c7432fc179d5f85992d2aab7dc8df86815e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 778957280803b758bbf31775d71a7aca141d8494
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-in-process-specific-extensions-to-adonet"></a>Von SQL Server verwendete prozessinterne spezifische Erweiterungen für ADO.NET
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Es gibt vier wesentliche funktionale Erweiterungen für ADO.NET, die speziell für die prozessinterne Verwendung sind. Die folgenden Themen liefern detaillierte Informationen zu diesen Erweiterungen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Es gibt vier Hauptfunktionserweiterungen für ADO.NET, die speziell der prozessinternen Verwendung dienen. Die folgenden Themen liefern detaillierte Informationen zu diesen Erweiterungen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [SqlContext-Objekt](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  

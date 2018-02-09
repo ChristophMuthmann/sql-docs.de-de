@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: FieldAttributeEnum
-helpviewer_keywords: FieldAttributeEnum enumeration [ADO]
+f1_keywords:
+- FieldAttributeEnum
+helpviewer_keywords:
+- FieldAttributeEnum enumeration [ADO]
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b5a1783b5906b53f1c092418ea22d2cbc0f51e6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e2b737b179a47aa28196bf8ff334dfe3256f91ef
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 Gibt einen oder mehrere Attribute eines eine [Feld](../../../ado/reference/ado-api/field-object.md) Objekt.  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|Gibt an, dass der Anbieter Feldwerte zwischenspeichert und nachfolgende Lesevorgänge aus dem Cache erfolgen.|  
 |**adFldFixed**|0x10|Gibt an, dass das Feld Daten fester Länge enthält.|  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO]
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6830fefa2e01cf03466ae0b28dc8b132ad6a7149
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4e00f320409602e33ba250f4943b782ec7ea9a96
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="named-commands"></a>Benannte Befehle
 [Erstellen und Ausführen einer einfachen Befehl](../../../ado/guide/data/creating-and-executing-a-simple-command.md) zeigt eine Möglichkeit zum Ausführen eines Befehls. Besteht eine weitere Möglichkeit: können Sie es einen benannten Befehl, und rufen Sie diese benannte Befehl direkt auf die **Verbindung** Objekt (zugewiesen der **ActiveConnection** Eigenschaft von der **-Befehl** Objekt). Benennen einen Befehl bedeutet, dass ein Name zugewiesen der **Name** Eigenschaft von einem **Befehl** Objekt. Beispiel:  

@@ -34,19 +34,20 @@ helpviewer_keywords:
 - invoking UDT methods
 - indexes [CLR integration]
 ms.assetid: 27c4889b-c543-47a8-a630-ad06804f92df
-caps.latest.revision: "67"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 273c059ebeb3a0164da8f98811be88efe6247f0a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 79f5a6c9c827d3502cf7c636ffb5e49bd16f0b13
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-user-defined-types"></a>Benutzerdefinierte CLR-Typen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet Ihnen die Möglichkeit zum Erstellen von Datenbankobjekten, die für eine in.NET Framework common Language Runtime (CLR) erstellten Assembly programmiert sind. Zu den Datenbankobjekten, die das umfangreiche Programmierungsmodell der CLR nutzen können, zählen Trigger, gespeicherte Prozeduren, Funktionen, Aggregatfunktionen und Typen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht das Erstellen von Datenbankobjekten, die für eine Assembly programmiert sind, die in der CLR (Common Language Runtime) von .NET Framework erstellt wurde. Zu den Datenbankobjekten, die das umfangreiche Programmierungsmodell der CLR nutzen können, zählen Trigger, gespeicherte Prozeduren, Funktionen, Aggregatfunktionen und Typen.  
   
 > [!NOTE]  
 >  Die Fähigkeit zum Ausführen von CLR-Code auf OFF festgelegt ist, wird standardmäßig in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die CLR kann aktiviert werden, mithilfe der **Sp_configure** gespeicherten Systemprozedur.  
@@ -81,7 +82,7 @@ ms.lasthandoff: 01/08/2018
  [Registrieren benutzerdefinierter Typen in SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/registering-user-defined-types-in-sql-server.md)  
  Beschreibt, wie UDTs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert und verwaltet werden.  
   
- [Arbeiten mit benutzerdefinierten Typen in SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
+ [Arbeiten mit benutzerdefinierten Typen in SQLServer](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
  Beschreibt das Erstellen von Abfragen mit UDTs.  
   
  [Zugreifen auf benutzerdefinierte Typen in ADO.NET](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  

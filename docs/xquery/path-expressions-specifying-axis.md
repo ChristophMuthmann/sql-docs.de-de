@@ -8,11 +8,14 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - attribute axis [SQL Server]
 - axis step [XQuery]
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - descendant-or-self axis
 - parent axis
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d19dec5b1ea98242c96ca43e3c295290827a8bcf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 44ae49e51ac3fab0ca4b2cd8363601a14a3edf0b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions---specifying-axis"></a>Path-Ausdrücken - Achse angeben
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,12 +54,12 @@ ms.lasthandoff: 12/05/2017
   
 |Axis|Description|  
 |----------|-----------------|  
-|**untergeordnetes Element**|Gibt die untergeordneten Elemente des Kontextknotens zurück.|  
-|**abhängiges Element**|Gibt alle nachfolgenden Elemente des Kontextknotens zurück.|  
-|**übergeordnete**|Gibt das übergeordnete Element des Kontextknotens zurück.|  
-|**Attribut**|Gibt die Attribute des Kontextknotens zurück.|  
-|**Self-Service**|Gibt den Kontextknoten selbst zurück.|  
-|**Descendant-or-self**|Gibt den Kontextknoten und alle nachfolgenden Elemente des Kontextknotens zurück.|  
+|**child**|Gibt die untergeordneten Elemente des Kontextknotens zurück.|  
+|**descendant**|Gibt alle nachfolgenden Elemente des Kontextknotens zurück.|  
+|**parent**|Gibt das übergeordnete Element des Kontextknotens zurück.|  
+|**attribute**|Gibt die Attribute des Kontextknotens zurück.|  
+|**self**|Gibt den Kontextknoten selbst zurück.|  
+|**descendant-or-self**|Gibt den Kontextknoten und alle nachfolgenden Elemente des Kontextknotens zurück.|  
   
  Alle diese Achsen, mit Ausnahme der **übergeordneten** Achse sind vorwärtsgerichtete Achsen. Die **übergeordneten** Achse ist eine rückwärtsgerichtete Achse, da er rückwärts in der Dokumenthierarchie sucht. Beispiel: Der relative Pfadausdruck `child::ProductDescription/child::Summary` enthält zwei Schritte, von denen jeder eine `child`-Achse angibt. Der erste Schritt Ruft die \<ProductDescription >-Elemente des Kontextknotens. Für jede \<ProductDescription > Elementknoten, der zweite Schritt Ruft die \<Zusammenfassung > untergeordneten Elementknoten.  
   

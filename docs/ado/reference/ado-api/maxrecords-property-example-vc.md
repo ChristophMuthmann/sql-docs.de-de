@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: MaxRecords property [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- MaxRecords property [ADO], VC++ example
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa201c48e8b84a3edfa6f1c201c30b421451a3dc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4ba77502023c04aac8bdb262c66314a4c0c04d12
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords-Eigenschaft (VC++-Beispiel)
 Dieses Beispiel verwendet die [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) Eigenschaft so öffnen eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) mit dem 10 die teuersten Titel in die ***Titel*** Tabelle.  

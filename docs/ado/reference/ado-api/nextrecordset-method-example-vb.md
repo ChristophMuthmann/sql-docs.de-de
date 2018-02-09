@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: NextRecordset method [ADO], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- NextRecordset method [ADO], Visual Basic example
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e601411ddcc4cec836b8211f0c168ff68efc43f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8bf08a82d23f4fc89539ef87bc52b612a578915e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="nextrecordset-method-example-vb"></a>NextRecordset-Methode (Beispiel) (VB)
 Dieses Beispiel verwendet die [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) Methode, um die Daten in einem Recordset anzuzeigen, die einen zusammengesetzten befehlsanweisung setzt sich aus drei Separate verwendet **wählen** Anweisungen.  

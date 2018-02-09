@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Version property [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- Version property [ADO], VC++ example
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8b4ca599738ca3509786c7bc13a3c848157ab4c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 86d3b981271498ee8366ac2d8dea1f22d9e1ed61
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="version-property-example-vc"></a>Version-Eigenschaft (VC++-Beispiel)
 Dieses Beispiel verwendet die [Version](../../../ado/reference/ado-api/version-property-ado.md) Eigenschaft eine [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt, das die aktuelle ADO-Version angezeigt. Es verwendet auch mehrere dynamische Eigenschaften angezeigt:  

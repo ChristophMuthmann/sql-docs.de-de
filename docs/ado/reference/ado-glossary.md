@@ -11,17 +11,18 @@ ms.service:
 ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords: ADO, glossary
+helpviewer_keywords:
+- ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: be9365b3a26b2b8b1db2f4a705a5df1c7b547c54
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: ed92b88736cdc579ddee67dff313f8aad3c69b71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-glossary"></a>ADO-Glossar
 In diesem Thema werden Begriffe, die relevant für ADO definiert.  
@@ -52,7 +53,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  Bindungseintrag  
  Eine Zuordnung zwischen einem Feld in einer Tabelle und einer Variablen. In den Visual C++ ADO-Erweiterungen **Recordset** Felder C/C++-Variablen zugeordnet werden.  
   
- Bitmaske  
+ bitmask  
  Ein numerischer Wert vorgesehen für ein Bit für Bit Wertvergleich mit anderen numerischen Werten in der Regel so kennzeichnen Sie die Optionen im Parameter oder Rückgabewerte. Dieser Vergleich erfolgt normalerweise mit bitweisen logischen Operatoren, wie z. B. **und** und **oder** in Visual Basic  **&**  und **&#124;** in C++.  
   
  Zum Beispiel das ADO- **FieldAttributeEnum** Werte können als Bitmasken verwendet werden, um die Attribute eines Felds zu bestimmen. Angenommen Sie, Sie möchten, um festzustellen, ob ein Feld aktualisiert wurde. Sie können mit dem folgenden Ausdruck in Visual Basic dafür testen:`Field.Attributes AND adFldUpdatable`  
@@ -68,7 +69,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  Geschäftsregel  
  Die Kombination aus Überprüfung Bearbeitungen, Anmeldung Überprüfungen DatenbankSuchen, Richtlinien und algorithmische Transformationen, die Möglichkeit, ein Unternehmen Geschäftsaktivitäten zu bilden. Auch bekannt als *Geschäftslogik*.  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
  berechneter Ausdruck  
  Ein Ausdruck, der nicht konstant ist jedoch, deren Wert hängt von anderen Werten. Um ausgewertet werden, muss ein berechneter Ausdruck abrufen und Werte aus anderen Quellen, in der Regel in anderen Feldern oder Zeilen zu berechnen.  
   
@@ -77,7 +78,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
   
  Kapitelspalten stellen das Definieren einer *über-/* Beziehung, in dem die *übergeordneten* ist die **Recordset** , enthält der Kapitelspalte und die  *untergeordnete* ist die **Recordset** durch das Kapitel dargestellt.  
   
- Kapitel-alias  
+ chapter-alias  
  Ein Alias, der auf die Spalte, angefügt an das übergeordnete Element verweist.  
   
  Zeichensatz  
@@ -115,7 +116,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  Eine Anzahl von einzelnen Dateien, die zusammen in einer physischen Datei gebunden. Jede einzelne Datei in einer Verbunddatei kann zugegriffen werden, als handele es sich um einen einzelnen physischen Datei.  
   
  Konstante  
- Ein numerisch oder String-Wert, der nicht geändert wird. Benannte ADO-Enumerationen (Enumerationskonstanten) können z. B. in Ihrem Code anstelle der eigentlichen Werte verwendet werden **AdUseClient** ist eine Konstante, deren Wert 3 ist. (Const AdUseClient = 3). Siehe auch *Enumeration*.  
+ Ein numerisch oder String-Wert, der nicht geändert wird. Benannte ADO-Enumerationen (Enumerationskonstanten) können z. B. in Ihrem Code anstelle der eigentlichen Werte verwendet werden **AdUseClient** ist eine Konstante, deren Wert 3 ist. (Const adUseClient = 3). Siehe auch *Enumeration*.  
   
  cursor  
  Ein Datenbankelement, das zum Navigieren in Datensätzen, Updateability der Daten und die Sichtbarkeit von Änderungen an der Datenbank vorgenommen werden, die von anderen Benutzern gesteuert.  
@@ -186,7 +187,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  Hierarchie (hierarchy)  
  Eine Hierarchie ist im Allgemeinen eine geordneten Struktur mit einer oberen Ebene und untergeordneten Ebenen. In ADO hierarchische **Recordsets** verwendet, um die über-/ unterordnungsbeziehung zwischen einem Datensatz und einem Kapitel darzustellen. Auch in ADO **Datensatz** und **Stream** Objekte können verwendet werden, z. B. einen Ordner und Dokumente der hierarchischen Struktur auf. ADO MD umfasst auch **Hierarchie** -Objekten zur Darstellung einer Beziehung zwischen den Ebenen einer Dimension in einem OLAP-Cube. Siehe auch hierarchische Recordsets über-/ unterordnungsbeziehung, Kapitel, Struktur.  
   
-## <a name="i-l"></a>ICH-L  
+## <a name="i-l"></a>I-L  
  ISAPI (Internet Server Application Programming Interface)  
  Eine Reihe von Funktionen für Internetserver, z. B. eine Windows NT® Server-Windows 2000 Server, die Microsoft® Internet Information Services (IIS) ausgeführt werden soll.  
   
@@ -233,7 +234,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  parent (parent)  
  Der steuernde Seite einer hierarchischen Beziehung. In einer hierarchischen Struktur besitzt ein übergeordnetes Element ein oder mehrere untergeordnete Knoten direkt unter ihm in der Hierarchie. Siehe auch übergeordneten Alias, über-/ unterordnungsbeziehung, untergeordnetes Element.  
   
- übergeordneten alias  
+ parent-alias  
  Ein Alias, der auf das übergeordnete Element verweist. Siehe auch alias übergeordneten.  
   
  Parent-Child-Beziehung  
@@ -267,7 +268,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  Ein Satz von Zeilen aus einer Datenquelle, mit immer das gleiche Feldschema. Ein Rowset kann alle oder einige Felder aus einer Tabelle darstellen. Ein Rowset kann auch eine virtuelle Tabelle, die von einer Abfrage oder ein Join von zwei oder mehr Tabellen erstellt repräsentieren. In ADO werden Rowsets durch dargestellt **Recordset** Objekte.  
   
 ## <a name="s"></a>S  
- Bereich  
+ Scope  
  Der Bereich des Verweises für ein Objekt oder eine Variable oder einen Bereich von Datensätzen in einer Sicht oder Tabelle. Lokale Variablen können beispielsweise nur innerhalb der Prozedur verwiesen werden in denen sie definiert wurden. Öffentliche Variablen werden an einer beliebigen Stelle in der Anwendung zugegriffen werden. Objekte, z. B. der aktuellen Datenbank befinden sich im Gültigkeitsbereich, wenn Suchpfad definiert werden. Datensatz Bereiche können mit einer Scope-Klausel in zahlreichen Befehlen angegeben werden.  
   
  Dienstanbieter  
@@ -292,7 +293,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  Ein Vorgang, durch Code, der abgeschlossen ist, bevor der nächste Vorgang möglicherweise schon initiiert. Siehe auch asynchronen Vorgang.  
   
 ## <a name="t-z"></a>T-Z  
- trEE  
+ Struktur  
  Eine Struktur, die eine hierarchische Beziehung zwischen Elementen (Knoten) darstellt. Ein Knoten ist auf der obersten Ebene einer Struktur (Stamm) vorhanden. Unter dem Stammelement kann mehrere untergeordnete Elemente vorhanden sein. Jedes untergeordnete Element kann wiederum das übergeordnete Element eines weiteren untergeordneten Elementen, Verzweigen wie eine Struktur sein. Ein Ordner, Dokumente und andere Ordner enthält ist ein typisches Beispiel für eine Struktur. Siehe auch Hierarchie, Knoten, Root, untergeordneten und übergeordneten.  
   
  Webserver  

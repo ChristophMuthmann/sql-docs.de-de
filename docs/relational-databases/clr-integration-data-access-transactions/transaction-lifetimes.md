@@ -15,19 +15,20 @@ helpviewer_keywords:
 - lifetimes [SQL Server]
 - Transact-SQL vs. managed code
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97f594dde59411f05b60d8d778d617955526cad6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f24c0e6642a01b5f1d59ae82c7c09ce9ed94e7fb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="transaction-lifetimes"></a>Lebensdauer von Transaktionen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Es ist ein wichtiger Unterschied zwischen den Transaktionen gestartet [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozeduren und die in verwaltetem Code gestartet: common Language Runtime (CLR)-Code den Transaktionsstatus bei eintritt oder Verlassen eines CLR-Aufrufs aus dem Gleichgewicht bringen kann nicht. Dieser Unterschied wirkt sich wie folgt aus:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Es gibt einen wichtigen Unterschied zwischen Transaktionen, die in gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozeduren gestartet werden, und Transaktionen, die in verwaltetem Code gestartet werden: CLR-Code (Common Language Runtime) kann den Transaktionsstatus bei Eintritt oder Verlassen eines CLR-Aufrufs nicht aus dem Gleichgewicht bringen. Dieser Unterschied wirkt sich wie folgt aus:  
   
 -   Für eine in einem CLR-Rahmen gestartete Transaktion muss ein Commit oder ein Rollback ausgeführt werden, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sonst beim Verlassen des Rahmens einen Fehler generiert.  
   
@@ -38,6 +39,6 @@ ms.lasthandoff: 01/08/2018
 -   Wenn für eine Transaktion, die nicht in derselben Prozedur gestartet wurde, ein Rollback ausgeführt wird, reagiert die Transaktion nicht mehr (was dazu führt, dass keine anderen Vorgänge mit Nebenwirkungen mehr ausgeführt werden). Die Transaktion reagiert nicht mehr, bis der CLR-Code den Bereich verlässt. Dies kann hilfreich sein, wenn Sie innerhalb der Prozedur einen Fehler erkennen und sicherstellen möchten, dass die ganze Transaktion beendet wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [CLR-Integration und -Transaktionen](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
+ [CLR-Integration und Transaktionen](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

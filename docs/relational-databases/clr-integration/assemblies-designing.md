@@ -15,19 +15,20 @@ helpviewer_keywords:
 - designing assemblies [SQL Server]
 - assemblies [CLR integration], designing
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9273db56dfc99f76325ee9938678d2dc24aad8e8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d5e491f922a034a55cb65e432e0c005f6cc18fc0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies---designing"></a>Assemblys - entwerfen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In diesem Thema wird beschrieben, die folgenden Faktoren, die Sie beim Entwerfen von Assemblys berücksichtigen sollten:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+In diesem Thema werden die folgenden Faktoren beschrieben, die Sie beim Entwerfen von Assemblys berücksichtigen sollten:  
   
 -   Verpacken von Assemblys  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/08/2018
  Wenn Sie UNSAFE angeben, kann der Code in der Assembly außerdem Vorgänge ausführen, die von der CLR-Überprüfung als typunsicher betrachtet werden. Diese Vorgänge können potenziell auf unkontrollierte Weise auf Speicherpuffer im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozessraum zugreifen. UNSAFE-Assemblys können außerdem potenziell das Sicherheitssystem von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder der CLR unterlaufen. UNSAFE-Berechtigungen sollten nur hochgradig vertrauenswürdigen Assemblys durch erfahrene Entwickler oder Administratoren erteilt werden. Nur Mitglieder der **Sysadmin** -Serverrolle kann UNSAFE-Assemblys erstellen.  
   
 ## <a name="restrictions-on-assemblies"></a>Einschränkungen für Assemblys  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] belegt verwalteten Code in Assemblys mit einigen Einschränkungen, damit sichergestellt wird, dass diese auf zuverlässige und skalierbare Weise ausgeführt werden können. Dies bedeutet, dass bestimmte Vorgänge, die die Robustheit des Servers beeinträchtigen könnten, in SAFE- und EXTERNAL_ACCESS-Assemblys nicht zulässig sind.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setzt bestimmte Einschränkungen für verwalteten Code in Assemblys, um sicherzustellen, dass sie auf eine zuverlässige und skalierbare Weise ausgeführt werden können. Dies bedeutet, dass bestimmte Vorgänge, die die Robustheit des Servers beeinträchtigen könnten, in SAFE- und EXTERNAL_ACCESS-Assemblys nicht zulässig sind.  
   
 ### <a name="disallowed-custom-attributes"></a>Unzulässige benutzerdefinierte Attribute  
  Assemblys dürfen nicht mit den folgenden benutzerdefinierten Attributen mit Anmerkungen versehen werden:  

@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RDS related technologies [ADO]
+helpviewer_keywords:
+- RDS related technologies [ADO]
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6216b4df4858d6c89a0c1c5374b633e38de29f8d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 57452cdc7cd0542bd81308f223c559118391204c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-related-technologies-with-rds"></a>Verwenden von verwandten Technologien mit RDS
 Dieser Abschnitt enthält die folgenden Themen.  
@@ -32,7 +34,7 @@ Dieser Abschnitt enthält die folgenden Themen.
 -   [Ausführen von Geschäftsobjekten in Komponentendiensten](../../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Viele andere Technologien Remote Data Service interagieren oder in seiner Implementierung verwendet werden.  
   
@@ -46,7 +48,7 @@ Dieser Abschnitt enthält die folgenden Themen.
   
  **Microsoft Internet Explorer** Weitere Informationen zu Microsoft Internet Explorer, finden Sie unter der Website Microsoft Internet ExplorerWeb und der MSDN Library und Web Workshop-Website.  
   
- **Microsoft Windows NT Server-Windows 2000 Server** finden Sie weitere Informationen zur Sicherheit in Microsoft Windows NT Server oder Windows 2000 Server unter der Microsoft Windows-Website.  
+ **Microsoft Windows NT Server/Windows 2000 Server** For more information about security in Microsoft Windows NT Server or Windows 2000 Server, see the Microsoft Windows Web site.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Grundlegendes zu RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)

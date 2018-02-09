@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,20 +16,21 @@ apitype: COM
 f1_keywords:
 - _Record::raw_CopyRecord
 - _Record::CopyRecord
-helpviewer_keywords: CopyRecord method [ADO]
+helpviewer_keywords:
+- CopyRecord method [ADO]
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50749d088c57754ef9b667b114da8fb4f475ad19
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f4c31ec2491486c6c2332e32395246db4651f4e8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="copyrecord-method-ado"></a>CopyRecord-Methode (ADO)
+# <a name="copyrecord-method-ado"></a>CopyRecord Method (ADO)
 Kopiert eine Entität, dargestellt durch eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) an einen anderen Speicherort.  
   
 ## <a name="syntax"></a>Syntax  
@@ -51,7 +53,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *Kennwort*  
  Optional. Ein **Zeichenfolge** Wert, der das Kennwort, die enthält bei Bedarf überprüft *Benutzername*.  
   
- *enthalten*  
+ *Optionen*  
  Optional. Ein [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) -Wert, der einen Standardwert hat **AdCopyUnspecified**. Gibt das Verhalten dieser Methode.  
   
  *Async*  

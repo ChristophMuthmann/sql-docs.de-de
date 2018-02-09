@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.sysfilegroups
 - sysfilegroups
 - sys.sysfilegroups_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sysfilegroups system table
 - sys.sysfilegroups compatibility view
 ms.assetid: e567fa07-31cd-43cc-b8c7-ba6108baca80
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66f2b494ff0d68c131758b9ebf7d1e5b067669e5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d36fc6093956f896e02a62efe089c726103ae341
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssysfilegroups-transact-sql"></a>sys.sysfilegroups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +44,10 @@ ms.lasthandoff: 11/27/2017
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**GroupID**|**smallint**|Gruppen-ID, die für jede Datenbank eindeutig ist.|  
+|**groupid**|**smallint**|Gruppen-ID, die für jede Datenbank eindeutig ist.|  
 |**allocpolicy**|**smallint**|Reserviert.|  
 |**status**|**int**|0x8 = Schreibgeschützt<br /><br /> 0x10 = Standard|  
-|**Gruppenname**|**sysname**|Name der Dateigruppe.|  
+|**groupname**|**sysname**|Name der Dateigruppe.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zuordnen von Systemtabellen zu Systemsichten &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 - customized handler in RDS [ADO]
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12a84193a0d9580f3e62d56b3988165620d4239a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7e311f541cbca186a18d19f3ec2f22ff547cf69a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="writing-your-own-customized-handler"></a>Schreiben Sie einen eigene benutzerdefinierten Handler
 Sie möchten einem eigenen Handler zu schreiben, wenn Sie einen IIS-Server-Administrator möchte die Standardeinstellung für die Unterstützung von RDS werden jedoch mehr Kontrolle über die benutzeranforderungen und Zugriffsrechte.  
@@ -32,7 +33,7 @@ Sie möchten einem eigenen Handler zu schreiben, wenn Sie einen IIS-Server-Admin
  Die MSDFMAP. Ereignishandler implementiert die **IDataFactoryHandler** Schnittstelle.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="idatafactoryhandler-interface"></a>IDataFactoryHandler-Schnittstelle  
  Diese Schnittstelle verfügt über zwei Methoden **GetRecordset** und **eine erneute Verbindung**. Beide Methoden erfordern, die die [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) Eigenschaft festgelegt werden, um **AdUseClient**.  
@@ -61,7 +62,7 @@ Sie möchten einem eigenen Handler zu schreiben, wenn Sie einen IIS-Server-Admin
   
  ***pRS*** ein **Recordset** Objekt.  
   
-## <a name="msdfhdlidl"></a>///msdfhdl.idl  
+## <a name="msdfhdlidl"></a>msdfhdl.idl  
  Dies ist die Schnittstellendefinition für **IDataFactoryHandler** , angezeigt wird, der **///msdfhdl.idl** Datei.  
   
 ```  

@@ -33,19 +33,20 @@ helpviewer_keywords:
 - validating UDT values
 - exposing UDT properties [CLR integration]
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f1abec952d7ad6ca57b38ff1bda37134312da4b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5bf3a762eb8e8435972d4813d8b3e852d39c8b2d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-user-defined-types---coding"></a>Erstellen von benutzerdefinierten Typen - Codierung
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Beim Codieren Ihre Definition für den benutzerdefinierten Typ (UDT), müssen Sie verschiedene Funktionen, je nachdem, ob Sie den UDT implementiert werden, als eine Klasse oder Struktur sowie auf den gewählten Format- und Serialisierungsoptionen Optionen implementieren.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Wenn Sie die Definition eines benutzerdefinierten Typs (UDT) schreiben, müssen Sie verschiedene Funktionen implementieren, abhängig davon, ob Sie den UDT als Klasse oder als Struktur implementieren, sowie abhängig von den von Ihnen gewählten Format- und Serialisierungsoptionen.  
   
  Im Beispiel in diesem Abschnitt veranschaulicht die Implementierung einer **Punkt** UDT als eine **Struktur** (oder **Struktur** in Visual Basic). Die **Punkt** UDT besteht aus X- und Y-Koordinaten als implementiert Eigenschaftenprozeduren.  
   

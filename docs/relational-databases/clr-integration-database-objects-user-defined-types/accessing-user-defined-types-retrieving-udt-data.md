@@ -24,19 +24,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - bytes [CLR integration]
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 971e75599c1b0d0ac6960a8db45a9ed6cfab9041
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bf8ac790f91779407bb60fa1f3cfe8f675a7e8f0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="accessing-user-defined-types---retrieving-udt-data"></a>Zugreifen auf benutzerdefinierte Typen: Abrufen von UDT-Daten
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Um einen benutzerdefinierten Typ (UDT) auf dem Client, die Assembly zu erstellen, die als ein UDT in registriert war ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank muss an die Clientanwendung verfügbar sein. Die UDT-Assembly kann in dasselbe Verzeichnis gelegt werden wie die Anwendung oder in den globalen Assemblycache (GAC). Sie können auch in Ihrem Projekt einen Verweis auf die Assembly festlegen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Zum Erstellen eines benutzerdefinierten Typs (User-Defined Type, UDT) auf dem Client muss die zuvor in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank als UDT registrierte Assembly für die Clientanwendung verfügbar sein. Die UDT-Assembly kann in dasselbe Verzeichnis gelegt werden wie die Anwendung oder in den globalen Assemblycache (GAC). Sie können auch in Ihrem Projekt einen Verweis auf die Assembly festlegen.  
   
 ## <a name="requirements-for-using-udts-in-adonet"></a>Anforderungen zum Verwenden von UDTs in ADO.NET  
  Die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladene Assembly und die Assembly auf dem Client müssen kompatibel sein, damit der UDT auf dem Client erstellt werden kann. Für UDTs mit definiert die **Native** Serialisierungsformat, die Assemblys strukturell kompatibel sein müssen. Für Assemblys mit definiert die **UserDefined** Format, die Assembly muss auf dem Client verfügbar sein.  

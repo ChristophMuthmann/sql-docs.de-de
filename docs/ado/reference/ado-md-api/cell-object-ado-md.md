@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Cell
-helpviewer_keywords: Cell object [ADO MD]
+f1_keywords:
+- Cell
+helpviewer_keywords:
+- Cell object [ADO MD]
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f48b3cf06a7c11e29e87e462b037053906ff10d0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9a8b634548700a92a2524a50cbac7548eea871d7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cell-object-ado-md"></a>Cell-Objekt (ADO MD)
 Stellt die Daten am Schnittpunkt der Achsenkoordinaten enthaltenen im Cellset dar.  
@@ -48,11 +51,11 @@ Stellt die Daten am Schnittpunkt der Achsenkoordinaten enthaltenen im Cellset da
   
 |Name|Description|  
 |----------|-----------------|  
-|Hintergrundfarbe|Background-Farbe ab die Zelle angezeigt wird.|  
+|BackColor|Background-Farbe ab die Zelle angezeigt wird.|  
 |FontFlags|Bitmaske, die Auswirkungen auf die Schriftart detailliert angibt.|  
 |FontName|Der Wert der Zelle anzuzeigenden verwendete Schriftart.|  
 |FontSize|Der Wert der Zelle anzuzeigenden verwendeten Schriftgrad.|  
-|Vordergrundfarbe|Die Vordergrundfarbe ab die Zelle angezeigt wird.|  
+|ForeColor|Die Vordergrundfarbe ab die Zelle angezeigt wird.|  
 |FormatString|Der Wert in eine formatierte Zeichenfolge.|  
   
  Dieser Abschnitt enthält das folgende Thema.  

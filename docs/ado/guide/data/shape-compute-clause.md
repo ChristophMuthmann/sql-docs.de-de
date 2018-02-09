@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c20aec7585c33a7165fac4e93b446e4ce3aaf4e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 53ebeab9edfa1d9fc339f080d4a9de995053f77a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-compute-clause"></a>Shape-COMPUTE-Klausel
 Eine Form "COMPUTE-Klausel generiert ein übergeordnetes Element **Recordset**, einen Verweis auf das untergeordnete Element, dessen Spalten bestehen aus **Recordset**; Dies ist optional Spalten, deren Inhalt neue, Kapitel oder berechnete Spalten werden, oder die Ergebnis der Ausführung von Aggregatfunktionen auf dem untergeordneten Element **Recordset** oder eine zuvor geformten **Recordset**; und alle Spalten aus den untergeordneten **Recordset** abgelesen Das optionale BY-Klausel.  
@@ -41,7 +42,7 @@ SHAPE child-command [AS] child-alias
 ## <a name="description"></a>Description  
  Die Teile dieser Klausel sind wie folgt aus:  
   
- *untergeordnete-Befehl*  
+ *child-command*  
  Besteht aus einer der folgenden:  
   
 -   Einen Abfragebefehl in geschweiften Klammern ("{}"), die ein untergeordnetes Element zurückgibt **Recordset** Objekt. Der Befehl wird an den zugrunde liegenden Datenanbieter ausgegeben, und die Syntax ist abhängig von den Anforderungen von diesem Anbieter. Dies ist der SQL-Sprache in der Regel wird, obwohl ADO keine bestimmte Abfragesprache erforderlich ist.  
@@ -52,13 +53,13 @@ SHAPE child-command [AS] child-alias
   
 -   Das TABLE-Schlüsselwort, gefolgt vom Namen einer Tabelle in der Datenanbieter.  
   
- *untergeordnete-alias*  
+ *child-alias*  
  Ein Alias, der zum Verweisen auf die **Recordset** zurückgegebenes der *untergeordnete-Befehl.* Die *untergeordnete-Alias* ist in der Liste der Spalten in der COMPUTE-Klausel erforderlich und definiert die Beziehung zwischen übergeordneten und untergeordneten **Recordset** Objekte.  
   
- *angefügt Spaltenliste*  
+ *appended-column-list*  
  Eine Liste, in der jedes Element eine Spalte im generierten übergeordneten Element definiert. Jedes Element enthält eine Kapitelspalte, eine neue Spalte, einer berechneten Spalte oder einen Wert, der eine Aggregatfunktion für das untergeordnete Element entstandene **Recordset**.  
   
- *Gruppe der Feldliste*  
+ *grp-field-list*  
  Eine Liste der Spalten in den übergeordneten und untergeordneten **Recordset** Objekten, das angibt, wie die Zeilen im untergeordneten gruppiert werden sollen.  
   
  Für jede Spalte in der *Gruppe-Feld-List* ist es eine entsprechende Spalte in den untergeordneten und übergeordneten **Recordset** Objekte. Für jede Zeile in der übergeordneten Tabelle **Recordset**, die *Gruppe Feldliste* Spalten eindeutige Werte und das untergeordnete Element aufweisen **Recordset** verwiesen wird, von der übergeordneten Zeile besteht ausschließlich aus untergeordneten Zeilen, deren *Gruppe Feldliste* Spalten haben die gleichen Werte wie die übergeordnete Zeile.  
@@ -85,12 +86,12 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.Or
 |Status|Ort|Auffüllung|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
-|oder|Medford|200,000|  
-|oder|Portland|400,000|  
+|OR|Medford|200,000|  
+|OR|Portland|400,000|  
 |CA|Los Angeles|800,000|  
-|CA|SAN Diego|600,000|  
+|CA|San Diego|600,000|  
 |WA|Tacoma|500,000|  
-|oder|Corvallis|300,000|  
+|OR|Corvallis|300,000|  
   
  Geben Sie nun diese Shape-Befehl ein:  
   
@@ -114,14 +115,14 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |---------------------------|--------|-----------|  
 |1,300,000|Verweis auf child1|CA|  
 |1,200,000|Verweis auf child2|WA|  
-|1,100,000|Verweis auf child3|oder|  
+|1,100,000|Verweis auf child3|OR|  
   
 ## <a name="child1"></a>Child1  
   
 |Status|Ort|Auffüllung|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800,000|  
-|CA|SAN Diego|600,000|  
+|CA|San Diego|600,000|  
   
 ## <a name="child2"></a>Child2  
   
@@ -134,9 +135,9 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 |Status|Ort|Auffüllung|  
 |-----------|----------|----------------|  
-|oder|Medford|200,000|  
-|oder|Portland|400,000|  
-|oder|Corvallis|300,000|  
+|OR|Medford|200,000|  
+|OR|Portland|400,000|  
+|OR|Corvallis|300,000|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zugreifen auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

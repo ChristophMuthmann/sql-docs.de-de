@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: b9aeae97abc2f60a9bb6c9c54f5061f68b61a1c9
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 76a5ed98ddd1aa69c11cd371586ce963ebcd97de
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configure SQL Server AlwaysOn-Verfügbarkeitsgruppe für hohe Verfügbarkeit unter Linux
 
@@ -89,7 +89,7 @@ Erstellen der Verfügbarkeitsgruppe für hohe Verfügbarkeit unter Linux. Verwen
 * Legen Sie die primären und sekundäre Replikaten `FAILOVER_MODE = EXTERNAL`. 
    Gibt an, dass das Replikat mit einem externen Cluster-Manager, z. B. Schrittmacher interagiert. 
 
-Die folgende Transact-SQL-Skripts erstellen eine Verfügbarkeitsgruppe für hohe Verfügbarkeit, die mit dem Namen `ag1`. Das Skript konfiguriert die Replikaten AG mit `SEEDING_MODE = AUTOMATIC`. Diese Einstellung bewirkt, dass SQL Server die Datenbank automatisch in jeder sekundären Serverinstanz erstellt. Aktualisieren Sie das folgende Skript für Ihre Umgebung. Ersetzen Sie die `**<node1>**`, `**<node2>**`, oder `**<node3>**` Werte mit den Namen der SQL Server-Instanzen, die die Replikate hosten. Ersetzen Sie die `**<5022>**` mit dem Port, den Sie für die datenbankspiegelungs-Endpunkt Daten festlegen. Um die Verfügbarkeitsgruppe zu erstellen, führen Sie die folgende Transact-SQL für die SQL Server-Instanz, die das primäre Replikat hostet.
+Die folgende Transact-SQL-Skripts erstellen eine Verfügbarkeitsgruppe für hohe Verfügbarkeit, die mit dem Namen `ag1`. Das Skript konfiguriert die Replikaten AG mit `SEEDING_MODE = AUTOMATIC`. Diese Einstellung bewirkt, dass SQL Server die Datenbank automatisch in jeder sekundären Serverinstanz erstellt. Aktualisieren Sie das folgende Skript für Ihre Umgebung. Ersetzen Sie die `<node1>`, `<node2>`, oder `<node3>` Werte mit den Namen der SQL Server-Instanzen, die die Replikate hosten. Ersetzen Sie die `<5022>` mit dem Port, den Sie für die datenbankspiegelungs-Endpunkt Daten festlegen. Um die Verfügbarkeitsgruppe zu erstellen, führen Sie die folgende Transact-SQL für die SQL Server-Instanz, die das primäre Replikat hostet.
 
 Führen Sie **nur eine** der folgenden Skripts: 
 
@@ -105,23 +105,23 @@ Führen Sie **nur eine** der folgenden Skripts:
    CREATE AVAILABILITY GROUP [ag1]
        WITH (DB_FAILOVER = ON, CLUSTER_TYPE = EXTERNAL)
        FOR REPLICA ON
-           N'**<node1>**' 
+           N'<node1>' 
             WITH (
-               ENDPOINT_URL = N'tcp://**<node1>:**<5022>**',
+               ENDPOINT_URL = N'tcp://<node1>:<5022>',
                AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
                FAILOVER_MODE = EXTERNAL,
                SEEDING_MODE = AUTOMATIC
                ),
-           N'**<node2>**' 
+           N'<node2>' 
             WITH ( 
-               ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**', 
+               ENDPOINT_URL = N'tcp://<node2>:<5022>', 
                AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
                FAILOVER_MODE = EXTERNAL,
                SEEDING_MODE = AUTOMATIC
                ),
-           N'**<node3>**'
+           N'<node3>'
            WITH( 
-              ENDPOINT_URL = N'tcp://**<node3>**:**<5022>**', 
+              ENDPOINT_URL = N'tcp://<node3>:<5022>', 
               AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
               FAILOVER_MODE = EXTERNAL,
               SEEDING_MODE = AUTOMATIC
@@ -142,20 +142,20 @@ Führen Sie **nur eine** der folgenden Skripts:
    CREATE AVAILABILITY GROUP [ag1] 
       WITH (CLUSTER_TYPE = EXTERNAL) 
       FOR REPLICA ON 
-       N'**<node1>**' WITH ( 
-          ENDPOINT_URL = N'tcp://**<node1>**:**<5022>**', 
+       N'<node1>' WITH ( 
+          ENDPOINT_URL = N'tcp://<node1>:<5022>', 
           AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
           FAILOVER_MODE = EXTERNAL, 
           SEEDING_MODE = AUTOMATIC 
           ), 
-       N'**<node2>**' WITH (  
-          ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**',  
+       N'<node2>' WITH (  
+          ENDPOINT_URL = N'tcp://<node2>:<5022>',  
           AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
           FAILOVER_MODE = EXTERNAL, 
           SEEDING_MODE = AUTOMATIC 
           ), 
-       N'**<node3>**' WITH ( 
-          ENDPOINT_URL = N'tcp://**<node3>**:**<5022>**', 
+       N'<node3>' WITH ( 
+          ENDPOINT_URL = N'tcp://<node3>:<5022>', 
           AVAILABILITY_MODE = CONFIGURATION_ONLY  
           );
    ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;

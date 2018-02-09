@@ -1,34 +1,39 @@
 ---
 title: "Übersicht über Data Migration Assistant (SQLServer) | Microsoft Docs"
 ms.custom: 
-ms.date: 10/04/2017
+ms.date: 02/07/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-dma
+ms.technology:
+- sql-dma
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: 
-helpviewer_keywords: Data Migration Assistant, overview
+helpviewer_keywords:
+- Data Migration Assistant, overview
 ms.assetid: 
 caps.latest.revision: 
 author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea780da11c39984fa8828119eee621a66768f1fe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c23ed7d07474cc763da951e782badd42458dacdb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="overview-of-data-migration-assistant"></a>Übersicht über Data-Migrations-Assistenten
 
-Data Migration Assistant (DMA) können Sie zum Aktualisieren auf eine moderne Datenplattform durch das Erkennen von Kompatibilitätsproblemen zu Fragen, die in der neuen Version von SQL Server und Azure SQL-Datenbank-Funktionalität auswirken können. DMA empfiehlt, Leistung und Zuverlässigkeit Verbesserungen für Ihre zielumgebung und können Sie Ihr Schema, Daten und nicht enthaltene Objekte vom Quellserver auf dem Zielserver zu verschieben.
+Die Daten Migration Assistant (DMA) können Sie zum Aktualisieren auf eine moderne Datenplattform durch das Erkennen von Kompatibilitätsproblemen zu Fragen, die in der neuen Version von SQL Server und Azure SQL-Datenbank-Funktionalität auswirken können. DMA empfiehlt, Leistung und Zuverlässigkeit Verbesserungen für Ihre zielumgebung und können Sie Ihr Schema, Daten und nicht enthaltene Objekte vom Quellserver auf dem Zielserver zu verschieben.
 
+> [!NOTE] 
+> Für große (im Hinblick auf Anzahl und Größe der Datenbanken) Migrationen, es wird empfohlen, verwenden Sie die [Migration-Dienst von Azure-Datenbank](https://docs.microsoft.com/en-us/azure/dms/dms-overview), können die Datenbanken zu migrieren.
+  
 ## <a name="capabilities"></a>Funktionen
 
 - Bewerten Sie die lokale SQL Server-Instanzen, die Migration zu Azure SQL-Datenbanken. Der Assessment-Workflow können Sie die folgenden Probleme zu erkennen, die Migration zu Azure SQL-Datenbank beeinflussen können und enthält ausführliche Hinweise auf deren Behebung.
@@ -37,7 +42,7 @@ Data Migration Assistant (DMA) können Sie zum Aktualisieren auf eine moderne Da
 
   - Teilweise unterstützte oder nicht unterstützte Funktionen: erkennt teilweise unterstützte oder nicht unterstützte Funktionen, die derzeit in der SQL Server-Quellinstanz verwendet werden. DMA bietet eine umfassende Empfehlungen, alternative Ansätze in Azure und Schritten festgelegt, damit Sie in Ihrem Migrationsprojekten integrieren können.
 
-- Ermitteln Sie Probleme, die ein Upgrade auf eine lokale SQL Server auswirken können.  Diese werden als Kompatibilitätsprobleme beschrieben und werden in den folgenden Kategorien organisiert:
+- Ermitteln Sie Probleme, die ein Upgrade auf eine lokale SQL Server auswirken können. Diese werden als Kompatibilitätsprobleme beschrieben und werden in den folgenden Kategorien organisiert:
 
   - Wichtige Änderungen
 
@@ -49,7 +54,7 @@ Data Migration Assistant (DMA) können Sie zum Aktualisieren auf eine moderne Da
 
   - Leistung
 
-  - Security
+  - Sicherheit
 
   - Speicherung
 
@@ -72,16 +77,18 @@ DMA ersetzt alle vorherige Versionen von SQL Server Upgrade Advisor und Upgrades
 **Datenquellen**
 - SQL Server 2005
 - SQL Server 2008
-- SQL Server 2008 R2
+- SQL Server 2008 R2
 - SQL Server 2012 
-- SQLServer 2014
+- SQL Server 2014
 - SQL Server 2016
+- SQLServer 2017 unter Windows
 
 **Ziele**
 - SQL Server 2012
-- SQLServer 2014
+- SQL Server 2014
 - SQL Server 2016
-- Azure SQL-Datenbank
+- SQLServer 2017 unter Windows und Linux
+- Azure SQL Database
 
 ## <a name="installation"></a>Installation
 

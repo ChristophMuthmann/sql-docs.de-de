@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Connection15::ConnectionString
-helpviewer_keywords: ConnectionString property [ADO]
+f1_keywords:
+- Connection15::ConnectionString
+helpviewer_keywords:
+- ConnectionString property [ADO]
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 41f887dbd21f120706e32059128227669f517ea4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: aaf33c9a4fd5b628307195b9b9a7d1743d24d7f2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString-Eigenschaft (ADO)
 Gibt an, die Informationen zum Herstellen einer Verbindung mit einer Datenquelle verwendet.  
@@ -39,11 +42,11 @@ Gibt an, die Informationen zum Herstellen einer Verbindung mit einer Datenquelle
   
 |Argument|Description|  
 |--------------|-----------------|  
-|*Provider =*|Gibt den Namen eines Anbieters für die Verbindung verwenden.|  
+|*Provider=*|Gibt den Namen eines Anbieters für die Verbindung verwenden.|  
 |*Dateiname =*|Gibt den Namen einer anbieterspezifischen-Datei (z. B. eine persistente Datenquellenobjekt), die voreingestellte Verbindungsinformationen enthält.|  
-|*Remoteanbieter =*|Gibt den Namen eines Anbieters beim Öffnen einer clientseitigen Verbindung verwenden. (Nur remote Data Service.)|  
+|*Remote Provider=*|Gibt den Namen eines Anbieters beim Öffnen einer clientseitigen Verbindung verwenden. (Nur remote Data Service.)|  
 |*Remoteserver =*|Gibt den Pfadnamen des Servers, der beim Öffnen einer clientseitigen Verbindung verwenden. (Nur remote Data Service.)|  
-|*URL =*|Gibt die Verbindungszeichenfolge als eine absolute URL identifiziert eine Ressource, z. B. eine Datei oder ein Verzeichnis an.|  
+|*URL=*|Gibt die Verbindungszeichenfolge als eine absolute URL identifiziert eine Ressource, z. B. eine Datei oder ein Verzeichnis an.|  
   
  Nach dem Festlegen der **"ConnectionString"** -Eigenschaft, und Öffnen der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt, den Anbieter möglicherweise zu ändern den Inhalt der Eigenschaft, z. B. durch Zuordnen von ADO definierten Argumentnamen auf ihre Entsprechung für den bestimmten Anbieter.  
   

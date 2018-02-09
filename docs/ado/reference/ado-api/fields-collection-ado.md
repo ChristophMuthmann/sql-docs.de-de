@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Fields
 - Recordset15::Fields
 - _Record::Fields
-helpviewer_keywords: Fields collection [ADO]
+helpviewer_keywords:
+- Fields collection [ADO]
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 32b9f8cff20d7b2e82479985af4219439c8b2233
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 167af555c9983598354faa1de4bc4603a9bac006
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fields-collection-ado"></a>Fields-Auflistung (ADO)
 Enthält alle der [Feld](../../../ado/reference/ado-api/field-object.md) Objekte von einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oder [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt.  

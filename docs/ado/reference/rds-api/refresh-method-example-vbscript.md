@@ -1,6 +1,7 @@
 ---
 title: Aktualisieren Sie die Methodenbeispiel (VBScript) | Microsoft Docs
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,23 +11,25 @@ ms.prod_service: drivers
 ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: Refresh method [ADO], VBScript example
+dev_langs:
+- VB
+helpviewer_keywords:
+- Refresh method [ADO], VBScript example
 ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a96f2c30543a0dcf1fd17919654893b7e979095
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: db4a823a0b16ba4a02112d0ff9ca8df4cf4958b6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="refresh-method-example-vbscript"></a>Aktualisieren Sie die Methodenbeispiel (VBScript)
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Im folgende Beispiel wird gezeigt, wie die erforderlichen Parameter der [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) zur Laufzeit. Die Art und Weise, in dem ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) mit abgerufen wird die [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode richtet sich nach den Einstellungen der [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) und [FetchOptions ](../../../ado/reference/rds-api/fetchoptions-property-rds.md) Eigenschaften. Zum Testen dieses Beispiels ausgeschnitten, und fügen Sie den folgenden Code in ein normales ASP-Dokument, und nennen Sie sie **RefreshVBS.asp**. Verwenden Sie **suchen** suchen Sie die Datei Adovbs.inc und fügen Sie ihn in das Verzeichnis, das Sie verwenden möchten. ASP-Skript identifiziert Ihren Server.  
   

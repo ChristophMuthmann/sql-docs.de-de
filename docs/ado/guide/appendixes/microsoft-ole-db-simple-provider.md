@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB simple provider
 - OLE DB simple provider [ADO]
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49eb75b772d3e8532074bcc1f9bccfd703d622ee
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ae0672fc209e2a31608a36fdef6757bef8d60cf6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB-einfachen Anbieter (Übersicht)
 Der Microsoft OLE DB-einfachen Anbieter (OSP) können auf alle Daten zugreifen, für die ein Anbieter geschrieben wurde mithilfe von, ADO der [OLE DB-einfachen Anbieter (OSP) Toolkit](http://msdn.microsoft.com/en-us/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Einfache Anbieter dienen dem Zugriff auf Datenquellen, die nur grundlegende OLE DB-Unterstützung, z. B. in-Memory-Arrays oder XML-Dokumenten erforderlich ist.
@@ -52,7 +53,7 @@ MSDAOSP
 
 |Schlüsselwort|Description|
 |-------------|-----------------|
-|**Anbieter**|Gibt die OLE DB-Anbieter für SQL Server an.|
+|**Provider**|Gibt die OLE DB-Anbieter für SQL Server an.|
 |**Datenquelle**|Gibt den Namen eines Servers.|
 
 ## <a name="xml-document-example"></a>XML-Dokument (Beispiel)

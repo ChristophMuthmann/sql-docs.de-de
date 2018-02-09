@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - WillExecute
 - Connection::WillExecute
-helpviewer_keywords: WillExecute event [ADO]
+helpviewer_keywords:
+- WillExecute event [ADO]
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66a04a7bf45771c9c6f16b32bfd9c8bac54db4ad
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dafc71b9f9da6dde5cf9ef7acf7909236441f656
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="willexecute-event-ado"></a>WillExecute-Ereignis (ADO)
 Die **WillExecute** Ereignis wird aufgerufen, kurz bevor ein ausstehenden Befehls für eine Verbindung ausgeführt wird.  
@@ -48,7 +50,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *LockType*  
  Ein [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) , enthält den Typ der Sperre für die **Recordset** , wird geöffnet. Mit diesem Parameter können Sie die Sperre ändern, auf einen beliebigen Typ während einer **RecordsetOpen** Vorgang. *LockType* werden für alle anderen Vorgänge ignoriert.  
   
- *enthalten*  
+ *Optionen*  
  Ein **lange** Wert, der Optionen, die verwendet werden kann angibt, führen Sie den Befehl aus, oder öffnen Sie die **Recordset**.  
   
  *adStatus*  
@@ -57,7 +59,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *pCommand*  
  Die [Befehl Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md) -Objekt für den dieser ereignisbenachrichtigung gilt.  
   
- *pCommand*  
+ *pRecordset*  
  Die [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt für den dieser ereignisbenachrichtigung gilt.  
   
  *pConnection*  
@@ -69,7 +71,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  **WillExecute** können Sie zum Überprüfen und ändern die ausstehenden Execution-Parameter. Dieses Ereignis kann eine Anforderung zurückgeben, dass der ausstehende Befehl abgebrochen werden.  
   
 > [!NOTE]
->  Wenn für die ursprüngliche Datenquelle einen **Befehl** ist ein Datenstrom, der gemäß der [CommandStream-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) -Eigenschaft, um eine neue Zeichenfolge zuweisen der **WillExecute** *Quelle* Änderung die Quelle des Parameters der **Befehl**. Die **CommandStream** Eigenschaft wird gelöscht und die [CommandText-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) Eigenschaft wird mit der Quelle aktualisiert werden. Der ursprüngliche Stream gemäß **CommandStream** veröffentlicht und kann nicht zugegriffen werden.  
+>  Wenn für die ursprüngliche Datenquelle einen **Befehl** ist ein Datenstrom, der gemäß der [CommandStream-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) -Eigenschaft, um eine neue Zeichenfolge zuweisen der **WillExecute *** Quelle* Änderung der Quelle des Parameters der **Befehl**. Die **CommandStream** Eigenschaft wird gelöscht und die [CommandText-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) Eigenschaft wird mit der Quelle aktualisiert werden. Der ursprüngliche Stream gemäß **CommandStream** veröffentlicht und kann nicht zugegriffen werden.  
   
  Der Dialekt der neuen Quellzeichenfolge weicht von der ursprünglichen Einstellung für die [Dialect-Eigenschaft](../../../ado/reference/ado-api/dialect-property.md) Eigenschaft (die zugestimmt haben, um die **CommandStream**), durch Festlegen der richtigen Dialekt angegeben werden die **Dialekt** Eigenschaft des Befehlsobjekts verweist *pCommand*.  
   

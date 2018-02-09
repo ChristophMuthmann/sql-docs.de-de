@@ -22,19 +22,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], Native serialization
 - UDTs [CLR integration], Native serialization
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04ee34b1a2474e97111d42be84954dc4c0987dd1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a075d6c4c4cc5ccd0477bb33159cf319fb0754b6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-user-defined-types---requirements"></a>Erstellen von benutzerdefinierten Typen - Anforderungen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Sie müssen mehrere wichtige entwurfsentscheidungen für die Erstellung einen benutzerdefinierten Typ (UDT), auf installiert werden, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Für die meisten UDTs wird das Erstellen als Struktur empfohlen, obwohl auch das Erstellen als Klasse möglich ist. Die UDT-Definition muss den Spezifikationen für das Erstellen von UDTs entsprechen, um mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden zu können.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Sie müssen mehrere wichtige entwurfsentscheidungen für die Erstellung einen benutzerdefinierten Typ (UDT), auf installiert werden, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Für die meisten UDTs wird das Erstellen als Struktur empfohlen, obwohl auch das Erstellen als Klasse möglich ist. Die UDT-Definition muss den Spezifikationen für das Erstellen von UDTs entsprechen, um mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden zu können.  
   
 ## <a name="requirements-for-implementing-udts"></a>Anforderungen für das Implementieren von UDTs  
  Um in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt zu werden, muss der UDT die folgenden Anforderungen in der UDT-Definition implementieren:  
@@ -51,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Es darf nur eine Serialisierung eines UDT-Objekts geben. Die Überprüfung schlägt fehl, wenn die Serialisierungs- oder Deserialisierungsroutinen mehr als eine Darstellung eines bestimmten Objekts erkennen.  
   
--   **SqlUserDefinedTypeAttribute.IsByteOrdered** muss **"true"** , Daten in Bytereihenfolge zu vergleichen. Wenn die IComparable-Schnittstelle nicht implementiert wird und **SqlUserDefinedTypeAttribute.IsByteOrdered** ist **"false"**, Vergleiche in Bytereihenfolge fehl.  
+-   **SqlUserDefinedTypeAttribute.IsByteOrdered** must be **true** to compare data in byte order. Wenn die IComparable-Schnittstelle nicht implementiert wird und **SqlUserDefinedTypeAttribute.IsByteOrdered** ist **"false"**, Vergleiche in Bytereihenfolge fehl.  
   
 -   Ein in einer Klasse definierter UDT muss über einen öffentlichen Konstruktor verfügen, der keine Argumente verwendet. Sie können optional zusätzliche überladene Klassenkonstruktoren erstellen.  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="native-serialization"></a>Systemeigene Serialisierung  
  Die Auswahl der richtigen Serialisierungsattribute für den UDT hängt vom Typ des UDTs ab, den Sie erstellen möchten. Die **Native** Serialisierungsformat wird eine sehr einfache Struktur, die es ermöglicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um eine effiziente systemeigene Darstellung des UDTS auf dem Datenträger zu speichern. Die **Native** Format wird empfohlen, wenn der UDT einfach ist und nur Felder der folgenden Typen enthält:  
   
- **Bool**, **Byte**, **"SByte"**, **kurze**, **"ushort"**, **Int**,  **"uint"**, **lange**, **Ulong**, **"float"**, **doppelte**, **Value**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**,  **SqlDouble**, **SqlMoney**, **SqlBoolean**  
+ **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
  Werttypen, die aus Feldern der oben genannten Typen bestehen, die gute für Kandidaten **Native** format, z. B. **Strukturen** in Visual c# (oder **Strukturen** wie in der sie bekannt sind Visual Basic). Ein UDT beispielsweise angegeben, mit der **Native** Serialisierungsformat möglicherweise auf ein Feld eines anderen UDTS, die auch mit angegeben wurde die **Native** Format. Wenn die UDT-Definition komplexer ist und Datentypen, die nicht in der obigen Liste enthält, geben Sie die **UserDefined** Serialisierungsformat stattdessen.  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 01/08/2018
  **IsByteOrdered**  
  Ein **booleschen** Wert, der bestimmt, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] binäre Vergleiche auf dem UDT ausführt.  
   
- **"IsFixedLength"**  
+ **IsFixedLength**  
  Gibt an, ob alle Instanzen dieses UDTs dieselbe Länge haben.  
   
  **MaxByteSize**  

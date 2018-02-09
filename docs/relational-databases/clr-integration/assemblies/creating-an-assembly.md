@@ -19,19 +19,20 @@ helpviewer_keywords:
 - EXTERNAL_ACCESS assemblies
 - assemblies [CLR integration], creating
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 249bd52e59dfb91ca4d4a24efb3cd824fb329864
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 01e863a5e39ebc32baba97b49e3421e5c8c202bc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-an-assembly"></a>Erstellen von Assemblys
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Verwaltete Datenbankobjekte, z. B. gespeicherte Prozeduren oder Trigger, werden kompiliert und dann in so genannten Assemblys bereitgestellt. Verwaltete DLL-Assemblys müssen registriert werden, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bevor die von die Assembly bereitgestellte Funktion verwendet werden kann. So registrieren Sie eine Assembly in eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datenbank, verwenden Sie die CREATE ASSEMBLY-Anweisung. In diesem Thema wird erläutert, wie Sie eine Assembly mithilfe der CREATE ASSEMBLY-Anweisung in einer Datenbank registrieren und wie Sie die Sicherheitseinstellungen für die Assembly festlegen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Verwaltete Datenbankobjekte wie beispielsweise gespeicherte Prozeduren und Trigger werden kompiliert und dann in so genannten Assemblys bereitgestellt. Verwaltete DLL-Assemblys müssen registriert werden, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bevor die von die Assembly bereitgestellte Funktion verwendet werden kann. So registrieren Sie eine Assembly in eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datenbank, verwenden Sie die CREATE ASSEMBLY-Anweisung. In diesem Thema wird erläutert, wie Sie eine Assembly mithilfe der CREATE ASSEMBLY-Anweisung in einer Datenbank registrieren und wie Sie die Sicherheitseinstellungen für die Assembly festlegen.  
   
 ## <a name="the-create-assembly-statement"></a>Die CREATE ASSEMBLY-Anweisung  
  Die CREATE ASSEMBLY-Anweisung dient zum Erstellen einer Assembly in einer Datenbank. Beispiel:  
@@ -43,7 +44,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  Die FROM-Klausel legt den Pfadnamen der zu erstellenden Assembly fest. Bei diesem Pfad kann es sich entweder um einen UNC-Pfad (Universal Naming Convention) oder einen physischen Dateipfad handeln, der sich lokal auf dem Rechner befindet.  
   
- In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ist es nicht zulässig, verschiedene Versionen einer Assembly mit demselben Namen, derselben Kultur und demselben öffentlichen Schlüssel zu registrieren.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ist es nicht zulässig, verschiedene Versionen einer Assembly mit demselben Namen, derselben Kultur und demselben öffentlichen Schlüssel zu registrieren.  
   
  Es ist möglich, Assemblys zu erstellen, die auf andere Assemblys verweisen. Beim Erstellen einer Assemblys in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erstellt außerdem die Assemblys, auf die Assembly auf Stammebene verweist auf, wenn die referenzierten Assemblys nicht bereits in der Datenbank erstellt werden.  
   

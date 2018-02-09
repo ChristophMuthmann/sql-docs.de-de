@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - methods [ADOX]
 - ADOX, methods
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad8a7eb710e129b6ba9110694c8cebfddeab85d3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 73fcca57a0cb497694bf843f1569a51868282a89
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-methods"></a>ADOX-Methoden
 |||  
@@ -38,8 +39,8 @@ ms.lasthandoff: 12/21/2017
 |[Append (Benutzer)](../../../ado/reference/adox-api/append-method-adox-users.md)|Fügt ein neues **Benutzer** -Objekt an die **Benutzer** Auflistung.|  
 |[Append (Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)|Fügt ein neues **Ansicht** -Objekt an die **Ansichten** Auflistung.|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|Ändert das Kennwort für ein Benutzerkonto an.|  
-|[Erstellen](../../../ado/reference/adox-api/create-method-adox.md)|Wird einen neuen Katalog erstellt.|  
-|[Löschen](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Entfernt ein Objekt aus einer Auflistung.|  
+|[Create](../../../ado/reference/adox-api/create-method-adox.md)|Wird einen neuen Katalog erstellt.|  
+|[Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Entfernt ein Objekt aus einer Auflistung.|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Gibt den Besitzer eines Objekts in einem Katalog zurück.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Gibt die Berechtigungen für Benutzer oder eine Gruppe für ein Objekt zurück.|  
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|Gibt den Besitzer eines Objekts in einem Katalog an.|  

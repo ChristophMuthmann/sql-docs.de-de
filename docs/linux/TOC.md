@@ -35,7 +35,7 @@
 ### [Install SQL Server Agent (Installieren des SQL Server-Agents)](sql-server-linux-setup-sql-agent.md)
 ### [Install SQL Server Full-Text Search (Installieren der SQL Server-Volltextsuche)](sql-server-linux-setup-full-text-search.md)
 ### [Install SQL Server Integration Services (Installieren von SQL Server Integration Services)](sql-server-linux-setup-ssis.md)
-### [Registrieren des GA-Repositorys](sql-server-linux-change-repo.md)
+### [Konfigurieren von Repositorys](sql-server-linux-change-repo.md)
 
 ## Konfigurieren
 ### [Configure with mssql-conf (Konfigurieren mit mssql-conf)](sql-server-linux-configure-mssql-conf.md)
@@ -85,6 +85,7 @@
 ##### [Operate (Ausführen)](sql-server-linux-availability-group-failover-ha.md)
 #### [Erstellung nur für schreibgeschützten Zugriff]()
 ##### [Configure AG (Konfigurieren von AG)](sql-server-linux-availability-group-configure-rs.md)
+#### [Plattformübergreifendes Konfigurieren (Windows und Linux)](sql-server-linux-availability-group-cross-platform.md)
 
 ## [Security](sql-server-linux-security-overview.md)
 ### [Get started with security features (Erste Schritte mit den Sicherheitsfeatures)](sql-server-linux-security-get-started.md)

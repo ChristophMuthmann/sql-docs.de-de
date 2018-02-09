@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Connection15::Execute
 - Connection15::raw_Execute
-helpviewer_keywords: Execute method [ADO]
+helpviewer_keywords:
+- Execute method [ADO]
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 071e752063020ace305371f814f1b78224dbb9a4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ef36e770a2321357ed0d58153ad8e0b7493a232a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute-method-ado-connection"></a>Execute-Methode (ADO-Verbindung)
 Führt die angegebene Abfrage, SQL-Anweisung, gespeicherte Prozedur oder anbieterspezifischen Text.  
@@ -43,13 +45,13 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  Gibt eine [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) -Objektverweis.  
   
 #### <a name="parameters"></a>Parameter  
- *' CommandText '*  
+ *CommandText*  
  Ein **Zeichenfolge** Wert, der die SQL-Anweisung, gespeicherte Prozedur, eine URL oder Anbieter-spezifischen Text auszuführende enthält. **Optional**, Tabellennamen können jedoch nur verwendet werden, wenn der Anbieter SQL bekannt ist. Wenn z. B. ein Tabellenname "Kunden" verwendet wird, voranstellen ADO die standardmäßige SQL Select-Syntax um bilden, und übergeben "SELECT * FROM Customers" als eine [!INCLUDE[tsql](../../../includes/tsql_md.md)] Anweisung an den Anbieter.  
   
  *RecordsAffected*  
  Optional. Ein **lange** Variablen, zu dem der Anbieter gibt die Anzahl der Datensätze, die der Vorgang betroffen.  
   
- *enthalten*  
+ *Optionen*  
  Optional. Ein **lange** Wert, der angibt, wie der Anbieter das Argument ' CommandText ' ausgewertet werden soll. Kann eine Bitmaske aus einem oder mehreren [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) oder [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) Werte.  
   
  **Hinweis** verwenden die **ExecuteOptionEnum** Wert **AdExecuteNoRecords** zur Verbesserung der Leistung durch Minimierung der internen Verarbeitung und für Anwendungen, die Sie aus Visual Basic Portieren 6.0.  

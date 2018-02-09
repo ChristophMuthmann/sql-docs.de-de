@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,24 +19,25 @@ f1_keywords:
 - CreateRecordset
 - RDSServer.DataFactory::CreateRecordset
 - DataFactory::CreateRecordset
-helpviewer_keywords: CreateRecordset method [RDS]
+helpviewer_keywords:
+- CreateRecordset method [RDS]
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7046143a53241622c7bcf03610c416715024fcc0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4ce2c6eed7dbb7e68277c054693aec089b802892
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset-Methode (RDS)
 Erstellt ein leeres getrennt [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,7 +53,7 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  Ein **Variant** Array von Attributen, die jede Spalte definiert den **Recordset** erstellt. Jede Spaltendefinition enthält ein Array von vier erforderlichen Attribute und ein optionales Attribut.  
   
-|attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
 |Name|Name des den Spaltenüberschrift.|  
 |Typ|Ganze Zahl des Datentyps.|  
@@ -84,7 +86,7 @@ object.CreateRecordset(ColumnInfos)
 |Fest|**adDouble**|5||  
 |Fest|**adCurrency**|6||  
 |Fest|**adDecimal**|14||  
-|Fest|**Type**|131||  
+|Fest|**adNumeric**|131||  
 |Fest|**adBoolean**|11||  
 |Fest|**adError**|10||  
 |Fest|**adGuid**|72||  

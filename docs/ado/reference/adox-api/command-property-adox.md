@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Procedure::Command
 - View::Command
-helpviewer_keywords: Command property [ADOX]
+helpviewer_keywords:
+- Command property [ADOX]
 ms.assetid: bcc9146f-586f-4e69-9c10-863440c9cffa
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66cf6a70733e4e3188e5dd490ee780d878d42174
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9e79747bb655b5074b393cec0ad2e867740d7b5a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="command-property-adox"></a>Command-Eigenschaft (ADOX)
 Gibt eine ADO [Befehl](../../../ado/reference/ado-api/command-object-ado.md) -Objekt, das zum Erstellen oder Ausführen der Prozedur verwendet werden kann.  

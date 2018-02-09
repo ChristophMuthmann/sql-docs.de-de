@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: ADO, glossary
+helpviewer_keywords:
+- ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddc7cab1de929354827a316770f373c0792828e8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1b27ecc0b3905a12d453cc53d6ac941fc80708f9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-glossary-terms"></a>ADO-Glossar
 In diesem Thema werden Begriffe, die relevant für ADO definiert.
@@ -90,7 +92,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
 
  Eine Anzahl von einzelnen Dateien, die zusammen in einer physischen Datei gebunden. Jede einzelne Datei in einer Verbunddatei kann zugegriffen werden, als handele es sich um einen einzelnen physischen Datei.
 
- Konstante ein numerisch oder String-Wert, der nicht geändert wird. Benannte ADO-Enumerationen (Enumerationskonstanten) können z. B. in Ihrem Code anstelle der eigentlichen Werte verwendet werden **AdUseClient** ist eine Konstante, deren Wert 3 ist. (Const AdUseClient = 3). Siehe auch *Enumeration*.
+ Konstante ein numerisch oder String-Wert, der nicht geändert wird. Benannte ADO-Enumerationen (Enumerationskonstanten) können z. B. in Ihrem Code anstelle der eigentlichen Werte verwendet werden **AdUseClient** ist eine Konstante, deren Wert 3 ist. (Const adUseClient = 3). Siehe auch *Enumeration*.
 
  Cursor ein Datenbankelement, das zum Navigieren in Datensätzen, Updateability der Daten und die Sichtbarkeit von Änderungen an der Datenbank vorgenommen werden, die von anderen Benutzern gesteuert.
 
@@ -141,7 +143,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
 
  Hierarchie im Allgemeinen gilt eine Hierarchie ist eine geordneten Struktur mit einer oberen Ebene und untergeordneten Ebenen. In ADO hierarchische **Recordsets** verwendet, um die über-/ unterordnungsbeziehung zwischen einem Datensatz und einem Kapitel darzustellen. Auch in ADO **Datensatz** und **Stream** Objekte können verwendet werden, z. B. einen Ordner und Dokumente der hierarchischen Struktur auf. ADO MD umfasst auch **Hierarchie** -Objekten zur Darstellung einer Beziehung zwischen den Ebenen einer Dimension in einem OLAP-Cube. Siehe auch hierarchische Recordsets über-/ unterordnungsbeziehung, Kapitel, Struktur.
 
-## <a name="i-l"></a>ICH-L
+## <a name="i-l"></a>I-L
  ISAPI-(Internet Server Application Programming Interface) ein Satz von Funktionen für Internetserver, z. B. eine Windows NT® Server-Windows 2000 Server, die Microsoft® Internet Information Services (IIS) ausgeführt.
 
  Schlüssel, eine Spalte oder Spalten in einer Tabelle, die eine Zeile eindeutig zu identifizieren; häufig verwendet, um eine Tabelle zu indizieren.

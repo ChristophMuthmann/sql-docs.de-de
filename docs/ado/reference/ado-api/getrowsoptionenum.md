@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: GetRowsOptionEnum
-helpviewer_keywords: GetRowsOptionEnum enumeration [ADO]
+f1_keywords:
+- GetRowsOptionEnum
+helpviewer_keywords:
+- GetRowsOptionEnum enumeration [ADO]
 ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a999bd9167e2538ba1be2b573971467e05949f92
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b6c1d87e60dbe79298ed107a84a9e213833665ac
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
 Gibt an, wie viele Datensätze zum Abrufen von aus einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Konstante|value|Description|  
+|Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  
 |**adGetRowsRest**|-1|Ruft den Rest der Datensätze in der **Recordset**, von der aktuellen Position oder ein Lesezeichen, die gemäß der *starten* Parameter von der [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) Methode.|  
   

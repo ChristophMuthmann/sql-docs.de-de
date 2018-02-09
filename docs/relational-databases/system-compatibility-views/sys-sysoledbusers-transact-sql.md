@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.sysoledbusers_TSQL
 - sysoledbusers
 - sysoledbusers_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sysoledbusers system table
 - sys.sysoledbusers compatibility view
 ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
-caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b711395050bca928f018215eefd953f35389060f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 97cad6b87bbcad6bbc551ce675cf0c84850e7f3d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +46,11 @@ ms.lasthandoff: 11/27/2017
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**rmtsrvid**|**smallint**|Sicherheits-ID (SID) des Servers.|  
-|**rmtloginame**|**Nvarchar (**128**)**|Name der Remoteanmeldung, **Loginsid** für die verbundene **Rmtservid**.|  
-|**rmtpassword**|**Nvarchar (**128**)**|Gibt NULL zurück.|  
-|**loginsid**|**Varbinary (**85**)**|SID des lokalen Anmeldenamens, der zugeordnet werden soll.|  
+|**rmtloginame**|**nvarchar(**128**)**|Name der Remoteanmeldung, **Loginsid** für die verbundene **Rmtservid**.|  
+|**rmtpassword**|**nvarchar(**128**)**|Gibt NULL zurück.|  
+|**loginsid**|**varbinary(**85**)**|SID des lokalen Anmeldenamens, der zugeordnet werden soll.|  
 |**status**|**smallint**|Wenn 1, sollten die Anmeldeinformationen des Benutzers für die Zuordnung verwendet werden.|  
-|**ChangeDate**|**datetime**|Datum, an dem die Zuordnungsinformationen zuletzt geändert wurden.|  
+|**changedate**|**datetime**|Datum, an dem die Zuordnungsinformationen zuletzt geändert wurden.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

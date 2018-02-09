@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::AddNew
 - Recordset15::raw_AddNew
-helpviewer_keywords: AddNew method [ADO]
+helpviewer_keywords:
+- AddNew method [ADO]
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 51978e39a34b02238d4c0b1658620c9ba8d538a6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4d05354a7e164d5f739f7306fc4c418ed3d1de58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="addnew-method-ado"></a>AddNew-Methode (ADO)
 Erstellt einen neuen Datensatz für ein aktualisierbares [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
@@ -39,7 +41,7 @@ recordset.AddNew FieldList, Values
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Recordset*  
+ *recordset*  
  Ein **Recordset** Objekt.  
   
  *FieldList*  

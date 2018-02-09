@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,26 +16,26 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10c9ee41428ab7a43beae2269060618f7d6e296b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 05bd95fc39fe21b5df9edfaa876a69d5935de9b2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-scenario"></a>RDS-Szenario
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Die Adressbuch Anwendung ist ein Szenario, die Ihnen zeigt, wie Remote Data Service (RDS) verwenden, um eine einfache, Daten-aware Webanwendung zu erstellen – ein Buch online Anschrift. Dieses Szenario eignet sich für Microsoft Visual Basic Scripting Edition (VBScript) und COM-Programmierer, die zu erfahren, wie datenbezogene ActiveX-Steuerelemente mit RDS, und für Software von erfahrenen Entwickler möchten datenorientierte Webanwendungen erstellen.  
   
  Dieses Szenario wird davon ausgegangen, dass Sie wissen, wie grundlegende HTML Layouttags, Techniken verwenden DHTML-Datenbindung und Programm mit ActiveX-Steuerelementen verwenden.  
   
- Wenn Sie das SDK installiert haben, kann der vollständigen Quellcode für die beispielanwendung Adressbuch im SDK-Verzeichnis am samples\dataaccess\rds\AddressBook\AddressBook.asp gefunden werden. In Internet Explorer 4.0 oder höher, geben Sie zum Anzeigen des Szenarios Adressbuch  **http://*Webserver*/RDS/AddressBook/AddressBook.asp**, in denen *Webserver* ist der Name zugewiesen zu Ihrem Server Windows NT 4.0 oder Windows 2000-Webserver, auf denen Internet Information Services (IIS) und ASP ausgeführt wird.  
+ Wenn Sie das SDK installiert haben, kann der vollständigen Quellcode für die beispielanwendung Adressbuch im SDK-Verzeichnis am samples\dataaccess\rds\AddressBook\AddressBook.asp gefunden werden. In Internet Explorer 4.0 oder höher, geben Sie zum Anzeigen des Szenarios Adressbuch **http://*Webserver*/RDS/AddressBook/AddressBook.asp** , in denen *Webserver* ist der angegebene Name zu Ihrem Server Windows NT 4.0 oder Windows 2000-Webserver wird, Internet Information Services (IIS) und ASP ausgeführt.  
   
 ## <a name="introduction-to-address-book"></a>Einführung in das Adressbuch  
  Die beispielanwendung Adressbuch bietet ein einfaches online Adressbuch, die mit einem Suchverzeichnis über ein Intranet veröffentlicht werden können. Das Adressbuch ist so konzipiert, dass ein Benutzer eine Suchzeichenfolge in einem oder mehreren Feldern zum Anfordern von Informationen über Mitarbeiter eingeben kann. Wenn Sie die Basisfunktionen von Remote Data Service anzeigen möchten, wird die beispielanwendung absichtlich "klein", mit einer Mindestanzahl von Objekten und Suchfelder beibehalten.  

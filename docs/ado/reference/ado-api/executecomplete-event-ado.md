@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Connection::ExecuteComplete
 - ExecuteComplete
-helpviewer_keywords: ExecuteComplete event [ADO]
+helpviewer_keywords:
+- ExecuteComplete event [ADO]
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a6e5ca2b5590952ac01bf70b1c2e457336a79a2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bda38ed41e57c84d629ff6f301575e963d893f5e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete-Ereignis (ADO)
 Die **ExecuteComplete** Ereignis wird aufgerufen, nachdem ein Befehl beendet wurde.  
@@ -53,7 +55,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  *pCommand*  
  Die [Befehl](../../../ado/reference/ado-api/command-object-ado.md) -Objekt, das ausgeführt wurde. Enthält eine **Befehl** Objekt auch beim Aufrufen von **Connection.Execute** oder **Recordset.Open** ohne explizites erstellen eine **Befehl** , in welchen Fällen die **Befehl** -Objekt intern durch ADO erstellt wurde.  
   
- *pCommand*  
+ *pRecordset*  
  Ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt, das das Ergebnis des Befehls ausgeführt wird. Dies **Recordset** kann leer sein. Sie sollten dieses Recordset-Objekt innerhalb dieser Ereignishandler nie gelöscht. Andernfalls wird eine zugriffsverletzung entstehen, wenn ADO versucht, Zugriff auf ein Objekt, das nicht mehr vorhanden ist.  
   
  *pConnection*  
