@@ -8,7 +8,8 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,7 +24,7 @@ helpviewer_keywords:
 - sql server index design guide
 - sql server index design guidance
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
@@ -811,7 +812,7 @@ Der Hashindex kann möglicherweise auch verschiedene Versionen seiner Einträge 
   
 Wenn die älteren Versionen später nicht mehr erforderlich sind, durchsucht ein Thread der automatischen Speicherbereinigung (GC, Garbage Collection) die Buckets und Verknüpfung, um alte Einträge zu beseitigen. Der GC-Thread bietet eine bessere Leistung, wenn die Kettenlängen kurz sind. Weitere Informationen finden Sie unter [In-Memory-OLTP-Garbage Collection](../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md). 
 
-##  <a name="inmem_nonclustered_index">Memory-Optimized Nonclustered Index Design Guideline (Richtlinien zum Entwerfen von speicheroptimierten, nicht gruppierten Indizes)</a> 
+##  <a name="inmem_nonclustered_index"></a> Memory-Optimized Nonclustered Index Design Guideline (Richtlinien zum Entwerfen von speicheroptimierten, nicht gruppierten Indizes) 
 
 Nicht gruppierte Indizes zählen zu den möglichen Typen von Indizes in einer speicheroptimierten Tabelle. Weitere Informationen zu finden Sie unter [Indizes für speicheroptimierte Tabellen](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
