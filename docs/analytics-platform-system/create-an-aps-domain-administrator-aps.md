@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ed52bf78-2b0a-4252-98a7-8c2805e22d3d
-caps.latest.revision: "7"
+caps.latest.revision: 
 ms.openlocfilehash: 0ebc616d28fe734b9dac52303641390ce9bc0957
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-an-aps-domain-administrator"></a>Erstellen Sie ein Domänenadministrator APS
 Einige Vorgänge erfordern Analytics Platform System über Domänenadministratorberechtigungen. Dies wird erläutert, wie zusätzliche Appliance Domänenadministratoren erstellen.  
@@ -30,7 +30,7 @@ So konfigurieren Sie alle APS-Knoten, der Benutzer mit über ausreichende Berech
   
 #### <a name="to-add-a-user-to-the-domain-admins-group"></a>Zum Hinzufügen eines Benutzers zur Gruppe "Domänen-Admins"  
   
-1.  Melden Sie sich den aktiven Knoten des AD  **(*Appliance_domain*-AD01 ** oder  ***Appliance_domain*-AD02**) mit einer vorhandenen Domäne in der Anwendung Administratorkonto an.  
+1.  Melden Sie sich den aktiven Knoten des AD **(*Appliance_domain*-AD01** oder ***Appliance_domain *-AD02**) mit einer vorhandenen Appliance-Domänenadministratorkonto.  
   
 2.  Klicken Sie im Startmenü auf **Ausführen**. In der **öffnen** geben **dsa.msc**. Klicken Sie auf **OK**.  
   

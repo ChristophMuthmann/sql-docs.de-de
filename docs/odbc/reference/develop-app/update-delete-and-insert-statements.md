@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - INSERT [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 592d135ccf66f8a9fde2cc064a51dc25617cf127
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="update-delete-and-insert-statements"></a>Update-, DELETE- und INSERT-Anweisungen
 SQL-basierte Anwendungen und nehmen Sie Änderungen an Tabellen durch Ausführen der **UPDATE**, **löschen**, und **einfügen** Anweisungen. Diese Anweisungen sind Teil der Konformitätsgrad des minimale SQL-Grammatik und von allen Treibern und Datenquellen unterstützt werden müssen.  
@@ -44,9 +45,9 @@ SQL-basierte Anwendungen und nehmen Sie Änderungen an Tabellen durch Ausführen
   
  **DELETE FROM** *Tabellenname*[**, in denen** *Suchbedingung*]  
   
- **INSERT INTO** *Tabellenname*[**(***Spaltenbezeichner* [**,** *Spaltenbezeichner-*] ... **)**]  
+ **INSERT INTO** *Tabellenname*[**(*** Spaltenbezeichner* [**,** *Spaltenbezeichner*]... **)**]  
   
- {*-Abfragespezifikation* &#124; **Werte (***Wert einfügen* [**,** *Wert einfügen*]... **)**}  
+ {*-Abfragespezifikation* &#124;  **Werte (*** Wert einfügen* [**,** *Wert einfügen*]... **)**}  
   
  Beachten Sie, dass die *-Abfragespezifikation* Element gilt nur in der Kern- und erweiterte SQL-Grammatiken, und dass die *Ausdruck* und *Suchbedingung* Elemente steigern. im Kern- und erweiterte SQL-Grammatiken komplexer.  
   

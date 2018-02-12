@@ -15,10 +15,10 @@ ms.custom:
 ms.technology: database-engine
 ms.workload: On Demand
 ms.openlocfilehash: d53e54c6e8e74970316de557ddf3bd60a09e9ffe
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Grundlagen der SQL Server-Verfügbarkeit für Linux-Bereitstellungen
 

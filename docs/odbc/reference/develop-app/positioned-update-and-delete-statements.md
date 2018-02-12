@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,23 +18,23 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 0c39c0081ee0cd671ee31bd7e11c02a72adc7558
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="positioned-update-and-delete-statements"></a>Positionierte Update- und Delete-Anweisungen
 Anwendungen können zu aktualisieren oder löschen Sie die aktuelle Zeile in einem Resultset mit ein positioniertes Update oder delete-Anweisung. Positioniert, Update- und Delete-Anweisungen werden von einigen Datenquellen, aber nicht alle von ihnen unterstützt. Um zu bestimmen, ob eine Datenquelle positioniert unterstützt Update- und-Anweisungen DELETE, eine Anwendung ruft **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ ATTRIBUTES1 oder SQL_STATIC_CURSOR_ATTRIBUTES1 *Infotyp* (je nach Typ des Cursors). Beachten Sie, dass die ODBC-Cursorbibliothek simuliert positioniertes Update und delete-Anweisungen.  
   
  Ein positioniertes Update oder delete-Anweisung, muss die Anwendung erstellen, ein Resultset mit einer **für aktualisieren wählen** Anweisung. Die Syntax dieser Anweisung lautet:  
   
- **Wählen Sie** [**alle** & #124; **DISTINCT**] *Select-Liste*  
+ **SELECT** [**ALL** &#124; **DISTINCT**] *select-list*  
   
  **VON** *Tabelle Verweisliste*  
   
@@ -45,9 +46,9 @@ Anwendungen können zu aktualisieren oder löschen Sie die aktuelle Zeile in ein
   
  **UPDATE** *Tabellenname*  
   
- **Legen Sie** *Spaltenbezeichner* ** = ** {*Ausdruck* & #124; **NULL**}  
+ **Legen Sie** *Spaltenbezeichner*  **=**  {*Ausdruck* &#124; **NULL**}  
   
- [**,** *Spaltenbezeichner* ** = ** {*Ausdruck* & #124; **NULL**}]...  
+ [**,** *Spaltenbezeichner*  **=**  {*Ausdruck* &#124; **NULL**}]...  
   
  **WHERE CURRENT OF** *Cursorname*  
   
