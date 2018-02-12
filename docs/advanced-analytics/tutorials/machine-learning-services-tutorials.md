@@ -16,18 +16,19 @@ dev_langs:
 - Python
 - R
 ms.assetid: 5ccc75f6-6703-47d9-b879-9a740569b45e
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 64723e2882fd645be6627eb7781a10324117019a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2d15f47fd148cb7b1f0edf399e94502c3570eabd
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="tutorials-for-sql-server-machine-learning-services"></a>Lernprogramme für SQL Server-Machine Learning-Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel bietet eine umfassende Liste der Lernprogramme, Demos und Beispielanwendungen, die Machine Learning-Funktionen in SQL Server 2016 oder SQL Server-2017 verwenden. Beginnen Sie hier, um zu erfahren, zum Ausführen von R oder Python von T-SQL, wie remote und lokalen rechenkontexten verwenden und den R und Python-Code für eine SQL-produktionsumgebung zu optimieren.
 

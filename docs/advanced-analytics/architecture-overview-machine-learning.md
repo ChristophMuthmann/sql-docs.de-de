@@ -15,13 +15,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 737087692cff4d5b76336b1a31b58e2f9390abfc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4272a0f421bc8286fc9be7be44e3b7ef8cc13905
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>Übersicht über die Architektur für SQL Server-Machine Learning-Services 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Thema wird beschrieben, die Ziele der Extensibility Framework, die Ausführung von Python und R-Skript in SQL Server unterstützt.
 
@@ -60,7 +61,7 @@ Um diese Ziele zu erreichen, wird diese kernbegriffe die Architektur des SQL Ser
 
    Darüber hinaus bietet Microsoft einen Satz von proprietären Bibliotheken, die Integration mit SQL Server, einschließlich Daten Übersetzung, Komprimierung und Optimierung richtet sich an jede unterstützte Sprache bereitstellen.
 
-+ **Security**
++ **Sicherheit**
 
    Steigerung der Sicherheit bedeutet für integrierte Windows-Authentifizierung und SQL-Anmeldungen Kennwort-basierte als auch als sichere Handhabung von Anmeldeinformationen, die Abhängigkeit von SQL Server für den Schutz von Daten und Verwenden der SQL Server vertrauenswürdige Launchpad, um externe Skripts zu verwalten, unterstützen die Ausführung und sichere Daten in Skripts verwendet.
 
@@ -101,7 +102,7 @@ Nicht sicher mit die Machine learning-Lösung Ihre Anforderungen erfüllt? Zusä
   
   Wiederholen Sie dann die neue [Windows 2016 Preview Edition](http://aka.ms/dsvm/win2016), dazu zählen auch GPU-Versionen der beliebten umfassenden lernen Frameworks wie z. B. CNTK und MxNet sowie Unterstützung für Windows-Containern!
 
-+ [Azure Cognitive-Dienste](https://azure.microsoft.com/services/cognitive-services/)
++ [Azure Cognitive Services](https://azure.microsoft.com/services/cognitive-services/)
 
   Eine Vielzahl von Clouddiensten zum Hinzufügen von AI und ML in Ihre Anwendungen, einschließlich natürlicher Sprache zu indizieren, video, Gesichtsausdruck Anerkennung Emotionen-Erkennung, Textanalyse Computer Übersetzung und vieles mehr
 + [Azure Machine Learning](https://azure.microsoft.com/services/machine-learning/)

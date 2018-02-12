@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6aff043a-8b37-4f3f-9827-10a671e1ad1c
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: abbc7043f4eefe2c6f33a3f9fbc61fe0a97ceff9
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: c5f9810dfb057045fd1ec0ba25fd7651b2e10ea1
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>Was ist neu in Machine Learning Services in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In SQL Server 2016 eingeführt Microsoft SQL Server R Services, eine Funktion, die Enterprise-Skalierung Data Science, durch die Integration von der Sprache "R" mit dem SQL Server-Datenbankmodul unterstützt.
 
@@ -60,7 +61,7 @@ Ausgeführte Python, die nur in der Datenbank ist nicht "machine learning, wie".
 
 + Python-Unterstützung in Microsoft Machine Learning-Server (eigenständig)
 
-    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]Schließt die Möglichkeit, eine eigenständige Version von Microsoft Machine Learning-Server installieren. Mithilfe von Machine Learning-Server können Sie verteilen und Skalieren von R oder Python-Code ohne Verwendung von SQL Server.
+    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] Schließt die Möglichkeit, eine eigenständige Version von Microsoft Machine Learning-Server installieren. Mithilfe von Machine Learning-Server können Sie verteilen und Skalieren von R oder Python-Code ohne Verwendung von SQL Server.
 
 ### <a name="linux-support"></a>Linux-Unterstützung
 

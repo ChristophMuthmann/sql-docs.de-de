@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 801a29c07d55b9388d5be0edab33690399f2dde9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7d41bd73398c016b920fa67244ffea1af865bde2
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>Unbeaufsichtigte Installation von Machine Learning-Services (Datenbankintern)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel beschreibt die Befehlszeilenargumente mit SQL Server-Setup zu verwenden, um die Machine learning-Komponenten zu installieren.
 
@@ -34,7 +35,7 @@ Für die unbeaufsichtigte Installation bedeutet, dass Sie nicht die interaktiven
 
 **Gilt für: SQL Server 2017 Machine Learning Services (Datenbankintern), SQL Server 2016 R Services**
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 + Sie müssen das Datenbankmodul für jede Instanz installieren, in dem Sie Machine Learning verwenden möchten.
 
