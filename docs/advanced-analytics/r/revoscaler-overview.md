@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 85e713e604d73d4165da14f639a7e21dd4baebf0
-ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
+ms.openlocfilehash: 8f5df8a224b67be06e5459fc8a65277ddc05f4f6
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="revoscaler"></a>"Revoscaler"
+# <a name="revoscaler"></a>RevoScaleR
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 "Revoscaler" ist ein Paket von Machine Learning, bereitgestellten Funktionen von Microsoft, die Data Science Größenordnungen unterstützt.
 

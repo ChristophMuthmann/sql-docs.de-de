@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 10760026ef04284f6d0838af8ba81b0c7613645b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8accb9b8e050340ff980a1b5d9f1faf9283d8b89
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="resource-governance-for-python"></a>Die Ressourcenkontrolle für Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Da Python, über aktiviert ist die die gleichen erweiterbarkeitsarchitektur, die für die Sprache "R" in SQL Server 2016 implementiert wurde, können Sie vorhandene Tools in SQL Server z. B. der Ressourcenkontrolle und DMVs erweiterter Ereignisse, die Ausführung von Python überwachen Skripts in SQL Server.
 

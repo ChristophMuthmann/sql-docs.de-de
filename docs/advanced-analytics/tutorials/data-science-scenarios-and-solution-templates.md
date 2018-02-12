@@ -10,20 +10,22 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 49e54fa9-9b28-44ba-b256-06dad4e8dece
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3c180282735da59d8d3dfa039e70d0eea5ebd7e5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5317f42d3acd85f7865f79405b2daf12793a7de4
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Data Science-Szenarien und -Projektmappenvorlagen
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Vorlagen sind Beispiellösungen, die bewährte Methoden veranschaulichen und Bausteine für die schnelle Implementierung einer Lösung bereitstellen. Jede Vorlage dient zur Lösung eines bestimmten Problems, für einen bestimmten vertikal oder Branche. Die Tasks in jeder Vorlage reichen von der Datenvorbereitung und Featureentwicklung bis hin zum Modelltraining und zur Bewertung. Diese Vorlagen verwenden, um zu erfahren, wie [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] funktioniert. Anschließend können Sie anpassen, die Vorlage, um Ihr eigenes Szenario anpassen und erstellen Sie eine benutzerdefinierte Lösung. 
 

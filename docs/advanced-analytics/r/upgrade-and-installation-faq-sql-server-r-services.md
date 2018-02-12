@@ -10,18 +10,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 001e66b9-6c3f-41b3-81b7-46541e15f9ea
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 130c52d56e45dae5da5f50ef0d5d96ea87c31d3a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3e259fcc1332d614cf1e3427f6a927613493bd31
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning"></a>Upgrade und Installation häufig gestellte Fragen zur SQL Server-Machine Learning
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieses Thema enthält Antworten auf einige häufig gestellte Fragen zur Installation von Machine learning-Funktionen in SQL Server. Außerdem werden häufige gestellte Fragen zu Upgrades behandelt.
 
@@ -100,7 +101,7 @@ Upgrades von Vorabversionen von SQL Server 2016 werden nicht mehr unterstützt. 
 
 Die folgenden Versionen wurden mit Vorabversionen von SQL Server 2016 installiert.
 
-| Versionsoptionen | Erstellen         |
+| Version | Erstellen         |
 |---------|---------------|
 | CTP 3.0 | 13.0.xxx      |
 | CTP 3.1 | 13.0.801.12   |

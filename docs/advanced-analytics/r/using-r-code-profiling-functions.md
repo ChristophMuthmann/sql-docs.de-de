@@ -11,18 +11,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 132db249-b9f1-48f5-a63e-c9806cacc4af
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f7f613516ce1cdad72c9bb07c6201e5f19421b36
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3aecbcf80a76fdfd84cca277f5f0de0f8dc7bb4e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-r-code-profiling-functions"></a>Verwenden von R-Code-Profilerstellungsfunktionen
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 Neben SQL Server-Ressourcen und Tools zum Überwachen von R-Skriptausführung können Sie auch Leistungstools von anderen R-Paketen verwenden, um weitere Informationen zu internen Funktionsaufrufen zu erhalten. Dieses Thema enthält eine Übersicht über einige grundlegende Ressourcen, die Ihnen den Einstieg erleichtern. Für eine Anleitung durch einen Experten empfehlen wir das Kapitel über [Performance](http://adv-r.had.co.nz/Performance.html) (Leistung) im Buch „Advanced R“ von Hadley Wickham.
 
 ## <a name="using-rprof"></a>Verwenden von RPROF

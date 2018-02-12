@@ -12,20 +12,22 @@ ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: c2efb3f2-cad5-4188-b889-15d68b742ef5
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: a8fe18a578391beaae79259440779b0a76336ee2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 003434a055ab73afb288ea5801130ce1c06aa9c5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-science-deep-dive-using-the-revoscaler-packages-with-sql-server"></a>Data Science-vertiefenden: verwenden die "revoscaler"-Pakete mit SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieses Lernprogramm veranschaulicht, wie verbesserten R-Pakete, die in bereitgestellten [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] zum Arbeiten mit SQL Server-Daten und skalierbare R-Lösungen unter Verwendung des Servers als computekontext für leistungsstarke big Data-Analysen erstellen.
 
@@ -84,7 +86,7 @@ Sie sollten auch mit vertraut sein [!INCLUDE[tsql](../../includes/tsql-md.md)] S
 > [!TIP]
 > Speichern Sie Ihren R-Arbeitsbereich zwischen den Lektionen, sodass Sie nach einer Unterbrechung problemlos weitermachen können.
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 
 - **SQL Server mit Unterstützung für R**
   

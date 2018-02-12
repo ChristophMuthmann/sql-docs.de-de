@@ -4,7 +4,7 @@ description: Dieser Schnellstart veranschaulicht das Installieren von SQL Server
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 02/09/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.workload: On Demand
-ms.openlocfilehash: 068cf3c1bb3bad2a42f5673f17d0067b0bd019f2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a01e66bb8f7b223762c7f3aa4b22d9646e5f8304
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Installieren von SQL Server, und erstellen Sie eine Datenbank auf SUSE Linux Enterprise Server
 
@@ -52,12 +52,17 @@ Um SQL Server auf SLES konfigurieren möchten, führen Sie die folgenden Befehle
 
    ```bash
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
-   sudo zypper --gpg-auto-import-keys refresh
    ```
 
    > [!NOTE]
    > Dies ist das kumulative Update (CU)-Repository. Weitere Informationen zu Ihrem Repository-Optionen und deren Unterschiede finden Sie unter [konfigurieren Repositorys für SQL Server on Linux](sql-server-linux-change-repo.md).
 
+1. Aktualisieren Sie Ihre Repositorys.
+
+   ```bash
+   sudo zypper --gpg-auto-import-keys refresh 
+   ```
+   
 1. Führen Sie die folgenden Befehle zum Installieren von SQL Server:
 
    ```bash

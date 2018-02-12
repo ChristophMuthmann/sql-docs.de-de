@@ -10,18 +10,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 76b0c3cd2b472b0d4794a171510906cf05e34d5c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5d9f60684cc749c35674233fbdaaa222953396d9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>Installieren Sie vortrainierte Machine learning-Modelle mit SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel beschreibt, wie vortrainierte Modelle mit einer Instanz von SQL Server hinzufügen, die bereits über R Services oder Machine Learning-Dienste installiert.
 
@@ -41,9 +42,9 @@ Aktuell sind die Modelle, die verfügbar sind, Tiefe neuronale Netzwerkmodelle (
 
 Jede Netzwerkkonfiguration wurde basierend auf den folgenden referenzimplementierungen:
 
-+ ResNet 18
-+ ResNet 50
-+ ResNet 101
++ ResNet-18
++ ResNet-50
++ ResNet-101
 + AlexNet
 
 Weitere Informationen zu diesen Modellen finden Sie unter [vortrainiertes Machine learning-Modellen für Stimmungslage Analysen und Image](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)

@@ -1,6 +1,7 @@
 ---
 title: "Häufige Probleme mit der externen skriptausführung in SQL Server | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 10/11/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
@@ -11,18 +12,19 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 2920cfae6e23845a9ac1643a17d6f133adaaf70d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 261f7c750ab958cf85b3cfa6806704ca18f6d597
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Häufige Probleme mit der externen skriptausführung in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel enthält eine Liste der bekannten Probleme und allgemeine Probleme im Zusammenhang mit R oder Python-Code in SQL Server.
 

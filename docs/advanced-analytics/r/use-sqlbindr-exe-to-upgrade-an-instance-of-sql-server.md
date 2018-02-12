@@ -10,20 +10,22 @@ ms.component: r
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server (starting with 2016 CTP3)
+applies_to:
+- SQL Server (starting with 2016 CTP3)
 ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 54e685e285f2040ec13b84aa7e0e4b020457560b
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: 643d5062f14de70cec493fd9c2fab69989eb4dd6
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>Aktualisieren des Machine Learning-Komponenten in SQL Server-Instanz
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Artikel erläutert, wie der _Bindung_, die Sie verwenden können, zum Aktualisieren des Machine learning in SQL Server verwendete Komponenten. Der Prozess der Bindung sperrt die Server in einer Update-Rhythmus basierend auf Versionen von Machine Learning-Server, Version anstelle von SQL Server und Zeitplan aktualisieren.
 
@@ -59,8 +61,8 @@ Finden Sie in der folgenden Tabelle eine Liste der unterstützten Upgrades und A
 
 | SQL Server-Version| Unterstützte Upgrades| Hinweise|
 |-----|-----|------|
-| SQL Server 2016| Machine Learning-Server 9.2.1| Erfordert mindestens Service Pack 1 plus CU3. R Services muss installiert und aktiviert werden.|
-| SQL Server 2017| Machine Learning-Server 9.2.1| Machine Learning-Services (Datenbankintern) muss installiert und aktiviert werden. |
+| SQL Server 2016| Machine Learning Server 9.2.1| Erfordert mindestens Service Pack 1 plus CU3. R Services muss installiert und aktiviert werden.|
+| SQL Server 2017| Machine Learning Server 9.2.1| Machine Learning-Services (Datenbankintern) muss installiert und aktiviert werden. |
 
 ## <a name="bind-or-upgrade-an-instance"></a>Binden oder Aktualisieren einer Instanz
 

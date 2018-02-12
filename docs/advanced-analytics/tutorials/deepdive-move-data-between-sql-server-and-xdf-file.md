@@ -13,20 +13,22 @@ ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 40887cb3-ffbb-4769-9f54-c006d7f4798c
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 10be63f32a197134e4979dc976dd84919fde9e1f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 19502fbed507fff36c038145d0e4dbd683d7acdc
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-and-r-deep-dive"></a>Verschieben von Daten zwischen SQL Server und XDF-Datei (SQL und R deep Dive)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel ist Teil des Lernprogramms Data Science Deep Dive zur Verwendung von ["revoscaler"](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
@@ -46,7 +48,7 @@ In dieser Übung verwenden Sie die Kreditkarte Betrug Daten erneut. In diesem Sz
     ```
     **Ergebnisse**
     
-    CA|oder|WA
+    CA|OR|WA
     ----|----|----
     5|38|48
     

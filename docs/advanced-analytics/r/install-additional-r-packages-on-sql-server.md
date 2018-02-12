@@ -10,18 +10,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2821983b39dcd4c301ea4b49713de0cdd3550a65
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 530745918dfd4808694b401be55e40bac00f3cce
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>Installieren Sie zusätzliche R-Pakete unter SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel beschreibt, wie neue R-Pakete mit einer Instanz von SQL Server installieren, Machine Learning aktiviert ist.
 
@@ -29,7 +30,7 @@ Dieser Artikel beschreibt, wie neue R-Pakete mit einer Instanz von SQL Server in
 + [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
 + [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 + Bestimmen Sie, ob eine Windows-Version des Pakets vorhanden ist: [abrufen, die richtige Paketversion und Format](#packageVersion)
 
@@ -85,15 +86,15 @@ Standard-R-Tools können Sie um neue Pakete auf einer Instanz von SQL Server 201
 
     **Standardinstanz**
 
-    SQLServer 2017:`C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+    SQL Server 2017: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
     
-    SQLServer 2016:`C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
+    SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
 
     **Benannte Instanz**
 
-    SQLServer 2017:`C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
+    SQL Server 2017: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
     
-    SQLServer 2016:`C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
+    SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
 
     Wenn Sie die Bindung so aktualisieren Sie die Machine learning-Komponenten verwendet haben, kann der Pfad geändert. Überprüfen Sie den instanzpfad immer vor der Installation von neuen Paketen. 
 
@@ -129,15 +130,15 @@ Wenn das Paket, das Sie installieren möchten Abhängigkeiten, Vorbereiten **all
 
     **Standardinstanz**
 
-    SQLServer 2017:`C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+    SQL Server 2017: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
     
-    SQLServer 2016:`C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
+    SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
 
     **Benannte Instanz**
 
-    SQLServer 2017:`C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
+    SQL Server 2017: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
     
-    SQLServer 2016:`C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
+    SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
 
 3. Öffnen Sie eine R-Eingabeaufforderung als Administrator an.
 

@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 519422bad57d384466b2ff705b331a0731506caf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 495b7757073cea48773dd7c03f32f7ccf4240cd0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>Komponenten in SQL Server zur Unterstützung der Python-integration
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Ab SQL Server 2017 unterstützt Machine Learning Services Python als externe Sprache, die von T-SQL ausgeführt werden kann, oder Remote mithilfe von SQL Server als computekontext ausgeführt.
 
@@ -124,7 +125,7 @@ Nachdem das Skript in der gespeicherten Prozedur eingebettet wurde, kann jede An
 4. BxlServer die Koordination mit der Python-Laufzeit-Datenaustausch und Speicherung von arbeiten Ergebnisse zu verwalten.
 5. SQL-Satelliten verwaltet die Kommunikation über verwandte Aufgaben und Prozesse mit [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 6. BxlServer verwendet SQL-Satelliten, um den Status und die Ergebnisse mit [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] zu kommunizieren.
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ruft die Ergebnisse ab und schließt verwandte Aufgaben und Prozesse.
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Ruft die Ergebnisse ab und schließt Aufgaben und Prozesse.
 
 ### <a name="python-scripts-executed-from-a-remote-client"></a>Python-Skripts, die von einem Remoteclient ausgeführt
 
@@ -135,7 +136,7 @@ Sie können Ausführen von Python-Skripts von einem Remotecomputer, z. B. einen 
 
 Das folgende Diagramm fasst den gesamten Workflow an, wenn Skripts von einem Remotecomputer gesendet werden.
 
-![Remote Sqlcc aus python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
+![remote-sqlcc-from-python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
 
 1. Für Funktionen, die unterstützt werden **Revoscalepy**, die Python-Laufzeit ruft eine verknüpfungsframework-Funktion, die ihrerseits BxlServer.
 2. BxlServer ist im Lieferumfang von Machine Learning-Services (Datenbankintern) und in einem separaten Prozess ausgeführt wird, aus der Python-Laufzeit.
@@ -145,7 +146,7 @@ Das folgende Diagramm fasst den gesamten Workflow an, wenn Skripts von einem Rem
 6. PythonLauncher führt einen Aufruf an die Instanz von der Python, die auf installiert ist die [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Computer.
 7. Ergebnisse werden an BxlServer zurückgegeben.
 8. Der SQL-Satellit verwaltet die Kommunikation mit [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] und der Bereinigung verwandter Auftragsobjekte.
-9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] gibt die Ergebnisse dem Client zurück.
+9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Ergebnisse übergeben zurück an den Client.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

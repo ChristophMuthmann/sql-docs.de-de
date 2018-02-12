@@ -8,21 +8,36 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 895280e7c7c8924ec2ec5eea55049f87d9206c4f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 5aecc3796565d4c32d91fe28304bdd04f5793980
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Anmerkungen zu dieser Version für den Microsoft ODBC Driver for SQL Server unter Linux und macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>What's New in der [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC-Treiber 17 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] auf Linux- und MacOS
+
+SQL Azure verwaltete Instanz (Extended privaten Ansicht). Beachten Sie, dass es eine Reihe von Unterschieden bei Verwendung verwalteter Instanzen:
+-   FILESTREAM wird nicht unterstützt. 
+-   Lokalen Dateisystem Zugriff wird nicht unterstützt, aber für Angaben wie Tracefiles erforderlich 
+-   Erstellen Sie UDT aus lokalen Pfad nicht unterstützt 
+-   Integrierte Windows-Authentifizierung nicht unterstützt. 
+-   DTC nicht unterstützt. 
+-   Konto'sa' ist nicht vorhanden (Standardkonto ist "CloudSA" genannt)
+-   TDS-token-Fehler (0xAA) gibt falsche Servernamen zurück.
+-   Sonderzeichen im Datenbanknamen werden nicht unterstützt. 
+-   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] wird nicht unterstützt.
+-   Die Fehlermeldungen werden immer auf Englisch angezeigt, unabhängig von der Sprache Einstellungen (wie Azure) 
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>What's New in der [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] auf Linux- und MacOS  
 

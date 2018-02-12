@@ -10,22 +10,24 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2017
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 6d7e49a6074e342f51595e9b1cdb10227761f670
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>In der Datenbank Python-Analyse für SQL-Entwickler
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Das Ziel dieser exemplarischen Vorgehensweise ist bereitzustellen, SQL-Programmierer praktische Beispiele zum Erstellen eines Machine learning-Projektmappe mithilfe von Python, die in SQL Server ausgeführt wird. In dieser exemplarischen Vorgehensweise erfahren Sie, wie gespeicherte Prozeduren Python-Code hinzu, und führen Sie gespeicherte Prozeduren zum Erstellen und Vorhersagen von Modellen.
 
@@ -45,7 +47,7 @@ Der Vorgang der Erstellung einer Machine Learning-Lösung ist ein komplexes, die
 
 Die Daten stammen aus bekannten NYC Taxi DataSet. Um dieser exemplarischen Vorgehensweise schnell und einfach zu gestalten, werden die Daten als Stichprobe genommen. Erstellen Sie ein binäres klassifizierungsmodell, das vorhersagt, ob einem bestimmten Vorgang wahrscheinlich einen Tipp oder nicht abrufen wird basierend auf Spalten, z. B. den Zeitpunkt der Tag, Abstand und Abholung Speicherort.
 
-Alle Aufgaben können ausgeführt werden, mit [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherten Prozeduren in der vertrauten Umgebung von[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
+Alle Aufgaben können ausgeführt werden, mit [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherten Prozeduren in der vertrauten Umgebung von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
 - [Schritt 1: Herunterladen der Beispieldaten](sqldev-py1-download-the-sample-data.md)
 

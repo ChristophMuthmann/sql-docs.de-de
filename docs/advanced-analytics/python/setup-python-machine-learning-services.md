@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: abc79124569635f3aafaaa309e25e2c827fa5d9b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9ecd54dcb1fe829c51e0e05346abf04d80af3cf9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>Einrichten von Python Machine Learning-Services (Datenbankintern)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   In diesem Artikel wird beschrieben, wie zum Installieren der erforderlichen Komponenten für die Python durch Ausführen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup-Assistenten und den interaktiven Anweisungen folgen.
 
@@ -32,7 +33,7 @@ Die **gemeinsam genutzte Funktionen** Abschnitt enthält eine separate Installat
 
 Nachdem die Installation abgeschlossen ist, konfigurieren, dass die Instanz, um die Ausführung von Skripts zu ermöglichen, die eine externe ausführbare Datei verwenden. Sie müssen möglicherweise zusätzliche Änderungen vornehmen, mit dem Server um Machine Learning-arbeitsauslastungen zu unterstützen. Konfigurationsänderungen muss in der Regel ein Neustart der Instanz oder einen Neustart des Launchpad-Diensts.
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 
 + SQL Server-2017 ist erforderlich. Python-Integration wird auf früheren Versionen von SQL Server nicht unterstützt.
 + Achten Sie darauf, dass das Datenbankmodul installiert werden. Eine Instanz von SQL Server wird zum Ausführen von Python-Skripts in der Datenbank erforderlich.
@@ -273,7 +274,7 @@ Wenn Sie SQL Server Enterprise Edition verfügen, verwenden Sie die Ressourcenko
   
      [Serverkonfigurationsoptionen für Arbeitsspeicher-server](../../database-engine/configure-windows/server-memory-server-configuration-options.md)
   
--   Ändern der Anzahl von Worker-Konten, die von gestartet werden kann[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]
+-   Ändern der Anzahl von Worker-Konten, die von gestartet werden kann [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]
   
      [Ändern des benutzerkontenpools für SQL Server R Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md)
 

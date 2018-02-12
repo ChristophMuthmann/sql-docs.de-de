@@ -14,19 +14,20 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 71b578fb47a7bd7881f2681206a0f69f5c37facb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1edd059c283a0f780f6dd1419d70ed2bedb23f03
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="python-interoperability-with-sql-server"></a>Python-Interoperabilität mit SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Thema wird beschrieben, die Python-Komponenten, die installiert werden, wenn Sie das Feature aktivieren **Machine Learning-Services (Datenbankintern)** , und wählen Sie als Sprache Python.
 
 ## <a name="python-components"></a>Python-Komponenten
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]Die Python-ausführbaren Dateien werden nicht geändert werden. Die Python-Laufzeit unabhängig von der SQL-Tools installiert ist und ausgeführt wird, außerhalb von der [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Prozess.
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Die Python-ausführbaren Dateien werden nicht geändert werden. Die Python-Laufzeit unabhängig von der SQL-Tools installiert ist und ausgeführt wird, außerhalb von der [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Prozess.
 
 Die Verteilung, die mit einem bestimmten anfallen [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Instanz finden Sie in den Ordner mit der Instanz verknüpft ist.
 

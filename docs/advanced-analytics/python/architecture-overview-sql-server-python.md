@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4bfecc8ed96b445c0d44c11449114d1d6c087942
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5ca823bc7094c77a31cfd3178294cd49a360d77a
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-machine-learning-services-with-python"></a>Übersicht über die Architektur für Machine Learning-Dienste mit Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieses Thema enthält einen Überblick darüber, wie Python in SQL Server, einschließlich des Sicherheitsmodells, die Komponenten in das Datenbankmodul, die Ausführung externer Skripts unterstützen, und neue Komponenten, mit denen die Interoperabilität von Python mit SQL Server integriert ist. Weitere Informationen finden Sie in den verknüpften Themen.
 
@@ -39,7 +40,7 @@ Das in SQL Server 2016 jetzt eingeführte Extensibility Framework unterstützt d
 
 Ausführliche Beschreibung der Komponenten, die z. B. Python, unterstützen die [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] und PythonLauncher, finden Sie unter [neue Komponenten](../../advanced-analytics/python/new-components-in-sql-server-to-support-python-integration.md).
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicherheit
 
 Python-Aufgaben werden außerhalb der SQL Server-Prozess, um Sicherheit und bessere Verwaltung zu ermöglichen.
 

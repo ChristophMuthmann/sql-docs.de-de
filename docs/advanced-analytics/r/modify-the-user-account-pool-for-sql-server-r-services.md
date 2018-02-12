@@ -10,24 +10,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 58b79170-5731-46b5-af8c-21164d28f3b0
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 2e31ecde894070c9b7b38dbe5e2c9e310ad71c5f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d12de2f8298e23d5396d7caf2496b293f1bf28ed
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>Ändern des benutzerkontenpools für SQL Server-Machine learning
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Im Rahmen des Installationsprozesses für [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] wird ein neuer Windows-*Benutzerkontenpool* erstellt, um die Ausführung von Aufgaben vom [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]-Dienst zu unterstützen. Der Zweck dieser Worker-Konten ist gleichzeitige Ausführung externer Skripts, die von anderen SQL-Benutzer zu isolieren.
 
 Dieser Artikel beschreibt die Standardkonfiguration, die Sicherheit und die Kapazität für die Worker-Konten und wie Sie die Standardkonfiguration ändern.
 
-**Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## <a name="worker-accounts-used-for-external-script-execution"></a>Für das Ausführen des externen Skripts verwendete Worker-Konten
 
@@ -70,7 +71,7 @@ Zusätzliche Informationen zum Verwalten von Machine learning-Aufgabe-Kapazität
 - [SQL Server-Konfiguration für R Services](../../advanced-analytics/r/sql-server-configuration-r-services.md)
 -  [Leistung-Fallstudie für R Services](../../advanced-analytics/r/performance-case-study-r-services.md)
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicherheit
 
 Jede Benutzergruppe wird mit dem [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]-Dienst auf einer bestimmten Instanz verknüpft und kann keine R-Aufträge unterstützen, die auf anderen Instanzen ausgeführt werden.
 

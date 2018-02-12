@@ -10,21 +10,24 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: R
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 09d5c7243f519a3ddf2cb0380e7a9f9f65c5a350
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 771683f472af17292de62fb1591539f1215ebf57
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>Das R-Modell bereitstellen und deren Verwendung in SQL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In dieser Lektion verwenden Sie die R-Modelle in einer produktionsumgebung durch Aufrufen eines trainierten Modells aus einer gespeicherten Prozedur. Rufen Sie dann die gespeicherte Prozedur von R oder eine beliebige Anwendung-Programmiersprache, unterstützt [!INCLUDE[tsql](../../includes/tsql-md.md)] (z. B. c#, Java, Python usw.), um das Modell zum Vorhersagen für neue Beobachtungen verwenden.
 

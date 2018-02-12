@@ -10,20 +10,22 @@ ms.component: r
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 5f3c9864-9c75-4688-947d-0940045b2671
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 00ec9a53ee2e6bcb27d084a6161d1eef99c1b017
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b1567bd6e4a419b293a963a7b3afe96c24409bcc
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="revoscaler-functions-for-working-with-sql-server-data"></a>RevoScaleR-Funktionen zum Arbeiten mit SQL Server-Daten
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieses Thema enthält eine Übersicht über die wichtigsten Funktionen, die im "revoscaler" für das Arbeiten mit SQL Server-Daten bereitgestellt.
 

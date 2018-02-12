@@ -1,6 +1,7 @@
 ---
 title: Erste Schritte mit SQLServer Machine Learning | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 12/07/2016
 ms.reviewer: 
 ms.suite: sql
@@ -11,18 +12,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 5b28a663-effe-41f6-9bda-eda95f0c6943
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 8a6e15767282d347fc92b7decf2963d85827cf6f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d643bbdf32b946c5342484fa531303b5b74f4bcb
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="getting-started-with-sql-server-machine-learning"></a>Erste Schritte mit SQLServer Machine Learning
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Machine Learning Services in SQL Server dient zur Installation ohne Verfügbarmachen der Daten zu Sicherheitsrisiken oder gleitenden Daten Unnecesarily Data Science-Aufgaben unterstützen.
 

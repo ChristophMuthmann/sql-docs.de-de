@@ -1,5 +1,5 @@
 ---
-title: "Schlüsselwörter für Verbindungszeichenfolgen und Daten Quellennamen (DSNs) | Microsoft Docs"
+title: Herstellen einer Verbindung mit SQLServer | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,36 +17,28 @@ helpviewer_keywords:
 - connection string keywords
 - DSNs
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2020ce16f722354b49a7e35e4a3f1e1706b6a2d5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b6ad6278da1a3e325356058df51238dc34018bf0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="connection-string-keywords-and-data-source-names-dsns"></a>Schlüsselwörter für Verbindungszeichenfolgen und Datenquellennamen (DSNs)
+# <a name="connecting-to-sql-server"></a>Herstellen einer Verbindung mit SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 In diesem Thema wird erläutert, wie Sie eine Verbindung zu erstellen können ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datenbank.  
   
 ## <a name="connection-properties"></a>Verbindungseigenschaften  
-Für diese Version von den [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Linux oder MacOS, können Sie die folgenden Schlüsselwörter:  
-  
-||||||  
-|-|-|-|-|-|  
-|`Addr`|`Address`|`ApplicationIntent`|`AutoTranslate`|`Database`|
-|`Driver`|`DSN`|`Encrypt`|`FileDSN`|`MARS_Connection`|  
-|`MultiSubnetFailover`|`PWD`|`Server`|`Trusted_Connection`|`TrustServerCertificate`|  
-|`UID`|`WSID`|`ColumnEncryption`|`TransparentNetworkIPResolution`||  
+
+Finden Sie unter [DSN und Schlüsselwörter für Verbindungszeichenfolgen und Attribute](../../../connect/odbc/dsn-connection-string-attribute.md) für die Schlüsselwörter für Verbindungszeichenfolgen und die Attribute, die auf Linux- und Macintosh unterstützt
 
 > [!IMPORTANT]  
 > Geben Sie beim Herstellen einer Verbindung mit einer Datenbank, welche Datenbankspiegelung verwendet (oder einen Failoverpartner hat), nicht den Namen der Datenbank in der Verbindungszeichenfolge an. Schicken Sie stattdessen eine **verwenden** *Database_name* Befehl aus, um mit der Datenbank zu verbinden, bevor Sie Ihre Abfragen ausführen.  
-  
-Weitere Informationen zu diesen Schlüsselwörtern finden Sie im ODBC-Abschnitt von [Schlüsselwörter für Verbindungszeichenfolgen mit SQL Native Client verwenden](http://go.microsoft.com/fwlink/?LinkID=126696).  
   
 Der an übergebene Wert den **Treiber** Schlüsselwort kann eines der folgenden sein:  
   
@@ -85,9 +78,9 @@ Weitere Informationen finden Sie unter [Verschlüsseln von Verbindungen zu SQL S
 
 Unabhängig von den Einstellungen für **Encrypt** und **TrustServerCertificate**werden die Serveranmeldeinformationen (Benutzername und Kennwort) immer verschlüsselt. Die folgende Tabelle zeigt den Effekt der Einstellungen für **Encrypt** und **TrustServerCertificate** .  
 
-||**"TrustServerCertificate" = Nein**|**"TrustServerCertificate" = Ja**|  
+||**TrustServerCertificate=no**|**"TrustServerCertificate" = Ja**|  
 |-|-------------------------------------|------------------------------------|  
-|**Verschlüsseln = Nein**|Das Serverzertifikat wird nicht überprüft.<br /><br />Zwischen dem Client und dem Server verschickte Daten sind nicht verschlüsselt.|Das Serverzertifikat wird nicht überprüft.<br /><br />Zwischen dem Client und dem Server verschickte Daten sind nicht verschlüsselt.|  
+|**Encrypt=no**|Das Serverzertifikat wird nicht überprüft.<br /><br />Zwischen dem Client und dem Server verschickte Daten sind nicht verschlüsselt.|Das Serverzertifikat wird nicht überprüft.<br /><br />Zwischen dem Client und dem Server verschickte Daten sind nicht verschlüsselt.|  
 |**Verschlüsseln = Ja**|Serverzertifikat wird überprüft.<br /><br />Zwischen dem Client und dem Server verschickte Daten sind verschlüsselt.<br /><br />Der Name (oder die IP-Adresse) in einem Antragsteller Common Name (CN) oder als alternativen Antragstellernamen (SAN) in einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SSL-Zertifikat sollte genau übereinstimmen, die Server Name (oder IP-Adresse) in der Verbindungszeichenfolge angegeben.|Das Serverzertifikat wird nicht überprüft.<br /><br />Zwischen dem Client und dem Server verschickte Daten sind verschlüsselt.|  
 
 Standardmäßig überprüfen verschlüsselte Verbindungen immer das Zertifikat des Servers. Allerdings auch hinzufügen, wenn Sie eine Verbindung mit einem Server herzustellen, ein selbst signiertes Zertifikat ist, das `TrustServerCertificate` Option, überprüfen das Zertifikat anhand der Liste vertrauenswürdiger Zertifizierungsstellen zu umgehen:  
@@ -100,15 +93,18 @@ SSL verwendet die OpenSSL-Bibliothek. Die folgende Tabelle zeigt die minimalen u
 
 |Platform|Minimale OpenSSL-Version|Standard-Zertifikatsvertrauensspeicherort|  
 |------------|---------------------------|--------------------------------------------|
-|Debian 8.71 |1.0.1t|/etc/ssl/certs|
-|MacOS 10.12|1.0.2K|/usr/local/etc/OpenSSL/certs|
-|OS X 10.11|1.0.2J|/usr/local/etc/OpenSSL/certs|
-|Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|  
-|Red Hat Enterprise Linux 7|1.0.1E|/etc/pki/tls/cert.pem|
-|SuSE Linux Enterprise 12 |1.0.1I|/etc/ssl/certs|
-|Ubuntu 15.10 |1.0.2D|/etc/ssl/certs|
-|Ubuntu 16.04 |1.0.2G|/etc/ssl/certs|
-|Ubuntu 16.10 |1.0.2G|/etc/ssl/certs|
+|Debian 9|1.1.0|/etc/ssl/certs|
+|Debian 8.71 |1.0.1|/etc/ssl/certs|
+|macOS 10.13|1.0.2|/usr/local/etc/openssl/certs|
+|macOS 10.12|1.0.2|/usr/local/etc/openssl/certs|
+|OS X 10.11|1.0.2|/usr/local/etc/openssl/certs|
+|Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
+|Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
+|SuSE Linux Enterprise 12 |1.0.1|/etc/ssl/certs|
+|SuSE Linux Enterprise 11 |0.9.8|/etc/ssl/certs|
+|Ubuntu 17.10 |1.0.2|/etc/ssl/certs|
+|Ubuntu 16.10 |1.0.2|/etc/ssl/certs|
+|Ubuntu 16.04 |1.0.2|/etc/ssl/certs|
   
 Sie können die Verschlüsselung auch angeben, in die Verbindungszeichenfolge mithilfe der `Encrypt` option bei Verwendung **SQLDriverConnect** eine Verbindung herstellen.
 

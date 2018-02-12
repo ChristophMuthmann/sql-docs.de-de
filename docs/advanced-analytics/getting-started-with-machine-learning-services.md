@@ -15,13 +15,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: c0d1b3a2a69a08495b5860b3aef2587dd61d9327
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e33a91587f393c6c510bdb16fe9c71dc2f422eac
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="getting-started-with-machine-learning-in-sql-server"></a>Erste Schritte mit Machine Learning in der SQL Server
+# <a name="getting-started-with-machine-learning-in-sql-server"></a>Erste Schritte mit Machine Learning in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Microsoft bietet einen integrierten, skalierbare Satz von Machine Learning-Lösungen für auf lokaler Ebene und in der Cloud:
 
@@ -48,7 +49,7 @@ Dieser Artikel enthält Links zu Ressourcen für jedes Produkt in der Microsoft 
     + [Getting Started Angebote SQL Server R Services](r/getting-started-with-sql-server-r-services.md)
     + [Einrichten von SQL Server R Services "oder" Machine Learning-Dienste](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
-## <a name="microsoft-machine-learning-server-microsoft-r-server"></a>Microsoft-Machine Learning-Server (Microsoft R Server)
+## <a name="microsoft-machine-learning-server-microsoft-r-server"></a>Microsoft Machine Learning Server (Microsoft R Server)
 
 Die Option zur Installation [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)] finden Sie im SQL Server-2017 zur Unterstützung von Enterprise-Kunden, die verteilte, skalierbare-Machine learning-Aufträge ausgeführt werden soll, jedoch nicht, die die Integration mit dem SQL Server-Datenbankmodul, z. B. zur Verwendung von SQL Server benötigen. Kontexte.
 

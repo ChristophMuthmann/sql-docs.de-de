@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54e9ef3f-1136-471e-865a-7cf013673186
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5efdde73d0b2f880d62927b9b96b3eee7fadfe5f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c66936108d054c5ee4772769732c8543283af3f9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="components-in-sql-server-to-support-r"></a>Zur Unterstützung von R-Komponenten in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In SQL Server 2016 und 2017 enthält das Datenbankmodul optionale Komponenten, die Erweiterbarkeit für externe Skriptsprachen, einschließlich R und Python zu unterstützen. Unterstützung für die Sprache "R" wurde in SQL Server 2016 hinzugefügt; Unterstützung für Python in SQL Server 2017 Machine Learning Services hinzugefügt wurde.
 
@@ -111,7 +112,7 @@ R-Code, der „innerhalb“ von [!INCLUDE[ssNoVersion_md](../../includes/ssnover
 4. BxlServer koordiniert mit der R-Laufzeit, um die Austauschvorgänge von Daten mit [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] und der Speicherung von Arbeitsergebnissen zu verwalten.
 5. SQL-Satelliten verwaltet die Kommunikation über verwandte Aufgaben und Prozesse mit [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 6. BxlServer verwendet SQL-Satelliten, um den Status und die Ergebnisse mit [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] zu kommunizieren.
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ruft die Ergebnisse ab und schließt verwandte Aufgaben und Prozesse.
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Ruft die Ergebnisse ab und schließt Aufgaben und Prozesse.
 
 ### <a name="r-scripts-executed-from-a-remote-client"></a>Von einem Remoteclient ausgeführte R-Skripts
 
@@ -127,7 +128,7 @@ Wenn von einem remote Data Science-Client eine Verbindung herstellen, die von Mi
 6. RLauncher ruft die Instanz der R-Laufzeit ab, die auf dem [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Computer gespeichert ist.
 7. Ergebnisse werden an BxlServer zurückgegeben.
 8. Der SQL-Satellit verwaltet die Kommunikation mit [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] und der Bereinigung verwandter Auftragsobjekte.
-9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] gibt die Ergebnisse dem Client zurück.
+9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Ergebnisse übergeben zurück an den Client.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

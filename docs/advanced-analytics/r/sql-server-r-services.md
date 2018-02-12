@@ -10,18 +10,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 99f42ddd8d906799c02b05d856597db7c44a8eb6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 37362b8a3f6d8b41fe6b52f8445b9ba08ca54aa3
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="sql-server-machine-learning-services"></a>SQL Server-Machine Learning-Dienste
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017 Machine Learning Dienste (zuvor SQL Server 2016 R Services) bietet eine Plattform zum Entwickeln und Bereitstellen von intelligenten Anwendungen, die neue Einblicke zu gewinnen. Machine Learning in integriert ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], können Sie Analysen in der Nähe der Daten und beseitigen Sie die Kosten und Sicherheitsrisiken durch Verschieben von Daten.
   

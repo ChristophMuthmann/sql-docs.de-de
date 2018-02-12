@@ -1,20 +1,24 @@
 ---
 title: "Lernprogramme für SQL Server-Python | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 09/19/2017
-vapplies_to: SQL Server 2017
-dev_langs: Python
-caps.latest.revision: "1"
+vapplies_to:
+- SQL Server 2017
+dev_langs:
+- Python
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 7fc78e8055e72066925b1c9dee8534aea681933c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 42a9339f5983eeef28250db7a384f37efd4dad9d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="sql-server-python-tutorials"></a>SQL Server-Python-Lernprogramme
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel enthält eine Liste der Lernprogramme und Beispiele, in denen die Verwendung von Python mit SQL Server-2017 veranschaulicht. Durch diese Beispiele und Demos erfahren Sie:
 

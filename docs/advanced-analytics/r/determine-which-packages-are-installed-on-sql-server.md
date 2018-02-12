@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9a7f7e43-b568-406c-9434-5a2ec64ec5f5
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e76a42ead115c8ee4fa89599b192d722ecfbb2ee
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5db9405b6ef2e7c1423fa2affe6ad8bca58e5d68
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="determine-which-r-packages-are-installed-on-sql-server"></a>Bestimmen Sie, welche R-Pakete auf SQL Server installiert sind
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Bei der Installation von Machine Learning in SQL Server mit der R-Language-Option wird eine R-Paket-Bibliothek für die Verwendung von der Instanz erstellt. Jede Instanz auf dem Server hat eine eigenen Paket-Bibliothek. Paket-Bibliotheken können nicht über Instanzen freigegeben werden.
 

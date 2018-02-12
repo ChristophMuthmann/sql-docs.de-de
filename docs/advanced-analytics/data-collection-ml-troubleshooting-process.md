@@ -11,19 +11,21 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
-caps.latest.revision: "1"
+dev_langs:
+- R
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3eec9220734a2e13cb4d355422b5d8c957bf9264
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ee3b5fb649d659ade9cca22292aa5c8715f515c8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Problembehandlung bei der Datensammlung für Machine learning
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel beschreibt die Art der Daten, die gesammelt werden sollen, wenn Sie versuchen, Behebung von Problemen mit dem Setup, Konfiguration oder Leistung von Machine learning-in SQL Server. Hierzu zählen Protokolle, Fehlermeldungen und Systeminformationen.
 

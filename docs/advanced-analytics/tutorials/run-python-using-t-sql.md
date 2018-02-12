@@ -10,19 +10,22 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
-dev_langs: Python
-caps.latest.revision: "2"
+applies_to:
+- SQL Server 2016
+dev_langs:
+- Python
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 2812e9529a9cdb4dc5fd8019a28ccc060ba68d1a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ea8010bb51e02e9676653bb0dc2f12cbfe02761a
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="run-python-using-t-sql"></a>Ausführen von Python mit T-SQL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Beispiel wird gezeigt, wie Sie ein einfaches Python-Skript in SQL Server ausführen können, indem Sie mit der gespeicherten Prozedur [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 

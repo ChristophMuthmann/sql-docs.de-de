@@ -16,18 +16,19 @@ keywords:
 - Richten Sie R Services
 - Installieren Sie SQL Machine learning
 ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 04f2502853e21968f2edaac927247eb45730d000
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>Einrichten von SQL Server Machine Learning-Services (Datenbankintern)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Thema wird beschrieben, wie zum Installieren und konfigurieren die folgenden Machine learning-Funktionen, die in der Datenbank Analytics in SQL Server unterstützt werden:
 
@@ -41,7 +42,7 @@ In diesem Thema wird beschrieben, wie zum Installieren und konfigurieren die fol
 
 + Ein Machine Learning-Server mit **keine** SQL Server
 
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Setup schließt auch die Möglichkeit, eine "eigenständig"-Version des Machine learning-Komponenten zu installieren, die das Datenbankmodul ist nicht erforderlich und wird von SQL Server nicht ausgeführt.  Im Allgemeinen wird empfohlen, dass Sie diese Option auf einem anderen Computer als dem Computer installieren, auf dem SQL Server gehostet.
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup schließt auch die Möglichkeit, eine "eigenständig"-Version des Machine learning-Komponenten zu installieren, die das Datenbankmodul ist nicht erforderlich und wird von SQL Server nicht ausgeführt.  Im Allgemeinen wird empfohlen, dass Sie diese Option auf einem anderen Computer als dem Computer installieren, auf dem SQL Server gehostet.
     
     [Einrichten eines eigenständigen Machine Learning-Servers](create-a-standalone-r-server.md).
 
@@ -203,7 +204,7 @@ In diesem Abschnitt wird beschrieben, wie die Instanz für Machine Learning neu 
 
     Öffnen Sie ein neues **Abfrage** Fenster in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], und führen Sie ein Skript z. B. Folgendes:
     
-    + Für R
+    + For R
     
     ```SQL
     EXEC sp_execute_external_script  @language =N'R',
@@ -215,7 +216,7 @@ In diesem Abschnitt wird beschrieben, wie die Instanz für Machine Learning neu 
     GO
     ```
 
-    + Für Python
+    + For Python
     
     ```SQL
     EXEC sp_execute_external_script  @language =N'Python',

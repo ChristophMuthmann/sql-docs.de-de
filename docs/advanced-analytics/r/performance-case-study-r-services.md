@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 65e3ca0b62da2a8412b92485316074a5f52fa080
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 83c3590714660201d7411c360958f9ff4263240b
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Leistung für R Services: Ergebnisse und Ressourcen
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Artikel ist die vierte und letzte in einer Reihe, die zur leistungsoptimierung für R Services beschreibt. Dieser Artikel beschreibt die Methoden, die Ergebnisse und die Schlussfolgerungen zwei Fallstudien, die verschiedene Methoden zur Optimierung getestet.
 
@@ -187,7 +188,7 @@ Dieser Test bewertet die Auswirkungen der Änderung des R-Codes, um ein häufige
 
 | Tabellenname          | Testname   | Durchschnittliche Zeit |
 |---------------------|-------------|--------------|
-| *Airline-Aktivität*           | *FactorCol* | 10.72        |
+| *Airline*           | *FactorCol* | 10.72        |
 | *airlineWithIntCol* | *IntCol*    | 3.4475       |
 
 **Schlussfolgerungen**
@@ -368,7 +369,7 @@ Im folgenden finden Links zu Informationen, Tools und Skripts, die in die Entwic
 
 + [Wie unterstützt SQL Server NUMA](https://technet.microsoft.com/library/ms180954.aspx)
 
-+ [Soft-NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
 
 ### <a name="learn-about-sql-server-optimizations"></a>Erfahren Sie mehr über SQL Server-Optimierungen
 

@@ -14,18 +14,19 @@ dev_langs:
 - R
 - SQL
 ms.assetid: e2fe5d90-eee9-4daf-9eae-21d17b3ef320
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: debb4ebeb6f0257a17c64e675fd20a88a215afe3
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 93fb7d90ab6d1f387fe50dd63a29eda7a2ecc764
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-r-functions-with-sql-server-data-r-in-sql-quickstart"></a>Verwenden von R-Funktionen mit SQL Server-Daten (R in SQL-Schnellstart)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Da Sie nun mit grundlegenden Vorgängen vertraut sind, ist es an der Zeit, R richtig zu nutzen. Zum Beispiel sind viele erweiterte statistische Funktionen mit T-SQL möglicherweise schwierig zu implementieren, erfordern jedoch nur eine einzige Zeile R-Code.  Mit R Services ist es einfach, Skripts für R-Hilfsprogramme in eine gespeicherte Prozedur einzubetten.
 
