@@ -8,26 +8,30 @@ ms.service:
 ms.component: localdb
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: LocalDBCreateInstance
-apilocation: sqluserinstance.dll
+apiname:
+- LocalDBCreateInstance
+apilocation:
+- sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0bfb0624476e2fa56bdf3950fc765d214dab884
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c044ceddef837aa063ea84c071081417c17f415a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="localdbcreateinstance-function"></a>LocalDBCreateInstance-Funktion
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Erstellt eine neue SQL Server Express LocalDB-Instanz an.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Erstellt eine neue SQL Server Express LocalDB-Instanz.  
   
  **Headerdatei:** sqlncli.h  
   

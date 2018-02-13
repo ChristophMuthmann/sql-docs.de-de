@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: f3303072-2b44-4443-936c-f024b0b2a8c5
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0c364d91c9ca592ab0e7e8324f615ad246c8e1e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9e4430ef9040b19e6753a3cf1d4f2b4a28656da2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="localdberrorcallerisnotowner"></a>LOCALDB_ERROR_CALLER_IS_NOT_OWNER
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 01/08/2018
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|282|  
 |Ereignisquelle|Lokale SQL Server-Datenbanklaufzeit 12.0|  
 |Komponente|Laufzeit-API der lokalen Datenbank|  

@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: SHA Property (SecurityCertificate Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- SHA Property (SecurityCertificate Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: SHA property
+helpviewer_keywords:
+- SHA property
 ms.assetid: 73dfe0b7-0237-4d92-8161-9264a10a28a7
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e4a6bfa01be72d25d3a2accbe4305097d8811e4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2cff1651ed4897455d47af97eb2ecd530a213ac3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sha-property-securitycertificate-class"></a>SHA-Eigenschaft (SecurityCertificate-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Ruft das SHA-fingerabdruckattribut des Sicherheitszertifikats ab.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Ruft das SHA-Fingerabdruckattribut des Sicherheitszertifikats ab.  
   
 ## <a name="syntax"></a>Syntax  
   

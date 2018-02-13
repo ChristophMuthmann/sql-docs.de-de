@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: f679fe4e-0ed1-4e2c-8fe1-e6b3d55c8d42
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4f6cdb163999039f797a66297a2f950e13808d94
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e7e92abf36bd6b01a3a6a24ba4e68b1a58c51a31
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="localdberrorsharednametaken"></a>LOCALDB_ERROR_SHARED_NAME_TAKEN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 01/08/2018
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|281|  
 |Ereignisquelle|Lokale SQL Server-Datenbanklaufzeit 12.0|  
 |Komponente|Laufzeit-API der lokalen Datenbank|  

@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: PropertyNumVal Property (ClientNetworkProtocolProperty Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- PropertyNumVal Property (ClientNetworkProtocolProperty Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: PropertyNumVal property
+helpviewer_keywords:
+- PropertyNumVal property
 ms.assetid: 12b02d97-702b-434f-baf6-e49a6b2cd4de
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9dcff0754880f73ad245b8d25fd2ab9d5ba52b59
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7df8954dacc90101624d527ed962f563d5a27844
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="propertynumval-property-clientnetworkprotocolproperty-class"></a>PropertyNumVal-Eigenschaft (ClientNetworkProtocolProperty-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Ruft den numerischen Wert der aktuellen Eigenschaft verweist die [PropertyIdx-Eigenschaftswert (ClientNetworkProtocolProperty-Klasse)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) Wert.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Ruft den numerischen Wert der aktuellen Eigenschaft ab, auf die durch den Wert der [PropertyIdx-Eigenschaft (ClientNetworkProtocolProperty-Klasse)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   

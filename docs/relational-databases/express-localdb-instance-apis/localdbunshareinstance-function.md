@@ -8,26 +8,30 @@ ms.service:
 ms.component: localdb
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: LocalDBUnshareInstance
-apilocation: sqluserinstance.dll
+apiname:
+- LocalDBUnshareInstance
+apilocation:
+- sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ed8952a98a1bac966030dcbd06e6d750da3fb09
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 955212bb6a4c87f51cd1eb238252ce732b0c1bd7
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="localdbunshareinstance-function"></a>LocalDBUnshareInstance-Funktion
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Beendet die Freigabe der angegebenen SQL Server Express LocalDB-Instanz.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Beendet die Freigabe der angegebenen SQL Server Express LocalDB-Instanz.  
   
  **Headerdatei:** sqlncli.h  
   

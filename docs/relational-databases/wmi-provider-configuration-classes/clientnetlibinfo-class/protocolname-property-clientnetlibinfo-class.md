@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: ProtocolName Property (ClientNetLibInfo Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- ProtocolName Property (ClientNetLibInfo Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: ProtocolName property
+helpviewer_keywords:
+- ProtocolName property
 ms.assetid: 3af93df3-69df-4a55-82cd-294ad70cc0cb
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41197b0e82b59d7c2b72bab28c792c19888d19ad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 912a409993bdbb7a0e7974788ede817a8217ec6d
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="protocolname-property-clientnetlibinfo-class"></a>ProtocolName-Eigenschaft (ClientNetLibInfo-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Ruft den Namen des Protokolls, das der Clientnetzwerkbibliothek zugeordnet ist.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Ruft den Namen des Protokolls ab, das der Clientnetzwerkbibliothek zugeordnet ist.  
   
 ## <a name="syntax"></a>Syntax  
   

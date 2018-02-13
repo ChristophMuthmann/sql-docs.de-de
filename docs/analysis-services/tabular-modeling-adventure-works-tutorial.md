@@ -1,7 +1,7 @@
 ---
 title: "Tabellenmodellierung (Kompatibilitätsgrad 1200) | Microsoft Docs"
 ms.custom: 
-ms.date: 01/17/2018
+ms.date: 02/10/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -11,23 +11,24 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 keywords:
 - Analysis Services
 - tabellarisches Modell
 - Lernprogramm
 - SSAS
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 20248d68dc0371ef158f287d1f3a8bc9e87360d3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3bf21d3debd7c24ea7b2e5ddcea56392e0f33400
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>Tabellenmodellierung (Kompatibilitätsgrad 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -37,7 +38,7 @@ Dieses Lernprogramm enthält Lektionen zum Erstellen einer Analysis Services-Tab
 Wenn Sie 2017 von SQL Server oder Azure Analysis Services, und Sie verwenden möchten, Ihr Modell auf die Kompatibilität 1400 Ebene erstellen, verwenden die [Azure Analysis Services - Adventure Works-Lernprogramm](https://review.docs.microsoft.com/azure/analysis-services/tutorials/aas-adventure-works-tutorial?branch=master). Diese aktualisierte Version der neue, moderne Get Data-Funktion verwendet, um eine Verbindung herzustellen, und importieren die Quelldaten und die M-Sprache verwendet, um Partitionen zu konfigurieren.
  
   
-## <a name="what-youll-learn"></a>Ihre Lernziele   
+## <a name="what-you-learn"></a>Was Sie lernen   
   
 -   Vorgehensweise: erstellen ein neuen tabellenmodellprojekts in SSDT.
   
@@ -47,7 +48,7 @@ Wenn Sie 2017 von SQL Server oder Azure Analysis Services, und Sie verwenden mö
   
 -   Erstellen und Verwalten von Berechnungen, Measures und Key Performance Indicators, mit denen Benutzer Modelldaten analysieren können.  
   
--   Erstellen und Verwalten von Perspektiven und Hierarchien, mit denen Benutzer durch die Bereitstellung von geschäfts- und anwendungsspezifischen Blickpunkten einfacher Modelldaten durchsuchen können.  
+-   Zum Erstellen und Verwalten von Perspektiven und Hierarchien, die Benutzern weitere einfacher Modelldaten durchsuchen, durch die Bereitstellung von Geschäfts- und anwendungsspezifischen Blickpunkten fehlschlagen.  
   
 -   Erstellen von Partitionen, mit denen sich Tabellendaten in kleinere logische Teile aufteilen lassen, die unabhängig von anderen Partitionen verarbeitet werden können.  
   
@@ -60,22 +61,22 @@ Dieses Lernprogramm basiert auf dem Adventure Works Cycles, einem fiktiven Unter
   
 Um die Datenanalyseanforderungen von Verkaufs- und Marketingteams sowie des Senior Managements besser zu unterstützen, werden Sie damit beauftragt, ein Tabellenmodell für Benutzer zu erstellen, um Internetumsatzdaten in der AdventureWorksDW-Beispieldatenbank zu analysieren.  
   
-Um das Lernprogramm und das Tabellenmodell für die Adventure Works-Internetverkäufe abzuschließen, ist eine Reihe von Lektionen auszuführen. Jede Lektion umfasst eine Reihe von Aufgaben, und das Abschließen jeder Aufgabe ist zum Abschließen der jeweiligen Lektion erforderlich. Während in einer bestimmten Lektion gibt es möglicherweise mehrere Aufgaben, die einem ähnlichen Ergebnis zu erreichen, aber wie jede Aufgabe etwas anders ist. Dadurch wird angezeigt, dass oftmals mehrere Möglichkeiten, um eine bestimmte Aufgabe auszuführen, und fordern Sie mithilfe von Fähigkeiten, die Sie in vorherigen Aufgaben gelernt haben.  
+Um das Lernprogramm und das Tabellenmodell für die Adventure Works-Internetverkäufe abzuschließen, ist eine Reihe von Lektionen auszuführen. In der jeweiligen Lektion ist eine Reihe von Aufgaben. Abschließen jeder Aufgabe in der Reihenfolge ist zum Abschließen der Lektion erforderlich. Während in einer bestimmten Lektion gibt es möglicherweise mehrere Aufgaben, die einem ähnlichen Ergebnis zu erreichen, aber wie jede Aufgabe etwas anders ist. Dadurch wird angezeigt, dass oftmals mehrere Möglichkeiten, um eine bestimmte Aufgabe auszuführen, und fordern Sie mithilfe von Fähigkeiten, die Sie in vorherigen Aufgaben gelernt haben.  
   
-Die Lektionen ist, führt Sie durch die Erstellung eines basistabellenmodells, das im InMemory Modus ausgeführt wird, indem Sie viele der in SSDT enthaltenen Features. Da jede Lektion auf der jeweils vorherigen Lektion aufbaut, sollten Sie die Lektionen in der entsprechenden Reihenfolge bearbeiten. Nachdem Sie alle Lektionen abgeschlossen haben, werden Sie erstellt und der Adventure Works Internet Sales tabular Beispielmodell auf einem Analysis Services-Server bereitgestellt.  
+Die Lektionen ist, führt Sie durch die Erstellung eines basistabellenmodells, das im InMemory Modus ausgeführt wird, indem Sie viele der in SSDT enthaltenen Features. Da jede Lektion auf der jeweils vorherigen Lektion aufbaut, sollten Sie die Lektionen in der entsprechenden Reihenfolge bearbeiten. Nachdem Sie alle Lektionen abgeschlossen haben, haben Sie erstellt und das Adventure Works Internet Sales Sample tabellarischen Modell auf einem Analysis Services-Server bereitgestellt haben.  
   
 Dieses Lernprogramm enthält keine Lektionen oder Informationen zum Verwalten einer Datenbank für Tabellenmodelle unter Verwendung von SQL Server Management Studio oder das Verwenden einer Berichterstellungs-Clientanwendung zur Herstellung einer Verbindung mit einem bereitgestellten Modell zum Durchsuchen von Modelldaten.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 Um dieses Lernprogramm abzuschließen, benötigen Sie die folgenden Voraussetzungen:  
   
--   Die neueste Version von [! UMFASSEN[SsBIDevStudioFull](../ssdt/download-sql-server-data-tools-ssdt.md).
+-   Die neueste Version des [SSDT](../ssdt/download-sql-server-data-tools-ssdt.md).
 
 -   Die neueste Version von SQL Server Management Studio. [Abrufen der neuesten Version](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms). 
   
--   Eine Clientanwendung, z. B. [Power BI Desktop](https://powerbi.microsoft.com/desktop/) oder [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel.    
+-   Eine Clientanwendung, z. B. [Power BI Desktop](https://powerbi.microsoft.com/desktop/) oder Excel.    
   
--   Eine SQL Server-Instanz mit der Beispieldatenbank Adventure Works DW 2014. Diese Beispieldatenbank beinhaltet die für das Abschließen des Lernprogramms notwendigen Daten. [Abrufen der neuesten Version](http://go.microsoft.com/fwlink/?LinkID=335807).  
+-   Eine SQL Server-Instanz mit der Adventure Works DW-Beispieldatenbank. Diese Beispieldatenbank beinhaltet die für das Abschließen des Lernprogramms notwendigen Daten. [Abrufen der neuesten Version](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
   
 
 -   Ein Azure Analysis Services oder SQL Server 2016 oder höher Analysis Services-Instanz Ihres Modells bereitstellen. [Registrieren Sie sich für eine kostenlose Testversion von Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/).

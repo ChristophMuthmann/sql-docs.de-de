@@ -8,26 +8,30 @@ ms.service:
 ms.component: localdb
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: LocalDBStopInstance
-apilocation: sqluserinstance.dll
+apiname:
+- LocalDBStopInstance
+apilocation:
+- sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f68a8e8b221783835dfee83dbe2337746064a2dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bde22cf301e05030402df861a137ae0c5070d2c4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="localdbstopinstance-function"></a>LocalDBStopInstance-Funktion
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Beendet die angegebene SQL Server Express LocalDB-Instanz ausgeführt wird.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Beendet die angegebene SQL Server Express LocalDB-Instanz.  
   
  **Headerdatei:** sqlncli.h  
   

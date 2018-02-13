@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: Description Property (SqlService Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- Description Property (SqlService Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: Description property
+helpviewer_keywords:
+- Description property
 ms.assetid: 0baf050e-7dde-496e-a8b6-da43e6448a09
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01c03114977902f15f46741254614611fa790269
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3fcfa603f4b96e64707d41541ba1c417abcf320f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="description-property-sqlservice-class"></a>Description-Eigenschaft (SqlService-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Ruft eine Beschreibung des Diensts auf die verwiesen wird.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Ruft eine Beschreibung für den Dienst ab, auf den verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   

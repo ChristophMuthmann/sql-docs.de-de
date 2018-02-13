@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: InstanceName property (ServerSettings Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- InstanceName property (ServerSettings Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: InstanceName property
+helpviewer_keywords:
+- InstanceName property
 ms.assetid: f16db803-d8dc-45a5-8050-e8f4f41c04a8
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 606b18dc20cade1b8c3a5f338c2a1ea487f53fe5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 86f99936717dad2f25c3c40377a266017db34288
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="instancename-property-serversettings-class"></a>InstanceName-Eigenschaft (ServerSettings-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Ruft den Namen der Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für das die servereinstellungen gelten.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Ruft den Namen der Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ab, für die die Servereinstellungen gelten.  
   
 ## <a name="syntax"></a>Syntax  
   

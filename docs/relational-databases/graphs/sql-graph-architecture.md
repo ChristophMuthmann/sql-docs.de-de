@@ -8,23 +8,24 @@ ms.service:
 ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, architecture
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale;barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30748d9c5cf8a53b7e04c9897ba2fe70fa32972e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b8652d59a4a2a6ad980c2d7659940ac0552bfeed
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-graph-architecture"></a>Architektur der SQL-Diagramm  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ Eine Rahmentabelle stellt eine Beziehung in einem Diagramm dar. Ränder werden i
 
 |Spaltenname    |Description  |
 |---   |---  |
-|`$edge_id`   |Identifiziert eindeutig eine bestimmte Kante in der Datenbank. Es wird eine generierte Spalte und der Wert ist eine Kombination von Object_id die Rahmentabelle und einem intern generierten Bigint-Wert. Jedoch, wenn die `$edge_id` Spalte ausgewählt ist, ein berechneter Wert in Form einer JSON-Zeichenfolge wird angezeigt. `$edge_id`ist eine Pseudospalte, die einen internen Namen mit hexadezimalen Zeichenfolge in der er zugeordnet ist. Bei Auswahl `$edge_id` aus der Tabelle den Namen der Spalte hostnamensadresse `$edge_id_\<hex_string>`. Mithilfe von Pseudo-Spaltennamen in Abfragen ist die empfohlene Methode von Abfragen an das interne `$edge_id` Spalten- und hexadezimale Zeichenfolge mit interner Name sollte vermieden werden. |
+|`$edge_id`   |Identifiziert eindeutig eine bestimmte Kante in der Datenbank. Es wird eine generierte Spalte und der Wert ist eine Kombination von Object_id die Rahmentabelle und einem intern generierten Bigint-Wert. Jedoch, wenn die `$edge_id` Spalte ausgewählt ist, ein berechneter Wert in Form einer JSON-Zeichenfolge wird angezeigt. `$edge_id` ist eine Pseudospalte, die einen internen Namen mit hexadezimalen Zeichenfolge in der er zugeordnet ist. Bei Auswahl `$edge_id` aus der Tabelle den Namen der Spalte hostnamensadresse `$edge_id_\<hex_string>`. Mithilfe von Pseudo-Spaltennamen in Abfragen ist die empfohlene Methode von Abfragen an das interne `$edge_id` Spalten- und hexadezimale Zeichenfolge mit interner Name sollte vermieden werden. |
 |`$from_id`   |Speichert die `$node_id` des Knotens, von der Rand, stammt.  |
 |`$to_id`   |Speichert die `$node_id` des Knotens, an dem am Rand wird beendet. |
 
@@ -99,7 +100,7 @@ Die folgende Tabelle enthält die gültigen Werte für `graph_type` Spalte
 |8  |GRAPH_TO_ID_COMPUTED  |
 
 
-`sys.columns`Außerdem speichert Informationen zu impliziten Spalten in Tabellen Knoten oder Edge erstellt. Folgende Informationen kann von sys.columns abgerufen werden, jedoch nicht Benutzern diese Spalten auswählen, aus einem Knoten oder Edge-Tabelle. 
+`sys.columns` Außerdem speichert Informationen zu impliziten Spalten in Tabellen Knoten oder Edge erstellt. Folgende Informationen kann von sys.columns abgerufen werden, jedoch nicht Benutzern diese Spalten auswählen, aus einem Knoten oder Edge-Tabelle. 
 
 Impliziten Spalten in einer Knotentabelle  
 |Spaltenname    |Datentyp  |is_hidden  |Anmerkung  |
@@ -139,7 +140,7 @@ Erfahren Sie, den [!INCLUDE[tsql-md](../../includes/tsql-md.md)] Erweiterungen e
 ### <a name="data-definition-language-ddl-statements"></a>Anweisungen von Data Definition Language (DDL)
 |Task   |Verwandtes Thema  |Hinweise
 |---  |---  |---  |
-|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE `wird jetzt erweitert, um das Erstellen einer Tabelle als Knoten oder EDGE als unterstützt. Beachten Sie, dass eine Rahmentabelle möglicherweise keine Benutzer ggf. benutzerdefinierten Attributen.  |
+|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` wird jetzt erweitert, um das Erstellen einer Tabelle als Knoten oder EDGE als unterstützt. Beachten Sie, dass eine Rahmentabelle möglicherweise keine Benutzer ggf. benutzerdefinierten Attributen.  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Knoten und Edge-Tabellen können geändert werden, die gleiche Weise wie eine relationale Tabelle ist, verwendet die `ALTER TABLE`. Benutzer können hinzufügen oder Ändern von benutzerdefinierten Spalten, Indizes oder Einschränkungen. Allerdings Ändern von internen Graph Spalten, z. B. `$node_id` oder `$edge_id`, führt zu einem Fehler.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Benutzer können Indizes für Pseudospalten und benutzerdefinierter Spalten in Knoten und Edge-Tabellen erstellen. Alle Indextypen werden unterstützt, einschließlich gruppierten und nicht gruppierten columnstore-Indizes.  |
 |DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Knoten und Edge-Tabellen können gelöscht werden, die gleiche Weise wie eine relationale Tabelle ist, verwendet die `DROP TABLE`. In dieser Version sind jedoch keine Einschränkungen aus, um sicherzustellen, dass keine Kanten zeigen Sie auf einen gelöschten Knoten kaskadierenden Löschen des Randes, beim Löschen eines Knotens oder Knotentabelle wird nicht unterstützt. Es wird empfohlen, wenn eine Knotentabelle gelöscht wird, Benutzer alle Ränder verbunden, auf die Knoten in dieser Knotentabelle manuell, um die Integrität des Diagramms verwalten ablegen.  |
@@ -148,10 +149,10 @@ Erfahren Sie, den [!INCLUDE[tsql-md](../../includes/tsql-md.md)] Erweiterungen e
 ### <a name="data-manipulation-language-dml-statements"></a>DDL-Anweisungen Data Manipulation Language (DML)
 |Task   |Verwandtes Thema  |Hinweise
 |---  |---  |---  |
-|INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|In einer Knotentabelle eingefügt wird unterscheidet sich nicht in einer relationalen Tabelle eingefügt. Die Werte für `$node_id` Spalte wird automatisch generiert. Beim Einfügen eines Werts in `$node_id` oder `$edge_id` Spalte führt zu einem Fehler. Benutzer müssen Geben Sie Werte für `$from_id` und `$to_id` Spalten beim Einfügen in eine Rahmentabelle. `$from_id`und `$to_id` sind die `$node_id` Werte der Knoten, die ein bestimmter Rand verbindet.  |
+|INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|In einer Knotentabelle eingefügt wird unterscheidet sich nicht in einer relationalen Tabelle eingefügt. Die Werte für `$node_id` Spalte wird automatisch generiert. Beim Einfügen eines Werts in `$node_id` oder `$edge_id` Spalte führt zu einem Fehler. Benutzer müssen Geben Sie Werte für `$from_id` und `$to_id` Spalten beim Einfügen in eine Rahmentabelle. `$from_id` und `$to_id` sind die `$node_id` Werte der Knoten, die ein bestimmter Rand verbindet.  |
 |DELETE | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Daten aus Knoten oder Edge-Tabellen können auf gleiche Weise gelöscht werden, da sie vom relationalen Tabellen gelöscht werden. In dieser Version sind jedoch keine Einschränkungen aus, um sicherzustellen, dass keine Kanten zeigen Sie auf einen gelöschten Knoten kaskadierten Löschung Rand beim Löschen eines Knotens wird nicht unterstützt. Es wird empfohlen, dass wenn ein Knoten gelöscht wurde, die verbindenden Rändern für diesen Knoten ebenfalls gelöscht werden um die Integrität des Diagramms beibehalten.  |
 |UPDATE |[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |Werte in den benutzerdefinierten Spalten können mithilfe der UPDATE-Anweisung aktualisiert werden. Aktualisieren der Spalten interne Graph `$node_id`, `$edge_id`, `$from_id` und `$to_id` ist nicht zulässig.  |
-|MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE`Anweisung wird für einen Knoten oder Edge-Tabelle nicht unterstützt.  |
+|MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` Anweisung wird für einen Knoten oder Edge-Tabelle nicht unterstützt.  |
 
 
 ### <a name="query-statements"></a>Abfrageanweisungen

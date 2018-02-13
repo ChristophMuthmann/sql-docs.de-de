@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - overflow data [SQLXML]
 - sql:overflow-field
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d821e3aafa0b822995bb76a191e8c23adbdeefd4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f5b58728bc2af55830cc66ba0ed8f011095f2d5e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>Interpretation von Anmerkungen - Overflow-Feld
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]In einem Schema können Sie eine Spalte als Überlaufspalte festlegen, erhalten alle nicht verbrauchte Daten aus dem XML-Dokument identifizieren. Diese Spalte wird im Schema mithilfe der **sql:overflow-field** -Anmerkung angegeben. Sie können mit mehreren Überlaufspalten arbeiten.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+In einem Schema können Sie eine Spalte als Überlaufspalte festlegen, die alle nicht verbrauchten Daten aus dem XML-Dokument aufnimmt. Diese Spalte wird im Schema mithilfe der **sql:overflow-field** -Anmerkung angegeben. Sie können mit mehreren Überlaufspalten arbeiten.  
   
  Immer, wenn ein XML-Knoten (Element oder Attribut), für den eine **sql:overflow-field** -Anmerkung definiert ist, in den Bereich eintritt, wird die Überlaufspalte aktiviert und empfängt nicht verbrauchte Daten. Wenn der Knoten den Bereich verlässt, ist die Überlaufspalte nicht mehr aktiv und das vorherige Überlauffeld (sofern vorhanden) wird durch das XML-Massenladen aktiviert.  
   
