@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,40 +18,40 @@ helpviewer_keywords:
 - keys [ODBC]
 - FoxPro ODBC driver [ODBC], registry entries
 ms.assetid: 1a63d92d-ca3a-46ae-911f-6788292c801e
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: b9d776df7e758f0902ca3b20a94f8c40e351e959
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>Einträge in der Registrierung (Visual FoxPro-ODBC-Treiber)
 Bei der Installation der Visual FoxPro-ODBC-Treiber aktualisiert das Installationsprogramm der Registrierung Ihres Systems, in den Registrierungsschlüssel HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini, um einen neuen Schlüssel namens Microsoft Visual FoxPro-Treiber hinzuzufügen. Unter diesem Schlüssel werden in der folgenden Tabelle beschriebenen Werte hinzugefügt.  
   
-|Wertname|Werttyp|value|  
+|Wertname|Werttyp|Wert|  
 |----------------|----------------|-----------|  
 |APILevel|REG_SZ|"1"|  
 |ConnectFunctions|REG_SZ|"YYN"|  
 |Treiber|REG_SZ|Systempfad zur Datei vfpodbc.dll|  
 |DriverODBCVer|REG_SZ|"02.50"|  
-|FileExtns|REG_SZ|"*.DBF,\*CDX,\*.fpt"|  
+|FileExtns|REG_SZ|"*.dbf,\*.cdx,\*.fpt"|  
 |FileUsage|REG_SZ|"1"|  
 |Setup|REG_SZ|Systempfad zur Datei vfpodbc.dll|  
 |SQLLevel|REG_SZ|"0"|  
   
  Das Installationsprogramm fügt auch die Taste "Visual FoxPro-Dateien", den standardmäßige Visual FoxPro-Treiber für Ihr System HKEY_CURRENT_USER\SOFTWARE\ODBC\Odbc.ini Schlüssel darstellt. Unter diesem Schlüssel fügt das Installationsprogramm die Werte in der folgenden Tabelle beschrieben.  
   
-|Wertname|Werttyp|value|  
+|Wertname|Werttyp|Wert|  
 |----------------|----------------|-----------|  
 |Treiber|REG_SZ|Systempfad zur Datei vfpodbc.dll|  
   
  Bei jedem eine Visual FoxPro-ODBC-Datenquelle die ODBC-Konfiguration hinzufügen wird ein neuer Schlüssel hinzugefügt, die für diesen Namen Datenquelle. Die Werte für die Datenquelle entsprechen Werten, die Sie, in Festlegen der **ODBC Visual FoxPro-Setup** (Dialogfeld), wie in der folgenden Tabelle aufgeführt.  
   
-|Wertname (Schlüsselwort)|Werttyp|value|  
+|Wertname (Schlüsselwort)|Werttyp|Wert|  
 |----------------------------|----------------|-----------|  
 |Sortieren|REG_SQ|Alle unterstützten Sortierreihenfolge|  
 |Description|REG_SZ|Benutzerbeschreibung der Datenquelle|  

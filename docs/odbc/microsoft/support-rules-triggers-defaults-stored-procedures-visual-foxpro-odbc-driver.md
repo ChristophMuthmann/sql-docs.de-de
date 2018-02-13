@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,16 +31,16 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], stored procedures
 - Visual FoxPro commands and functions [ODBC]
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: c2fcdf0a9a7af2f34a2a0d87495d00ddf3373d3a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Unterstützung für Regeln, Trigger, Standardwerte und gespeicherte Prozeduren (Visual FoxPro-ODBC-Treiber)
 Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte oder gespeicherte Prozeduren mithilfe der Visual FoxPro-ODBC-Treiber erstellen. Allerdings kann die Anwendung interagiert vorhandenen Regeln, Trigger, Standardwerte oder gespeicherte Prozeduren, wie eingefügt, aktualisiert oder Visual FoxPro-Daten in einer Datenbank gespeichert löscht.  
@@ -62,19 +63,19 @@ Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte oder gespeicherte
   
 ||||  
 |-|-|-|  
-|ABS ()-Funktion|ACOPY ()-Funktion|Befehl "TABLE" hinzufügen|  
-|ADATABASES ()-Funktion|ADBOBJECTS ()-Funktion|AERROR ()-Funktion|  
+|ABS ()-Funktion|ACOPY( ) Function|Befehl "TABLE" hinzufügen|  
+|ADATABASES ()-Funktion|ADBOBJECTS ()-Funktion|AERROR( ) Function|  
 |ADEL ()-Funktion|AELEMENT ()-Funktion|ALEN ()-Funktion|  
 |AFIELDS ()-Funktion|Des Anbieters AINS ()-Funktion|ALTER TABLE - SQL-Befehl|  
 |ALIAS-Funktion|ALLTRIM ()-Funktion|ANFÜGEN von ARRAY-Befehl|  
 |AND -Operator|APPEND (Befehl)|ANFÜGEN von MEMO-Befehl|  
 |ANFÜGEN von Befehl|Fügen Sie allgemeine-Befehl|KANN ()-Funktion|  
-|ANFÜGEN von PROZEDUREN-Befehl|ASC ()-Funktion|ASUBSCRIPT ()-Funktion|  
-|ASIN-Funktion|ASORT ()-Funktion|ATAN-Funktion|  
-|()-Funktion|AT_C ()-Funktion|ATCLINE ()-Funktion|  
-|ATC ()-Funktion|ATCC ()-Funktion|AUSED ()-Funktion|  
-|ATLINE ()-Funktion|ATN2-Funktion||  
-|Durchschnittliche-Befehl|ACOS-Funktion||  
+|ANFÜGEN von PROZEDUREN-Befehl|ASC( ) Function|ASUBSCRIPT ()-Funktion|  
+|ASIN-Funktion|ASORT( ) Function|ATAN( ) Function|  
+|AT( ) Function|AT_C( ) Function|ATCLINE ()-Funktion|  
+|ATC( ) Function|ATCC( ) Function|AUSED ()-Funktion|  
+|ATLINE ()-Funktion|ATN2( ) Function||  
+|Durchschnittliche-Befehl|ACOS( ) Function||  
   
 ## <a name="b"></a>B  
   
@@ -82,64 +83,64 @@ Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte oder gespeicherte
 |-|-|-|  
 |BEGIN TRANSACTION-Befehl|ZWISCHEN ()-Funktion|BITNOT-Funktion|  
 |BITCLEAR ()-Funktion|BITLSHIFT ()-Funktion|BITSET-Funktion|  
-|BITOR-Funktion|BITRSHIFT ()-Funktion|LEER-Befehl|  
-|BITTEST ()-Funktion|BITXOR-Funktion||  
+|BITOR-Funktion|BITRSHIFT( ) Function|LEER-Befehl|  
+|BITTEST ()-Funktion|BITXOR( ) Function||  
 |BOF ()-Funktion|BITAND-Funktion||  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
   
 ||||  
 |-|-|-|  
 |Berechnen der Befehl|KANDIDAT ()-Funktion|CHR ()-Funktion|  
 |CDX ()-Funktion|CEILING-Funktion|CLOSE-Befehle|  
-|CHRTRAN ()-Funktion|CHRTRANC ()-Funktion|Kopieren Sie INDIZES-Befehl|  
+|CHRTRAN ()-Funktion|CHRTRANC( ) Function|Kopieren Sie INDIZES-Befehl|  
 |CMONTH ()-Funktion|Befehl zu fortfahren|Erweiterte von Kopierbefehl-Struktur|  
 |Kopieren Sie PROZEDUREN-Befehl|COPY-Struktur-Befehl|Kopieren auf einen Menübefehl|  
 |Kopieren Sie die TAG-Befehl|ARRAY-Befehl Kopieren|CPCONVERT ()-Funktion|  
 |COS-Funktion)|COUNT-Befehl|CTOD ()-Funktion|  
-|CPCURRENT ()-Funktion|CPDBF ()-Funktion|CURSORSETPROP ()-Funktion|  
+|CPCURRENT ()-Funktion|CPDBF( ) Function|CURSORSETPROP ()-Funktion|  
 |CTOT ()-Funktion|CURSORGETPROP ()-Funktion||  
-|CURVAL ()-Funktion|CDOW ()-Funktion||  
+|CURVAL ()-Funktion|CDOW( ) Function||  
   
 ## <a name="d"></a>D  
   
 ||||  
 |-|-|-|  
-|Datum ()-Funktion|"DateTime" ()-Funktion|DAY ()-Funktion|  
-|Datenbank ()-Funktion|DBF-Funktion|DBGETPROP ()-Funktion|  
+|DATE( ) Function|DATETIME( ) Function|DAY ()-Funktion|  
+|DBC( ) Function|DBF-Funktion|DBGETPROP( ) Function|  
 |DBUSED ()-Funktion|Löschen - SQL-Befehl|DELETE-Befehl|  
-|Löschen Sie die TAG-Befehl|Gelöschte ()-Funktion|ABSTEIGEND ()-Funktion|  
+|Löschen Sie die TAG-Befehl|Gelöschte ()-Funktion|DESCENDING( ) Function|  
 |DIFFERENCE ()-Funktion|DIMENSION-Befehl|Speicherplatz ()-Funktion|  
 |DMY ()-Funktion|FÜHREN SIE FALL... ENDCASE-Befehl|Führen Sie-Befehl|  
-|FÜHREN SIE DAGEGEN... ENDDO-Befehl|TICHTAG ()-Funktion|DTOC ()-Funktion|  
-|DTOR ()-Funktion|DTOS ()-Funktion|DTOT ()-Funktion|  
+|FÜHREN SIE DAGEGEN... ENDDO-Befehl|DOW( ) Function|DTOC( ) Function|  
+|DTOR ()-Funktion|DTOS ()-Funktion|DTOT( ) Function|  
   
 ## <a name="e"></a>E  
   
 ||||  
 |-|-|-|  
-|(Leer)-Funktion|Auswerten von ()-Funktion|EXIT-Befehl|  
+|(Leer)-Funktion|EVALUATE( ) Function|EXIT-Befehl|  
 |Fehler ()-Funktion|EXP ()-Funktion||  
-|Befehl "END TRANSACTION"|EOF-Funktion||  
+|Befehl "END TRANSACTION"|EOF( ) Function||  
   
 ## <a name="f"></a>V  
   
 ||||  
 |-|-|-|  
-|FCOUNT ()-Funktion|FDATE ()-Funktion|Feld ()-Funktion|  
-|Datei ()-Funktion|FILTER ()-Funktion|FLDLIST ()-Funktion|  
-|Bestand ()-Funktion|FLOOR ()-Funktion|FLUSH-Befehl|  
+|FCOUNT( ) Function|FDATE( ) Function|FIELD( ) Function|  
+|Datei ()-Funktion|FILTER( ) Function|FLDLIST ()-Funktion|  
+|FLOCK( ) Function|FLOOR ()-Funktion|FLUSH-Befehl|  
 |FOR... ENDFOR-Befehl|FÜR ()-Funktion|()-Funktion gefunden|  
-|KOSTENLOSE TABLE-Befehl|FSIZE ()-Funktion|FTIME-Funktion|  
+|KOSTENLOSE TABLE-Befehl|FSIZE ()-Funktion|FTIME( ) Function|  
 |Vollständiger Pfad ()-Funktion|Funktion-Befehl|ZW ()-Funktion|  
   
 ## <a name="g"></a>G  
   
 ||||  
 |-|-|-|  
-|Befehl sammeln|GETNEXTMODIFIED ()-Funktion|Befehl GEHE/GOTO|  
-|Und übergibt ihr ()-Funktion|GOMONTH ()-Funktion||  
-|GETCP ()-Funktion|GETENV-Funktion||  
+|Befehl sammeln|GETNEXTMODIFIED( ) Function|Befehl GEHE/GOTO|  
+|GETFLDSTATE( ) Function|GOMONTH ()-Funktion||  
+|GETCP( ) Function|GETENV-Funktion||  
   
 ## <a name="h"></a>H  
   
@@ -151,12 +152,12 @@ Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte oder gespeicherte
   
 ||||  
 |-|-|-|  
-|IDXCOLLATE ()-Funktion|IF... ENDIF-Befehl|IIF ()-Funktion|  
+|IDXCOLLATE( ) Function|IF... ENDIF-Befehl|IIF ()-Funktion|  
 |INDBC ()-Funktion|Befehl "INDEX"|InList-Prozedur ()-Funktion|  
-|INSERT-SQL-Befehl|INT ()-Funktion|ISALPHA-Funktion|  
-|ISBLANK-Funktion|ISDIGIT-Funktion|ISEXCLUSIVE ()-Funktion|  
-|ISLEADBYTE-Funktion|ISLOWER-Funktion|ISNULL ()-Funktion|  
-|ISREADONLY-Funktion|ISUPPER-Funktion||  
+|INSERT-SQL-Befehl|INT ()-Funktion|ISALPHA( ) Function|  
+|ISBLANK( ) Function|ISDIGIT-Funktion|ISEXCLUSIVE ()-Funktion|  
+|ISLEADBYTE-Funktion|ISLOWER-Funktion|ISNULL( ) Function|  
+|ISREADONLY( ) Function|ISUPPER-Funktion||  
   
 ## <a name="k"></a>K  
   
@@ -168,28 +169,28 @@ Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte oder gespeicherte
   
 ||||  
 |-|-|-|  
-|LEFT ()-Funktion|LEFTC ()-Funktion|LIKEC ()-Funktion|  
-|LENC ()-Funktion|WIE ()-Funktion|LOCK-Funktion|  
+|LEFT ()-Funktion|LEFTC ()-Funktion|LIKEC( ) Function|  
+|LENC( ) Function|WIE ()-Funktion|LOCK( ) Function|  
 |LOKALE-Befehl|Suchen-Befehl|Suche ()-Funktion|  
-|LOG ()-Funktion|LOG10-Funktion|LTRIM ()-Funktion|  
+|LOG( ) Function|LOG10-Funktion|LTRIM ()-Funktion|  
 |LOWER ()-Funktion|LPARAMETERS-Befehl||  
-|LUPDATE ()-Funktion|LEN ()-Funktion||  
+|LUPDATE( ) Function|LEN ()-Funktion||  
   
 ## <a name="m"></a>M  
   
 ||||  
 |-|-|-|  
-|Arbeitsspeicher-Systemvariable _MLINE|MAX ()-Funktion|MDX-Funktion|  
+|Arbeitsspeicher-Systemvariable _MLINE|MAX( ) Function|MDX( ) Function|  
 |MDY ()-Funktion|MEMLINES ()-Funktion|Nachricht ()-Funktion|  
-|MIN ()-Funktion|MINUTE-Funktion|MLINE ()-Funktion|  
-|MOD-Funktion|MONTH ()-Funktion|MTON ()-Funktion|  
+|MIN ()-Funktion|MINUTE( ) Function|MLINE ()-Funktion|  
+|MOD( ) Function|MONTH ()-Funktion|MTON( ) Function|  
   
 ## <a name="n"></a>N  
   
 ||||  
 |-|-|-|  
-|NDX ()-Funktion|NORMALISIEREN ()-Funktion|NOT-Operator|  
-|Hinweis-Befehl|NTOM ()-Funktion|NVL ()-Funktion|  
+|NDX( ) Function|NORMALISIEREN ()-Funktion|NOT-Operator|  
+|Hinweis-Befehl|NTOM( ) Function|NVL ()-Funktion|  
   
 ## <a name="o"></a>O  
   
@@ -205,28 +206,28 @@ Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte oder gespeicherte
 |-|-|-|  
 |PACK-Befehl|Parameter ()-Funktion|PAYMENT ()-Funktion|  
 |Parameter-Befehl|PRIMÄRE Funktion|PRIVATE-Befehl|  
-|PI-Funktion|Programm-Funktion|RICHTIGE ()-Funktion|  
+|PI( ) Function|Programm-Funktion|RICHTIGE ()-Funktion|  
 |PROCEDURE-Befehl|PV ()-Funktion||  
-|PUBLIC-Befehl|PADL () &#124; PADR () &#124; PADC ()-Funktionen||  
+|PUBLIC-Befehl|PADL( ) &#124; PADR( ) &#124; PADC( ) Functions||  
   
 ## <a name="r"></a>R  
   
 ||||  
 |-|-|-|  
-|RAND ()-Funktion|RATTE ()-Funktion|RATC ()-Funktion|  
+|RAND( ) Function|RATTE ()-Funktion|RATC( ) Function|  
 |RATLINE ()-Funktion|Denken Sie daran Befehl|RECCOUNT ()-Funktion|  
 |RECNO ()-Funktion|RECSIZE ()-Funktion|Land/Region-Befehl|  
 |Beziehung ()-Funktion|Befehl "TABLE" entfernen|Befehl "ersetzen"|  
 |ARRAY-Befehl ersetzen|REPLICATE-Funktion)|Wiederholen Sie den Befehl|  
-|Zurückgeben der Befehl|RECHTS ()-Funktion|RIGHTC ()-Funktion|  
-|RLOCK ()-Funktion|ROLLBACK-Befehl|ROUND-Funktion|  
-|RTOD ()-Funktion|RTRIM ()-Funktion||  
+|Zurückgeben der Befehl|RECHTS ()-Funktion|RIGHTC( ) Function|  
+|RLOCK( ) Function|ROLLBACK-Befehl|ROUND-Funktion|  
+|RTOD( ) Function|RTRIM ()-Funktion||  
   
 ## <a name="s"></a>S  
   
 ||||  
 |-|-|-|  
-|SCANNEN... ENDSCAN-Befehl|SCATTER-Befehl|S ()-Funktion|  
+|SCANNEN... ENDSCAN-Befehl|SCATTER-Befehl|SEC( ) Function|  
 |Sekunden ()-Funktion|SEEK-Befehl|SEEK ()-Funktion|  
 |Wählen Sie Befehl|SELECT ()-Funktion|SELECT-SQL-Befehl|  
 |SET BLOCKSIZE-Befehl|SET-CARRY-Befehl|SET JAHRHUNDERT-Befehl|  
@@ -241,10 +242,10 @@ Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte oder gespeicherte
 |SET-PROCEDURE-Befehl|SET-RELATION-Befehl|SET-Beziehung deaktiviert Befehl|  
 |SET-Verarbeitung wiederholen-Befehl|Befehl "Überspringen" festgelegt|SET-UDFPARMS-Befehl|  
 |EINDEUTIGE SET-Befehl|SET-Befehl "Lautstärke"|SET ()-Funktion|  
-|SETFLDSTATE ()-Funktion|SIGN ()-Funktion|SIN-Funktion|  
+|SETFLDSTATE( ) Function|SIGN ()-Funktion|SIN-Funktion|  
 |Befehl "Überspringen"|SORT-Befehl|Leerzeichen ()-Funktion|  
-|SQRT ()-Funktion|STORE-Befehl|STR ()-Funktion|  
-|STRCONV ()-Funktion|STRTRAN ()-Funktion|STUFF-Funktion|  
+|SQRT( ) Function|STORE-Befehl|STR( ) Function|  
+|STRCONV( ) Function|STRTRAN( ) Function|STUFF-Funktion|  
 |STUFFC ()-Funktion|SUBSTR-Funktion|SUBSTRC ()-Funktion|  
 |SUM-Befehl|Sys(2011)-Funktion||  
   
@@ -252,12 +253,12 @@ Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte oder gespeicherte
   
 ||||  
 |-|-|-|  
-|Arbeitsspeicher-Systemvariable _TALLY|Arbeitsspeicher-Systemvariable _TRIGGERLEVEL|TAGCOUNT-Funktion|  
-|TABLEUPDATE ()-Funktion|TAG ()-Funktion|Ziel ()-Funktion|  
-|TAGNO ()-Funktion|TAN-Funktion|TRIM ()-Funktion|  
-|Zeit ()-Funktion|Gesamt-Befehl|TXNLEVEL ()-Funktion|  
-|TTOC ()-Funktion|TTOD ()-Funktion||  
-|Typ ()-Funktion|TABLEREVERT ()-Funktion||  
+|Arbeitsspeicher-Systemvariable _TALLY|Arbeitsspeicher-Systemvariable _TRIGGERLEVEL|TAGCOUNT( ) Function|  
+|TABLEUPDATE( ) Function|TAG ()-Funktion|Ziel ()-Funktion|  
+|TAGNO( ) Function|TAN-Funktion|TRIM ()-Funktion|  
+|Zeit ()-Funktion|Gesamt-Befehl|TXNLEVEL( ) Function|  
+|TTOC( ) Function|TTOD( ) Function||  
+|Typ ()-Funktion|TABLEREVERT( ) Function||  
   
 ## <a name="u"></a>U  
   
@@ -271,7 +272,7 @@ Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte oder gespeicherte
   
 ||||  
 |-|-|-|  
-|VAL ()-Funktion|VERSION ()-Funktion||  
+|VAL( ) Function|VERSION ()-Funktion||  
   
 ## <a name="w"></a>W  
   

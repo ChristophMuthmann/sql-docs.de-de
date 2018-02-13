@@ -14,12 +14,12 @@ description: "Beschreibt, wie die Daten sichern und Wiederherstellen von Works f
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
-caps.latest.revision: "50"
+caps.latest.revision: 
 ms.openlocfilehash: 06863b600ed62d795db82aa5aa3ae5c88578833a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="backup-and-restore"></a>Sichern und Wiederherstellen
 Beschreibt, wie die Daten sichern und Wiederherstellen von Works für SQL Server Parallel Data Warehouse (PDW). Sicherungs-und Wiederherstellungsvorgänge sind für die Wiederherstellung im Notfall verwendet werden. Sicherung und Wiederherstellung können auch zum Kopieren einer Datenbank auf einem Gerät in einer anderen Anwendung verwendet werden.  
@@ -85,7 +85,7 @@ Im Rahmen des Sicherungsvorgangs funktioniert wie folgt:
   
     -   Eine Sicherung kann nur in einer PDW-Anwendung wiederhergestellt werden, die ein gleich großer oder größerer Anteil an Serverknoten.  
   
-    -   Der Name der Sicherung kann nicht geändert werden, vor dem Ausführen einer Wiederherstellung. Der Name für das Sicherungsverzeichnis muss den Namen des ursprünglichen Namen des Sicherungssatzes übereinstimmen. Der ursprüngliche Name der Sicherung befindet sich in der Datei "Backup.xml" in das Sicherungsverzeichnis. Zum Wiederherstellen einer Datenbank auf einen anderen Namen können Sie den neuen Namen in der Restore-Befehl angeben. Beispiel: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`.  
+    -   Der Name der Sicherung kann nicht geändert werden, vor dem Ausführen einer Wiederherstellung. Der Name für das Sicherungsverzeichnis muss den Namen des ursprünglichen Namen des Sicherungssatzes übereinstimmen. Der ursprüngliche Name der Sicherung befindet sich in der Datei "Backup.xml" in das Sicherungsverzeichnis. Zum Wiederherstellen einer Datenbank auf einen anderen Namen können Sie den neuen Namen in der Restore-Befehl angeben. Beispiel: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`  
   
 ## <a name="RestoreModes"></a>Datenbank wiederherstellen-Modi  
 Eine vollständige datenbankwiederherstellung erstellt die PDW-Datenbank mithilfe der Daten in der datenbanksicherung neu. Die Wiederherstellung der Datenbank erfolgt über zuerst eine vollständige Sicherung wiederhergestellt, und klicken Sie dann optional eine differenzielle Sicherung wiederherstellen. Die Wiederherstellung der Datenbank enthält die Datenbankbenutzer und Datenbankrollen.  
@@ -129,11 +129,11 @@ Erstellt z. B. bei der Wiederherstellung einer 60-GB-Datenbank von einer 2-Knote
   
 Nach der Weitergabe enthält jeder Serverknoten weniger tatsächlichen Daten und mehr freien Speicher als jeder Compute-Knoten auf der kleinere Source-Anwendung. Verwenden Sie den zusätzlichen Speicherplatz, um die Datenbank weitere Daten hinzuzufügen. Wenn die wiederhergestellte Datenbank größer ist, als Sie benötigen, können Sie [ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md) zum Verkleinern der Datenbank-Dateigrößen.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Sicherung und Wiederherstellung|Description|  
 |---------------------------|---------------|  
-|Bereiten Sie einen Server als Sicherungsserver.|[Erwerben und Konfigurieren eines backup-Servers](acquire-and-configure-backup-server.md)|  
+|Bereiten Sie einen Server als Sicherungsserver.|[Erwerben und Konfigurieren eines backup-Servers ](acquire-and-configure-backup-server.md)|  
 |Sichern einer Datenbank an.|[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
 |Stellen Sie eine Datenbank wieder her.|[STELLEN SIE DIE DATENBANK WIEDER HER.](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 <!-- MISSING LINKS
