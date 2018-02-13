@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: d53e54c6e8e74970316de557ddf3bd60a09e9ffe
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fd2079b0b0186192fc3b55e7a6ccefd25c1a46bc
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Grundlagen der SQL Server-Verfügbarkeit für Linux-Bereitstellungen
 
@@ -32,7 +32,7 @@ Neben dem Sichern und Wiederherstellen stehen die gleichen drei Verfügbarkeitsf
 -   Always On-Failoverclusterinstanzen (FCIs)
 -   [Protokollversand](sql-server-linux-use-log-shipping.md)
 
-Bei Windows erfordern FCIs immer einem zugrunde liegenden Windows Server-Failovercluster (WSFC). Abhängig vom Bereitstellungsszenario, eine AG erfordert normalerweise einem zugrunde liegenden WSFC, mit der Ausnahme, wird die neue keine Variante in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Einem WSFC unter Linux ist nicht vorhanden. Implementierung in Linux Clustering unten erläutert wird, [Schrittmacher für AlwaysOn-Verfügbarkeitsgruppen und Failover-Cluster-Instanzen unter Linux](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux).
+Bei Windows erfordern FCIs immer einem zugrunde liegenden Windows Server-Failovercluster (WSFC). Abhängig vom Bereitstellungsszenario, eine AG erfordert normalerweise einem zugrunde liegenden WSFC, mit der Ausnahme, wird die neue keine Variante in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Einem WSFC unter Linux ist nicht vorhanden. Im Abschnitt erläutert wird Clustering Implementierung unter Linux [Schrittmacher für AlwaysOn-Verfügbarkeitsgruppen und Failover-Cluster-Instanzen unter Linux](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux).
 
 ## <a name="a-quick-linux-primer"></a>Eine schnelle Linux-Einführung
 Während einige Linux-Installationen mit einer Schnittstelle installiert werden können, sind die meisten nicht, was bedeutet, dass nahezu alles auf der Betriebssystemebene über die Befehlszeile ausgeführt wird. Der allgemeine Begriff für diese Befehlszeile in der Linux-Welt ist ein *bash-Shell*.
@@ -59,9 +59,9 @@ Einige häufig verwendete Befehle, von denen jedes über verschiedene Schalter u
 Dieser Abschnitt enthält Aufgaben, die für alle Linux-basierten gelten [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Bereitstellungen.
 
 ### <a name="ensure-that-files-can-be-copied"></a>Stellen Sie sicher, dass die Dateien kopiert werden können
-Aufpassen, die alle mit [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sollte unter Linux ausführen können, werden Kopieren von Dateien von einem Server zu einem anderen ist. Diese Aufgabe ist sehr wichtig für die AG-Konfigurationen.
+Kopieren von Dateien von einem Server in eine andere ist eine Aufgabe, die alle mit [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] unter Linux sollte ausgeführt werden können. Diese Aufgabe ist sehr wichtig für die AG-Konfigurationen.
 
-Dinge Berechtigungsprobleme können für Linux und Windows-basierten Installationen vorhanden sein. Allerdings vertraut sind, mit der Vorgehensweise beim Kopieren zwischen Servern unter Windows möglicherweise nicht vertraut, wie unter Linux erfolgt. Eine gängige Methode ist die Verwendung des Befehlszeilen-Hilfsprogramms `scp`, dem steht für sichere kopieren. Im Hintergrund `scp` OpenSSH verwendet. SSH steht für secure Shell. Abhängig von der Linux-Distribution OpenSSH selbst möglicherweise nicht installiert werden. Wenn sie nicht der Fall ist, müssen OpenSSH zuerst installiert werden. Weitere Informationen zum Konfigurieren von OpenSSH finden Sie die Informationen unter den folgenden Links für jede Verteilung:
+Dinge Berechtigungsprobleme können für Linux und Windows-basierten Installationen vorhanden sein. Allerdings vertraut sind, mit der Vorgehensweise beim Kopieren zwischen Servern unter Windows möglicherweise nicht vertraut, wie unter Linux erfolgt. Eine gängige Methode ist die Verwendung des Befehlszeilen-Hilfsprogramms `scp`, dem steht für sichere kopieren. Im Hintergrund `scp` OpenSSH verwendet. SSH steht für secure Shell. Abhängig von der Linux-Distribution OpenSSH selbst möglicherweise nicht installiert werden. Wenn sie nicht der Fall ist, muss OpenSSH zuerst installiert werden. Weitere Informationen zum Konfigurieren von OpenSSH finden Sie die Informationen unter den folgenden Links für jede Verteilung:
 -   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-OpenSSH.html)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
@@ -135,7 +135,7 @@ Bei Testreihen oder FCIs einer Windows-basierten Konfiguration konfiguriert werd
 Die optionalen Pakete für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] unter Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Volltextsuche (*Mssql-Server-Fts*) und [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*Mssql Server ist*), sind nicht für hohe Verfügbarkeit für eine FCI oder einer AG erforderlich.
 
 ## <a name="pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux"></a>Schrittmacher für AlwaysOn-Verfügbarkeitsgruppen und Failoverclusterinstanzen unter Linux
-Wie oben bereits erwähnt, ist der einzige clustering Mechanismus, der derzeit für Testreihen und Failoverclusterinstanzen (fcis) von Microsoft unterstützt Schrittmacher mit Corosync an. Dieser Abschnitt enthält die grundlegende Informationen zum Verständnis der Lösung sowie zum Planen und Bereitstellen für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Konfigurationen.
+Als vorherige erwähnt, der nur clustering-Mechanismus, die derzeit für Testreihen und Failoverclusterinstanzen (fcis) von Microsoft unterstützt Schrittmacher mit Corosync ist. Dieser Abschnitt enthält die grundlegende Informationen zum Verständnis der Lösung sowie zum Planen und Bereitstellen für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Konfigurationen.
 
 ### <a name="ha-add-onextension-basics"></a>Grundlagen der HA-add-on/Erweiterung
 Alle derzeit unterstützten Verteilungen liefern eine hohe Verfügbarkeit add-on/Erweiterung, die auf den Stapel clustering Schrittmacher basiert. Dieser Stapel umfasst zwei Hauptkomponenten: Schrittmacher und Corosync. Alle Komponenten des Stapels sind:
@@ -247,7 +247,7 @@ Derzeit besteht keine direkte Möglichkeit für einen wsfc- und einem Cluster Sc
 -   Eine verteilte AG, also eine besondere Art von verfügbarkeitsgruppe, die zwei verschiedenen Testreihen als ihre eigenen verfügbarkeitsgruppe konfiguriert werden können. Weitere Informationen zu verteilten Testreihen, finden Sie in der Dokumentation [von verteilten Verfügbarkeitsgruppen](../database-engine/availability-groups/windows/distributed-availability-groups.md).
 
 #### <a name="other-linux-distributions"></a>Andere Linux-Distributionen
-Alle Knoten eines Clusters Schrittmacher muss unter Linux auf die gleiche Verteilung verwendet wird. Beispielsweise bedeutet dies, dass ein Knoten RHEL Teil eines Clusters Schrittmacher sein kann, die ein SLES-Knoten hat. Der Hauptgrund dafür wurde oben erwähnt: die Verteilungen möglicherweise unterschiedliche Versionen und Funktionalität, sodass Dinge nicht ordnungsgemäß ausgeführt werden konnte. Mischen von Verteilungen hat den gleichen Text wie das Mischen von WSFCs und Linux: Verwenden Sie keine oder Testreihen verteilt.
+Alle Knoten eines Clusters Schrittmacher muss unter Linux auf die gleiche Verteilung verwendet wird. Beispielsweise bedeutet dies, dass ein Knoten RHEL Teil eines Clusters Schrittmacher sein kann, die ein SLES-Knoten hat. Der Hauptgrund dafür wurde bereits erwähnt: die Verteilungen möglicherweise unterschiedliche Versionen und Funktionalität, sodass Dinge nicht ordnungsgemäß ausgeführt werden konnte. Mischen von Verteilungen hat den gleichen Text wie das Mischen von WSFCs und Linux: Verwenden Sie keine oder Testreihen verteilt.
 
 ## <a name="next-steps"></a>Nächste Schritte
 [Bereitstellen eines Clusters Schrittmacher für SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md)
