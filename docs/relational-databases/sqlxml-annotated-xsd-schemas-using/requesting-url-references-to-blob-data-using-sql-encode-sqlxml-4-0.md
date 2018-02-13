@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - BLOBs, URL references
 - Base 64-encoded format
 ms.assetid: 2f8cd93b-c636-462b-8291-167197233ee0
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9128624f8bb921ea93967c79c0f88b2639cc7c18
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2f67c2f00aaed2d9a619de7a82565daa756976df
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>Anfordern von URL-Verweisen auf BLOB-Daten mit 'sql:encode' (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]In einem mit Anmerkungen versehene XSD-Schema, wenn ein Attribut (oder Element) einer BLOB-Spalte in Microsoft zugeordnet ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die Daten werden im Base64-codierten Format im XML-Element zurückgegeben.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Wenn in einem XSD-Schema mit Anmerkungen ein Attribut (oder Element) einer BLOB-Spalte in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugeordnet ist, werden die Daten im codierten Base-64-Format innerhalb von XML zurückgegeben.  
   
  Wenn Sie einen Verweis auf die Daten werden soll (URI) zurückgegeben werden kann später verwendet werden zum Abrufen von BLOB-Daten in ein binäres Format, geben Sie die **Sql: Codieren** Anmerkung. Sie können angeben, **Sql: Codieren** für ein Attribut oder Element des einfachen Typs.  
   

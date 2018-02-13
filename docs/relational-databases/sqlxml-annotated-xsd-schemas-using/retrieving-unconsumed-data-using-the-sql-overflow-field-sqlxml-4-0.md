@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - overflow data [SQLXML]
 - sql:overflow-field
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 803772c967bfb1fb0eaa621abbea8ceecaad4a05
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1801fcd260dd674489a851361044ff6c9110c63
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Abrufen von nicht verbrauchten Daten mithilfe von 'sql:overflow-field' (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wenn Datensätze mithilfe von in einer Datenbank aus einem XML-Dokument eingefügt werden die [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML-Funktion alle nicht verbrauchten Daten aus dem XML-Quelldokument in einer Spalte gespeichert werden können. Wenn Sie Daten aus einer Datenbank abrufen, mithilfe von Schemas mit Anmerkungen, können Sie angeben der **Overflow-Feld** Attribut, um die Spalte in der Tabelle zu identifizieren, in dem die Überlaufdaten gespeichert ist. Die **Overflow-Feld** -Attribut angegeben werden, auf  **\<Element >**.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Wenn Datensätze mithilfe der [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML-Funktion aus einem XML-Dokument in eine Datenbank eingefügt werden, können alle nicht verbrauchten Daten aus dem XML-Quelldokument in einer Spalte gespeichert werden. Wenn Sie Daten aus einer Datenbank abrufen, mithilfe von Schemas mit Anmerkungen, können Sie angeben der **Overflow-Feld** Attribut, um die Spalte in der Tabelle zu identifizieren, in dem die Überlaufdaten gespeichert ist. Die **Overflow-Feld** -Attribut angegeben werden, auf  **\<Element >**.  
   
  Anschließend gibt es folgende Möglichkeiten, diese Daten abzurufen:  
   

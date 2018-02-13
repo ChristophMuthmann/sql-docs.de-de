@@ -1,5 +1,5 @@
 ---
-title: PropertyType-Eigenschaft (ClientNetworkProtocolProperty-Klasse) | Microsoft Docs
+title: PropertyType Property (ClientNetworkProtocolProperty Class) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: PropertyType Property (ClientNetworkProtocolProperty Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- PropertyType Property (ClientNetworkProtocolProperty Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: PropertyType property
+helpviewer_keywords:
+- PropertyType property
 ms.assetid: fc0e4725-979f-4517-a8f5-25436b87f5c2
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d6a5749665c1f653d89ab7fd88bc873f34d4c50
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 31169bdfb3f604fa834cdbab77b95cce651fee36
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="propertytype-property-clientnetworkprotocolproperty-class"></a>PropertyType-Eigenschaft (ClientNetworkProtocolProperty-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Ruft den Typ der Eigenschaft verwiesen wird, indem Sie die [PropertyIdx-Eigenschaftswert (ClientNetworkProtocolProperty-Klasse)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) Wert.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Ruft den Typ der Eigenschaft ab, auf die durch den [PropertyIdx-Eigenschaftswert (ClientNetworkProtocolProperty-Klasse)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   

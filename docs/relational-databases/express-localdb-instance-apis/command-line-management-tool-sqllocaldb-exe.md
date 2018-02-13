@@ -11,21 +11,23 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apilocation: sqluserinstance.dll
+apilocation:
+- sqluserinstance.dll
 ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6ffc8033651fedbe906086f0a35ef31d463f6e31
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3c3fdfd48670039900bbe96881bec7a60230da10
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>Verwaltungstool für Befehlszeilen: SqlLocalDB.exe
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SqlLocalDB.exe ist ein einfaches Tool, das dem Benutzer ermöglicht, die einfache Verwaltung der LocalDB-Instanzen in der Befehlszeile. Es wird als einfacher Wrapper um die LocalDB Instanz-API implementiert. Wie in vielen ähnlichen SQL Server-Tools (zum Beispiel SQLCMD) werden Parameter als Befehlszeilenargumente an SqlLocalDB übergeben, und die Ausgabe wird an die Konsole gesendet.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+SqlLocalDB.exe ist ein einfaches Tool, das dem Benutzer die einfache Verwaltung der LocalDB-Instanzen in der Befehlszeile ermöglicht. Es wird als einfacher Wrapper um die LocalDB Instanz-API implementiert. Wie in vielen ähnlichen SQL Server-Tools (zum Beispiel SQLCMD) werden Parameter als Befehlszeilenargumente an SqlLocalDB übergeben, und die Ausgabe wird an die Konsole gesendet.  
   
  SqlLocalDB ermöglicht Entwicklern die Verwendung von LocalDB, ohne Code zum Aufrufen der API schreiben zu müssen und ohne von anderen Tools abhängig zu sein, die dies erledigen müssten.  
   
@@ -35,19 +37,19 @@ ms.lasthandoff: 01/08/2018
 |Option|Aktion|  
 |------------|------------------|  
 |`-?`|Druckt Hilfetext.|  
-|"Create\|c "der Instanzname" [Versionsnummer] [-s] "|Erstellt eine neue LocalDB-Instanz mit einem angegebenen Namen und einer Version.<br /><br /> Wenn der [Versionsnummer]-Parameter weggelassen wird, wird standardmäßig die SqlLocalDB-Buildversion verwendet.<br /><br /> -s startet die neue LocalDB-Instanz nach dem Erstellen.|  
-|"Delete\|"der Instanzname"-d "|Löscht die LocalDB-Instanz mit dem angegebenen Namen.|  
-|"Start|"der Instanzname"-s "|Startet die LocalDB-Instanz mit dem angegebenen Namen.|  
-|"Stop|p "der Instanzname" [-I\|-k] "|Beendet die LocalDB-Instanz mit dem angegebenen Namen, nachdem die Ausführung aktueller Abfragen beendet wird.<br /><br /> -i fordert das Herunterfahren der LocalDB-Instanz mit der NOWAIT-Option an.<br /><br /> -k bricht den LocalDB-Instanzprozess ohne Kontaktieren ab.|  
-|"Share\|h ["Besitzer-SID oder Konto"] "private Name" "Freigabenamen" "|Gibt die angegebene private Instanz mithilfe des angegebenen freigegebenen Namens frei. Wenn die Benutzer-SID oder der Kontoname weggelassen wird, wird standardmäßig der aktuelle Benutzer verwendet.|  
-|"Unshare\|"freigegebene Name" u "|Hebt die Freigabe der angegebenen freigegebenen LocalDB-Instanz auf.|  
-|"Info\|ich "|Listet alle vorhandenen LocalDB-Instanzen im Besitz des aktuellen Benutzers und aller freigegebenen LocalDB-Instanzen auf.|  
-|"Info\|i "der Instanzname" "|Druckt die Informationen zur angegebenen LocalDB-Instanz.|  
-|"Versionen aktualisieren\|V "|Listet alle auf dem Computer installierten LocalDB-Versionen auf.|  
+|`create\|c "instance name" [version-number] [-s]`|Erstellt eine neue LocalDB-Instanz mit einem angegebenen Namen und einer Version.<br /><br /> Wenn der [Versionsnummer]-Parameter weggelassen wird, wird standardmäßig die SqlLocalDB-Buildversion verwendet.<br /><br /> -s startet die neue LocalDB-Instanz nach dem Erstellen.|  
+|`delete\|d "instance name"`|Löscht die LocalDB-Instanz mit dem angegebenen Namen.|  
+|`start\|s "instance name"`|Startet die LocalDB-Instanz mit dem angegebenen Namen.|  
+|`stop\|p "instance name" [-i\|-k]`|Beendet die LocalDB-Instanz mit dem angegebenen Namen, nachdem die Ausführung aktueller Abfragen beendet wird.<br /><br /> -i fordert das Herunterfahren der LocalDB-Instanz mit der NOWAIT-Option an.<br /><br /> -k bricht den LocalDB-Instanzprozess ohne Kontaktieren ab.|  
+|`share\|h ["owner SID or account"] "private name" "shared name"`|Gibt die angegebene private Instanz mithilfe des angegebenen freigegebenen Namens frei. Wenn die Benutzer-SID oder der Kontoname weggelassen wird, wird standardmäßig der aktuelle Benutzer verwendet.|  
+|`unshare\|u "shared name"`|Hebt die Freigabe der angegebenen freigegebenen LocalDB-Instanz auf.|  
+|`info\|i`|Listet alle vorhandenen LocalDB-Instanzen im Besitz des aktuellen Benutzers und aller freigegebenen LocalDB-Instanzen auf.|  
+|`info\|i "instance name"`|Druckt die Informationen zur angegebenen LocalDB-Instanz.|  
+|`versions\|v`|Listet alle auf dem Computer installierten LocalDB-Versionen auf.|  
 |||  
-|"Trace\|t-on\|deaktiviert "|Aktiviert und deaktiviert die Ablaufverfolgung.|  
+|`trace\|t on\|off`|Aktiviert und deaktiviert die Ablaufverfolgung.|  
   
- SqlLocalDB behandelt Leerzeichen als Trennzeichen. Sie müssen die Instanznamen mit Anführungszeichen umschließen, die Leerzeichen und Sonderzeichen enthalten. Beispiel:  
+ SqlLocalDB behandelt Leerzeichen als Trennzeichen. Sie müssen die Instanznamen mit Anführungszeichen umschließen, die Leerzeichen und Sonderzeichen enthalten. Zum Beispiel:  
   
  `SqlLocalDB create "My instance name with spaces"`  
   

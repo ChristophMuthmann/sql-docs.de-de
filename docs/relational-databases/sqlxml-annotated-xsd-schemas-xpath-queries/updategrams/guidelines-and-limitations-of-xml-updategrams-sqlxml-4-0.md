@@ -8,24 +8,27 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: updategrams [SQLXML], about updategrams
+helpviewer_keywords:
+- updategrams [SQLXML], about updategrams
 ms.assetid: b5231859-14e2-4276-bc17-db2817b6f235
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cc5c47ae14b73ea1c69107aa0f7baf5c2dd436d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0a8396c837707ad9560aebb2e86617df8bfb2b69
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>Richtlinien und Einschränkungen von XML-Updategrams (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Beachten Sie Folgendes aus, wenn XML-Updategrams verwenden:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Wenn Sie XML-Updategrams verwenden, sind folgende Überlegungen zu berücksichtigen:  
   
 -   Bei Verwendung ein Updategrams für einen Einfügevorgang mit nur ein einzelnes Paar von  **\<vor >** und  **\<nach >** Blöcke, die  **\<vor >** Block kann ausgelassen werden. Im Gegensatz dazu bei einem Löschvorgang der  **\<nach >** Block kann ausgelassen werden.  
   

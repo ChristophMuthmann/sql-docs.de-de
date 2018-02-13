@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -28,19 +29,20 @@ helpviewer_keywords:
 - updg:before attribute
 - record updates [SQLXML]
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c6ff13edf01370778da9361d5834e70ebfdb20a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 01df178b47bb3aac688d12e54760cd530706fd94
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Aktualisieren von Daten mit XML-Updategrams (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wenn Sie vorhandene Daten aktualisieren, müssen Sie angeben, sowohl die  **\<vor >** und  **\<nach >** blockiert. Die Elemente im angegebenen der  **\<vor >** und  **\<nach >** Blöcke beschreiben die gewünschte Änderung. Verwendet das Updategram die angegebene(n) Element(e), werden die  **\<vor >** Block, um die vorhandene Datensätze in der Datenbank zu identifizieren. Die entsprechenden Elemente in der  **\<nach >** -Block zeigen an, wie die Datensätze nach Ausführen des Updatevorgangs aussehen soll. Aus diesen Informationen erstellt das Updategram eine SQL-Anweisung, die entspricht der  **\<nach >** Block. Das Updategram verwendet dann diese Anweisung, um die Datenbank zu aktualisieren.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Wenn Sie vorhandene Daten aktualisieren, müssen Sie angeben, sowohl die  **\<vor >** und  **\<nach >** blockiert. Die Elemente im angegebenen der  **\<vor >** und  **\<nach >** Blöcke beschreiben die gewünschte Änderung. Verwendet das Updategram die angegebene(n) Element(e), werden die  **\<vor >** Block, um die vorhandene Datensätze in der Datenbank zu identifizieren. Die entsprechenden Elemente in der  **\<nach >** -Block zeigen an, wie die Datensätze nach Ausführen des Updatevorgangs aussehen soll. Aus diesen Informationen erstellt das Updategram eine SQL-Anweisung, die entspricht der  **\<nach >** Block. Das Updategram verwendet dann diese Anweisung, um die Datenbank zu aktualisieren.  
   
  Dies ist das Updategramformat für einen Updatevorgang:  
   
@@ -59,10 +61,10 @@ ms.lasthandoff: 11/17/2017
 </ROOT>  
 ```  
   
- **\<Updg: vor dem >**  
+ **\<updg:before>**  
  Die Elemente in der  **\<vor >** -Block identifizieren vorhandene Datensätze in den Datenbanktabellen.  
   
- **\<Updg: Nachdem >**  
+ **\<updg:after>**  
  Die Elemente in der  **\<nach >** Block wird beschrieben, wie die Datensätze im angegebenen der  **\<vor >** Block sollte so aussehen, nachdem die Updates angewendet wurden.  
   
  Die **Zuordnungsschema** Attribut identifiziert das Zuordnungsschema vom Updategram verwendet werden. Wenn das Updategram ein Zuordnungsschema angibt, die Element- und Attributnamen Namen angegeben, der  **\<vor >** und  **\<nach >** -Blöcke müssen den Namen im Schema übereinstimmen. Das Zuordnungsschema ordnet diese Element- oder Attributnamen der Datenbanktabelle und den Spaltennamen zu.  

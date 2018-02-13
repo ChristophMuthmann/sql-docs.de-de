@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 8c055558b2a1e8287272835a0a1c0d2e2dc94f02
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 4e1190fea92c1e84ce38bd46040a8b5fcdd532d7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Erstellen und Konfigurieren einer verfügbarkeitsgruppe für SQL Server on Linux
 
@@ -64,7 +64,7 @@ Sie können auch ändern, die `mssql.conf` -Datei unter der `/var/opt/mssql` Net
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>Neu starten[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>neu starten [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 Nach der Aktivierung von Verfügbarkeitsgruppen, wie unter Windows neu starten müssen [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Dies kann durch folgenden erfolgen:
 
 ```bash
@@ -365,7 +365,7 @@ Dieser Abschnitt zeigt, wie zum Erstellen einer AG mit einem externen Cluster mi
 
 12. Klicken Sie auf **Weiter**.
 
-13. Wählen Sie, wie die sekundären Replikate initialisiert wird. Die Standardeinstellung ist die Verwendung [automatischem seeding](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), wofür die denselben Pfad auf allen Servern in der Verfügbarkeitsgruppe teilnehmen. Sie können auch veranlassen, den Assistenten führen Sie eine Sicherungskopie, erstellen, und stellen Sie wieder her (die zweite Option;) haben sie die Verknüpfung, wenn Sie manuell gesichert, kopiert und die Datenbank auf dem Replikat wiederhergestellt (dritte option;) oder fügen Sie die Datenbank später (letzte Option). Wie bei der Zertifikate, wenn Sie manuell kopieren und Sicherungen vornehmen, müssen Berechtigungen für die Sicherungsdateien für die anderen Replikate festgelegt werden. Klicken Sie auf **Weiter**.
+13. Wählen Sie, wie die sekundären Replikate initialisiert wird. Die Standardeinstellung ist die Verwendung [automatischem seeding](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), wofür die denselben Pfad auf allen Servern in der Verfügbarkeitsgruppe teilnehmen. Sie können auch veranlassen, den Assistenten führen Sie eine Sicherungskopie, erstellen, und stellen Sie wieder her (die zweite Option;) haben sie die Verknüpfung, wenn Sie manuell gesichert, kopiert und die Datenbank auf dem Replikat wiederhergestellt (dritte option;) oder fügen Sie die Datenbank später (letzte Option). Wie bei der Zertifikate, wenn Sie manuell Sicherungskopien und kopiert werden, muss Berechtigungen für die Sicherungsdateien für die anderen Replikate festgelegt werden. Klicken Sie auf **Weiter**.
 
 14. Klicken Sie im Dialogfeld "Überprüfung" Alles, was nicht wieder als Erfolg stammt, zu untersuchen. Einige Warnungen sind akzeptabel "und" nicht schwerwiegend, z. B. Wenn Sie keinen Listener erstellen. Klicken Sie auf **Weiter**.
 
@@ -596,7 +596,7 @@ AG-Ressource, die erstellt wird, ist eine besondere Art von Ressource, die als K
     ```
 
     >[!NOTE]
-    >Auf RHEL 7.4 können Sie eine Warnung mit der Verwendung des – Master auftreten. Um dies zu vermeiden, verwenden`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
+    >Auf RHEL 7.4 können Sie eine Warnung mit der Verwendung des – Master auftreten. Um dies zu vermeiden, verwenden `sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
    
     **SUSE Linux Enterprise Server (SLES)**
     

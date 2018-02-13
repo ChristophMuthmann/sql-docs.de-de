@@ -16,10 +16,10 @@ ms.author: maghan
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: fcc2707cb5febc11d033e745a41fd15dbdbddb7c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) und Reporting Services
 

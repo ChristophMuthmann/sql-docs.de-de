@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: d6a49bc2f3fb815cecda0e8a24a63993b5423103
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5f52c5f83ca91b196f0bf2f05e98fb73133b4c8a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu-Cluster und die Verfügbarkeitsgruppenressource konfigurieren
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/09/2018
 Dieses Dokument erläutert, wie Sie einen Cluster mit drei Knoten auf Ubuntu erstellen, und fügen eine zuvor erstellte verfügbarkeitsgruppe als Ressource im Cluster. Für hohe Verfügbarkeit, eine verfügbarkeitsgruppe unter Linux erfordert drei Knoten?: Siehe [hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md).
 
 > [!NOTE] 
-> SQL Server Integration in Schrittmacher unter Linux ist an diesem Punkt nicht als gekoppelten als mit WSFC unter Windows. Von SQL, besteht keine Kenntnisse über das Vorhandensein des Clusters, alle Orchestrierung befindet sich im außerhalb und der Dienst wird als eigenständige Instanz von Schrittmacher gesteuert. Außerdem virtuellen Netzwerknamen bezieht sich auf WSFC, es gibt keine Entsprechung in Schrittmacher identisch. Always On-dynamische Verwaltungssichten, die Clusterinformationen Abfragen werden leere Zeilen zurückgegeben. Sie können einen Listener für die Verwendung für transparente wiederverbindung nach einem Failover weiterhin erstellen, jedoch müssen Sie manuell den verfügbarkeitsgruppenlistener-Namen in der DNS-Server für die IP-Adresse verwendet, um die virtuelle IP-Adressressource erstellen (wie nachstehend beschrieben) registrieren.
+> SQL Server Integration in Schrittmacher unter Linux ist an diesem Punkt nicht als gekoppelten als mit WSFC unter Windows. Von SQL, besteht keine Kenntnisse über das Vorhandensein des Clusters, alle Orchestrierung befindet sich im außerhalb und der Dienst wird als eigenständige Instanz von Schrittmacher gesteuert. Außerdem virtuellen Netzwerknamen bezieht sich auf WSFC, es gibt keine Entsprechung in Schrittmacher identisch. Always On-dynamische Verwaltungssichten, die Clusterinformationen Abfragen werden leere Zeilen zurückgegeben. Sie können einen Listener für die Verwendung für transparente wiederverbindung nach einem Failover weiterhin erstellen, jedoch müssen Sie manuell den verfügbarkeitsgruppenlistener-Namen in der DNS-Server für die IP-Adresse verwendet, um die virtuelle IP-Adressressource erstellen (wie in den folgenden Abschnitten erläutert) registrieren.
 
 In den folgenden Abschnitten exemplarisch die Schritte zum Einrichten einer Lösung mit Failovercluster. 
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. Erstellen des Clusters an. 
 
    >[!WARNING]
-   >Aufgrund eines bekannten Problems, die Hersteller des clustering untersuchen, beginnend Clientfehler auf, der Cluster ("Pcs Cluster Start") unten Fehler. Dies ist die Protokolldatei in /etc/corosync/corosync.conf der wird erstellt, wenn die Cluster-Setup-Befehlsoption wird ausgeführt, ist falsch konfiguriert. Um dieses Problem zu umgehen, ändern Sie die Protokolldatei: /var/log/corosync/corosync.log. Alternativ können Sie die /var/log/cluster/corosync.log-Datei erstellen.
+   >Cluster ("Pcs Cluster Start") tritt aufgrund eines bekannten Problems, die Hersteller des clustering untersuchen, beginnend folgende Fehler. Dies ist die Protokolldatei in /etc/corosync/corosync.conf der wird erstellt, wenn die Cluster-Setup-Befehlsoption wird ausgeführt, ist falsch konfiguriert. Um dieses Problem zu umgehen, ändern Sie die Protokolldatei: /var/log/corosync/corosync.log. Alternativ können Sie die /var/log/cluster/corosync.log-Datei erstellen.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
@@ -150,7 +150,7 @@ sudo pcs property set stonith-enabled=false
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Festlegen Sie Clustereigenschaft auf "false" Start-Fehler-ist--Schwerwiegender
 
-`start-failure-is-fatal`Gibt an, ob ein Fehler beim Starten einer Ressource auf einem Knoten weiter Start Versuche auf diesem Knoten verhindert. Bei Festlegung auf `false`, der Cluster entscheidet, ob auf demselben Knoten erneut basierend auf der Ressource aktuelle Anzahl und Migration Fehlerschwellenwert starten. Daher nach dem Failover gruppieren Schrittmacher Wiederholungen starten die Verfügbarkeit Ressource auf dem ehemaligen primären sobald die SQL-Instanz verfügbar ist. Schrittmacher stuft das sekundäre Replikat, und automatisch wieder verbunden, der verfügbarkeitsgruppe. 
+`start-failure-is-fatal` Gibt an, ob ein Fehler beim Starten einer Ressource auf einem Knoten weiter Start Versuche auf diesem Knoten verhindert. Bei Festlegung auf `false`, der Cluster entscheidet, ob auf demselben Knoten erneut basierend auf der Ressource aktuelle Anzahl und Migration Fehlerschwellenwert starten. Daher nach dem Failover gruppieren Schrittmacher Wiederholungen starten die Verfügbarkeit Ressource auf dem ehemaligen primären sobald die SQL-Instanz verfügbar ist. Schrittmacher stuft das sekundäre Replikat, und automatisch wieder verbunden, der verfügbarkeitsgruppe. 
 
 Aktualisieren Sie den Eigenschaftswert an `false` führen Sie das folgende Skript aus:
 

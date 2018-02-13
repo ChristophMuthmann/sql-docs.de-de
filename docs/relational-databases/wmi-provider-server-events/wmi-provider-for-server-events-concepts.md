@@ -18,19 +18,20 @@ helpviewer_keywords:
 - monitoring events [WMI]
 - events [WMI]
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 37de98527c65803971285bd52134d26449954b23
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 90490b4884521f509d6e008f2bbde49605afd7b4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Konzepte des WMI-Anbieters für Serverereignisse
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Der WMI-Anbieter für Serverereignisse können Sie Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) zum Überwachen von Ereignissen in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Mit dem WMI-Anbieter für Serverereignisse können Sie Ereignisse in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz mithilfe von WMI (Windows Management Instrumentation) überwachen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Grundlegendes zum WMI-Anbieter für Serverereignisse](../../relational-databases/wmi-provider-server-events/understanding-the-wmi-provider-for-server-events.md)  

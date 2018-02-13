@@ -21,10 +21,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 180c0ca64cf4619a8ada7a90d45fa0498e2ea87a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Optionen für Anforderung für Wertinklusionsprofil (Datenprofilerstellungs-Task)
   Verwenden Sie den Bereich **Anforderungseigenschaften** der Seite **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für Wertinklusionsprofil** festzulegen. Ein Wertinklusionsprofil berechnet die Überschneidung in den Werten zwischen zwei Spalten oder Gruppen von Spalten. Dieses Profil kann auch ermitteln, ob eine Spalte oder eine Gruppe von Spalten geeignet ist, um als Fremdschlüssel zwischen den ausgewählten Tabellen zu fungieren. Dieses Profil hilft Ihnen auch, Probleme mit den Daten zu identifizieren, z. B. ungültige Werte. Zum Beispiel verwenden Sie ein Wertinklusionsprofil, um ein Profil für die Spalte ProductID einer Vertriebstabelle zu erstellen. Das Profil erkennt, dass die Spalte Werte enthält, die nicht in der Spalte ProductID der Products-Tabelle enthalten sind.  

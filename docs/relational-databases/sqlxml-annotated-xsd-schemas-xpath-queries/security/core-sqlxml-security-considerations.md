@@ -8,24 +8,27 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: security [SQLXML], about security
+helpviewer_keywords:
+- security [SQLXML], about security
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 185fd7894bf179bcc43df4c5b6ce9c31e702143f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a447b0efceee45f759743b245a7351dc381ba208
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="core-sqlxml-security-considerations"></a>Wichtige Sicherheitsüberlegungen zu SQLXML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Im folgenden werden Sicherheitsrichtlinien zur Verwendung von SQLXML für den Datenzugriff.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Im Folgenden werden Sicherheitsrichtlinien zur Verwendung von SQLXML für den Datenzugriff erläutert.  
   
 -   Der SQLXMLOLEDB-Anbieter macht eine **StreamFlags** flags-Eigenschaft, die Sie festlegen kann, der angibt, welche SQLXML-Funktionalität aktiviert oder deaktiviert für jede spezifische Instanz. Anhand dieser Eigenschaft können Sie die Verwendung von SQLXML anpassen und sicherstellen, dass nur die gewünschten Komponenten aktiviert werden. Weitere Informationen finden Sie unter [SQLXMLOLEDB-Anbieter &#40; SQLXML 4.0 &#41; ](http://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110).  
   

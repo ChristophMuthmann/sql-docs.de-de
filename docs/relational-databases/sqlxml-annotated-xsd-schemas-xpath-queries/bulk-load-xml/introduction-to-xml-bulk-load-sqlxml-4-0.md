@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - transacted XML Bulk Load operations
 - streaming XML data
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f687a25a48ff38ee8b109161e332f7306d64f177
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 18950714bd976c224ef33627fb12528ad08b0584
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>Einführung in XML-Massenladen (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]XML-Massenladen ist ein eigenständiges COM-Objekt, das Ihnen ermöglicht, laden semistrukturierte XML-Daten in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabellen.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+XML-Massenladen ist ein eigenständiges COM-Objekt, das Ihnen ermöglicht, laden semistrukturierte XML-Daten in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabellen.  
   
  Sie können XML-Daten in eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank einfügen, indem Sie eine INSERT-Anweisung und die OPENXML-Funktion verwenden. Das Massenladen-Hilfsprogramm zeigt jedoch eine bessere Leistung beim Einfügen großer XML-Datenmengen.  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 -   XSD- und XDR-Schemas mit Anmerkungen Weitere Informationen über XSD-Schemas mit Anmerkungen finden Sie unter [Einführung in XSD-Schemas mit Anmerkungen &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Informationen über XDR-Schemas mit Anmerkungen finden Sie unter [XDR-Schemas mit Anmerkungen &#40; veraltet in SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Masseneinfügemechanismen, z. B. die [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT-Anweisung und das bcp-Hilfsprogramm. Weitere Informationen finden Sie unter [BULK INSERT &#40; Transact-SQL &#41; ](../../../t-sql/statements/bulk-insert-transact-sql.md) und [Bcp (Hilfsprogramm)](../../../tools/bcp-utility.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] BULK insert Mechanismen, z. B. die [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT-Anweisung und das Bcp-Hilfsprogramm. Weitere Informationen finden Sie unter [BULK INSERT &#40; Transact-SQL &#41; ](../../../t-sql/statements/bulk-insert-transact-sql.md) und [Bcp (Hilfsprogramm)](../../../tools/bcp-utility.md).  
   
 ## <a name="streaming-of-xml-data"></a>Streaming von XML-Daten  
  Da das XML-Quelldokument unter Umständen groß ist, wird das gesamte Dokument für die Massenladenverarbeitung nicht in den Speicher gelesen. Stattdessen interpretiert XML-Massenladen die XML-Daten als Datenstrom und liest diesen. Während das Hilfsprogramm die Daten liest, identifiziert es die Datenbanktabelle(n), generiert den entsprechenden Datensatz bzw. Datensätze aus der XML-Datenquelle und sendet den Datensatz bzw. die Datensätze zum Einfügen an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -82,7 +84,7 @@ ms.lasthandoff: 11/17/2017
   
  Wenn die "ConnectionString"-Eigenschaft die Verbindungszeichenfolge festlegt und die Transaktionseigenschaft auf "true" festgelegt ist, arbeitet XML-Massenladen in einen eigenen Transaktionskontext. (Zum Beispiel startet XML-Massenladen eine eigene Transaktion und führt ggf. einen Commit oder Rollback aus.)  
   
- Wenn der "connectioncommand"-Eigenschaft legt fest, die Verbindung mit einem vorhandenen Verbindungsobjekt und die Transaktionseigenschaft auf "true" festgelegt ist, XML-Massenladevorgang gibt keine aus ein COMMIT oder ROLLBACK-Anweisung im Erfolgsfall oder ein Fehler auftritt, bzw.. Tritt ein Fehler auf, gibt XML-Massenladen die entsprechende Fehlermeldung zurück. Die Entscheidung, ob eine COMMIT- oder ROLLBACK-Anweisung ausgegeben wird, obliegt dem Client, der das Massenladen gestartet hat. Das Verbindungsobjekt, das für XML-Massenladen verwendet wird soll vom Typ ICommand oder ein ADO-Befehlsobjekt sein.  
+ Wenn der "connectioncommand"-Eigenschaft legt fest, die Verbindung mit einem vorhandenen Verbindungsobjekt und die Transaktionseigenschaft auf "true" festgelegt ist, XML-Massenladevorgang gibt keine aus ein COMMIT oder ROLLBACK-Anweisung im Erfolgsfall oder ein Fehler auftritt, bzw. Tritt ein Fehler auf, gibt XML-Massenladen die entsprechende Fehlermeldung zurück. Die Entscheidung, ob eine COMMIT- oder ROLLBACK-Anweisung ausgegeben wird, obliegt dem Client, der das Massenladen gestartet hat. Das Verbindungsobjekt, das für XML-Massenladen verwendet wird soll vom Typ ICommand oder ein ADO-Befehlsobjekt sein.  
   
  In SQLXML 4.0 kann eine ConnectionObject den Transaktionssatz-Eigenschaft auf "false" verwendet werden. Der nicht durchgeführte Modus wird nicht mit einem ConnectionObject unterstützt, da es nicht möglich, mehr als eine IRowsetFastLoad-Schnittstelle für eine übergebene Sitzung geöffnet ist.  
   

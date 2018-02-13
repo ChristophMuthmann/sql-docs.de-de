@@ -8,26 +8,30 @@ ms.service:
 ms.component: localdb
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: LocalDBDeleteInstance
-apilocation: sqluserinstance.dll
+apiname:
+- LocalDBDeleteInstance
+apilocation:
+- sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 37cb2a7e-672a-4223-b6f3-a94d7b8d58cd
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 412b1e428c930a0998a20b22d82481ae5413198b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4ffa61ff031a3046185077fbe121bacd862c9349
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="localdbdeleteinstance-function"></a>LocalDBDeleteInstance-Funktion
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Entfernt die angegebene SQL Server Express LocalDB-Instanz an.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Entfernt die angegebene SQL Server Express LocalDB-Instanz.  
   
  **Headerdatei:** sqlncli.h  
   

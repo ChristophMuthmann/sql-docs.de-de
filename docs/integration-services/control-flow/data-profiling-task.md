@@ -25,10 +25,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 62c240d11e15eea39fb7246d147680b39370c7a6
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="data-profiling-task"></a>Datenprofilerstellungs-Task
   Der Datenprofilerstellungs-Task berechnet verschiedene Profile, mit deren Hilfe Sie sich mit einer Datenquelle vertraut machen und Probleme bei den Daten identifizieren können, die behoben werden müssen.  

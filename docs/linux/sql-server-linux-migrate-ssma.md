@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: 7c2e20d2c7742a40916c010f1fca17f06398caa8
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: a59b3f20018c7dfff63cd716b6c838efef650437
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>Automatisierung der Datenbankmigration zu Linux mit SQL Server Migration Assistant
 

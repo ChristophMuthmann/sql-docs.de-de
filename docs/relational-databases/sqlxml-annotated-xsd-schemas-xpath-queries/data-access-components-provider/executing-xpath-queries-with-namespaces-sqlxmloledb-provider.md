@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - XPath queries [SQLXML], SQLXMLOLEDB Provider
 - namespaces [SQLXML], XPath queries
 ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1ce8d6b1a7a3d828112841bfcaa71921bfb215d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a7bff838d36bee8cfb3a9461ffdd8435b1cbb001
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>Ausführen von XPath-Abfragen mit Namespaces (SQLXMLOLEDB-Anbieter)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]XPath-Abfragen können Namespaces enthalten. Wenn die Schemaelemente mit Namespace angegeben wurden (d. h. wenn Sie einen Zielnamespace enthalten), dann müssen mit diesem Schema ausgeführte XPath-Abfragen diesen Namespace angeben.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+XPath-Abfragen können Namespaces enthalten. Wenn die Schemaelemente mit Namespace angegeben wurden (d. h. wenn Sie einen Zielnamespace enthalten), dann müssen mit diesem Schema ausgeführte XPath-Abfragen diesen Namespace angeben.  
   
  Weil die Verwendung des Platzhalterzeichens (*) in SQLXML 4.0 nicht unterstützt wird, müssen Sie die XPath-Abfrage mithilfe eines Namespacepräfix angeben. Um dieses Präfix aufzulösen, verwenden Sie die Namespaces-Eigenschaft, die Namespacebindung an.  
   

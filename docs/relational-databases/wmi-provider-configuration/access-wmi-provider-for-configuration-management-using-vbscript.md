@@ -11,25 +11,27 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - VBScript [WMI]
 - modifying SQL Server Service properties
 - WMI Provider for Configuration Management, VBScript
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c6e29c6279e511fa303b53392f08e10f31b00f5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5815273d7d8d8d65799c61541b61dc8cdd00ec5f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>WMI-Anbieter für den Zugriff für die Konfigurationsverwaltung mit VBScript
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]In diesem Abschnitt wird beschrieben, wie ein VBScript-Programm zu erstellen, die die Version der installierten Instanzen von listet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die auf einem Computer ausgeführt werden.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+In diesem Abschnitt wird beschrieben, wie ein VBScript-Programm zu erstellen, die die Version der installierten Instanzen von listet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die auf einem Computer ausgeführt werden.  
   
  Mit dem Codebeispiel werden die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die auf dem Computer ausgeführt werden, und deren Version aufgeführt.  
   

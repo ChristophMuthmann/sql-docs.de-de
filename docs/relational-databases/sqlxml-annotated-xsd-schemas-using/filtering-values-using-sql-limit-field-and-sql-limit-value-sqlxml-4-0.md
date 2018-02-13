@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff0a1647573191483cc9c14e68734ee3a28707c4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77113446bfea793621c13567bdb30ff7381290ef
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtern von Werten mit 'sql:limit-field' und 'sql:limit-value' (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Sie können Zeilen einschränken, die aus einer Datenbankabfrage basierend auf einigen beschränkenden Werts zurückgegeben werden. Die **' SQL: Limit-Feld** und **' SQL: Limit-Wert** Anmerkungen werden verwendet, um die Datenbankspalte zu identifizieren, die Grenzwerte enthält und geben Sie einen bestimmten Grenzwert verwendet werden, um die Daten filtern zurückgegeben.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Sie können Zeilen, die von einer Datenbankabfrage zurückgegeben werden, mit einem Grenzwert beschränken. Die **' SQL: Limit-Feld** und **' SQL: Limit-Wert** Anmerkungen werden verwendet, um die Datenbankspalte zu identifizieren, die Grenzwerte enthält und geben Sie einen bestimmten Grenzwert verwendet werden, um die Daten filtern zurückgegeben.  
   
  Die **' SQL: Limit-Feld** -Anmerkung verwendet, um eine Spalte identifizieren, die einen Grenzwert enthält; er ist für jedes zugeordnete Element oder Attribut zulässig.  
   
@@ -311,7 +313,7 @@ ms.lasthandoff: 11/17/2017
     ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Float und Real &#40; Transact-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [float and real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
  [Nchar und Nvarchar &#40; Transact-SQL &#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [Installieren von SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
  [Versehen mit XSD-Schemas in Abfragen &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  

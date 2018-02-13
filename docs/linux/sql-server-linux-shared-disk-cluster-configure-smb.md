@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 53c1bf7265cc15b9dd9401958317d4f14ea400d1
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 704cb4dfb96a2293bf1a595fda781519b70183cb
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Konfigurieren der Failover-Clusterinstanz - SMB - SQL Server on Linux
 
@@ -81,7 +81,7 @@ Hier sind einige Tipps und Hinweise für die Verwendung von SMB erfolgreich:
     mkdir <TempDir>
     ```
 
-    <TempDir>ist der Name des Ordners. Das folgende Beispiel erstellt einen Ordner namens /var/opt/mssql/tmp.
+    <TempDir> ist der Name des Ordners. Das folgende Beispiel erstellt einen Ordner namens /var/opt/mssql/tmp.
 
     ```bash
     mkdir /var/opt/mssql/tmp
@@ -172,7 +172,7 @@ Hier sind einige Tipps und Hinweise für die Verwendung von SMB erfolgreich:
     sudo systemctl status mssql-server
     ```
  
-   *    Um weitere zu testen, erstellen Sie eine Datenbank, um sicherzustellen, dass die Berechtigungen Ordnung sind. Das folgende Beispiel verwendet Transact-SQL. Sie können SSMS verwenden.
+   *    Um weitere zu testen, erstellen Sie eine Datenbank, um sicherzustellen, dass die Berechtigungen Ordnung sind. Im folgenden Beispiel wird die Transact-SQL; Sie können SSMS verwenden.
 
     ![10_testcreatedb][2] 
   
@@ -209,7 +209,7 @@ Hier sind einige Tipps und Hinweise für die Verwendung von SMB erfolgreich:
     mkdir <FolderName>
     ```
 
-    \<Ordnername > ist der Name des Ordners. Vollständiger Pfad des Ordners müssen angegeben werden, sofern Sie nicht den richtigen Speicherort. Das folgende Beispiel erstellt einen Ordner namens /var/opt/mssql/userdata.
+    \<Ordnername > ist der Name des Ordners. Vollständigen Ordnerpfad muss angegeben werden, sofern Sie nicht den richtigen Speicherort. Das folgende Beispiel erstellt einen Ordner namens /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -239,7 +239,7 @@ Hier sind einige Tipps und Hinweise für die Verwendung von SMB erfolgreich:
  
    * Geben Sie Exit nicht mehr der Superuser sein.
 
-   * Um zu testen, erstellen Sie eine Datenbank in diesem Ordner. Im Beispiel unten verwendet Sqlcmd, erstellen Sie eine Datenbank, den Kontext zu wechseln, vergewissern Sie sich die Dateien vorhanden sind, auf der Betriebssystemebene und löscht dann das temporäre Verzeichnis. Sie können SSMS verwenden.
+   * Um zu testen, erstellen Sie eine Datenbank in diesem Ordner. Im folgenden Beispiel wird Sqlcmd, erstellen Sie eine Datenbank, den Kontext zu wechseln, vergewissern Sie sich die Dateien vorhanden sind, auf der Betriebssystemebene und löscht dann das temporäre Verzeichnis. Sie können SSMS verwenden.
  
    * Heben Sie die Bereitstellung der Freigabe 
 

@@ -8,28 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: WMI Classes
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- WMI Classes
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 helpviewer_keywords:
 - WMI Provider for Configuration Management, classes
 - classes [WMI]
 ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce49f66f7306b3677319683fa1dfa0a986cfa5b7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 743d51467ade689f46643e566779dd507e852fe9
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>Klassen für WMI-Anbieter für die Konfigurationsverwaltung
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Der Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI)-Anbieter für die Konfigurationsverwaltung bietet Funktionalität für die folgenden Klassen:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Der Windows Management Instrumentation (WMI)-Anbieter für die Konfigurationsverwaltung bietet Funktionalität für folgende Klassen:  
   
  [CInstance-Klasse](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md)  
   
@@ -47,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
  [ServerNetworkProtocol-Klasse](../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md)  
   
- [ServerNetworkProtocolIPAddress Class](../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)  
+ [ServerNetworkProtocolIPAddress-Klasse](../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)  
   
  [ServerNetworkProtocolProperty-Klasse](../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)  
   

@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: SetOrderValue Method (ClientNetworkProtocol Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- SetOrderValue Method (ClientNetworkProtocol Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: SetOrderValue method
+helpviewer_keywords:
+- SetOrderValue method
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be269f8784d3812c0110bfbc12c53f1ad6cca7d0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1663a40671e6d5df2c407c1a99aa70751f587fbc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>SetOrderValue-Methode (ClientNetworkProtocol-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Wählt das Protokoll mit dem angegebenen Reihenfolgenwert aus der clientprotokollliste aus.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Wählt das Protokoll mit dem angegebenen Reihenfolgenwert aus der Clientprotokollliste aus.  
   
 ## <a name="syntax"></a>Syntax  
   

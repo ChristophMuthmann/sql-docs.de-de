@@ -1,11 +1,11 @@
 ---
 title: "Editionen und unterstützten Funktionen von SQL Server-2017 ~ Linux | Microsoft Docs"
-ms.custom: 
+ms.custom: sql-linux
 ms.date: 09/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -35,13 +35,15 @@ caps.latest.revision:
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e1734b7ec7619a6943e1d79a0933b6189ad3162d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: cd937ab176ef7c33f6ffa99090ac36b69182968c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Editionen und unterstützten Funktionen von SQL Server-2017 unter Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Dieser Artikel enthält Details zu Features, die von den verschiedenen Editionen von SQL Server-2017 unter Linux unterstützt. Editionen und unterstützten Funktionen von SQL Server unter Windows finden Sie unter [2017 für SQL Server - Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  
   
@@ -72,7 +74,7 @@ Eine Liste der SQL Server-Funktionen unter Linux nicht verfügbar, finden Sie un
 
 Sie können auch nur die Clientkomponenten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einem Computer mit Client-/Serveranwendungen installieren und so eine direkte Verbindung mit einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz herstellen. Die Installation der Clientkomponenten ist auch dann eine gute Wahl, wenn Sie eine Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einem Datenbankserver verwalten, oder wenn Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anwendungen entwickeln möchten.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Komponenten  
+## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Komponenten  
 
 SQL Server-2017 unter Linux unterstützt die SQL Server-Datenbankmodul. Die folgende Tabelle beschreibt die Funktionen im Datenbankmodul.   
   

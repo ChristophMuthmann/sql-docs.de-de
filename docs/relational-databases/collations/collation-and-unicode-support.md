@@ -8,7 +8,8 @@ ms.service:
 ms.component: collations
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,19 +30,20 @@ helpviewer_keywords:
 - SQL Server collations
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ef3f7949bbccdc46f59bcb74de76cf395c09885c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d1fd84b774ee2ea2a7af3db4f1cd015dfbd3176d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sortierungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bieten Sortierregeln und die Berücksichtigung von Groß-/Kleinschreibung und Akzenten für die Daten. Sortierungen, die mit Zeichendatentypen wie **char** und **varchar** verwendet werden, geben die Codeseite und die entsprechenden Zeichen vor, die für den jeweiligen Datentyp dargestellt werden können. Bei der Installation einer neuen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bei der Wiederherstellung einer Datenbanksicherung oder bei der Verbindung von Servern mit Clientdatenbanken ist es wichtig, dass Sie die Gebietsschemaanforderungen, die Sortierreihenfolge und das Verhalten in Bezug auf die Groß-/Kleinschreibung und Akzente der Daten kennen, mit denen Sie arbeiten. Informationen zum Auflisten von Sortierungen, die in Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verfügbar sind, finden Sie unter [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Sortierungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bieten Sortierregeln und die Berücksichtigung von Groß-/Kleinschreibung und Akzenten für die Daten. Sortierungen, die mit Zeichendatentypen wie **char** und **varchar** verwendet werden, geben die Codeseite und die entsprechenden Zeichen vor, die für den jeweiligen Datentyp dargestellt werden können. Bei der Installation einer neuen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bei der Wiederherstellung einer Datenbanksicherung oder bei der Verbindung von Servern mit Clientdatenbanken ist es wichtig, dass Sie die Gebietsschemaanforderungen, die Sortierreihenfolge und das Verhalten in Bezug auf die Groß-/Kleinschreibung und Akzente der Daten kennen, mit denen Sie arbeiten. Informationen zum Auflisten von Sortierungen, die in Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verfügbar sind, finden Sie unter [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
     
  Wenn Sie eine Sortierung für den Server, die Datenbank, die Spalte oder den Ausdruck auswählen, weisen Sie den Daten bestimmte Merkmale zu, die Auswirkungen auf die Ergebnisse vieler Datenbankvorgänge haben. Wenn Sie beispielsweise eine Abfrage mit ORDER BY erstellen, kann die Sortierreihenfolge des Resultsets von der Sortierung abhängen, die für die Datenbank gilt oder die in einer COLLATE-Klausel auf Ausdrucksebene der Abfrage vorgegeben ist.    
     
@@ -64,11 +66,11 @@ ms.lasthandoff: 11/17/2017
     
  Die einer Sortierung zugeordneten Optionen sind die Berücksichtigung von Groß-/Kleinschreibung, Akzenten, Kana, Breite und Variierungsauswahlzeichen. Diese Optionen werden angegeben, indem sie an den Sortierungsnamen angefügt werden. Beispiel: Bei der Sortierung `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` wird nach Groß-/Kleinschreibung, nach Akzent, Kana und Breite unterschieden. Als weiteres Beispiel berücksichtigt diese Sortierung `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` Groß-/Kleinschreibung und Akzente nicht, wohl aber Kana, Breite und Variierungsauswahlzeichen.  In der folgenden Tabelle wird das den verschiedenen Optionen zugeordnete Verhalten beschrieben.    
     
-|Option|Beschreibung|    
+|Option|Description|    
 |------------|-----------------|    
 |Unterscheidung nach Groß-/Kleinschreibung (_CS)|Unterscheidet zwischen Groß- und Kleinbuchstaben. Wenn diese Option ausgewählt ist, stehen Kleinbuchstaben in der Sortierreihenfolge vor ihren entsprechenden Großbuchstaben. Wenn diese Option nicht aktiviert wird, wird bei der Sortierung die Groß- und Kleinschreibung nicht berücksichtigt. D. h. SQL Server betrachtet die groß- und die kleingeschriebenen Versionen von Buchstaben für Sortierzwecke als identisch. Sie können die Nichtunterscheidung nach Groß-/Kleinbuchstaben durch Angeben von "_CI" explizit auswählen.|    
 |Unterscheidung nach Akzent (_AS)|Unterscheidet zwischen Zeichen mit Akzent und Zeichen ohne Akzent. Beispielsweise ist 'a' nicht mit 'ấ' identisch. Wenn diese Option nicht aktiviert wird, wird bei der Sortierung nicht nach Akzent unterschieden. D. h. SQL Server betrachtet die Versionen von Buchstaben mit und ohne Akzent für Sortierzwecke als identisch. Sie können die Nichtunterscheidung nach Akzent durch Angeben von "_AI" explizit auswählen.|    
-|Unterscheidung nach Kana (_KS)|Unterscheidet zwischen den zwei Arten japanischer Kana-Zeichen: Hiragana und Katakana. Wenn diese Option nicht aktiviert wird, wird bei der Sortierung Kana nicht beachtet. D. h. SQL Server unterscheidet bei der Sortierung nicht zwischen Hiragana- und Katakana-Zeichen. Das Weglassen dieser Option ist die einzige Möglichkeit, die Nichtbeachtung von Kana anzugeben.|    
+|Unterscheidung nach Kana (_KS)|Unterscheidet zwischen den zwei Arten japanischer Kana-Zeichen: Hiragana und Katakana. Wenn diese Option nicht aktiviert wird, wird bei der Sortierung Kana nicht beachtet. D. h. SQL Server unterscheidet bei der Sortierung nicht zwischen Hiragana- und Katakana-Zeichen. Das Weglassen dieser Option ist die einzige Möglichkeit, die Nichtbeachtung von Kana anzugeben.|    
 |Unterscheidung nach Breite (_WS)|Unterscheidet zwischen Zeichen halber Breite und Zeichen normaler Breite. Wenn diese Option nicht ausgewählt ist, betrachtet SQL Server die Darstellung in halber Breite und in normaler Breite desselben Zeichens für Sortierzwecke als identisch. Das Weglassen dieser Option ist die einzige Möglichkeit, die Nichtbeachtung der Breite anzugeben.|    
 |Mit Unterscheidung nach Variierungsauswahlzeichen (_VSS) | Unterscheidet zwischen verschiedenen Variierungsauswahlzeichen für Ideogramme in den japanischen Sortierungen Japanese_Bushu_Kakusu_140 und Japanese_XJIS_140, die erstmals in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]eingeführt wurden. Eine Variierungssequenz besteht aus einem Basiszeichen plus einem ergänzenden Variierungsauswahlzeichen. Wenn diese _VSS-Option nicht aktiviert ist, berücksichtigt die Sortierung die Variierung nicht, und das Variierungsauswahlzeichen wird im Vergleich nicht berücksichtigt. Das bedeutet, dass SQL Server Zeichen, die auf dem gleichen Basiszeichen aufbauen, aber verschiedene Variierungsauswahlzeichen aufweisen, für Sortierungszwecke als identisch. Weitere Informationen enthält auch die  [Unicode Ideographic Variation Database (Unicode-Datenbank der Ideogrammvariierungen)](http://www.unicode.org/reports/tr37/). <br/><br/> Variierungsauswahlzeichen unterstützende Sortierungen (_VSS) werden in Indizes für die Volltextsuche nicht unterstützt. Indizes für die Volltextsuche unterstützen nur Optionen für die Unterscheidung nach Akzent (_AS), Kana (_KS) und Breite (_WS). Die SQL Server XML- und CLR-Module unterstützen keine Variierungsauswahlzeichen (_VSS).
     

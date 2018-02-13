@@ -33,10 +33,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 77962f05ede4b2650db4af59fdbde5ec42fdf1d5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="working-with-images-with-the-script-task"></a>Arbeiten mit Bildern mithilfe des Skripttasks
   Datenbanken von Produkten oder Benutzern enthalten häufig neben Text und numerischen Daten auch Bilder. Der **System.Drawing**-Namespace in Microsoft .NET Framework stellt Klassen zum Bearbeiten von Bildern bereit.  

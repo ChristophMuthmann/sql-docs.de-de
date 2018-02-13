@@ -16,19 +16,20 @@ helpviewer_keywords:
 - SQL Server Agent [WMI]
 - WMI Provider for Server Events, about WMI Provider for Server Events
 ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0771cf457515af5fd66da0f1232f2c908ae460ba
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d68916b90c9b8312f02f75f5911a7871d350d4d5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>Grundlegendes zum WMI-Anbieter für Serverereignisse
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Der WMI-Anbieter für Serverereignisse können Sie die Windows-Verwaltungsinstrumentation (WMI) zum Überwachen von Ereignissen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Der Anbieter wandelt funktioniert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in ein verwaltetes WMI-Objekt. Jedes Ereignis, das eine ereignisbenachrichtigung in generieren kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können mithilfe dieses Anbieters von WMI verwendet werden. Darüber hinaus kann der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent als eine mit WMI interagierende Verwaltungsanwendung auf diese Ereignisse reagieren. Dadurch wird der durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent abgedeckte Ereignisbereich im Gegensatz zu früheren Versionen erweitert.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Über den WMI-Anbieter für Serverereignisse können Sie Ereignisse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mithilfe von WMI (Windows Management Instrumentation) überwachen. Der Anbieter wandelt funktioniert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in ein verwaltetes WMI-Objekt. Jedes Ereignis, das eine ereignisbenachrichtigung in generieren kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können mithilfe dieses Anbieters von WMI verwendet werden. Darüber hinaus kann der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent als eine mit WMI interagierende Verwaltungsanwendung auf diese Ereignisse reagieren. Dadurch wird der durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent abgedeckte Ereignisbereich im Gegensatz zu früheren Versionen erweitert.  
   
  Verwaltungsanwendungen wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent erreichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ereignisse, indem Sie in der WMI-Anbieter für Serverereignisse WMI Query Language (WQL)-Anweisungen ausgeben. WQL ist eine vereinfachte Teilmenge von Structured Query Language (SQL) mit einigen WMI-spezifischen Erweiterungen. Bei Verwendung von WQL ruft eine Anwendung einen Ereignistyp für eine bestimmte Datenbank oder ein bestimmtes Datenbankobjekt ab. Der WMI-Anbieter für Serverereignisse übersetzt die Abfrage in eine Ereignisbenachrichtigung und erstellt dadurch auf effektive Weise eine Ereignisbenachrichtigung in der Zieldatenbank. Weitere Informationen zur Funktionsweise von ereignisbenachrichtigungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [WMI Provider for Server Ereignisse Concepts](http://technet.microsoft.com/library/ms180560.aspx). Die Ereignisse, die abgefragt werden können, sind in aufgeführt [WMI-Anbieter für Server Events-Ereignisklassen und Eigenschaften](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
@@ -58,7 +59,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- In diesem Beispiel ist `SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9` ein [!INCLUDE[tsql](../../includes/tsql-md.md)]-Bezeichner, der aus dem Präfix `SQLWEP_` und einer GUID besteht. `SQLWEP`erstellt eine neue GUID für jeden Bezeichner. Der Wert `A7E5521A-1CA6-4741-865D-826F804E5135` in der `TO SERVICE` -Klausel ist der GUID, der die Broker-Instanz in der **msdb** -Datenbank identifiziert.  
+ In diesem Beispiel ist `SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9` ein [!INCLUDE[tsql](../../includes/tsql-md.md)]-Bezeichner, der aus dem Präfix `SQLWEP_` und einer GUID besteht. `SQLWEP` erstellt eine neue GUID für jeden Bezeichner. Der Wert `A7E5521A-1CA6-4741-865D-826F804E5135` in der `TO SERVICE` -Klausel ist der GUID, der die Broker-Instanz in der **msdb** -Datenbank identifiziert.  
   
  Weitere Informationen zur Arbeit mit WQL finden Sie unter [Verwenden von WQL mit dem WMI-Anbieter für Serverereignisse](http://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).  
   

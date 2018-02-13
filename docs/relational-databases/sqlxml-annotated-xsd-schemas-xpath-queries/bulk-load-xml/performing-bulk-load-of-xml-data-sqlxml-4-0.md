@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - XDR schemas [SQLXML], XML Bulk Load
 - inserting data
 ms.assetid: 3708b493-322e-4f3c-9b27-441d0c0ee346
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 90a1464d7e29df26cf2614143c0ffe08ae79297c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 400135d7ac08a14aa61bfea883a2fb69be205ad7
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>Ausführen von Massenladen von XML-Daten (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]XML-Massenladen ist ein eigenständiges COM-Objekt, das Ihnen ermöglicht, laden semistrukturierte XML-Daten in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabellen.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+XML-Massenladen ist ein eigenständiges COM-Objekt, mit dem Sie semistrukturierte XML-Daten in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabellen laden können.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Einführung in XML-Massenladen &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/introduction-to-xml-bulk-load-sqlxml-4-0.md)  

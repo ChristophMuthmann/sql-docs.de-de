@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -32,19 +33,20 @@ helpviewer_keywords:
 - ClientSideXML property
 - CommandStream property
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3f939a0fff441a48ca89a0485c552c2dad4f04d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8b2621c44e57dc83f21db4574e86b0ea16b22041
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>Verwaltete SQLXML-Klassen - SqlXmlCommand-Objekt
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Dies ist der Konstruktor für das SqlXmlCommand-Objekt:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Dies ist der Konstruktor für das SqlXmlCommand-Objekt:  
   
 ```  
 public SqlXmlCommand(string cnString)  
@@ -106,7 +108,7 @@ public SqlXmlCommand(string cnString)
  CommandText  
  Der Text des Befehls. Diese Eigenschaft wird zum Angeben des Texts des Befehls verwendet, den Sie ausführen möchten. Ein funktionierendes Beispiel finden Sie unter [SQL-Abfragen ausführen &#40; Verwaltete SQLXML-Klassen &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
- CommandStream  
+ ' CommandStream '  
  Der Befehlsdatenstrom. Diese Eigenschaft ist nützlich, wenn Sie einen Befehl aus einer Datei ausführen möchten (z. B. aus einer XML-Vorlage). Wenn Sie verwenden CommandStream, nur **"Template"**, **"UpdateGram"** und **"DiffGram" CommandType** Werte werden unterstützt. Ein funktionierendes Beispiel finden Sie unter [Ausführen von Vorlagendateien mit der ' CommandStream '-Eigenschaft](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandstream-property.md).  
   
  CommandType  

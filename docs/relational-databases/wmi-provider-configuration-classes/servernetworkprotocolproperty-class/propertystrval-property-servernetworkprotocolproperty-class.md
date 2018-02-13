@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: PropertyStrVal Property (ServerNetworkProtocolProperty Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- PropertyStrVal Property (ServerNetworkProtocolProperty Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: PropertyStrVal property
+helpviewer_keywords:
+- PropertyStrVal property
 ms.assetid: 7df3cf21-15b7-4813-93e7-c2bae1209f5a
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12152032b896658cf360da9bf1f1cc455263dd0d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: edfa7c5615f52a1bcf90d6c1906cb59a09be3ee1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="propertystrval-property-servernetworkprotocolproperty-class"></a>PropertyStrVal-Eigenschaft (ServerNetworkProtocolProperty-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Ruft den Zeichenfolgenwert der Eigenschaft verwiesen wird.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Ruft den Zeichenfolgenwert der Eigenschaft ab, auf die verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -8,26 +8,30 @@ ms.service:
 ms.component: localdb
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: LocalDBGetVersions
-apilocation: sqluserinstance.dll
+apiname:
+- LocalDBGetVersions
+apilocation:
+- sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d4e5ba8baec7ec94977317d1ce4e3333ec1e707
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 352574084c92b76e62269bdde6751fde2982494e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions-Funktion
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Gibt alle verfügbaren SQL Server Express LocalDB-Versionen auf dem Computer an.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Gibt alle auf dem Computer verfügbaren SQL Server Express LocalDB-Versionen zurück.  
   
  **Headerdatei:** sqlncli.h  
   

@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.workload: Inactive
-ms.openlocfilehash: 526375f9f9f96c9ea0402dcb84f20a2c214fd13f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: b812c67d693d6cf9670160c6d0d795e22a9b202f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Erstellen und Ausführen von SQL Server-Agent-Aufträge unter Linux
 

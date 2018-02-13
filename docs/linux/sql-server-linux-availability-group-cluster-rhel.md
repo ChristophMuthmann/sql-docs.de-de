@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
-ms.openlocfilehash: 860d3571aa1edf7c467125de1cc2920a968eb704
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c90eb7d5f11456a13dfa3d4354070bc506d030e5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Konfigurieren von Cluster RHEL für SQL Server-Verfügbarkeitsgruppe
 
@@ -30,7 +30,7 @@ Dieses Dokument erläutert das Erstellen eines drei Knoten Availability Group f�
 > [!NOTE] 
 > Zugriff auf Red Hat eine vollständige Dokumentation ist kein gültiges Abonnement erforderlich. 
 
-Weitere Informationen zur Clusterkonfiguration, Agents Ressourcenoptionen und Verwaltung, finden Sie auf [RHEL Referenzdokumentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Weitere Informationen zu Clusterkonfiguration, Optionen für Agents und Management finden Sie auf [RHEL Referenzdokumentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 > [!NOTE] 
 > SQL Server ist nicht als eng mit Schrittmacher unter Linux integriert, unverändert in Windows Server-Failoverclustering. SQL Server-Instanz ist keine des Clusters bekannt. Schrittmacher stellt Cluster Ressource Orchestrierung bereit. Darüber hinaus Name des virtuellen Netzwerks bezieht sich auf Windows Server Failover clustering - es gibt keine Entsprechung in Schrittmacher. Verfügbarkeit Gruppe dynamische Verwaltungssichten (DMVs), die Clusterinformationen Abfragen geben leere Zeilen auf Schrittmacher Cluster zurück. Um einen Listener für transparente wiederverbindung nach einem Failover zu erstellen, müssen registrieren Sie den Listenernamen manuell in DNS mit der IP-Adresse, die zum Erstellen der virtuellen IP-Adressressource verwendet. 
@@ -129,7 +129,7 @@ sudo pcs property set stonith-enabled=false
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Festlegen Sie Clustereigenschaft auf "false" Start-Fehler-ist--Schwerwiegender
 
-`start-failure-is-fatal`Gibt an, ob ein Fehler beim Starten einer Ressource auf einem Knoten weiter Start Versuche auf diesem Knoten verhindert. Bei Festlegung auf `false`, der Cluster entscheidet, ob auf demselben Knoten erneut basierend auf der Ressource aktuelle Anzahl und Migration Fehlerschwellenwert starten. Nach dem Failover gruppieren Schrittmacher Wiederholungen starten die Verfügbarkeit Ressource auf dem primären ehemaligen, sobald die SQL-Instanz verfügbar ist. Schrittmacher stuft das sekundäre Replikat, und automatisch wieder verbunden, der verfügbarkeitsgruppe. 
+`start-failure-is-fatal` Gibt an, ob ein Fehler beim Starten einer Ressource auf einem Knoten weiter Start Versuche auf diesem Knoten verhindert. Bei Festlegung auf `false`, der Cluster entscheidet, ob auf demselben Knoten erneut basierend auf der Ressource aktuelle Anzahl und Migration Fehlerschwellenwert starten. Nach dem Failover gruppieren Schrittmacher Wiederholungen starten die Verfügbarkeit Ressource auf dem primären ehemaligen, sobald die SQL-Instanz verfügbar ist. Schrittmacher stuft das sekundäre Replikat, und automatisch wieder verbunden, der verfügbarkeitsgruppe. 
 
 Aktualisieren Sie den Eigenschaftswert an `false` ausführen:
 

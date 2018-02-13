@@ -9,19 +9,20 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f8abf2424f8bb1c9c8fb2e04d649e385dd30a024
-ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Exemplarische Vorgehensweise: Einrichten von Scale Out für Integration Services (SSIS)
 Richten Sie (SSIS-) Scale Out für [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] ein, indem Sie die folgenden Aufgaben ausführen. 

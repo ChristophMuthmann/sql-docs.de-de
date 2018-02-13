@@ -8,7 +8,8 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Server Events, WQL
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89b153d808010e26b5454d1a78058938ed2ea00b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d14958366c9dfa24343e244a8a5d5cb880fafa3e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Verwenden von WQL mit dem WMI-Anbieter für Serverereignisse
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Verwaltungsanwendungen greifen auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ereignisse, indem Sie in der WMI-Anbieter für Serverereignisse WMI Query Language (WQL)-Anweisungen ausgeben. WQL ist eine vereinfachte Teilmenge von Structured Query Language (SQL) mit einigen WMI-spezifischen Erweiterungen. Unter Verwendung von WQL ruft eine Anwendung einen Ereignistyp aus einer spezifischen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], einer Datenbank oder einem Datenbankobjekt ab. Das einzige zurzeit unterstützte Objekt ist queue. Der WMI-Anbieter für Serverereignisse übersetzt die Abfrage in eine ereignisbenachrichtigung, die in der Zieldatenbank für ereignisbenachrichtigungen im Serverbereich oder im Bereich einer Objekt oder erstellt wird die **master** Datenbank für serverbezogene-Ereignis Benachrichtigungen werden gesendet.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Verwaltungsanwendungen greifen über den WMI-Anbieter für Serverereignisse auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu, indem sie WQL-Anweisungen (WMI Query Language) ausgeben. WQL ist eine vereinfachte Teilmenge von Structured Query Language (SQL) mit einigen WMI-spezifischen Erweiterungen. Unter Verwendung von WQL ruft eine Anwendung einen Ereignistyp aus einer spezifischen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], einer Datenbank oder einem Datenbankobjekt ab. Das einzige zurzeit unterstützte Objekt ist queue. Der WMI-Anbieter für Serverereignisse übersetzt die Abfrage in eine ereignisbenachrichtigung, die in der Zieldatenbank für ereignisbenachrichtigungen im Serverbereich oder im Bereich einer Objekt oder erstellt wird die **master** Datenbank für serverbezogene-Ereignis Benachrichtigungen werden gesendet.  
   
  Betrachten Sie beispielsweise folgende WQL-Abfrage:  
   
@@ -71,7 +73,7 @@ WHERE where_condition
  *event_property*  
  Eine Ereigniseigenschaft. Beispiele hierfür sind **PostTime**, **SPID**, und **LoginName**. Suchen Sie jedes Ereignis in aufgeführten [WMI-Anbieter für Server Events-Ereignisklassen und Eigenschaften](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md) um zu bestimmen, welche Eigenschaften enthält. Z. B. das DDL_DATABASE_LEVEL_EVENTS-Ereignis enthält den **DatabaseName** und **Benutzername** Eigenschaften. Erbt auch die **%SQLInstance**, **LoginName**, **PostTime**, **SPID**, und **ComputerName** Eigenschaften von den jeweils übergeordneten Ereignissen.  
   
- **,** *.. ...n*  
+ **,** *...n*  
  Gibt an, dass *Event_property* kann mehrmals abgefragt werden, durch Kommas getrennt.  
   
  \*  

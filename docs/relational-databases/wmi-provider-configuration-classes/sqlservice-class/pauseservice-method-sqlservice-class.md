@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: PauseService Method (SqlService Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- PauseService Method (SqlService Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: PauseService method
+helpviewer_keywords:
+- PauseService method
 ms.assetid: 5c3a8feb-58b8-4385-b4c8-bf33cf4d276d
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50805325a387cab08ef5dd9e2d1d3e84f959482f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3e1125a354cc7b06c76d73984f9ede4dea6debd0
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="pauseservice-method-sqlservice-class"></a>PauseService-Methode (SqlService-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Versucht, den Dienst im Status "angehalten".  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Versucht, den Dienst anzuhalten.  
   
 ## <a name="syntax"></a>Syntax  
   

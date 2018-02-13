@@ -18,10 +18,10 @@ ms.author: maggies
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0728592148787403783279f0be8d42e52f5237a2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="managing-report-parts"></a>Verwalten von Berichtsteilen
   Berichtsteile können in paginierten Berichten von mehreren Benutzern und in mehreren Berichten wiederverwendet werden. Benutzer können nach Berichtsteilen auf dem Server suchen und sie einem Bericht hinzufügen.  Benutzer können auch über Updates am Berichtsteil auf dem Server informiert werden und neue Versionen eines Berichtsteils erneut veröffentlichen. Diese Berichterstellungsaktionen können durch Sicherheitsberechtigungen der Reporting Services beeinflusst und gesteuert werden.  In diesem Thema werden Eigenschaften und Verhaltensweisen von Berichtsteilen erörtert, nachdem diese auf dem Server gespeichert wurden.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/09/2018
  Wenn Berichtsteile von einer Berichterstellungsanwendung wie Berichts-Generator auf einem Berichtsserver im integrierten SharePoint-Modus veröffentlicht werden, wird auch der Berichtsserverkatalog aktualisiert, und die Suchergebnisse aus dem Berichtsteilkatalog entsprechen exakt dem neuen oder aktualisierten Berichtsteil.  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>Direktes Hochladen von Berichtsteilen in einen SharePoint-Ordner  
- Wenn ein Berichtsteil direkt in einen SharePoint-Dokumentordner hochgeladen (und nicht von einer Berichterstellungsanwendung veröffentlicht) wird, wird der Berichtsserverkatalog nicht zusätzlich aktualisiert. Daher wird der hochgeladene Berichtsteil bei Suchen im Berichtsteilkatalog nicht gefunden. Um besser zu gewährleisten, dass die SharePoint-Ordner und der Berichtsserverkatalog synchronisiert bleiben, können Sie die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktion zum Synchronisieren von Dateien auf dem SharePoint-Server aktivieren. Weitere Informationen finden Sie unter [Aktivieren der Funktion zur Synchronisierung der Berichtsserverdateien in der SharePoint-Zentraladministration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
+ Wenn ein Berichtsteil direkt in einen SharePoint-Dokumentordner hochgeladen (und nicht von einer Berichterstellungsanwendung veröffentlicht) wird, wird der Berichtsserverkatalog nicht zusätzlich aktualisiert. Daher wird der hochgeladene Berichtsteil bei Suchen im Berichtsteilkatalog nicht gefunden. Um besser zu gewährleisten, dass die SharePoint-Ordner und der Berichtsserverkatalog synchronisiert bleiben, können Sie die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktion zum Synchronisieren von Dateien auf dem SharePoint-Server aktivieren. Weitere Informationen finden Sie unter [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
   
  Die Dateien können auch durch das Aufrufen einiger Reporting Services-Verwaltung-APIs wie GetProperties und SetProperties synchronisiert werden.  
   

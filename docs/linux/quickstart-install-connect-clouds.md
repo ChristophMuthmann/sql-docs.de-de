@@ -8,14 +8,15 @@ ms.date: 10/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.component: sql-linux
+ms.component: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 645c3e11621b1c9faecffc7edf76df9a6a1eabab
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 613f6e1b0182d5003c68380bb5a5698397db2207
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="run-the-sql-server-2017-in-the-cloud"></a>Führen Sie die SQL Server-2017 in der cloud
 
@@ -32,7 +33,7 @@ In diesem Schnellstart-Lernprogramm installieren Sie SQL Server-2017 unter Red H
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  Herstellen einer Verbindung mit der AMI mit ssh
-1.  Führen Sie den Schnellstart für die Linux-Distrbution, die Sie ausgewählt haben: 
+1.  Führen Sie den Schnellstart für die Linux-Distribution, die Sie ausgewählt haben: 
     * [RHEL](quickstart-install-connect-red-hat.md)
     * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -44,7 +45,7 @@ In diesem Schnellstart-Lernprogramm installieren Sie SQL Server-2017 unter Red H
 
     
 ## <a name="digital-ocean"></a>Digitale "Ozean"
-1. Melden Sie sich die [Systemsteuerung](https://cloud.digitalocean.com/login) und klicken Sie auf ein Droplet erstellen
+1. Melden Sie sich auf die [Systemsteuerung](https://cloud.digitalocean.com/login) und klicken Sie auf ein Droplet erstellen
 1. Wählen Sie eine Ubuntu 16.04 Droplet mit mindestens 2 GB Arbeitsspeicher
 1. Herstellen einer Verbindung mit der Droplet mit ssh
 1. Führen Sie die [Ubuntu-Schnellstart](quickstart-install-connect-ubuntu.md)
@@ -58,10 +59,10 @@ In diesem Schnellstart-Lernprogramm installieren Sie SQL Server-2017 unter Red H
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  Herstellen einer Verbindung mit dem Image mit ssh
-1.  Führen Sie den Schnellstart für die Linux-Distrbution, die Sie ausgewählt haben: 
+1.  Führen Sie den Schnellstart für die Linux-Distribution, die Sie ausgewählt haben: 
     * [RHEL](quickstart-install-connect-red-hat.md)
     * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.  Für Remoteverbindungen zu konfigurieren: 
     * Wechseln Sie zu der [Firewall-Regeln](https://console.cloud.google.com/networking/firewalls)
-    * Fügen Sie eine eingehende Regel zum Zulassen von Datenverkehr an den Port auf dem SQL Server (standardmäßig TCP: 1433) lauscht hinzu
+    * Fügen Sie eine eingehende Regel zum Zulassen von Datenverkehr am Port auf dem SQL Server lauscht (standardmäßig Tcp: 1433)

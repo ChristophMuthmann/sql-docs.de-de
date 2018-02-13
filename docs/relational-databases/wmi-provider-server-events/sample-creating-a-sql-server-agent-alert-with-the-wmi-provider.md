@@ -16,19 +16,20 @@ helpviewer_keywords:
 - WMI Provider for Server Events, samples
 - sample applications [WMI]
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae5e64785a1f71ecd88fb840b108de3f1e638bcc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e2c108a7023cb66a82c5613063c039a5f34d6470
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>Beispiel: Erstellen einer SQL Server-Agent-Warnung mit dem WMI-Anbieter
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Eine gebräuchliche Möglichkeit zum Verwenden des WMI-Ereignisanbieters ist zum Erstellen von SQL Server-Agent-Warnungen, die auf bestimmte Ereignisse reagieren. Das folgende Beispiel stellt eine einfache Warnung dar, die XML-Deadlockdiagrammereignisse in einer Tabelle zur späteren Analyse speichert. SQL Server-Agent übermittelt eine WQL-Anforderung, empfängt WMI-Ereignisse und führt als Antwort auf das Ereignis einen Auftrag aus. Beachten Sie, dass der WMI-Ereignisanbieter die Details bei der Erstellung und Verwaltung von Service Broker-Objekten behandelt, obwohl mehrere dieser Objekte an der Verarbeitung der Benachrichtigungsmeldung beteiligt sind.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Eine gebräuchliche Möglichkeit zum Verwenden des WMI-Ereignisanbieters ist die Erstellung von SQL Server-Agent-Warnungen, die auf bestimmte Ereignisse antworten. Das folgende Beispiel stellt eine einfache Warnung dar, die XML-Deadlockdiagrammereignisse in einer Tabelle zur späteren Analyse speichert. SQL Server-Agent übermittelt eine WQL-Anforderung, empfängt WMI-Ereignisse und führt als Antwort auf das Ereignis einen Auftrag aus. Beachten Sie, dass der WMI-Ereignisanbieter die Details bei der Erstellung und Verwaltung von Service Broker-Objekten behandelt, obwohl mehrere dieser Objekte an der Verarbeitung der Benachrichtigungsmeldung beteiligt sind.  
   
 ## <a name="example"></a>Beispiel  
  Zuerst wird in der `AdventureWorks`-Datenbank eine Tabelle erstellt, in der das Deadlockdiagrammereignis gespeichert werden soll. Die Tabelle enthält zwei Spalten: Die `AlertTime`-Spalte enthält die Uhrzeit, zu der die Warnung ausgeführt wird, und die `DeadlockGraph`-Spalte enthält das XML-Dokument mit dem Deadlockdiagramm.  
@@ -140,7 +141,7 @@ GO
   
  Die `DeadlockGraph`-Spalte sollte ein XML-Dokument enthalten, das alle Eigenschaften des Deadlockdiagrammereignisses enthält.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Konzepte des WMI-Anbieters für Serverereignisse](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

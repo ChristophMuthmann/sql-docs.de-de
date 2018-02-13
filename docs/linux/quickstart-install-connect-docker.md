@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: ecb76bb243edae6423d3605ef83a17040ceba720
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 1f018dd2b60365d89e912e7ef38499f8a4d14d9b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Führen Sie die 2017 von SQL Server-Container-Image mit Docker
 
@@ -219,7 +219,7 @@ Führen Sie nun eine Abfrage zum Zurückgeben von Daten aus der `Inventory`-Tabe
 
 1. Geben Sie zum Beenden der interaktive eingabeaufforderungs im Container `exit`. Der Container wird weiterhin ausgeführt wird, nach dem Beenden der interaktiven Bash-Shell.
 
-## <a id="connectexternal"></a>Herstellen einer Verbindung von außerhalb des Containers
+## <a id="connectexternal"></a> Herstellen einer Verbindung von außerhalb des Containers
 
 Sie können aber auch mit der SQL Server-Instanz auf dem Docker-Computer alle externen Tools von Linux, Windows oder MacOS verbinden, die SQL-Verbindungen unterstützt.
 

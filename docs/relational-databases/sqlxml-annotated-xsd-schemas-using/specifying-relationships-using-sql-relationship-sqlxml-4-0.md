@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -30,19 +31,20 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - named relationships [SQLXML]
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce5968efc9238e44be3d66b2533da8951e28c907
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bb997dc9775115708cfd5e39162dfd8d474d2838
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Angeben von Beziehungen mit 'sql:relationship' (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Die Elemente in einem XML-Dokument können verknüpft werden. Die Elemente können hierarchisch geschachtelt sein, und es können ID-, IDREF- oder IDREFS-Beziehungen zwischen den Elementen angegeben werden.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Die Elemente in einem XML-Dokument können in Beziehung gesetzt werden. Die Elemente können hierarchisch geschachtelt sein, und es können ID-, IDREF- oder IDREFS-Beziehungen zwischen den Elementen angegeben werden.  
   
  In einem XSD-Schema, z. B. eine  **\<Kunden >** Element enthält  **\<Reihenfolge >** untergeordnete Elemente. Wenn das Schema der AdventureWorks-Datenbank zugeordnet ist die  **\<Kunden >** -Element der Sales.Customer-Tabelle zugeordnet und die  **\<Reihenfolge >** -Element ordnet die Sales.SalesOrderHeader-Tabelle. Da Kunden Bestellungen aufgeben, stehen die zugrunde liegenden Tabellen Sales.Customer und Sales.SalesOrderHeader in Beziehung,. CustomerID in der Sales.SalesOrderHeader-Tabelle ist ein Fremdschlüssel, der auf den Primärschlüssel CustomerID in der Sales.Customer-Tabelle verweist. Sie können diese Beziehungen unter Elementen dieses Zuordnungsschemas mit Einrichten der **SQL: Relationship** Anmerkung.  
   
@@ -62,13 +64,13 @@ ms.lasthandoff: 11/17/2017
  **Parent**  
  Gibt die übergeordnete Beziehung (Tabelle) an. Dieses Attribut ist optional. Wird es nicht angegeben, wird der Name der übergeordneten Tabelle aus den Informationen in der untergeordneten Hierarchie des Dokuments abgerufen. Wenn das Schema zwei über-/ unterordnungshierarchien angibt, die die gleiche  **\<SQL: Relationship >** aber unterschiedliche übergeordnete Elemente verwenden, Sie nicht das übergeordnete Attribut in angeben  **\<Sql: Beziehung >**. Diese Informationen werden aus der Hierarchie im Schema abgerufen.  
   
- **übergeordneten Schlüssel**  
+ **parent-key**  
  Gibt den übergeordneten Schlüssel des übergeordneten Elements an. Wenn der übergeordnete Schlüssel aus mehreren Spalten besteht, werden Werte mit einer Leerstelle angegeben. Es besteht eine positionelle Zuordnung zwischen den Werten, die für den mehrspaltigen Schlüssel und für den entsprechenden untergeordneten Schlüssel festgelegt wurden.  
   
- **Untergeordnetes Element**  
+ **Child**  
  Gibt die untergeordnete Beziehung (Tabelle) an.  
   
- **untergeordneten Schlüssel**  
+ **child-key**  
  Gibt den untergeordneten Schlüssel im untergeordneten Element an, das im übergeordnetem Element auf den übergeordneten Schlüssel verweist. Wenn der untergeordnete Schlüssel aus mehreren Attributen (Spalten) besteht, werden Werte des untergeordneten Schlüssels mit einer Leerstelle angegeben. Es besteht eine positionelle Zuordnung zwischen den Werten, die für den mehrspaltigen Schlüssel und für den entsprechenden übergeordneten Schlüssel festgelegt wurden.  
   
  **Inverse**  
@@ -390,9 +392,9 @@ ms.lasthandoff: 11/17/2017
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D. Angeben von "sql:relationship" für mehrere Elemente  
  In diesem Beispiel, das mit Anmerkungen versehene XSD-Schema enthält die  **\<Kunden >**,  **\<Reihenfolge >**, und  **\<OrderDetail >** Elemente.  
   
- Die  **\<Reihenfolge >** Element ist ein untergeordnetes Element von der  **\<Kunden >** Element. **\<SQL: Relationship >** angegeben ist, auf die  **\<Reihenfolge >** untergeordnetes Element; daher werden Bestellungen eines Kunden als untergeordnete Elemente des angezeigt  **\<Kunden >** .  
+ Die  **\<Reihenfolge >** Element ist ein untergeordnetes Element von der  **\<Kunden >** Element. **\<SQL: Relationship >** angegeben ist, auf die  **\<Reihenfolge >** untergeordnetes Element; daher werden Bestellungen eines Kunden als untergeordnete Elemente des angezeigt  **\<Kunden >**.  
   
- Die  **\<Reihenfolge >** Element enthält die  **\<OrderDetail >** untergeordnetes Element. **\<SQL: Relationship >** angegeben  **\<OrderDetail >** untergeordnetes Element, sodass die Details einer Bestellung als untergeordnete Elemente dieses angezeigt  **\<Reihenfolge >** Element.  
+ Die  **\<Reihenfolge >** Element enthält die  **\<OrderDetail >** untergeordnetes Element. **\<SQL: Relationship >** angegeben  **\<OrderDetail >** untergeordnetes Element, sodass die Details einer Bestellung als untergeordnete Elemente dieses angezeigt  **\<Reihenfolge >**  Element.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -25,19 +26,20 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], IDENTITY-type columns
 - updategrams [SQLXML], GUID values
 ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a40eb7a4573ea11b597860f8ea4005fc5908bdb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7086831a6711ee0ad0bc0b0a1c1f59ef88b68775
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>Verwenden der Anmerkungen 'sql:identity' und 'sql:guid'
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Sie können angeben, die **Sql:identity** und **Sql:guid** Anmerkungen in ein XSD-Schema auf einem beliebigen Knoten, der in einer Datenbankspalte zugeordnet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Während das updategramformat unterstützt die **Updg: zur Identität** und **updg: GUID** Attribute, das DiffGram-Format nicht. Die **Updg: zur Identität** Attribut definiert das Verhalten beim Aktualisieren einer Spalte vom Typ IDENTITY. Die **updg: GUID** -Attributs können Sie zum Abrufen der GUID-Wert von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und in das Updategram verwenden. Weitere Informationen und Verwendungsbeispiele finden Sie unter [Einfügen von Daten mithilfe von XML-Updategrams &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Sie können angeben, die **Sql:identity** und **Sql:guid** Anmerkungen in ein XSD-Schema auf einem beliebigen Knoten, der in einer Datenbankspalte zugeordnet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Während das updategramformat unterstützt die **Updg: zur Identität** und **updg: GUID** Attribute, das DiffGram-Format nicht. Die **Updg: zur Identität** Attribut definiert das Verhalten beim Aktualisieren einer Spalte vom Typ IDENTITY. Die **updg: GUID** -Attributs können Sie zum Abrufen der GUID-Wert von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und in das Updategram verwenden. Weitere Informationen und Verwendungsbeispiele finden Sie unter [Einfügen von Daten mithilfe von XML-Updategrams &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
  Die **Sql:identity** und **Sql:guid** -Anmerkung erweitern diese Funktionalität auf DiffGrams.  
   

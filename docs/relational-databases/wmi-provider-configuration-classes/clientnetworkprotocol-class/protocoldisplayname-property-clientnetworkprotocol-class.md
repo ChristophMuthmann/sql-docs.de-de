@@ -1,5 +1,5 @@
 ---
-title: ProtocolDisplayName-Eigenschaft (ClientNetworkProtocol-Klasse) | Microsoft Docs
+title: ProtocolDisplayName Property (ClientNetworkProtocol Class) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: ProtocolDisplayName Property (ClientNetworkProtocol Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- ProtocolDisplayName Property (ClientNetworkProtocol Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: ProtocolDisplayName property
+helpviewer_keywords:
+- ProtocolDisplayName property
 ms.assetid: af194304-5600-48b5-9e93-c2fa95594909
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b3a10485d1d09b6cec0a0b8f22f551d7c59efb0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 80f0ca1552a128531111841a476170b328f08329
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="protocoldisplayname-property-clientnetworkprotocol-class"></a>ProtocolDisplayName-Eigenschaft (ClientNetworkProtocol-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Ruft den Anzeigenamen des clientnetzwerkprotokolls, die gemäß der [Konfigurieren von Clientprotokollen](http://technet.microsoft.com/library/ms181035.aspx).  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Ruft den Anzeigenamen des Clientnetzwerkprotokolls ab, das in [Konfigurieren von Clientprotokollen](http://technet.microsoft.com/library/ms181035.aspx)angegeben ist.  
   
 ## <a name="syntax"></a>Syntax  
   

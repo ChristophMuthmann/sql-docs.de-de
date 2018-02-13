@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - relative location path [SQLXML]
 - location path for XPath query
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8954831cd600a5e10ec9e98879d8d68568c837d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f704e45b165ecb4e29d909bcce09f7af92fb0989
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Angeben eines Speicherortpfads (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]XPath-Abfragen werden in Form eines Ausdrucks angegeben. Es gibt verschiedene Arten von Ausdrücken. Ein Speicherortpfad ist ein Ausdruck, der relativ zum Kontextknoten einen Satz von Knoten auswählt. Das Ergebnis der Auswertung eines Speicherortpfads ist ein Knotensatz.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+XPath-Abfragen werden in Form eines Ausdrucks angegeben. Es gibt verschiedene Arten von Ausdrücken. Ein Speicherortpfad ist ein Ausdruck, der relativ zum Kontextknoten einen Satz von Knoten auswählt. Das Ergebnis der Auswertung eines Speicherortpfads ist ein Knotensatz.  
   
 ## <a name="types-of-location-paths"></a>Typen von Speicherortpfaden  
  Ein Speicherortpfad kann eine dieser beiden Formen haben:  
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="location-steps"></a>Positionsschritte  
  Ein Speicherortpfad (absolut oder relativ) besteht aus Positionsschritten, die drei Teile enthalten:  
   
--   **Axis**  
+-   **Achse**  
   
      Die Achse gibt die Strukturbeziehung zwischen den vom Positionsschritt ausgewählten Knoten und dem Kontextknoten an. Die **übergeordneten**, **untergeordneten**, **Attribut**, und **self** Achsen werden unterstützt. Wenn eine **untergeordneten** angegebenen Achse im Speicherortpfad, alle von der Abfrage ausgewählten Knoten werden die untergeordneten Elemente des Kontextknotens. Wenn eine **übergeordneten** Achse angegeben wird, werden die ausgewählten Knoten ist der übergeordnete Knoten des Kontextknotens. Wenn ein **Attribut** Achse angegeben wird, sind die ausgewählten Knoten die Attribute des Kontextknotens.  
   

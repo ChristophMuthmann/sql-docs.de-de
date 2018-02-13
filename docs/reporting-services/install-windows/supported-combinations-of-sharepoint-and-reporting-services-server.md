@@ -16,16 +16,16 @@ helpviewer_keywords:
 - add-in for sharepoint
 - rsSharePoint
 ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 0446c7b50f78074e44258aa973f6cf970cb9f50a
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Unterstützte Kombinationen von SharePoint- und Reporting Services-Servern
 

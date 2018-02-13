@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 412479dcabf34e7dfc8ec5d2576d8a2ff40213dc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: f6df20d942331b6361651ade82b6158b2c6798de
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Beispiel: Für die unbeaufsichtigte SQL Server-Installationsskript für Ubuntu
 

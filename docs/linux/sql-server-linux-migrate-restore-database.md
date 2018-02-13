@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.workload: On Demand
-ms.openlocfilehash: f50be15e4d778ffb9c77caa375dc6b963b5821cd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f68f5aae50460dc1e39a24ac1213ac477c96d552
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migration von einer SQL Server-Datenbank von Windows, Linux mit Sicherung und Wiederherstellung
 
@@ -88,7 +88,7 @@ Um die Datenbank wiederherzustellen, müssen Sie zuerst die Sicherungsdatei aus 
 
 1. Öffnen Sie eine Bash-Sitzung unter Windows.
 
-## <a id="scp"></a>Kopieren Sie die Sicherungsdatei auf Linux
+## <a id="scp"></a> Kopieren Sie die Sicherungsdatei auf Linux
 
 1. Navigieren Sie in der Bash-Sitzung auf das Verzeichnis, das die Sicherungsdatei enthält. Beispiel:
 

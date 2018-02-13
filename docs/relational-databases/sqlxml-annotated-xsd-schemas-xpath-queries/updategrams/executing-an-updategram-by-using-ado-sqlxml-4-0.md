@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - updategrams [SQLXML], ADO
 - executing updategrams [SQLXML]
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e97eda9a5cb250ffc1c409638aa9079c7cee01a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: df6dbe2042e78b92207c990c8633776c38a9cc0f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Ausführen eines Updategrams mit ADO (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Dies [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic-Anwendung verwendet ADO, zum Herstellen einer Verbindung mit einer Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und ein Updategram auszuführen. Das Updategram aktualisiert den Nachnamen eines bestimmten Mitarbeiters. In diesem Beispiel wird die AdventureWorks-Musterdatenbank verwendet.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Diese [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic-Anwendung verwendet ADO, um eine Verbindung mit einer Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herzustellen und ein Updategram auszuführen. Das Updategram aktualisiert den Nachnamen eines bestimmten Mitarbeiters. In diesem Beispiel wird die AdventureWorks-Musterdatenbank verwendet.  
   
  Diese Beispielanwendung zeigt Folgendes:   
   

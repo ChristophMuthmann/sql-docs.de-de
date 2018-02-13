@@ -21,10 +21,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 38216b9ef1b8c8ccaa3ca7656747defe077ee690
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für Kandidatenschlüsselprofil (Datenprofilerstellungs-Task)
   Verwenden Sie den Bereich **Anforderungseigenschaften** im Fenster **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für Kandidatenschlüsselprofil** festzulegen. Ein Kandidatenschlüsselprofil meldet, ob eine Spalte oder eine Gruppe von Spalten ein Schlüssel oder ein ungefährer Schlüssel für die ausgewählte Tabelle ist. Dieses Profil hilft Ihnen auch, Probleme bei den Daten zu identifizieren, z. B. doppelte Werte in einer potenziellen Schlüsselspalte.  

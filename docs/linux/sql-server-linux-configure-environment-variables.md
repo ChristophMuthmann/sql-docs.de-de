@@ -1,6 +1,6 @@
 ---
 title: Konfigurieren von SQL Server mit Umgebungsvariablen | Microsoft Docs
-description: Dieses Thema beschreibt die Umgebungsvariablen zu verwenden, um bestimmte 2017 von SQL Server-Einstellungen unter Linux konfigurieren.
+description: Dieser Artikel beschreibt die Umgebungsvariablen zu verwenden, um bestimmte 2017 von SQL Server-Einstellungen unter Linux konfigurieren.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: b32330aee4fcd427ecd05d27fba3ffb8539bffa6
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: c7a04b62625863d9f98521b1a408f572ac79a403
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Konfigurieren von SQL Server mit Umgebungsvariablen unter Linux
 
@@ -39,7 +39,7 @@ Mehrere verschiedene Umgebungsvariablen können Sie SQL Server-2017 unter Linux 
 |-----|-----|
 | **ACCEPT_EULA** | Akzeptieren Sie den SQL Server-Lizenzvertrag bei Festlegung auf einen beliebigen Wert (z. B. "Y"). |
 | **MSSQL_SA_PASSWORD** | Konfigurieren Sie das SA-Kennwort ein. |
-| **MSSQL_PID** | Legen Sie die Edition oder Product Key für SQL Server. Zulässige Werte: </br></br>**Evaluation**</br>**Entwickler**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Einen Product key**</br></br>Wenn Sie einen Product Key angeben, muss es in Form von ###-###-###-###-###, sein, wobei "#" eine Zahl oder ein Buchstabe ist.|
+| **MSSQL_PID** | Legen Sie die Edition oder Product Key für SQL Server. Zulässige Werte: </br></br>**Evaluation**</br>**Entwickler**</br>**Express**</br>Web</br>**Standard**</br>**Enterprise**</br>Einen Product key</br></br>Wenn Sie einen Product Key angeben, muss es in Form von ###-###-###-###-###, sein, wobei "#" eine Zahl oder ein Buchstabe ist.|
 | **MSSQL_LCID** | Legt die Sprach-ID für SQL Server verwendet. 1036 befindet sich z. B. Französisch. |
 | **MSSQL_COLLATION** | Legt die standardsortierung für SQL Server fest. Dies überschreibt die standardzuordnung der Sprach-Id (LCID), Sortierung. |
 | **MSSQL_MEMORY_LIMIT_MB** | Legt die Höchstmenge an Arbeitsspeicher (in MB), die SQL Server verwenden können. Es ist standardmäßig 80 % des gesamten physischen Arbeitsspeichers. |

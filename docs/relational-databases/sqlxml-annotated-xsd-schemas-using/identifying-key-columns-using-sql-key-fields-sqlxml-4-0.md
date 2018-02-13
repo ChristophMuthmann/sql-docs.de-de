@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - key-fields annotation
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3a39418ec2c94a0c5b0a5dd227ef33aab4b22b0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ac42ee657dd46f070eccf5d63ae9a454c3306e95
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identifizieren von Schlüsselspalten mithilfe von sql:key-Feldern (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wenn eine XPath-Abfrage für ein XSD-Schema angegeben wird, ist die Schlüsselinformationen in den meisten Fällen erforderlich, um richtige Schachtelung im Ergebnis zu erhalten. Angeben der **SQL: Key-Felder** Anmerkung ist, lässt sich sicherstellen, dass die entsprechende Hierarchie generiert wird.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Wenn eine XPath-Abfrage für ein XSD-Schema angegeben wird, ist die Schlüsselinformationen in den meisten Fällen erforderlich, um richtige Schachtelung im Ergebnis zu erhalten. Angeben der **SQL: Key-Felder** Anmerkung ist, lässt sich sicherstellen, dass die entsprechende Hierarchie generiert wird.  
   
 > [!NOTE]  
 >  Um die richtige Schachtelung sicherzustellen, wird empfohlen, dass Sie angeben, **SQL: Key-Felder** für Elemente, die Tabellen zugeordnet. Das erzeugte XML wird durch die Anordnung des zugrunde liegenden Resultsets beeinflusst. Wenn **SQL: Key-Felder** nicht angegeben ist, wird die generierte XML-Code möglicherweise nicht ordnungsgemäß formatiert.  

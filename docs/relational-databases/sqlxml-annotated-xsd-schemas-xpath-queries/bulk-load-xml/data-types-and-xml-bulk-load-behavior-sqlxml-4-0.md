@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - data types [SQLXML], XML Bulk Load
 - XML Bulk Load [SQLXML], data types
 ms.assetid: d1ac1939-1f6c-4398-b7a7-a79ca608a4f1
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffe103926663fd3b4c514921551c1b40598001e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d5e25e9d3a2df2e15c2dc9bf86d6d90acd1d450
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="data-types-and-xml-bulk-load-behavior-sqlxml-40"></a>Datentypen und XML-Massenladenverhalten (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Die Datentypen, die im Zuordnungsschema angegeben werden (XSD- oder XDR-Typ und **SQL: DataType**) werden im Allgemeinen ignoriert werden, außer in den folgenden Fällen:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Die Datentypen, die im Zuordnungsschema angegeben werden (XSD- oder XDR-Typ und **SQL: DataType**) werden im Allgemeinen ignoriert werden, außer in den folgenden Fällen:  
   
  Bei XSD:  
   

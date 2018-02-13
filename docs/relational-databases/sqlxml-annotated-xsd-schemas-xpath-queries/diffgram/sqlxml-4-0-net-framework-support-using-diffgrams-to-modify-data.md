@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -27,19 +28,20 @@ helpviewer_keywords:
 - record updates [SQLXML]
 - record deletions [SQLXML]
 ms.assetid: 48b8a8f9-f3af-404f-8c84-f4c3703364d9
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d20706e6869c495b645d06be0e60c5c1d2f00d01
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1c074e0fedd19af35c01f1e6548fc892a006d571
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sqlxml-40-net-framework-support---using-diffgrams-to-modify-data"></a>SQLXML 4.0 .NET Framework-Unterstützung – Verwendung von DiffGrams zum Ändern von Daten
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Das DiffGram-Format wird in eingeführt der **DataSet** -Komponente von der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Innerhalb von .NET Framework können Sie DiffGrams erstellen und sie zum Ändern der Daten in Tabellen einer Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank verwenden.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Das DiffGram-Format wird in eingeführt der **DataSet** -Komponente von der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Innerhalb von .NET Framework können Sie DiffGrams erstellen und sie zum Ändern der Daten in Tabellen einer Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank verwenden.  
   
 > [!NOTE]  
 >  Dieser Abschnitt enthält eine kurze Einführung in DiffGrams sowie Anwendungsbeispiele. Es wird vorausgesetzt, dass Sie mit DiffGrams in .NET Framework vertraut sind. In dieser Dokumentation liegt der Schwerpunkt auf DiffGram-Problemen, die für SQLXML spezifisch sind.  
@@ -54,7 +56,7 @@ ms.lasthandoff: 11/17/2017
  [Ausführen eines DiffGram-Objekts mit ADO &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-ado-sqlxml-4-0.md)  
  Stellt ein Beispiel für die Ausführung eines DiffGrams mit ActiveX Data Objects (ADO) zur Verfügung.  
   
- [Ausführen eines DiffGram-Objekts mit verwalteten SQLXML-Klassen](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-sqlxml-managed-classes.md)  
+ [Ausführen eines Diffgrams mit SQLXML, verwaltete Klassen](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-sqlxml-managed-classes.md)  
  Stellt ein Beispiel für das Ausführen eines DiffGrams mit verwalteten SQLXML-Klassen bereit.  
   
   

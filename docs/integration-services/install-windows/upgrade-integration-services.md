@@ -8,7 +8,8 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, upgrading
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
 ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="upgrade-integration-services"></a>Upgrade von Integration Services
   Wenn [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] oder höher derzeit auf Ihrem Computer installiert ist, können Sie auf [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]aktualisieren.  

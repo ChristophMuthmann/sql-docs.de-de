@@ -8,28 +8,29 @@ ms.service:
 ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, overview
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale;barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3a0828b1e50472ecec5f256c9ddfe13e8f0db8b7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 77a50d48ee5c6d5baa8b05b327146e74b5eff815
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Diagramm, die Verarbeitung mit SQL Server und Azure SQL-Datenbank
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bietet Graph Funktionen zur Modellierung von m: n-Beziehungen. Die Graph-Beziehungen sind in integriert [!INCLUDE[tsql-md](../../includes/tsql-md.md)] und empfangen Sie die Vorteile der Verwendung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als grundlegende Datenbankmanagementsystem.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet Graph Funktionen zur Modellierung von m: n-Beziehungen. Die Graph-Beziehungen sind in integriert [!INCLUDE[tsql-md](../../includes/tsql-md.md)] und empfangen Sie die Vorteile der Verwendung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als grundlegende Datenbankmanagementsystem.
 
 
 ## <a name="what-is-a-graph-database"></a>Was ist eine Graph-Datenbank?  
@@ -46,12 +47,12 @@ Es ist kein, eine Graph-Datenbank erreichen kann, die nicht mithilfe einer relat
 -   Die Anwendung verfügt über komplexe viele-zu-viele-Beziehungen; Wenn sich Anwendung weiterentwickelt, werden neue Beziehungen hinzugefügt.
 -   Sie müssen miteinander verbundener Daten und Beziehungen zu analysieren.
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>Graph-Funktionen in[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>Graph-Funktionen in [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 Wir beginnen, Hinzufügen von Graph-Erweiterungen zu SQL Server, um das Speichern von und Abfragen von Graph-Daten zu vereinfachen. Folgende Funktionen sind in der ersten Version eingeführt. 
 
 
 ### <a name="create-graph-objects"></a>Graph-Objekte erstellen
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)]Benutzern das Erstellen von Knoten oder Edge Tabellen ermöglicht. Knoten und Kanten haben Eigenschaften, die ihnen zugeordnet sind. Seit Knoten und Kanten werden als Tabellen gespeichert, alle Vorgänge, die auf relationalen Tabellen unterstützt werden, werden für Knoten oder Edge-Tabelle unterstützt. Beispiel:  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] Benutzern das Erstellen von Knoten oder Edge Tabellen ermöglicht. Knoten und Kanten haben Eigenschaften, die ihnen zugeordnet sind. Seit Knoten und Kanten werden als Tabellen gespeichert, alle Vorgänge, die auf relationalen Tabellen unterstützt werden, werden für Knoten oder Edge-Tabelle unterstützt. Beispiel:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;

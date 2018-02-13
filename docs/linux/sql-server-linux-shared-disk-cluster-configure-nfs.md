@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 25bcc2fb0ddb60198208d88ce9c19be139d6ec2f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 368fce4b3c9595f89ea14ca310049a52cf180a28
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Konfigurieren Sie Failoverclusterinstanz – NFS - SQL Server on Linux
 
@@ -33,8 +33,8 @@ NFS oder NFS, ist eine gängige Methode für die Datenträger in Linux weltweit,
 Die Quelle hosting NFS (einem Linux-Server oder ein anderes Element) muss mithilfe von/kompatibel mit Version 4.2 oder höher sein. Frühere Versionen funktioniert nicht mit SQL Server on Linux.
 
 Wenn Sie die Dateien auf dem NFS-Server freigegeben werden zu konfigurieren, stellen Sie sicher, dass sie diese Richtlinien allgemeine Optionen entsprechen:
-- `rw`um sicherzustellen, dass den Ordner können von gelesen und geschrieben werden
-- `sync`um sicherzustellen, dass sichergestellt, dass Schreibvorgänge in den Ordner
+- `rw` um sicherzustellen, dass den Ordner können von gelesen und geschrieben werden
+- `sync` um sicherzustellen, dass sichergestellt, dass Schreibvorgänge in den Ordner
 - Verwenden Sie keine `no_root_squash` optional; gilt ein Sicherheitsrisiko
 - Stellen Sie sicher, dass der Ordner Vollzugriff (777) angewendet wurde
 
@@ -167,7 +167,7 @@ Stellen Sie sicher, dass für den Zugriff auf Ihre Sicherheitsstandards erzwunge
     sudo systemctl status mssql-server
     ```
     
-   * Erstellen Sie eine Datenbank, um zu testen, ob die Sicherheit ordnungsgemäß eingerichtet ist. Das folgende Beispiel zeigt, die über Transact-SQL zu erledigende; Sie können über SSMS erfolgen.
+   * Erstellen Sie eine Datenbank, um zu testen, ob die Sicherheit ordnungsgemäß eingerichtet ist. Im folgende Beispiel wird gezeigt, die über Transact-SQL ausgeführt wird: Sie können über SSMS erfolgen.
  
     ![CreateTestdatabase][3]
 
@@ -204,7 +204,7 @@ Stellen Sie sicher, dass für den Zugriff auf Ihre Sicherheitsstandards erzwunge
     mkdir <FolderName>
     ```
 
-    \<Ordnername > ist der Name des Ordners. Vollständiger Pfad des Ordners müssen angegeben werden, sofern Sie nicht den richtigen Speicherort. Das folgende Beispiel erstellt einen Ordner namens /var/opt/mssql/userdata.
+    \<Ordnername > ist der Name des Ordners. Vollständigen Ordnerpfad muss angegeben werden, sofern Sie nicht den richtigen Speicherort. Das folgende Beispiel erstellt einen Ordner namens /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -230,7 +230,7 @@ Stellen Sie sicher, dass für den Zugriff auf Ihre Sicherheitsstandards erzwunge
   
    * Geben Sie Exit nicht mehr der Superuser sein.
 
-   * Um zu testen, erstellen Sie eine Datenbank in diesem Ordner. Im Beispiel unten verwendet Sqlcmd, erstellen Sie eine Datenbank, den Kontext zu wechseln, vergewissern Sie sich die Dateien vorhanden sind, auf der Betriebssystemebene und löscht dann das temporäre Verzeichnis. Sie können SSMS verwenden.
+   * Um zu testen, erstellen Sie eine Datenbank in diesem Ordner. Im folgenden Beispiel wird Sqlcmd, erstellen Sie eine Datenbank, den Kontext zu wechseln, vergewissern Sie sich die Dateien vorhanden sind, auf der Betriebssystemebene und löscht dann das temporäre Verzeichnis. Sie können SSMS verwenden.
 
     ![15-createtestdatabase][4]
  

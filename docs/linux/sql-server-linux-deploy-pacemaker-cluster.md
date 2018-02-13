@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: dd9d35a7fa6e8a8a0e826d584a4f78ca2581d9bc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 303629364a954fec1328d571ec3b6f3df57b6527
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Bereitstellen eines Clusters Schrittmacher für SQL Server on Linux
 

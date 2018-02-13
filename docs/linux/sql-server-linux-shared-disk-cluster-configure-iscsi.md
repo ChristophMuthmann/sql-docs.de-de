@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 9720eb3b4254f2592e3c237bc2af16bc5360d2ad
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 19a7f03471af7aaf9e55fe371e02f9201cf1464f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Konfigurieren der Failover-Clusterinstanz - iSCSI - SQL Server on Linux
 
@@ -41,7 +41,7 @@ Um sicherzustellen, dass die wichtigste ist abgeschlossen auf dem Ziel, dass die
 
 In diesem Abschnitt wird beschrieben, wie einen iSCSI-Initiator auf den Servern zu konfigurieren, das als Knoten für die FCI fungieren soll. Auf RHEL und Ubuntu ausgeführt wird, sollte die Anweisungen funktionieren.
 
-Weitere Informationen zu iSCSI-Initiator zu den unterstützten-Verteilungen wenden Sie sich an den folgenden Links:
+Weitere Informationen zu iSCSI-Initiator zu den unterstützten-Verteilungen finden Sie in den folgenden Links:
 - [Red Hat](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
 - [SUSE](http://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
 - [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
@@ -210,7 +210,7 @@ Weitere Informationen zu iSCSI-Initiator zu den unterstützten-Verteilungen wend
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName > ist der Name der Volumegruppe und \<LogicalVolumeName > ist der Name des logischen Volumes, die erstellt wurde. Die folgende Beispielsyntax entspricht der Volumegruppe und logische Volume oben erstellt haben.
+    \<VolumeGroupName > ist der Name der Volumegruppe und \<LogicalVolumeName > ist der Name des logischen Volumes, die erstellt wurde. Die folgende Beispielsyntax entspricht der Volumegruppe und logische Datenträger aus dem vorherigen Befehl.
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
@@ -278,7 +278,7 @@ Weitere Informationen zu iSCSI-Initiator zu den unterstützten-Verteilungen wend
     mkdir <FolderName>
     ```
 
-    \<Ordnername > ist der Name des Ordners. Vollständiger Pfad des Ordners müssen angegeben werden, sofern Sie nicht den richtigen Speicherort. Das folgende Beispiel erstellt einen Ordner namens /var/opt/mssql/userdata.
+    \<Ordnername > ist der Name des Ordners. Vollständigen Ordnerpfad muss angegeben werden, sofern Sie nicht den richtigen Speicherort. Das folgende Beispiel erstellt einen Ordner namens /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata

@@ -1,6 +1,6 @@
 ---
 title: Erste Schritte mit SQL Server-Sicherheit unter Linux | Microsoft Docs
-description: Dieses Thema beschreibt die typischen Sicherheitsaktionen.
+description: Dieser Artikel beschreibt die typischen Sicherheitsaktionen.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,19 +9,21 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: d927bf68b06050c8067d6f6d63d737f084219341
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 00c222c601cdf314f04db3cb9e3b818d9ea3a65f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Exemplarische Vorgehensweise für die Sicherheitsfeatures von SQL Server on Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Wenn Sie einen Linux-Benutzer, der noch nicht mit SQL Server ist sind, führen die folgenden Aufgaben durch einige der Sicherheitsaufgaben. Diese sind nicht eindeutig oder gelten speziell für Linux, aber sie hilft bei der bieten einen Überblick über Bereiche genauere Untersuchung durchführen. In jedem Beispiel wird ein Link, um die ausführliche Dokumentation für diesen Bereich bereitgestellt.
 
@@ -38,7 +40,7 @@ CREATE LOGIN Larry WITH PASSWORD = '************';
 ```
 
 >  [!NOTE]
->  Verwenden Sie immer ein sicheres Kennwort anstelle der oben genannten Sternchen.
+>  Verwenden Sie immer ein sicheres Kennwort anstelle der Sternchen im vorherigen Befehl.
 
 Anmeldungen können eine Verbindung mit SQL Server und Zugriffsrechte (mit eingeschränkten Berechtigungen) für die master-Datenbank. Zur Verbindung mit einer Benutzerdatenbank benötigt eine Anmeldung eine entsprechende Identität auf Datenbankebene, einen Datenbankbenutzer bezeichnet. Benutzer sind für jede Datenbank spezifisch und müssen separat erstellt werden, in jeder Datenbank aus, um ihnen den Zugriff zu erteilen. Im folgende Beispiel wird Sie in der AdventureWorks2014-Datenbank verschoben und verwendet dann die [CREATE USER](../t-sql/statements/create-user-transact-sql.md) -Anweisung zum Erstellen einer Benutzers namens Larry, die mit der Anmeldung mit dem Namen Larry anfallen. Obwohl die Anmeldung und der Benutzer verknüpft sind (die miteinander verknüpft sind), handelt es sich um unterschiedliche Objekte. Der Anmeldename ist einem Prinzipal auf Serverebene. Der Benutzer ist ein Prinzipal auf Datenbankebene.
 
@@ -101,7 +103,7 @@ Weitere Informationen über das Berechtigungssystem finden Sie unter [erste Schr
 
 [Sicherheit auf Zeilenebene](../relational-databases/security/row-level-security.md) ermöglicht es Ihnen, den Zugriff auf die Zeilen in einer Datenbank, basierend auf dem Benutzer, die Ausführung einer Abfrage einschränken. Diese Funktion eignet sich für Szenarien wie das sicherstellen, dass Kunden nur ihre eigenen Daten zugreifen können, oder dass Mitarbeiter nur auf Daten zugreifen können, die für ihre Abteilung relevant ist.   
 
-Die Schritte unten Gang durch das Einrichten von zwei Benutzern mit verschiedenen Zeilenebene Zugriff auf die `Sales.SalesOrderHeader` Tabelle. 
+Die folgenden Schritte führen, über das Einrichten von zwei Benutzern mit unterschiedlichen auf Zeilenebene Zugriff auf die `Sales.SalesOrderHeader` Tabelle. 
 
 Erstellen Sie zwei Benutzerkonten zum Testen der Sicherheit auf Zeilenebene:    
    
@@ -247,7 +249,7 @@ ALTER DATABASE AdventureWorks2014
 SET ENCRYPTION ON;   
 ```
 
-Um TDE zu entfernen, führen`ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
+Um TDE zu entfernen, führen `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
 
 Die Verschlüsselung und Entschlüsselung Vorgänge werden von SQL Server in Hintergrundthreads geplant. Sie können den Status dieser Vorgänge mithilfe der in der Liste weiter unten in diesem Thema genannten Katalogsichten und dynamischen Verwaltungssichten anzeigen.   
 

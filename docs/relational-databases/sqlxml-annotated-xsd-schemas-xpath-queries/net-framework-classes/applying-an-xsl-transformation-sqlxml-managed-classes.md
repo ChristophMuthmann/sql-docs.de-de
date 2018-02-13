@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - SQLXML Managed Classes, applying XSL transformations
 - XSL Transformations [SQLXML]
 ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7fa336164667a3a132a0d5d2c4de248809121c5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e618d85394bb71c5a3094e3cbb2f05df956fc74e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Anwenden einer XSL-Transformation (Verwaltete SQLXML-Klassen)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]In diesem Beispiel wird eine SQL-Abfrage für die AdventureWorks-Datenbank ausgeführt. Die XSL-Transformation wird auf das Abfrageergebnis angewendet, um eine zweispaltige Tabelle mit den Vor- und Nachnamen der Mitarbeiter zu generieren.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+In diesem Beispiel wird eine SQL-Abfrage der AdventureWorks-Datenbank ausgeführt. Die XSL-Transformation wird auf das Abfrageergebnis angewendet, um eine zweispaltige Tabelle mit den Vor- und Nachnamen der Mitarbeiter zu generieren.  
   
  XslPath-Eigenschaft des SqlXmlCommand-Objekt wird an der XSL-Datei und zugehörigen Verzeichnispfads verwendet.  
   

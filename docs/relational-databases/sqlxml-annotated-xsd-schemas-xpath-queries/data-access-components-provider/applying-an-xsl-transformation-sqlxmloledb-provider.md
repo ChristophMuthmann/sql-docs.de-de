@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,25 +19,26 @@ helpviewer_keywords:
 - Base Path property
 - XSL Transformations [SQLXML]
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c1e66cf59b69b1dbcedc898cef8426c814eac78
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cb5a39d9069824e21b9c6fee2489b0c16c66e76f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Anwenden einer XSL-Transformation (SQLXMLOLEDB-Anbieter)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]In dieser ADO-beispielanwendung wird eine SQL-Abfrage ausgeführt wird und eine XSL-Transformation auf das Ergebnis angewendet wird. Festlegen der ClientSideXML-Eigenschaft auf "true" erzwingt die Verarbeitung des Rowsets auf der Clientseite. Der Befehlsdialekt wird auf {5d531cb2-e6ed-11d2-b252-00c04f681b71} festgelegt, da die SQL-Abfrage in einer Vorlage angegeben ist und dieser Dialekt angegeben werden muss, wenn eine Vorlage ausgeführt wird. Die Xsl-Eigenschaft gibt die XSL-Datei zu verwenden, um die Transformation anzuwenden. Der Wert der Eigenschaft des Basis-Pfad wird verwendet, um nach der XSL-Datei zu suchen. Wenn Sie einen Pfad im Wert der XSL-Eigenschaft angeben, ist der Pfad relativ zum Pfad, der in der Basis-Pfad-Eigenschaft angegeben ist.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+In dieser ADO-Beispielanwendung wird eine SQL-Abfrage ausgeführt und auf das Ergebnis eine XSL-Transformation angewendet. Festlegen der ClientSideXML-Eigenschaft auf "true" erzwingt die Verarbeitung des Rowsets auf der Clientseite. Der Befehlsdialekt wird auf {5d531cb2-e6ed-11d2-b252-00c04f681b71} festgelegt, da die SQL-Abfrage in einer Vorlage angegeben ist und dieser Dialekt angegeben werden muss, wenn eine Vorlage ausgeführt wird. Die Xsl-Eigenschaft gibt die XSL-Datei zu verwenden, um die Transformation anzuwenden. Der Wert der Eigenschaft des Basis-Pfad wird verwendet, um nach der XSL-Datei zu suchen. Wenn Sie einen Pfad im Wert der XSL-Eigenschaft angeben, ist der Pfad relativ zum Pfad, der in der Basis-Pfad-Eigenschaft angegeben ist.  
   
  In diesem Beispiel wird gezeigt, wie die folgenden für den SQLXMLOLEDB-Anbieter spezifischen Eigenschaften verwendet werden:  
   
 -   ClientSideXML  
   
--   XSL  
+-   xsl  
   
  In dieser clientseitigen ADO-Beispielanwendung wird eine XML-Vorlage, die aus einer einfachen SQL-Abfrage besteht, auf dem Server ausgeführt.  
   

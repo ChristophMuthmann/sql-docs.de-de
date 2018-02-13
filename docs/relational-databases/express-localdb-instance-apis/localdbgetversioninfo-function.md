@@ -8,26 +8,30 @@ ms.service:
 ms.component: localdb
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: LocalDBGetVersionInfo
-apilocation: sqluserinstance.dll
+apiname:
+- LocalDBGetVersionInfo
+apilocation:
+- sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9bcc5ae184ac67e4443df4023cb2be8e4b8faa4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e3fb6ab670f626cb629a1ba301cab4b51c9a2c56
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="localdbgetversioninfo-function"></a>LocalDBGetVersionInfo-Funktion
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Gibt Informationen für die angegebene SQL Server Express LocalDB-Version, z. B., ob es vorhanden ist und die vollständige LocalDB-Versionsnummer (inklusive Build- und Releasenummer) zurück.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Gibt Informationen zur angegebenen SQL Server Express-LocalDB-Version zurück, z. B., ob sie vorhanden ist sowie die vollständige LocalDB-Versionsnummer (inklusive Build- und Releasenummer).  
   
  Die Informationen werden zurückgegeben, in Form von einer **Struktur** mit dem Namen **LocalDBVersionInfo**, die weist folgende Definition.  
   

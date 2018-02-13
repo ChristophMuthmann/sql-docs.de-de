@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d01b87a26674a213c1c0ed0f14a6ff867222fc4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b12274cfd0ee0c7703229cc416793fb23a1a91ae
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-express-localdb-reference---instance-apis"></a>SQLServer Express LocalDB-Verweis - Instanz-APIs
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In der herkömmlichen, dienstbasierten SQL Server-Welt sind einzelne SQL Server-Instanzen, die auf einem einzelnen Computer installiert physisch getrennt; d. h. jede Instanz muss installiert sein und gesondert entfernt werden, verfügt über einen separaten Satz Binärdateien und unter einem separaten Dienstprozess ausgeführt wird. Der SQL Server-Instanzname wird verwendet, um anzugeben, mit welcher SQL Server-Instanz der Benutzer eine Verbinden herstellen möchte.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+In der herkömmlichen, dienstbasierten SQL Server-Welt sind einzelne auf einem einzelnen Computer installierte SQL Server-Instanzen physisch getrennt. Das heißt, jede Instanz muss separat installiert und entfernt werden, verfügt über einen separaten Satz Binärdateien und wird unter einem separaten Dienstprozess ausgeführt. Der SQL Server-Instanzname wird verwendet, um anzugeben, mit welcher SQL Server-Instanz der Benutzer eine Verbinden herstellen möchte.  
   
  Die SQL Server Express LocalDB-Instanz-API verwendet ein vereinfachtes "leichtes" Instanzmodell. Obwohl einzelne LocalDB-Instanzen auf dem Datenträger und in der Registrierung getrennt sind, verwenden sie denselben Satz freigegebener LocalDB-Binärdateien. Darüber hinaus verwendet LocalDB keine Dienste. LocalDB-Instanzen werden bei Bedarf durch LocalDB-Instanz-API-Aufrufe gestartet. In LocalDB wird der Instanzname verwendet, um anzugeben, mit welcher LocalDB-Instanz der Benutzer arbeiten will.  
   

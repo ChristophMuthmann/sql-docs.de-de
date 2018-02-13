@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -26,19 +27,20 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], hiding attributes and elements
 - attribute hiding [SQLXML]
 ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80e87266ddb172a77d2e0185cf45096406902d3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ab705046d11a6290670fc8bb695643b297b5210
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Ausblenden von Elementen und Attributen mit sql:hide
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wenn eine XPath-Abfrage für ein XSD-Schema ausgeführt wird, verfügt das resultierende XML-Dokument Elemente und Attribute, die im Schema angegeben werden. Sie können angeben, dass einige Elemente und Attribute im Schema mithilfe von ausgeblendet werden die **SQL: hide** Anmerkung. Dies ist hilfreich, wenn das Auswahlkriterium der Abfrage bestimmte Elemente oder Attribute im Schema erfordert, diese jedoch nicht im generierten XML-Dokument zurückgegeben werden sollen.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Wenn eine XPath-Abfrage mit einem XSD-Schema ausgeführt wird, verfügt das resultierende XML-Dokument über Elemente und Attribute, die im Schema angegeben sind. Sie können angeben, dass einige Elemente und Attribute im Schema mithilfe von ausgeblendet werden die **SQL: hide** Anmerkung. Dies ist hilfreich, wenn das Auswahlkriterium der Abfrage bestimmte Elemente oder Attribute im Schema erfordert, diese jedoch nicht im generierten XML-Dokument zurückgegeben werden sollen.  
   
  Die **SQL: hide** -Anmerkung akzeptiert einen booleschen Wert (0 = False, 1 = "true"). Zulässig sind die Werte 0, 1, true und false.  
   

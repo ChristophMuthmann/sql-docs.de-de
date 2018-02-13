@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -35,19 +36,20 @@ helpviewer_keywords:
 - at-identity attribute
 - xml data type [SQL Server], SQLXML
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abf9937e9d13dccdb3eb381dda760bad13f9544d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1d06fef3fcdc237740b9590d5d8e75fc9730a34e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Einfügen von Daten mit XML-Updategrams (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Ein Updategram zeigt einen Einfügevorgang an, wenn eine im Datensatzinstanz die  **\<nach >** blockieren, aber nicht in den entsprechenden  **\<vor >** Block. In diesem Fall fügt das Updategram den Datensatz in die  **\<nach >** -Block in der Datenbank.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Ein Updategram zeigt einen Einfügevorgang an, wenn eine im Datensatzinstanz die  **\<nach >** blockieren, aber nicht in den entsprechenden  **\<vor >** Block. In diesem Fall fügt das Updategram den Datensatz in die  **\<nach >** -Block in der Datenbank.  
   
  Dies ist das Updategramformat für einen Einfügevorgang:  
   

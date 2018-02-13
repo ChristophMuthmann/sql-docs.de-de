@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: ProtocolDisplayName Property (ClientNetLibInfo Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- ProtocolDisplayName Property (ClientNetLibInfo Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: ProtocolDisplayName property
+helpviewer_keywords:
+- ProtocolDisplayName property
 ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1c2b970a4f80400edfb4da6f40fc7e98b54a992
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 478e5a3f34dba202aae2ef30a5e8b3e35fc65cee
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="protocoldisplayname-property-clientnetlibinfo-class"></a>ProtocolDisplayName-Eigenschaft (ClientNetLibInfo-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Ruft ab oder legt den Namen verwendet, um die Anzeige des Protokolls.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Ruft den Namen für die Anzeige des Protokolls ab oder legt diesen fest.  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -12,22 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: ba9625e6d50c14ee47070b4980e6b376cc68e738
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint-Listenverbindungstyp (SSRS)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)] [!INCLUDE [ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-Wenn Sie Daten aus einer Microsoft SharePoint-Liste in den Bericht einschließen möchten, müssen Sie ein Dataset hinzufügen oder erstellen, das auf einer Berichtsdatenquelle vom Typ "Microsoft SharePoint-Liste" basiert. Dies ist ein integrierter Datenquellentyp, der auf der Microsoft SQL Server Reporting Services-Datenerweiterung für die SharePoint-Liste basiert. Verwenden Sie diesen Datenquellentyp, um Listendaten aus SharePoint 2013 und höher abzurufen.
+Wenn Sie Daten aus einer Microsoft SharePoint-Liste in den Bericht einschließen möchten, müssen Sie ein Dataset hinzufügen oder erstellen, das auf einer Berichtsdatenquelle vom Typ "Microsoft SharePoint-Liste" basiert. Dies ist ein integrierter Datenquellentyp, der auf der Microsoft SQL Server Reporting Services-Datenerweiterung für die SharePoint-Liste basiert. Verwenden Sie diesen Datenquellentyp, um Listendaten aus SharePoint 2013 und höher abzurufen.
 
 Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Eine Schritt-für-Schritt-Anleitung finden Sie unter [Hinzufügen und Prüfen einer Datenverbindung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
 

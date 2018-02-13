@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 9c725ae731867a57e36bc80a8a1cbac3d11953c6
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportieren nach Microsoft Word (Berichts-Generator und SSRS)
 

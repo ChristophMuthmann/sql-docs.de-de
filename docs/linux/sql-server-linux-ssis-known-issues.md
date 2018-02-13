@@ -10,18 +10,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: edff09c1c66a1b3c97a80d42d5a1d9702dca3e0c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fc2455ea79931b051c83677fc918c0382afcab3b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Einschränkungen und bekannten Probleme für SSIS unter Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Dieser Artikel beschreibt aktuelle Einschränkungen und bekannten Probleme für Microsoft SQL Server Integration Services (SSIS) unter Linux.
 
@@ -40,7 +42,7 @@ Die folgenden Funktionen werden nicht in dieser Version von SSIS unter Linux unt
 
 Andere Einschränkungen und bekannte Probleme mit SSIS unter Linux finden Sie in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md#ssis).
 
-## <a name="components"></a>Unterstützte und nicht unterstützte Komponenten
+## <a name="components"></a> Unterstützte und nicht unterstützte Komponenten
 
 Die folgenden integrierten Integration Services-Komponenten werden unter Linux unterstützt. Einige von ihnen haben Einschränkungen für die Linux-Plattform, wie in den folgenden Tabellen beschrieben.
 
@@ -55,7 +57,7 @@ Integrierte Komponenten, die hier nicht aufgeführt sind, werden nicht unter Lin
 - Task 'Ausdruck'
 - FTP-Task
 - Webdienst (Task)
-- XML-Task
+- XML Task
 
 ### <a name="control-flow-tasks-supported-with-limitations"></a>Ablaufsteuerungstasks unterstützt mit Einschränkungen
 
@@ -84,13 +86,13 @@ Integrierte Komponenten, die hier nicht aufgeführt sind, werden nicht unter Lin
 | ADO NET-Quelle und Ziel | Unterstützt nur die SQLClient-Datenanbieter. |
 | Flatfilequelle und Ziel | Unterstützt nur Windows-Stil Dateipfade, auf die standardmäßige Zuordnung Pfadregel angewendet wird. Z. B. `D:\home\ssis\travel.csv` wird `/home/ssis/travel.csv`. |
 | OData-Quelle | Unterstützt nur die Standardauthentifizierung. |
-| ODBC-Quelle und Ziel | Unterstützt 64-Bit-Unicode-ODBC-Treiber unter Linux. Hängt von der UnixODBC-Treiber-Manager unter Linux. |
+| ODBC-Quelle und -Ziel | Unterstützt 64-Bit-Unicode-ODBC-Treiber unter Linux. Hängt von der UnixODBC-Treiber-Manager unter Linux. |
 | OLE DB-Quelle und Ziel | Nur SQL Server Native Client 11.0 und Microsoft OLE DB-Anbieter für SQL Server unterstützt werden. |
 | | |
 
 ### <a name="supported-data-flow-transformations"></a>Datenflusstransformationen unterstützt
 - Aggregat
-- Überwachung
+- Überwachen von
 - Balanced Data Distributor
 - Zeichenzuordnung
 - Bedingtes Teilen

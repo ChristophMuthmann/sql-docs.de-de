@@ -8,25 +8,29 @@ ms.service:
 ms.component: synonyms
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
-helpviewer_keywords: synonyms [SQL Server], about synonyms
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- synonyms [SQL Server], about synonyms
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3b18b02b6ec56d52c9589207b7dc8b7b3ca99209
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 15c8ca0028ae722823198087b06d4f435aba40e4
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="synonyms-database-engine"></a>Synonyme (Datenbankmodul)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Ein Synonym ist ein Datenbankobjekt, das zu folgenden Zwecken dient:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Ein Synonym ist ein Datenbankobjekt, das zu folgenden Zwecken dient:  
   
 -   Ein Synonym stellt einen alternativen Namen für ein anderes Datenbankobjekt bereit, das als Basisobjekt bezeichnet wird und auf einem lokalen Server oder Remoteserver gespeichert sein kann.  
   
@@ -45,7 +49,7 @@ ms.lasthandoff: 11/17/2017
 |Replikationsfilterprozedur|Erweiterte gespeicherte Prozedur|  
 |SQL-Skalarfunktion|SQL-Tabellenwertfunktion|  
 |SQL-Inline-Tabellenwertfunktion|Gespeicherte SQL-Prozedur|  
-|Sicht|Tabelle* (benutzerdefiniert)|  
+|Anzeigen|Tabelle* (benutzerdefiniert)|  
   
  *Enthält lokale und globale temporäre Tabellen  
   
@@ -68,8 +72,8 @@ ms.lasthandoff: 11/17/2017
   
 |||  
 |-|-|  
-|CONTROL|DELETE|  
-|EXECUTE|INSERT|  
+|CONTROL|Delete|  
+|Führen Sie|INSERT|  
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
   
@@ -79,8 +83,8 @@ ms.lasthandoff: 11/17/2017
 |||  
 |-|-|  
 |SELECT|INSERT|  
-|UPDATE|DELETE|  
-|EXECUTE|Untergeordnete SELECT-Anweisungen|  
+|UPDATE|Delete|  
+|Führen Sie|Untergeordnete SELECT-Anweisungen|  
   
  Wenn Sie Synonyme in den vorher beschriebenen Kontexten verwenden, ist das Basisobjekt davon betroffen. Angenommen, ein Synonym verweist auf ein Basisobjekt, das eine Tabelle darstellt, und Sie fügen eine Zeile in das Synonym ein. In Wirklichkeit fügen Sie dann eine Zeile in die Tabelle ein, auf die verwiesen wird.  
   

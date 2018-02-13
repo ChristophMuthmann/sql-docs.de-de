@@ -12,15 +12,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 6f554b9ec04d894fbcd3da37e1bd326b39508571
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Erweiterter Schutz für die Authentifizierung mit Reporting Services
 

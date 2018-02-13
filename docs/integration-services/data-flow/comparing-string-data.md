@@ -25,10 +25,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 3a706839de5dd4981e09c4bc1384ee45f86c0dcb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="comparing-string-data"></a>Vergleichen von Zeichenfolgendaten
   Zeichenfolgendaten sind ein wichtiger Bestandteil vieler Transformationen, die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]ausgeführt werden, und Zeichenfolgenvergleiche werden auch bei der Auswertung von Ausdrücken in Variablen und Eigenschaftsausdrücken verwendet. Beispielsweise vergleicht die Transformation zum Sortieren Werte in einem Dataset, um Daten in auf- und absteigender Reihenfolge zu sortieren.  

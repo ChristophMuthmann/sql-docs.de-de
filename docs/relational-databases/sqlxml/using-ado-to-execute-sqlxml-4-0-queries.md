@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - queries [SQLXML], ADO
 - SQLXML, ADO
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0488f2e0e78fc2f915619a6ef0ee7caf6efe5531
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b20cdf458264460b6d2e8630d8bc211599fc165b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]In früheren Versionen von SQLXML wurde die HTTP-basierte abfrageausführung mit virtuellen SQLXML IIS-Verzeichnisse und dem SQLXML ISAPI-Filter unterstützt. In SQLXML 4.0 sind diese Komponenten nicht mehr verfügbar, da ähnliche und überlappende Funktionen mit systemeigenen Web-Diensten ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] bereitgestellt werden.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+In früheren Versionen von SQLXML wurde die HTTP-basierte Abfrageausführung mit virtuellen SQLXML IIS-Verzeichnissen und dem SQLXML ISAPI-Filter unterstützt. In SQLXML 4.0 sind diese Komponenten nicht mehr verfügbar, da ähnliche und überlappende Funktionen mit systemeigenen Web-Diensten ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] bereitgestellt werden.  
   
  Als Alternative können Sie Abfragen ausführen und SQLXML 4.0 mit Ihren COM-basierten Anwendungen verwenden, indem Sie die SQLXML-Erweiterungen für ActiveX Data Objects (ADO) nutzen, die in Microsoft Data Access Components (MDAC) 2.6 eingeführt wurden.  
   

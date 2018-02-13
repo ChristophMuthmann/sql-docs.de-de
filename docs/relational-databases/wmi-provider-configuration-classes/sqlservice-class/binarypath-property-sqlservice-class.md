@@ -8,26 +8,31 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: BinaryPath Property (SqlService Class )
-apilocation: sqlmgmproviderxpsp2up.mof
-helpviewer_keywords: BinaryPath property
+apiname:
+- BinaryPath Property (SqlService Class )
+apilocation:
+- sqlmgmproviderxpsp2up.mof
+helpviewer_keywords:
+- BinaryPath property
 ms.assetid: c59ec28e-be76-44a8-b7aa-e53ea10f71d1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6432984d3804d16defd4662254a3e9482f9c54ee
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a4c21724d4c94906c295e8daf15eed33fc518a71
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="binarypath-property-sqlservice-class-"></a>BinaryPath-Eigenschaft (SqlService-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Ruft den Binärpfad des Diensts ab.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Ruft den Binärpfad des Diensts ab.  
   
 ## <a name="syntax"></a>Syntax  
   

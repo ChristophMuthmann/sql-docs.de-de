@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -29,19 +30,20 @@ helpviewer_keywords:
 - XPath data types [SQLXML]
 - operators [SQLXML]
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d028ddf781edba7cc610966facc2e08b6bba58bb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d36d141e552750650ede74ba2aba92b203825558
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath-Datentypen (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath und XML-Schema (XSD) sehr unterschiedliche Datentypen aufweisen. Zum Beispiel verfügt XPath nicht über Ganzzahl- oder Datumsdatentypen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und XSD hingegen über mehrere. XSD gibt Zeitwerte auf die Nanosekunde genau an, während die Genauigkeit von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] höchstens 1/300 Sekunde beträgt. Einen Datentyp einem anderen zuzuordnen ist deshalb nicht immer möglich. Weitere Informationen zur Zuordnung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen und XSD-Datentypen, finden Sie unter [Datentypumwandlungen und die SQL: DataType-Anmerkung &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-, XPath- und XML-Schemas (XSD) verfügen über sehr unterschiedliche Datentypen. Zum Beispiel verfügt XPath nicht über Ganzzahl- oder Datumsdatentypen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und XSD hingegen über mehrere. XSD gibt Zeitwerte auf die Nanosekunde genau an, während die Genauigkeit von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] höchstens 1/300 Sekunde beträgt. Einen Datentyp einem anderen zuzuordnen ist deshalb nicht immer möglich. Weitere Informationen zur Zuordnung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen und XSD-Datentypen, finden Sie unter [Datentypumwandlungen und die SQL: DataType-Anmerkung &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   
  XPath verfügt über drei Datentypen: **Zeichenfolge**, **Anzahl**, und **booleschen**. Die **Anzahl** -Datentyp ist immer eine IEEE 754 Double Gleitkommazahlen mit doppelter Genauigkeit. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float(53)** -Datentyp kommt XPath **Anzahl**. Allerdings **float(53)** IEEE 754 nicht genau ist. Zum Beispiel wird weder NaN (Not-a-Number) noch Unendlichkeit verwendet. Es wird versucht, eine nicht numerische Zeichenfolge zu konvertieren **Anzahl** und der Versuch, eine Division durch 0 (null) führt zu einem Fehler.  
   
@@ -75,7 +77,7 @@ ms.lasthandoff: 11/17/2017
  Konvertierungen von Knotensätzen sind nicht immer intuitiv. Eine Knotengruppe konvertiert eine **Zeichenfolge** ergreifen Sie hierzu den Zeichenfolgenwert des ersten Knotens in der Menge. Eine Knotengruppe konvertiert **Anzahl** durch Konvertierung in **Zeichenfolge**, und klicken Sie dann zum Konvertieren von **Zeichenfolge** auf **Anzahl**. Eine Knotengruppe konvertiert **booleschen** durch sein Vorhandensein überprüft.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt bei Knotensätzen keine Positionalauswahl durch: Die XPath-Abfrage `Customer[3]` beispielsweise bezieht sich auf den dritten Kunden; eine solche Positionalauswahl wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht unterstützt. Daher den Knoten-festgelegt-zu-**Zeichenfolge** oder Knoten-festgelegt-zu-**Anzahl** Konvertierungen wie XPath-Spezifikation beschrieben wird, nicht implementiert. Die Semantik von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bezieht sich auf "ein" Vorkommnis, während die XPath-Spezifikation "das erste" Vorkommnis bezeichnet. Zum Beispiel basiert auf der W3C-XPath-Spezifikation die XPath-Abfrage `Order[OrderDetail/@UnitPrice > 10.0]` wählt diese Aufträge mit dem ersten **OrderDetail** , besitzt eine **UnitPrice** größer als 10.0. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese XPath-Abfrage wählt diese Aufträge mit **OrderDetail** , besitzt eine **UnitPrice** größer als 10.0.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt keine positionalauswahl bei Knotensätzen: z. B. die XPath-Abfrage `Customer[3]` bedeutet den dritten Kunden; diese Art von positionalauswahl wird nicht unterstützt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Daher den Knoten-festgelegt-zu-**Zeichenfolge** oder Knoten-festgelegt-zu-**Anzahl** Konvertierungen wie XPath-Spezifikation beschrieben wird, nicht implementiert. Die Semantik von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bezieht sich auf "ein" Vorkommnis, während die XPath-Spezifikation "das erste" Vorkommnis bezeichnet. Zum Beispiel basiert auf der W3C-XPath-Spezifikation die XPath-Abfrage `Order[OrderDetail/@UnitPrice > 10.0]` wählt diese Aufträge mit dem ersten **OrderDetail** , besitzt eine **UnitPrice** größer als 10.0. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese XPath-Abfrage wählt diese Aufträge mit **OrderDetail** , besitzt eine **UnitPrice** größer als 10.0.  
   
  Konvertierung in **booleschen** wird das Vorhandensein überprüft Test daher den XPath-Abfrage `Products[@Discontinued=true()]` ist gleichbedeutend mit der SQL-Ausdruck "Products.Discontinued is not null", nicht in der SQL-Ausdruck "Products.Discontinued = 1". Um die Abfrage entspricht dem zweiten SQL-Ausdruck machen, konvertieren Sie zuerst die Knotengruppe nicht**booleschen** eingeben, z. B. **Anzahl**. Beispiel: `Products[number(@Discontinued) = true()]`.  
   

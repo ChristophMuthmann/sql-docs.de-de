@@ -8,26 +8,31 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: Clustered Property (SqlService Class)
-apilocation: sqlmgmproviderxpsp2up.mof
-helpviewer_keywords: Clustered property
+apiname:
+- Clustered Property (SqlService Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
+helpviewer_keywords:
+- Clustered property
 ms.assetid: f714e7f5-c2db-45c6-9536-6ca2cb5b42aa
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f86c229aa422a01f02af4f94fbff5526fb27a04
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5b3c22584a63c4adeeb69da164f8dd617322ec73
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="clustered-property-sqlservice-class"></a>Clustered-Eigenschaft (SqlService-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Ruft den booleschen Eigenschaftswert, der angibt, ob der Dienst Teil einer gruppierten Instanz ist.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Ruft den booleschen Eigenschaftswert ab, der angibt, ob der Dienst Teil einer gruppierten Instanz ist.  
   
 ## <a name="syntax"></a>Syntax  
   

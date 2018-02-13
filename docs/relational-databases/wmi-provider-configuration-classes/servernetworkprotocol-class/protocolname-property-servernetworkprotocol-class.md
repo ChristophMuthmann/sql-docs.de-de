@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: ProtocolName Property (ServerNetworkProtocol Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- ProtocolName Property (ServerNetworkProtocol Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: ProtocolName property
+helpviewer_keywords:
+- ProtocolName property
 ms.assetid: 5894a32b-c2d8-4bba-8f9d-d09e5cd65f71
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d544cb81102992e006fbe234021be57170647e52
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 57b6c1277502f93f7bd58b52b5bf5b8fee9349a2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="protocolname-property-servernetworkprotocol-class"></a>ProtocolName-Eigenschaft (ServerNetworkProtocol-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Ruft den Namen des Servers Netzwerkprotokoll ab.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Ruft den Namen des Server-Netzwerkprotokolls ab.  
   
 ## <a name="syntax"></a>Syntax  
   

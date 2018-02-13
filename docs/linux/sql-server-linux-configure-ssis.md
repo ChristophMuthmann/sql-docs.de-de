@@ -10,18 +10,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 015c170e998fc824a8816010288b33be33d89005
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ee15f5b5124d96b2f8033515f95f03c3aab89ae3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Konfigurieren von SQL Server Integration Services unter Linux mit Ssis-conf
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Sie führen die `ssis-conf` Konfigurationsskript bei der Installation von SQL Server Integration Services (SSIS) für Red Hat Enterprise Linux und Ubuntu. Weitere Informationen zum Installieren von SSIS finden Sie unter [installieren Sie SQL Server Integration Services (SSIS) unter Linux](sql-server-linux-setup-ssis.md).
 
@@ -29,7 +31,7 @@ Sie können auch die `ssis-conf` Hilfsprogramm so konfigurieren Sie die folgende
 
 | Befehl | Description |
 |-------------|---------------------------------------------------------------------|
-| Set-edition | Legen Sie die Edition von SQL Server                                       |
+| set-edition | Legen Sie die Edition von SQL Server                                       |
 | Telemetrie   | Aktivieren Sie oder deaktivieren Sie der telemetriedienst für SQL Server Integration Services |
 | Setup       | Initialisieren und Einrichten von Microsoft SQL Server Integration Services      |
 |||

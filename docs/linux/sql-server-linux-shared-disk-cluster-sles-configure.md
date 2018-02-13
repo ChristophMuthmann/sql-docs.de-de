@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.workload: Inactive
-ms.openlocfilehash: 52747e7bc7a4ab04e0316669e350affb96fc73bf
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 9ef50e606e89d1e6673806ee0d90df510c6c6a68
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>SLES freigegebene Datenträgercluster für SQL Server konfigurieren
 
@@ -27,11 +27,11 @@ ms.lasthandoff: 02/01/2018
 
 Dieses Handbuch enthält Anweisungen, um eine freigegebene Datenträgercluster zwei Knoten für SQL Server auf SUSE Linux Enterprise Server (SLES) zu erstellen. Die clustering-Ebene basiert auf SUSE [hohe Verfügbarkeit Erweiterung (HAE)](https://www.suse.com/products/highavailability) baut auf [Schrittmacher](http://clusterlabs.org/). 
 
-Weitere Informationen zur Clusterkonfiguration, Ressourcenoptionen-Agent, Management, best Practices und Empfehlungen, finden Sie unter [SUSE Linux Enterprise hohe Verfügbarkeit Erweiterung 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
+Weitere Informationen für die Clusterkonfiguration, Ressourcenoptionen-Agent, Management, best Practices und Empfehlungen finden Sie unter [SUSE Linux Enterprise hohe Verfügbarkeit Erweiterung 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Zum Abschließen der End-to-End-Szenarios unten benötigen Sie zwei Computer zum Bereitstellen der zwei Knoten-Cluster und einem anderen Server so konfigurieren Sie die NFS-Freigabe. Unten aufgeführten Schritten dargestellt, wie diesen Servern konfiguriert werden kann.
+Um das folgende End-to-End-Szenario abzuschließen, benötigen Sie zwei Computer zum Bereitstellen der zwei Knoten-Cluster und einem anderen Server so konfigurieren Sie die NFS-Freigabe. Unten aufgeführten Schritten dargestellt, wie diesen Servern konfiguriert werden kann.
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Richten Sie ein und konfigurieren Sie des Betriebssystems auf allen Clusterknoten
 
@@ -50,7 +50,7 @@ Der erste Schritt ist so konfigurieren Sie das Betriebssystem auf den Clusterkno
 
     > [!NOTE]
     > Beim Setup eine Server-Hauptschlüssel für die SQL Server-Instanz generiert und an platziert `/var/opt/mssql/secrets/machine-key`. Unter Linux wird SQL Server immer ausgeführt, als ein lokales Konto Mssql aufgerufen werden. Da es sich um ein lokales Konto handelt, wird nicht seine Identität Knoten gemeinsam verwendet. Aus diesem Grund müssen Sie den Verschlüsselungsschlüssel primären Knoten für jeden sekundären Knoten kopieren, damit jedes lokale Mssql-Konto, um den Server-Hauptschlüssel entschlüsseln zugreifen kann.
-4. Klicken Sie auf dem primären Knoten, erstellen Sie eine SQL Server-Anmeldung für Schrittmacher, und erteilen Sie die Login-Berechtigung zum Ausführen `sp_server_diagnostics`. Schrittmacher wird dieses Konto verwendet, um zu überprüfen, welcher Knoten auf SQL Server ausgeführt wird.
+4. Klicken Sie auf dem primären Knoten, erstellen Sie eine SQL Server-Anmeldung für Schrittmacher, und erteilen Sie die Login-Berechtigung zum Ausführen `sp_server_diagnostics`. Dieses Konto wird von Schrittmacher verwendet, um zu überprüfen, welcher Knoten auf SQL Server ausgeführt wird.
 
     ```bash
     sudo systemctl start mssql-server
@@ -106,7 +106,7 @@ Eine andere Speicheroption ist die Verwendung von SMB-Dateifreigabe:
 
 ### <a name="configure-an-nfs-server"></a>Konfigurieren von einem NFS-server
 
-Um einem NFS-Server zu konfigurieren, finden Sie in die folgenden Schritte aus, in der Dokumentation für die SUSE: [Konfigurieren von NFS-Server](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
+Konfigurieren von einem NFS-Server finden Sie die folgenden Schritte aus, in der Dokumentation für die SUSE: [Konfigurieren von NFS-Server](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
 
 ### <a name="configure-all-cluster-nodes-to-connect-to-the-nfs-shared-storage"></a>Konfigurieren Sie alle Knoten des Clusters für die Verbindung mit dem freigegebenen NFS-Speicher
 
@@ -203,7 +203,7 @@ Die folgenden Schritte erläutern, wie die Clusterressource für SQL Server zu k
 - **SQL Server-Ressourcenname**: einen Namen für die SQL Server-Clusterressource. 
 - **Timeoutwert**: Wert für das Timeout ist die Zeitspanne, die der Cluster wartet, während eine Ressource online geschaltet wird. Für SQL Server, ist dies die Zeit, die Sie erwarten, SQL Server dass auszuführenden schalten Sie die `master` -Datenbank online geschaltet. 
 
-Aktualisieren Sie die Werte aus dem Skript unten für Ihre Umgebung. Führen Sie auf einem Knoten zu konfigurieren und starten Sie den Clusterdienst.
+Aktualisieren Sie die Werte aus dem folgenden Skript für Ihre Umgebung. Führen Sie auf einem Knoten zu konfigurieren und starten Sie den Clusterdienst.
 
 ```bash
 sudo crm configure

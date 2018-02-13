@@ -9,28 +9,29 @@ ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, tsql reference
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale;barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ffc2bcd906e0d975d763d12aaa899cb414ef6b5e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a8cdff2f5407ae25f096ff65c0110e22a28bfb09
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Erstellen Sie eine Diagrammdatenbank, und führen Sie einige Abfragen, die mithilfe des T-SQL-Mustervergleich
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Dieses Beispiel enthält eine [!INCLUDE[tsql-md](../../includes/tsql-md.md)] Skript eine Graph-Datenbank mit Knoten und Kanten erstellen, und klicken Sie dann die neue MATCH-Klausel verwenden, um einige Muster übereinstimmen, und Durchsuchen Sie das Diagramm. Dieses Beispielskript funktioniert für beide Azure SQL-Datenbank und[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+Dieses Beispiel enthält eine [!INCLUDE[tsql-md](../../includes/tsql-md.md)] Skript eine Graph-Datenbank mit Knoten und Kanten erstellen, und klicken Sie dann die neue MATCH-Klausel verwenden, um einige Muster übereinstimmen, und Durchsuchen Sie das Diagramm. Dieses Beispielskript funktioniert für beide Azure SQL-Datenbank und [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
  
 ## <a name="sample-schema"></a>Beispielschema  
 Dieses Beispiel erstellt ein Schema Diagramm an, wie in Abbildung 1 für eine hypothetische sozialen Netzwerk wurde gezeigt, die Personen, Restaurant und City Knoten verfügt. Diese Knoten mit Freunden, miteinander verbunden sind schätzt, LivesIn und LocatedIn Kanten. 

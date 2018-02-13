@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: bfd36553e4ac30b6d551e60cde02d57a7eec8fbc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b9dd4b05cf69b8556c4c021e2ede576b1a805c5e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On-Verfügbarkeitsgruppen unter Linux
 
@@ -65,9 +65,9 @@ Es gibt drei Werte, die für die festgelegt werden können `required_synchronize
 -   1 – ein sekundäres Replikat muss im synchronisiert-Status mit dem primären Replikat; Automatisches Failover ist möglich. Die primäre Datenbank ist nicht verfügbar, bis ein sekundäres Replikat für synchrone verfügbar ist.
 -   2 – beide sekundäre Replikate in einer drei oder mehr Knoten AG-Konfiguration müssen mit dem primären Replikat synchronisiert werden; Automatisches Failover ist möglich.
 
-`required_synchronized_secondaries_to_commit`steuert nicht nur das Verhalten von Failovers mit synchronen Replikate, jedoch mit Verlust von Daten. Mit einem Wert von 1 oder 2 ist ein sekundäres Replikat immer synchronisiert werden, erforderlich, daher tritt immer Datenredundanz. Bedeutet, dass keine Daten verloren.
+`required_synchronized_secondaries_to_commit` steuert nicht nur das Verhalten von Failovers mit synchronen Replikate, jedoch mit Verlust von Daten. Mit einem Wert von 1 oder 2 ist ein sekundäres Replikat immer synchronisiert werden, erforderlich, daher tritt immer Datenredundanz. Bedeutet, dass keine Daten verloren.
 
-So ändern Sie den Wert der `required_synchronized_secondaries_to_commit`, verwenden Sie die folgende Syntax.
+So ändern Sie den Wert der `required_synchronized_secondaries_to_commit`, verwenden Sie die folgende Syntax:
 
 >[!NOTE]
 >Ändern des Werts führt dazu, dass die Ressource neu starten, d. h. einen kurzen Ausfall. Die einzige Möglichkeit, dieses Problem zu vermeiden werden der Ressourcensatz nicht vom Cluster verwaltet wird, vorübergehend sein.
@@ -132,7 +132,7 @@ Wie auf Windows-basierten Testreihen sollten das Laufwerk und die Ordnerstruktur
 
 Der Listener ist die optionale Funktionen für eine Verfügbarkeitsgruppe. Es stellt einen einzelnen Zugriffspunkt für alle Verbindungen (Lese-/Schreibzugriff auf das primäre Replikat und/oder ohne Schreibzugriff auf sekundäre Replikate), damit Anwendungen und Endbenutzern nicht müssen wissen, welche Server die Daten gehostet wird. In einem WSFC ist dies die Kombination von einer Netzwerknamenressource und einer IP-Adressressource, die dann in AD DS (falls erforderlich) registriert wurde, sowie DNS. In Kombination mit der AG-Ressource selbst stellt er diese Abstraktion bereit. Weitere Informationen auf einen Listener finden Sie unter [Listener, Clientkonnektivität und Anwendungsfailover](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).
 
-Der Listener unter Linux ist anders konfiguriert, aber die Funktionen sind identisch. Es ist kein Konzept für eine Netzwerknamenressource in Schrittmacher, noch wird ein Objekt in AD DS erstellt; Es ist nur eine IP-Adressressource erstellt in Schrittmacher, die auf einem Knoten ausgeführt werden kann. Ein Eintrag zugeordneten IP-Adressressource für den Listener in DNS mit "Anzeigename" erstellt werden müssen. Die IP-Adressressource für den Listener wird nur auf dem Server, die das primäre Replikat für diese verfügbarkeitsgruppe hosten aktiv sein.
+Der Listener unter Linux ist anders konfiguriert, aber die Funktionen sind identisch. Es ist kein Konzept für eine Netzwerknamenressource in Schrittmacher, noch wird ein Objekt in AD DS erstellt; Es ist nur eine IP-Adressressource erstellt in Schrittmacher, die auf einem Knoten ausgeführt werden kann. Ein Eintrag zugeordneten IP-Adressressource für den Listener in DNS mit einem "Angezeigter Name" muss erstellt werden. Die IP-Adressressource für den Listener wird nur auf dem Server, die das primäre Replikat für diese verfügbarkeitsgruppe hosten aktiv sein.
 
 Wenn Schrittmacher verwendet wird, und eine IP-Adressressource wird erstellt, die der Listener zugeordnet ist, wird ein kurzen Ausfall wie die IP-Adresse auf einem Server beendet und gestartet, auf dem anderen wird, ob sie automatische oder manuelle Failover ist. Dies bietet eine Abstraktion über die Kombination aus einem einzelnen Namen und IP-Adresse wird es der Ausfall nicht maskiert. Eine Anwendung muss die Trennung von irgendeine Funktionalität erkannt und erneute Verbinden mit verarbeiten können.
 
@@ -147,11 +147,11 @@ Die Instanz, die die angegebene IP-Adresse zugeordnet sind, dann wird der Koordi
 
 Eine, die mit einem Clustertyp der externen oder einem WSFC AG sind keine Plattformen cross Replikate. Dies ist "true" gibt an, ob die Verfügbarkeitsgruppe [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)] oder [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)]. Das bedeutet, dass in einer herkömmlichen AG-Konfiguration mit einem Cluster zugrunde liegen, darf nicht auf einem wsfc- und die andere unter Linux mit Schrittmacher ein Replikat sein.
 
-Eine AG mit einem Cluster keine möglich seiner Replikate OS-hinweg, gelten, damit in der gleichen Verfügbarkeitsgruppe konnte beide Replikate mit Linux und Windows-basierte vorhanden sein. Ein Beispiel unten ist, auf dem Windows-basierten das primäre Replikat ist, während die sekundäre Datenbank auf einem Linux-Distributionen enthalten ist.
+Eine AG mit einem Cluster keine möglich seiner Replikate OS-hinweg, gelten, damit in der gleichen Verfügbarkeitsgruppe konnte beide Replikate mit Linux und Windows-basierte vorhanden sein. Ein Beispiel ist hier angezeigt, in dem das primäre Replikat ist Windows-basierten, während die sekundäre Datenbank auf einem Linux-Distributionen enthalten ist.
 
 ![Hybride None](./media/sql-server-linux-availability-group-overview/image1.png)
 
-Eine verteilte Verfügbarkeitsgruppe kann auch OS Grenzen überqueren. Die zugrunde liegenden Testreihen durch die Regeln gebunden sind, für deren, wie z. B. mit externen wird konfiguriert Konfiguration nur Linux, jedoch die Verfügbarkeitsgruppe, der er angehört könnte mit einem WSFC konfiguriert werden. Das folgende Beispiel soll dies erläutern:
+Eine verteilte Verfügbarkeitsgruppe kann auch OS Grenzen überqueren. Die zugrunde liegenden Testreihen durch die Regeln gebunden sind, für deren, wie z. B. mit externen wird konfiguriert Konfiguration nur Linux, jedoch die Verfügbarkeitsgruppe, der er angehört könnte mit einem WSFC konfiguriert werden. Betrachten Sie das folgende Beispiel:
 
 ![Hybrid Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 

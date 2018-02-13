@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Active
 ms.openlocfilehash: 2949110180da3c51a0bb536279cc9003d60be947
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 In dieser Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Report Gruppierungen und Gesamtergebnisse hinzufügen, um Ihre Daten zu organisieren und zusammenzufassen.  
@@ -56,7 +57,7 @@ In dieser Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion](../inc
   
 8.  Wählen Sie im Feld **Typ** die Option **31. Januar 2000**aus.  
   
-9.  [!INCLUDE[clickOK](../includes/clickok-md.md)].  
+9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]zugreifen.  
   
 10.  Wechseln Sie zur Registerkarte **Vorschau** , um eine Vorschau des Berichts anzuzeigen. Die Vorschau sollte ähnlich der folgenden Abbildung aussehen:  
     ![rs_Basistabelle_Gruppen_Vorschau](../reporting-services/media/rs-basictablegroupspreview.png) 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - filtering [SQLXML]
 - location path for XPath query
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2b476304fddd169a253a3777bb1a0fb4d53087f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08a27de5e9c528d3e49156df804f19376ae5a6bd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Angeben von Auswahlprädikaten im Speicherortpfad (SQLXML 4.0) 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Ein Prädikat filtert einen Knotensatz in Bezug auf eine Achse (ähnlich einer WHERE-Klausel in einer SELECT-Anweisung). Das Prädikat wird zwischen Klammern angegeben. Für jeden Knoten in der zu filternden Knotengruppe wird der Prädikatausdruck mit dem entsprechenden Knoten als Kontextknoten ausgewertet. Die Anzahl der Knoten in der Knotengruppe dient dabei als Kontextgröße. Ergibt die Auswertung des Prädikatausdrucks für den betreffenden Knoten TRUE, wird dieser Knoten in die resultierende Knotengruppe aufgenommen.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Ein Prädikat filtert eine Knotengruppe in Bezug auf eine Achse (ähnlich einer WHERE-Klausel in einer SELECT-Anweisung). Das Prädikat wird zwischen Klammern angegeben. Für jeden Knoten in der zu filternden Knotengruppe wird der Prädikatausdruck mit dem entsprechenden Knoten als Kontextknoten ausgewertet. Die Anzahl der Knoten in der Knotengruppe dient dabei als Kontextgröße. Ergibt die Auswertung des Prädikatausdrucks für den betreffenden Knoten TRUE, wird dieser Knoten in die resultierende Knotengruppe aufgenommen.  
   
  XPath ermöglicht auch die positionsbasierte Filterung. Ein Prädikatausdruck, der eine Zahl ergibt, wählt diesen Ordinalzahlenknoten aus. Beispielsweise gibt der Speicherortpfad `Customer[3]` den dritten Kunden zurück. Solche numerische Prädikate werden nicht unterstützt. Nur Prädikatausdrücke, die ein boolesches Ergebnis zurückgeben, werden unterstützt.  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- In dieser XPath-Abfrage sind `child` und `attribute` die Achsennamen. `Customer`ist der Knotentest (TRUE, wenn `Customer` ist ein  **\<Elementknoten >**, da  **\<Element >** ist der Hauptknotentyp für die `child` Achse). `attribute::CustomerID="ALFKI"` ist das Prädikat. Im Prädikat ist `attribute` ist die Achse und `CustomerID` ist der Knotentest (TRUE, wenn **CustomerID** ist ein Attribut des Kontextknotens aus, da  **\<Attribut >** ist der Prinzipal Knotentyp **Attribut** Achse).  
+ In dieser XPath-Abfrage sind `child` und `attribute` die Achsennamen. `Customer` ist der Knotentest (TRUE, wenn `Customer` ist ein  **\<Elementknoten >**, da  **\<Element >** ist der Hauptknotentyp für die `child` Achse). `attribute::CustomerID="ALFKI"` ist das Prädikat. Im Prädikat ist `attribute` ist die Achse und `CustomerID` ist der Knotentest (TRUE, wenn **CustomerID** ist ein Attribut des Kontextknotens aus, da  **\<Attribut >** ist der Prinzipal Knotentyp **Attribut** Achse).  
   
  In abgekürzter Syntax kann die XPath-Abfrage auch wie folgt angegeben werden:  
   
@@ -77,7 +79,7 @@ child::Customer[child::ContactName]
   
  In diesem Beispiel wird vorausgesetzt, dass die  **\<ContactName >** ist ein untergeordnetes Element von der  **\<Kunden >** Element in der XML-Dokument, das so genannte  *elementzentrierte Zuordnung* in einem XSD-Schema mit Anmerkungen.  
   
- In diesem XPath-Ausdruck ist `child` der Achsenname. `Customer`ist der Knotentest (TRUE, wenn `Customer` ist ein  **\<Element >** Knoten, da  **\<Element >** ist der Hauptknotentyp für `child` Achse). `child::ContactName` ist das Prädikat. Im Prädikat ist `child` ist die Achse und `ContactName` ist der Knotentest (TRUE, wenn `ContactName` ist ein  **\<Element >** Knoten).  
+ In diesem XPath-Ausdruck ist `child` der Achsenname. `Customer` ist der Knotentest (TRUE, wenn `Customer` ist ein  **\<Element >** Knoten, da  **\<Element >** ist der Hauptknotentyp für `child` Achse). `child::ContactName` ist das Prädikat. Im Prädikat ist `child` ist die Achse und `ContactName` ist der Knotentest (TRUE, wenn `ContactName` ist ein  **\<Element >** Knoten).  
   
  Dieser Ausdruck gibt nur die  **\<Kunden >** -Element untergeordneten Knoten des Kontextknotens  **\<ContactName >** Element untergeordnete Elemente.  
   
@@ -96,7 +98,7 @@ child::Customer[not(child::ContactName)]
   
  In diesem Beispiel wird vorausgesetzt, dass  **\<ContactName >** ist ein untergeordnetes Element von der  **\<Kunden >** Element in das XML-Dokument, das ContactName-Feld ist nicht erforderlich, der die Datenbank.  
   
- In diesem Beispiel ist `child` die Achse. `Customer`ist der Knotentest (TRUE, wenn `Customer` ist ein \<Element > Knoten). `not(child::ContactName)` ist das Prädikat. Im Prädikat ist `child` ist die Achse und `ContactName` ist der Knotentest (TRUE, wenn `ContactName` ist ein \<Element > Knoten).  
+ In diesem Beispiel ist `child` die Achse. `Customer` ist der Knotentest (TRUE, wenn `Customer` ist ein \<Element > Knoten). `not(child::ContactName)` ist das Prädikat. Im Prädikat ist `child` ist die Achse und `ContactName` ist der Knotentest (TRUE, wenn `ContactName` ist ein \<Element > Knoten).  
   
  In abgekürzter Syntax kann die XPath-Abfrage auch wie folgt angegeben werden:  
   
@@ -120,7 +122,7 @@ Customer[@CustomerID]
 ```  
   
 ## <a name="selection-predicate-example-6"></a>Auswahlprädikat: Beispiel 6  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 unterstützt XPath-Abfragen mit einem Kreuzprodukt im Prädikat, wie im folgenden Beispiel gezeigt:  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 umfasst Unterstützung für XPath-Abfragen, die einem Kreuzprodukt im Prädikat ist enthalten, wie im folgenden Beispiel gezeigt:  
   
 ```  
 Customer[Order/@OrderDate=Order/@ShipDate]  

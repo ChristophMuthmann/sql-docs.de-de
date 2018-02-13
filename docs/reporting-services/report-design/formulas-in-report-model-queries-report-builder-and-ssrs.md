@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: "10151"
+f1_keywords:
+- "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 498047a984da8c40cc7b935bf134ee2af2a648f3
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Formeln in Berichtsmodellabfragen (Berichts-Generator und SSRS)
   Formeln sind Berechnungen, die für Werte in einem Bericht ausgeführt werden, die ein Berichtsmodell als Datenquelle verwenden. Formel werden im **Dialogfeld "Formeln definieren"** im Berichtsmodell-Abfrage-Designer definiert, wenn Sie eine Abfrage für eine Berichtsmodell-Datenquelle definieren. Eine Formel kann Funktionen, Operatoren, Konstanten und Verweise auf Felder oder Entitäten enthalten. Mithilfe von Formeln können Sie numerische und Textdaten kombinieren, aggregieren, filtern und auswerten. Sie können Formeln erstellen und als neue Felder speichern oder die Formeln vorhandener Felder ändern.  

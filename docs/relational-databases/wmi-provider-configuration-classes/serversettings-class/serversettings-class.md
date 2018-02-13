@@ -11,24 +11,28 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: ServerSettings Class
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- ServerSettings Class
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: ServerSettings class
+helpviewer_keywords:
+- ServerSettings class
 ms.assetid: d11ef801-dcb3-4fe1-84db-bf943ccf0e99
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0af5469ef978a5dd7edd7c1c862c2e160b674c9a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d09fc229270f91dc0e0769916fa002d0cf6eda4b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="serversettings-class"></a>ServerSettings-Klasse
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Die [ServerSettings-Klasse](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) stellt servereinstellungen in einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+The [ServerSettings-Klasse](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) stellt Servereinstellungen in einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]dar.  
   
  Mit der [ServerSettings-Klasse](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) können Sie folgende Aufgaben ausführen:  
   
@@ -38,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Festlegen des Sicherheitszertifikats für die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - mapping schema [SQLXML], XPath queries
 - SQLXML Managed Classes, executing XPath queries
 ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 335aaa349da8488a86076d10dc09144b6cd96c8c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0465bebf92f57739858f3c478fdd7f467ebd3cff
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>Ausführen von XPath-Abfragen (verwaltete SQLXML-Klassen)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]In diesem Beispiel wird veranschaulicht, wie XPath-Abfragen für ein Zuordnungsschema ausgeführt werden.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+In diesem Beispiel wird dargestellt, wie XPath-Abfragen für ein Zuordnungsschema ausgeführt werden.  
   
  Betrachten wir das folgende Schema:  
   

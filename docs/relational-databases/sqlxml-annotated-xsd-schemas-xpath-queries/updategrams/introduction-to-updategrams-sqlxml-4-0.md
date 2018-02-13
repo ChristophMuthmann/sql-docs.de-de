@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 - implicit schema mapping
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b5a9ef6b56ee32f31b277273fb644a03925fdf0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2dc3ce73bfe3da97e6567c1819eea34a8bc1dfaa
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Einführung in Updategrams (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Sie können ändern (einfügen, aktualisieren oder löschen) eine Datenbank in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aus einem vorhandenen XML-Dokument mithilfe eines Updategrams oder der OPENXML- [!INCLUDE[tsql](../../../includes/tsql-md.md)] Funktion.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Sie können ändern (einfügen, aktualisieren oder löschen) eine Datenbank in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aus einem vorhandenen XML-Dokument mithilfe eines Updategrams oder der OPENXML- [!INCLUDE[tsql](../../../includes/tsql-md.md)] Funktion.  
   
  Die OPENXML-Funktion ändert eine Datenbank durch Aufteilen des vorhandenen XML-Dokuments und Bereitstellen eines Rowsets, das an eine INSERT-, UPDATE- oder DELETE-Anweisung übergeben werden kann. Mit OPENXML werden Operationen direkt für die Datenbanktabellen ausgeführt. Daher eignet sich OPENXML besonders gut, wenn Rowsetanbieter, wie Tabellen, als Quelle auftreten können.  
   
@@ -66,13 +68,13 @@ ms.lasthandoff: 11/17/2017
   
  In den folgenden Definitionen werden die Rollen der einzelnen Blöcke beschrieben:  
   
- **\<Bevor Sie >**  
+ **\<before>**  
  Identifiziert den vorhandenen Status (auch als "Vorher-Status" bezeichnet) der Datensatzinstanz.  
   
- **\<Nachdem >**  
+ **\<after>**  
  Identifiziert den neuen Status, in den Daten geändert werden sollen.  
   
- **\<Sync >**  
+ **\<sync>**  
  Enthält die  **\<vor >** und  **\<nach >** blockiert. Ein  **\<Sync >** Block darf maximal einen Satz von  **\<vor >** und  **\<nach >** blockiert. Es ist mehr als ein Satz von  **\<vor >** und  **\<nach >** Blöcke, diese Blöcke (selbst wenn sie leer sind) müssen paarweise angegeben werden. Darüber hinaus ein Updategram kann mehr als einen haben  **\<Sync >** Block. Jede  **\<Sync >** Block ist eine Transaktionseinheit (was bedeutet, dass entweder der gesamte der  **\<Sync >** -Block oder nichts ausgeführt). Bei Angabe mehrerer  **\<Sync >** -Blöcke in einem Updategram, die Fehler in einer  **\<Sync >** Block hat keinen Einfluss auf die andere  **\<Sync >** blockiert.  
   
  Gibt an, ob ein Updategram löscht, einfügt oder aktualisiert eine Datensatzinstanz hängt vom Inhalt des der  **\<vor >** und  **\<nach >** blockiert:  

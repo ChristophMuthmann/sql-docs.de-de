@@ -8,7 +8,8 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Always Encrypted, about
 - SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
-caps.latest.revision: "58"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: d56c906c87ef69e444ee1424324cc99e3fa05ed8
-ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="always-encrypted-database-engine"></a>„Immer verschlüsselt“ (Datenbankmodul)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

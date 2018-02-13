@@ -9,25 +9,25 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ms.workload: Inactive
-ms.openlocfilehash: 2f9d7d8697aa82caf3822cefefe83a2525a72e24
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 0e5a08655bcfea396bcf599ef65e7a8e1f126575
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Verbindungsbibliotheken und Frameworks für Microsoft SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Sehen Sie sich unsere [Lernprogramme für erste Schritte](http://aka.ms/sqldev) können Sie schnell erste Schritte mit Programmiersprachen wie c#, Java, Node.js, PHP und Python und erstellen Sie eine Anwendung mithilfe von SQL Server auf MacOS auf Linux, Windows oder Docker.
+Sehen Sie sich die [Lernprogramme für erste Schritte](http://aka.ms/sqldev) können Sie schnell erste Schritte mit Programmiersprachen wie c#, Java, Node.js, PHP und Python und erstellen Sie eine Anwendung mithilfe von SQL Server auf MacOS auf Linux, Windows oder Docker.
 
-Die folgende Tabelle listet verbindungsbibliotheken oder *Treiber* , dass Clientanwendungen aus einer Vielzahl von Sprachen zum Verbinden mit und Verwenden von Microsoft SQL Server lokal ausgeführt wird oder in der Cloud, auf Linux, Windows oder Docker und auch für Azure SQL-Datenbank und Azure SQL Data Warehouse verwenden können. 
+Die folgende Tabelle enthält verbindungsbibliotheken oder *Treiber* , die Clientanwendungen verwenden können, aus einer Vielzahl von Sprachen zum Verbinden mit und Verwenden von Microsoft SQL Server lokal ausgeführt wird oder in der Cloud unter Linux, Windows oder Docker und auch in Azure SQL-Datenbank und Azure SQL Datawarehouse. 
 
 | Sprache | Platform | Weitere Ressourcen | Herunterladen | Erste Schritte |
 | :-- | :-- | :-- | :-- | :-- |
@@ -39,7 +39,7 @@ Die folgende Tabelle listet verbindungsbibliotheken oder *Treiber* , dass Client
 | Ruby | Windows, Linux, macOS | [Ruby-Treiber für SQL Server](../connect/ruby/ruby-driver-for-sql-server.md) | [Erste Schritte](https://www.microsoft.com/en-us/sql-server/developer-get-started/ruby/ubuntu)
 | C++ | Windows, Linux, macOS | [Microsoft ODBC Driver for SQL Server](https://msdn.microsoft.com/en-us/library/mt654048(v=sql.1).aspx) | [Download](https://msdn.microsoft.com/en-us/library/mt654048(v=sql.1).aspx) |  
 
-In der folgenden Tabelle sind einige Beispiele von Objekt Relational Mapping (ORM)-Frameworks und webframeworks, die Clientanwendungen mit Microsoft SQL Server lokal ausgeführt wird, oder verwenden können, in der Cloud auf Linux, Windows oder Docker und auch für Azure SQL-Datenbank und Azure SQL Data Warehouse aufgeführt. 
+Die folgende Tabelle enthält einige Beispiele von Objekt Relational Mapping (ORM)-Frameworks und webframeworks, die Clientanwendungen verwenden können, mit Microsoft SQL Server lokal oder in der Cloud, die unter Linux, Windows oder Docker und Azure SQL-Datenbank und Azure SQL Datawarehouse. 
 
 | Sprache | Platform | ORM(s) |
 | :-- | :-- | :-- |

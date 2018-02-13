@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - adExecuteStream flag
 - SQLXMLOLEDB Provider, about SQLXMLOLEDB Provider
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87c5d06433a07ac722af92ed64b7c9551d340f96
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b50dce46b9342a4c6271de7abca7bd0205c77761
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Einführung in den SQLXMLOLEDB-Anbieter (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Der SQLXMLOLEDB-Anbieter ist ein OLE DB-Anbieter, der verfügbar macht [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML-Funktionalität durch ActiveX Data Objects (ADO). Der Anbieter kann Befehle jedoch nur im ADO-Modus zum Schreiben in einen Ausgabedatenstrom ausführen. Der SQLXMLOLEDB-Anbieter ist kein Rowsetanbieter. Wenn Sie einen Befehl ausführen, müssen Sie die AdExecuteStream-Flag angeben, die den Ausgabestream, den Sie angegeben haben, verwenden von ADO anweist.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Der SQLXMLOLEDB-Anbieter ist ein OLE DB-Anbieter, der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML-Funktionalität durch ADO (ActiveX Data Objects) verfügbar macht. Der Anbieter kann Befehle jedoch nur im ADO-Modus zum Schreiben in einen Ausgabedatenstrom ausführen. Der SQLXMLOLEDB-Anbieter ist kein Rowsetanbieter. Wenn Sie einen Befehl ausführen, müssen Sie die AdExecuteStream-Flag angeben, die den Ausgabestream, den Sie angegeben haben, verwenden von ADO anweist.  
   
  Das folgende Beispiel zeigt die Syntax für die Execute-Befehl in dem die AdExecuteStream-Flag angegeben wird:  
   
@@ -56,9 +58,9 @@ oTestCommand.Execute , , adExecuteStream
 |Inhaltstyp||Gibt den Ausgabeinhaltstyp zurück. Dies ist eine schreibgeschützte Eigenschaft.<br /><br /> Diese Eigenschaft stellt dem Browser Informationen über den Inhaltstyp (z. B. TEXT/XML, TEXT/HTML, image/jpeg usw.) zur Verfügung. Der Wert dieser Eigenschaft wird die **Inhaltstyp** Feld, das an den Browser als Teil der HTTP-Header gesendet wird, die den MIME-Typ (Multipurpose Internet Mail Extensions), der als Textkörper gesendeten Dokuments enthält.|  
 |Zuordnungsschema|NULL|Wenn eine Clientanwendung eine XPath-Abfrage für ein Zuordnungsschema (XDR oder XSD) ausführt, wird mit dieser Eigenschaft der Name des Zuordnungsschemas angegeben.<br /><br /> Der Pfad, der angegeben wird, kann relativ (xyz/abc/MySchema.xml) oder absolut (C:\MyFolder\abc\MySchema.xml) sein.<br /><br /> Wenn ein relativer Pfad angegeben wird, wird der Basispfad, der von der Basispfad-Eigenschaft angegeben wird zum Auflösen des relativen Pfads verwendet. Wenn kein Pfad in der Eigenschaft Base Pfad angegeben wurde, ist der relative Pfad relativ zum aktuellen Verzeichnis.<br /><br /> Geben Sie einen Wert für das Mapping-Schema-Eigenschaft, können Sie einen lokalen Verzeichnispfad oder eine URL (http://...) angeben. Wenn Sie eine URL angeben, müssen Sie WinHTTP für den Zugriff auf den HTTP- und den HTTPS-Server über einen Proxyserver konfigurieren. Führen Sie dazu das Hilfsprogramm Proxycfg.exe aus. Weitere Informationen finden Sie im Abschnitt über das Verwenden des WinHTTP-Proxy-Konfigurationshilfsprogramms in der MSDN Library.<br /><br /> Ein Beispiel, in dem diese Eigenschaft wird verwendet, finden Sie unter [Ausführen von XPath-Abfragen &#40; SQLXMLOLEDB-Anbieter &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).|  
 |Namespaces||Diese Eigenschaft ermöglicht die Ausführung von XPath-Abfragen, die Namespaces verwenden. Ein Beispiel, in dem diese Eigenschaft wird verwendet, finden Sie unter [Ausführen von XPath-Abfragen mit Namespaces &#40; SQLXMLOLEDB-Anbieter &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md).|  
-|ss Stream Flags||Diese Eigenschaft wird verwendet, um bestimmte Arten von Sicherheitseinschränkungen anzugeben. Beispielsweise sollen keine URL-Verweise auf Dateien oder absolute Pfade für Dateien (wie externe Websites) zugelassen werden. Oder es sollen keine Abfragen in den Vorlagen zulässig sein.<br /><br /> Der Eigenschaft können folgende Werte zugewiesen werden:<br /><br /> 1 = STREAM_FLAGS_DISALLOW_URL 2 = STREAM_FLAGS_DISALLOW_ABSOLUTE_PATH 4 = STREAM_FLAGS_DISALLOW_QUERY 8 = STREAM_FLAGS_ DONTCACHEMAPPINGSCHEMA 16 = STREAM_FLAGS_DONTCACHETEMPLATE 32 = STREAM_FLAGS_DONTCACHEXSL<br /><br /> Weitere Informationen über diese Werte sind in der nächsten Tabelle enthalten.|  
+|ss Stream Flags||Diese Eigenschaft wird verwendet, um bestimmte Arten von Sicherheitseinschränkungen anzugeben. Beispielsweise sollen keine URL-Verweise auf Dateien oder absolute Pfade für Dateien (wie externe Websites) zugelassen werden. Oder es sollen keine Abfragen in den Vorlagen zulässig sein.<br /><br /> Der Eigenschaft können folgende Werte zugewiesen werden:<br /><br /> 1 = STREAM_FLAGS_DISALLOW_URL 2 = STREAM_FLAGS_DISALLOW_ABSOLUTE_PATH 4 = STREAM_FLAGS_DISALLOW_QUERY 8 = STREAM_FLAGS_       DONTCACHEMAPPINGSCHEMA 16 = STREAM_FLAGS_DONTCACHETEMPLATE 32 = STREAM_FLAGS_DONTCACHEXSL<br /><br /> Weitere Informationen über diese Werte sind in der nächsten Tabelle enthalten.|  
 |XML-Stamm||Diese Eigenschaft wird verwendet, um ein Stammtag für das resultierende XML zu definieren. Wenn Sie beispielsweise SQL-Abfragen für die Datenbank ausführen und das resultierende XML-Dokument kein einzelnes Stammelement hat, wird der Wert der Eigenschaft dazu verwendet, dem Dokument ein einzelnes Stammelement hinzuzufügen.<br /><br /> Ein Beispiel, in dem diese Eigenschaft wird verwendet, finden Sie unter [SQL-Abfragen ausführen &#40; SQLXMLOLEDB-Anbieter &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md).|  
-|XSL||Mit dieser Eigenschaft wird der XSL-Dateiname angegeben, wenn die XSL-Transformation auf das von der Abfrage zurückgegebene XML-Dokument angewendet werden soll.<br /><br /> Der Pfad, der angegeben wird, kann relativ (xyz/abc/MyXSL.xsl) oder absolut (C:\MyFolder\abc\MyXSL.xsl) sein.<br /><br /> Wenn ein relativer Pfad angegeben wird, wird der Basispfad, der von der Basispfad-Eigenschaft angegeben wird zum Auflösen des relativen Pfads verwendet. Wenn kein Pfad in der Eigenschaft Base Pfad angegeben wurde, ist der relative Pfad relativ zum aktuellen Verzeichnis.<br /><br /> Ein Beispiel, in dem diese Eigenschaft verwendet wird, finden Sie in der Anwenden einer XSL-Transformation (SQLXMLOLEDB-Anbieter).|  
+|xsl||Mit dieser Eigenschaft wird der XSL-Dateiname angegeben, wenn die XSL-Transformation auf das von der Abfrage zurückgegebene XML-Dokument angewendet werden soll.<br /><br /> Der Pfad, der angegeben wird, kann relativ (xyz/abc/MyXSL.xsl) oder absolut (C:\MyFolder\abc\MyXSL.xsl) sein.<br /><br /> Wenn ein relativer Pfad angegeben wird, wird der Basispfad, der von der Basispfad-Eigenschaft angegeben wird zum Auflösen des relativen Pfads verwendet. Wenn kein Pfad in der Eigenschaft Base Pfad angegeben wurde, ist der relative Pfad relativ zum aktuellen Verzeichnis.<br /><br /> Ein Beispiel, in dem diese Eigenschaft verwendet wird, finden Sie in der Anwenden einer XSL-Transformation (SQLXMLOLEDB-Anbieter).|  
   
  Die folgende Tabelle enthält Beschreibungen der ss Stream Flags-Eigenschaftswerte.  
   

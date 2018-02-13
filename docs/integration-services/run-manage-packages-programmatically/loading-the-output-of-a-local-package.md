@@ -26,10 +26,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d7fe4ecd4b618f508dccc123b31611658fe5000c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Laden der Ausgabe eines lokalen Pakets
   Clientanwendungen können die Ausgabe von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen lesen, wenn diese mithilfe von [!INCLUDE[vstecado](../../includes/vstecado-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielen oder mithilfe der Klassen im **System.IO**-Namespace in Flatfilezielen gespeichert wird. Eine Clientanwendung kann jedoch die Ausgabe eines Pakets auch direkt aus dem Arbeitsspeicher lesen, ohne dass hierfür ein Zwischenschritt zur persistenten Speicherung der Daten erforderlich ist. Der Schlüssel zu dieser Lösung liegt im **Microsoft.SqlServer.Dts.DtsClient**-Namespace, der spezielle Implementierungen der Schnittstellen **IDbConnection**, **IDbCommand** und **IDbDataParameter** aus dem **System.Data**-Namespace enthält. Die Assembly „Microsoft.SqlServer.Dts.DtsClient.dll“ wird standardmäßig im Verzeichnis **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** installiert.  

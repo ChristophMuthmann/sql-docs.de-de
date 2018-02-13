@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - SQL Server Native Client, XML
 - SQLXMLOLEDB Provider, XML formatting architecture
 ms.assetid: 52440d9e-89fd-4c15-a008-a1ea99f41387
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b8507d3c1edeaab0f5def1b62b39c6fe06b55f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4efdc1f83a99cfc148f34a47e0843328891267b7
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="architecture-of-client-side-and-server-side-xml-formatting-sqlxml-40"></a>Architektur clientseitiger und serverseitiger XML-Formatierung (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Die folgende Abbildung zeigt die Architektur der XML-Formatierung auf Serverseite.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Die folgende Abbildung zeigt die Architektur der XML-Formatierung auf Serverseite:  
   
  ![Architektur der XML-Formatierung auf Serverseite. ] (../../../relational-databases/sqlxml/formatting/media/serversidexml.gif "Architektur der XML-Formatierung auf Serverseite.")  
   

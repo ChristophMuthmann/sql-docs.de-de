@@ -8,7 +8,8 @@ ms.service:
 ms.component: track-changes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - change data capture [SQL Server]
 - 22832 (Database Engine error)
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
-caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b839baf4614d89b29d5244859735f1b3ccf1df19
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a56878e9a37195e63e03b04b84c4a8d296844ff2
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="about-change-data-capture-sql-server"></a>Über Change Data Capture (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Change Data Capture zeichnet Einfüge-, Aktualisierungs- und Löschaktivitäten auf, die an einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle vorgenommen werden. Hierdurch werden die Details zu diesen Änderungen in einem leicht verwendbaren relationalen Format bereitgestellt. Für die geänderten Zeilen werden die Spaltendaten sowie die Metadaten, die zur Übernahme der Änderungen in einer Zielumgebung erforderlich sind, aufgezeichnet und in Änderungstabellen gespeichert, die die Spaltenstruktur der nachverfolgten Quelltabellen widerspiegeln. Für den systematischen Zugriff auf die Änderungsdaten durch den Consumer werden Tabellenwertfunktionen bereitgestellt.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Change Data Capture zeichnet Einfüge-, Aktualisierungs- und Löschaktivitäten auf, die an einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle vorgenommen werden. Hierdurch werden die Details zu diesen Änderungen in einem leicht verwendbaren relationalen Format bereitgestellt. Für die geänderten Zeilen werden die Spaltendaten sowie die Metadaten, die zur Übernahme der Änderungen in einer Zielumgebung erforderlich sind, aufgezeichnet und in Änderungstabellen gespeichert, die die Spaltenstruktur der nachverfolgten Quelltabellen widerspiegeln. Für den systematischen Zugriff auf die Änderungsdaten durch den Consumer werden Tabellenwertfunktionen bereitgestellt.  
   
  Ein Beispiel für einen Datenconsumer, auf den diese Technologie abzielt, ist eine Anwendung zum Extrahieren, Transformieren und Laden (ETL-Anwendung). Eine ETL-Anwendung lädt Änderungsdaten inkrementell aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Quelltabellen in ein Data Warehouse oder Data Mart. Obwohl die Darstellung der Quelltabellen innerhalb des Data Warehouse Änderungen in den Quelltabellen widerspiegeln muss, sind End-to-End-Technologien, die eine Kopie der Quelle aktualisieren, ungeeignet. Benötigt wird stattdessen ein zuverlässiger Datenstrom von Änderungsdaten, der so strukturiert ist, dass er vom Consumer problemlos auf unterschiedliche Darstellungen der Daten in einer Zielumgebung angewendet werden kann. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Technologie bereit.  
   
@@ -112,7 +114,7 @@ ms.lasthandoff: 11/17/2017
   
  Change Data Capture kann nicht ordnungsgemäß ausgeführt werden, wenn der Datenbankmoduldienst oder der SQL Server-Agent-Dienst unter dem NETWORK SERVICE-Konto ausgeführt wird. Dies kann zu Fehler 22832 führen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Aktivieren und Deaktivieren von Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   
  [Arbeiten mit Änderungsdaten &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

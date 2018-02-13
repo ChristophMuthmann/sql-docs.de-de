@@ -16,16 +16,16 @@ applies_to:
 - SQL Server 2016
 - SQL Server 2017
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 679d0fb003a8a59185d860a125cfdd8b5601367c
-ms.sourcegitcommit: f2fde1c324466530f92006561a9a29decb711e1b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Offlinehilfe und Help Viewer für SQL Server
 

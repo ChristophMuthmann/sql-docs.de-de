@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - OLE DB, SQLXML
 - executing updategrams [SQLXML]
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4741b3c6bf03a9d685d8b04a898fb5854d22b7ae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f3ce470a52fea5f6f5bc8cc105e9e0fcfd98ec29
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Ausführen eines Updategrams mit OLE DB (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Dieses Thema enthält ein funktionstüchtiges Beispiel UsingOLE DB ein Updategram auszuführen.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Dieses Thema enthält ein funktionstüchtiges Beispiel UsingOLE DB ein Updategram auszuführen.  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>Verwenden von 'IcommandStream' zum Festlegen eines XML-Befehls  
  Der OLE DB (Version 2.6 oder höher) ICommandStream-Schnittstelle übergibt einen Befehl als Datenstromobjekt statt als Zeichenfolge.  

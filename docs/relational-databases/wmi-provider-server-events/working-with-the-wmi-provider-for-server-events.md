@@ -22,19 +22,20 @@ helpviewer_keywords:
 - notifications [WMI]
 - WMI Provider for Server Events, security
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dd4fd5dbd42a132dd5f3ab8f6eef376f1b6fc3dc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: da5cc9e2163ba86ebb26f631c8b35d8590de27c5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>Verwenden des WMI-Anbieters für Serverereignisse
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Dieses Thema enthält Richtlinien, die Sie vor dem Programmieren mit dem WMI-Anbieter für Serverereignisse berücksichtigen sollten.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Dieses Thema enthält Richtlinien, die Sie vor dem Programmieren mit dem WMI-Anbieter für Serverereignisse lesen sollten.  
   
 ## <a name="enabling-service-broker"></a>Aktivieren von Service Broker  
  Der WMI-Anbieter für Serverereignisse übersetzt WQL-Abfragen für Ereignisse in Ereignisbenachrichtigungen in der Zieldatenbank. Kenntnisse darüber, wie Ereignisbenachrichtigungen funktionieren, können bei der Programmierung mit dem Anbieter hilfreich sein. Weitere Informationen finden Sie unter [Konzepte des WMI-Anbieters für Serverereignisse](http://technet.microsoft.com/library/ms180560.aspx).  
@@ -117,7 +118,7 @@ WHERE DatabaseName = "AdventureWorks2012"
 ## <a name="working-with-event-data-on-the-client-side"></a>Verwenden von Ereignisdaten auf der Clientseite  
  Nachdem der WMI-Anbieter für Serverereignisse die erforderliche ereignisbenachrichtigung in der Zieldatenbank erstellt sendet die ereignisbenachrichtigung Ereignisdaten an den Zieldienst in ' msdb ' mit dem Namen **SQL/Notifications/ProcessWMIEventProviderNotification /V1.0**. Der Zieldienst stellt das Ereignis in eine Warteschlange in **Msdb** mit der Bezeichnung **WMIEventProviderNotificationQueue**. (Der Dienst und die Warteschlange werden dynamisch erstellt vom Anbieter zunächst zum Verbindungsaufbau mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Der Anbieter liest die XML-Ereignisdaten aus dieser Warteschlange, wandelt sie in MOF-Daten (Managed Object Format) um und gibt sie dann an die Clientanwendung zurück. Die MOF-Daten bestehen aus den Eigenschaften des Ereignisses, das von der WQL-Abfrage als CIM-Classendefinition (Common Information Model) angefordert wird. Jede Eigenschaft verfügt über einen entsprechenden CIM-Typ. Z. B. die `SPID` Eigenschaft zurückgegeben wird, als CIM-Typ **Sint32**. Für jede Eigenschaft der CIM-Typen sind aufgeführt, unter jede Ereignisklasse in [WMI-Anbieter für Server Events-Ereignisklassen und Eigenschaften](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Konzepte des WMI-Anbieters für Serverereignisse](http://technet.microsoft.com/library/ms180560.aspx)  
   
   

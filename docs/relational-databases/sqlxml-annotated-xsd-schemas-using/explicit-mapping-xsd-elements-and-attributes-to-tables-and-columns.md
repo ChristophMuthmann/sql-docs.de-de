@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -30,19 +31,20 @@ helpviewer_keywords:
 - table mapping [SQLXML], explicit mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a83de0653a25fa2bf055c003a13600a67e37bb9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b2cc71e8ce8daf3da61754dc8e01d264d42c863a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns"></a>Explizite Zuordnung XSD-Elementen und-Attributen zu Tabellen und Spalten
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wenn ein XSD-Schema verwenden, um eine XML-Sicht der relationalen Datenbank zu ermöglichen, müssen die Elemente und Attribute des Schemas, Tabellen und Spalten der Datenbank zugeordnet werden. Die Zeilen in der Datenbanktabelle/-sicht werden den Elementen im XML-Dokument zugeordnet. Die Spaltenwerte in der Datenbank werden Attributen oder Elementen zugeordnet.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Wenn ein XSD-Schema zur Bereitstellung einer XML-Sicht der relationalen Datenbank verwendet wird, müssen die Elemente und Attribute des Schemas den Tabellen und Spalten der Datenbank zugeordnet werden. Die Zeilen in der Datenbanktabelle/-sicht werden den Elementen im XML-Dokument zugeordnet. Die Spaltenwerte in der Datenbank werden Attributen oder Elementen zugeordnet.  
   
  Wenn Xpath-Abfragen für das mit Anmerkungen versehene XSD-Schema angegeben werden, werden die Daten für die Elemente und Attribute im Schema aus den Tabellen und Spalten abgerufen, denen sie zugeordnet sind. Um einen einzelnen Wert aus der Datenbank abrufen zu können, muss die im XSD-Schema angegebene Zuordnung sowohl über eine Beziehungs- als auch eine Feldangabe verfügen. Ist der Name des Elements/Attributs nicht den gleichen Namen wie die Tabelle/Sicht oder Spalte, der sie zugeordnet, die **SQL: Relation** und **SQL: field** Anmerkungen werden verwendet, um die Zuordnung zwischen einem Element anzugeben oder Das Attribut in einem XML-Dokument und die Tabelle (Sicht) oder die Spalte in einer Datenbank.  
   
