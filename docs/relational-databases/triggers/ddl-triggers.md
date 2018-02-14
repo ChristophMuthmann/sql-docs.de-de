@@ -8,24 +8,27 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-ddl
+ms.technology:
+- dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: DDL triggers, about DDL triggers
+helpviewer_keywords:
+- DDL triggers, about DDL triggers
 ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
-caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6e2dea1e93b07c728120c9043b41ab9e03596420
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fe470ea983e3f397c5afdb41a3526dd87256746e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ddl-triggers"></a>DDL-Trigger
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] DDL-Trigger werden als Reaktion auf verschiedene DDL-Ereignisse (Data Definition Language, Datendefinitionssprache) ausgeführt. Diese Ereignisse entsprechen hauptsächlich [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die mit den Schlüsselwörtern CREATE, ALTER, DROP, GRANT, DENY, REVOKE oder UPDATE STATISTICS beginnen. Bestimmte gespeicherte Systemprozeduren, die DDL-ähnliche Vorgänge ausführen, können ebenfalls DDL-Trigger auslösen.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+DDL-Trigger werden als Reaktion auf verschiedene DDL-Ereignisse (Data Definition Language, Datendefinitionssprache) ausgeführt. Diese Ereignisse entsprechen hauptsächlich [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die mit den Schlüsselwörtern CREATE, ALTER, DROP, GRANT, DENY, REVOKE oder UPDATE STATISTICS beginnen. Bestimmte gespeicherte Systemprozeduren, die DDL-ähnliche Vorgänge ausführen, können ebenfalls DDL-Trigger auslösen.  
   
  Sie können DDL-Trigger für die folgenden Aufgaben verwenden:  
   
@@ -113,7 +116,7 @@ GO
   
  Eine Liste der vordefinierten Gruppen von DDL-Anweisungen, die für DDL-Trigger verfügbar sind, die jeweils von den Ereignisgruppen abgedeckten Anweisungen und die Bereiche, für die diese Ereignisgruppen programmiert werden können, finden Sie unter [DDL Event Groups](../../relational-databases/triggers/ddl-event-groups.md).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Task|Thema|  
 |----------|-----------|  
@@ -123,7 +126,7 @@ GO
 |Beschreibt, wie Informationen zu einem Ereignis, das einen DDL-Trigger auslöst, mithilfe der EVENTDATA-Funktion zurückgegeben werden.|[Verwenden der EVENTDATA-Funktion](../../relational-databases/triggers/use-the-eventdata-function.md)|  
 |Beschreibt, wie Triggersicherheit verwaltet wird.|[Verwalten der Triggersicherheit](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [DML-Trigger](../../relational-databases/triggers/dml-triggers.md)   
  [Logon-Trigger](../../relational-databases/triggers/logon-triggers.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  

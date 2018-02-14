@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - collection sets [SQL Server], viewing schedules
 - schedules [SQL Server], viewing collection set
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 100857d728b87ba771a52c78c20622315a7e6847
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8f58af1ebf8e039b935c235ef35118a62f725053
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Anzeigen oder Ändern von Sammlungssatz-Zeitplänen (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Sie können Zeitpläne für den Sammlungssatz mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] anzeigen oder ändern.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Sie können Zeitpläne für den Sammlungssatz mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anzeigen oder ändern.  
   
  Der Auflistmodus (mit oder ohne Zwischenspeicherung) bestimmt, wie Sie Änderungen an einem Zeitplan vornehmen können. Der Modus mit Zwischenspeicherung verwendet separate Zeitpläne für Sammlung und Hochladen. Der Modus ohne Zwischenspeicherung verwendet für Sammlung und Hochladen denselben Zeitplan. Die einzelnen Systemdaten-Sammlungssätze weisen den folgenden Auflistmodustyp auf:  
   
@@ -167,7 +169,7 @@ ms.lasthandoff: 11/17/2017
   
  Auf dieser Seite können Sie eine Beschreibung des Sammlungssatzes anzeigen, auf den diese Eigenschaftenseite verweist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwalten von Datensammlungen](../../relational-databases/data-collection/manage-data-collection.md)   
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)  
   

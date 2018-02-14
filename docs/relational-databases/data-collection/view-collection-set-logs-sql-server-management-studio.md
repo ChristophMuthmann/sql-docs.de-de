@@ -8,26 +8,28 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - logs [SQL Server], viewing
 - collection sets [SQL Server], viewing logs
 ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
-caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fbf111fbb87bc56ab30e9b358c850373a4aaff38
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dd98e2f24464fb9c5fc38782803768530e7f94ec
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>Anzeigen von Sammlungssatzprotokollen (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Sie können alle Sammlungssatzprotokolle oder einzelne Sammlungssatzprotokolle von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] anzeigen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Sie können alle Sammlungssatzprotokolle oder einzelne Sammlungssatzprotokolle von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anzeigen.  
   
 ### <a name="to-view-collection-set-logs"></a>So zeigen Sie Sammlungssatzprotokolle an  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
      Der **Protokolldatei-Viewer** wird geöffnet und zeigt nur die Protokolldatei für den ausgewählten Sammlungssatz an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)   
  [Verwalten von Datensammlungen](../../relational-databases/data-collection/manage-data-collection.md)  
   

@@ -8,28 +8,31 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: Datensammlung
+keywords:
+- Datensammlung
 helpviewer_keywords:
 - data collection [SQL Server]
 - data collector [SQL Server], Transact-SQL
 - data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82d9d1e74c0419f9ea685dc9ae9c243c9bba2840
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f48b2043f77c301cebdc6750d6445063ff121946
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="manage-data-collection"></a>Verwalten von Datensammlungen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Verwenden Sie gespeicherte Prozeduren und Funktionen von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)], um unterschiedliche Aspekte der Datensammlung zu verwalten, beispielsweise das Aktivieren oder Deaktivieren der Datensammlung, das Ändern einer Sammlungssatzkonfiguration oder das Anzeigen von Daten im Verwaltungs-Data Warehouse.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Verwenden Sie gespeicherte Prozeduren und Funktionen von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] , um unterschiedliche Aspekte der Datensammlung zu verwalten, beispielsweise das Aktivieren oder Deaktivieren der Datensammlung, das Ändern einer Sammlungssatzkonfiguration oder das Anzeigen von Daten im Verwaltungs-Data Warehouse.  
   
 ## <a name="manage-data-collection-using-ssms"></a>Verwalten der Datensammlung mithilfe von SSMS  
  Führen Sie die folgenden datensammlerbezogenen Aufgaben aus, indem Sie den Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verwenden:  
@@ -76,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
  In der folgenden Tabelle werden die gespeicherten Prozeduren beschrieben, die Sie zum Arbeiten mit dem Datensammler verwenden können.  
   
-|Name der Prozedur|Beschreibung|  
+|Name der Prozedur|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)|Aktiviert den Datensammler.|  
 |[sp_syscollector_disable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)|Deaktiviert den Datensammler.|  
@@ -85,7 +88,7 @@ ms.lasthandoff: 11/17/2017
   
  In der folgenden Tabelle werden die gespeicherten Prozeduren beschrieben, die Sie zum Arbeiten mit Sammlungssätzen verwenden können.  
   
-|Name der Prozedur|Beschreibung|  
+|Name der Prozedur|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_run_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md)|Führt bei Bedarf einen Sammlungssatz aus.|  
 |[sp_syscollector_start_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md)|Startet einen Sammlungssatz.|  
@@ -99,7 +102,7 @@ ms.lasthandoff: 11/17/2017
   
  In der folgenden Tabelle werden die gespeicherten Prozeduren beschrieben, die Sie zum Arbeiten mit Sammelelementen verwenden können.  
   
-|Name der Prozedur|Beschreibung|  
+|Name der Prozedur|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)|Erstellt ein Auflistelement.|  
 |[sp_syscollector_delete_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)|Löscht ein Sammelelement.|  
@@ -109,7 +112,7 @@ ms.lasthandoff: 11/17/2017
   
  In der folgenden Tabelle werden die gespeicherten Prozeduren beschrieben, die Sie zum Arbeiten mit Sammlertypen verwenden können.  
   
-|Name der Prozedur|Beschreibung|  
+|Name der Prozedur|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collector_type &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collector-type-transact-sql.md)|Erstellt einen Sammlertyp.|  
 |[sp_syscollector_update_collector_type &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collector-type-transact-sql.md)|Aktualisiert einen Sammlertyp.|  
@@ -119,7 +122,7 @@ ms.lasthandoff: 11/17/2017
   
  In der folgenden Tabelle werden die Sichten beschrieben, die Sie zum Abrufen von Konfigurationsinformationen und Ausführungsprotokolldaten verwenden können.  
   
-|Sichtname|Beschreibung|  
+|Sichtname|Description|  
 |---------------|-----------------|  
 |[syscollector_config_store &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)|Ruft die Datensammlerkonfiguration ab.|  
 |[syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)|Ruft Informationen zum Sammelelement ab.|  
@@ -133,7 +136,7 @@ ms.lasthandoff: 11/17/2017
   
  In der folgenden Tabelle werden die gespeicherten Prozeduren beschrieben, die Sie zum Konfigurieren des Zugriffs auf das Management Data Warehouse verwenden können.  
   
-|Name der Prozedur|Beschreibung|  
+|Name der Prozedur|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_warehouse_database_name &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)|Gibt den in der Verbindungszeichenfolge für das Management Data Warehouse definierten Datenbanknamen an.|  
 |[sp_syscollector_set_warehouse_instance_name &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)|Gibt die in der Verbindungszeichenfolge für das Management Data Warehouse definierte Instanz an.|  
@@ -142,7 +145,7 @@ ms.lasthandoff: 11/17/2017
   
  In der folgenden Tabelle werden die gespeicherten Prozeduren beschrieben, die Sie zum Arbeiten mit der Konfiguration des Management Data Warehouse verwenden können.  
   
-|Name der Prozedur|Beschreibung|  
+|Name der Prozedur|Description|  
 |--------------------|-----------------|  
 |[core.sp_create_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql.md)|Erstellt einen Auflistungssnapshot im Management Data Warehouse.|  
 |[core.sp_update_data_source &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql.md)|Aktualisiert die Datenquelle für die Datensammlung.|  
@@ -154,7 +157,7 @@ ms.lasthandoff: 11/17/2017
   
  In der folgenden Tabelle werden die gespeicherten Prozeduren beschrieben, die Sie zum Arbeiten mit Uploadpaketen verwenden können.  
   
-|Name der Prozedur|Beschreibung|  
+|Name der Prozedur|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_cache_window &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)|Konfiguriert die Anzahl von Wiederholungen für Datenuploads.|  
 |[sp_syscollector_set_cache_directory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)|Gibt eine temporäre Speicherung für Daten zwischen Uploadwiederholungen an.|  
@@ -163,14 +166,14 @@ ms.lasthandoff: 11/17/2017
   
  In der folgenden Tabelle werden die gespeicherten Prozeduren beschrieben, die Sie zum Arbeiten mit dem Ausführungsprotokoll der Datensammlung verwenden können.  
   
-|Name der Prozedur|Beschreibung|  
+|Name der Prozedur|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql.md)|Löscht Einträge des Sammlungssatzes aus dem Ausführungsprotokoll.|  
   
 ### <a name="functions"></a>Funktionen  
  In der folgenden Tabelle werden die Funktionen beschrieben, die Sie zum Abrufen von Ausführungs- und Überwachungsinformationen verwenden können.  
   
-|Funktionsname|Beschreibung|  
+|Funktionsname|Description|  
 |-------------------|-----------------|  
 |[fn_syscollector_get_execution_details &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)|Ruft [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Ausführungsprotokolldaten für ein bestimmtes Paket ab.|  
 |[fn_syscollector_get_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|Ruft Ausführungsstatistiken für einen Sammlungssatz oder ein Paket ab. Diese Informationen umfassen Fehler, die protokolliert werden.|  

@@ -23,19 +23,19 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-caps.latest.revision: "80"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: d5027e12a7cc0bfe310c4eb6b291667cfa4d0c4f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="reporting-services-tools"></a>Reporting Services-Tools
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält einen Satz von grafischen Tools und Skriptingtools, die die Entwicklung und Verwendung ausführlicher Berichte in einer verwalteten Umgebung unterstützen. Darin enthalten sind Entwicklungstools, Konfigurations- und Administrationstools sowie Tools zur Berichtsanzeige. Dieses Thema enthält eine kurze Übersicht zu jedem Tool in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und wie darauf zugegriffen werden kann.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält mehrere grafische Tools und Skriptingtools, die die Entwicklung und Verwendung ausführlicher Berichte in einer verwalteten Umgebung unterstützen. Darin enthalten sind Entwicklungstools, Konfigurations- und Administrationstools sowie Tools zur Berichtsanzeige. Dieses Thema enthält eine kurze Übersicht zu jedem Tool in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und wie darauf zugegriffen werden kann.  
   
  Um sofort ein Tool zu finden, sehen Sie sich [Tutorial: So suchen und starten Sie Reporting Services-Tools (SSRS)](../../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md) an.  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/09/2018
 |Tool|Description|So erfolgt der Zugriff|  
 |----------|-----------------|-------------------|  
 |[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]|Mit [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)]können Sie mobile Berichte erstellen, deren Inhalt dynamisch an den jeweiligen Bildschirm bzw. das Browserfenster angepasst wird und sich so jeder Bildschirmgröße anpassen.<br /><br /> Das Tool bietet eine Entwurfsoberfläche mit anpassbaren Rasterzeilen und -spalten und flexiblen Elementen für mobile Berichte.<br /><br /> Weitere Informationen finden Sie unter [Erstellen und Veröffentlichen von mobilen Berichten mit dem Publisher für mobile Berichte von SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).|Download des [Publishers für mobile Berichte von SQL Server](http://go.microsoft.com/fwlink/?LinkId=733527)|  
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|Dieses Tool ermöglicht die interaktive Durchsuchung und visuelle Darstellung von Daten und lässt Sie Berichte erstellen und mit Berichten basierend auf tabellarischen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modellen interagieren.|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint-Modus. Browser mit Silverlight.|  
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|Dieses Tool ermöglicht die interaktive Durchsuchung und visuelle Darstellung von Daten und lässt Sie Berichte erstellen und mit Berichten basierend auf tabellarischen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Modellen interagieren.|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint-Modus. Browser mit Silverlight.|  
 |Berichts-Designer|Verwenden Sie dieses Tool zum Entwerfen von Berichten. Es umfasst die folgenden Funktionen:<br /><br /> Bereitstellung auf einem Berichtsserver im einheitlichen Modus oder im SharePoint-Modus.<br /><br /> Gehostet in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]<br /><br /> Berichtsdatenbereich, um im Bericht verwendete Daten zu organisieren<br /><br /> Sichten im Registerformat für Entwurf und Vorschau zum interaktiven Berichtsentwurf<br /><br /> Mithilfe von Abfrage-Designern kann festgelegt werden, welche Daten aus Datenquellen abgerufen werden sollen, und die Datenquellentypen in der [RSReportDesigner-Konfigurationsdatei](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)zugeordnet sind.<br /><br /> Ausdrucks-Editor mit IntelliSense, um [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Ausdrücke zu erstellen, mit denen Berichtsinhalte und -darstellung angepasst werden können.<br /><br /> Unterstützt benutzerdefinierte Berichtselemente und Abfrage-Designer<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|  
 |Berichts-Generator|Verwenden Sie dieses Tool zum Entwerfen von Berichten. Es umfasst die folgenden Funktionen:<br /><br /> Bereitstellung auf einem Berichtsserver im einheitlichen Modus oder im SharePoint-Modus.<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office-ähnliche Erstellungsumgebung[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]<br /><br /> Fähigkeit, Berichtselemente als Berichtsteile zu speichern<br /><br /> Ein Assistent zum Erstellen von Karten<br /><br /> Aggregate von Aggregaten<br /><br /> Verbesserte Unterstützung für Ausdrücke<br /><br /> Mithilfe von Abfrage-Designern kann festgelegt werden, welche Daten aus einer Auswahl von integrierten Datenquellentypen abgerufen werden sollen.<br /><br /> Weitere Informationen finden Sie unter [Berichts-Generator in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)in der SQL Server-Onlinedokumentation.|Download der [eigenständigen Version des Berichts-Generators](http://go.microsoft.com/fwlink/?LinkID=219138)<br /><br /> Öffnen aus dem Berichts-Manager/SharePoint|  
   

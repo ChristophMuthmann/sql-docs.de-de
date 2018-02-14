@@ -8,7 +8,8 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - failure to connect [SQL Server]
 - connecting tutorial [SQL Server]
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 35110508db09e7fc82fdabd4b9b77b831ad1548a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 64fca04ede55e3bf0e98c4cb62b4495fd19d576b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Lernprogramm: Erste Schritte mit dem Datenbankmodul
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,10 +51,10 @@ Für dieses Lernprogramm sind keine Vorkenntnisse erforderlich.
   
 Auf Ihrem System müssen zum Verwenden dieses Lernprogramms folgende Anwendungen installiert sein:  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]installiert haben. Informationen zur Installation von [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] finden Sie unter [Herunterladen von SQL Server Management Studio 17.1](../ssms/download-sql-server-management-studio-ssms.md).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]zugreifen. Informationen zur Installation von [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] finden Sie unter [Herunterladen von SQL Server Management Studio 17.1](../ssms/download-sql-server-management-studio-ssms.md).  
   
-## <a name="see-also"></a>Siehe auch  
-[Lernprogramm: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+[Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
   
   
   

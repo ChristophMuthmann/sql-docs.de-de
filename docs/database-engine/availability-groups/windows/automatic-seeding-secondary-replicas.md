@@ -10,20 +10,22 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Automatic seeding [SQL Server], secondary replica
+helpviewer_keywords:
+- Automatic seeding [SQL Server], secondary replica
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 86282a01e4c9027d9dc340d348a814f61c0f4b3b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 60bb5a01191de574b7fcac4eb11d73190c94aac8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Automatisches Seeding für sekundäre Replikate
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +37,7 @@ Bei SQL Server 2012 und 2014 ist die einzige Möglichkeit, ein sekundäres Repli
 Überlegungen zur Verwendung des automatischen Seedings beinhalten:
 
 * [Auswirkungen von Leistung und Transaktionsprotokoll auf das primäre Replikat](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [Datenträgerlayout](#disk-layout)
+* [Datenträgerlayout](#disklayout)
 * [Security](#security)
 
 
@@ -154,9 +156,6 @@ Bei erfolgreicher Ausführung wird die Datenbank/werden die Datenbanken auf dem 
 <a name="sql-server-log"></a> Zusätzlich zur unten beschriebenen [dynamischen Verwaltungssicht](#dynamic-management-views) werden Beginn und Abschluss des automatischen Seedings im SQL Server-Protokoll angezeigt:
 
 ![SQL Server-Protokoll][2]
-
-
-
 
 ## <a name="combine-backup-and-restore-with-automatic-seeding"></a>Kombinieren von Sicherung und Wiederherstellung mit automatischem Seeding
 

@@ -8,20 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-security
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3bdf8629-738c-489f-959b-2f5afdaf7d61
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e85070af106dd7f8aa334c7163fc0e1734ed86d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: df6980bfcc713c17d1a4c39c52c967922f5b9cb5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>Konfigurieren von Always Encrypted-Schlüsseln mithilfe von PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,12 +43,12 @@ Stellen Sie vor der Ausführung der Schritte, die Zugriff auf Nur-Text-Schlüsse
 
 Task  |Artikel  |Greift auf Klartextschlüssel/-schlüsselspeicher zu  |Greift auf Datenbank zu   
 ---------|---------|---------|---------
-Schritt 1: Erstellen Sie einen Spaltenhauptschlüssel in einem Schlüsselspeicher.<br><br>**Hinweis:** Das SqlServer PowerShell-Modul unterstützt diesen Schritt nicht. Verwenden Sie die Tools, die für Ihren gewählten Schlüsselspeicher spezifisch sind, um diese Aufgabe über eine Befehlszeile durchzuführen. |[Create and Store Column Master Keys (Always Encrypted) (Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | ja | Nein     
-Schritt 2:  Starten Sie eine PowerShell-Umgebung, und importieren Sie das SqlServer PowerShell-Modul.  |   [Konfigurieren von Always Encrypted-Schlüsseln mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   |    Nein    | Nein         
-Schritt 3:  Stellen Sie eine Verbindung mit Ihrem Server und Ihrer Datenbank her.     |     [Stellt eine Verbindung mit einer Datenbank her.](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase)    |    Nein     | ja         
-Schritt 4.  Erstellen Sie ein *SqlColumnMasterKeySettings* -Objekt, dass Informationen über den Speicherort Ihres Spaltenhauptschlüssels enthält. SqlColumnMasterKeySettings ist ein Objekt, das im Arbeitsspeicher (in PowerShell) vorhanden ist. Verwenden Sie das Cmdlet, das für Ihren Schlüsselspeicher spezifisch ist.   |     [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)        |   Nein      | Nein         
-Schritt 5.  Erstellen Sie die Metadaten über den Spaltenhauptschlüssel in Ihrer Datenbank.      |    [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**Hinweis:** Im Hintergrund gibt das Cmdlet die Anweisung [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) heraus, um Schlüsselmetadaten zu erstellen.|    Nein     |    ja
-Schritt 6.  Authentifizieren Sie sich bei Azure, wenn Ihr Spaltenhauptschlüssel in Azure Key Vault gespeichert ist. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |  ja   | Nein         
+Schritt 1: Erstellen Sie einen Spaltenhauptschlüssel in einem Schlüsselspeicher.<br><br>**Hinweis:** Das SqlServer PowerShell-Modul unterstützt diesen Schritt nicht. Verwenden Sie die Tools, die für Ihren gewählten Schlüsselspeicher spezifisch sind, um diese Aufgabe über eine Befehlszeile durchzuführen. |[Create and Store Column Master Keys (Always Encrypted) (Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | ja | nein     
+Schritt 2:  Starten Sie eine PowerShell-Umgebung, und importieren Sie das SqlServer PowerShell-Modul.  |   [Konfigurieren von Always Encrypted-Schlüsseln mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   |    nein    | nein         
+Schritt 3:  Stellen Sie eine Verbindung mit Ihrem Server und Ihrer Datenbank her.     |     [Stellt eine Verbindung mit einer Datenbank her.](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase)    |    nein     | ja         
+Schritt 4.  Erstellen Sie ein *SqlColumnMasterKeySettings* -Objekt, dass Informationen über den Speicherort Ihres Spaltenhauptschlüssels enthält. SqlColumnMasterKeySettings ist ein Objekt, das im Arbeitsspeicher (in PowerShell) vorhanden ist. Verwenden Sie das Cmdlet, das für Ihren Schlüsselspeicher spezifisch ist.   |     [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)        |   nein      | nein         
+Schritt 5.  Erstellen Sie die Metadaten über den Spaltenhauptschlüssel in Ihrer Datenbank.      |    [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**Hinweis:** Im Hintergrund gibt das Cmdlet die Anweisung [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) heraus, um Schlüsselmetadaten zu erstellen.|    nein     |    ja
+Schritt 6.  Authentifizieren Sie sich bei Azure, wenn Ihr Spaltenhauptschlüssel in Azure Key Vault gespeichert ist. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |  ja   | nein         
 Schritt 7.  Generieren Sie einen neuen Spaltenverschlüsselungsschlüssel, verschlüsseln Sie ihn mit dem Spaltenhauptschlüssel, und erstellen Sie Spaltenverschlüsselungsschlüssel-Metadaten in der Datenbank.     |    [New-SqlColumnEncryptionKey](https://docs.microsoft.com/en-us/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**Hinweis:** Verwenden Sie eine Variation des Cmdlets, dass intern einen Spaltenverschlüsselungsschlüssel generiert und verschlüsselt.<br><br>**Hinweis:** Im Hintergrund gibt das Cmdlet die Anweisung [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) heraus, um Schlüsselmetadaten zu erstellen.  | ja | ja
   
 
@@ -196,12 +197,12 @@ Weitere Informationen finden Sie im Abschnitt [Security Considerations for Key M
 
 Task  |Artikel  |Greift auf Klartextschlüssel/-schlüsselspeicher zu  |Greift auf Datenbank zu  
 ---------|---------|---------|---------
-Schritt 1: Erstellen Sie einen Spaltenhauptschlüssel in einem Schlüsselspeicher.<br><br>**Hinweis:** Das SqlServer-Modul unterstützt diesen Schritt nicht. Sie müssen die Tools Verwenden, die für den Typ Ihres Schlüsselspeichers spezifisch sind, um diese Aufgabe mithilfe einer Befehlszeile durchzuführen.     | [Create and Store Column Master Keys (Always Encrypted) (Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    ja    | Nein 
-Schritt 2:  Starten Sie eine PowerShell-Sitzung, und importieren Sie das SqlServer-Modul.      |     [Importieren des SqlServer-Moduls](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule)     | Nein | Nein         
-Schritt 3:  Erstellen Sie ein *SqlColumnMasterKeySettings* -Objekt, dass Informationen über den Speicherort Ihres Spaltenhauptschlüssels enthält. *SqlColumnMasterKeySettings* ist ein Objekt, das im Arbeitsspeicher (in PowerShell) vorhanden ist. Verwenden Sie das Cmdlet, das für Ihren Schlüsselspeicher spezifisch ist. |      [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)   | Nein         | Nein         
-Schritt 4.  Authentifizieren Sie sich bei Azure, wenn Ihr Spaltenhauptschlüssel in Azure Key Vault gespeichert ist. |    [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |ja|Nein         
-Schritt 5.  Generieren Sie einen Spaltenverschlüsselungsschlüssel, und verschlüsseln Sie ihn mit dem Spaltenhauptschlüssel, um einen verschlüsselten Wert des Spaltenverschlüsselungsschlüssels zu erstellen.     |   [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)     |    ja    | Nein        
-Schritt 6.  Stellen Sie den Speicherort des Spaltenhauptschlüssels (den Anbieternamen und einen Schlüsselpfad des Spaltenhauptschlüssels) und einen verschlüsselten Wert des Spaltenverschlüsselungsschlüssels für den DBA bereit.  | Siehe folgende Beispiele.        |   Nein      | Nein         
+Schritt 1: Erstellen Sie einen Spaltenhauptschlüssel in einem Schlüsselspeicher.<br><br>**Hinweis:** Das SqlServer-Modul unterstützt diesen Schritt nicht. Sie müssen die Tools Verwenden, die für den Typ Ihres Schlüsselspeichers spezifisch sind, um diese Aufgabe mithilfe einer Befehlszeile durchzuführen.     | [Create and Store Column Master Keys (Always Encrypted) (Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    ja    | nein 
+Schritt 2:  Starten Sie eine PowerShell-Sitzung, und importieren Sie das SqlServer-Modul.      |     [Importieren des SqlServer-Moduls](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule)     | nein | nein         
+Schritt 3:  Erstellen Sie ein *SqlColumnMasterKeySettings* -Objekt, dass Informationen über den Speicherort Ihres Spaltenhauptschlüssels enthält. *SqlColumnMasterKeySettings* ist ein Objekt, das im Arbeitsspeicher (in PowerShell) vorhanden ist. Verwenden Sie das Cmdlet, das für Ihren Schlüsselspeicher spezifisch ist. |      [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)   | nein         | nein         
+Schritt 4.  Authentifizieren Sie sich bei Azure, wenn Ihr Spaltenhauptschlüssel in Azure Key Vault gespeichert ist. |    [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |ja|nein         
+Schritt 5.  Generieren Sie einen Spaltenverschlüsselungsschlüssel, und verschlüsseln Sie ihn mit dem Spaltenhauptschlüssel, um einen verschlüsselten Wert des Spaltenverschlüsselungsschlüssels zu erstellen.     |   [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)     |    ja    | nein        
+Schritt 6.  Stellen Sie den Speicherort des Spaltenhauptschlüssels (den Anbieternamen und einen Schlüsselpfad des Spaltenhauptschlüssels) und einen verschlüsselten Wert des Spaltenverschlüsselungsschlüssels für den DBA bereit.  | Siehe folgende Beispiele.        |   nein      | nein         
 
 ### <a name="dba"></a>DBA 
 
@@ -209,12 +210,12 @@ Datenbankadministratoren (DBAs) verwenden die Informationen, die sie vom Sicherh
 
 Task  |Artikel  |Greift auf Nur-Text-Schlüsse zu  |Greift auf Datenbank zu   
 ---------|---------|---------|---------
-Schritt 1:  Rufen Sie den Speicherort des Spaltenhauptschlüssels und des verschlüsselten Werts des Spaltenverschlüsselungsschlüssels von Ihrem Sicherheitsadministrator ab. |Siehe folgende Beispiele. | Nein | Nein
-Schritt 2:  Starten Sie eine PowerShell-Umgebung, und importieren Sie das SqlServer-Modul.  | [Konfigurieren von Always Encrypted-Schlüsseln mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)  | Nein | Nein
-Schritt 3:  Stellen Sie eine Verbindung mit Ihrem Server und Ihrer Datenbank her. | [Herstellen einer Verbindung mit einer Datenbank](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Nein | ja
-Schritt 4.  Erstellen Sie ein SqlColumnMasterKeySettings-Objekt, dass Informationen über den Speicherort Ihres Spaltenhauptschlüssels enthält. SqlColumnMasterKeySettings ist ein Objekt, das im Arbeitsspeicher vorhanden ist. | New-SqlColumnMasterKeySettings | Nein | Nein
-Schritt 5. Erstellen Sie die Metadaten über den Spaltenhauptschlüssel in Ihrer Datenbank. | [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br>**Hinweis:** Im Hintergrund gibt das Cmdlet die Anweisung [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) heraus, um Spaltenhauptschlüssel-Metadaten zu erstellen. | Nein | ja
-Schritt 6. Erstellen Sie die Spaltenverschlüsselungsschlüssel-Metadaten in der Datenbank. | New-SqlColumnEncryptionKey<br>**Hinweis:** DBAs verwenden eine Variation des Cmdlets, das nur Spaltenverschlüsselungsschlüssel-Metadaten erstellt.<br>Im Hintergrund gibt das Cmdlet die Anweisung [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) heraus, um Spaltenverschlüsselungsschlüssel-Metadaten zu erstellen. | Nein | ja
+Schritt 1:  Rufen Sie den Speicherort des Spaltenhauptschlüssels und des verschlüsselten Werts des Spaltenverschlüsselungsschlüssels von Ihrem Sicherheitsadministrator ab. |Siehe folgende Beispiele. | nein | nein
+Schritt 2:  Starten Sie eine PowerShell-Umgebung, und importieren Sie das SqlServer-Modul.  | [Konfigurieren von Always Encrypted-Schlüsseln mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)  | nein | nein
+Schritt 3:  Stellen Sie eine Verbindung mit Ihrem Server und Ihrer Datenbank her. | [Herstellen einer Verbindung mit einer Datenbank](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | nein | ja
+Schritt 4.  Erstellen Sie ein SqlColumnMasterKeySettings-Objekt, dass Informationen über den Speicherort Ihres Spaltenhauptschlüssels enthält. SqlColumnMasterKeySettings ist ein Objekt, das im Arbeitsspeicher vorhanden ist. | New-SqlColumnMasterKeySettings | nein | nein
+Schritt 5. Erstellen Sie die Metadaten über den Spaltenhauptschlüssel in Ihrer Datenbank. | [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br>**Hinweis:** Im Hintergrund gibt das Cmdlet die Anweisung [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) heraus, um Spaltenhauptschlüssel-Metadaten zu erstellen. | nein | ja
+Schritt 6. Erstellen Sie die Spaltenverschlüsselungsschlüssel-Metadaten in der Datenbank. | New-SqlColumnEncryptionKey<br>**Hinweis:** DBAs verwenden eine Variation des Cmdlets, das nur Spaltenverschlüsselungsschlüssel-Metadaten erstellt.<br>Im Hintergrund gibt das Cmdlet die Anweisung [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) heraus, um Spaltenverschlüsselungsschlüssel-Metadaten zu erstellen. | nein | ja
   
 ## <a name="windows-certificate-store-with-role-separation-example"></a>Windows-Zertifikatspeicher mit Rollentrennung (Beispiel)
 
@@ -280,7 +281,7 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName -EncryptedValue $keyData.EncryptedValue
 ```  
  
-## <a name="next-steps"></a>Nächste Schritte    
+## <a name="next-steps"></a>Next Steps    
 
 - [Konfigurieren der Spaltenverschlüsselung mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md)    
 - [Rotieren von Always Encrypted-Schlüsseln mithilfe von PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
@@ -289,7 +290,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
     
 - [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Konfigurieren von Always Encrypted mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
-- [„Immer verschlüsselt“ (Datenbankmodul)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted (Datenbankmodul)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted (Cliententwicklung)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [Always Encrypted-Blog](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
 

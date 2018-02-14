@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - data warehouse
 - management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 107ccdd35c7ba36b74af7121b67b6c17e009cfb6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f61ec563867912a713504af1a291bc26507888ae
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="management-data-warehouse"></a>Verwaltungs-Data Warehouse
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das Verwaltungs-Data Warehouse ist eine relationale Datenbank, die alle Daten enthält, die von einem Server gesammelt werden, der das Datensammlungsziel ist. Diese Daten werden dazu verwendet, die Berichte für die Systemdaten-Sammlungssätze zu generieren. Sie können auch für benutzerdefinierte Berichte verwendet werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Das Verwaltungs-Data Warehouse ist eine relationale Datenbank, die alle Daten enthält, die von einem Server gesammelt werden, der das Datensammlungsziel ist. Diese Daten werden dazu verwendet, die Berichte für die Systemdaten-Sammlungssätze zu generieren. Sie können auch für benutzerdefinierte Berichte verwendet werden.  
   
  Die Datensammlerinfrastruktur definiert die Aufträge und Wartungspläne, die für die Implementierung der vom Datenbankadministrator definierten Beibehaltungsrichtlinien erforderlich sind.  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
  In der folgenden Tabelle werden die Datenbanktabellen im core-Schema beschrieben. Mithilfe dieser Datenbanktabellen kann der Datensammler nachverfolgen, woher die Daten kamen, wer sie eingefügt hat und wann sie in das Data Warehouse hochgeladen wurden.  
   
-|Tabellenname|Beschreibung|  
+|Tabellenname|Description|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|Speichert Informationen darüber, wie die Leistungsindikatoren in den Berichten des Verwaltungs-Data Warehouse gruppiert und aggregiert werden sollen.|  
 |core.snapshots_internal|Identifiziert jede neue Momentaufnahme. Immer dann, wenn ein neues Uploadpaket beginnt, einen neuen Datenbatch in ein Data Warehouse hochzuladen, wird in diese Tabelle eine neue Zeile eingefügt.|  
@@ -131,7 +133,7 @@ ms.lasthandoff: 11/17/2017
 |Die Tabelle core.performance_counter_report_group_items wurde dem Abschnitt „Core-Schema“ hinzugefügt.|  
 |Die Liste von Tabellen im Abschnitt "Momentaufnahme-Schema" wurde aktualisiert. snapshots.os_memory_clerks,snapshots.sql_process_and_system_memory und snapshots.io_virtual_file_stats wurden hinzugefügt. snapshots.os_process_memory und snapshots.distinct_query_stats wurden entfernt.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Gespeicherte Prozeduren für das Verwaltungs-Data Warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)   
  [Gespeicherte Prozeduren für den Datensammler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)   

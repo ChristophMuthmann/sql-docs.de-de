@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 72f4daeb47e7c023e14cdd5a87a51e5dcbee2436
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 29b7fbe140943ba0f2f3493f00561e8cf2b509e2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -173,14 +174,14 @@ Beachten Sie, dass jede speicheroptimierte Tabelle mindestens einen Index besitz
         mit  
             (MEMORY_OPTIMIZED = ON,  
              DURABILITY = SCHEMA_ONLY);  
-    go  
+    GO  
   
   
     CREATE SECURITY POLICY dbo.soSessionC_SpidFilter_Policy  
         ADD FILTER PREDICATE dbo.fn_SpidFilter(SpidFilter)  
         ON dbo.soSessionC  
         WITH (STATE = ON);  
-    go  
+    GO  
   
   
   
@@ -291,7 +292,7 @@ Wenn Sie speicheroptimierte Funktionen auf Microsoft SQL Server verwenden möcht
     ALTER DATABASE InMemTest2  
         ADD FILEGROUP FgMemOptim3  
             CONTAINS MEMORY_OPTIMIZED_DATA;  
-    go  
+    GO  
     ALTER DATABASE InMemTest2  
         ADD FILE  
         (  
@@ -300,7 +301,7 @@ Wenn Sie speicheroptimierte Funktionen auf Microsoft SQL Server verwenden möcht
                      --  C:\DATA\    preexisted.  
         )  
         TO FILEGROUP FgMemOptim3;  
-    go  
+    GO  
   
   
 Das folgende Skript erstellt eine Dateigruppe für Sie und konfiguriert empfohlene Datenbankeinstellungen: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)

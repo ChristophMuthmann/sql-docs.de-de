@@ -8,20 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-security
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 00fbddda37b58442e37618a25347576bc88caf07
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fbe87e904a8e46ae19d6dcb06600352a29949dc2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Übersicht über die Schlüsselverwaltung für Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,7 +101,7 @@ Ihr Schlüsselverwaltungsprozess muss sicherstellen, dass die Spaltenhauptschlü
 - Generieren Sie niemals Spaltenhauptschlüssel oder Spaltenverschlüsselungsschlüssel auf einem Computer, der Ihre Datenbank hostet. Generieren Sie die Schlüssel stattdessen auf einem separaten Computer, der entweder für die Schlüsselverwaltung vorgesehen ist oder auf dem Anwendungen gehostet werden, die ohnehin Zugriff auf die Schlüssel benötigen. Dies bedeutet, dass Sie **niemals Tools ausführen sollten, die für das Generieren der Schlüssel auf dem Computer verwendet werden, der die Datenbank hostet** . Wenn nämlich ein Angreifer auf einen Computer zugreift, der für die Bereitstellung oder Verwaltung Ihrer Always Encrypted-Schlüssel verwendet wird, kann er Ihre Schlüssel möglicherweise abrufen, selbst wenn die Schlüssel nur für kurze Zeit im Arbeitsspeicher des Tools angezeigt werden.
 - Es ist wichtig, potenzielle Angreifer und Sicherheitsbedrohungen zu identifizieren, bevor ein Schlüsselverwaltungprozess definiert und implementiert wird, um sicherzustellen, dass ihr Schlüsselverwaltungsprozess nicht aus Versehen Spaltenhauptschlüssel oder Spaltenverschlüsselungsschlüssel offenlegt. Wenn Sie z.B. möchten, dass DBAs keinen Zugriff auf sensible Daten haben, darf ein DBA nicht für das Generieren von Schlüsseln verantwortlich sein. Ein DBA *kann* jedoch Schlüsselmetadaten in der Datenbank verwalten, da die Nur-Text-Schlüssel in den Metadaten nicht enthalten sind.
 
-## <a name="next-steps"></a>Nächste Schritte
+## <a name="next-steps"></a>Next Steps
 
 - [Create and Store Column Master Keys (Always Encrypted) (Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
 - [Konfigurieren von Always Encrypted-Schlüsseln mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)

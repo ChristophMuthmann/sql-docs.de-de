@@ -8,7 +8,8 @@ ms.service:
 ms.component: track-changes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], LSN boundaries
 - change data capture [SQL Server], query functions
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
-caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4a6407cbe969ff2d5e016849acbcd148e540a69
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 643ba52d666c9661d66a8a7e8039dba5e7f38549
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="work-with-change-data-sql-server"></a>Arbeiten mit Änderungsdaten (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Änderungsdaten werden über Tabellenwertfunktionen (Table Valued Functions, TVFs) für Change Data Capture-Consumer verfügbar gemacht. Für alle Abfragen dieser Funktionen sind zwei Parameter erforderlich, um den Bereich der Protokollfolgenummern (Log Sequence Number, LSN) zu definieren, die bei der Entwicklung des zurückgegebenen Resultsets ausgewählt werden können. Sowohl der untere als auch der obere LSN-Wert, die das Intervall begrenzen, werden in das Intervall eingeschlossen.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Änderungsdaten werden über Tabellenwertfunktionen (Table Valued Function, TVF) für Change Data Capture-Consumer verfügbar gemacht. Für alle Abfragen dieser Funktionen sind zwei Parameter erforderlich, um den Bereich der Protokollfolgenummern (Log Sequence Number, LSN) zu definieren, die bei der Entwicklung des zurückgegebenen Resultsets ausgewählt werden können. Sowohl der untere als auch der obere LSN-Wert, die das Intervall begrenzen, werden in das Intervall eingeschlossen.  
   
  Zur Unterstützung bei der Ermittlung der geeigneten LSN-Werte für die Abfrage einer TVF stehen mehrere Funktionen zur Verfügung. Die Funktion [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) gibt die kleinste LSN des Gültigkeitsintervalls einer Aufzeichnungsinstanz zurück. Beim Gültigkeitsintervall handelt es sich um das Zeitintervall, in dem Änderungsdaten aktuell für Aufzeichnungsinstanzen verfügbar sind. Die Funktion [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) gibt die größte LSN im Gültigkeitsintervall zurück. Mit den Funktionen [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) und [sys.fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) können LSN-Werte auf einer konventionellen Zeitachse dargestellt werden. Da Change Data Capture geschlossene Abfrageintervalle verwendet, ist es in einigen Fällen erforderlich, den nächsten LSN-Wert in einer Folge zu generieren, um sicherzustellen, dass Änderungen in aufeinander folgenden Abfragefenstern nicht doppelt vorkommen. Die Funktionen [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) und [sys.fn_cdc_decrement_lsn](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md) sind nützlich, wenn ein LSN-Wert inkrementell angepasst werden soll.  
   
@@ -133,7 +135,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="using-the-datetime-wrapper-functions-to-transition-between-capture-instances"></a>Verwenden der Datetime-Wrapperfunktionen für den Übergang zwischen Aufzeichnungsinstanzen  
  Change Data Capture unterstützt bis zu zwei Aufzeichnungsinstanzen für eine einzelne verfolgte Quelltabelle. Hauptverwendungszweck für diese Funktionalität ist es, einen Übergang zwischen mehreren Aufzeichnungsinstanzen zu ermöglichen, wenn Änderungen der DDL (Data Definition Language, Datendefinitionssprache) der Quelltabelle die Anzahl der für die Verfolgung verfügbaren Spalten erweitern. Um eventuelle Änderungen in den Namen der zugrunde liegenden Abfragefunktionen auf nachfolgenden Anwendungsebenen zu verbergen, kann beim Übergang zu einer neuen Aufzeichnungsinstanz z. B. eine Wrapperfunktion für den eigentlichen Aufruf verwendet werden. Stellen Sie dann sicher, dass der Name der Wrapperfunktion immer gleich bleibt. Sobald der Übergang durchgeführt werden soll, kann die alte Wrapperfunktion gelöscht und eine neue mit demselben Namen erstellt werden, die dann auf die neuen Abfragefunktionen verweist. Indem zuerst das generierte Skript geändert wird, um eine Wrapperfunktion mit demselben Namen zu erstellen, können Sie den Wechsel zu einer neuen Aufzeichnungsinstanz durchführen, ohne dass dies Auswirkungen auf darüber liegende Anwendungsebenen hat.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Über Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Aktivieren und Deaktivieren von Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

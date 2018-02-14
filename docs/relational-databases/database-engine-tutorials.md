@@ -8,23 +8,25 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-query-tuning
+ms.technology:
+- dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 613bff65995857827043bca80e968dfafe42a3b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3765d87fd95fdc07513319d1c4f175ec66e9f813
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="database-engine-tutorials"></a>Lernprogramme zum Datenbankmodul
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Dieser Abschnitt enthält Tutorials für [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Dieser Abschnitt enthält Lernprogramme für [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
   
 [Lernprogramm: Erste Schritte mit dem Datenbankmodul](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 In diesem Lernprogramm erfahren Sie, wie Sie eine Verbindung mit einer [!INCLUDE[ssDE](../includes/ssde-md.md)]instanz herstellen.  
@@ -56,7 +58,7 @@ In diesem Lernprogramm wird veranschaulicht, wie Sie eine SQL Server-Sicherung u
 [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016-Datenbanken ](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
 Dieses Lernprogramm hilft Ihnen, zu verstehen, wie Sie SQL Server-Datendateien direkt im Windows Azure-BLOB-Speicherdienst speichern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Tutorials für SQL Server 2016](../sql-server/tutorials-for-sql-server-2016.md)  
 [TechNet WIKI: SQL Server 2012-Beispiele](http://go.microsoft.com/fwlink/?linkID=220734)  
   

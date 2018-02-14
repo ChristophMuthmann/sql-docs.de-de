@@ -8,26 +8,28 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7ade0766fd94e302d6df6204d64acd94b98522ed
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 20d3894f0f2eecbf491e20f10b0258686848b401
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="type-directive-in-for-xml-queries"></a>TYPE-Direktive in FOR XML-Abfragen
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) und ermöglicht Ihnen damit, durch Angeben der TYPE-Direktive optional anzufordern, dass das Ergebnis einer FOR XML-Abfrage als **xml**-Datentyp zurückgegeben wird. Dies ermöglicht Ihnen, das Ergebnis einer FOR XML-Abfrage auf dem Server zu verarbeiten. So können Sie beispielsweise eine XQuery dafür angeben, das Ergebnis einer Variablen vom Typ **xml** zuweisen oder [geschachtelte FOR XML-Abfragen](../../relational-databases/xml/use-nested-for-xml-queries.md)dafür schreiben.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) und ermöglicht es Ihnen damit, durch Angeben der TYPE-Direktive optional anzufordern, dass das Ergebnis einer FOR XML-Abfrage als **xml**-Datentyp zurückgegeben wird. Dies ermöglicht Ihnen, das Ergebnis einer FOR XML-Abfrage auf dem Server zu verarbeiten. So können Sie beispielsweise eine XQuery dafür angeben, das Ergebnis einer Variablen vom Typ **xml** zuweisen oder [geschachtelte FOR XML-Abfragen](../../relational-databases/xml/use-nested-for-xml-queries.md)dafür schreiben.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt Instanzdaten des xml-Datentyps als Ergebnis verschiedener Serverkonstrukte wie FOR XML-Abfragen mit Verwendung der TYPE-Direktive an den Client zurück. Wenn der **xml** -Datentyp verwendet wird, gibt SQL Server XML-Instanzdatenwerte aus SQL-Tabellenspalten und -Ausgabeparametern zurück. Im Code der Clientanwendung erfordert der ADO.NET-Anbieter, dass die Informationen vom XML-Datentyp im Binärcode vom Server gesendet werden. Wenn Sie jedoch FOR XML ohne die TYPE-Direktive verwenden, werden die XML-Daten als Zeichenfolgentyp zurückgesendet. Der Clientanbieter ist in jedem Fall fähig, beide XML-Formate zu verarbeiten. Beachten Sie, dass FOR XML der obersten Ebene ohne die TYPE-Direktive nicht mit Cursorn verwendet werden kann.  

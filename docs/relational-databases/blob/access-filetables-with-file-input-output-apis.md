@@ -8,24 +8,27 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FileTables [SQL Server], accessing files with file APIs
+helpviewer_keywords:
+- FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 726ad4c57ce295c4317132333f50867d9466151a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f482eb2ff361f6c923076093ceb22ab873f0ce8f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Zugreifen auf FileTables mit Datei-E/A-APIs
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Beschreibt, wie Dateisystem-E/A in einer FileTable funktioniert.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Beschreibt, wie Dateisystem-E/A in einer FileTable funktioniert.  
   
 ##  <a name="accessing"></a> Erste Schritte mit Datei-E/A-APIs mit FileTables  
  Die primäre Verwendung von FileTables wird durch das Windows-Dateisystem und Datei-E/A-APIs erwartet. FileTables unterstützt den nicht transaktionalen Zugriff durch den umfangreichen Satz verfügbarer Datei-E/A-APIs.  
@@ -110,27 +113,27 @@ ms.lasthandoff: 11/17/2017
 |Funktion|Supported|Kommentare|  
 |----------------|---------------|--------------|  
 |**Oplocks**|ja|Ebene 2, Ebene 1, Batch- und Filter-Oplocks werden unterstützt.|  
-|**Erweiterte Attribute**|Nein||  
-|**Reparse Points**|Nein||  
-|**Persistente ACLs**|Nein||  
-|**Benannte Datenströme**|Nein||  
+|**Erweiterte Attribute**|nein||  
+|**Reparse Points**|nein||  
+|**Persistente ACLs**|nein||  
+|**Benannte Datenströme**|nein||  
 |**Dateien von geringer Dichte**|ja|Geringe Dichte kann nur für Dateien festgelegt werden und wirkt sich auf die Speicherung des Datenstroms aus. Da FILESTREAM-Daten auf NTFS-Volumes gespeichert werden, unterstützt die Dateitabellenfunktion Sparsedateien, indem sie die Anforderungen an das NTFS-Dateisystem weiterleitet.|  
 |**Komprimierung**|ja||  
 |**Verschlüsselung**|ja||  
-|**TxF**|Nein||  
-|**Datei-IDs**|Nein||  
-|**Objekt-IDs**|Nein||  
-|**Symbolische Links**|Nein||  
-|**Harte Links**|Nein||  
-|**Kurze Namen**|Nein||  
-|**Benachrichtigungen über Verzeichnisänderungen**|Nein||  
+|**TxF**|nein||  
+|**Datei-IDs**|nein||  
+|**Objekt-IDs**|nein||  
+|**Symbolische Links**|nein||  
+|**Harte Links**|nein||  
+|**Kurze Namen**|nein||  
+|**Benachrichtigungen über Verzeichnisänderungen**|nein||  
 |**Bytebereichssperren**|ja|Anforderungen zur Bytebereichssperre werden an das NTFS-Dateisystem übergeben.|  
-|**Im Speicher abgebildete Dateien**|Nein||  
+|**Im Speicher abgebildete Dateien**|nein||  
 |**Abbrechen von E/A**|ja||  
-|**Sicherheit**|Nein|Sicherheit auf Windows-Freigabeebene und Sicherheit auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen-/Spaltenebene wird erzwungen.|  
-|**USN-Journal**|Nein|Metadatenänderungen an Dateien und Verzeichnissen in einer FileTable sind DML-Vorgänge in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank. Daher werden sie in der entsprechenden Datenbankprotokolldatei protokolliert. Sie werden jedoch (abgesehen von Änderungen an der Größe) nicht im NTFS-USN-Journal protokolliert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Änderungsnachverfolgung kann verwendet werden, um ähnliche Informationen zu erfassen.|  
+|**Sicherheit**|nein|Sicherheit auf Windows-Freigabeebene und Sicherheit auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen-/Spaltenebene wird erzwungen.|  
+|**USN-Journal**|nein|Metadatenänderungen an Dateien und Verzeichnissen in einer FileTable sind DML-Vorgänge in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank. Daher werden sie in der entsprechenden Datenbankprotokolldatei protokolliert. Sie werden jedoch (abgesehen von Änderungen an der Größe) nicht im NTFS-USN-Journal protokolliert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Änderungsnachverfolgung kann verwendet werden, um ähnliche Informationen zu erfassen.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Laden von Dateien in FileTables](../../relational-databases/blob/load-files-into-filetables.md)   
  [Arbeiten mit Verzeichnissen und Pfaden in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Zugreifen auf FileTables mit Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   

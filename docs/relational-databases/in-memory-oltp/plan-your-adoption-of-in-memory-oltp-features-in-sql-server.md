@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8cfb42dd7bfa261ba364b427075280631d386b9
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 833d774381654b77bc1efcfcb3efdbb1e6d61068
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planen der Übernahme von In-Memory-OLTP-Funktionen in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -265,7 +266,7 @@ Bestimmte Elemente von Transact-SQL werden in nativ kompilierten T-SQL-Modulen, 
 
 Überlegungen zur Migration eines Transact-SQL-Moduls, das nicht unterstützte Features verwendet, zu einem nativ kompilierten Transact-SQL-Modul, werden im folgenden Artikel erläutert:
 
-- [Migrationsprobleme bei systemintern kompilierten gespeicherten Prozeduren](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)
+- [Migrationsprobleme bei nativ kompilierten gespeicherten Prozeduren](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)
 
 Neben Einschränkungen für bestimmte Elemente von Transact-SQL gibt es auch Einschränkungen für Abfrageoperatoren, die in nativ kompilierten T-SQL-Modulen unterstützt werden. Aufgrund dieser Einschränkungen eignen sich nativ kompilierte gespeicherte Prozeduren nicht für analytische Abfragen, die große Datasets verarbeiten.
 

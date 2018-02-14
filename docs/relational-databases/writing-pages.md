@@ -8,21 +8,23 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: pages
+helpviewer_keywords:
+- pages
 ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e116782bb7c78f69a1d7c90755e746e4587d4426
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f8db9e1c466e787e4c8608b0a47bef1ff8f52c8f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="writing-pages"></a>Schreiben von Seiten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,6 +61,6 @@ Für das Schreiben einer modifizierten („dirty“) Seite auf den Datenträger 
 
 Die oben beschriebenen Prozesse, Verzögertes Schreiben, Eager-Writing und Prüfpunkt, warten nicht, bis die E/A-Operation abgeschlossen ist. Sie verwenden immer asynchrone (oder überlappte) E/As, setzen ihre Tätigkeit fort und überprüfen die ordnungsgemäße Ausführung der E/A-Operationen zu einem späteren Zeitpunkt. Dies ermöglicht SQL Server, sowohl die Ressourcen der CPU als auch der E/As für die entsprechenden Tasks zu maximieren.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 [Handbuch zur Architektur von Seiten und Blöcken](../relational-databases/pages-and-extents-architecture-guide.md)   
  [Lesen von Seiten](../relational-databases/reading-pages.md)

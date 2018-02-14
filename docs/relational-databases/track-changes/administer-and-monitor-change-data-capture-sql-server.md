@@ -8,7 +8,8 @@ ms.service:
 ms.component: track-changes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], administering
 - change data capture [SQL Server], jobs
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 08908c187ec2e548b4379aae11517f1ad50626fe
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ffe44a6f8b86c1c745ac583ddccac3d6998612e5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Verwalten und Überwachen von Change Data Capture (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Sie Change Data Capture verwalten und überwachen können.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+In diesem Thema wird beschrieben, wie Sie Change Data Capture verwalten und überwachen können.  
   
 ##  <a name="Capture"></a> Aufzeichnungsauftrag  
  Der Aufzeichnungsauftrag wird durch Ausführen der parameterlosen gespeicherten Prozedur **sp_MScdc_capture_job**initiiert. Diese gespeicherte Prozedur beginnt mit dem Extrahieren der konfigurierten Werte für *maxtrans*, *maxscans*, *continuous*und *pollinginterval* für den Aufzeichnungsauftrag aus „msdb.dbo.cdc_jobs“. Diese konfigurierten Werte werden dann als Parameter an die gespeicherte Prozedur **sp_cdc_scan**übergeben. Dies wird verwendet, um **sp_replcmds** zum Ausführen des Protokollscans aufzurufen.  

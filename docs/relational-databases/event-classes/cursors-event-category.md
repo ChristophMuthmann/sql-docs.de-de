@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - event classes [SQL Server], Cursors event category
 - SQL Server event classes, Cursors event category
 ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce16881eb27ec133f8d4fe5109ac6b3b83a6e003
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8f5a384535583fd7ae18329061a4f7d34d1f927e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="cursors-event-category"></a>Cursor-Ereigniskategorie
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die Ereigniskategorie **Cursors** enthält Ereignisklassen, die zum Überwachen des Verhaltens von Cursorn verwendet werden.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Die Ereigniskategorie **Cursors** enthält Ereignisklassen, die zum Überwachen des Verhaltens von Cursor verwendet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|Description|  
 |-----------|-----------------|  
 |[CursorClose-Ereignisklasse](../../relational-databases/event-classes/cursorclose-event-class.md)|Beschreibt Ereignisse, die bei API-Cursorn (Application Programming Interface, Anwendungsprogrammierschnittstelle) das Schließen des Cursors bewirken.|  
 |[CursorExecute (Ereignisklasse)](../../relational-databases/event-classes/cursorexecute-event-class.md)|Beschreibt Ereignisse, die bei API-Cursorn das Ausführen des Cursors bewirken.|  
@@ -42,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 |[CursorRecompile (Ereignisklasse)](../../relational-databases/event-classes/cursorrecompile-event-class.md)|Beschreibt Ereignisse, die bei API-Cursorn das erneute Kompilieren des Cursors bewirken.|  
 |[CursorUnprepare-Ereignisklasse](../../relational-databases/event-classes/cursorunprepare-event-class.md)|Beschreibt Ereignisse, die bei API-Cursorn die Aufhebung der Cursorvorbereitung bewirken.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)  
   
   

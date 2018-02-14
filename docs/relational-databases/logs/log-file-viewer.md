@@ -8,24 +8,27 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Log File Viewer
+helpviewer_keywords:
+- Log File Viewer
 ms.assetid: a4ea7fc8-1cb2-4c98-bc86-8991c5e748b2
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4ec6cadb76a448fd54db16cef55dcf2019d9b6a5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d196f3e6964f310610bf336f6311eb9f3b33a2f1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="log-file-viewer"></a>Protokolldatei-Viewer
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Sie können mithilfe des Protokolldatei-Viewers in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] auf Informationen zu Fehlern und Ereignissen zugreifen, die in Protokollen aufgezeichnet wurden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Sie können mithilfe des Protokolldatei-Viewers in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] auf Informationen zu Fehlern und Ereignissen zugreifen, die in Protokollen aufgezeichnet wurden.  
   
 ## <a name="benefits-of-using-log-file-viewer"></a>Vorteile der Verwendung des Protokolldatei-Viewers  
  Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokolldateien aus einer lokalen oder Remoteinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzeigen, wenn die Zielinstanz offline ist oder nicht gestartet werden kann. Auf die Offlineprotokolldateien können Sie von Registrierte Server oder programmgesteuert mit WMI- und WQL (WMI Query Language)-Abfragen zugreifen. Weitere Informationen finden Sie unter [Anzeigen von Offlineprotokolldateien](../../relational-databases/logs/view-offline-log-files.md). Mithilfe des Protokolldatei-Viewers können Sie auf die folgenden Arten von Protokolldateien zugreifen:  
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Remotewartungspläne  
   
--   SQL Server  
+-   SQL Server  
   
 -   SQL Server-Agent  
   
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 |Beschreibt, wie Offlineprotokolldateien über registrierte Server angezeigt werden und wie WMI-Berechtigungen überprüft werden.|[Anzeigen von Offlineprotokolldateien](../../relational-databases/logs/view-offline-log-files.md)|  
 |Öffnet die F1-Hilfe für den Protokolldatei-Viewer.|[Protokolldatei-Viewer (F1-Hilfe)](../../relational-databases/logs/log-file-viewer-f1-help.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Audit &#40;Datenbankmodul&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
  [SQL Server-Agent-Fehlerprotokoll](http://msdn.microsoft.com/library/0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41)  
   

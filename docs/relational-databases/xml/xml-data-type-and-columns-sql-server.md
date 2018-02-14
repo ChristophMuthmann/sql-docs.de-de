@@ -8,23 +8,25 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 68e9e9a97b9a601bad62750b2092f2bea66441c0
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 1c46731315da67c4258b4a08983b54e381bd6dbf
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML-Datentyp und -Spalten (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] In diesem Thema werden die Vorteile und die Einschränkungen des **xml**-Datentyps für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erläutert. Es soll Ihnen zudem die Entscheidung vereinfachen, wie XML-Daten gespeichert werden.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+In diesem Thema werden die Vorteile und die Einschränkungen des **XML** -Datentyps für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erläutert. Es soll Ihnen zudem die Entscheidung vereinfachen, wie XML-Daten gespeichert werden.  
   
 ## <a name="relational-or-xml-data-model"></a>Relationales oder XML-Datenmodell  
  Wenn Ihre Daten sehr strukturiert sind und ein bekanntes Schema aufweisen, ist das relationale Modell möglicherweise zur Datenspeicherung am besten geeignet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt die dazu erforderliche Funktionalität und die benötigten Tools bereit. Wenn Ihre Daten dagegen halbstrukturiert oder nicht strukturiert sind oder ihre Struktur unbekannt ist, müssen Sie das Modellieren dieser Daten in Erwägung ziehen.  

@@ -8,23 +8,25 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 484064929757b5ac7d5708a8cc1e88836cd8fc5e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d17c9eec2443602cde7465426f7349beb4e0a6e1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="extended-events-for-stretch-database"></a>Erweiterte Ereignisse für Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
 Stretch-Datenbank stellt eine Reihe von erweiterten Ereignissen für die Problembehandlung bereit.  
   
@@ -87,6 +89,6 @@ stretch_table_unprovision_completed|Gibt den Abschluss der Entfernung von lokale
 stretch_table_validation_error|Gibt den Abschluss der Überprüfung für eine Tabelle an, wenn der Benutzer Stretch aktiviert.  
 stretch_unprovision_table_start|Gibt den Start der Aufhebung der Bereitstellung der Stretchingtabelle an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verwalten und Problembehandlung von Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
 
