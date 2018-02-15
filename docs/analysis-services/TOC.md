@@ -92,20 +92,18 @@
 ## [Ablaufverfolgungsereignisse ](../analysis-services/trace-events/analysis-services-trace-events.md)
 
 # Entwickler
-## Tabellarische Modelle
-### [Tabular Model Programming for Compatibility Level 1200 and higher (Programmieren von tabellarischen Modellen für Kompatibilitätsgrad 1200 und höher)](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
-#### [Tabular Model Scripting Language (TMSL) (Skriptsprache für tabellarische Modelle (TMSL))](tabular-model-scripting-language-tmsl-reference.md)
-#### [Tabular Model Scripting Language (TMSL) commands (Befehle der Skriptsprache für tabellarische Modelle (TMSL))](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
-#### [Tabular Model Scripting Language (TMSL) objects (Objekte der Skriptsprache für tabellarische Modelle (TMSL))](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
-### [Tabular Model Programming for Compatibility Levels 1050 and 1103 (Programmieren von tabellarischen Modellen für Kompatibilitätsgrad 1050 und 1103)](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
+## [Tabular Model Programming for Compatibility Level 1200 and higher (Programmieren von tabellarischen Modellen für Kompatibilitätsgrad 1200 und höher)](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
+### [Tabular Model Scripting Language (TMSL) (Skriptsprache für tabellarische Modelle (TMSL))](tabular-model-scripting-language-tmsl-reference.md)
+### [Tabular Model Scripting Language (TMSL) commands (Befehle der Skriptsprache für tabellarische Modelle (TMSL))](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
+### [Tabular Model Scripting Language (TMSL) objects (Objekte der Skriptsprache für tabellarische Modelle (TMSL))](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
+## [Tabular Model Programming for Compatibility Levels 1050 and 1103 (Programmieren von tabellarischen Modellen für Kompatibilitätsgrad 1050 und 1103)](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
 
-## Mehrdimensionale Modelle
-### [Analysis Services Scripting Language (ASSL) + (Analysis Services Scripting Language (ASSL) +)](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
-### [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
-### [Analysis Management Objects +](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
-### [OLAP logical + (OLAP logisch +)](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
-### [OLAP physical + (OLAP physikalisch +)](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
-### [Extending OLAP + (Erweitern von OLAP +)](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
+## [Analysis Services Scripting Language (ASSL) + (Analysis Services Scripting Language (ASSL) +)](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
+## [Analysis Management Objects (AMO)+](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
+## [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
+## [OLAP logical + (OLAP logisch +)](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
+## [OLAP physical + (OLAP physikalisch +)](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
+## [Extending OLAP + (Erweitern von OLAP +)](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
 
 ## [Schema rowsets (Schemarowsets)](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
 ## [Analysis Services Scripting Language (ASSL for XMLA) (Analysis Services Scripting Language (ASSL für XMLA))](scripting/analysis-services-scripting-language-assl-for-xmla.md)

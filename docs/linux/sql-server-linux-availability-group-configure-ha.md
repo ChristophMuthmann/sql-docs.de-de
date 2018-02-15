@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: 76a5ed98ddd1aa69c11cd371586ce963ebcd97de
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: c1d84ae8ac797775759bc53a29cc55acd1323f32
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configure SQL Server AlwaysOn-Verfügbarkeitsgruppe für hohe Verfügbarkeit unter Linux
 
@@ -164,7 +164,7 @@ Führen Sie **nur eine** der folgenden Skripts:
 
 - Erstellen von AG mit zwei synchronen Replikaten
 
-   Zwei Replikate mit den Verfügbarkeitsmodus für synchrone einschließen. Das folgende Skript erstellt z. B. eine AG aufgerufen `ag1`. `node1`und `node2` Replikate im synchronen Modus mit automatischem seeding und automatisches Failover zu hosten.
+   Zwei Replikate mit den Verfügbarkeitsmodus für synchrone einschließen. Das folgende Skript erstellt z. B. eine AG aufgerufen `ag1`. `node1` und `node2` Replikate im synchronen Modus mit automatischem seeding und automatisches Failover zu hosten.
 
    >[!IMPORTANT]
    >Führen Sie nur das folgende Skript zum Erstellen einer Verfügbarkeitsgruppe mit zwei synchronen Replikaten. Das folgende Skript kann nicht ausgeführt werden, wenn Sie entweder dieses Skript ausgeführt haben. 
