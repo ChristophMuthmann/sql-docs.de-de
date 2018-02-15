@@ -27,16 +27,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9652e093a6b358a209bb7b84f1c4aa4c6854c328
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: fef54757181e9a4fc39a8eabf6399041ac0d6879
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sysdmdbindexusagestats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt die Anzahl verschiedener Arten von Indexvorgängen und den Zeitpunkt zurück, wann die einzelnen Vorgänge in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zuletzt ausgeführt wurden.  
+  Gibt die Anzahl verschiedener Arten von Indexvorgängen und den Zeitpunkt zurück, wann die einzelnen Vorgänge zuletzt ausgeführt wurden.  
   
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]können dynamische Verwaltungssichten keine Informationen verfügbar machen, die sich auf die Datenbankkapselung auswirken würden oder die sich auf andere Datenbanken beziehen, auf die der Benutzer Zugriff hat. Um zu vermeiden, dass diese Informationen verfügbar gemacht werden, wird jede Zeile mit Daten, die zum verbundenen Mandanten gehören, herausgefiltert.  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/03/2018
 >  **sys.dm_db_index_usage_stats** does not return information about memory-optimized indexes. Informationen zur Verwendung von speicheroptimierten Indizes finden Sie unter [dm_db_xtp_index_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
 > [!NOTE]  
->  Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_db_index_usage_stats**.  
+>  Zum Aufrufen dieser Ansicht vom [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie **sys.dm_pdw_nodes_db_index_usage_stats**.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/03/2018
 |**object_id**|**int**|ID der Tabelle oder Sicht, für die der Index definiert ist.|  
 |**index_id**|**int**|Die ID des Index.|  
 |**user_seeks**|**bigint**|Anzahl von Suchvorgängen durch Benutzerabfragen.|  
-|**user_scans**|**bigint**|Anzahl von Scanvorgängen durch Benutzerabfragen. Diese Zahl entspricht Scans, die "seek-Prädikat" nicht verwendet haben.|  
+|**user_scans**|**bigint**|Anzahl von Scanvorgängen durch Benutzerabfragen nicht verwendet haben, die seek""-Prädikat.|  
 |**user_lookups**|**bigint**|Anzahl von Lesezeichen-Nachschlagevorgängen durch Benutzerabfragen.|  
 |**user_updates**|**bigint**|Anzahl von Updates durch Benutzerabfragen. Dies schließt INSERT-, DELETE- und aktualisiert, die Anzahl von Vorgängen, die nicht der tatsächliche betroffenen Zeilen darstellt. Z. B. Wenn Sie 1000 Zeilen in einer einzelnen Anweisung löschen, erhöht diese Zahl um 1|  
 |**last_user_seek**|**datetime**|Zeitpunkt des letzten Suchvorgangs durch den Benutzer|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="permissions"></a>Berechtigungen  
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] benötigen Premium-Ebenen der `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und grundlegenden Organisationsebenen erfordert die **Serveradministrator** oder ein **Azure Active Directory-Administrators** Konto.  
+Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.  
   
 ## <a name="see-also"></a>Siehe auch  
 

@@ -1,27 +1,28 @@
 ---
 title: Verbindungsoptionen | Microsoft Docs
 ms.custom: 
-ms.date: 01/16/2018
+ms.date: 02/08/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b90819fbed37aa41a23a257caf287fd563da6ffa
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 899e072051224e2f28423e31f44d368a2884497b
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="connection-options"></a>Verbindungsoptionen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,9 +35,8 @@ Dieses Thema enthält die Optionen, die im assoziativen Array zulässig sind (be
 |ApplicationIntent|String|Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Mögliche Werte sind „ReadOnly“ und „ReadWrite“.<br /><br />Weitere Informationen zur [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] -Unterstützung für [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]finden Sie unter [PHP Driver for SQL Server Support for High Availability, Disaster Recovery (Unterstützung für hohe Verfügbarkeit im PHP-Treiber für SQL Server, Notfallwiederherstellung)](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|ReadWrite|  
 |AttachDBFileName|String|Gibt an, welche Datenbankdatei der Server anfügen soll.|Kein Wert festgelegt.|  
 |Authentifizierung|Einer der folgenden Zeichenfolgen:<br /><br />'SqlPassword'<br /><br />'ActiveDirectoryPassword'|Gibt den Authentifizierungsmodus an.|nicht festgelegt werden.|  
-|CEKeystoreProvider<br />CEKeystoreName<br />CEKeystoreEncryptKey|String|Geben Sie den Pfad, den Namen und den Verschlüsselungsschlüssel einen benutzerdefinierte Schlüsselspeicheranbieter für Always Encrypted-Funktion. Alle drei Werte müssen festgelegt werden, um die benutzerdefinierte Schlüsselspeicheranbieter beim Herstellen einer Verbindung ordnungsgemäß zu konfigurieren. |Kein Wert festgelegt.|
 |CharacterSet<br /><br />(vom PDO_SQLSRV-Treiber nicht unterstützt)|String|Gibt den Zeichensatz an, mit dem Daten an den Server gesendet werden.<br /><br />Mögliche Werte sind SQLSRV_ENC_CHAR und UTF-8. Weitere Informationen finden Sie unter [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
-|ColumnEncryption|**Aktiviert** oder **deaktiviert**|Gibt an, ob die Funktion Always Encrypted oder nicht aktiviert ist. |Disabled|  
+|ColumnEncryption<br /><br />(nur in Windows unterstützt)|**Aktiviert** oder **deaktiviert**|Gibt an, ob die Funktion Always Encrypted oder nicht aktiviert ist. |Disabled|  
 |ConnectionPooling|1 oder **true** , um Verbindungspooling zu aktivieren.<br /><br />0 oder **false** , um Verbindungspooling zu deaktivieren.|Gibt an, ob die Verbindung aus einem Verbindungspool zugewiesen wird (1 oder **"true"**) oder nicht (0 oder **"false"**).<sup> 1</sup>|**"true"** (1)|  
 |Datenbank|String|Gibt den Namen der Datenbank in der Verwendung für die herzustellende Verbindung<sup>2</sup>.|Die Standarddatenbank, die für die Anmeldung verwendet wird.|  
 |Treiber|String|Gibt den Microsoft ODBC-Treiber, die zur Kommunikation mit SQL Server verwendet.<br /><br />Folgende Werte sind möglich:<br />ODBC-Treiber 17 für SQLServer<br />Odbcdriver 13 for SQLServer<br />Odbcdriver 11 für SQLServer (nur Windows).|Wenn das Driver-Schlüsselwort nicht angegeben ist, versucht Microsoft Drivers for PHP for SQL Server im System, das Vorhandensein der unterstützten Microsoft ODBC-Treiber suchen beginnend mit der neuesten Version von ODBC und so weiter.|  

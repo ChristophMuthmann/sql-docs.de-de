@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-json
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - JSON, importing
 - JSON, converting from
 ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: fe464bedc22fa5ebc47fc7f783e75b994d0cff49
 ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/17/2017
 ---
@@ -38,13 +39,13 @@ ms.lasthandoff: 11/17/2017
 Verwendung **OPENJSON** zum Importieren von JSON-Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], oder zum Konvertieren von JSON-Daten in ein relationales Format für eine app oder dem Dienst nicht nutzen, JSON direkt.  
   
 > [!NOTE]  
->  Die **OPENJSON** -Funktion ist verfügbar nur für Kompatibilitätsgrad 130 oder höher. Wenn der Kompatibilitätsgrad Ihrer Datenbank kleiner als 130 ist, kann SQL Server die **OPENJSON**-Funktion nicht finden und ausführen. Andere JSON-Funktionen sind für alle Kompatibilitätsgrade verfügbar.
+>  Die **OPENJSON**-Funktion ist nur für Kompatibilitätsgrad 130 oder höher verfügbar. Wenn der Kompatibilitätsgrad Ihrer Datenbank kleiner als 130 ist, kann SQL Server die **OPENJSON**-Funktion nicht finden und ausführen. Andere JSON-Funktionen sind für alle Kompatibilitätsgrade verfügbar.
 > 
 > Sie können den Kompatibilitätsgrad in der `sys.databases`-Ansicht oder in den Datenbankeigenschaften überprüfen. Sie können den Kompatibilitätsgrad einer Datenbank mithilfe des folgenden Befehls ändern:  
 > 
 > `ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 130`
 >   
-> Kompatibilitätsgrad 120 kann die Standardeinstellung auch in eine neue Azure SQL-Datenbank sein.  
+> Auch in einer neuen Azure SQL-Datenbank-Instanz kann der Standardkompatibilitätsgrad 120 sein.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Thema Linksymbol")[Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,7 +57,7 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 <with_clause> ::= WITH ( { colName type [ column_path ] [ AS JSON ] } [ ,...n ] )
 ```  
 
-Die **OPENJSON** Tabellenwert-Funktion analysiert die *JsonExpression* bereitgestellt, die als erstes Argument und gibt eine oder mehrere Zeilen mit Daten aus der JSON-Objekten im Ausdruck zurück. *JsonExpression* geschachtelte untergeordnete Objekte enthalten kann. Wenn Sie innerhalb ein untergeordneten Objekts analysieren möchten *JsonExpression*, können Sie angeben, eine **Pfad** -Parameter für das JSON-Unterobjekt.
+Die **OPENJSON**-Tabellenwertfunktion analysiert den als erstes Argument angegebenen *JsonExpression* und gibt mindestens eine Zeile mit Daten aus den JSON-Objekten im Ausdruck zurück. *JsonExpression* kann geschachtelte untergeordnete Objekte enthalten. Wenn Sie ein untergeordnetes Objekt aus einem *JsonExpression* heraus analysieren möchten, können Sie einen **path**-Parameter für das JSON-Unterobjekt angeben.
 
 ### <a name="openjson"></a>openjson
 
