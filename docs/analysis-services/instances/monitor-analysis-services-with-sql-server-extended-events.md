@@ -18,19 +18,20 @@ f1_keywords:
 - Sql13.ssms.XeASNewEventSession.Targets.f1
 - Sql13.ssms.XeASNewEventSession.Advanced.f1
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: abe5ce23dfb6f16fcc8fb27f16918895f6a51650
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>Überwachen von Analysis Services mit den erweiterten Ereignissen von SQL Server
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]Erweiterte Ereignisse (*xEvents*) ist ein kompaktes Ablaufverfolgungs- und Leistung Überwachungssystem, die nur geringe Systemressourcen verwendet, wodurch es ein ideales Tool zum Diagnostizieren von Problemen auf Produktions- und Testcomputer-Servern. Sie sind zudem hoch skalierbar, konfigurierbar und durch den neuen integrierten Toolsupport in SQL Server 2016 einfacher zu verwenden. In SQL Server Management Studio können Sie bei Verbindungen mit Analysis Services-Instanzen eine Live-Ablaufverfolgung konfigurieren, ausführen und überwachen, ähnlich der Verwendung von SQL Server Profiler. Das Hinzufügen besserer Tools sollte xEvents zu einem sinnvolleren Ersatz für SQL Server Profiler machen und für mehr Symmetrie bei der Diagnostizierung von Problemen in Ihrem Datenbankmodul und Analysis Services-Workloads sorgen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+Die erweiterten Ereignisse (*xEvents*) sind ein kompaktes Ablaufverfolgungs- und Leistungsüberwachungssystem, das sehr wenige Ressourcen verwendet. Dadurch stellen sie ein ideales Tool zum Diagnostizieren von Problemen sowohl auf Produktions- als auch auf Testservern dar. Sie sind zudem hoch skalierbar, konfigurierbar und durch den neuen integrierten Toolsupport in SQL Server 2016 einfacher zu verwenden. In SQL Server Management Studio können Sie bei Verbindungen mit Analysis Services-Instanzen eine Live-Ablaufverfolgung konfigurieren, ausführen und überwachen, ähnlich der Verwendung von SQL Server Profiler. Das Hinzufügen besserer Tools sollte xEvents zu einem sinnvolleren Ersatz für SQL Server Profiler machen und für mehr Symmetrie bei der Diagnostizierung von Problemen in Ihrem Datenbankmodul und Analysis Services-Workloads sorgen.  
   
  Neben [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]können Sie  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Sitzungen für erweiterte Ereignisse auch über die bisherige Methode (Erstellen von XMLA-Skripts) konfigurieren, die in vorherigen Releases unterstützt wurde.  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_ssas_extended_events_ssms"></a> Verwenden von Management Studio zum Konfigurieren von Analysis Services  
  Management Studio stellt sowohl für tabellarische als auch für mehrdimensionale Instanzen einen neuen Ordner namens „Verwaltung“ bereit, der vom Benutzer initiierte xEvent-Sitzungen enthält. Sie können mehrere Sitzungen gleichzeitig ausführen. In der aktuellen Implementierung unterstützt die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Benutzeroberfläche der erweiterten Ereignisse jedoch nicht das Aktualisieren oder Wiedergeben einer vorhandenen Sitzung.  
   
- ![Ssas_extended_events_ssms_start](../../analysis-services/instances/media/ssas-extended-events-ssms-start.png "Ssas_extended_events_ssms_start")  
+ ![ssas_extended_events_ssms_start](../../analysis-services/instances/media/ssas-extended-events-ssms-start.png "ssas_extended_events_ssms_start")  
   
  **Auswählen von Ereignissen**  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/08/2018
   
  **Konfigurieren** ist eine Option am äußersten Ende des Dialogfelds.  
   
- ![Konfigurieren von SSAS-Xevents](../../analysis-services/instances/media/ssas-xevents-configure.PNG "Konfigurieren von Ssas-Xevents")  
+ ![ssas-xevents-configure](../../analysis-services/instances/media/ssas-xevents-configure.PNG "ssas-xevents-configure")  
   
  Wählen Sie bei der Konfiguration auf der Registerkarte „Ereignisfelder“ **TextData** aus, damit dieses Feld neben dem Ereignis auftaucht und dabei Rückgabewerte anzeigt, einschließlich auf dem Server ausgeführter Abfragen.  
   

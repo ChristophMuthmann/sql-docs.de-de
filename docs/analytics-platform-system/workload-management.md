@@ -17,10 +17,10 @@ ms.topic: article
 ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
 caps.latest.revision: 
 ms.openlocfilehash: 738818a49491fbf8f8df491cac2f10ebdeedf3bf
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="workload-management"></a>Arbeitsauslastungsverwaltung
 Verwaltungsfunktionen für SQL Server-PDW-arbeitsauslastung können Benutzer und Administratoren Zuweisen von Anforderungen an die Konfiguration des Speichers und Parallelität vorab festgelegt. Verwenden Sie arbeitsauslastungsverwaltung zum Verbessern der Leistung Ihrer arbeitsauslastung entweder consistent "und" gemischte, indem Anforderungen an die entsprechenden Ressourcen haben, ohne alle Anforderungen ewig eingabeereignisübermittlung ermöglicht.  

@@ -22,19 +22,20 @@ helpviewer_keywords:
 - MAXIMUM_ITEMSET_SIZE parameter
 - MINIMUM_PROBABILITY parameter
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c8f6fca5071577e70d334e1b6184ed0ac7bb74ad
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Association-Algorithmus
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules-Algorithmus ist eine einfache Implementierung des bekannten Apriori-Algorithmus.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules-Algorithmus ist eine einfache Implementierung des bekannten Apriori-Algorithmus.  
   
  Sowohl der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus als auch der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules-Algorithmus können zur Analyse von Zuordnungen dienen, die jeweils erfassten Regeln können jedoch abhängig vom Algorithmus differieren. In einem Entscheidungsstrukturmodell basieren die Aufteilungen, von denen bestimmte Regeln abgeleitet werden, auf Informationen, während die Regeln in einem Zuordnungsmodell vollständig auf Vertrauen beruhen. Daher ist in einem Zuordnungsmodell eine starke Regel bzw. eine Regel, deren Vertrauen hoch ist, nicht unbedingt interessant, da sie keine neuen Informationen bietet.  
   
@@ -118,7 +119,7 @@ ms.lasthandoff: 01/08/2018
  *MINIMUM_PROBABILITY*  
  Gibt die Mindestwahrscheinlichkeit an, dass eine Regel wahr ist.  
   
- Wenn Sie diesen Wert beispielsweise auf 0,5 festlegen, kann keine Regel mit einer Wahrscheinlichkeit von weniger als 50 Prozent generiert werden.  
+ Wenn Sie diesen Wert beispielsweise auf 0,5 festlegen, kann keine Regel mit einer Wahrscheinlichkeit von weniger als 50 Prozent generiert werden.  
   
  Der Standardwert ist 0,4.  
   
@@ -159,7 +160,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules-Algorithmus unterstützt bestimmte Eingabespalten und vorhersagbare Spalten. Diese sind in der nachstehenden Tabelle aufgelistet. Weitere Informationen zur Bedeutung der Inhaltstypen in einem Miningmodell finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Spalte|Inhaltstypen|  
+|Column|Inhaltstypen|  
 |------------|-------------------|  
 |Eingabeattribut|Cyclical, Discrete, Discretized, Key, Table, Ordered|  
 |Vorhersagbares Attribut|Zyklisch, Diskret, Diskretisiert, Tabelle und Sortiert|  
@@ -167,9 +168,9 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Zyklische und sortierte Inhaltstypen werden unterstützt, der Algorithmus behandelt sie jedoch als diskrete Werte und führt keine spezielle Verarbeitung durch.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Microsoft Association-Algorithmus](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Zuordnungsmodellabfragen](../../analysis-services/data-mining/association-model-query-examples.md)   
- [Miningmodellinhalt von Zuordnungsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Miningmodellinhalt von Zuordnungsmodellen &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

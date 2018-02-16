@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3e3895f402f1e96dc1ea3484b9fb07ddc84118d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Von Analysis Services unterstützte Authentifizierungsmethoden
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Verbindungen von einer Clientanwendung mit einer Analysis Services-Instanz erfordern die Windows-Authentifizierung (integriert). Sie können eine Windows-Benutzeridentität mithilfe einer der folgenden Methoden angeben:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Verbindungen zwischen einer Clientanwendung und einer Analysis Services-Instanz erfordern die (integrierte) Windows-Authentifizierung. Sie können eine Windows-Benutzeridentität mithilfe einer der folgenden Methoden angeben:  
   
 -   NTLM  
   

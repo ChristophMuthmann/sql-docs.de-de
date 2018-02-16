@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9376a1f4124a86fa7acc313c7985d0a7f1c450f3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Verwandte Projekte für Data Mining-Lösungen
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Mindestens erforderliche für ein Datamining-Lösung ist die Datamining-Projekt, das Datenquellen, Datenquellensichten, Miningstrukturen und Miningmodelle definiert. Wenn Data Mining-Modelle jedoch für die tägliche Entscheidungsfindung eingesetzt werden, ist es wichtig, Data Mining in andere Teile der vorhersagenden Analytiklösung zu integrieren, die die folgenden Prozesse und Komponenten enthalten kann:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Eine Data Mining-Projektmappe erfordert mindestens das Data Mining-Projekt, in dem Datenquellen, Datenquellenansichten, Miningstrukturen und Miningmodelle definiert werden. Wenn Data Mining-Modelle jedoch für die tägliche Entscheidungsfindung eingesetzt werden, ist es wichtig, Data Mining in andere Teile der vorhersagenden Analytiklösung zu integrieren, die die folgenden Prozesse und Komponenten enthalten kann:  
   
 -   Vorbereitung und Auswahl der Daten und Variablen. Schließt Datenbereinigung, Metadatenverwaltung, Integration mehrerer Datenquellen, Konvertierung, Zusammenführung und das Hochladen von Daten in ein Data Warehouse ein.  
   
@@ -63,15 +64,15 @@ ms.lasthandoff: 01/08/2018
   
  **Ablaufsteuerungskomponenten**  
   
--   [DDL ausführen (Analysis Services-Task)](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
+-   [Analysis Services-Task "DDL ausführen"](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
--   [Analysis Services-Verarbeitungstask](../../integration-services/control-flow/analysis-services-processing-task.md)  
+-   [Analysis Services-Verarbeitungstasks](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
 -   [CDC-Steuerungstask](../../integration-services/control-flow/cdc-control-task.md)  
   
 -   [Datenbereinigung](../../data-quality-services/data-cleansing.md)  
   
--   [Data Mining-Abfragetask](../../integration-services/control-flow/data-mining-query-task.md)  
+-   [Datamining-Abfragetasks](../../integration-services/control-flow/data-mining-query-task.md)  
   
 -   [Datenprofilerstellungs-Task](../../integration-services/control-flow/data-profiling-task.md)  
   
@@ -83,9 +84,9 @@ ms.lasthandoff: 01/08/2018
   
 -   [Transformation für Datenkonvertierung](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
   
--   [Ziel des Data Mining-Modelltrainings](../../integration-services/data-flow/data-mining-model-training-destination.md)  
+-   [Datamining Model Training Destination](../../integration-services/data-flow/data-mining-model-training-destination.md)  
   
--   [Transformation für Data Mining-Abfragen](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
+-   [Transformation für Datamining-Abfragen](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
   
 -   [Transformation für abgeleitete Spalten](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
@@ -108,11 +109,11 @@ ms.lasthandoff: 01/08/2018
   
  Weitere Informationen zum Verwenden von Reporting Services mit DMX-Abfragen als Datenquelle sind diesen Links zu entnehmen:  
   
- [Abrufen von Daten aus einem Data Mining-Modell &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Abrufen von Daten aus einer Datamining-Modell &#40; DMX &#41; &#40; SSRS &#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
- [Benutzeroberfläche des DMX-Abfrage-Designers für Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
+ [Analysis Services DMX Query Designer User Interface](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Analysis Services-Verbindungstyp für DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Analysis Services-Verbindungstyp für DMX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  Es ist jedoch nicht notwendig, DMX als Datenquelle zu verwenden. Die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponenten für Data Mining unterstützen auch das Speichern der Ergebnisse einer Vorhersageabfrage in einer relationalen Datenbank. Wenn Sie zum Aktualisieren von Modellen mithilfe von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]einen bewährten Workflow erstellt haben, können Sie mit beibehaltenen Vorhersagen und anderen Data Mining-Abfrageergebnissen für SQL Server [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] und andere Tools für die Berichterstellung verwenden, die nicht mit DMX verbunden sind.  
   
@@ -207,7 +208,7 @@ ms.lasthandoff: 01/08/2018
 -   Nicht alle Volltextsprachen unterstützen die semantische Indizierung. Eine Liste mit unterstützten Sprachen finden Sie unter [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Mehrdimensionale Modelllösungen &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Tabellenmodelllösungen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [Mehrdimensionale Modelllösungen &#40; SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [Projektmappen für tabellarische Modelle &#40; SSAS – tabellarisch &#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
   

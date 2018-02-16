@@ -19,19 +19,20 @@ helpviewer_keywords:
 - null values [Analysis Services]
 - coding [Data Mining]
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 78f57e86acdbcf9292e462854c97ebf4c91f79b1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Fehlende Werte (Analysis Services - Data Mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Behandlung von *fehlende Werte* ist ein wichtiger Teil der effektiven Modellierung. In diesem Abschnitt wird erläutert, was fehlende Werte sind, und es werden die Funktionen beschrieben, die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Arbeit mit fehlenden Werten bereitgestellt werden, wenn Sie Data Mining-Strukturen und Miningmodelle erstellen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Die Behandlung  *fehlender Werte* ist ein wichtiger Teil der effektiven Modellierung. In diesem Abschnitt wird erläutert, was fehlende Werte sind, und es werden die Funktionen beschrieben, die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Arbeit mit fehlenden Werten bereitgestellt werden, wenn Sie Data Mining-Strukturen und Miningmodelle erstellen.  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>Definition fehlender Werte in Data Mining  
  Ein fehlender Wert kann Verschiedenes bedeuten. Vielleicht war das Feld nicht zutreffend, oder das Ereignis trat nicht ein, oder die Daten waren nicht verfügbar. Möglicherweise kannte die Person, die die Daten eingegeben hat, den richtigen Wert nicht, oder sie hat nicht darauf geachtet, dass alle Felder ausgefüllt sind.  
@@ -48,13 +49,13 @@ ms.lasthandoff: 01/08/2018
 ## <a name="calculation-of-the-missing-state"></a>Berechnen des Status "Missing"  
  Für den Data Mining-Algorithmus sind fehlende Werte informativ. In Falltabellen ist der Status **Missing** ebenso wie jeder andere Status zulässig. Darüber hinaus kann ein Data Mining-Modell mithilfe anderer Werte vorhersagen, ob ein Wert fehlt. Anders ausgedrückt: Die Tatsache, dass ein Wert fehlt, wird nicht als Fehler angesehen.  
   
- Während der Erstellung eines Miningmodells wird der Status **Missing** dem Modell automatisch für alle diskreten Spalten hinzugefügt. Wenn beispielsweise die Eingabespalte für [Geschlecht] die beiden möglichen Werte „Männlich“ und „Weiblich“ enthält, wird automatisch ein dritter Wert hinzugefügt, der den Wert **Nicht vorhanden** darstellt, und das Histogramm, das die Verteilung aller Werte der Spalte zeigt, beinhaltet stets die Anzahl der Fälle mit **Nicht vorhanden** -Werten. Wenn in der Spalte Geschlecht keine Werte fehlen, zeigt das Histogramm, dass der -Status in 0 Fällen vorkommt.  
+ Während der Erstellung eines Miningmodells wird der Status **Missing** dem Modell automatisch für alle diskreten Spalten hinzugefügt. Wenn beispielsweise die Eingabespalte für [Geschlecht] die beiden möglichen Werte „Männlich“ und „Weiblich“ enthält, wird automatisch ein dritter Wert hinzugefügt, der den Wert **Nicht vorhanden** darstellt, und das Histogramm, das die Verteilung aller Werte der Spalte zeigt, beinhaltet stets die Anzahl der Fälle mit **Nicht vorhanden** -Werten. Wenn in der Spalte Geschlecht keine Werte fehlen, zeigt das Histogramm, dass der -Status in 0 Fällen vorkommt.  
   
  Das automatische Einfügen des Status **Missing** hat folgenden Sinn: Sie halten es für möglich, dass sich in den Daten nicht für alle möglichen Werte Beispiele finden und möchten nicht, dass das Modell die Möglichkeit ausschließt, nur weil die Daten kein Beispiel enthalten. Wenn die Umsatzdaten eines Ladens beispielsweise zeigen, dass alle Kunden, die ein bestimmtes Produkt kauften, zufällig Frauen waren, ist es nicht wünschenswert, ein Modell zu erstellen, das vorhersagt, dass nur Frauen das Produkt kaufen können. Stattdessen fügt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] einen Platzhalter namens **Nicht vorhanden**für den zusätzlichen unbekannten Wert hinzu, sodass andere mögliche Statuswerte berücksichtigt werden können.  
   
  Beispielsweise enthält die folgende Tabelle die Verteilung der Werte für den Knoten (Alle) des Entscheidungsstrukturmodells, das für das Bike Buyer-Lernprogramms erstellt wurde. In diesem Beispielszenario enthält die Spalte [Bike Buyer] das vorhersagbare Attribut, wobei 1 für "Ja" und 0 für "Nein" steht.  
   
-|value|Fälle|  
+|Wert|Fälle|  
 |-----------|-----------|  
 |0|9296|  
 |1|9098|  
@@ -70,7 +71,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="adjusting-probability-for-missing-states"></a>Anpassen der Wahrscheinlichkeit für den Status "Missing"  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zählt nicht nur die Werte, sondern berechnet auch die Wahrscheinlichkeit der einzelnen Werte im Dataset. Das gilt auch für den **Missing** -Wert. In der nachfolgenden Tabelle werden beispielsweise die Wahrscheinlichkeiten der Fälle aus dem vorigen Beispiel dargestellt:  
   
-|value|Fälle|Probability|  
+|Wert|Fälle|Probability|  
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
 |1|9098|49.42%|  
@@ -109,18 +110,18 @@ Der Decision Trees-Algorithmus bietet eine zusätzliche Anpassung des Algorithmu
   
  Im Endeffekt soll durch diese Anpassung die Stabilität der Struktur aufrechterhalten werden.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
  Die folgenden Themen stellen weitere Informationen zur Behandlung fehlender Werte bereit.  
   
 |Aufgaben|Links|  
 |-----------|-----------|  
-|Hinzufügen von Flags zu einzelnen Modellspalten, um die Behandlung fehlender Werte zu steuern|[Anzeigen oder Ändern von Modellierungsflags &#40;Data Mining&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|Hinzufügen von Flags zu einzelnen Modellspalten, um die Behandlung fehlender Werte zu steuern|[Zeigen Sie an oder ändern Sie die Modellierung von Ablaufverfolgungsflags &#40; Datamining &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
 |Festlegen von Eigenschaften für ein Miningmodell, um die Behandlung fehlender Werte zu steuern|[Ändern der Eigenschaften eines Miningmodells](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)|  
-|Informationen zum Angeben der Modellierungsflags in DMX|[Modellierungsflags &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
+|Informationen zum Angeben der Modellierungsflags in DMX|[Modellierungsflags &#40; DMX &#41;](../../dmx/modeling-flags-dmx.md)|  
 |Ändern der Methode, die von der Miningstruktur zur Behandlung fehlender Werte verwendet wird|[Ändern der Eigenschaften einer Miningstruktur](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Modellierungsflags &#40;Data Mining&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Miningmodellinhalt &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Modellieren von Ablaufverfolgungsflags &#40; Datamining &#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   

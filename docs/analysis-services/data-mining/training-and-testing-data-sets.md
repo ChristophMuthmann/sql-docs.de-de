@@ -17,19 +17,20 @@ helpviewer_keywords:
 - testing data mining models
 - accuracy testing [data mining]
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: b85aca1abd948d42710633d65e7b79ad30d0629a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="training-and-testing-data-sets"></a>Trainings- und Testdatasets
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Aufteilen von Daten in Trainings- und Testsätze ist ein wichtiger Bestandteil der Auswertung von Datamining-Modelle. Wenn Sie ein Dataset in einen Trainings- und einen Testsatz unterteilen, wird der Großteil der Daten in der Regel für das Training und die restlichen Daten zum Testen verwendet. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prüft die Daten nach dem Zufallsprinzip, um sicherzustellen, dass sich die Test- und Trainingssets ähneln. Durch die Verwendung der gleichen Daten für das Training und das Testen können Sie mögliche Datendiskrepanzen weitgehend ausschließen und die Eigenschaften des Modells leichter verstehen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Das Aufteilen von Daten in Trainings- und Testsätze ist ein wichtiger Bestandteil der Auswertung von Data Mining-Modellen. Wenn Sie ein Dataset in einen Trainings- und einen Testsatz unterteilen, wird der Großteil der Daten in der Regel für das Training und die restlichen Daten zum Testen verwendet. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prüft die Daten nach dem Zufallsprinzip, um sicherzustellen, dass sich die Test- und Trainingssets ähneln. Durch die Verwendung der gleichen Daten für das Training und das Testen können Sie mögliche Datendiskrepanzen weitgehend ausschließen und die Eigenschaften des Modells leichter verstehen.  
   
  Nachdem ein Modell durch die Verwendung des Trainingssatzes bearbeitet wurde, können Sie das Modell testen, indem Sie Vorhersagen für den Testsatz erstellen. Da die Daten im Testsatz bereits bekannte Werte für das Attribut enthalten, das Sie vorhersagen möchten, ist es einfach, die Vorhersagegenauigkeit des Modells zu bestimmen.  
   
@@ -108,15 +109,15 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |Thema|Links|  
 |------------|-----------|  
 |Beschreibt die Interaktion der Modellfilter mit Trainings- und Testdatasets.|[Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)|  
-|Beschreibt, wie sich die Verwendung der Trainings- und Testdaten auf die Kreuzvalidierung auswirkt.|[Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|Beschreibt, wie sich die Verwendung der Trainings- und Testdaten auf die Kreuzvalidierung auswirkt.|[Übergreifende Überprüfung &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
 |Enthält Informationen über die programmgesteuerten Schnittstellen, die beim Arbeiten mit Trainings- und Testsätzen in einer Miningstruktur verwendet werden.|[AMO-Konzepte und -Objektmodell](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [MiningStructure-Element &#40;ASSL&#41;](../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|Stellt DMX-Syntax zum Erstellen zurückgehaltener Datasets bereit.|[CREATE MINING STRUCTURE &#40;DMX&#41;](../../dmx/create-mining-structure-dmx.md)|  
+|Stellt DMX-Syntax zum Erstellen zurückgehaltener Datasets bereit.|[ERSTELLEN SIE DIE MININGSTRUKTUR &#40; DMX &#41;](../../dmx/create-mining-structure-dmx.md)|  
 |Hier erhalten Sie Informationen zu Fällen in Trainings- und Testsätzen.|[Data Mining-Schemarowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)<br /><br /> [Data Mining-Schemarowsets &#40;SSAs&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining-Tools](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Datamining-Tools](../../analysis-services/data-mining/data-mining-tools.md)   
  [Datamining-Konzepte](../../analysis-services/data-mining/data-mining-concepts.md)   
- [Data Mining-Projektmappen](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Tests und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Datamining-Lösungen](../../analysis-services/data-mining/data-mining-solutions.md)   
+ [Tests und Überprüfung &#40; Datamining &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

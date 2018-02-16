@@ -19,19 +19,20 @@ helpviewer_keywords:
 - profit charts [Analysis Services]
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 5effa132a9ccb440ccf3b8a7c004e6692a4aef57
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Prognosegütediagramm (Analysis Services – Data Mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein *prognosegütediagramm* grafisch Verbesserung mit einem Miningmodell im Vergleich gegenüber einer zufallsvorhersage darstellt, und die Änderung in Form eines eine *lift* Ergebnis. Durch Vergleichen der Prognosegüteergebnisse für verschiedene Modelle können Sie herausfinden, welches Modell sich am besten eignet. Sie können auch den Punkt ermitteln, an dem die Vorhersagen des Modells weniger nützlich werden. Sie können durch Überprüfen des Prognosegütediagramms z.B. feststellen, dass eine Werbekampagne wahrscheinlich nur bei 30% Ihrer Kunden ankommen wird. Anhand dieser Zahl können Sie den Umfang der Kampagne entsprechend begrenzen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A *Liftergebnisses chart* wird grafisch dargestellt, welche Verbesserung mit einem Miningmodell gegenüber einer Zufallsvorhersage erzielt werden kann. Darüber hinaus wird die Änderung in Form eines *Liftergebnisses* gemessen. Durch Vergleichen der Prognosegüteergebnisse für verschiedene Modelle können Sie herausfinden, welches Modell sich am besten eignet. Sie können auch den Punkt ermitteln, an dem die Vorhersagen des Modells weniger nützlich werden. Sie können durch Überprüfen des Prognosegütediagramms z.B. feststellen, dass eine Werbekampagne wahrscheinlich nur bei 30% Ihrer Kunden ankommen wird. Anhand dieser Zahl können Sie den Umfang der Kampagne entsprechend begrenzen.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining können Sie mit einem Prognosegütediagramm Genauigkeit mehrerer Modelle vergleichen, die über das gleiche vorhersagbare Attribut verfügen. Sie können auch die Genauigkeit einer Vorhersage entweder für ein einzelnes Ergebnis (ein einzelner Wert des vorhersagbaren Attributs) oder für alle Ergebnisse (alle Werte des angegebenen Attributs) bewerten.  
   
@@ -128,6 +129,6 @@ ms.lasthandoff: 01/08/2018
  [Zurück zum Anfang](#bkmk_Top)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tests und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Tests und Überprüfung &#40; Datamining &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
