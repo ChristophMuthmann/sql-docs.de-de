@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: cc94d0226262eb6c40fce83370774e9fed08a8ab
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="drillthrough-on-mining-models"></a>Miningmodell-Drillthrough
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Drillthrough* bedeutet die Fähigkeit, ein Miningmodell oder eine Miningstruktur abzufragen und ausführliche Daten zu erhalten, wird im Modell nicht verfügbar.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  *Drillthrough* beschreibt die Fähigkeit, entweder ein Miningmodell oder eine Miningstruktur abzufragen und ausführliche Daten zu erhalten, die im Modell nicht verfügbar sind.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bietet zwei verschiedene Optionen für Drillthroughs in Falldaten. Sie können einen Drillthrough mit den Fällen ausführen, die für die Erstellung der Daten verwendet wurden, oder Sie führen einen Drillthrough mit den Fällen in der Miningstruktur aus.  
   
@@ -57,15 +58,15 @@ ms.lasthandoff: 01/08/2018
 |Microsoft Linear Regression-Algorithmus|Unterstützt.<br /><br /> Da das Modell jedoch als einzigen Knoten **All**erstellt, gibt Drillthrough alle Trainingsfälle des Modells zurück. Bei einem großen Trainingssatz kann es sehr lange dauern, bis die Ergebnisse geladen werden.|  
 |Microsoft Time Series-Algorithmus|Unterstützt.<br /><br /> Sie können jedoch keinen Drillthrough mit Struktur- oder Falldaten unter Verwendung des **Miningmodell-Viewers** im Data Mining-Designer ausführen. Sie müssen stattdessen eine DMX-Abfrage erstellen.<br /><br /> Sie können außerdem keinen Drillthrough auf bestimmten Knoten ausführen oder DMX-Abfragen schreiben, um Fälle von bestimmten Knoten eines Zeitreihenmodells abzurufen. Sie können Falldaten entweder aus dem Modell oder aus der Struktur abrufen, indem Sie andere Kriterien verwenden, beispielsweise Datums- oder Attributwerte.<br /><br /> Wenn Sie Details der vom Microsoft Time Series-Algorithmus erstellten ARTXP- und ARIMA-Knoten anzeigen möchten, empfiehlt es sich, den [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c) zu verwenden.|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
  In den folgenden Themen finden Sie weitere Informationen zur Verwendung von Drillthroughs mit Miningmodellen.  
   
 |Aufgaben|Links|  
 |-----------|-----------|  
 |Verwenden von Drillthrough in den Miningmodell-Viewern|[Verwenden von Drillthrough mit den Modell-Viewern](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
-|Abrufen von Falldaten für ein Modell mithilfe von Drillthrough|[Ausführen von Drillthroughs für Falldaten aus einem Miningmodell](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
+|Abrufen von Falldaten für ein Modell mithilfe von Drillthrough|[Drillthrough zu Falldaten aus einem Miningmodell](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
 |Aktivieren von Drillthrough für ein vorhandenes Miningmodell|[Aktivieren von Drillthrough für ein Miningmodell](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
-|In Beispielen von Drillthroughabfragen finden Sie Informationen zu bestimmten Modelltypen.|[Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)|  
+|In Beispielen von Drillthroughabfragen finden Sie Informationen zu bestimmten Modelltypen.|[Datamining-Abfragen](../../analysis-services/data-mining/data-mining-queries.md)|  
 |Aktivieren von Drillthrough im Miningmodell-Assistenten|[Abschließen des Assistenten &#40;Data Mining-Assistent&#41;](http://msdn.microsoft.com/library/6aef1548-35eb-42fd-ae87-63650a79eda1)|  
   
 ## <a name="see-also"></a>Siehe auch  

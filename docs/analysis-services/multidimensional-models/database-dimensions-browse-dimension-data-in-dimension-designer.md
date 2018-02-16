@@ -15,19 +15,20 @@ helpviewer_keywords:
 - dimensions [Analysis Services], browsing
 - browsing dimensions [Analysis Services]
 ms.assetid: d033e74c-f8ec-46a3-8dc7-1c1eb8574c23
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2dcff92682a8e860d5c63bdf3dcf1e6b4518b732
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-dimensions---browse-dimension-data-in-dimension-designer"></a>Datenbankdimensionen - Durchsuchen von Dimensionsdaten im Dimensions-Designer
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie können die Daten in einer Dimension durchsuchen, indem Sie mit der **Browser** Ansicht im Dimensions-Designer aus erfolgt [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Sie können die Daten in einer Dimension im Dimensions-Designer, auf den Sie über **zugreifen können, in der** Browser [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]-Sicht durchsuchen.  
   
  Damit die Dimensionsdaten in der Sicht **Browser** angezeigt werden können, muss die Dimension verarbeitet sein. Weitere Informationen finden Sie unter [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
@@ -42,8 +43,8 @@ ms.lasthandoff: 01/08/2018
     > [!NOTE]  
     >  In der Dimension muss eine Übersetzung für die ausgewählte Sprache definiert sein.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Einführung in Dimensionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Einführung in Dimensionen &#40; Analysis Services – mehrdimensionale Daten &#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md)   
  [Dimensionen in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

@@ -15,19 +15,20 @@ helpviewer_keywords:
 - data mining [Analysis Services], models
 - mining models [Analysis Services], how-to topics
 ms.assetid: 7c2073e5-b40f-4bf8-aa51-021adb08e072
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8c1eef41d84a8bdbd758c02f4830467b14cd9ebb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Miningmodelltasks und Anweisungen
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Verwenden der **Miningmodelle** Registerkarte Data Mining-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] zu verwalten und Verarbeiten von Miningmodellen in einer Miningstruktur.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Mit der **Miningmodelle** -Registerkarte des Data Mining-Designers von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] können Sie die in einer Miningstruktur enthaltenen Miningmodelle verwalten und verarbeiten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -39,11 +40,11 @@ ms.lasthandoff: 01/08/2018
   
 -   [Erstellen eines Alias für eine Modellspalte](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
   
--   [Ändern der Diskretisierung von Spalten in Miningmodellen](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  
+-   [Ändern der Diskretisierung von Spalten in einem Miningmodell](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [Anzeigen oder Ändern von Modellierungsflags &#40;Data Mining&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [Zeigen Sie an oder ändern Sie die Modellierung von Ablaufverfolgungsflags &#40; Datamining &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
--   [Bestimmen einer in einem Modell als Regressor zu verwendenden Spalte](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)  
+-   [Geben Sie eine Spalte in einem Modell als Regressor verwendet.](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)  
   
 -   [Ändern der Eigenschaften eines Miningmodells](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
@@ -55,15 +56,15 @@ ms.lasthandoff: 01/08/2018
   
 -   [Anzeigen oder Ändern von Algorithmusparametern](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
   
--   [Erstellen einer Kopie eines Miningmodells](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)  
+-   [Erstellen Sie eine Kopie eines Miningmodells](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)  
   
 -   [Verarbeiten eines Miningmodells](../../analysis-services/data-mining/process-a-mining-model.md)  
   
--   [Erstellen einer Data Mining-Dimension](../../analysis-services/data-mining/create-a-data-mining-dimension.md)  
+-   [Erstellen von Datamining-Dimension](../../analysis-services/data-mining/create-a-data-mining-dimension.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Tasks und Anweisungen für Miningstrukturen](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)   
  [Miningmodelle &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
- [Data Mining-Konzepte](../../analysis-services/data-mining/data-mining-concepts.md)  
+ [Datamining-Konzepte](../../analysis-services/data-mining/data-mining-concepts.md)  
   
   

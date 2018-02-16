@@ -30,19 +30,20 @@ helpviewer_keywords:
 - CRISP-DM
 - accuracy testing [data mining]
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bf43af38fc18b67c37ec5409ccb90a1d8e798259
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="testing-and-validation-data-mining"></a>Tests und Überprüfung (Data Mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Überprüfung wird der Prozess des bewertens, wie gut die Miningmodelle mit echten Daten erzielen. Es ist wichtig, dass Sie Ihre Miningmodelle überprüfen, indem Sie ihre Qualität und Merkmale studieren, bevor Sie sie in einer Produktionsumgebung bereitstellen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Die Überprüfung ist der Prozess des Bewertens, welche Leistung die Miningmodelle mit echten Daten erzielen. Es ist wichtig, dass Sie Ihre Miningmodelle überprüfen, indem Sie ihre Qualität und Merkmale studieren, bevor Sie sie in einer Produktionsumgebung bereitstellen.  
   
  In diesem Abschnitt werden einige grundlegende Konzepte im Zusammenhang mit der Modellqualität und die Strategien zur Modellvalidierung vorgestellt, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]zur Verfügung stehen. Eine Übersicht dazu, wie Modellüberprüfungen in den größeren Data Mining-Prozess eingebunden werden können, finden Sie unter [Data Mining-Projektmappen](../../analysis-services/data-mining/data-mining-solutions.md).  
   
@@ -92,13 +93,13 @@ ms.lasthandoff: 01/08/2018
 |Thema|Links|  
 |------------|-----------|  
 |Erfahren Sie mehr darüber, wie Sie ein Testdataset mithilfe eines Assistenten oder mit DMX-Befehlen einrichten können.|[Trainings- und Testdatasets](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
-|Erfahren Sie mehr darüber, wie Sie die Verteilung und die Repräsentativität der Daten in einer Miningstruktur testen können.|[Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Informationen Sie zu den Typen von Genauigkeitsdiagrammen.|[Prognosegütediagramm &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Gewinndiagramm &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Punktdiagramm &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|Erfahren Sie mehr darüber, wie Sie eine Klassifikationsmatrix, auch bekannt unter dem Namen Verwirrungsmatrix, erstellen, um die Anzahl von als wahr positiv, falsch positiv, wahr negativ und falsch negativ klassifizierten Ergebnissen zu ermitteln.|[Klassifikationsmatrix &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
+|Erfahren Sie mehr darüber, wie Sie die Verteilung und die Repräsentativität der Daten in einer Miningstruktur testen können.|[Übergreifende Überprüfung &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|Informationen Sie zu den Typen von Genauigkeitsdiagrammen.|[Prognosegütediagramm &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Gewinndiagramm &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Punktdiagramm &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|Erfahren Sie mehr darüber, wie Sie eine Klassifikationsmatrix, auch bekannt unter dem Namen Verwirrungsmatrix, erstellen, um die Anzahl von als wahr positiv, falsch positiv, wahr negativ und falsch negativ klassifizierten Ergebnissen zu ermitteln.|[Klassifikationsmatrix &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining-Tools](../../analysis-services/data-mining/data-mining-tools.md)   
- [Data Mining-Projektmappen](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Tasks und Anweisungen für Test und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Datamining-Tools](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Datamining-Lösungen](../../analysis-services/data-mining/data-mining-solutions.md)   
+ [Tests und Überprüfung Tasks und Anweisungen für &#40; Datamining &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

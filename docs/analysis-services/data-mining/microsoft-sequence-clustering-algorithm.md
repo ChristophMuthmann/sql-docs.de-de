@@ -17,19 +17,20 @@ helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - sequence [Analysis Services]
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 181b95753ac004aef4da9134ce46347c4cffa304
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft Sequence Clustering-Algorithmus
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus ist ein eindeutiger Algorithmus, der mit dem Cluster Sequenzanalyse kombiniert. Mithilfe dieses Algorithmus können Sie Daten zu Ereignissen untersuchen, die durch *Sequenzen*verknüpft werden können. Der Algorithmus ermittelt die am häufigsten vorkommenden Sequenzen und führt dann ein Clustering identischer Sequenzen durch. Die folgenden Beispiele veranschaulichen die Arten von Sequenzen, die Sie als Daten für Machine Learning erfassen können, um Aufschluss über häufige Probleme oder Geschäftsszenarios zu erhalten:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus ist ein einzigartiger Algorithmus, der die Sequenzanalyse mit dem Clustering kombiniert. Mithilfe dieses Algorithmus können Sie Daten zu Ereignissen untersuchen, die durch *Sequenzen*verknüpft werden können. Der Algorithmus ermittelt die am häufigsten vorkommenden Sequenzen und führt dann ein Clustering identischer Sequenzen durch. Die folgenden Beispiele veranschaulichen die Arten von Sequenzen, die Sie als Daten für Machine Learning erfassen können, um Aufschluss über häufige Probleme oder Geschäftsszenarios zu erhalten:  
   
 -   Clickstreams oder Klickpfade, die erstellt werden, wenn Benutzer navigieren oder eine Website durchsuchen  
   
@@ -83,9 +84,9 @@ ms.lasthandoff: 01/08/2018
 -   Unterstützt die Verwendung von OLAP-Miningmodellen und die Erstellung von Data Mining-Dimensionen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Datamining-Algorithmen &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft Sequence Clustering Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Sequence Clustering-Abfragebeispiele](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Durchsuchen eines Modells mit dem Microsoft Sequence Cluster-Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   

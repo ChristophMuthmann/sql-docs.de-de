@@ -16,19 +16,20 @@ helpviewer_keywords:
 - mining structures [Analysis Services], data source views
 - data source views [Analysis Services], modifying
 ms.assetid: f790df70-ff21-42ce-b38c-a360e8e01bcd
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c90855b6276a99ac474234c4473cf934c909d644
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="edit-the-data-source-view-used-for-a-mining-structure"></a>Bearbeiten der für eine Miningstruktur verwendeten Datenquellensicht
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie können eine Datenquellensicht aus Data Mining-Designer öffnen, damit Sie sie ändern können.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Sie können im Data Mining-Designer eine Datenquellensicht öffnen, sodass Sie diese Sicht ändern können.  
   
 ### <a name="to-access-data-source-view-designer-from-the-mining-structure-tab-in-data-mining-designer"></a>So rufen Sie auf der Miningstruktur-Registerkarte im Data Mining-Designer den Datenquellensicht-Designer auf  
   

@@ -15,19 +15,20 @@ helpviewer_keywords:
 - attributes [Analysis Services], usage setting
 - usage options [Analysis Services]
 ms.assetid: 7b0ebc58-94b9-4523-8994-e7bc796b0bd8
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 931dcdc1f2f9cf6210c5993b8be14da4995d73d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---set-usage-property"></a>Attributeigenschaften - Set Usage-Eigenschaft
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie können die Verwendung eines Attributs festlegen, mit der **Dimensionsstruktur** Ansicht im Dimensions-Designer aus erfolgt [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Sie können die Verwendung eines Attributs mithilfe der Sicht **Dimensionsstruktur** im Dimensions-Designer festlegen. Der Zugriff auf diese Sicht erfolgt über [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Beim Festlegen der Verwendung eines Attributs werden Ihre Änderungen erst beim Verarbeiten der Dimension wirksam. Weitere Informationen finden Sie unter [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
     -   **Parent**  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Attribute und Attributhierarchien](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Hinzufügen eines Attributs zu einer Dimension](../../analysis-services/multidimensional-models/attribute-properties-add-an-attribute-to-a-dimension.md)  
   

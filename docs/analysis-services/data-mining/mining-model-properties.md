@@ -18,19 +18,20 @@ helpviewer_keywords:
 - Data Mining Designer
 - properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fcc84bc6effb3e4a831ce58b81fcbe9e7eda3437
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-properties"></a>Miningmodelleigenschaften
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Miningmodelle verfügen über die folgenden Arten von Eigenschaften:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Miningmodelle verfügen über die folgenden Arten von Eigenschaften:  
   
 -   Von der Miningstruktur geerbte Eigenschaften, die den Daten- und Inhaltstyp der von dem Modell verwendeten Daten definieren  
   
@@ -58,19 +59,19 @@ ms.lasthandoff: 01/08/2018
   
 |Eigenschaft|Description|  
 |--------------|-----------------|  
-|**Beschreibung**|Beschreibt den Zweck der Miningspalte.|  
+|**Description**|Beschreibt den Zweck der Miningspalte.|  
 |**Name**|Legt den Namen der Miningmodellspalte fest. Sie können einen neuen Namen eingeben, um einen Alias für die Miningmodellspalte anzugeben.|  
 |**ModelingFlags**|Legt algorithmusspezifische Flags für die Spalte fest.|  
 |**SourceColumnID**|Gibt den Namen der Miningstrukturspalte an, auf der die Modellspalte basiert.<br /><br /> Diese Eigenschaft ist schreibgeschützt.|  
-|**Usage**|Legt fest, wie die Spalte vom Miningmodell verwendet wird.|  
+|**Verwendung**|Legt fest, wie die Spalte vom Miningmodell verwendet wird.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Miningmodellspalten](../../analysis-services/data-mining/mining-model-columns.md)   
- [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Miningmodelltasks und Anweisungen](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Miningstrukturen &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Miningmodelltasks und Anweisungen Mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Ändern der Eigenschaften eines Miningmodells](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)   
- [Data Mining-Tools](../../analysis-services/data-mining/data-mining-tools.md)   
- [Erstellen einer relationalen Miningstruktur](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
+ [Datamining-Tools](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Erstellen Sie eine relationale Miningstruktur](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
  [Erstellen eines Alias für eine Modellspalte](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
   
   

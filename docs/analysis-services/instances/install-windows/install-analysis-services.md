@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
 ms.openlocfilehash: 992a09878aece468b52a26241c362cb71ae43ec9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="install-sql-server-analysis-services"></a>Installieren von SQL Server Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services ist ein analytischer Datenbankserver, der hostet tabellarische Modelle, multidimensionale Cubes und Datamining-Modelle, die Sie über Berichte, Kalkulationstabellen und Dashboards zugreifen können.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+SQL Server Analysis Services ist ein analytischer Datenbankserver, der hostet tabellarische Modelle, multidimensionale Cubes und Datamining-Modelle, die Sie über Berichte, Kalkulationstabellen und Dashboards zugreifen können.  
   
  Analysis Services ist mit mehreren Instanzen, was bedeutet, dass Sie die mehr als eine Kopie auf einem einzelnen Computer zu installieren oder neue und alte Versionen-Seite-an-Seite ausführen können. Jede von Ihnen installierte Instanz wird in einem von drei Modi entsprechend den Setupeinstellungen ausgeführt: „Mehrdimensional und Data Mining“, „Tabellarisch“ oder „SharePoint“. Wenn Sie mehrere Modi verwenden möchten, benötigen Sie für jeden Modus eine separate Instanz.  
   
@@ -72,7 +73,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  Bei**ASSERVERMODE** wird die Groß- und Kleinschreibung berücksichtigt.  Alle Werte müssen in Großbuchstaben angegeben werden. In der folgenden Tabelle werden die gültigen Werte für **ASSERVERMODE**beschrieben.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |TABULAR|Dies ist der Standardwert. Wenn Sie nicht festlegen **ASSERVERMODE**, der Server im tabellarischen Modus installiert ist.|
 |MULTIDIMENSIONAL|Dieser Wert ist optional.|  

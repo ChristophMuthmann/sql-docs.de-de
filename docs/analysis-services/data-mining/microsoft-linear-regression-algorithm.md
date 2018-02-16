@@ -17,19 +17,20 @@ helpviewer_keywords:
 - linear regression [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: b904dc4d9858b87f135b180b66ea24e8f688f0c2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft Linear Regression-Algorithmus
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus ist eine Variation des der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus, mit denen die eine lineare Beziehung zwischen einer abhängigen und einer unabhängigen Variablen zu berechnen und diese Beziehung zur Vorhersage zu verwenden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus ist eine Variation des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus, der Ihnen dabei hilft, eine lineare Beziehung zwischen einer abhängigen und einer unabhängigen Variablen zu berechnen und diese zur Vorhersage zu verwenden.  
   
  Die Beziehung nimmt die Form einer Formel für eine Linie an, die eine Reihe von Daten am besten darstellt. Die Linie des folgenden Diagramms ist z. B. die bestmögliche lineare Darstellung der Daten.  
   
@@ -83,9 +84,9 @@ ms.lasthandoff: 01/08/2018
 -   Unterstützt die Verwendung von OLAP-Miningmodellen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Datamining-Algorithmen &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Technische Referenz zu Microsoft Linear Regression-Algorithmus](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [Lineare Regressionsmodell-Abfragebeispiele](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Miningmodellinhalt, lineare Regressionsmodelle &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

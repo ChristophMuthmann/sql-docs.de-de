@@ -18,19 +18,20 @@ helpviewer_keywords:
 - solutions [Analysis Services], deploying
 - models [Analysis Services], data mining
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bfbfd44f7acd1b029d0b841ef2e291e5b26b6c07
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="deployment-of-data-mining-solutions"></a>Bereitstellen von Data Mining-Projektmappen
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Der letzte Schritt im Datamining-Prozess werden die Modelle in einer produktionsumgebung bereitzustellen. Die Bereitstellung ist wichtig, da dadurch die Modelle Benutzern zur Verfügung gestellt werden, damit Sie irgendeine der folgenden Aufgaben ausführen können:  
+# <a name="deployment-of-data-mining-solutions"></a>Bereitstellen von Data Mining-Lösungen
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Der letzte Schritt im Data Mining-Prozess besteht darin, die Modelle in einer Produktionsumgebung bereitzustellen. Die Bereitstellung ist wichtig, da dadurch die Modelle Benutzern zur Verfügung gestellt werden, damit Sie irgendeine der folgenden Aufgaben ausführen können:  
   
 -   Verwenden Sie die Modelle, um Vorhersagen und Geschäftsentscheidungen zu treffen. Weitere Informationen zu den Tools, mit denen Sie Abfragen erstellen können, finden Sie unter [Data Mining-Abfragetools](../../analysis-services/data-mining/data-mining-query-tools.md).  
   
@@ -49,9 +50,9 @@ ms.lasthandoff: 01/08/2018
  [Verwandte Ressourcen](#bkmk_Resources)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Bereitstellen von Data Mining-Lösungen für frühere Versionen von SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
+ [Bereitstellen von Datamining-Lösungen für frühere Versionen von SQLServer](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
- [Exportieren und Importieren von Data Mining-Objekten](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
+ [Exportieren und Importieren von Datamining-Objekte](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
 ##  <a name="bkmk_Reqs"></a> Anforderungen für die Bereitstellung von Data Mining-Projektmappen  
  Die Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , für die Sie die Projektmappe bereitstellen, muss in einem Modus ausgeführt werden, der mehrdimensionale Objekte und Data Mining-Objekte unterstützt. Sie können daher Data Mining-Objekte nicht in einer Instanz bereitstellen, die tabellarische Modelle oder [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten hostet.  
@@ -75,21 +76,21 @@ ms.lasthandoff: 01/08/2018
  In der Regel verwenden Data Mining-Objekte auch die gleichen Datenquellen und die Datenquellensichten, die für den Cube verwendet werden. Sie können jedoch auch Datenquellen und Datenquellenansichten hinzufügen, die speziell auf Data Mining abzielen. Ein Cube würde beispielsweise in der Regel keine Daten über potenzielle Kunden oder externe Daten enthalten, die in mehrdimensionalen Objekten nicht verwendete Daten.  
   
 ##  <a name="bkmk_Resources"></a> Verwandte Ressourcen  
- [Verschieben von Data Mining-Objekten](../../analysis-services/data-mining/moving-data-mining-objects.md)  
+ [Verschieben von Datamining-Objekten](../../analysis-services/data-mining/moving-data-mining-objects.md)  
   
  Wenn das Modell nur auf relationalen Daten basiert, ist das Exportieren und Importieren von Objekten mit DMX die einfachste Möglichkeit, Modelle zu verschieben.  
   
- [Verschieben einer Analysis Services Datenbank](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)  
+ [Verschieben einer Analysis Services-Datenbank](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)  
   
  Wenn Modelle einen Cube als Datenquelle verwenden, sind weitere Informationen über das Verschieben von Modellen und deren Cubedatenunterstützung diesem Thema zu entnehmen.  
   
- [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Bereitstellen von Analysis Services-Projekten &#40; SSDT &#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
  Bietet allgemeine Informationen über die Bereitstellungen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekten und beschreibt die Eigenschaften, die als Teil der Projektkonfiguration festgelegt werden können.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Data Mining-Abfragetools](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Verarbeiten von Anforderungen und Überlegungen &#40; Datamining &#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

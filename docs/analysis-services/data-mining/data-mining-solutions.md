@@ -15,19 +15,20 @@ helpviewer_keywords:
 - data mining [Analysis Services], about data mining
 - data mining [Analysis Services], development
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 595282e28a55171ed5a528d28f37500a21f71c0d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-solutions"></a>Data Mining-Projektmappen
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine Datamining-Lösung ist ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Lösung, die eine oder mehrere Datamining-Projekte enthält.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Eine Data Mining-Projektmappe ist eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektmappe, die ein oder mehrere Data Mining-Projekte enthält.  
   
  Die Themen in diesem Abschnitt enthalten Informationen, wie mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]eine integrierte Data Mining-Projektmappe entworfen und implementiert wird. Eine Übersicht über den Data Mining-Entwurfsprozess und verwandte Tools finden Sie unter [Data Mining Concepts](../../analysis-services/data-mining/data-mining-concepts.md).  
   
@@ -62,20 +63,20 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_Walkthru"></a> Anleitung für Projektmappen  
  Bietet eine Übersicht zum Erstellen von Data Mining-Projektmappen mit dem Data Mining-Assistenten.  
   
- [Erstellen einer relationalen Miningstruktur](../../analysis-services/data-mining/create-a-relational-mining-structure.md)  
+ [Erstellen Sie eine relationale Miningstruktur](../../analysis-services/data-mining/create-a-relational-mining-structure.md)  
  Erstellen Sie eine Miningstruktur aus relationalen Daten, Textdateien und anderen Quellen, die in einer Datenquellensicht kombiniert werden können.  
   
  [Erstellen einer OLAP-Miningstruktur](../../analysis-services/data-mining/create-an-olap-mining-structure.md)  
  Erstellen Sie auf Grundlage von Daten in einem OLAP-Cube eine Miningstruktur. Modelle, die Sie aus OLAP-Daten erstellen, können als Data Mining-Dimension gespeichert werden, oder Sie können den Satz mit Daten und die Modelle als neuen Cube speichern.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Data Mining-Projekte](../../analysis-services/data-mining/data-mining-projects.md)  
+ [Datamining-Projekte](../../analysis-services/data-mining/data-mining-projects.md)  
   
- [Verarbeiten von Data Mining-Objekten](../../analysis-services/data-mining/processing-data-mining-objects.md)  
+ [Verarbeiten von Datamining-Objekten](../../analysis-services/data-mining/processing-data-mining-objects.md)  
   
- [Verwandte Projekte für Data Mining-Lösungen](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
+ [Verwandte Projekte für Datamining-Lösungen](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
   
- [Bereitstellen von Data Mining-Projektmappen](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md)  
+ [Bereitstellung von Datamining-Lösungen](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md)  
   
 ## <a name="related-tasks-and-topics"></a>Verwandte Aufgaben und Themen  
  Nachdem Sie eine grundlegende Data Mining-Projektmappe erstellt haben, einschließlich Datenquellen und einer Miningstruktur, können Sie auf der Projektmappe aufbauen, indem Sie neue Modelle hinzufügen, Modelle testen und vergleichen, Vorhersagen erstellen und mit Teilmengen der Daten experimentieren.  
@@ -84,13 +85,13 @@ ms.lasthandoff: 01/08/2018
   
 |Aufgaben|Thema|  
 |-----------|------------|  
-|Testen Sie die Modelle, die Sie erstellen, überprüfen Sie die Qualität der Trainingsdaten, und erstellen Sie Diagramme, die die Genauigkeit von Data Mining-Modellen darstellen.|[Tests und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
-|Trainieren Sie das Modell, indem Sie die Struktur und verwandte Modelle mit Daten auffüllen. Aktualisieren und erweitern Sie Modelle mit neuen Daten.|[Verarbeiten von Data Mining-Objekten](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|Passen Sie durch das Anwenden von Filtern auf die Trainingsdaten, Auswählen eines anderen Algorithmus oder Festlegen von erweiterten Algorithmusparametern ein Miningmodell an.|[Anpassen von Miningmodellen und -strukturen](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
-|Passen Sie ein Miningmodell durch Anwenden von Filtern auf die Daten an, die beim Trainieren des Modus verwendet werden.|[Hinzufügen von Miningmodellen zu einer Struktur &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Testen Sie die Modelle, die Sie erstellen, überprüfen Sie die Qualität der Trainingsdaten, und erstellen Sie Diagramme, die die Genauigkeit von Data Mining-Modellen darstellen.|[Tests und Überprüfung &#40; Datamining &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
+|Trainieren Sie das Modell, indem Sie die Struktur und verwandte Modelle mit Daten auffüllen. Aktualisieren und erweitern Sie Modelle mit neuen Daten.|[Verarbeiten von Datamining-Objekten](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
+|Passen Sie durch das Anwenden von Filtern auf die Trainingsdaten, Auswählen eines anderen Algorithmus oder Festlegen von erweiterten Algorithmusparametern ein Miningmodell an.|[Anpassen von Miningmodellen und-Strukturen](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
+|Passen Sie ein Miningmodell durch Anwenden von Filtern auf die Daten an, die beim Trainieren des Modus verwendet werden.|[Fügen Sie Miningmodelle hinzu, um eine Struktur &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Aktualisieren und verwalten Sie Data Mining-Projektmappen.|Link TBD|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining-Tutorials &#40;Analysis Services&#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
+ [Datamining-Lernprogramme &#40; Analysis Services &#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
   
   

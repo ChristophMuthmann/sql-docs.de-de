@@ -16,19 +16,20 @@ helpviewer_keywords:
 - mining structures [Analysis Services], creating
 - OLAP [Analysis Services], mining models
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: a60a88bbf9816e4af0260cde3063f5bd6d5240e6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Erstellen einer neuen OLAP-Miningstruktur
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie können Data Mining-Assistenten in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Miningstruktur erstellen, die Daten aus einem mehrdimensionalen Modell verwendet. Miningmodelle, die auf OLAP-Cubes basieren, können die Spalte und Werte in Faktentabellen, Dimensionen und Measuregruppen als Attribute für die Analyse verwenden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Sie können den Data Mining-Assistenten in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwenden, um eine Miningstruktur zu erstellen, in der Daten aus einem mehrdimensionalen Modell verwendet werden. Miningmodelle, die auf OLAP-Cubes basieren, können die Spalte und Werte in Faktentabellen, Dimensionen und Measuregruppen als Attribute für die Analyse verwenden.  
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>So erstellen Sie eine neue OLAP-Miningstruktur  
   

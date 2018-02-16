@@ -18,19 +18,20 @@ helpviewer_keywords:
 - adding member properties
 - member properties [Analysis Services], removing
 ms.assetid: 893a9084-d0fe-425c-b251-7518d3b3b65b
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 158e22518b67117f830ba019860bacb95454a73a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-relationships---define-the-relationship-type"></a>Attributbeziehungen – definieren des Beziehungstyps
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie definieren des Beziehungstyps einer attributbeziehung mithilfe der **Attributbeziehungen** Registerkarte im Dimensions-Designer, die aus zugegriffen werden kann [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Zum Definieren des Beziehungstyps einer Attributbeziehung verwenden Sie die Registerkarte **Attributbeziehungen** im Dimensions-Designer, den Sie über [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aufrufen können.  
   
 ### <a name="to-set-the-relationship-type-of-an-attribute-relationship"></a>So definieren Sie den Beziehungstyp einer Attributbeziehung  
   

@@ -15,19 +15,20 @@ helpviewer_keywords:
 - data mining [Analysis Services], how-to topics
 - drillthrough [Analysis Services]
 ms.assetid: 4fa44f60-ef9a-4b59-98c0-c0baf1195c8e
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 81778c4f9b2602c8fa49d5b33f8e1725c05122b7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>Aktivieren von Drillthrough für ein Miningmodell
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Wenn Sie Drillthrough für ein Miningmodell, beim Durchsuchen des Modells aktiviert haben können Sie detaillierte Informationen über die Fälle abrufen, die zum Erstellen des Modells verwendet wurden. Zum Anzeigen dieser Informationen benötigen Sie die erforderlichen Berechtigungen. Außerdem muss die Struktur bereits verarbeitet worden sein.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Wenn Sie Drillthrough für ein Miningmodell aktiviert haben, können Sie beim Durchsuchen des Modells detaillierte Informationen über die Fälle abrufen, die für die Erstellung des Modells verwendet wurden. Zum Anzeigen dieser Informationen benötigen Sie die erforderlichen Berechtigungen. Außerdem muss die Struktur bereits verarbeitet worden sein.  
   
  **Berechtigungen:** Damit ein Benutzer einen Drillthrough in Modell- oder Strukturdaten ausführen kann, muss er Mitglied einer Rolle sein, die über [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) -Berechtigungen für das Miningmodell oder die Miningstruktur verfügt. Drillthroughberechtigungen werden getrennt für die Struktur und das Modell festgelegt.  
   
@@ -61,6 +62,6 @@ ms.lasthandoff: 01/08/2018
 4.  Aktivieren Sie im Menü **Datenbank** die Option **Verarbeiten**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Drillthroughabfragen &#40;Data Mining&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+ [Drillthroughabfragen &#40; Datamining &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
   

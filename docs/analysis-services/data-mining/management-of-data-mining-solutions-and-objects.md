@@ -15,24 +15,25 @@ helpviewer_keywords:
 - data mining [Analysis Services], managing
 - managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 486ba5cb40f30921374a4f66040f2a080e4a1152
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Verwaltung von Data Mining-Lösungen und -Objekten
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bietet Clienttools, mit denen Sie vorhandene Miningstrukturen und Miningmodelle verwalten können. In diesem Abschnitt werden die Verwaltungsvorgänge beschrieben, die Sie mit der jeweiligen Umgebung ausführen können.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] stellt Clienttools bereit, mit denen Sie vorhandene Miningstrukturen und Miningmodelle verwalten können. In diesem Abschnitt werden die Verwaltungsvorgänge beschrieben, die Sie mit der jeweiligen Umgebung ausführen können.  
   
  Außer mit diesen Tools können Data Mining-Objekte auch programmgesteuert mithilfe von AMO oder mit anderen Clients verwaltet werden, die eine Verbindung mit einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank herstellen können, wie etwa mit den Data Mining Add-Ins für [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Verschieben von Data Mining-Objekten](../../analysis-services/data-mining/moving-data-mining-objects.md)  
+ [Verschieben von Datamining-Objekten](../../analysis-services/data-mining/moving-data-mining-objects.md)  
   
  [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
@@ -51,13 +52,13 @@ ms.lasthandoff: 01/08/2018
   
  Die folgenden Links enthalten Informationen darüber, wie Sie Data Mining-Objekte mit [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ändern können:  
   
--   [Bearbeiten der für eine Miningstruktur verwendeten Datenquellensicht](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Bearbeiten Sie die für eine Miningstruktur verwendeten Datenquellensicht](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [Ändern der Eigenschaften einer Miningstruktur](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
 -   [Ändern der Eigenschaften eines Miningmodells](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
--   [Anzeigen oder Ändern von Modellierungsflags &#40;Data Mining&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [Zeigen Sie an oder ändern Sie die Modellierung von Ablaufverfolgungsflags &#40; Datamining &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
 -   [Anzeigen oder Ändern von Algorithmusparametern](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>Verwalten von Data Mining-Objekten in SQL Server Management Studio  
  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]können Sie Skripts für Miningstrukturen und -modelle schreiben, Miningstrukturen und -modelle verarbeiten oder löschen. Im Objektexplorer wird nur ein eingeschränkter Satz an Eigenschaften angezeigt. Sie können jedoch zusätzliche Metadaten zu Miningmodellen anzeigen, indem Sie das Fenster **DMX-Abfrage** öffnen und eine Miningstruktur auswählen.  
   
--   [Erstellen einer DMX-Abfrage in SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+-   [Erstellen Sie eine DMX-Abfrage in SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## <a name="managing-data-mining-objects-programmatically"></a>Programmgesteuertes Verwalten von Data Mining-Objekten  
  Mit den folgenden Programmiersprachen können Data Mining-Objekte erstellt, geändert, verarbeitet und gelöscht werden. Jede Sprache wurde für verschiedene Tasks entwickelt. Daher kann es Beschränkungen hinsichtlich des Typs der ausführbaren Vorgänge geben. Einige Eigenschaften der Data Mining-Objekte können z. B. nicht mit DMX (Data Mining Extensions) geändert werden. Sie müssen stattdessen XMLA oder AMO verwenden.  

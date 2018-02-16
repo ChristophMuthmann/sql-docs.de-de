@@ -1,1 +1,1 @@
-![Ja](media/yes.png)SQL Server Reporting Services (2016 und höher)
+![ja](media/yes.png)SQL Server Reporting Services (2016 und höher)

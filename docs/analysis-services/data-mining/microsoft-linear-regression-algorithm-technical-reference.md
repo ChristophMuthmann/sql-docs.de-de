@@ -16,19 +16,20 @@ helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2ad96596830cc3bb091a7f57639c0a7d0d84dd9c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Linear Regression-Algorithmus
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus ist eine spezielle Version des Microsoft Decision Trees-Algorithmus, der für die Modellierung kontinuierlicher Attributpaare optimiert ist. In diesem Thema wird die Implementierung des Algorithmus erläutert und beschrieben, wie das Verhalten des Algorithmus angepasst wird. Ferner werden Links zu weiteren Informationen über das Abfragen von Modellen zur Verfügung gestellt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus ist eine spezielle Version des Microsoft Decision Trees-Algorithmus, der für die Modellierung kontinuierlicher Attributpaare optimiert ist. In diesem Thema wird die Implementierung des Algorithmus erläutert und beschrieben, wie das Verhalten des Algorithmus angepasst wird. Ferner werden Links zu weiteren Informationen über das Abfragen von Modellen zur Verfügung gestellt.  
   
 ## <a name="implementation-of-the-linear-regression-algorithm"></a>Implementierung des Linear Regression-Algorithmus  
  Der Microsoft Decision Trees-Algorithmus kann für viele Tasks verwendet werden: die lineare Regression, die Klassifizierung oder die Zuordnungsanalyse. Um diesen Algorithmus für die lineare Regression zu implementieren, werden die Parameter des Algorithmus gesteuert, um die Zunahme der Struktur zu beschränken und alle Daten im Modell in einem einzigen Knoten zu speichern. Mit anderen Worten, obwohl die lineare Regression auf einer Entscheidungsstruktur basiert, enthält die Struktur nur einen einzigen Stamm und keine Verzweigungen: Alle Daten befinden sich im Stammknoten.  
@@ -82,7 +83,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus unterstützt bestimmte Eingabespalten und vorhersagbare Spalten. Diese sind in der nachstehenden Tabelle aufgelistet. Weitere Informationen zur Bedeutung der Inhaltstypen in einem Miningmodell finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Spalte|Inhaltstypen|  
+|Column|Inhaltstypen|  
 |------------|-------------------|  
 |Eingabeattribut|Continuous, Cyclical, Key, Table und Ordered|  
 |Vorhersagbares Attribut|Continuous, Cyclical und Ordered|  
@@ -93,6 +94,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Linear Regression-Algorithmus](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Lineare Regressionsmodell-Abfragebeispiele](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Miningmodellinhalt, lineare Regressionsmodelle &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

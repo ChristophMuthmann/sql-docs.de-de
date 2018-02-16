@@ -19,19 +19,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], predictive modeling
 - predictive accuracy [data mining]
 ms.assetid: 3a0b4dc9-5b64-4be1-aa5f-6ff26f43dbf8
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 31dcf6975fb2ed24e2957f1d9171473b01da891a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Tasks und Anweisungen für Test und Überprüfung (Data Mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Können Sie die **Mininggenauigkeitsdiagramm** Registerkarte Data Mining-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] um die vorhersagegenauigkeit der Miningmodelle in Ihrer Miningstruktur zu vergleichen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Sie können die Registerkarte **Mininggenauigkeitsdiagramm** des Data Mining-Designers in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verwenden, um die Vorhersagegenauigkeit der Miningmodelle in Ihrer Miningstruktur zu vergleichen.  
   
  Sie können vier Diagrammtypen erstellen:  
   
@@ -51,15 +52,15 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Erstellen von Prognosegütediagrammen, Gewinndiagrammen oder Klassifikationsmatrizen](../../analysis-services/data-mining/create-a-lift-chart-profit-chart-or-classification-matrix.md)  
+-   [Erstellen Sie ein Prognosegütediagramm, Gewinndiagramm oder Klassifikationsmatrizen](../../analysis-services/data-mining/create-a-lift-chart-profit-chart-or-classification-matrix.md)  
   
--   [Erstellen eines Kreuzvalidierungsberichts](../../analysis-services/data-mining/create-a-cross-validation-report.md)  
+-   [Erstellen Sie einen Kreuzvalidierungsbericht](../../analysis-services/data-mining/create-a-cross-validation-report.md)  
   
 -   [Auswählen und Zuordnen von Modelltestdaten](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)  
   
 -   [Anwenden von Filtern zum Modellieren von Testdaten](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
   
--   [Auswählen der zum Testen eines Miningmodells zu verwendenden Spalte](../../analysis-services/data-mining/choose-the-column-to-use-for-testing-a-mining-model.md)  
+-   [Wählen Sie die zum Testen eines Miningmodells zu verwendenden Spalte](../../analysis-services/data-mining/choose-the-column-to-use-for-testing-a-mining-model.md)  
   
 -   [Verwenden von geschachtelten Tabellendaten als Eingabe für ein Genauigkeitsdiagramm](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)  
   

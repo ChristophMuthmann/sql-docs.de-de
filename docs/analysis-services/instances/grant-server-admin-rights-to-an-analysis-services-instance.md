@@ -15,19 +15,20 @@ helpviewer_keywords:
 - administrator rights [Analysis Services]
 - server-wide administrative permissions [Analysis Services]
 ms.assetid: 20d1234b-a457-4a84-ae08-fe356870c466
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 9caf9a17a4513c6261cad876ffb7aadce1c8ff09
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="grant-server-admin-rights-to-an--analysis-services-instance"></a>Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Mitglieder der Rolle des Serveradministrators innerhalb einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] haben uneingeschränkten Zugriff auf alle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekte und Daten in dieser Instanz. Ein Benutzer muss Mitglied der Serveradministratorrolle sein, um serverweite Tasks wie z. B. Erstellen oder Verarbeiten einer Datenbank, das Ändern von Servereigenschaften oder das Starten einer Ablaufverfolgung (außer für Verarbeitungsereignisse) ausführen zu können.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Mitglieder der Serveradministratorrolle in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz haben uneingeschränkten Zugriff auf alle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte und -Daten in dieser Instanz. Ein Benutzer muss Mitglied der Serveradministratorrolle sein, um serverweite Tasks wie z. B. Erstellen oder Verarbeiten einer Datenbank, das Ändern von Servereigenschaften oder das Starten einer Ablaufverfolgung (außer für Verarbeitungsereignisse) ausführen zu können.  
   
  Rollenmitgliedschaften werden bei der Installation von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eingerichtet. Der Benutzer, der das Setupprogramm ausführt, kann sich selbst oder andere Benutzer zu dieser Rolle hinzufügen. Sie müssen mindestens einen Administrator angeben, bevor Setup fortgesetzt werden kann.  
   
@@ -36,7 +37,7 @@ ms.lasthandoff: 01/08/2018
  Nach der Installation können Sie die Rollenzugehörigkeiten ändern und alle weiteren Benutzer hinzufügen, die vollständige Rechte für den Dienst benötigen. Sie können Serverrollen auch mithilfe von Analysis Management Objects (AMOs) verwalten. Weitere Informationen finden Sie unter [Entwickeln mit Analysis Management Objects &#40;AMO&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]stellt verschiedene Optionen mit zunehmend präziseren Rollen für die Verarbeitung und die Abfrage auf Server-, Datenbank- und Objektebene bereit. Weitere Anweisungen zur Verwendung dieser Rollen finden Sie unter [Rollen und Berechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md).  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt verschiedene Optionen mit zunehmend präziseren Rollen für die Verarbeitung und die Abfrage auf Server-, Datenbank- und Objektebene bereit. Weitere Anweisungen zur Verwendung dieser Rollen finden Sie unter [Rollen und Berechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md).  
   
 ## <a name="modify-server-role-membership"></a>Ändern der Serverrollenmitgliedschaft  
   
@@ -66,6 +67,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Siehe auch  
  [Autorisieren des Zugriffs auf Objekte und Vorgänge &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
- [Sicherheitsrollen &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+ [Sicherheitsrollen &#40; Analysis Services – mehrdimensionale Daten &#41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

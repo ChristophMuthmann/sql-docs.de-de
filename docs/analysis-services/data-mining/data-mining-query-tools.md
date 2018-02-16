@@ -20,19 +20,20 @@ helpviewer_keywords:
 - queries [DMX], prediction queries
 - mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 71337bc66abab8e91fd997cd2cde635945b0ef82
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-query-tools"></a>Data Mining-Abfragetools
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Alle Datamining-Abfragen verwenden die Data Mining Extensions (DMX)-Sprache. DMX kann zum Erstellen von Modellen für alle Arten von Machine Learning-Tasks verwendet werden, einschließlich Klassifizierung, Risikoanalyse, Generierung von Empfehlungen und linearer Regression. Sie können auch DMX-Abfragen für Informationen zu Mustern und für Statistiken, die beim Verarbeiten des Modells generiert wurden, erstellen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Alle Data Mining-Abfragen verwenden die DMX-Sprache (Data Mining-Erweiterungen). DMX kann zum Erstellen von Modellen für alle Arten von Machine Learning-Tasks verwendet werden, einschließlich Klassifizierung, Risikoanalyse, Generierung von Empfehlungen und linearer Regression. Sie können auch DMX-Abfragen für Informationen zu Mustern und für Statistiken, die beim Verarbeiten des Modells generiert wurden, erstellen.  
   
  Sie können Ihre eigenen DMX-Abfragen schreiben, oder Sie können grundlegende DMX-Abfragen mithilfe eines Tools wie z.B. dem **Generator für Vorhersageabfragen** verwenden und anschließend anpassen. Sowohl [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] als auch [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] stellen Tools bereit, mit deren Hilfe Sie DMX-Vorhersageabfragen erstellen können. In diesem Thema wird das Erstellen und Ausführen von Data Mining-Abfragen unter Verwendung dieser Tools beschrieben.  
   
@@ -82,11 +83,11 @@ ms.lasthandoff: 01/08/2018
 -   Um den **Modellinhalt** und **Modellmetadaten** wie die Anzahl der Cluster, die in Entscheidungsstrukturen verwendeten Attribute, das letzte Verarbeitungsdatum des Modells und die beim Erstellen des Modells verwendeten Algorithmusparameter abzurufen, können Sie die [Discover-Methode &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md) verwenden und im Header des [RequestType-Elements &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) eines der Data Mining-Schemarowsets angeben. Um den Abfragebereich einzugrenzen, geben Sie innerhalb des [RestrictionList-Elements &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md) Kriterien zur Einschränkung ein.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](../../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining-Projektmappen](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Grundlegendes zur SELECT-Anweisung (DMX)](../../dmx/understanding-the-dmx-select-statement.md)   
+ [Datamining-Erweiterungen &#40; DMX &#41; Referenz](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Datamining-Lösungen](../../analysis-services/data-mining/data-mining-solutions.md)   
+ [Grundlegendes zur Select-Anweisung von DMX](../../dmx/understanding-the-dmx-select-statement.md)   
  [Struktur und die Verwendung von DMX-Vorhersageabfragen](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Erstellen einer Vorhersageabfrage mithilfe des Generators für Vorhersageabfragen](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)   
- [Erstellen einer DMX-Abfrage in SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+ [Erstellen Sie eine DMX-Abfrage in SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
   

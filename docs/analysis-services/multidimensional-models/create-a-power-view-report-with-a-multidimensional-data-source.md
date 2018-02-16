@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b9b6f4c9-7e1f-4f61-b657-8986e39a6af2
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 77b32b08e1ffc1765d731e9bc9112f093ef854bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>Erstellen eines Power View-Berichts mit einer mehrdimensionalen Datenquelle
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Erstellen eines Power View ist Berichts auf Grundlage eines mehrdimensionalen Modells unterscheidet sich nicht zum Erstellen eines Berichts auf Grundlage einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Arbeitsmappe oder eines tabellarischen Analysis Services-Modells. Power View-Berichte werden aus einer Berichtsdatenquellen-Verbindungsdatei (RSDS-Datei) heraus in einer SharePoint-Bibliothek erstellt. Weitere Informationen zum Erstellen einer RSDS-Datei finden Sie unter [Create a Report Data Source](../../analysis-services/multidimensional-models/create-a-report-data-source.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Die Erstellung eines Power View-Berichts auf Grundlage eines mehrdimensionalen Modells unterscheidet sich nicht von der Erstellung eines Berichts auf Grundlage einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe oder eines tabellarischen Analysis Services-Modells. Power View-Berichte werden aus einer Berichtsdatenquellen-Verbindungsdatei (RSDS-Datei) heraus in einer SharePoint-Bibliothek erstellt. Weitere Informationen zum Erstellen einer RSDS-Datei finden Sie unter [Create a Report Data Source](../../analysis-services/multidimensional-models/create-a-report-data-source.md).  
   
  Bevor Sie beginnen, müssen Sie über folgende Informationen verfügen:  
   

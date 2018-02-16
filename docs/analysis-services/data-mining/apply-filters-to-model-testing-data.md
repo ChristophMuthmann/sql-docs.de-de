@@ -16,19 +16,20 @@ helpviewer_keywords:
 - filtering input rows [Analysis Services]
 - Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bb193bb9e90d1bd2b7773c2a1bd2f237e7fa0135
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Anwenden von Filtern zum Modellieren von Testdaten
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Wenn Sie beim Testen eines Modells eine externen Datenquelle angeben, können Sie optional einen Filter, um die Eingabedaten einzuschränken anwenden. Sie möchten das Modell zum Beispiel speziell für Vorhersagen zu Kunden in einem bestimmten Einkommensbereich testen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Wenn Sie eine externe Datenquelle angeben, die beim Testen eines verwendet werden soll, können Sie optional einen Filter anwenden, um die Eingabedaten einzuschränken. Sie möchten das Modell zum Beispiel speziell für Vorhersagen zu Kunden in einem bestimmten Einkommensbereich testen.  
   
  Beispiel: Im Targeted Mailing-Szenario von Adventure Works können Sie einen Filterausdruck wie den folgenden Ausdruck für ProspectiveBuyer erstellen. Dabei handelt es sich um die Tabelle, die die Testdaten enthält und die Testfälle nach Einkommensbereich einschränkt:  
   
@@ -98,6 +99,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>Siehe auch  
  [Auswählen und Zuordnen von Modelltestdaten](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
  [Verwenden von geschachtelten Tabellendaten als Eingabe für ein Genauigkeitsdiagramm](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
- [Auswählen eines Genauigkeitsdiagrammtyps und Festlegen von Diagrammoptionen](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [Wählen Sie eine Genauigkeit Diagrammtyp und einen Satz Diagrammoptionen](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   
