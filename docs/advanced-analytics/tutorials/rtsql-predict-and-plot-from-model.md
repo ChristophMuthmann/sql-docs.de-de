@@ -20,10 +20,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
 ms.openlocfilehash: 835e7d4901fc3d58edfedaea4474e9b523b71620
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="predict-and-plot-from-model-r-in-sql-quickstart"></a>Vorhersagen und Zeichnen von Modell (R in SQL-Schnellstart)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

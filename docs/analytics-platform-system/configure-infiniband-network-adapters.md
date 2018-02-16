@@ -14,12 +14,12 @@ description: "Beschreibt, wie die InfiniBand-Netzwerkadapter auf einem nicht-App
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
-caps.latest.revision: "15"
+caps.latest.revision: 
 ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>InfiniBand-Netzwerkadapter für Analytics Platform System konfigurieren
 Beschreibt, wie die InfiniBand-Netzwerkadapter auf einem nicht-Appliance Clientserver für die Verbindung mit dem Steuerungsknoten auf SQL Server Parallel Data Warehouse (PDW) konfigurieren. Verwenden Sie diese Anweisungen für grundlegende Konnektivität und hohe Verfügbarkeit, sodass laden, Sicherung und andere Prozesse werden automatisch mit dem aktiven InfiniBand-Netzwerk verbinden.  
@@ -58,7 +58,7 @@ Sie benötigen ein APS Appliance-Domänenkonto für die Anmeldung der AD01-Knote
   
 Sie benötigen ein Windowskonto auf dem Clientserver, der Berechtigung zur Konfiguration der Netzwerkadapter verfügt.  
   
-### <a name="prerequisites"></a>Voraussetzungen  
+### <a name="prerequisites"></a>Erforderliche Komponenten  
 Diese Anweisungen gehen davon aus, die Clientserver bereits Verkabeln und der Appliance InfiniBand-Netzwerk verbunden ist. Racks und Verkabelung Anweisungen finden Sie in [erwerben und Konfigurieren eines Servers geladen](acquire-and-configure-loading-server.md).  
   
 ### <a name="general-remarks"></a>Allgemeine Hinweise  
@@ -77,9 +77,9 @@ Um Ihren eigenen geschäftsanforderungen zu erfüllen, können Sie die Clientser
   
     ![InfiniBand-Verbindungen auf dem Verwaltungsknoten](media/network-teamib.png "InfiniBand-Verbindungen auf den Knoten "Management"")  
   
-4.  Im Fenster Eigenschaften von Internetprotokoll Version 4 (TCP/IPv4) Notieren Sie sich die Werte für die **IP-Adresse** und **Subnetzmaske**.  Die IP-Adresse der  ***Appliance_domain*-AD01** Knoten ist die IP-Adresse des Analytics Platform System, DNS-Servers.  
+4.  Im Fenster Eigenschaften von Internetprotokoll Version 4 (TCP/IPv4) Notieren Sie sich die Werte für die **IP-Adresse** und **Subnetzmaske**.  Die IP-Adresse der ***Appliance_domain *-AD01** Knoten ist die IP-Adresse des Analytics Platform System, DNS-Servers.  
   
-5.  Wiederholen Sie die Schritte 1 bis 5 oben für den Adapter TeamIB1 auf  ***Appliance_domain*-AD02** Server.  
+5.  Wiederholen Sie die Schritte 1 bis 5 oben für den Adapter TeamIB1 auf ***Appliance_domain *-AD02** Server.  
   
     ![PDW-Knoten InfiniBand 1 Verwaltungseigenschaften](media/network-ip1-properties.png "PDW Verwaltungseigenschaften Knoten InfiniBand 1")  
   
@@ -168,7 +168,7 @@ Um Ihren eigenen geschäftsanforderungen zu erfüllen, können Sie die Clientser
   
 2.  Klicken Sie auf den erweiterten... aus.  
   
-3.  Im Fenster Erweiterte TCP/IP-Einstellungen, wenn das Anfügen dieser DNS-Suffixe (in entsprechender Reihenfolge)-Option nicht, abgeblendet ist überprüfen Sie das Feld aufgerufen diese DNS-Suffixe anhängen (in Reihenfolge): Wählen Sie das Domänensuffix Einheit, und klicken Sie auf Hinzufügen... Das Domänensuffix Appliance werden`appliance_domain.local`  
+3.  Im Fenster Erweiterte TCP/IP-Einstellungen, wenn das Anfügen dieser DNS-Suffixe (in entsprechender Reihenfolge)-Option nicht, abgeblendet ist überprüfen Sie das Feld aufgerufen diese DNS-Suffixe anhängen (in Reihenfolge): Wählen Sie das Domänensuffix Einheit, und klicken Sie auf Hinzufügen... Das Domänensuffix Appliance werden `appliance_domain.local`  
   
 4.  Wenn der Anfügevorgang diese DNS-Suffixe (in entsprechender Reihenfolge): Option abgeblendet ist, Sie können die APS-Domäne mit diesem Server hinzufügen, indem Sie den Registrierungsschlüssel HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient ändern.  
   
@@ -182,10 +182,10 @@ Um Ihren eigenen geschäftsanforderungen zu erfüllen, können Sie die Clientser
   
     Beispiele für eine Einheit, die mit dem Namen benannt MyAPS mit einem MyPDW PDW-Region an:  
   
-    -   MyPDW SQLCTL01.MyAPS.local  
+    -   MyPDW-SQLCTL01.MyAPS.local  
   
-    -   MyPDW SQLCTL01  
+    -   MyPDW-SQLCTL01  
   
 ## <a name="see-also"></a>Siehe auch  
-[Erwerben und Konfigurieren eines Servers geladen](acquire-and-configure-loading-server.md)  
+[Erwerben und Konfigurieren eines Servers geladen ](acquire-and-configure-loading-server.md)  
   
