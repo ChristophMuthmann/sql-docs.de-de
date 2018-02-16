@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 024fd5fb264f4fce86d0c2f28f2558ccfa9e800a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="querying-a-tabular-model"></a>Abfragen eines tabellarischen Modells
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Als Entwickler bedeutet das Abfragen eines tabellarischen Modells zum Abrufen von Daten aus der tabellarischen Datenbank. zu diesem Zweck haben Sie zwei Optionen: Verwenden Sie Tabellenabfragen in DAX oder MDX und rufen Sie die Daten aus einem Cube stammten. Abhängig vom zugrunde liegenden Modus des tabellarischen Modells könnten jedoch nur DAX-Tabellenabfragen möglich sein. Für den DirectQuery-Modus ist die Verwendung von DAX-Tabellenabfragen erforderlich.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Ein Entwickler, der ein tabellarisches Modell abfragt, möchte Daten aus der tabellarischen Datenbank abrufen. Dafür gibt es zwei Optionen: Verwenden Sie Tabellenabfragen in DAX, oder verwenden Sie MDX und rufen Sie die Daten so ab, als stammten sie aus einem Cube. Abhängig vom zugrunde liegenden Modus des tabellarischen Modells könnten jedoch nur DAX-Tabellenabfragen möglich sein. Für den DirectQuery-Modus ist die Verwendung von DAX-Tabellenabfragen erforderlich.  
   
 ## <a name="querying-with-adomdnet"></a>Abfragen mit ADOMD.Net  
  Das Abfragen eines tabellarischen Modells mit ADOMD.Net ist einfach und flexibel. Senden Sie entweder MDX-Anweisungen oder tabellarische Abfrageausdrücke von DAX an den Server, um die Ergebnisse zu erhalten.  

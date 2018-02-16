@@ -19,10 +19,10 @@ ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
 ms.openlocfilehash: f4be0d12ce3067f46c934cfa7e053ddd1779ac9f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Projekteinstellungen (Zuordnung) (OracleToSQL)
 Die Seite "Type Mapping", der die **Projekteinstellungen** Dialogfeld enthält Einstellungen, anpassen, wie SSMA Oracle-Datentypen in konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datentypen.  
@@ -41,7 +41,7 @@ Die folgende Tabelle zeigt die **Type Mapping** Registerkarte Optionen:
 **Quelltyp**  
 Der zugeordnete Oracle-Datentyp.  
   
-**Zieltyp**  
+Zieltyp  
 Das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datentyp für den angegebenen Datentyp von Oracle.  
   
 Finden Sie in den Tabellen im nächsten Abschnitt für den standardmäßigen SSMA für Oracle-datentypzuordnungen.  

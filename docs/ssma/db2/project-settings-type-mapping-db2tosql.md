@@ -22,10 +22,10 @@ ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 6ab07bb5ad3932c45dacb7aa1b359083f05ec9bf
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Projekteinstellungen (Zuordnung) (DB2ToSQL)
 Die Seite "Type Mapping", der die **Projekteinstellungen** Dialogfeld enthält Einstellungen, anpassen, wie SSMA DB2-Datentypen in konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datentypen.  
@@ -44,7 +44,7 @@ Die folgende Tabelle zeigt die **Type Mapping** Registerkarte Optionen:
 **Quelltyp**  
 Der zugeordnete DB2-Datentyp.  
   
-**Zieltyp**  
+Zieltyp  
 Das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datentyp für den angegebenen DB2-Datentyp.  
   
 Finden Sie in den Tabellen im nächsten Abschnitt für den standardmäßigen SSMA für die DB2-datentypzuordnungen.  
@@ -276,5 +276,5 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für lokale Variablen.
 |Xmltype|xml|  
   
 ## <a name="see-also"></a>Siehe auch  
-[Referenz zur Benutzeroberfläche & #40; DB2ToSQL & #41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
+[Referenz zur Benutzeroberfläche &#40; DB2ToSQL &#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   
