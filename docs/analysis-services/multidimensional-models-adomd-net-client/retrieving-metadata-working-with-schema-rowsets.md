@@ -1,7 +1,7 @@
 ---
 title: Arbeiten mit Schemarowsets in ADOMD.NET | Microsoft Docs
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,37 +11,38 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - metadata [ADOMD.NET]
 - retrieving metadata
 - schema rowsets [ADOMD.NET]
 ms.assetid: 7bf75bf8-f1e1-44f6-ac42-c38a681654cf
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dcb2905c471751275b6dae19737541b798e2b68b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 279cc537776f6c96193026d5f0bccafcbd8f0c8b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>Beim Abrufen der Metadaten - arbeiten mit Schemarowsets
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Wenn Sie weitere Metadaten als verfügbar, in das ADOMD.NET-Objektmodell ist benötigen, bietet ADOMD.NET die Möglichkeit, den vollständigen Bereich von XML für Analysis (XMLA), OLE DB, OLE DB für OLAP und OLE DB für Data Mining-Schemarowsets abzurufen:  
+  Wenn Sie mehr als die im ADOMD.NET-Objektmodell vorhandenen Metadaten benötigen, bietet ADOMD.NET die Möglichkeit, den vollständigen Bereich für XMLA-(XML for Analysis-), OLE DB-, OLE DB für OLAP- und OLE DB für Data Mining-Schemarowsets abzurufen:  
   
  **XML for Analysis-Metadaten**  
  Die XML for Analysis-Schemarowsets stellen eine Methode zum Abrufen von Informationen über den Server auf niedriger Ebene bereit. Zu den verfügbaren Informationen gehören die auf dem Server vorhandenen Datenquellen, die durch den Anbieter reservierten Schlüsselwörter, die vom Anbieter unterstützten Literale und vieles mehr. Sie können ein XML for Analysis-Schemarowset verwenden, um alle Schemarowsets zu ermitteln, die vom Anbieter unterstützt werden.  
   
  Weitere Informationen: [XML for Analysis-Schemarowsets](../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
- **OLE DB-Metadaten**  
+ **OLE DB metadata**  
  Die OLE DB-Schemarowsets stellen eine Methode nach Industriestandard für das Abrufen von Informationen von diversen Anbietern bereit.  
   
  Weitere Informationen: [OLE DB-Schemarowsets](../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
- **OLAP-Metadaten**  
+ **OLAP metadata**  
  Zu den Schemainformationen, die für eine analytische Datenquelle bereitgestellt werden, gehören die über die analytische Datenquelle verfügbaren Datenbanken und Kataloge, Cubes und Miningmodelle in einer Datenbank, für Cubes in der Datenbank bestehende Rollen und vieles mehr.  
   
  Weitere Informationen: [OLE DB für OLAP-Schemarowsets](../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  

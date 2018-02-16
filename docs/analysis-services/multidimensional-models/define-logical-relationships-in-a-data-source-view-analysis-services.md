@@ -16,19 +16,20 @@ helpviewer_keywords:
 - relationships [Analysis Services], data source views
 - data source views [Analysis Services], relationships
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d1975eb94bc8ad2d69808279a5358b7a40180866
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Definieren von logischen Beziehungen in einer Datenquellensicht (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die Datenquellensicht-Assistenten und die Datenquellen-Designer definieren automatisch Beziehungen zwischen Tabellen, die einer Datenquellensicht (DSV), basierend auf den zugrunde liegenden datenbankbeziehungen oder Ihnen angegebenen Kriterien zu namensübereinstimmungen hinzugefügt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Im Datenquellensicht-Assistenten und im Datenquellensicht-Designer werden automatisch Beziehungen zwischen Tabellen definiert, die einer Datenquellensicht (Data Source View, DSV) hinzugefügt werden. Das Definieren der Beziehungen erfolgt auf Grundlage der Beziehungen in der zugrunde liegenden Datenbank oder auf Grundlage der von Ihnen angegebenen Namensübereinstimmungskriterien.  
   
  Wenn Sie Daten aus mehreren Datenquellen verwenden, müssen Sie zur Ergänzung der automatisch definierten Beziehungen in der DSV u. U. logische Beziehungen manuell definieren. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sind Beziehungen erforderlich, um Fakten- und Dimensionstabellen zu identifizieren, Abfragen zum Abrufen von Daten und Metadaten aus den zugrunde liegenden Datenquellen zu erstellen und die erweiterten Business Intelligence-Funktionen nutzen zu können.  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  Klicken Sie mit der rechten Maustaste auf die zu ändernde Beziehung, und klicken Sie anschließend auf **Beziehung bearbeiten**.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Datenquellsichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 25343dab0a818aa86f0a3a2f5080204602cc1f38
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="view-the-cube-schema"></a>Anzeigen des Cubeschemas
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die **Datenquellensicht** im Bereich der **Cubestruktur** Registerkarte **Cube-Designer** wird das Cubeschema angezeigt. Das Schema entspricht der Tabellengruppe, aus der die Measures und Dimensionen für einen Cube abgeleitet werden. Jedes Cubeschema besteht aus mindestens einer Faktentabelle und Dimensionstabelle, auf denen die Measures und Dimensionen im Cube basieren.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Im **Cube-Designer** auf der Registerkarte **Cubestruktur** im Bereich **Datenquellensicht** wird das Cubeschema angezeigt. Das Schema entspricht der Tabellengruppe, aus der die Measures und Dimensionen für einen Cube abgeleitet werden. Jedes Cubeschema besteht aus mindestens einer Faktentabelle und Dimensionstabelle, auf denen die Measures und Dimensionen im Cube basieren.  
   
  Auf der Registerkarte **Cubestruktur** im Bereich **Datenquellensicht** wird ein Diagramm der Datenquellensicht angezeigt, die die Grundlage für den Cube bildet. Dieses Diagramm stellt eine Teilmenge des Hauptdiagramms der Datenquellensicht dar. Im Bereich **Datenquellensicht** können Tabellen ein- und ausgeblendet und beliebige vorhandene Diagramme angezeigt werden. Änderungen am zugrunde liegenden Schema (z. B. durch Hinzufügen neuer Beziehungen oder benannter Abfragen) sind jedoch nicht möglich. Um Änderungen am Schema vorzunehmen, verwenden Sie den Datenquellensicht-Designer.  
   

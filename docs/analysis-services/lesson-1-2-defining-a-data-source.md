@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 81bdb79296ca864999d31c487cabf490ba0e0659
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>Lektion 1-2: Definieren einer Datenquelle
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +40,7 @@ In der folgenden Aufgabe definieren Sie die AdventureWorksDWSQLServer2012-Beispi
   
 3.  Auf der Seite **Wählen Sie aus, wie die Verbindung definiert werden soll** können Sie eine Datenquelle basierend auf einer neuen Verbindung, basierend auf einer vorhandenen Verbindung oder basierend auf einem vorher definierten Datenquellenobjekt definieren. Im Rahmen dieses Lernprogramms definieren Sie eine Datenquelle auf der Basis einer neuen Verbindung. Überprüfen Sie, ob die Option **Eine neue Datenquelle basierend auf einer vorhandenen oder neuen Verbindung erstellen** ausgewählt ist, und klicken Sie anschließend auf **Neu**.  
   
-4.  Im Dialogfeld **Verbindungs-Manager** definieren Sie Verbindungseigenschaften für die Datenquelle. Überprüfen Sie im Listenfeld **Anbieter** , ob **Native OLE DB\SQL Server Native Client 11.0** ausgewählt ist.  
+4.  Im Dialogfeld **Verbindungs-Manager** definieren Sie Verbindungseigenschaften für die Datenquelle. Überprüfen Sie im Listenfeld **Anbieter**, ob **Native OLE DB\SQL Server Native Client 11.0** ausgewählt ist.  
   
     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt auch andere Anbieter, die in der **Anbieter** -Liste angezeigt werden.  
   

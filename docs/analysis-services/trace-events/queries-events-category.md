@@ -16,19 +16,20 @@ helpviewer_keywords:
 - query events [Analysis Services]
 - event classes [Analysis Services], queries events
 ms.assetid: 99e1d1d6-f03f-4dd0-b467-ea915aea7667
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e281de4baadb80d78ad30ff09c38acf6949a5a24
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="queries-events-category"></a>Abfrageereigniskategorie
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die Abfragen Events-Ereigniskategorie verfügt über die in der folgenden Tabelle beschriebenen Ereignisklassen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Die Ereigniskategorie "Abfrageereignisse" enthält die in der folgenden Tabelle beschriebenen Ereignisklassen.  
   
 |Ereignisklasse|Ereignis-ID|Description|  
 |-----------------|--------------|-----------------|  

@@ -23,19 +23,20 @@ helpviewer_keywords:
 - restoring databases [Analysis Services]
 - recovery [Analysis Services]
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: a3ca95b34e684fa5ec67d0dab4720020a0e4e883
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Sichern und Wiederherstellen von Analysis Services-Datenbanken
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sicherungs- und Wiederherstellungsfunktionen verfügt, sodass Sie eine Datenbank und ihre Objekte aus einem bestimmten Zeitpunkt wiederherstellen können. Die Sicherung und Wiederherstellung ist auch eine zulässige Methode zum Migrieren von Datenbanken zu aktualisierten Servern, zum Verschieben von Datenbanken zwischen Servern oder zum Bereitstellen einer Datenbank auf einem Produktionsserver. Zur Datenwiederherstellung sollten Sie, falls Sie noch nicht über einen Sicherungsplan verfügen und Ihre Daten wertvoll sind, so schnell wie möglich einen solchen Plan entwerfen und implementieren.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verfügt über Sicherungs- und Wiederherstellungsfunktionen, weshalb Sie für eine Datenbank und ihre Objekte einen Zustand wiederherstellen können, der zu einem bestimmten Zeitpunkt gültig war. Die Sicherung und Wiederherstellung ist auch eine zulässige Methode zum Migrieren von Datenbanken zu aktualisierten Servern, zum Verschieben von Datenbanken zwischen Servern oder zum Bereitstellen einer Datenbank auf einem Produktionsserver. Zur Datenwiederherstellung sollten Sie, falls Sie noch nicht über einen Sicherungsplan verfügen und Ihre Daten wertvoll sind, so schnell wie möglich einen solchen Plan entwerfen und implementieren.  
   
  Die Befehle zur Sicherung und die Wiederherstellung werden in einer bereitgestellten Analysis Services-Datenbank ausgeführt. Für die Projekte und Projektmappen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]sollten Sie mithilfe der Quellcodeverwaltung sicherstellen, dass Sie bestimmte Versionen der Quelldateien wiederherstellen können, und anschließend einen Datenwiederherstellungsplan für das Repository des von Ihnen verwendeten Quellcodeverwaltungssystems erstellen.  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/08/2018
  Administratoren können eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank unabhängig von der Datenbankgröße in einer einzelnen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Sicherungsdatei (.abf) sichern. Schritt-für-Schritt-Anweisungen finden Sie auf der TechMantra-Seite unter [How to Backup an Analysis Services Database](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) (Sichern einer Analysis Services-Datenbank) und unter [Automate Backup an Analysis Services Database](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)(Automatische Sicherung einer Analysis Services-Datenbank).  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], zum Laden und Abfragen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Datenmodelle in einer SharePoint-Umgebung werden die Modelle aus SharePoint-Inhaltsdatenbanken geladen. Diese Inhaltsdatenbanken sind relational und werden im relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankmodul ausgeführt. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet folglich keine Sicherungs-/Wiederherstellungsstrategie für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenmodelle. Wenn Sie einen Notfallwiederherstellungsplan für SharePoint-Inhalte eingerichtet haben, umfasst der Plan die in den Inhaltsdatenbanken gespeicherten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenmodelle.  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]wird zum Laden und Abfragen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenmodellen in einer SharePoint-Umgebung verwendet und lädt die zugehörigen Modelle aus SharePoint-Inhaltsdatenbanken. Diese Inhaltsdatenbanken sind relational und werden im relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankmodul ausgeführt. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet folglich keine Sicherungs-/Wiederherstellungsstrategie für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenmodelle. Wenn Sie einen Notfallwiederherstellungsplan für SharePoint-Inhalte eingerichtet haben, umfasst der Plan die in den Inhaltsdatenbanken gespeicherten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenmodelle.  
   
  **Remotepartitionen**  
   
@@ -122,7 +123,7 @@ ms.lasthandoff: 01/08/2018
 -   Sie können auswählen, ob der Wiederherstellungsbefehl den Wiederherstellungsordner für jede wiederherzustellende Partition ändern soll. Lokale Partitionen können an jedem Ordnerstandort wiederhergestellt werden, der für die Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , auf der die Datenbank wiederhergestellt wird, als lokal gilt. Remotepartitionen können in jedem Ordner und auf jedem Server außer dem lokalen Server wiederhergestellt werden. Remotepartitionen können nicht zu lokalen Partitionen werden.  
   
     > [!IMPORTANT]  
-    >  Für jede Sicherungsdatei muss der Benutzer, der den Wiederherstellungsbefehl ausführt, über die Berechtigung zum Lesen von dem für jede Datei angegebenen Sicherungsspeicherort verfügen. Zum Wiederherstellen einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank, die nicht auf dem Server installiert ist, muss der Benutzer zusätzlich Mitglied der Serverrolle für die betreffende [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz sein. Zum Überschreiben einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank muss der Benutzer entweder Mitglied der Serverrolle für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz oder Mitglied einer Datenbankrolle mit der Berechtigung „Vollzugriff“ (Administrator) für die wiederherzustellende Datenbank sein.  
+    >  Für jede Sicherungsdatei muss der Benutzer, der den Wiederherstellungsbefehl ausführt, über die Berechtigung zum Lesen von dem für jede Datei angegebenen Sicherungsspeicherort verfügen. Zum Wiederherstellen einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank, die nicht auf dem Server installiert ist, muss der Benutzer zusätzlich Mitglied der Serverrolle für die betreffende [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz sein. Zum Überschreiben einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank muss der Benutzer entweder Mitglied der Serverrolle für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz oder Mitglied einer Datenbankrolle mit den Berechtigungen "Vollzugriff" (Administrator) für die wiederherzustellende Datenbank sein.  
   
     > [!NOTE]  
     >  Nach dem Wiederherstellen einer vorhandenen Datenbank verliert der Benutzer, der die Datenbank wiederhergestellt hat, möglicherweise den Zugriff auf diese Datenbank. Dies ist u. U. der Fall, wenn der Benutzer zum Zeitpunkt der Sicherung kein Mitglied der Serverrolle oder der Datenbankrolle mit der Berechtigung "Vollzugriff (Administrator)" war.  

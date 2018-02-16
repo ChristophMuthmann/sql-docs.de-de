@@ -1,7 +1,7 @@
 ---
 title: Sichern, wiederherstellen und Synchronisieren von Datenbanken (XMLA) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
 - backing up databases [XML for Analysis]
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - synchronization [XML for Analysis]
 - database restores [XML for Analysis]
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a01f7dc9f661ffde071b54a4c738557c4f2c8dad
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 33fc95e7b34b28c4233ede68927e60eada8bf5df
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Sichern, Wiederherstellen und Synchronisieren von Datenbanken (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In XML for Analysis gibt es drei Befehle für die sichern, wiederherstellen und Synchronisieren von Datenbanken:  
+  In XML for Analysis gibt es drei Befehle für das Sichern, Wiederherstellen und Synchronisieren von Datenbanken:  
   
 -   Die [Backup](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) Befehl sichert eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank mithilfe einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Sicherungsdatei (.abf), wie beschrieben im Abschnitt [Sichern von Datenbanken](#backing_up_databases).  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Die [Synchronize](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) -Befehl synchronisiert eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank mit den Daten und Metadaten von einer anderen Datenbank, wie beschrieben im Abschnitt [Synchronisieren von Datenbanken](#synchronizing_databases).  
   
-##  <a name="backing_up_databases"></a>Sichern von Datenbanken  
+##  <a name="backing_up_databases"></a> Sichern von Datenbanken  
  Wie oben erwähnt: die **Backup** Befehl sichert eine angegebene [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank in einer Sicherungsdatei. Die **Backup** Befehl verfügt über verschiedene Eigenschaften, mit denen Sie, die angeben zu sichernde Datenbank die Sicherungsdatei zu verwenden, wie Sie von sicherheitsdefinitionen sowie die zu sichernden Remotepartitionen sichern.  
   
 > [!IMPORTANT]  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/08/2018
   
  Der Wert, der die **Sicherheit** Eigenschaft ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|Einbeziehen von Sicherheitsdefinitionen und Ausschließen von Informationen zur Mitgliedschaft in der Sicherungsdatei.|  
 |*CopyAll*|Einbeziehen von Sicherheitsdefinitionen und Informationen zur Mitgliedschaft in der Sicherungsdatei.|  
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/08/2018
   
  Für jede Remotedatenquelle gesichert werden soll, können Sie eine entsprechende Sicherungsdatei angeben, indem Sie z. B. eine [Speicherort](../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) Element in der [Speicherorte](../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md) Eigenschaft von der **Backup** -Befehl. Die **Speicherort** -Element seine **Datei** -Eigenschaft auf den UNC-Pfad und Dateinamen der remotesicherungsdatei, festgelegt und die zugehörige [DataSourceID](../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md) -Eigenschaft auf den Bezeichner des die Remotedatenquelle, die in der Datenbank definiert.  
   
-##  <a name="restoring_databases"></a>Wiederherstellen von Datenbanken  
+##  <a name="restoring_databases"></a> Wiederherstellen von Datenbanken  
  Die **wiederherstellen** Befehl wird ein angegebenes wiederhergestellt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank aus einer Sicherungsdatei. Die **wiederherstellen** Befehl verfügt über verschiedene Eigenschaften, mit denen Sie angeben, dass die Datenbank wiederhergestellt, die Sicherungsdatei zu verwendende Vorgehensweise beim Wiederherstellen von sicherheitsdefinitionen, die zu speichernden Remotepartitionen und das Verschieben relationaler OLAP (ROLAP) -Objekte.  
   
 > [!IMPORTANT]  
@@ -96,7 +97,7 @@ ms.lasthandoff: 01/08/2018
   
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|Einbeziehen von Sicherheitsdefinitionen und Ausschließen von Informationen zur Mitgliedschaft in der Datenbank.|  
 |*CopyAll*|Einbeziehen von Sicherheitsdefinitionen und Informationen zur Mitgliedschaft in der Datenbank.|  
@@ -116,7 +117,7 @@ ms.lasthandoff: 01/08/2018
   
  Können Sie die **Speicherort** Element in einem **wiederherstellen** Befehl aus, um die ROLAP-Objekte zu verschieben. Für jede **Speicherort** Element zum Verschieben einer Datenquelle verwendet den **DataSourceType** Eigenschaft muss explizit festgelegt werden, um *lokale*. Außerdem müssen Sie festlegen der **"ConnectionString"** Eigenschaft der **Speicherort** Element an der Verbindungszeichenfolge für den neuen Speicherort. Während der Wiederherstellung der **wiederherstellen** Befehl wird die Verbindungszeichenfolge für die Datenquelle identifiziert durch Ersetzen der **DataSourceID** Eigenschaft von der **Speicherort** Element mit dem Wert der **"ConnectionString"** Eigenschaft von der **Speicherort** Element.  
   
-##  <a name="synchronizing_databases"></a>Synchronisieren von Datenbanken  
+##  <a name="synchronizing_databases"></a> Synchronisieren von Datenbanken  
  Die **Synchronize** -Befehl synchronisiert die Daten und Metadaten eines angegebenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank mit einer anderen Datenbank. Die **Synchronize** Befehl verfügt über verschiedene Eigenschaften, mit denen Sie die Quelldatenbank angeben, wie sicherheitsdefinitionen, die zu synchronisierenden Remotepartitionen und die Synchronisierung von ROLAP-Objekte synchronisiert.  
   
 > [!NOTE]  
@@ -134,7 +135,7 @@ ms.lasthandoff: 01/08/2018
   
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|Einbeziehen von Sicherheitsdefinitionen und Ausschließen von Informationen zur Mitgliedschaft in der Zieldatenbank.|  
 |*CopyAll*|Einbeziehen von Sicherheitsdefinitionen und Informationen zur Mitgliedschaft in der Zieldatenbank.|  
@@ -150,12 +151,12 @@ ms.lasthandoff: 01/08/2018
 ### <a name="synchronizing-rolap-objects"></a>Synchronisieren von ROLAP-Objekten  
  Die **Synchronize** Befehl kann nicht synchronisiert, Aggregationen oder Daten für Objekte, die ROLAP-Speichermodus verwenden, da solche Informationen in Tabellen in einer zugrunde liegenden relationalen Datenquelle gespeichert ist. Jedoch können die Metadaten für ROLAP-Objekte synchronisiert werden. Beim Synchronisieren der Metadaten der **Synchronize** Befehl erstellt die Tabellenstruktur in einer relationalen Datenquelle.  
   
- Sie können die **Speicherort** Element in einem Synchronize-Befehl zum Synchronisieren von ROLAP-Objekten. Für jede **Speicherort** Element zum Verschieben einer Datenquelle verwendet den **DataSourceType** Eigenschaft muss explizit festgelegt werden, um *lokale*. zugreifen. Außerdem müssen Sie festlegen der **"ConnectionString"** Eigenschaft der **Speicherort** Element an der Verbindungszeichenfolge für den neuen Speicherort. Während der Synchronisierung der **Synchronize** Befehl wird die Verbindungszeichenfolge für die Datenquelle identifiziert durch Ersetzen der **DataSourceID** Eigenschaft von der **Speicherort** Element mit dem Wert, der die **"ConnectionString"** Eigenschaft von der **Speicherort** Element.  
+ Sie können die **Speicherort** Element in einem Synchronize-Befehl zum Synchronisieren von ROLAP-Objekten. Für jede **Speicherort** Element zum Verschieben einer Datenquelle verwendet den **DataSourceType** Eigenschaft muss explizit festgelegt werden, um *lokale*. aus. Außerdem müssen Sie festlegen der **"ConnectionString"** Eigenschaft der **Speicherort** Element an der Verbindungszeichenfolge für den neuen Speicherort. Während der Synchronisierung der **Synchronize** Befehl wird die Verbindungszeichenfolge für die Datenquelle identifiziert durch Ersetzen der **DataSourceID** Eigenschaft von der **Speicherort** Element mit dem Wert, der die **"ConnectionString"** Eigenschaft von der **Speicherort** Element.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Backup-Element &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
  [Restore-Element &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
- [Synchronize-Element &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Synchronisieren Sie-Element &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Sichern und Wiederherstellen von Analysis Services-Datenbanken](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

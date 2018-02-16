@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 888a9c7c06a43f1fcee9306a7edeaed4b484e24b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Verbinden von PowerPivot-Dienstanwendung in SharePoint-Web-App in der Zertifizierungsstelle
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service-Anwendung kann eine beliebige Anzahl von SharePoint-Webanwendungen in der Farm verwendet werden. Um eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung zur Verfügung zu stellen, fügen Sie sie einer Dienstzuordnungsliste hinzu.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung kann von einer beliebigen Anzahl von SharePoint-Webanwendungen in der Farm verwendet werden. Um eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung zur Verfügung zu stellen, fügen Sie sie einer Dienstzuordnungsliste hinzu.  
   
 > [!IMPORTANT]  
 >  Damit das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard ordnungsgemäß funktioniert, muss eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung in der Standardgruppe enthalten sein. Fügen Sie nicht mehr als eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung zu der Standardgruppe hinzu. Das Hinzufügen mehrerer Einträge des gleichen Dienstanwendungstyps ist keine unterstützte Konfiguration und könnte Fehler verursachen. Wenn Sie zusätzliche Dienstanwendungen erstellen, fügen Sie sie benutzerdefinierten Listen hinzu.  

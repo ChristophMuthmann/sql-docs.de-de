@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 691bf8b3fd2e26a3f906c88fbc8ceb840b636f6c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Power Pivot-Authentifizierung und -Autorisierung
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Bereitstellung, die innerhalb einer SharePoint 2010-Farm ausgeführt wird, verwendet das authentifizierungssubsystem und Autorisierungsmodell von SharePoint-Servern bereitgestellt. Die SharePoint-Sicherheitsinfrastruktur erstreckt sich auch auf [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Inhalte und -Vorgänge, da sämtliche [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-bezogenen Inhalte in SharePoint-Inhaltsdatenbanken gespeichert und alle [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-bezogenen Vorgänge von freigegebenen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Diensten in der Farm ausgeführt werden. Benutzer, die eine Arbeitsmappe mit [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten anfordern, werden mit einer SharePoint-Benutzeridentität authentifiziert, die auf deren Windows-Benutzeridentität basiert. Anzeigeberechtigungen für die Arbeitsmappe bestimmen, ob die Anforderung gewährt oder verweigert wird.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Bereitstellung, die innerhalb einer SharePoint 2010-Farm ausgeführt wird, verwendet das von den SharePoint-Servern bereitgestellte Authentifizierungssubsystem und Autorisierungsmodell. Die SharePoint-Sicherheitsinfrastruktur erstreckt sich auch auf [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Inhalte und -Vorgänge, da sämtliche [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-bezogenen Inhalte in SharePoint-Inhaltsdatenbanken gespeichert und alle [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-bezogenen Vorgänge von freigegebenen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Diensten in der Farm ausgeführt werden. Benutzer, die eine Arbeitsmappe mit [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten anfordern, werden mit einer SharePoint-Benutzeridentität authentifiziert, die auf deren Windows-Benutzeridentität basiert. Anzeigeberechtigungen für die Arbeitsmappe bestimmen, ob die Anforderung gewährt oder verweigert wird.  
   
  Da die Integration mit Excel Services für Self-Service-Datenanalysen erforderlich ist, sollten Ihnen zum Sichern eines [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Servers auch die Sicherheitsfunktionen von Excel Services vertraut sein. Wenn ein Benutzer eine PivotTable abfragt, die über eine Datenverbindung zu [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten verfügt, leiten die Excel Services eine Datenverbindungsanforderung zum Laden der Daten an einen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server in der Farm weiter. Aufgrund der Interaktion zwischen den Servern sollten Sie wissen, wie Sie Sicherheitseinstellungen für beide Server konfigurieren.  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 01/08/2018
 |Farm- oder Dienstadministrator|Installieren, Aktivieren und Konfigurieren von Diensten und Anwendungen<br /><br /> Verwenden des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Verwaltungsdashboards und Anzeigen von Administratorberichten.|  
 |Vollzugriff|Aktivieren der Integration von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Features auf Websitesammlungsebene.<br /><br /> Erstellen einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalogbibliothek.<br /><br /> Erstellen einer Datenfeedbibliothek|  
 |Mitwirken|Hinzufügen, Bearbeiten, Löschen und Herunterladen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen.<br /><br /> Konfigurieren der Datenaktualisierung<br /><br /> Erstellen neuer Arbeitsmappen und Berichte auf Grundlage von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen auf einer SharePoint-Website.<br /><br /> Erstellen von Datendienstdokumenten in einer Datenfeedbibliothek|  
-|Leseberechtigung|Zugriff auf [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen als externe Datenquelle, wobei die Arbeitsmappen-URL explizit in einem Verbindungsdialogfeld eingegeben wird (z.B. im Datenverbindungs-Assistenten von Microsoft Excel).|  
+|Lesen|Zugriff auf [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen als externe Datenquelle, wobei die Arbeitsmappen-URL explizit in einem Verbindungsdialogfeld eingegeben wird (z.B. im Datenverbindungs-Assistenten von Microsoft Excel).|  
 |Nur anzeigen|Anzeigen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen<br /><br /> Anzeigen des Datenaktualisierungsverlaufs<br /><br /> Herstellen einer Verbindung mit einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe auf einer SharePoint-Website, um die Daten auf andere Weise erneut zu nutzen<br /><br /> Laden Sie eine Momentaufnahme der Arbeitsmappe herunter. Die Momentaufnahme ist eine statische Kopie der Daten, ohne Slicer, Filter, Formeln oder Datenverbindungen. Der Inhalt der Momentaufnahme entspricht den Zellenwerten im Browserfenster.|  
   
 ##  <a name="excel"></a> Excel Services – Sicherheitsüberlegungen für Power Pivot-Arbeitsmappen  

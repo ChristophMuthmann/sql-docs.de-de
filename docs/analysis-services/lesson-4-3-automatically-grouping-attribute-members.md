@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 86d4c1dcc16cc97b04a3c228087a9e9793cc5651
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lektion 4-3 - automatisch Gruppieren von Attributelementen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,10 +33,10 @@ Beim Durchsuchen eines Cubes dimensionieren Sie in der Regel die Elemente einer 
 Von der Eigenschaft **DiscretizationMethod** wird bestimmt, ob von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Gruppierungen erstellt werden, sowie der Typ der Gruppierung, die durchgeführt wird. Standardmäßig werden von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] keine Gruppierungen ausgeführt. Es ist beim Aktivieren der automatischen Gruppierungen möglich, von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] automatisch die beste Gruppierungsmethode basierend auf der Struktur des Attributs bestimmen zu lassen. Sie können auch einen der Gruppierungsalgorithmen in der folgenden Liste auswählen, um die Gruppierungsmethode anzugeben:  
   
 **EqualAreas**  
-Von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] werden Gruppenbereiche erstellt, sodass alle Dimensionselemente gleichmäßig über die Gruppen verteilt werden.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erstellt Gruppenbereiche, sodass alle Dimensionselemente gleichmäßig über die Gruppen verteilt werden.  
   
 **Clusters**  
-Von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] werden Gruppen durch eindimensionales Clustering auf den Eingabewerten mithilfe der K-Means-Clusteringmethode mit Gauß'schen Verteilungen erstellt. Diese Option ist nur für numerische Spalten gültig.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erstellt Gruppen durch eindimensionales Clustering auf den Eingabewerten mithilfe der K-Means-Clusteringmethode mit Gauß'schen Verteilungen. Diese Option ist nur für numerische Spalten gültig.  
   
 Nach dem Angeben einer Gruppierungsmethode müssen Sie die Anzahl von Gruppen angeben, indem Sie die **DiscretizationBucketCount** -Eigenschaft verwenden. Weitere Informationen finden Sie unter [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   

@@ -16,19 +16,20 @@ helpviewer_keywords:
 - scripts [Analysis Services], creating
 - scripts [MDX], creating
 ms.assetid: aa54b8cc-ff3b-4ef6-a64e-11b9e9d7fa11
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ec19c9f3c826910b7c5d8a3d5a3737e09228b664
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>Erstellen und Ausführen eines MDX-Skripts in SQL Server-Datentools
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Zum Erstellen und Ausführen eines MDX-Skripts in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], müssen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] mit einem Cube bereits erstellt und für die Bearbeitung bereitsteht.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Zum Erstellen und Ausführen eines MDX-Skripts in  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]müssen Sie sich in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] befinden und bereits einen Cube erstellt haben, der für die Bearbeitung bereitsteht.  
   
 ### <a name="to-create-a-multidimensional-expressions-mdx-script"></a>So erstellen Sie ein MDX-Skript (Multidimensional Expressions)  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/08/2018
 4.  Sie müssen den Cube mit den neuen MDX-Skriptänderungen bereitstellen und verarbeiten, um das MDX-Skript ausführen zu können.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Grundlegendes MDX-Skript &#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
+ [Die grundlegende MDX-Skripts &#40; MDX &#41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
  [Grundlegendes zu MDX-Skripts &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [MDX-Skriptanweisungen &#40; MDX &#41;](../../mdx/mdx-scripting-statements-mdx.md)  
   

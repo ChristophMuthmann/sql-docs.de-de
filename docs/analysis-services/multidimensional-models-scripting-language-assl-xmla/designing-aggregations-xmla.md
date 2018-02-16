@@ -1,7 +1,7 @@
 ---
 title: Entwerfen von Aggregationen (XMLA) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - statistical information [XML for Analysis]
 - batches [XML for Analysis]
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - XML for Analysis, aggregations
 - iterative aggregation process [XMLA]
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fdc973309fe87792aa135813c23e4e68d7650043
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 07e7d766fa70662c55330ef2a7569ecf22b88ccc
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="designing-aggregations-xmla"></a>Entwerfen von Aggregationen (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Aggregationsentwürfe werden die Partitionen einer bestimmten Measuregruppe, um sicherzustellen, dass die Partitionen die gleiche Struktur, beim Speichern von Aggregationen verwenden zugeordnet. Verwenden einheitliche Speicherstruktur für Partitionen können Sie ganz einfach Partitionen definieren, die später zusammengeführt werden können mithilfe der [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) Befehl. Weitere Informationen zu Aggregationsentwürfen finden Sie unter [Aggregationen und Aggregationsentwürfe](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+  Aggregationsentwürfe werden den Partitionen einer bestimmten Measuregruppe zugeordnet, um sicherzustellen, dass die Partitionen beim Speichern von Aggregationen die gleiche Struktur verwenden. Verwenden einheitliche Speicherstruktur für Partitionen können Sie ganz einfach Partitionen definieren, die später zusammengeführt werden können mithilfe der [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) Befehl. Weitere Informationen zu Aggregationsentwürfen finden Sie unter [Aggregationen und Aggregationsentwürfe](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
  Um Aggregationen für einen Aggregationsentwurf definieren möchten, können Sie die [DesignAggregations](../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) -Befehl in XML for Analysis (XMLA). Die **DesignAggregations** Befehl verfügt über Eigenschaften, welche aggregationsentwürfe als Referenz zum Steuern des Entwurfsprozess basierend auf dieser Referenz verwenden. Mithilfe der **DesignAggregations** Befehl und seine Eigenschaften können Sie Aggregationen iterativ oder in einem Batch entwerfen und zeigen Sie dann die resultierenden entwurfsstatistiken, um den Entwurfsprozess zu bewerten.  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="specifying-queries"></a>Angeben von Abfragen  
  Der DesignAggregations-Befehl unterstützt Verwendungsbasierte optimierungsbefehle durch die Einbindung mindestens **Abfrage** Elemente in der [Abfragen](../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md) Eigenschaft. Die **Abfragen** Eigenschaft enthalten kann, eine oder mehrere [Abfrage](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md) Elemente. Wenn die **Abfragen** Eigenschaft enthält keine **Abfrage** Elemente, der Aggregationsentwurf angegeben, der **Objekt** -Element verwendet eine Standardstruktur, enthält ein allgemeinen Satz Aggregationen. Diese allgemeinen Satz Aggregationen dient, die die Kriterien erfüllen die **Optimierung** und **Speicher** Eigenschaften der **DesignAggregations** Befehl.  
   
- Jedes **Query** -Element stellt eine Zielabfrage dar, die der Entwurfsprozess nutzt, um Aggregationen zu definieren, die auf die am häufigsten verwendeten Abfragen abzielen. Sie können entweder Ihre eigenen zielabfragen festlegen oder können Sie die Informationen gespeichert, die von einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] im Abfrageprotokoll einbezogen, zum Abrufen von Informationen über die am häufigsten verwendeten Abfragen. Der Assistent für Verwendungsbasierte Optimierung verwendet das Abfrageprotokoll abzurufenden zielabfragen basierend auf Zeit, Verwendung oder einen angegebenen Benutzer beim Senden von einem **DesignAggregations** Befehl. Weitere Informationen finden Sie unter [Verwendungsbasierte Optimierung-Assistent F1-Hilfe](http://msdn.microsoft.com/library/e5f5a938-ae7c-4f4e-9416-a7f94ac82763).  
+ Jedes **Query** -Element stellt eine Zielabfrage dar, die der Entwurfsprozess nutzt, um Aggregationen zu definieren, die auf die am häufigsten verwendeten Abfragen abzielen. Sie können entweder Ihre eigenen Zielabfragen festlegen oder die Informationen nutzen, die von einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] im Abfrageprotokoll gespeichert werden, um Informationen über die am häufigsten verwendeten Abfragen abzurufen. Der Assistent für Verwendungsbasierte Optimierung verwendet das Abfrageprotokoll abzurufenden zielabfragen basierend auf Zeit, Verwendung oder einen angegebenen Benutzer beim Senden von einem **DesignAggregations** Befehl. Weitere Informationen finden Sie unter [Verwendungsbasierte Optimierung-Assistent F1-Hilfe](http://msdn.microsoft.com/library/e5f5a938-ae7c-4f4e-9416-a7f94ac82763).  
   
  Wenn Sie Aggregationen iterativ entwerfen, nur müssen Sie zielabfragen im ersten übergeben **DesignAggregations** Befehl, weil die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz diese zielabfragen speichert und verwendet diese Abfragen während der nachfolgenden  **DesignAggregations** Befehle. Nachdem Sie Zielabfragen im ersten **DesignAggregations** -Befehl eines iterativen Prozesses weitergegeben haben, generiert jeder darauf folgende **DesignAggregations** -Befehl, der über Zielabfragen in der **Queries** -Eigenschaft verfügt, einen Fehler.  
   
@@ -111,10 +112,10 @@ ms.lasthandoff: 01/08/2018
 |Spalte|Datentyp|Description|  
 |------------|---------------|-----------------|  
 |Schritte|Integer|Die Anzahl der Schritte, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung abgewartet werden.|  
-|Uhrzeit|Lange ganze Zahl|Die Anzahl der Millisekunden, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung abgewartet werden.|  
+|Zeit|Lange ganze Zahl|Die Anzahl der Millisekunden, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung abgewartet werden.|  
 |Optimization|Double|Der geschätzte Prozentwert der Leistungsverbesserung, der durch den Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung erreicht wird.|  
 |Speicherung|Lange ganze Zahl|Die geschätzte Anzahl an Bytes, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung abgewartet werden.|  
-|Aggregations|Lange ganze Zahl|Die Anzahl der Aggregationen, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung definiert werden.|  
+|Aggregationen|Lange ganze Zahl|Die Anzahl der Aggregationen, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung definiert werden.|  
 |LastStep|Boolean|Gibt an, ob die Daten im Rowset den letzten Schritt im Entwurfsprozess darstellen. Wenn die **' materialisieren '** des Befehls wurde-Eigenschaftensatz auf "true", wird der Wert dieser Spalte festgelegt auf "true".|  
   
  Sie können die entwurfsstatistiken, die in der nach jedem zurückgegebenen Rowset enthalten sind **DesignAggregations** Befehl in beiden iterative auch im batchentwurf. Im iterativen Entwurf können Sie die Entwurfsstatistiken verwenden, um den Status zu bestimmen und anzuzeigen. Wenn Sie Aggregationen in einem Batch entwerfen, können Sie die Entwurfsstatistiken verwenden, um die Anzahl der vom Befehl erstellten Aggregationen zu bestimmen.  

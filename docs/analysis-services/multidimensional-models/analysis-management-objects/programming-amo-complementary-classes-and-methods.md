@@ -1,7 +1,7 @@
 ---
 title: "Programmieren von AMO-komplementärer Klassen und Methoden | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - restores [AMO]
 - assemblies [AMO]
@@ -22,29 +23,29 @@ helpviewer_keywords:
 - traces [AMO]
 - backups [AMO]
 ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71341caed76270096627e3516ce87abb38ad6bf3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ea3f2a07cc5d6e39bec7db5faf333986a56062f9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-complementary-classes-and-methods"></a>Programmieren AMO-komplementärer Klassen und Methoden
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Dieses Thema enthält die folgenden Abschnitte:  
+  Dieses Thema enthält folgende Abschnitte:  
   
 -   [Assembly-Klasse](#Assembly)  
   
--   [Backup and Restore (Sichern und Wiederherstellen)](#BU)  
+-   [Sichern und Wiederherstellen](#BU)  
   
 -   [Trace-Klasse](#TRC)  
   
 -   [CaptureLog-Klasse und CaptureXML-Attribut](#CL)  
   
-##  <a name="Assembly"></a>Assembly-Klasse  
+##  <a name="Assembly">Assembly-Klasse</a>  
  Assemblys können Benutzer Erweitern der Funktionalität des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] durch neue gespeicherte Prozeduren oder Funktionen (Multidimensional Expressions) hinzufügen. Weitere Informationen finden Sie unter [andere AMO-Klassen und Methoden](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md).  
   
  Das Hinzufügen und Löschen von Assemblys ist einfach und kann online ausgeführt werden. Sie müssen Datenbankadministrator sein, um der Datenbank eine Assembly hinzufügen zu können, bzw. Serveradministrator, um die Assembly dem Serverobjekt hinzufügen zu können.  
@@ -78,7 +79,7 @@ static public void CreateStoredProcedures(Database db)
   
 ```  
   
-##  <a name="BU"></a>Backup- und Restore-Methoden  
+##  <a name="BU"></a> Backup- und Restore-Methoden  
  Mit den Methoden Backup und Restore können Administratoren Datenbanken sichern und sie wiederherstellen.  
   
  Im folgenden Beispiel werden Sicherungen für alle Datenbanken auf dem angegebenen Server erstellt. Wenn bereits eine Sicherungsdatei vorhanden ist, wird sie überschrieben. Sicherungsdateien werden im Sicherungsordner des Datenordners von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] gespeichert.  
@@ -105,7 +106,7 @@ static public void RestoreAdventureWorks(Server svr)
 }  
 ```  
   
-##  <a name="TRC"></a>Trace-Klasse  
+##  <a name="TRC">Trace-Klasse</a>  
  Die Überwachung der Serveraktivität erfordert zwei Arten von Ablaufverfolgungen: Sitzungsablaufverfolgungen und Serverablaufverfolgungen. Mithilfe der Ablaufverfolgung des Servers können Sie die Leistung des aktuellen Tasks auf dem Server (Sitzungsablaufverfolgungen) oder die Gesamtaktivität auf dem Server ermitteln, ohne dass Sie mit dem Server verbunden sind (Serverablaufverfolgungen).  
   
  Bei der Ablaufverfolgung der aktuellen Aktivität (Sitzungsablaufverfolgungen) sendet der Server der laufenden Anwendung Benachrichtigungen über die Ereignisse, die auf dem Server stattfinden und von der Anwendung verursacht werden. Ereignisse werden mithilfe von Ereignishandlern in der aktuellen Anwendung aufgezeichnet. Sie weisen zuerst dem <xref:Microsoft.AnalysisServices.SessionTrace>-Objekt die Ereignisbehandlungsroutinen zu und starten dann die Sitzungsablaufverfolgung.  
@@ -238,7 +239,7 @@ static public void TestServerTraces(Server svr)
 }  
 ```  
   
-##  <a name="CL"></a>Capturelog- und CaptureXml-Attribute  
+##  <a name="CL"></a> Capturelog- und CaptureXml-Attribute  
  Das CaptureLog-Attribut ermöglicht Ihnen die Erstellung von XMLA-Batchdateien aus den AMO-Vorgängen. Mit CaptureLog können Sie Serverobjekte als Datenbanken, Cubes, Dimensionen, Miningstrukturen und anderes ausgeben.  
   
  Für die Erstellung eines CaptureLog sind folgende Schritte erforderlich:  
@@ -282,7 +283,7 @@ static public string TestCaptureLog(Server svr)
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.AnalysisServices>   
  [Einführung in AMO-Klassen](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO anderen Klassen und Methoden](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)   
