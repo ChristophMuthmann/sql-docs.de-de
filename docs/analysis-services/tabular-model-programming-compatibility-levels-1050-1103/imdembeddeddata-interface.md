@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c35cd0e0174ffc94c498007fff8a314d2094856a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="imdembeddeddata-interface"></a>IMDEmbeddedData-Schnittstelle
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die IMDEmbeddedData-Schnittstelle ist eine öffentliche Schnittstelle verwendet, um ein eingebettetes verwalten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Datenbank oder einer tabellarischen Modelldatenbank. Die Schnittstelle erbt von der **IPersistStream** Schnittstelle. Die Schnittstelle lässt folgende Vorgänge zu:  
+# <a name="imdembeddeddata-interface"></a>IMDEmbeddedData Interface
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Die IMDEmbeddedData-Schnittstelle ist eine öffentliche Schnittstelle verwendet, um ein eingebettetes verwalten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Datenbank oder einer tabellarischen Modelldatenbank. Die Schnittstelle erbt von der **IPersistStream** Schnittstelle. Die Schnittstelle lässt folgende Vorgänge zu:  
   
 -   Ruft einen Bezeichner in den eingebetteten Datenstrom im Containerdokument ab.  
   
@@ -99,18 +101,18 @@ HRESULT GetStreamIdentifier (
  **S_OK**  
  Der Datenstrombezeichner wurde erfolgreich zurückgegeben.  
   
- **"S_FALSE"**  
+ **S_FALSE**  
  Es ist kein Datenstrombezeichner vorhanden.  
   
  **E_FAIL**  
  Beim Zugriff auf den Datenstrombezeichner ist ein Fehler aufgetreten.  
   
-#### <a name="remarks"></a>Remarks  
+#### <a name="remarks"></a>Hinweise  
  Um zu überprüfen, ob die aktuelle Verbindung eine eingebettete Datenbank enthält, sollte der Benutzer den Wert der DBPROP_MSMD_EMBEDDED_DATA-Eigenschaft in den OLE DB-Verbindungseigenschaften überprüfen.  
   
  Die möglichen Werte für DBPROP_MSMD_EMBEDDED_DATA lauten wie folgt:  
   
-|Name|value|Definition|  
+|Name|Wert|Definition|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|Es ist keine eingebettete Datenbank verfügbar.|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|Die aktuelle Anwendung enthält die eingebettete Datenbank.|  
@@ -281,7 +283,7 @@ HRESULT IsDirty ( void )
  **S_OK**  
  Die Datenbank wurde seit der letzten Speicherung geändert.  
   
- **"S_FALSE"**  
+ **S_FALSE**  
  Die Datenbank wurde seit der letzten Speicherung nicht geändert.  
   
  **E_FAIL**  

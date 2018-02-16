@@ -97,19 +97,20 @@ helpviewer_keywords:
 - MemoryLimit property
 - AggregationMemoryLimitMax property
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: cfeaedcf34ffdafdc54c0ce88ae80ecfc6190f6f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="olap-properties"></a>OLAP-Eigenschaften
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die OLAP-Servereigenschaften in den folgenden Tabellen aufgeführt. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die in den folgenden Tabellen aufgeführten OLAP-Servereigenschaften. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Gilt für:** Nur mehrdimensionaler Servermodus  
   
@@ -136,7 +137,7 @@ ms.lasthandoff: 01/08/2018
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
 ## <a name="lazyprocessing"></a>LazyProcessing  
- **Enabled**  
+ **Aktiviert**  
  Eine boolesche Eigenschaft, die angibt, ob die verzögerte Aggregationsverarbeitung aktiviert ist.  
   
  **SleepIntervalSecs**  
@@ -293,7 +294,7 @@ ms.lasthandoff: 01/08/2018
  **ROLAPDimensionProcessingEffort**  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
-## <a name="query"></a>Dataseteigenschaften  
+## <a name="query"></a>Abfrage  
  **AggregationsUseEnabled**  
  Eine boolesche Eigenschaft, die definiert, ob zur Laufzeit gespeicherte Aggregationen verwendet werden. Diese Eigenschaft lässt zu, dass Aggregationen für Informationszwecke oder Vergleichstests ohne Ändern des Aggregationsentwurfs oder erneutes Verarbeiten deaktiviert werden.  
   
@@ -437,7 +438,7 @@ ms.lasthandoff: 01/08/2018
  **DataCache\MemoryModel\Tax**  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   
-## <a name="jobs"></a>Jobs  
+## <a name="jobs"></a>Aufträge  
  **ProcessAggregation\MemoryModel\Income**  
  Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.  
   

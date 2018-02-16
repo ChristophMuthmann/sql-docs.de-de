@@ -25,10 +25,10 @@ ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a63fcd61563499894205c3cc55323480e8a805d7
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>Sp_execute_remote (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -55,15 +55,15 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  Identifiziert die externe Datenquelle, in dem die Anweisung ausgeführt wird. Finden Sie unter [externe Datenquelle erstellen &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md). Die externe Datenquelle kann vom Typ "RDBMS" oder "SHARD_MAP_MANAGER" sein.  
   
  [ @stmt= ] *statement*  
- Ist eine Unicode-Zeichenfolge, enthält eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder eines Batches. @stmteine Unicode-Konstante oder eine Unicode-Variable muss sein. Komplexere Unicodeausdrücke, wie z. B. die Verkettung von zwei Zeichenfolgen mit dem +-Operator, sind nicht zulässig. Zeichenkonstanten sind nicht zulässig. Wenn eine Unicode-Konstante angegeben wird, muss er mit vorangestellt ein **N**. Beispielsweise die Unicode-Konstante **N 'Sp_who'** gültig ist, aber die Zeichenkonstante **'Sp_who'** nicht. Die Länge der Zeichenfolge wird nur durch den verfügbaren Arbeitsspeicher des Datenbankservers begrenzt. Auf 64-Bit-Servern, die Größe der Zeichenfolge ist auf 2 GB sind, die maximale Größe des beschränkt **nvarchar(max)**.  
+ Ist eine Unicode-Zeichenfolge, enthält eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder eines Batches. @stmt eine Unicode-Konstante oder eine Unicode-Variable muss sein. Komplexere Unicodeausdrücke, wie z. B. die Verkettung von zwei Zeichenfolgen mit dem +-Operator, sind nicht zulässig. Zeichenkonstanten sind nicht zulässig. Wenn eine Unicode-Konstante angegeben wird, muss er mit vorangestellt ein **N**. Beispielsweise die Unicode-Konstante **N 'Sp_who'** gültig ist, aber die Zeichenkonstante **'Sp_who'** nicht. Die Länge der Zeichenfolge wird nur durch den verfügbaren Arbeitsspeicher des Datenbankservers begrenzt. Auf 64-Bit-Servern, die Größe der Zeichenfolge ist auf 2 GB sind, die maximale Größe des beschränkt **nvarchar(max)**.  
   
 > [!NOTE]  
->  @stmtkann Parameter aufweisen, z. B. das gleiche Format wie ein Variablenname enthalten:`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  @stmt kann Parameter aufweisen, z. B. das gleiche Format wie ein Variablenname enthalten: `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  Für jeden Parameter in @stmt ist ein entsprechender Eintrag in der @params-Parameterdefinitionsliste und in der Parameterwerteliste erforderlich.  
   
  [ @params= ] N'@*parameter_name**data_type* [ ,... *n* ] '  
- Eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in @stmt eingebettet wurden. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n*ist ein Platzhalter, der zusätzliche Parameterdefinitionen. Jeder Parameter im angegebenen @stmtmust definiert werden, @params. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung bzw. ein solcher Batch in @stmt keine Parameter enthält, ist @params nicht erforderlich. Der Standardwert für diesen Parameter ist NULL.  
+ Eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in @stmt eingebettet wurden. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameterdefinitionen. Jeder Parameter im angegebenen @stmtmust definiert werden, @params. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung bzw. ein solcher Batch in @stmt keine Parameter enthält, ist @params nicht erforderlich. Der Standardwert für diesen Parameter ist NULL.  
   
  [ @param1= ] '*value1*'  
  Der Wert für den ersten Parameter, der in der Parameterzeichenfolge definiert ist. Bei diesem Wert kann es sich um eine Unicode-Konstante oder eine Unicode-Variable handeln. Für jeden Parameter in @stmt muss ein Parameterwert angegeben werden. Die Werte sind nicht erforderlich, wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder der -Batch in @stmt keine Parameter aufweist.  
@@ -81,13 +81,13 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  Erfordert `ALTER ANY EXTERNAL DATA SOURCE` Berechtigung.  
   
 ## <a name="remarks"></a>Hinweise  
- `sp_execute_remote`Parameter müssen in der Reihenfolge eingegeben werden, wie im obigen Syntaxabschnitt beschrieben. Wenn die Parameter nicht in der vorgegebenen Reihenfolge eingegeben werden, wird eine Fehlermeldung ausgegeben.  
+ `sp_execute_remote` Parameter müssen in der Reihenfolge eingegeben werden, wie im obigen Syntaxabschnitt beschrieben. Wenn die Parameter nicht in der vorgegebenen Reihenfolge eingegeben werden, wird eine Fehlermeldung ausgegeben.  
   
- `sp_execute_remote`weist das gleiche Verhalten wie [EXECUTE &#40; Transact-SQL &#41; ](../../t-sql/language-elements/execute-transact-sql.md) im Hinblick auf Batches und der Gültigkeitsbereich von Namen. Die Transact-SQL-Anweisung oder der Batch in die Sp_execute_remote  *@stmt*  Parameter wird nicht kompiliert werden, bis die Sp_execute_remote-Anweisung ausgeführt wird.  
+ `sp_execute_remote` weist das gleiche Verhalten wie [EXECUTE &#40; Transact-SQL &#41; ](../../t-sql/language-elements/execute-transact-sql.md) im Hinblick auf Batches und der Gültigkeitsbereich von Namen. Die Transact-SQL-Anweisung oder der Batch in die Sp_execute_remote  *@stmt*  Parameter wird nicht kompiliert werden, bis die Sp_execute_remote-Anweisung ausgeführt wird.  
   
- `sp_execute_remote`das Resultset mit dem Namen "$ShardName", die den Namen der Remotedatenbank enthält, die die Zeile erstellt hinzugefügt eine zusätzliche Spalte.  
+ `sp_execute_remote` das Resultset mit dem Namen "$ShardName", die den Namen der Remotedatenbank enthält, die die Zeile erstellt hinzugefügt eine zusätzliche Spalte.  
   
- `sp_execute_remote`kann verwendet werden, ähnlich wie [Sp_executesql &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
+ `sp_execute_remote` kann verwendet werden, ähnlich wie [Sp_executesql &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
 ### <a name="simple-example"></a>Einfaches Beispiel  

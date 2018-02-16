@@ -1,7 +1,7 @@
 ---
 title: Programmieren von AMO Fundamental Objects | Microsoft Docs
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - server objects [AMO]
 - programming [AMO]
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - database objects [AMO]
 - Analysis Management Objects, database objects
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9ab80bdbb2a2cc6e27ce76577bdf7739e1b9b8b3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bcbf7e3c05fb0166324e1953b5656e8038ec682f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-fundamental-objects"></a>Programming AMO Fundamental objects
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Grundlegende Objekte sind im Allgemeinen einfache und unkomplizierte Objekte. Diese Objekte werden in der Regel erstellt und instanziiert, und wenn sie nicht mehr benötigt werden, trennt der Benutzer die Verbindung zu ihnen. Grundlegende Klassen beinhalten die folgenden Objekte: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> und <xref:Microsoft.AnalysisServices.DataSourceView>. Das einzige komplexe Objekt innerhalb der grundlegenden AMO-Objekte ist <xref:Microsoft.AnalysisServices.DataSourceView>, das Details benötigt, um das abstrakte Modell zu erstellen, das die Datenquellensicht darstellt.  
+  Grundlegende Objekte sind im Allgemeinen einfache und unkomplizierte Objekte. Diese Objekte werden in der Regel erstellt und instanziiert, und wenn sie nicht mehr benötigt werden, trennt der Benutzer die Verbindung zu ihnen. Grundlegende Klassen beinhalten die folgenden Objekte: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> und <xref:Microsoft.AnalysisServices.DataSourceView>. Das einzige komplexe Objekt innerhalb der grundlegenden AMO-Objekte ist <xref:Microsoft.AnalysisServices.DataSourceView>, das Details benötigt, um das abstrakte Modell zu erstellen, das die Datenquellensicht darstellt.  
   
  <xref:Microsoft.AnalysisServices.Server>- und <xref:Microsoft.AnalysisServices.Database>-Objekte sind in der Regel erforderlich, um die enthaltenen Objekte als OLAP- oder Data Mining-Objekte zu verwenden.  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [DataSourceView-Objekte](#DSV)  
   
-##  <a name="ServerObjects"></a>Serverobjekte  
+##  <a name="ServerObjects"></a> Serverobjekte  
  Verwenden einer <xref:Microsoft.AnalysisServices.Server> Objekt erfordert die folgenden Schritte: Herstellen einer Verbindung mit dem Server, zu überprüfen, ob die <xref:Microsoft.AnalysisServices.Server> Objekt, mit dem Server verbunden ist, und wenn dies der Fall ist, Trennen der <xref:Microsoft.AnalysisServices.Server> vom Server.  
   
 ### <a name="connecting-to-the-server-object"></a>Herstellen einer Verbindung mit dem Serverobjekt  
@@ -109,7 +110,7 @@ if ( (svr != null) && ( svr.Connected))
 }  
 ```  
   
-###  <a name="AMO"></a>AmoException-Ausnahmeobjekte  
+###  <a name="AMO"></a> AmoException-Ausnahmeobjekte  
  AMO löst bei verschiedenen Problemen Ausnahmen aus. Eine ausführliche Erläuterung der Ausnahmen finden Sie unter [andere AMO-Klassen und Methoden](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md). Im folgenden Beispielcode wird die richtige Methode veranschaulicht, um Ausnahmen in AMO zu erfassen:  
   
 ```  
@@ -148,7 +149,7 @@ catch (  AMOException e)
 }  
 ```  
   
-##  <a name="DatabaseObjects"></a>Datenbankobjekte  
+##  <a name="DatabaseObjects"></a> Datenbankobjekte  
  Die Verwendung eines <xref:Microsoft.AnalysisServices.Database>-Objekts ist sehr einfach und unkompliziert. Sie rufen aus der Datenbankauflistung des <xref:Microsoft.AnalysisServices.Server>-Objekts eine vorhandene Datenbank ab.  
   
 ### <a name="creating-dropping-and-finding-a-database"></a>Erstellen, Löschen und Suchen einer Datenbank  
@@ -195,7 +196,7 @@ static Database ProcessDatabase(Database db, ProcessType pt)
 }  
 ```  
   
-##  <a name="DataSource"></a>DataSource-Objekte  
+##  <a name="DataSource">DataSource-Objekte</a>  
  Ein <xref:Microsoft.AnalysisServices.DataSource>-Objekt ist der Link zwischen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und der Datenbank, in der sich die Daten befinden. Das Schema, das das zugrunde liegende Modell für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] darstellt, wird vom <xref:Microsoft.AnalysisServices.DataSourceView>-Objekt definiert. Ein <xref:Microsoft.AnalysisServices.DataSource>-Objekt kann als Verbindungszeichenfolge zur Datenbank, in der sich die Daten befinden, betrachtet werden.  
   
  Im folgenden Codebeispiel wird das Erstellen eines <xref:Microsoft.AnalysisServices.DataSource>-Objekts veranschaulicht. Das Beispiel überprüft, ob der Server immer noch vorhanden, das <xref:Microsoft.AnalysisServices.Server>-Objekt verbunden und die Datenbank vorhanden ist. Wenn das <xref:Microsoft.AnalysisServices.DataSource>-Objekt vorhanden ist, wird es gelöscht und neu erstellt. Das <xref:Microsoft.AnalysisServices.DataSource>-Objekt wird mit dem gleichen Namen und der gleichen internen ID erstellt. In diesem Beispiel wird keine Überprüfung der Verbindungszeichenfolge ausgeführt.  
@@ -218,7 +219,7 @@ static string CreateDataSource(Database db, string strDataSourceName, string str
 }  
 ```  
   
-##  <a name="DSV"></a>DataSourceView-Objekte  
+##  <a name="DSV">DataSourceView-Objekte</a>  
  Das <xref:Microsoft.AnalysisServices.DataSourceView>-Objekt enthält das Schemamodell für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Damit das <xref:Microsoft.AnalysisServices.DataSourceView>-Objekt das Schema enthalten kann, muss das Schema zuerst erstellt werden. Schemas werden mithilfe des System.Data-Namespace über DataSet-Objekte erstellt.  
   
  Mit dem folgenden Beispielcode wird ein Teil des Schemas erstellt, das in dem auf AdventureWorks basierenden Analysis Services-Beispielprojekt enthalten ist. In dem Beispiel werden Schemadefinitionen für Tabellen, berechnete Spalten, Beziehungen und zusammengesetzte Beziehungen erstellt. Schemas sind persistente Datasets.  

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: cd17ad086169a53673d7c9ba48f79058dd87769d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>In Ablaufverfolgungen verwendete Analysis Services-Objekttypcodes
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Diese Seite enthält den Objekttyp (eine Zahl mit sechs Ziffern) der einzelnen Objekte in einem Analysis Services-Datenmodell. Diese Codes werden in Ablaufverfolgungsprotokollen angezeigt und dienen der Identifizierung des Objekttyps, dem eine bestimmte Sperre zugeordnet ist. Angenommen, ein Sperrtimeout in einer Datenbank zeigt den Objekttyp 100002 an, der der Datenbank-Objekttyp ist.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Diese Seite enthält den Objekttyp (eine Zahl mit sechs Ziffern) der einzelnen Objekte in einem Analysis Services-Datenmodell. Diese Codes werden in Ablaufverfolgungsprotokollen angezeigt und dienen der Identifizierung des Objekttyps, dem eine bestimmte Sperre zugeordnet ist. Angenommen, ein Sperrtimeout in einer Datenbank zeigt den Objekttyp 100002 an, der der Datenbank-Objekttyp ist.  
   
 > [!NOTE]  
 >  Unten werden weitere Codes aufgeführt. Im Ablaufverfolgungsprotokoll werden tatsächlich weniger Codes angezeigt. Die folgende umfassende Liste beinhaltet Codetypen für jedes Objekt. Allerdings stellen nur solche Objekte, die eine Sperre annehmen, einen Objekttypcode in einem Ablaufverfolgungsprotokoll dar.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 01/08/2018
 |100002|Datenbank|  
 |100003|DataSource|  
 |100004|DatabasePermission|  
-|100005|-Rolle|  
+|100005|Rolle|  
 |100006|Dimension|  
 |100007|DimensionAttribute|  
 |100008|Hierarchy|  
@@ -79,7 +80,7 @@ ms.lasthandoff: 01/08/2018
 |100053|Befehl|  
 |100054|KPI|  
 |100055|DataSourceView|  
-|100056|Perspektive|  
+|100056|Perspective|  
 |100100|CommandCollection|  
 |100101|DatabaseCollection|  
 |100102|DataSourceCollection|  

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 5ca13d8c-1c5d-4f02-869c-72e0defce6d7
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ca5bf33d2d528b8e216915170d7df528589a85c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-restorelocation-cmdlet"></a>New-RestoreLocations-Cmdlet
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Gibt Informationen zum Wiederherstellen einer Datenbank verwendet.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Gibt Informationen an, die verwendet wurden, um eine Datenbank wiederherzustellen.  
 
 >[!NOTE] 
 >In diesem Artikel möglicherweise veraltete Informationen und Beispiele enthalten. Verwenden Sie das Cmdlet "Get-Help", für die aktuelle.
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/08/2018
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-datasourceid-string"></a>-DataSourceId \<Zeichenfolge >  
+### <a name="-datasourceid-string"></a>-DataSourceId \<string>  
   
 |||  
 |-|-|  
@@ -62,7 +63,7 @@ ms.lasthandoff: 01/08/2018
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-connectionstring-string"></a>-ConnectionString \<Zeichenfolge >  
+### <a name="-connectionstring-string"></a>-ConnectionString \<string>  
  Gibt die Verbindungszeichenfolge mit einer Analysis Services-Remoteinstanz an.  
   
 |||  
@@ -117,7 +118,7 @@ ms.lasthandoff: 01/08/2018
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-credential-pscredential"></a>-Credential \<"PSCredential" >  
+### <a name="-credential-pscredential"></a>-Credential \<PSCredential>  
  Dieser Parameter wird für die Übergabe in einem Benutzernamen und einem Kennwort verwendet, wenn eine HTTP-Verbindung zu einer Analysis Services-Instanz verwendet wird, für die HTTP-Zugriff konfiguriert wurde. Weitere Informationen finden Sie unter [Konfigurieren des HTTP-Zugriffs auf Analysis Services unter Internetinformationsdienste (IIS) &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md) für HTTP-Verbindungen.  
   
  Wenn dieser Parameter angegeben wird, werden der Benutzername und das Kennwort verwendet, um eine Verbindung mit der angegebenen Analysis-Server-Instanz herzustellen. Wenn keine Anmeldeinformationen angegeben sind, wird das Standard-Windows-Konto des Benutzers, der das Tool ausführt, verwendet.  
@@ -137,8 +138,8 @@ ms.lasthandoff: 01/08/2018
   
 |||  
 |-|-|  
-|Eingaben|InclusionThresholdSetting|  
-|Ausgaben|InclusionThresholdSetting|  
+|Eingaben|Keine|  
+|Ausgaben|Keine|  
   
 ## <a name="examples"></a>Beispiele  
   

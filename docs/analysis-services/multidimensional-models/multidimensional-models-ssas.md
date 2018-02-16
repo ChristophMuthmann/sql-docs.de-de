@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 509df042-fdb3-4e2c-a6b8-86943ce1b0fc
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 276211036c3d977ab0a0b6a61114e7fe58505b63
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-modeling-ssas"></a>Mehrdimensionale Modellierung (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine mehrdimensionale Analysis Services-Lösung verwendet Cubestrukturen zum Analysieren von Geschäftsdaten über mehrere Dimensionen hinweg. Der mehrdimensionale Modus ist der standardmäßige Servermodus von Analysis Services. Die Komponente umfasst ein Abfrage- und Berechnungsmodul für OLAP-Daten, wobei MOLAP-, ROLAP- und HOLAP-Speichermodi die Leistung durch skalierbare Datenanforderungen ausgleichen. Das Analysis Services-OLAP-Modul ist ein branchenführender OLAP-Server, der für eine breite Palette von BI-Tools gut geeignet ist. Die meisten Analysis Services-Bereitstellungen werden als klassische OLAP-Server installiert.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Eine mehrdimensionale Analysis Services-Lösung verwendet Cubestrukturen zum Analysieren von Geschäftsdaten über mehrere Dimensionen hinweg. Der mehrdimensionale Modus ist der standardmäßige Servermodus von Analysis Services. Die Komponente umfasst ein Abfrage- und Berechnungsmodul für OLAP-Daten, wobei MOLAP-, ROLAP- und HOLAP-Speichermodi die Leistung durch skalierbare Datenanforderungen ausgleichen. Das Analysis Services-OLAP-Modul ist ein branchenführender OLAP-Server, der für eine breite Palette von BI-Tools gut geeignet ist. Die meisten Analysis Services-Bereitstellungen werden als klassische OLAP-Server installiert.  
   
 ## <a name="benefits-of-using-multidimensional-solutions"></a>Vorteile der Verwendung von mehrdimensionalen Lösungen  
  Der Hauptgrund zum Erstellen eines mehrdimensionalen Analysis Services-Modells ist, eine schnelle Leistung von Ad-hoc-Abfragen für Geschäftsdaten zu erreichen. Ein mehrdimensionales Modell besteht aus Cubes und Dimensionen, die kommentiert werden können und zur Unterstützung komplexer Abfragekonstruktionen erweitert werden können. BI-Entwickler erstellen Cubes, um schnelle Antwortzeiten zu unterstützen und eine einzelne Datenquelle zur Geschäftsberichterstellung bereitzustellen. Angesichts der wachsenden Wichtigkeit von Business Intelligence über alle Ebenen einer Organisation hinweg stellt eine einzelne Quelle analytischer Daten sicher, dass Diskrepanzen auf einem Minimum gehalten, wenn nicht sogar ganz ausgeschlossen werden.  
@@ -32,9 +33,9 @@ ms.lasthandoff: 01/08/2018
  Ein anderer wichtiger Vorteil der Verwendung von mehrdimensionalen Analysis Services-Datenbanken ist die Integration in häufig verwendete BI-Berichtstools wie Excel, Reporting Services und PerformancePoint sowie in benutzerdefinierte Anwendungen und Lösungen von Drittanbietern.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Mehrdimensionale Modelllösungen &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)  
+ [Mehrdimensionale Modelllösungen &#40; SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)  
   
- [Mehrdimensionale Modelldatenbanken &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Mehrdimensionale Modelldatenbanken &#40; SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
  [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
@@ -42,6 +43,6 @@ ms.lasthandoff: 01/08/2018
   
  [Power View für mehrdimensionale Modelle](../../analysis-services/multidimensional-models/power-view-for-multidimensional-models.md)  
   
- [Verwaltung von mehrdimensionalen Modellassemblys](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
+ [Mehrdimensionales Modell Assemblys-Verwaltung](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   

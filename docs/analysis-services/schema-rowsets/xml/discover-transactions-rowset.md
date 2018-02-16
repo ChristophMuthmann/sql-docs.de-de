@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 85789177-c5df-4336-a90c-c20d69277ab4
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7ca0b129013f5bdced79d8fb8245893a3db7ff06
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovertransactions-rowset"></a>DISCOVER_TRANSACTIONS-Rowset
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Gibt den aktuellen Satz von ausstehenden Transaktionen auf dem System zurück.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Gibt den aktuellen Satz von ausstehenden Transaktionen auf dem System zurück.  
   
  **Gilt für:** tabellarische und mehrdimensionale Modelle  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
 |Spaltenname|Typindikator|Description|  
 |-----------------|--------------------|-----------------|  
-|**AKTIVIERT**|**DBTYPE_WSTR**|Der eindeutige Bezeichner der Transaktion als GUID.|  
+|**TRANSACTION_ID**|**DBTYPE_WSTR**|Der eindeutige Bezeichner der Transaktion als GUID.|  
 |**TRANSACTION_SESSION_ID**|**DBTYPE_WSTR**|Die eindeutige Sitzungs-ID der Transaktion als GUID.|  
 |**TRANSACTION_START_TIME**|**DBTYPE_DBTIMESTAMP**|UTC-Datum und -Zeit des Servers, zu denen die Transaktion gestartet wurde.|  
 |**TRANSACTION_ELAPSED_TIME_MS**|**DBTYPE_I8**|Die seit dem Start der Transaktion verstrichene Zeit in Millisekunden.|  
@@ -55,12 +57,12 @@ ms.lasthandoff: 01/08/2018
   
  Die folgende Tabelle enthält die GUID und die Zeichenfolgenwerte, die dieses Rowset identifizieren.  
   
-|Argument|value|  
+|Argument|Wert|  
 |--------------|-----------|  
 |GUID|a07ccd28-8148-11d0-87bb-00c04fc33942|  
-|Zeichenfolge|DISCOVER_TRANSACTIONS|  
+|String|DISCOVER_TRANSACTIONS|  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML for Analysis – Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis-Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

@@ -35,19 +35,20 @@ helpviewer_keywords:
 - measure groups [Analysis Services], bindings
 - partitions [Analysis Services], bindings
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 49a0e62db64a1eb0dc27df9785a90234a4b39207
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Datenquellen und Bindungen (SSAS – mehrdimensional)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cubes, Dimensionen und andere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekte an eine Datenquelle gebunden werden können. Eine Datenquelle kann eines der folgenden Objekte sein:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cubes, Dimensionen und andere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte können an eine Datenquelle gebunden werden. Eine Datenquelle kann eines der folgenden Objekte sein:  
   
 -   Eine relationale Datenquelle.  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 01/08/2018
 |BigInt|Ein 64-Bit-Integer mit Vorzeichen Dieser Datentyp wird dem Int64-Datentyp in Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_I8-Datentyp in der OLE DB zugeordnet.|  
 |Bool|Ein boolescher Wert. Dieser Datentyp wird dem booleschen Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_BOOL-Datentyp in der OLE DB zugeordnet.|  
 |Währung|Ein Währungswert im Bereich von -263 (bzw. -922.337.203.685.477,5808) bis 263-1 (bzw. +922.337.203.685.477,5807) mit einer Genauigkeit von einem Zehntausendstel einer Währungseinheit. Dieser Datentyp wird dem Decimal-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_CY-Datentyp in der OLE DB zugeordnet.|  
-|date|Datumsangaben, die als Gleitkommazahl mit doppelter Genauigkeit gespeichert sind. Der ganzzahlige Teil gibt die Anzahl von Tagen seit dem 30. Dezember 1899 wieder, während der Bruchteil ein Teil eines Tages ist. Dieser Datentyp wird dem DateTime-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_DATE-Datentyp in der OLE DB zugeordnet.|  
+|Datum|Datumsangaben, die als Gleitkommazahl mit doppelter Genauigkeit gespeichert sind. Der ganzzahlige Teil gibt die Anzahl von Tagen seit dem 30. Dezember 1899 wieder, während der Bruchteil ein Teil eines Tages ist. Dieser Datentyp wird dem DateTime-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_DATE-Datentyp in der OLE DB zugeordnet.|  
 |Double|Eine Gleitkommazahl mit doppelter Genauigkeit im Bereich von -1,79E +308 bis 1,79E +308. Dieser Datentyp wird dem Double-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_R8-Datentyp in der OLE DB zugeordnet.|  
 |Integer|Ein 32-Bit-Integer mit Vorzeichen Dieser Datentyp wird dem Int32-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_I4-Datentyp in der OLE DB zugeordnet.|  
 |Single|Eine Gleitkommazahl mit einfacher Genauigkeit im Bereich von -3,40E +38 bis 3,40E +38. Dieser Datentyp wird dem Single-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_R4-Datentyp in der OLE DB zugeordnet.|  
@@ -174,7 +175,7 @@ ms.lasthandoff: 01/08/2018
   
  Out-of-Line-Bindungen werden durch Einfügung des optionalen **Bindings** -Auflistungsobjekts mit dem Verarbeitungsbefehl festgelegt. Die optionale **Bindings** -Auflistung enthält die folgenden Elemente.  
   
-|Eigenschaft|Cardinality|Typ|Description|  
+|Eigenschaft|Kardinalität|Typ|Description|  
 |--------------|-----------------|----------|-----------------|  
 |**Bindung**|0-n|**Bindung**|Stellt eine Auflistung neuer Bindungen bereit.|  
 |**DataSource**|0-1|**DataSource**|Ersetzt **DataSource** vom Server, der verwendet worden wäre.|  

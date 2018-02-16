@@ -11,31 +11,33 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 05a08baa-23cc-4011-9c2e-f60a20bb87da
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8010e9c0412b50c8d65a67c87c176bff02d1a887
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="defaultdetails-element-csdlbi"></a>DefaultDetails-Element (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Das DefaultDetails-Element stellt eine Liste mit Eigenschaftsverweisen, die zusammen den "Standardfeldsatz" von Spalten in der Tabelle zu definieren. Jede Eigenschaft kann nur auf ein Measure oder auf eine Spalte verweisen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Das DefaultDetails-Element stellt eine Liste mit Eigenschaftsverweisen dar, die zusammen den "Standardfeldsatz" von Spalten in der Tabelle definieren. Jede Eigenschaft kann nur auf ein Measure oder auf eine Spalte verweisen.  
   
 ## <a name="elements-and-attributes"></a>Elemente und Attribute  
  In der folgenden Tabelle sind die Elemente und Attribute aufgeführt, die das DefaultDetails-Element definieren.  
   
-|Name|Ist erforderlich|Description|  
+|Name|Ist erforderlich|Beschreibung|  
 |----------|-----------------|-----------------|  
-|DefaultDetailsPosition|nein|Eine positive ganze Zahl, die das Vorhandensein und die Position in der Auflistung angibt.|  
+|DefaultDetailsPosition|Nein|Eine positive ganze Zahl, die das Vorhandensein und die Position in der Auflistung angibt.|  
   
 ## <a name="example"></a>Beispiel  
- **Tabellarisch**  
+ **Tabellarische**  
   
  Im folgenden Beispiel wird in CSDLBI, Version 1.1, ein Auszug aus dem AdventureWorks-Beispieldatenmodell dargestellt. Es ist nur eine Standardspalte für die Tabelle Employees festgelegt (Title). Für die Tabelle Produkte wurden jedoch drei Spalten als Standardfeldsatz definiert.  
   
@@ -60,7 +62,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="example"></a>Beispiel  
- **Multidimensional**  
+ **Mehrdimensionale**  
   
  Im folgenden Beispiel wird in CSDLBI, Version 1.1, ein Auszug aus der Definition der Tabelle Bike im Contoso-Vorgangscube veranschaulicht. Diese Anmerkung gibt an, dass die Spalte Color standardmäßig angezeigt werden soll, wenn keine andere Anzeigenspalte angegeben wird.  
   

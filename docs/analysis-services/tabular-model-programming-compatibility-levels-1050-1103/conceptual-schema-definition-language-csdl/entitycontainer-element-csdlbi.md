@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: e328558e-16b0-4d4a-a79a-fdd3c9493595
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 30b24a87a5d1915b16c18557b93abfabfe99ab12
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="entitycontainer-element-csdlbi"></a>EntityContainer-Element (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Der EntityContainer-Element ist ein komplexer Typ, der basierend auf dem CSDL-Typ EntityContainer, die eine Auflistung von Entitäten innerhalb eines einzelnen Datenmodells definiert. In einer Business Intelligence-Anwendung kann das vom einem EntityContainer dargestellte Datenmodell mehrere Tabellen mit durch Beziehungen verknüpften Spalten sowie Berechnungen, Measures und KPIs enthalten. Das Konzept des Modells ähnelt einer Datenbank oder einer Datenquelle.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Das EntityContainer-Element ist ein komplexer Typ, der auf dem CSDL-Typ EntityContainer basiert, und eine Auflistung von Entitäten innerhalb eines einzelnen Datenmodells definiert. In einer Business Intelligence-Anwendung kann das vom einem EntityContainer dargestellte Datenmodell mehrere Tabellen mit durch Beziehungen verknüpften Spalten sowie Berechnungen, Measures und KPIs enthalten. Das Konzept des Modells ähnelt einer Datenbank oder einer Datenquelle.  
   
  Der EntityContainer muss jeden der Entitätstypen angeben, die im Datenmodell enthalten sind, einschließlich Tabellen und Beziehungen. Informationen zu diesen Modellentitäten werden anhand der Auflistung von untergeordneten Entitäten des Typs (Entitätselement) angegeben. Weitere Informationen finden Sie unter [EntityType-Element &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md).  
   
@@ -34,20 +36,20 @@ ms.lasthandoff: 01/08/2018
 ## <a name="elements-and-attributes"></a>Elemente und Attribute  
  In der nachfolgenden Tabelle werden die Elemente und Attribute beschrieben, die im EntityContainer-Element definiert werden.  
   
-|Name|Ist erforderlich|Description|  
+|Name|Ist erforderlich|Beschreibung|  
 |----------|-----------------|-----------------|  
-|Name|ja|Der Name des Datenmodells.|  
-|Beschriftung|nein|Eine Beschreibung der Datenbank oder des Datenmodells.|  
-|Culture|ja|Eine Zeichenfolge, die die LCID der Anforderung enthält.|  
-|CompareOptions|ja|Optionen für die sprachenspezifische Sortierung und den Zeichenfolgenvergleich für das Modell.|  
-|DirectQueryMode|nein|Eine Enumeration, die den Abfragemodus angibt, wenn das Modell den DirectQuery-Modus verwendet.|  
+|Name|Ja|Der Name des Datenmodells.|  
+|Beschriftung|Nein|Eine Beschreibung der Datenbank oder des Datenmodells.|  
+|Culture|Ja|Eine Zeichenfolge, die die LCID der Anforderung enthält.|  
+|CompareOptions|Ja|Optionen für die sprachenspezifische Sortierung und den Zeichenfolgenvergleich für das Modell.|  
+|DirectQueryMode|Nein|Eine Enumeration, die den Abfragemodus angibt, wenn das Modell den DirectQuery-Modus verwendet.|  
 |EntitySet-Element|ja|[EntitySet-Element &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)|  
-|AssociationSet-Element|nein|[AssociationSet-Element &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
+|AssociationSet-Element|Nein|[AssociationSet-Element &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
   
 ## <a name="compareoptions-element"></a>CompareOptions-Element  
  Das CompareOptions-Attribut definiert Sortierungseigenschaften, die auf das Datenmodell angewendet werden. Die von CompareOptions definierten Eigenschaften werden von Einstellungen für die Sortierreihenfolge sowie von der Unterscheidung nach Kana und Berücksichtigung der Groß-/Kleinschreibung abgeleitet, die in der Analysis Services-Datenbank zum Zeitpunkt des Modellentwurfs festgelegt werden. In der folgenden Tabelle werden die Werte beschrieben, die als Teil des CompareOptions-Attributs enthalten sind.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |IgnoreCase|Ein boolescher Wert, der angibt, ob Zeichenfolgenvergleiche die Groß- und Kleinschreibung ignorieren sollen.|  
 |IgnoreNonSpace|Ein boolescher Wert, der angibt, ob Zeichenfolgenvergleiche Kombinationszeichen ohne Zwischenraum wie diakritische Zeichen ignorieren sollen.|  
@@ -59,7 +61,7 @@ ms.lasthandoff: 01/08/2018
   
  Der einfache Typ DirectQueryMode definiert den Typ der Abfrage, die standardmäßig verwendet wird, wenn mit dem Modell Daten direkt aus einer relationalen Datenquelle abgerufen werden können. Diese Eigenschaft kann nur für tabellarische Modelle verwendet werden, die im DirectQuery-Modus ausgeführt werden. In der folgenden Tabelle sind die möglichen Werte für die Enumeration des DirectQuery-Modus aufgelistet.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |InMemory|Gibt an, dass für Abfragen des Modells Daten im Cache verwendet werden.|  
 |InMemoryWithDirectQuery|Gibt an, dass Abfragen des Modells standardmäßig Daten aus der relationalen Datenquelle verwenden.|  
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/08/2018
 |DirectQuery|Gibt an, dass für Abfragen des Modells nur Daten in der relationalen Datenquelle verwendet werden.|  
   
 ## <a name="example"></a>Beispiel  
- **Tabellarisch**  
+ **Tabellarische**  
   
  Im folgenden Beispiel wird ein Teil des tabellarischen AdventureWorks-Datenmodells in CSDLBI, Version 1.1, dargestellt.  
   
@@ -92,7 +94,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="example"></a>Beispiel  
- **Multidimensional**  
+ **Mehrdimensionale**  
   
  Im folgenden Beispiel wird ein Auszug aus dem Contoso-Vorgangscube in CSDLBI, Version 1.1, dargestellt.  
   

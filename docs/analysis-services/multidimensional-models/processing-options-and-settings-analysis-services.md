@@ -23,19 +23,20 @@ helpviewer_keywords:
 - process clear structure option [Analysis Services]
 - process default option [Analysis Services]
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: e05c1a60cc016b9f72d486a5b0f03037b0faa9ef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Verarbeiten von Optionen und Einstellungen (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Beim Verarbeiten von Objekten in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], können Sie eine Verarbeitungsoption auswählen, die den Typ der Verarbeitung zu steuern, die für jedes Objekt tritt auswählen. Die Verarbeitungstypen unterscheiden sich von Objekt zu Objekt sowie aufgrund von Änderungen, die für das Objekt vorgenommen wurden, seit es zuletzt verarbeitet wurde. Wenn Sie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwenden, um die Verarbeitungsmethode automatisch auszuwählen, wird die Methode verwendet, die das Objekt in der kürzesten Zeit in einem vollständig verarbeiteten Zustand zurückgibt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Beim Verarbeiten von Objekten in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie eine Verarbeitungsoption auswählen, die den Verarbeitungstyp der einzelnen Objekte steuert. Die Verarbeitungstypen unterscheiden sich von Objekt zu Objekt sowie aufgrund von Änderungen, die für das Objekt vorgenommen wurden, seit es zuletzt verarbeitet wurde. Wenn Sie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwenden, um die Verarbeitungsmethode automatisch auszuwählen, wird die Methode verwendet, die das Objekt in der kürzesten Zeit in einem vollständig verarbeiteten Zustand zurückgibt.  
   
  Mit den Aufbereitungseinstellungen können Sie steuern, welche Objekte verarbeitet werden, und welche Methoden zum Verarbeiten der Objekte verwendet werden. Bestimmte Aufbereitungseinstellungen werden vor allem für Batchverarbeitungsaufträge verwendet. Weitere Informationen zur Batchverarbeitung finden Sie unter [Batchverarbeitung &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
   
@@ -45,12 +46,12 @@ ms.lasthandoff: 01/08/2018
 ## <a name="processing-options"></a>Verarbeitungsoptionen  
  In der folgenden Tabelle werden die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verfügbaren Verarbeitungsmethoden beschrieben und die Objekte identifiziert, für die die einzelnen Methoden Unterstützung bieten.  
   
-|Mode|Gilt für|Description|  
+|Modus|Gilt für|Description|  
 |----------|----------------|-----------------|  
 |**Standard verarbeiten**|Cubes, Datenbanken, Dimensionen, Measuregruppen, Miningmodelle, Miningstrukturen und Partitionen.|Erkennt den Verarbeitungsstatus von Datenbankobjekten und führt die Verarbeitung durch, mit der nicht verarbeitete oder teilweise verarbeitete Objekte in den vollständig verarbeiteten Status versetzt werden. Wenn Sie eine Datenbindung ändern, führt die Option Standard verarbeiten für das betroffene Objekt den Schritt Vollständig verarbeiten aus.|  
 |**Vollständig verarbeiten**|Cubes, Datenbanken, Dimensionen, Measuregruppen, Miningmodelle, Miningstrukturen und Partitionen.|Verarbeitet ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekt und alle in ihm enthaltenen Objekte. Wenn die Verarbeitungsmethode Vollständig verarbeiten für ein bereits verarbeitetes Objekt ausgeführt wird, löscht [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] alle Daten im Objekt und verarbeitet anschließend das Objekt. Dieser Verarbeitungstyp ist erforderlich, wenn eine strukturelle Änderung am Objekt vorgenommen wurde, z. B. wenn eine Attributhierarchie hinzugefügt, gelöscht oder umbenannt wurde.|  
 |**Löschung verarbeiten**|Cubes, Datenbanken, Dimensionen, Measuregruppen, Miningmodelle, Miningstrukturen und Partitionen.|Löscht die Daten im angegebenen Objekt und sämtliche untergeordneten Komponentenobjekte. Nach dem Löschen der Daten wird das Objekt nicht erneut geladen.|  
-|**Verarbeiten von Daten**|Dimensionen, Cubes, Measuregruppen und Partitionen.|Verarbeitet Daten ohne die Erstellung von Aggregationen oder Indizes. Wenn in den Partitionen Daten enthalten sind, wird die Partition gelöscht, bevor sie mit Quelldaten neu aufgefüllt wird.|  
+|**Daten verarbeiten**|Dimensionen, Cubes, Measuregruppen und Partitionen.|Verarbeitet Daten ohne die Erstellung von Aggregationen oder Indizes. Wenn in den Partitionen Daten enthalten sind, wird die Partition gelöscht, bevor sie mit Quelldaten neu aufgefüllt wird.|  
 |**Hinzufügung verarbeiten**|Dimensionen, Measuregruppen und Partitionen.<br /><br /> Hinweis: **Hinzufügung verarbeiten** ist für die Verarbeitung von Dimensionen in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]nicht verfügbar, aber Sie können XMLA-Skripts schreiben, die diese Aktion ausführen.|Fügt für Dimensionen neue Elemente hinzu und aktualisiert Beschriftungen und Beschreibungen von Dimensionsattributen.<br /><br /> Fügt für Measuregruppen und Partitionen neu verfügbare Faktendaten hinzu und verarbeitet nur die relevanten Partitionen.|  
 |**Update verarbeiten**|Dimensionen|Erzwingt das erneute Lesen von Daten und ein Update der Dimensionsattribute. Flexible Aggregationen und Indizes in verknüpften Partitionen werden gelöscht.|  
 |**Index verarbeiten**|Cubes, Dimensionen, Measuregruppen und Partitionen.|Erstellt Indizes und Aggregationen für alle verarbeiteten Partitionen oder erstellt diese neu. Für nicht verarbeitete Objekte verursacht diese Option einen Fehler.<br /><br /> Die Verarbeitung mit dieser Option ist erforderlich, wenn Sie Verzögertes Verarbeiten deaktivieren.|  

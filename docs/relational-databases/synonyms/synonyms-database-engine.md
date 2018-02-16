@@ -23,10 +23,10 @@ ms.author: rickbyh
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 15c8ca0028ae722823198087b06d4f435aba40e4
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="synonyms-database-engine"></a>Synonyme (Datenbankmodul)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

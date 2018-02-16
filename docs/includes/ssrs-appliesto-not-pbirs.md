@@ -1,1 +1,1 @@
-![Nein](media/no.png)Power BI-Berichtsserver
+![nein](media/no.png)Power BI-Berichtsserver

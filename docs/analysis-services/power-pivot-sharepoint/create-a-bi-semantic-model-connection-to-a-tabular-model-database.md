@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ae5acd43bb7d4bd4956cc5dae36e7dc15787a83f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Erstellen einer BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Verwenden Sie die Informationen in diesem Thema, um eine BI-semantikmodellverbindung einzurichten, die mit einer tabellarischen Modelldatenbank auf einer Analysis Services-Instanz außerhalb der SharePoint-Farm ausgeführt umleitet.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Verwenden Sie die Informationen in diesem Thema, um eine BI-Semantikmodellverbindung einzurichten, durch die eine Umleitung zu einer Datenbank für tabellarische Modelle erfolgt, die auf einer Analysis Services-Instanz außerhalb der SharePoint-Farm ausgeführt wird.  
   
  Nachdem Sie eine BI-Semantikmodellverbindung erstellt und SharePoint- und Analysis Services-Berechtigungen konfiguriert haben, kann diese Verbindung als Datenquelle für Excel- oder [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Berichte verwendet werden.  
   

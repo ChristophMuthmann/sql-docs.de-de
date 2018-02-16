@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 190bfa92-2445-404d-86df-7cc94d283add
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 21e4a28e2be7492302e1b68506b4e74f695d30fd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables---calculated-column-representation"></a>Tabellen - Darstellung einer berechneten Spalte
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Eine berechnete Spalte ist ein DAX-Ausdruck, der eine neue Spalte in einer Tabelle erstellt, und die abgerufenen Werte werden in der Tabelle gespeichert. Der berechnete Spaltenausdruck wird bei jeder Verarbeitung der Tabelle ausgewertet.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Eine berechnete Spalte ist ein DAX-Ausdruck, der eine neue Spalte in einer Tabelle erstellt. Die abgerufenen Werte werden in der Tabelle gespeichert. Der berechnete Spaltenausdruck wird bei jeder Verarbeitung der Tabelle ausgewertet.  
   
 ## <a name="calculated-column-representation"></a>Darstellung einer berechneten Spalte  
   

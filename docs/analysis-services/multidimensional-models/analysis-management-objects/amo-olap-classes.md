@@ -1,7 +1,7 @@
 ---
 title: AMO-OLAP-Klassen | Microsoft Docs
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Analysis Management Objects, OLAP
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: 397509b7-a4fb-40de-aa30-c66dc9ed2105
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 05bf661e22f6c85a97b14955308660fbaa8d0d49
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 609958fd81ee7c703d7608f9a353c15658c1528b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-olap-classes"></a>AMO-OLAP-Klassen
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Management Objects (AMO) OLAP-Klassen können Sie die erstellen, ändern, löschen und Verarbeiten von Cubes, Dimensionen und verknüpften Objekten wie Key Performance Indicators (KPIs), Aktionen und proaktives Zwischenspeichern.  
+  OLAP-Klassen in Analysis Management Objects (AMO) erleichtern das Erstellen, Bearbeiten, Löschen und Verarbeiten von Cubes, Dimensionen und verknüpften Objekten wie Key Performance Indicators (KPIs), Aktionen und proaktiver Zwischenspeicherung.  
   
  Weitere Informationen zum Einrichten der AMO-Programmierumgebung wie zum Herstellen einer Verbindung mit einem Server, den Zugriff auf eine Datenbank oder zum Definieren von Datenquellen und Datenquellensichten finden Sie unter [grundlegende AMO-Klassen](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md).  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="basic-classes"></a>Grundlegende Klassen  
   
-###  <a name="Dimensions"></a>Dimensionsobjekte  
+###  <a name="Dimensions"></a> Dimensionsobjekte  
  Eine Dimension wird erstellt, indem sie der Dimensionsauflistung der übergeordneten Datenbank hinzugefügt und das <xref:Microsoft.AnalysisServices.Dimension>-Objekt mithilfe der Update-Methode auf dem Server aktualisiert wird.  
   
  Um eine Dimension zu entfernen, müssen Sie sie mithilfe der Drop-Methode der <xref:Microsoft.AnalysisServices.Dimension> löschen. Entfernen einer <xref:Microsoft.AnalysisServices.Dimension> aus den Dimensionen-Auflistung der Datenbank mithilfe der Remove-Methode löscht keine es auf dem Server nur im AMO-Objektmodell.  
@@ -72,7 +73,7 @@ ms.lasthandoff: 01/08/2018
   
  Weitere Informationen zu verfügbaren Methoden und Eigenschaften finden Sie unter <xref:Microsoft.AnalysisServices.Dimension> in der <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Cubes"></a>Cubeobjekte  
+###  <a name="Cubes"></a> Cubeobjekte  
  Ein Cube wird erstellt, indem er der Cubeauflistung der Datenbank hinzugefügt und das <xref:Microsoft.AnalysisServices.Cube>-Objekt mithilfe der Update-Methode auf dem Server aktualisiert wird. Die Update-Methode des Cubes kann den Parameter UpdateOptions.ExpandFull enthalten, der sicherstellt, dass alle geänderten Objekte im Cube im Rahmen dieses Updatevorgangs auf dem Server aktualisiert werden.  
   
  Um einen Cube zu entfernen, muss er gelöscht werden, indem Sie mit der Drop-Methode, der die <xref:Microsoft.AnalysisServices.Cube>. Wenn ein Cube aus der Auflistung entfernt wird, wirkt sich dies nicht auf den Server aus.  
@@ -81,24 +82,24 @@ ms.lasthandoff: 01/08/2018
   
  Weitere Informationen zu verfügbaren Methoden und Eigenschaften finden Sie unter <xref:Microsoft.AnalysisServices.Cube> in der <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="MeasureGroups"></a>MeasureGroup-Objekte  
+###  <a name="MeasureGroups">MeasureGroup-Objekte</a>  
  Eine Measuregruppe wird erstellt, indem sie der Measuregruppenauflistung des Cubes hinzugefügt und anschließend das <xref:Microsoft.AnalysisServices.MeasureGroup>-Objekt mithilfe seiner eigenen Update-Methode auf dem Server aktualisiert wird. Ein <xref:Microsoft.AnalysisServices.MeasureGroup>-Objekt wird mit seiner eigenen Drop-Methode entfernt.  
   
  Ein <xref:Microsoft.AnalysisServices.MeasureGroup> Objekt verarbeitet werden kann, nachdem es erstellt wurde. Die <xref:Microsoft.AnalysisServices.MeasureGroup> mithilfe seiner eigenen Verarbeitungsmethode verarbeitet werden können, oder sie kann verarbeitet werden, wenn ein übergeordnetes Objekt selbst mit seiner eigenen Verarbeitungsmethode verarbeitet.  
   
  Weitere Informationen zu verfügbaren Methoden und Eigenschaften finden Sie unter <xref:Microsoft.AnalysisServices.MeasureGroup> in der <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Partition"></a>Partitionsobjekte  
+###  <a name="Partition">Partitionsobjekte</a>  
  Ein <xref:Microsoft.AnalysisServices.Partition> Objekt wird erstellt, indem es der partitionsauflistung der übergeordneten Measuregruppe hinzugefügt und anschließend die <xref:Microsoft.AnalysisServices.Partition> Objekt auf dem Server mithilfe der Update-Methode. Ein <xref:Microsoft.AnalysisServices.Partition>-Objekt wird mithilfe der Drop-Methode entfernt.  
   
  Weitere Informationen zu verfügbaren Methoden und Eigenschaften finden Sie unter <xref:Microsoft.AnalysisServices.Partition> in der <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="AggregationDesign"></a>AggregationDesign-Objekte  
+###  <a name="AggregationDesign">AggregationDesign-Objekte</a>  
  Aggregationsentwürfe werden erstellt, mit der AggregationDesign-Methode aus einer <xref:Microsoft.AnalysisServices.AggregationDesign> Objekt.  
   
  Weitere Informationen zu verfügbaren Methoden und Eigenschaften finden Sie unter <xref:Microsoft.AnalysisServices.AggregationDesign> in der <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Aggregation"></a>Aggregationsobjekte  
+###  <a name="Aggregation">Aggregationsobjekte</a>  
  Ein <xref:Microsoft.AnalysisServices.Aggregation>-Objekt wird erstellt, indem es der Auflistung der Aggregationsentwürfe der übergeordneten Measuregruppe hinzugefügt und anschließend das übergeordnete Measuregruppenobjekt mithilfe der Update-Methode auf dem Server aktualisiert wird. Eine Aggregation wird mit der Remove-Methode oder der RemoveAt-Methode aus der <xref:Microsoft.AnalysisServices.AggregationCollection> entfernt.  
   
  Weitere Informationen zu verfügbaren Methoden und Eigenschaften finden Sie unter <xref:Microsoft.AnalysisServices.Aggregation> in der <xref:Microsoft.AnalysisServices>.  
@@ -118,7 +119,7 @@ ms.lasthandoff: 01/08/2018
   
  AMO wird zum Festlegen der Definitionen für dieses verbesserte Verhalten verwendet. Das eigentliche Verhalten wird jedoch vom Browsing-Client definiert, der alle diese Verbesserungen implementiert.  
   
-###  <a name="Action"></a>Aktionsobjekte  
+###  <a name="Action">Aktionsobjekte</a>  
  Ein <xref:Microsoft.AnalysisServices.Action>-Objekt wird erstellt, indem es der Auflistung der Aktionen des Cubes hinzugefügt und anschließend das <xref:Microsoft.AnalysisServices.Cube>-Objekt mithilfe der Update-Methode auf dem Server aktualisiert wird. Die Update-Methode des Cubes kann den Parameter UpdateOptions.ExpandFull enthalten, der sicherstellt, dass alle geänderten Objekte im Cube im Rahmen dieses Updatevorgangs auf dem Server aktualisiert werden.  
   
  Um ein <xref:Microsoft.AnalysisServices.Action>-Objekt zu entfernen, müssen Sie es aus der Auflistung löschen und den übergeordneten Cube aktualisieren.  
@@ -127,7 +128,7 @@ ms.lasthandoff: 01/08/2018
   
  Weitere Informationen zu verfügbaren Methoden und Eigenschaften finden Sie unter <xref:Microsoft.AnalysisServices.Action> in der <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="KPI"></a>KPI-Objekte  
+###  <a name="KPI"></a> KPI-Objekte  
  Ein <xref:Microsoft.AnalysisServices.Kpi> Objekt wird erstellt, indem es der KPI-Auflistung des Cubes hinzugefügt und anschließend die <xref:Microsoft.AnalysisServices.Cube> -Objekt auf dem Server mithilfe der Update-Methode. Die Update-Methode des Cubes kann den Parameter UpdateOptions.ExpandFull enthalten, der sicherstellt, dass alle geänderten Objekte im Cube im Rahmen dieses Updatevorgangs auf dem Server aktualisiert werden.  
   
  So entfernen Sie eine <xref:Microsoft.AnalysisServices.Kpi> -Objekts können sie muss aus der Auflistung entfernt werden und der übergeordneten Cube muss aktualisiert werden.  
@@ -136,7 +137,7 @@ ms.lasthandoff: 01/08/2018
   
  Weitere Informationen zu verfügbaren Methoden und Eigenschaften finden Sie unter <xref:Microsoft.AnalysisServices.Kpi> in der <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Perspective"></a>Perspective-Objekte  
+###  <a name="Perspective">Perspective-Objekte</a>  
  Ein <xref:Microsoft.AnalysisServices.Perspective>-Objekt wird erstellt, indem es der Perspektivenauflistung des Cubes hinzugefügt und anschließend das <xref:Microsoft.AnalysisServices.Cube>-Objekt mithilfe der Update-Methode auf dem Server aktualisiert wird. Die Update-Methode des Cubes kann den Parameter UpdateOptions.ExpandFull enthalten, der sicherstellt, dass alle geänderten Objekte im Cube im Rahmen dieses Updatevorgangs auf dem Server aktualisiert werden.  
   
  Um ein <xref:Microsoft.AnalysisServices.Perspective>-Objekt zu entfernen, müssen Sie es aus der Auflistung löschen und dann den übergeordneten Cube aktualisieren.  
@@ -145,14 +146,14 @@ ms.lasthandoff: 01/08/2018
   
  Weitere Informationen zu verfügbaren Methoden und Eigenschaften finden Sie unter <xref:Microsoft.AnalysisServices.Perspective> in der <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Translation"></a>Übersetzungsobjekte  
+###  <a name="Translation">Übersetzungsobjekte</a>  
  Ein <xref:Microsoft.AnalysisServices.Translation>-Objekt wird erstellt, indem es der Übersetzungsauflistung des gewünschten Objekts hinzugefügt und anschließend das am nächsten liegende übergeordnete Hauptobjekt mithilfe der Update-Methode auf dem Server aktualisiert wird. Die Update-Methode des am nächsten liegenden übergeordneten Objekts kann den Parameter UpdateOptions.ExpandFull enthalten, der sicherstellt, dass alle untergeordneten geänderten Objekte im Rahmen dieses Updatevorgangs auf dem Server aktualisiert werden.  
   
  So entfernen Sie ein <xref:Microsoft.AnalysisServices.Translation> -Objekt muss aus der Auflistung entfernt werden, und klicken Sie dann den nächste übergeordneten Objekt muss aktualisiert werden.  
   
  Weitere Informationen zu verfügbaren Methoden und Eigenschaften finden Sie unter <xref:Microsoft.AnalysisServices.Translation> in der <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="ProactiveCaching"></a>ProactiveCaching-Objekte  
+###  <a name="ProactiveCaching">ProactiveCaching-Objekte</a>  
  Ein <xref:Microsoft.AnalysisServices.ProactiveCaching> Objekt wird erstellt, indem es die proaktive Zwischenspeicherung objektauflistung der Dimension oder Partition hinzugefügt, dann aktualisieren die Dimension oder Partition-Objekt an den Server mithilfe der Update-Methode.  
   
  So entfernen Sie eine <xref:Microsoft.AnalysisServices.ProactiveCaching> Objekt ist, muss Sie aus der Auflistung entfernt werden, und klicken Sie dann das übergeordnete Objekt muss aktualisiert werden.  

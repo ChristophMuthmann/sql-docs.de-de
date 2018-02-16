@@ -1,1 +1,1 @@
-![Ja](media/yes.png)SharePoint
+![ja](media/yes.png)SharePoint

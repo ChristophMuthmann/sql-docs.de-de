@@ -27,19 +27,20 @@ helpviewer_keywords:
 - ROLAP
 - medium latency MOLAP
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 42823cdd118d3fb52df6265671eaca0fd25be96c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Festlegen des Partitionsspeichers (Analysis Services – Mehrdimensional)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt mehrere standardspeicherkonfigurationen für Speichermodi und Zwischenspeicherungsoptionen. Diese stellen häufig genutzte Konfigurationen zur Updatebenachrichtigung, Latenzzeit und Neuerstellung von Daten bereit.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt mehrere standardspeicherkonfigurationen für Speichermodi und Zwischenspeicherungsoptionen. Diese stellen häufig genutzte Konfigurationen zur Updatebenachrichtigung, Latenzzeit und Neuerstellung von Daten bereit.  
   
  Sie können den Partitionsspeicher auf der Registerkarte Partitionen des Cubes [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]oder auf der Seite mit der Partitionseigenschaft in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angeben.  
   

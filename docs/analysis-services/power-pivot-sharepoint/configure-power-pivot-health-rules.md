@@ -12,20 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1bd59f4d64395ee1def3d8e1c1eaf31942a6533c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-health-rules"></a>Konfigurieren von Power Pivot-Integritätsregeln
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]für SharePoint enthält SharePoint-Integritätsregeln, mit denen Sie überwachen, und Server serververfügbarkeit sowie Konfigurationsprobleme zu beheben. Die für [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] für SharePoint geltenden Integritätsregeln werden auf der Seite „Regeldefinitionen überprüfen“ angezeigt.  
+[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] für SharePoint enthält SharePoint-Integritätsregeln, mithilfe derer Sie Probleme mit der Serververfügbarkeit und -konfiguration überwachen und beheben können. Die für [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] für SharePoint geltenden Integritätsregeln werden auf der Seite „Regeldefinitionen überprüfen“ angezeigt.  
   
  Integritätsregeln ermöglichen die frühe Erkennung von Serverproblemen, die zu Dienstunterbrechungen führen können. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] für SharePoint stellt eine Reihe von Regeln bereit, mit denen Sie Probleme identifizieren und beheben können, bevor sie sich auf die Benutzer auswirken. Sie können viele dieser Regeln an die eindeutigen Merkmale der Bereitstellung anpassen. Wenn Sie z. B. mehr Zeit möchten, um auf Warnungen zum Speicherplatz zu reagieren, können Sie den Prozentsatz des verfügbaren Speicherplatzes von 5 % auf 10 % erhöhen, damit Sie die Warnung früher erhalten.  
   
@@ -49,7 +49,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
  [Konfigurieren von Integritätsregeln zum Auswerten der Anwendungsstabilität (Power Pivot-Dienstanwendung)](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  Sie müssen Dienstanwendungsadministrator sein, um die Konfigurationseigenschaften der Analysis Services-Instanz und [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Dienstanwendung ändern zu können.  
   
 ##  <a name="bkmk_view"></a> Anzeigen von Power Pivot-Integritätsregeln  

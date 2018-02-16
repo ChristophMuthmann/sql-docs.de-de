@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Business Intelligence Development Studio, defining projects [Analysis Services]
 - items [Analysis Services]
 ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 366c0e4f2a3238ac9e2552553f1492b9a41b46e7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Erstellen eines Analysis Services-Projekts (SSDT)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Können Sie definieren eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] im Projekt [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] entweder mithilfe der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektvorlage oder mithilfe des Imports [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Assistenten zum Lesen des Inhalts einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank. Wenn gerade keine Projektmappe in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]geladen ist, wird beim Erstellen eines neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts automatisch eine neue Projektmappe erstellt. Andernfalls wird der vorhandenen Projektmappe das neue [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt hinzugefügt. Eine bewährte Methode für die Projektmappenentwicklung besteht darin, getrennte Projekte für die verschiedenen Typen von Anwendungsdaten unter Verwendung einer einzelnen Projektmappe zu erstellen, sofern sich die Projekte aufeinander beziehen. Sie können z. B. über eine einzelne Projektmappe verfügen, die getrennte Projekte für Integration Services-Pakete, Analysis Services-Datenbanken und Reporting Services-Berichte enthält, die alle von der gleichen Geschäftsanwendung verwendet werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Sie können ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] entweder mithilfe der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektvorlage oder mithilfe des Assistenten zum Importieren einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank definieren, um die Inhalte einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank zu lesen. Wenn gerade keine Projektmappe in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]geladen ist, wird beim Erstellen eines neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts automatisch eine neue Projektmappe erstellt. Andernfalls wird der vorhandenen Projektmappe das neue [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt hinzugefügt. Eine bewährte Methode für die Projektmappenentwicklung besteht darin, getrennte Projekte für die verschiedenen Typen von Anwendungsdaten unter Verwendung einer einzelnen Projektmappe zu erstellen, sofern sich die Projekte aufeinander beziehen. Sie können z. B. über eine einzelne Projektmappe verfügen, die getrennte Projekte für Integration Services-Pakete, Analysis Services-Datenbanken und Reporting Services-Berichte enthält, die alle von der gleichen Geschäftsanwendung verwendet werden.  
   
  Ein Analysis Services-Projekt enthält in einer einzelnen Analysis Services-Datenbank verwendete Objekte. Der Name des Servers und der Datenbank, unter denen die Projektmetadaten als instanziierte Objekte bereitgestellt werden, sind in den Bereitstellungseigenschaften des Projekts angegeben.  
   
@@ -121,7 +122,7 @@ ms.lasthandoff: 01/08/2018
   
 |Ordner|Description|  
 |------------|-----------------|  
-|Projektmappen-Explorer|Enthält Datenquellen für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Datenquellen-Assistenten und bearbeiten Sie sie im Datenquellen-Designer.|  
+|Datenquellen|Enthält Datenquellen für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Datenquellen-Assistenten und bearbeiten Sie sie im Datenquellen-Designer.|  
 |Datenquellensichten|Enthält Datenquellensichten für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Datenquellensicht-Assistenten und bearbeiten Sie sie im Datenquellensicht-Designer.|  
 |Cubes|Enthält Cubes für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Cube-Assistenten und bearbeiten sie im Cube-Designer.|  
 |Dimensionen|Enthält Dimensionen für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Dimensions-Assistenten oder dem Cube-Assistenten und bearbeiten Sie sie im Dimensions-Designer.|  
@@ -166,8 +167,8 @@ ms.lasthandoff: 01/08/2018
 ||Miningstruktur|Startet den Data Mining-Assistenten, um dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt eine neue Miningstruktur und das zugehörige Miningmodell hinzuzufügen.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
- [Erstellen von Analysis Services-Projekten &#40;SSDT&#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Konfigurieren von Analysis Services-Projekteigenschaften &#40; SSDT &#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
+ [Erstellen von Analysis Services-Projekten &#40; SSDT &#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
+ [Bereitstellen von Analysis Services-Projekten &#40; SSDT &#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

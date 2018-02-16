@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fac07e924fb94ce9901f1aca771b1954b474aaff
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Bereitstellen von Power Pivot-Lösungen in SharePoint
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Gehen Sie folgendermaßen vor, um zwei Lösungspakete manuell zu bereitstellen, die hinzufügen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Funktionen in einer SharePoint Server 2010-Umgebung. Das Bereitstellen der Lösungen ist ein erforderlicher Schritt für die Konfiguration von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint auf einem SharePoint 2010-Server. Die vollständige Liste der erforderlichen Schritte finden Sie unter [PowerPivot-Serververwaltung und -konfiguration in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Verwenden Sie die folgenden Anweisungen, um zwei Lösungspakete manuell bereitzustellen, die einer SharePoint Server 2010-Umgebung [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Funktionen hinzufügen. Das Bereitstellen der Lösungen ist ein erforderlicher Schritt für die Konfiguration von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint auf einem SharePoint 2010-Server. Die vollständige Liste der erforderlichen Schritte finden Sie unter [PowerPivot-Serververwaltung und -konfiguration in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
  Sie können die Lösungen auch mithilfe des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstools bereitstellen. Die Verwendung des Konfigurationstools ist für eine einzelne Serverinstallation einfacher und effizienter, aber vielleicht möchten Sie die Zentraladministration und PowerShell verwenden, wenn Sie es vorziehen, mit einem vertrauten Tool zu arbeiten oder wenn Sie mehrere Funktionen gleichzeitig konfigurieren. Weitere Informationen zum Verwenden des Konfigurationstools finden Sie unter [PowerPivot-Konfigurationstools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   

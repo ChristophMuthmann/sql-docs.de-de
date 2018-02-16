@@ -11,31 +11,33 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 13df6f10-8efe-4fe9-83a6-96d108809ed1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 51b5bd319480be4c7757d4fb642859af54f209a3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverstoragetables-rowset"></a>DISCOVER_STORAGE_TABLES-Rowset
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Ermöglicht dem Client, der Tabellen zu bestimmen, die in einer im Tabellenmodus oder SharePoint-Modus ausgeführten Analysis Services-Datenbank enthalten sind.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Ermöglicht dem Client, die Tabellen zu bestimmen, die in einer im tabellarischen Modus oder SharePoint-Modus ausgeführten Analysis Services-Datenbank enthalten sind.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das **DISCOVER_STORAGE_TABLES** -Rowset enthält die folgenden Spalten.  
   
 |**Spaltenname**|**Typindikator**|**Länge**|**Beschreibung**|  
 |---------------------|------------------------|----------------|---------------------|  
-|**DATENBANKNAME**|**DBTYPE_WSTR**||Gibt den Namen der Datenbank an, die die Tabellen enthält.<br /><br /> Das **DISCOVER_STORAGE_TABLES** -Rowset kann mithilfe dieser Spalte eingeschränkt werden. Wenn diese Spalte nicht verwendet wird, um das Rowset einzuschränken, wird die aktuelle Datenbank verwendet.|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**||Gibt den Namen der Datenbank an, die die Tabellen enthält.<br /><br /> Das **DISCOVER_STORAGE_TABLES** -Rowset kann mithilfe dieser Spalte eingeschränkt werden. Wenn diese Spalte nicht verwendet wird, um das Rowset einzuschränken, wird die aktuelle Datenbank verwendet.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**||Gibt den Cube oder das Modell an, das die Tabellen enthält.<br /><br /> Das **DISCOVER_STORAGE_TABLES** -Rowset kann mithilfe dieser Spalte eingeschränkt werden.|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**||Der Name der Measuregruppe.|  
-|**PARTITIONSNAME**|**DBTYPE_WSTR**||Der Name der Partition.|  
+|**PARTITION_NAME**|**DBTYPE_WSTR**||Der Name der Partition.|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||Der Name der Dimension.|  
 |**TABLE_ID**|**DBTYPE_WSTR**||Die ID der Tabelle, die verwendet wird, um die Tabellenattribute zu speichern.|  
 |**TABLE_PARTITIONS_COUNT**|**DBTYPE_ WSTR**||Die Anzahl der Tabellenpartitionen.|  
@@ -48,10 +50,10 @@ ms.lasthandoff: 01/08/2018
   
 |**Spaltenname**|**Typindikator**|**Einschränkungsstatus**|  
 |---------------------|------------------------|---------------------------|  
-|**DATENBANKNAME**|**DBTYPE_WSTR**|Optional.|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|Optional.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|Optional.|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Optional|  
-|**PARTITIONSNAME**|**DBTYPE_WSTR**|Optional|  
+|**PARTITION_NAME**|**DBTYPE_WSTR**|Optional|  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird von der Standarddatenbank der aktuellen Verbindung eine Liste der Speichertabellen und die Anzahl der darin jeweils enthaltenen Zeilen zurückgegeben.  

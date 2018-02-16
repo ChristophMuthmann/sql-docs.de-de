@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 11a372ebe9e40bc5800b8a38a35575aa66095dc7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>Erstellen und Anpassen des PowerPivot-Katalogs
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog ist eine besondere Art von SharePoint-Dokumentbibliothek, die umfangreiche Vorschau- und dokumentverwaltungsmöglichkeiten für veröffentlichte Excel-Arbeitsmappen bereitstellt und Reporting Services-Berichte enthalten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Daten.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog ist eine besondere SharePoint-Dokumentbibliothek, die umfangreiche Vorschau- und Dokumentverwaltungsmöglichkeiten für veröffentlichte Excel-Arbeitsmappen und Reporting Services-Berichte bereitstellt, die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten enthalten.  
   
 ##  <a name="bkmk_top"></a> In diesem Thema  
   
@@ -125,7 +126,7 @@ ms.lasthandoff: 01/08/2018
 ####  <a name="bkmk_hide_refresh_button"></a> Deaktivieren oder Ausblenden der Schaltfläche "Aktualisieren"  
  Die Schaltfläche **Datenaktualisierung verwalten** kann nicht ausgeblendet werden. Allerdings wird die Schaltfläche deaktiviert, wenn der Benutzer keine ausreichenden Berechtigungen besitzt.  
   
- ![As_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "As_powerpivot_refresh_manage_reresh")  
+ ![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
   
  Arbeitsmappenbesitzer oder -autoren benötigen die Berechtigung **Teilnehmen** , um die Datenaktualisierung für eine Arbeitsmappe zu planen. Benutzer mit Mitwirkungsberechtigungen können die Konfigurationsseite der Arbeitsmappe öffnen und bearbeiten, um die zur Datenaktualisierung verwendeten Anmelde- und Zeitplaninformationen anzugeben.  
   

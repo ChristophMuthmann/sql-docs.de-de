@@ -15,10 +15,10 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
 ms.openlocfilehash: fd2079b0b0186192fc3b55e7a6ccefd25c1a46bc
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Grundlagen der SQL Server-Verfügbarkeit für Linux-Bereitstellungen
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 02/13/2018
 
 Beginnend mit [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] wird unter Linux und Windows unterstützt. Wie Sie die Windows-basierten [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Bereitstellungen [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Datenbanken und Instanzen unter Linux hochverfügbar sein müssen. Dieser Artikel behandelt die technischen Aspekte der Planung und Bereitstellung von hoch verfügbaren Linux-basierte [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Datenbanken und Instanzen sowie einige der Unterschiede zu Windows-basierten Installationen. Da [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] möglicherweise für Linux-Experten und Linux möglicherweise neu für neue [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -Experten, die Artikel Zeiten werden Konzepte vorgestellt, die möglicherweise auf einige vertraut sind und nicht an andere Personen vertraut.
 
-## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Verfügbarkeitsoptionen für Linux-Bereitstellungen
+## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Verfügbarkeitsoptionen für Linux-Bereitstellungen
 Neben dem Sichern und Wiederherstellen stehen die gleichen drei Verfügbarkeitsfunktionen unter Linux wie für Windows-basierte Bereitstellungen:
 -   Always On-Verfügbarkeitsgruppen (Testreihen)
 -   Always On-Failoverclusterinstanzen (FCIs)
@@ -43,16 +43,16 @@ Unter Linux müssen viele Befehle mit erhöhten Rechten ausgeführt werden, ähn
 2. Die weitere allgemeine und Sicherheit die Möglichkeit zum bewusste auszuführende Aufgaben ist die Verwendung `sudo` vor der Ausführung nichts. In vielen der Beispiele in diesem Artikel verwenden `sudo`.
 
 Einige häufig verwendete Befehle, von denen jedes über verschiedene Schalter und Optionen, die online untersucht werden können:
--   `cd`– Ändern Sie das Verzeichnis
--   `chmod`– Ändern Sie die Berechtigungen von einer Datei oder eines Verzeichnisses
--   `chown`– Ändern des Besitzers einer Datei oder eines Verzeichnisses
--   `ls`– Anzeigen der Inhalte eines Verzeichnisses
--   `mkdir`– Erstellen Sie einen Ordner (Verzeichnis) auf einem Laufwerk
--   `mv`– eine Datei von einem Speicherort zu einem anderen verschieben
--   `ps`– alle Prozesse arbeiten anzeigen
--   `rm`– Löschen Sie eine Datei lokal auf einem Server
--   `rmdir`– Löschen eines Ordners (Verzeichnis)
--   `systemctl`– Starten, beenden oder Aktivieren von Diensten
+-   `cd` – Ändern Sie das Verzeichnis
+-   `chmod` – Ändern Sie die Berechtigungen von einer Datei oder eines Verzeichnisses
+-   `chown` – Ändern des Besitzers einer Datei oder eines Verzeichnisses
+-   `ls` – Anzeigen der Inhalte eines Verzeichnisses
+-   `mkdir` – Erstellen Sie einen Ordner (Verzeichnis) auf einem Laufwerk
+-   `mv` – eine Datei von einem Speicherort zu einem anderen verschieben
+-   `ps` – alle Prozesse arbeiten anzeigen
+-   `rm` – Löschen Sie eine Datei lokal auf einem Server
+-   `rmdir` – Löschen eines Ordners (Verzeichnis)
+-   `systemctl` – Starten, beenden oder Aktivieren von Diensten
 -   Text-Editor-Befehle. Unter Linux stehen Ihnen verschiedene Text-Editor-Optionen, z. B. vi und Emacs.
 
 ## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>Allgemeine Aufgaben bei der von Verfügbarkeitskonfigurationen von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] unter Linux
@@ -96,9 +96,9 @@ Schließlich ist das Verwenden einer Dateifreigabe im Netzwerk-System (NFS) eine
 | 138         | UDP      | Samba (if used) – NetBIOS Datagram                                                                                          |
 | 139         | TCP      | Samba (sofern verwendet) – NetBIOS-Sitzung                                                                                           |
 | 445         | TCP      | Samba (sofern verwendet) – SMB über TCP                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – Der Standardport; Falls gewünscht, können mit ändern.`mssql-conf set network.tcpport <portnumber>`                       |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – Der Standardport; Falls gewünscht, können mit ändern. `mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP, UDP | NFS (sofern verwendet)                                                                                                               |
-| 2224        | TCP      | Schrittmacher – verwendet von`pcsd`                                                                                                |
+| 2224        | TCP      | Schrittmacher – verwendet von `pcsd`                                                                                                |
 | 3121        | TCP      | Schrittmacher – erforderlich, wenn Schrittmacher entfernten Knoten vorhanden sind                                                                    |
 | 3260        | TCP      | iSCSI-Initiator (sofern verwendet) – kann geändert werden, `/etc/iscsi/iscsid.config` (RHEL), aber der Port des iSCSI-Ziels übereinstimmen |
 | 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -Der Standardport für einen Endpunkt AG verwendet kann geändert werden, beim Erstellen des Endpunktes                                |
@@ -203,15 +203,15 @@ Die `corosync.conf` Datei enthält die Konfiguration des Clusters. Befindet sich
 
 #### <a name="cluster-log-location"></a>Protokollspeicherort der Cluster
 Protokollspeicherorte für Schrittmacher Cluster unterscheiden sich abhängig von der Verteilung.
--   RHEL "und" SLES-`/var/log/cluster/corosync.log`
+-   RHEL "und" SLES- `/var/log/cluster/corosync.log`
 -   Ubuntu – `/var/log/corosync/corosync.log`
 
 Um den Standardspeicherort für die Protokollierung zu ändern, ändern `corosync.conf`.
 
-## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Planen der Schrittmacher-Cluster[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Planen der Schrittmacher-Cluster [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 Dieser Abschnitt beschreibt die Planung wichtigen Punkte bei einem Cluster mit Schrittmacher.
 
-### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Virtualisierung von Linux-basierten Schrittmacher Cluster für[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Virtualisierung von Linux-basierten Schrittmacher Cluster für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 Verwenden von virtuellen Computern zum Bereitstellen von Linux-basierten [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Bereitstellungen für Testreihen und Failoverclusterinstanzen (fcis) wird über die gleichen Regeln wie für den jeweiligen Entsprechungen der Windows-basierten behandelt. Es gibt ein grundlegender Satz von Regeln für unterstützbarkeit von virtualisierten [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Bereitstellungen von Microsoft bereitgestellten [Microsoft Support-KB-956893](https://support.microsoft.com/en-us/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Andere Hypervisoren z. B. Microsoft Hyper-V und VMware ESXi möglicherweise unterschiedliche Varianzen oben auf dieser, aufgrund von Unterschieden in den Plattformen selbst.
 
 Bei Testreihen und FCIs unter Virtualisierung betrifft, stellen Sie sicher, dass für die Knoten eines bestimmten Clusters Schrittmacher antiaffinität festgelegt ist. Wenn für eine hohe Verfügbarkeit in einer Verfügbarkeitsgruppe oder einer FCI-Konfiguration, die virtuellen Computer hostet konfiguriert [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sollte nie auf demselben hypervisorhost ausgeführt werden. Z. B. wenn eine FCI zwei Knoten bereitgestellt wird, gibt es müssten werden *mindestens* drei Hypervisor-Hosts, die an einer beliebigen Stelle für eine der virtuellen Computer hostet einen Knoten im Fall eines Fehlers Host wechseln besteht vor allem, wenn Sie Funktionen verwenden, wie z. B. Live Migration oder "vMotion".

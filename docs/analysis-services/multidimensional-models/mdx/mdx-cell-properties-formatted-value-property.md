@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0e69f9e798dd5922bae7c677fc599c8f82293ee1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-properties---formattedvalue-property"></a>MDX-Cell Properties - FORMATTED_VALUE-Eigenschaft
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Die FORMATTED_VALUE-Eigenschaft basiert auf den Interaktionen der Eigenschaften VALUE, FORMAT_STRING und LANGUAGE der Zelle. In diesem Thema wird erläutert, wie diese Eigenschaften beim Erstellen der FORMATTED_VALUE-Eigenschaft interagieren.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Die FORMATTED_VALUE-Eigenschaft basiert auf den Interaktionen der Eigenschaften VALUE, FORMAT_STRING und LANGUAGE der Zelle. In diesem Thema wird erläutert, wie diese Eigenschaften beim Erstellen der FORMATTED_VALUE-Eigenschaft interagieren.  
   
 ## <a name="value-formatstring-language-properties"></a>Eigenschaften VALUE, FORMAT_STRING und LANGUAGE  
  In der folgenden Tabelle wird das Wesen dieser Eigenschaften beschrieben, um ihre kombinierte Verwendung zu erklären.  
@@ -84,14 +85,14 @@ ms.lasthandoff: 01/08/2018
   
 |Member|FORMATTED_VALUE|Erklärung|  
 |------------|----------------------|-----------------|  
-|Ein|$5,040.00|FORMAT_STRING wird auf `Currency` festgelegt, und LANGUAGE ist `1033`(geerbt vom Wert des Systemgebietsschemas).|  
+|A|$5,040.00|FORMAT_STRING wird auf `Currency` festgelegt, und LANGUAGE ist `1033`(geerbt vom Wert des Systemgebietsschemas).|  
 |B|€5.040,00|FORMAT_STRING wird auf `Currency` festgelegt (geerbt von A), und LANGUAGE wird explizit auf `1034` (Spanien) festgelegt, wodurch das Euro-Symbol, das abweichende Dezimaltrennzeichen und das abweichende Tausendertrennzeichen erhalten werden.|  
-|c|$5.040,00|FORMAT_STRING wird auf `$#,##0.00` (eine Überschreibung von Currency) von A festgelegt, und LANGUAGE wird explizit auf `1034` (Spanien) festgelegt. Da die FORMAT_STRING-Eigenschaft das Währungssymbol explizit auf $ festgelegt hat, wird der FORMATTED_VALUE mit dem Dollarzeichen dargestellt. Da jedoch `.` (Punkt) und `,` (Komma) Platzhalter für Dezimaltrennzeichen und Tausendertrennzeichen sind, wird entsprechend der Sprachspezifikation eine Ausgabe generiert, in der Dezimal- und Tausendertrennzeichen lokalisiert sind.|  
+|C|$5.040,00|FORMAT_STRING wird auf `$#,##0.00` (eine Überschreibung von Currency) von A festgelegt, und LANGUAGE wird explizit auf `1034` (Spanien) festgelegt. Da die FORMAT_STRING-Eigenschaft das Währungssymbol explizit auf $ festgelegt hat, wird der FORMATTED_VALUE mit dem Dollarzeichen dargestellt. Da jedoch `.` (Punkt) und `,` (Komma) Platzhalter für Dezimaltrennzeichen und Tausendertrennzeichen sind, wird entsprechend der Sprachspezifikation eine Ausgabe generiert, in der Dezimal- und Tausendertrennzeichen lokalisiert sind.|  
 |D|5.04E+03|FORMAT_STRING wird auf `Scientific` und LANGUAGE auf `1033`(geerbt vom Wert des Systemgebietsschemas) festgelegt, dadurch wird `.` (Punkt) als Dezimaltrennzeichen verwendet.|  
 |E|5,04E+03|FORMAT_STRING wird auf `Scientific` und LANGUAGE wird explizit auf `1034,` festgelegt. Dadurch wird `,` (Komma) als Dezimaltrennzeichen erhalten.|  
 |V|50.40%|FORMAT_STRING wird auf `Percent` und LANGUAGE auf `1033`(geerbt vom Wert des Systemgebietsschemas) festgelegt, dadurch wird `.` (Punkt) als Dezimaltrennzeichen verwendet.<br /><br /> Beachten Sie, dass VALUE von 5040 in 0.5040 geändert wurde.|  
 |G|50,40%|FORMAT_STRING wird auf `Percent`(geerbt von F) und LANGUAGE wird explizit auf `1034` festgelegt, sodass `,` (Komma) als Dezimaltrennzeichen verwendet wird.<br /><br /> Beachten Sie, dass VALUE vom Wert von F geerbt wurde.|  
-|H|nein|FORMAT_STRING wird auf `YES/NO`, VALUE auf 0 und LANGUAGE explizit auf `1034`festgelegt. Da im Englischen und im Spanischen kein Unterschied zwischen NO besteht, liegt für den Benutzer auch kein Unterschied im FORMATTED_VALUE vor.|  
+|H|Nein|FORMAT_STRING wird auf `YES/NO`, VALUE auf 0 und LANGUAGE explizit auf `1034`festgelegt. Da im Englischen und im Spanischen kein Unterschied zwischen NO besteht, liegt für den Benutzer auch kein Unterschied im FORMATTED_VALUE vor.|  
 |I|SI|FORMAT_STRING wird auf `YES/NO`, VALUE auf 59 und LANGUAGE explizit auf `1034`festgelegt. Entsprechend der Definition für YES/NO-Formatierungen ist jeder Wert ungleich null (0) gleich YES, und da LANGUAGE auf Spanisch festgelegt ist, ist FORMATTED_VALUE gleich SI.|  
 |J|Desactivado|FORMAT_STRING wird auf `ON/OFF`, VALUE auf 0 und LANGUAGE explizit auf `1034`festgelegt. Entsprechend der Definition für ON/OFF-Formatierungen ist jeder Wert gleich null (0) gleich OFF, und da LANGUAGE auf Spanisch festgelegt ist, ist FORMATTED_VALUE gleich „Desactivado“.|  
 |K|Activado|FORMAT_STRING wird auf `ON/OFF`, VALUE auf -312 und LANGUAGE explizit auf `1034`festgelegt. Entsprechend der Definition für ON/OFF-Formatierungen ist jeder Wert ungleich null (0) gleich ON, und da LANGUAGE auf Spanisch festgelegt ist, ist FORMATTED_VALUE gleich Activado.|  
@@ -134,9 +135,9 @@ ms.lasthandoff: 01/08/2018
   
 |Member|FORMATTED_VALUE|Erklärung|  
 |------------|----------------------|-----------------|  
-|Ein|3/12/1959 6:30:00 AM|FORMAT_STRING wird durch den CDate()-Ausdruck implizit auf `General Date` festgelegt, und LANGUAGE ist `1033` (Englisch), geerbt vom Wert des Systemgebietsschemas.|  
+|A|3/12/1959 6:30:00 AM|FORMAT_STRING wird durch den CDate()-Ausdruck implizit auf `General Date` festgelegt, und LANGUAGE ist `1033` (Englisch), geerbt vom Wert des Systemgebietsschemas.|  
 |B|Thursday, March 12, 1959|FORMAT_STRING wird explizit auf `Long Date` festgelegt, und LANGUAGE ist `1033` (geerbt vom Wert des Systemgebietsschemas).|  
-|c|12/03/1959 6:30:00|FORMAT_STRING wird explizit auf `General Date` festgelegt, und LANGUAGE ist explizit `1034` (Spanisch).<br /><br /> Beachten Sie, dass Monat und Tag im Unterschied zur US-Formatierung vertauscht sind.|  
+|C|12/03/1959 6:30:00|FORMAT_STRING wird explizit auf `General Date` festgelegt, und LANGUAGE ist explizit `1034` (Spanisch).<br /><br /> Beachten Sie, dass Monat und Tag im Unterschied zur US-Formatierung vertauscht sind.|  
 |D|jueves, 12 de marzo de 1959|FORMAT_STRING wird explizit auf `Long Date` festgelegt, und LANGUAGE ist explizit `1034` (Spanisch).<br /><br /> Beachten Sie, dass Monat und Wochentag in Spanisch angegeben werden.|  
 |E|1959/03/12 6:30:00|FORMAT_STRING wird explizit auf `General Date` festgelegt, und LANGUAGE ist explizit `1041` (Japanisch).<br /><br /> Beachten Sie, dass das Datum jetzt im Format Jahr/Monat/Tag Stunde:Minute:Sekunde angegeben wird.|  
 |V|1959年3月12日|FORMAT_STRING wird explizit auf `Long Date` festgelegt, und LANGUAGE ist explizit `1041` (Japanisch).|  
@@ -148,9 +149,9 @@ ms.lasthandoff: 01/08/2018
 |L|06:30|FORMAT_STRING wird explizit auf `Short Time` und LANGUAGE explizit auf `1041` (Japanisch) festgelegt.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [FORMAT_STRING-Inhalt &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
+ [FORMAT_STRING-Inhalt &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
  [Verwenden von Zelleigenschaften &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [Erstellen und Verwenden von Eigenschaftswerten &#40; MDX &#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Abfrage &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

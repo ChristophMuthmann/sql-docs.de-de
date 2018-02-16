@@ -17,19 +17,20 @@ helpviewer_keywords:
 - Synchronize Database Wizard
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3bb86dbcb264f7073847cce62dc9c3e200208821
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="synchronize-analysis-services-databases"></a>Synchronisieren von Analysis Services-Datenbanken
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] umfasst eine Funktion für die datenbanksynchronisierung, mit der zwei [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbanken unter der Daten und Metadaten aus einer Datenbank auf einem Quellserver in eine Datenbank auf einem Zielserver kopiert. Die Funktion für die Datenbanksynchronisierung kann für folgende Aufgaben verwendet werden:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] umfasst eine Funktion für die Datenbanksynchronisierung, mit der zwei [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken auf den gleichen Stand gebracht werden, indem die Daten und Metadaten aus einer Datenbank auf einem Quellserver in eine Datenbank auf einem Zielserver kopiert werden. Die Funktion für die Datenbanksynchronisierung kann für folgende Aufgaben verwendet werden:  
   
 -   Bereitstellen einer Datenbank von einem Stagingserver auf einem Produktionsserver  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Die folgenden Whitepapers beziehen sich zwar auf frühere Versionen von Analysis Services, gelten aber weiterhin für skalierbare mehrdimensionale Lösungen, die mit SQL Server 2012 erstellt wurden. Weitere Informationen finden Sie unter [Horizontale Skalierung bei Abfragen für Analysis Services](http://go.microsoft.com/fwlink/?LinkId=253136) und [Horizontale Skalierung bei Abfragen für Analysis Services mit schreibgeschützten Datenbanken](http://go.microsoft.com/fwlink/?LinkId=253137.)  
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  Auf dem Zielserver, auf dem die Datenbanksynchronisierung initiiert wird, müssen Sie Mitglied der Serveradministratorrolle von Analysis Services sein. Auf dem Quellserver muss das Windows-Benutzerkonto über Vollzugriff auf die Quelldatenbank verfügen. Wenn Sie die Datenbank interaktiv synchronisieren, sollten Sie beachten, dass die Synchronisierung im Sicherheitskontext der Windows-Benutzeridentität ausgeführt wird. Wenn dem Konto der Zugriff auf bestimmte Objekte verweigert wurde, werden diese Objekte aus dem Vorgang ausgeschlossen. Weitere Informationen zu Serveradministratorrollen und Datenbankberechtigungen finden Sie unter [Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) und [Erteilen von Datenbankberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md).  
   
  TCP-Port 2383 muss auf beiden Servern geöffnet sein, damit Remoteverbindungen zwischen den Standardinstanzen unterstützt werden. Weitere Informationen zum Erstellen einer Ausnahme in der Windows-Firewall finden Sie unter [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
@@ -189,10 +190,10 @@ ms.lasthandoff: 01/08/2018
   
 8.  Klicken Sie auf **Fertig stellen** , um die Synchronisierung zu starten. Klicken Sie erneut auf **Fertig stellen** , nachdem Sie die Optionen auf der Seite **Assistenten abschließen** überprüft haben.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
  Wenn Sie keine Rollen oder Mitgliedschaften synchronisiert haben, achten Sie darauf, jetzt Zugriffsberechtigungen für Benutzer in der Zieldatenbank festzulegen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Synchronize-Element &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Bereitstellen von Modelllösungen mit XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
  [Bereitstellen von Modelllösungen mithilfe des Bereitstellungs-Assistenten](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  

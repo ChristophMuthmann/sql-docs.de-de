@@ -18,10 +18,10 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: a4a47254b6836b50023be16045aaa388e3aaac47
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="dax-properties"></a>DAX-Eigenschaften
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

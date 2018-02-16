@@ -23,19 +23,20 @@ helpviewer_keywords:
 - assemblies [Analysis Services]
 - application domains [Analysis Services]
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2ccd3083abd00b2f2ad4f343a35cb53d7f2e1c08
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Verwaltung von mehrdimensionalen Modellassemblys
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt viele systeminterne Funktionen bereit, mit den Sprachen Multidimensional Expressions (MDX) und Data Mining Extensions (DMX), die entwickelt, um die standardmäßige statistische Berechnungen zu erreichen Durchlaufen der Elemente in einer Hierarchie. Wie bei jedem komplexen und robusten Produkt gibt es jedoch immer die Bestrebung, die Funktionalität des Produkts zu erweitern.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt viele systeminterne Funktionen bereit, mit den Sprachen Multidimensional Expressions (MDX) und Data Mining Extensions (DMX), die entwickelt, um die standardmäßige statistische Berechnungen wie zum durchlaufenden der Elemente in einer Hierarchie zu erreichen. Wie bei jedem komplexen und robusten Produkt gibt es jedoch immer die Bestrebung, die Funktionalität des Produkts zu erweitern.  
   
  Deshalb bietet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Möglichkeit, einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz oder -Datenbank Assemblys hinzuzufügen. Mithilfe von Assemblys können Sie mit einer beliebigen CLR-Sprache (Common Language Runtime), z. B. Microsoft Visual Basic .NET oder Microsoft Visual C#, externe benutzerdefinierte Funktionen erstellen. Darüber hinaus können Sie COM-Automatisierungssprachen (Component Object Model) wie Microsoft Visual Basic oder Microsoft Visual C++ verwenden.  
   
@@ -120,6 +121,6 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
 ## <a name="see-also"></a>Siehe auch  
  [Festlegen der Sicherheit für gespeicherte Prozeduren](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
- [Definieren gespeicherter Prozeduren](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
+ [Definieren von gespeicherten Prozeduren](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

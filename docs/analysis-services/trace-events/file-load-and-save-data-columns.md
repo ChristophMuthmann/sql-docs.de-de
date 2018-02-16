@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0101e809-d6ea-4d0c-95ec-65dd77acf665
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8f10d93cf8670da5e14d2fb65193c43398ad1c6c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="file-load-and-save-data-columns"></a>Laden von Dateien und Speichern von Datenspalten
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die File Load- und Save-Ereigniskategorie weist folgende Ereignisklasse:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Die Dateiereigniskategorie "Laden und speichern" besitzt die folgende Ereignisklasse:  
   
 |**Ereignis-ID**|**Ereignisname**|**Ereignisbeschreibung**|  
 |------------------|--------------------|---------------------------|  
@@ -67,7 +68,7 @@ ms.lasthandoff: 01/08/2018
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|Duration|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
+|Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |JobID|7|1|Auftrags-ID für den Status.|  
 |SessionType|8|8|Sitzungstyp (Entität, die den Vorgang verursacht hat).|  
 |IntegerData|10|1|Ganzzahlige Daten.|  
@@ -75,7 +76,7 @@ ms.lasthandoff: 01/08/2018
 |ObjectType|12|1|Objekttyp.|  
 |ObjectName|13|8|Objektname.|  
 |ObjectPath|14|8|Objektpfad. Eine durch Trennzeichen getrennte Liste von übergeordneten Elementen, die beim übergeordneten Element des Objekts beginnt.|  
-|Schweregrad|22|1|Schweregrad einer Ausnahme.|  
+|Severity|22|1|Schweregrad einer Ausnahme.|  
 |Success|23|1|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|  
 |Fehler|24|1|Fehlernummer eines bestimmten Ereignisses.|  
 |ConnectionID|25|1|Eindeutige Verbindungs-ID.|  
@@ -113,7 +114,7 @@ ms.lasthandoff: 01/08/2018
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|Duration|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
+|Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |JobID|7|1|Auftrags-ID für den Status.|  
 |SessionType|8|8|Sitzungstyp (Entität, die den Vorgang verursacht hat).|  
 |IntegerData|10|1|Ganzzahlige Daten.|  
@@ -121,7 +122,7 @@ ms.lasthandoff: 01/08/2018
 |ObjectType|12|1|Objekttyp.|  
 |ObjectName|13|8|Objektname.|  
 |ObjectPath|14|8|Objektpfad. Eine durch Trennzeichen getrennte Liste von übergeordneten Elementen, die beim übergeordneten Element des Objekts beginnt.|  
-|Schweregrad|22|1|Schweregrad einer Ausnahme.|  
+|Severity|22|1|Schweregrad einer Ausnahme.|  
 |Success|23|1|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|  
 |Fehler|24|1|Fehlernummer eines bestimmten Ereignisses.|  
 |ConnectionID|25|1|Eindeutige Verbindungs-ID.|  
@@ -159,7 +160,7 @@ ms.lasthandoff: 01/08/2018
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|Duration|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
+|Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |JobID|7|1|Auftrags-ID für den Status.|  
 |SessionType|8|8|Sitzungstyp (Entität, die den Vorgang verursacht hat).|  
 |IntegerData|10|1|Ganzzahlige Daten.|  
@@ -167,7 +168,7 @@ ms.lasthandoff: 01/08/2018
 |ObjectType|12|1|Objekttyp.|  
 |ObjectName|13|8|Objektname.|  
 |ObjectPath|14|8|Objektpfad. Eine durch Trennzeichen getrennte Liste von übergeordneten Elementen, die beim übergeordneten Element des Objekts beginnt.|  
-|Schweregrad|22|1|Schweregrad einer Ausnahme.|  
+|Severity|22|1|Schweregrad einer Ausnahme.|  
 |Success|23|1|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|  
 |Fehler|24|1|Fehlernummer eines bestimmten Ereignisses.|  
 |ConnectionID|25|1|Eindeutige Verbindungs-ID.|  
@@ -205,7 +206,7 @@ ms.lasthandoff: 01/08/2018
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |EndTime|4|5|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|Duration|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
+|Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |JobID|7|1|Auftrags-ID für den Status.|  
 |SessionType|8|8|Sitzungstyp (Entität, die den Vorgang verursacht hat).|  
 |IntegerData|10|1|Ganzzahlige Daten.|  
@@ -213,7 +214,7 @@ ms.lasthandoff: 01/08/2018
 |ObjectType|12|1|Objekttyp.|  
 |ObjectName|13|8|Objektname.|  
 |ObjectPath|14|8|Objektpfad. Eine durch Trennzeichen getrennte Liste von übergeordneten Elementen, die beim übergeordneten Element des Objekts beginnt.|  
-|Schweregrad|22|1|Schweregrad einer Ausnahme.|  
+|Severity|22|1|Schweregrad einer Ausnahme.|  
 |Success|23|1|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|  
 |Fehler|24|1|Fehlernummer eines bestimmten Ereignisses.|  
 |ConnectionID|25|1|Eindeutige Verbindungs-ID.|  

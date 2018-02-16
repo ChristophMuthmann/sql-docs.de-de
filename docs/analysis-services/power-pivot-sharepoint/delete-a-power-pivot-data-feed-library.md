@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5dbfc67e-7260-445a-8210-a9d33827db7f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e1f2ed93aa09903f34ba5d6e1e177920157ea4dd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="delete-a-power-pivot-data-feed-library"></a>Löschen einer Power Pivot-Datenfeedbibliothek
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie müssen der Websitebesitzer zum Löschen einer datenfeedbibliothek sein. Wenn die Bibliothek Elemente enthält, werden sie zusammen mit der Bibliothek gelöscht.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Sie müssen der Websitebesitzer sein, um eine Datenfeedbibliothek löschen zu können. Wenn die Bibliothek Elemente enthält, werden sie zusammen mit der Bibliothek gelöscht.  
   
  Sie müssen den Namen der zu löschenden Datenfeedbibliothek kennen.  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  Klicken Sie unter Berechtigungen und Verwaltung auf **Diese Bibliothek löschen**.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Power Pivot-Datenfeeds](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   
   

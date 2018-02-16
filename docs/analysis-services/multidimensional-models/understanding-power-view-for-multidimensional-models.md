@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 103d42ffa1f2f4bc823c8b95327347323f0ccf86
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Grundlegendes zu Power View für mehrdimensionale Modelle
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In diesem Artikel wird beschrieben, die Power View für mehrdimensionale Modelle in SQL Server, und enthält wichtige Informationen für BI-Experten und-Administratoren zusammengefasst, die Power View für mehrdimensionale Modelle in ihrem Unternehmen implementieren möchten.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+In diesem Artikel wird Power View für mehrdimensionale Modelle in SQL Server beschrieben, und es werden wichtige Informationen für BI-Experten und -Administratoren zusammengefasst, die Power View für mehrdimensionale Modelle in ihrem Unternehmen implementieren möchten.  
   
  Mehrdimensionale Modelle bieten branchenführende Modellierungs-, Speicherungs- und Analyselösungen für OLAP-Daten. In Microsoft SQL Server unterstützen mehrdimensionale Modelle das Analysieren, Durchsuchen und Visualisieren von Daten im Ad-hoc-Verfahren unter Verwendung von Microsoft Power View.  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 01/08/2018
   
  ![Power View für mehrdimensionale Modelle Intranetarchitektur](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "Power View für mehrdimensionale Modelle-Intranetarchitektur")  
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  **Serveranforderungen**  
   
 -   Microsoft SQL Server 2016 Analysis Services (Ausführung im mehrdimensionalen Modus)  
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Für die Power View-Clientfunktionen ist Microsoft Silverlight 5 erforderlich. Weitere Informationen finden Sie unter [Browserunterstützung für Reporting Services und Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
-## <a name="features"></a>Funktionen  
+## <a name="features"></a>-Funktionen  
  **Systemeigene Unterstützung für Power View**  
   
  In dieser Version unterstützen mehrdimensionale Modelle die Analyse und Visualisierung unter Verwendung von Power View im SharePoint-Modus. Es ist keine spezielle Konfiguration für die mehrdimensionalen Modelle erforderlich. Es gibt jedoch Unterschiede zwischen der Anzeige mehrdimensionaler Modellobjekte in Power View und anderen Clienttools wie Microsoft Excel und Microsoft Performance Point. Diese Version bietet keine Unterstützung für die Analyse und Visualisierung mehrdimensionaler Modelle mithilfe von Power View in Excel.  
@@ -63,12 +64,12 @@ ms.lasthandoff: 01/08/2018
 |-----------------------------|--------------------|  
 |Cube|Model|  
 |Cubedimension|Tabelle|  
-|Dimensionsattribute (Schlüssel, Name)|Spalte|  
+|Dimensionsattribute (Schlüssel, Name)|Column|  
 |Measuregruppe|Tabelle|  
 |Measure|Measure|  
 |Measure ohne Measuregruppe|In einer Tabelle mit dem Namen "Measures"|  
 |Beziehung zwischen Measuregruppe und Cubedimension|Beziehung|  
-|Perspektive|Perspektive|  
+|Perspective|Perspective|  
 |KPI|KPI|  
 |Benutzerhierarchien/Über-/Unterordnungshierarchien|Hierarchy|  
 |Anzeigeordner|Anzeigeordner|  
@@ -223,7 +224,7 @@ ms.lasthandoff: 01/08/2018
   
  Die DISCOVER_CSDL_METADATA-Anforderung weist folgende Einschränkungen auf:  
   
-|Name|Required|Description|  
+|Name|Erforderlich|Description|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|ja|Der Katalog-/Datenbankname.|  
 |PERSPECTIVE_NAME|Ja, wenn der Cube mehr als eine Perspektive enthält. Optional, wenn nur ein Cube oder eine Standardperspektive vorhanden ist.|Der Cube- oder Perspektivenname in der mehrdimensionalen Datenbank.|  

@@ -18,19 +18,20 @@ helpviewer_keywords:
 - FORMATTED_VALUE property
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: b2e191b852e9d68c9f5e3790e38b9a15f5759324
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>MDX-Cell Properties - FORMAT_STRING-Inhalt
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Die **FORMAT_STRING** -Zelleigenschaft formatiert die **Wert** Zelleigenschaft, indem den Wert für die **FORMATTED_VALUE** Zelleigenschaft. Die **FORMAT_STRING** -Zelleigenschaft behandelt sowohl Zeichenfolgenwerte als auch numerische Rohdaten, indem sie einen Formatausdruck auf den Wert anwendet, um einen formatierten Wert für die **FORMATTED_VALUE** -Zelleigenschaft zurückzugeben. Die folgenden Tabellen geben die Syntax und die Formatierungszeichen detailliert an, mit denen Zeichenfolgenwerte und numerische Werte behandelt werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Die **FORMAT_STRING** -Zelleigenschaft formatiert die **VALUE** -Zelleigenschaft, indem sie den Wert für die **FORMATTED_VALUE** -Zelleigenschaft erstellt. Die **FORMAT_STRING** -Zelleigenschaft behandelt sowohl Zeichenfolgenwerte als auch numerische Rohdaten, indem sie einen Formatausdruck auf den Wert anwendet, um einen formatierten Wert für die **FORMATTED_VALUE** -Zelleigenschaft zurückzugeben. Die folgenden Tabellen geben die Syntax und die Formatierungszeichen detailliert an, mit denen Zeichenfolgenwerte und numerische Werte behandelt werden.  
   
 ## <a name="string-values"></a>Zeichenfolgenwerte  
  Ein Formatausdruck für Zeichenfolgen kann aus einem Abschnitt oder aus zwei durch ein Semikolon (;) getrennten Abschnitten bestehen.  
@@ -76,7 +77,7 @@ ms.lasthandoff: 01/08/2018
   
 |Zeichen|Description|  
 |---------------|-----------------|  
-|InclusionThresholdSetting|Zeigt die Zahl ohne jegliche Formatierung an.|  
+|Keine|Zeigt die Zahl ohne jegliche Formatierung an.|  
 |**0**|Entspricht einem Ziffernplatzhalter, der eine Ziffer oder eine Null (0) anzeigt.<br /><br /> Wenn die Zahl an der Stelle, an der in der Formatzeichenfolge die Null vorkommt, eine Ziffer enthält, zeigt der formatierte Wert die Ziffer an. Andernfalls zeigt der formatierte Wert an dieser Position eine Null an.<br /><br /> Hat die Zahl weniger Ziffern als der Formatausdruck Nullen (auf beiden Seiten des Dezimaltrennzeichens), zeigt der formatierte Wert führende oder nachfolgende Nullen an.<br /><br /> Hat die Zahl rechts vom Dezimaltrennzeichen mehr Ziffern, als im Formatausdruck rechts vom Dezimaltrennzeichen Nullen vorkommen, wird der formatierte Wert auf so viele Dezimalstellen gerundet, wie Nullen vorhanden sind.<br /><br /> Hat die Zahl links vom Dezimaltrennzeichen mehr Ziffern, als im Formatausdruck links vom Dezimaltrennzeichen Nullen vorkommen, werden die zusätzlichen Ziffern im formatierten Wert unverändert angezeigt.|  
 |**#**|Entspricht einem Ziffernplatzhalter, der eine Ziffer oder nichts anzeigt.<br /><br /> Hat der Ausdruck eine Ziffer an der Stelle, an der in der Formatzeichenfolge das Nummernzeichen (**#**) vorkommt, zeigt der formatierte Wert die Ziffer an. Andernfalls zeigt der formatierte Wert an dieser Position nichts an.<br /><br /> Der Platzhalter Nummernzeichen (**#**) führt zum gleichen Ergebnis wie der Ziffernplatzhalter null (**0**), mit dem einzigen Unterschied, dass keine führenden und nachfolgenden Nullen angezeigt werden, wenn die Zahl ebenso viele oder weniger Ziffern hat, wie **#** -Zeichen in der Formatzeichenfolge auf beiden Seiten des Dezimaltrennzeichens vorhanden sind.|  
 |**.**|Entspricht einem Dezimaltrennzeichen, das festlegt, wie viele Ziffern links und rechts vom Dezimaltrennzeichen angezeigt werden.<br /><br /> Wenn der Formatausdruck links vom Punkt (**#**.**) nur Nummernzeichen (**) enthält, beginnen Zahlen, die kleiner sind als 1, mit dem Dezimaltrennzeichen. Sollen Bruchzahlen mit einer führenden Null angezeigt werden, verwenden Sie 0 als ersten Ziffernplatzhalter links vom Dezimaltrennzeichen.<br /><br /> Welches Zeichen tatsächlich als Dezimaltrennzeichen in der formatierten Ausgabe verwendet wird, hängt von dem Zahlenformat ab, das vom Computersystem erkannt wird.<br /><br /> Hinweis: In manchen Gebietsschemas wird ein Komma als Dezimaltrennzeichen verwendet.|  
@@ -158,6 +159,6 @@ ms.lasthandoff: 01/08/2018
  [LANGUAGE und FORMAT_STRING für FORMATTED_VALUE](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md)   
  [Verwenden von Zelleigenschaften &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [Erstellen und Verwenden von Eigenschaftswerten &#40; MDX &#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Abfrage &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -15,19 +15,20 @@ helpviewer_keywords:
 - Schema Generation Wizard, steps
 - relational schema [Analysis Services], Schema Generation Wizard
 ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d8cae9fd297d0ae2946cccab69a9a273a2cf85b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Verwenden des Schemagenerierungs-Assistenten (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Der Schemagenerierungs-Assistent erfordert eine begrenzte Menge an Informationen während der Erstellungsphase. Die meisten Informationen, die der Schemagenerierungs-Assistent zum Generieren relationaler Schemas benötigt, werden aus den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cubes und -Dimensionen extrahiert, die Sie bereits im Projekt erstellt haben. Darüber hinaus können Sie anpassen, wie das Schema der Themenbereichsdatenbank generiert wird und wie Objekte im Schema benannt werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Beim Schemagenerierungs-Assistenten müssen während der Generierungsphase nur wenige Informationen eingegeben werden. Die meisten Informationen, die der Schemagenerierungs-Assistent zum Generieren relationaler Schemas benötigt, werden aus den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cubes und -Dimensionen extrahiert, die Sie bereits im Projekt erstellt haben. Darüber hinaus können Sie anpassen, wie das Schema der Themenbereichsdatenbank generiert wird und wie Objekte im Schema benannt werden.  
   
 ## <a name="start-the-wizard"></a>Starten des Assistenten  
  Es gibt mehrere Möglichkeiten, den Schemagenerierungs-Assistenten in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] zu öffnen:  

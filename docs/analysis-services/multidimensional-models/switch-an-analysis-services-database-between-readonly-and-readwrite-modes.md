@@ -16,19 +16,20 @@ helpviewer_keywords:
 - ReadWriteMode command
 - operations [Analysis Services - multidimensional data]
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c53754f5ba059cfd790a015b7a1c77bd4de81b73
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbankadministratoren können die Lese-/Schreibmodus einer tabellarischen oder mehrdimensionalen Datenbank als Teil eines größeren Vorgangs, mit dem eine arbeitsauslastung von Abfragen auf mehreren Servern für reinen verteilt ändern.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbankadministratoren können den Lese-/Schreibmodus einer tabellarischen oder mehrdimensionalen Datenbank als Teil eines größeren Vorgangs ändern, bei dem eine Abfragearbeitsauslastung auf mehrere reine Abfrageserver verteilt wird.  
   
  Es stehen mehrere Möglichkeiten zum Umschalten des Datenbankmodus zur Verfügung. In diesem Dokument werden die folgenden gängigen Szenarien erläutert:  
   

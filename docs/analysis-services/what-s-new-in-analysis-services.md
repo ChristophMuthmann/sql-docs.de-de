@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
-caps.latest.revision: "97"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: f6645a2a5da1e63050c0d448bc1006c85d85f212
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>Was ist neu in Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -89,7 +89,7 @@ Eine *berechnete Tabelle* ist eine reine Modellkonstruktion, die auf einem DAX-A
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>Parallele Verarbeitung für mehrere Tabellenpartitionen in tabellarischen Modellen    
  Diese Version enthält neue Funktionen für die parallele Verarbeitung für Tabellen mit zwei oder mehr Partitionen, sodass die Verarbeitungsleistung erhöht wird. Es sind keine Konfigurationseinstellungen für diese Funktion vorhanden. Weitere Informationen zum Konfigurieren von Partitionen und zum Verarbeiten von Tabellen finden Sie unter [Tabellenmodellpartitionen &#40;SSAS – tabellarisch&#41;](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>Hinzufügen von Computerkonten als Administratoren in SSMS    
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Administratoren können jetzt [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] zum Konfigurieren von Computerkonten als Mitglieder der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Administratorgruppe verwenden. Legen Sie im Dialogfeld **Benutzer oder Gruppen auswählen** die **Speicherorte** für die Computerdomäne fest, und fügen Sie dann den Objekttyp **Computer** hinzu. Weitere Informationen finden Sie unter [Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Administratoren können jetzt [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] zum Konfigurieren von Computerkonten als Mitglieder der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Administratorengruppe verwenden. Legen Sie im Dialogfeld **Benutzer oder Gruppen auswählen** die **Speicherorte** für die Computerdomäne fest, und fügen Sie dann den Objekttyp **Computer** hinzu. Weitere Informationen finden Sie unter [Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
  ### <a name="dbcc-for-analysis-services"></a>DBCC für Analysis Services    
  Database Consistency Checker (DBCC) wird intern ausgeführt, um potenzielle Probleme mit beschädigten Daten beim Laden der Datenbank zu ermitteln. Sie können das Tool aber auch bei Bedarf ausführen, wenn Sie Probleme in Ihren Daten oder Ihrem Modell vermuten. DBCC führt verschiedene Überprüfungen abhängig davon aus, ob das Modell tabellarisch oder mehrdimensional ist. Einzelheiten finden Sie unter [Datenbankkonsistenzprüfung &#40;DBCC&#41; für tabellarische und mehrdimensionale Analysis Services-Datenbanken](../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md).    
  ### <a name="extended-events-updates"></a>Updates für erweiterte Ereignisse    

@@ -1,7 +1,7 @@
 ---
 title: "Ausführen von Batchvorgängen (XMLA) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - multiple projects
 - XML for Analysis, batches
@@ -22,19 +23,19 @@ helpviewer_keywords:
 - batches [XML for Analysis]
 - nontransactional batches
 ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21116359cfbea301242d8e743ff2431e742c1960
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f2730fb8396f63e123bf8d896ea9a648ad22016d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="performing-batch-operations-xmla"></a>Ausführen von Batchvorgängen (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Können Sie die [Batch](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) -Befehl in XML for Analysis (XMLA) mehrere XMLA-Befehle, die mit einer einzigen XMLA-ausführen [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) Methode. Sie können mehrere Befehle, die in enthaltenen Ausführen der **Batch** -Befehl entweder als einzelne Transaktion oder als individuelle Transaktionen für jeden Befehl in Serie oder parallel. Sie können auch angeben, Out-of-Line-Bindungen und andere Eigenschaften in der **Batch** Befehl für die Verarbeitung mehrerer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekte.  
+  Können Sie die [Batch](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) -Befehl in XML for Analysis (XMLA) mehrere XMLA-Befehle, die mit einer einzigen XMLA-ausführen [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) Methode. Sie können mehrere Befehle, die in enthaltenen Ausführen der **Batch** -Befehl entweder als einzelne Transaktion oder als individuelle Transaktionen für jeden Befehl in Serie oder parallel. Sie können auch angeben, Out-of-Line-Bindungen und andere Eigenschaften in der **Batch** Befehl für die Verarbeitung mehrerer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekte.  
   
 ## <a name="running-transactional-and-nontransactional-batch-commands"></a>Ausführen von transaktionalen und nicht transaktionalen Batchbefehlen  
  Die **Batch** Befehl führt die Befehle in einer von zwei Methoden:  
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
  Schlägt jeder Befehl in einem Transaktionsbatch [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Rollback für alle Befehle aus, der **Batch** -Befehl, der vor dem Befehl fehlgeschlagenen ausgeführt wurde, und die **Batch** -Befehl wird unmittelbar beendet. Alle Befehle in der **Batch** -Befehl, der noch nicht ausgeführt wurden, werden nicht ausgeführt. Nach der **Batch** Befehl beendet, die **Batch** Befehl meldet Fehler, die für den fehlgeschlagenen Befehl aufgetreten sind.  
   
- **Nicht transaktionale**  
+ **Nontransactional**  
  Wenn die **Transaktion** -Attribut auf "false" festgelegt ist die **Batch** Befehl ausgeführt wird, jeden Befehl enthalten die **Batch** -Befehl in einer separaten Transaktion – eine  *nicht transaktionale* Batch. Schlägt jeder Befehl in einer nicht transaktionalen Batch die **Batch** -Befehl weiterhin Befehle nach dem Befehl, der Fehler, ausführen. Nach der **Batch** -Befehl versucht hat, führen Sie alle Befehle, die die **Batch** Befehl enthält, die **Batch** Befehl gibt alle aufgetretenen Fehler.  
   
  Alle Ergebnisse zurückgegeben, die in enthaltenen Befehle eine **Batch** -Befehl zurückgegeben werden, in der gleichen Reihenfolge, in dem die Befehle enthalten sind, in, der **Batch** Befehl. Von der zurückgegebenen Ergebnisse eine **Batch** Befehl variieren in Abhängigkeit davon, ob die **Batch** Befehl ist transaktional oder nicht transaktional.  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/08/2018
   
  Um Befehle parallel ausgeführt werden, Sie die Befehle parallel ausgeführt werden Hinzufügen der [parallele](../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md) Eigenschaft von der **Batch** Befehl. Derzeit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] kann nur ausgeführt, zusammenhängender, sequenzieller [Prozess](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) Befehle parallel. Alle anderen XMLA-Befehle, wie z. B. [erstellen](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) oder [Alter](../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md), enthalten in der **parallele** Eigenschaft seriell ausgeführt wird.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]versucht, alle auszuführen **Prozess** Befehle enthalten, die der **parallele** Eigenschaft parallel, aber gewährleisten, dass alle enthaltenen kann nicht **Prozess** Befehle parallel ausgeführt werden können. Die Instanz analysiert jeden **Prozess** Befehl und, wenn die Instanz ermittelt, dass der Befehl nicht parallel ausgeführt werden darf nicht der **Prozess** Befehl in Serie ausgeführt wird.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] versucht, alle auszuführen **Prozess** Befehle enthalten, die der **parallele** Eigenschaft parallel, aber gewährleisten, dass alle enthaltenen kann nicht **Prozess** Befehle parallel ausgeführt werden können. Die Instanz analysiert jeden **Prozess** Befehl und, wenn die Instanz ermittelt, dass der Befehl nicht parallel ausgeführt werden darf nicht der **Prozess** Befehl in Serie ausgeführt wird.  
   
 > [!NOTE]  
 >  Befehle parallel ausführen der **Transaktion** Attribut des der **Batch** Befehl muss festgelegt werden, da true [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt nur eine aktive Transaktion pro Verbindung und nicht transaktionalen Batches jeden Befehl in einer separaten Transaktion ausgeführt. Wenn Sie enthalten die **parallele** -Eigenschaft in einem nicht transaktionalen Batch, ein Fehler auftritt.  
@@ -76,7 +77,7 @@ ms.lasthandoff: 01/08/2018
   
  Z. B. eine **parallele** Eigenschaft enthält die folgenden Befehle in der aufgeführten Reihenfolge:  
   
-1.  **Erstellen**  
+1.  **Create**  
   
 2.  **Verarbeiten**  
   

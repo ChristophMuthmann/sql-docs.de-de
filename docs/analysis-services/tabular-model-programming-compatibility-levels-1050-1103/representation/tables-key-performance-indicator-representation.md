@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 5b159965ba0428c267b62fd712cd34bc26cca833
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables---key-performance-indicator-representation"></a>Tabellen - Darstellung von Key Performance Indicator
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Ein KPI wird verwendet, um die Messung der Leistung eines Werts, definiert durch ein basismeasure anhand eines Zielwerts  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Ein KPI misst die Leistung eines Werts, der durch ein Basismeasure definiert wird, anhand eines Zielwerts.  
   
 ## <a name="key-performance-indicator-representation"></a>KPI (Key Performance Indicator)-Darstellung  
  Ein KPI (Key Performance Indicator) ist in tabellarischen Objektmodellen ein Measure mit zusätzlichen Informationen für die grafische Anzeige in der Clientanwendung. Ein KPI weist normalerweise folgende Informationen auf: das angestrebte Ziel, den Status des Measures im Vergleich zum Ziel sowie Informationen dazu, wie der Status grafisch im Clienttool angezeigt werden soll.  

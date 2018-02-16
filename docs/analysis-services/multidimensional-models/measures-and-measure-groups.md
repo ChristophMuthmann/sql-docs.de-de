@@ -22,29 +22,30 @@ helpviewer_keywords:
 - aggregations [Analysis Services], measures
 - fact tables [Analysis Services]
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: c8775c33a50d25379f1de53f00b7e66830cbf971
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="measures-and-measure-groups"></a>Measures und Measuregruppen
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein Cube enthält *Measures* in *Measuregruppen*, Geschäftslogik sowie eine Auflistung von Dimensionen, die Kontext für die Auswertung der numerischen Daten, die ein Measure enthält. Measures und Measuregruppen sind wesentliche Bestandteile eines Cubes. Ein Cube kann ohne mindestens eines dieser Elemente nicht bestehen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Ein Cube enthält *Measures* in *Measuregruppen*, Geschäftslogik sowie eine Sammlung von Dimensionen, die Kontext für die Auswertung der numerischen Daten eines Measures bereitstellen. Measures und Measuregruppen sind wesentliche Bestandteile eines Cubes. Ein Cube kann ohne mindestens eines dieser Elemente nicht bestehen.  
   
  In diesem Thema werden [Measures](#bkmk_measure) und [Measure Groups](#bkmk_mg)beschrieben. Außerdem enthält es die folgende Tabelle mit Links zu Schritten zum Erstellen und Konfigurieren von Measures und Measuregruppen.  
   
-|**Link**|**Beschreibung**|  
+|**Link**|**Description**|  
 |--------------|---------------------|  
 |[Erstellen von Measures und Measuregruppen in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|Wählen Sie einen von mehreren Ansätzen zum Erstellen von Measures und Measuregruppen aus.|  
 |[Konfigurieren von Measureeigenschaften](../../analysis-services/multidimensional-models/configure-measure-properties.md)|Wenn Sie den Cube-Assistenten zum Starten des Cubes verwendet haben, müssen Sie möglicherweise die Aggregationsmethode ändern, ein Datenformat anwenden, die Sichtbarkeit des Measures in Clientanwendungen festlegen oder einen Measureausdruck hinzufügen, um die Daten vor dem Aggregieren von Werten zu bearbeiten.|  
 |[Konfigurieren von Measuregruppeneigenschaften](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)|In einem mehrdimensionalen Modell entspricht eine Measuregruppe einer Faktentabelle im als Quelle verwendeten Data Warehouse. Anhand von Eigenschaften für eine Measuregruppe können Sie Cacheverhalten, Speicher und Verarbeitungsrichtlinien festlegen, die kollektiv auf Ebene der Measuregruppe gelten. Die Partitionskonfiguration richtet sich teilweise nach den Eigenschaften, die Sie für Measuregruppenobjekte festgelegten.|  
 |[Verwenden von Aggregatfunktionen](../../analysis-services/multidimensional-models/use-aggregate-functions.md)|Machen Sie sich mit den Aggregationsmethoden vertraut, die einem Measure zugewiesen werden können.|  
-|[Erweiterung auswählen](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|Semiadditives Verhalten bezieht sich auf Aggregationen, die nur für einige Dimensionen gültig sind. Ein typisches Beispiel ist der Saldo eines Bankkontos. Möglicherweise möchten Sie Saldi nach Kunde und Region hinzufügen, aber nicht nach Zeit. Beispielsweise würden Sie keine Saldi vom gleichen Konto über mehrere aufeinanderfolgende Tage hinzufügen wollen. Zum Definieren von semiadditivem Verhalten verwenden Sie den Assistenten zum Hinzufügen von Business Intelligence.|  
+|[Semiadditives Verhalten definieren](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|Semiadditives Verhalten bezieht sich auf Aggregationen, die nur für einige Dimensionen gültig sind. Ein typisches Beispiel ist der Saldo eines Bankkontos. Möglicherweise möchten Sie Saldi nach Kunde und Region hinzufügen, aber nicht nach Zeit. Beispielsweise würden Sie keine Saldi vom gleichen Konto über mehrere aufeinanderfolgende Tage hinzufügen wollen. Zum Definieren von semiadditivem Verhalten verwenden Sie den Assistenten zum Hinzufügen von Business Intelligence.|  
 |[Verknüpfte Measuregruppen](../../analysis-services/multidimensional-models/linked-measure-groups.md)|Führen Sie eine vorhandene Measuregruppe in anderen Cubes in derselben Datenbank oder in anderen Analysis Services-Datenbanken einem anderen Zweck zu.|  
   
 ##  <a name="bkmk_measure"></a> Measures  

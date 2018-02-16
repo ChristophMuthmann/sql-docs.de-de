@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: f6ef197b-3d74-4339-ae73-8a7c1eaf0e91
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fc15f310355b3ecaab626600c14ee27905d250a5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-powerpivotsystemservice-cmdlet"></a>Set-PowerPivotSystemService-Cmdlet
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Legt die globalen Eigenschaften des PowerPivotSystemService-Objekts auf Farmebene fest.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Legt die globalen Eigenschaften des PowerPivotSystemService-Objekts auf Farmebene fest.  
 
 >[!NOTE] 
 >In diesem Artikel möglicherweise veraltete Informationen und Beispiele enthalten. Verwenden Sie das Cmdlet "Get-Help", für die aktuelle.
@@ -53,7 +54,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Pipelineeingabe akzeptieren?|true|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-updateassemblyinformation-switch"></a>' Updateassemblyinformation ' - \<wechseln >  
+### <a name="-updateassemblyinformation-switch"></a>-UpdateAssemblyInformation \<switch>  
  Wird nur zu Upgradezwecken verwendet. Wenn sich die in der Farm bereitgestellte Assemblyversion von der Version unterscheidet, die in der SharePoint-Konfigurationsdatenbank gespeichert ist, können Sie dieses Cmdlet ausführen, um die Assemblyinformationen in der Konfigurationsdatenbank zu aktualisieren. Informationen zur Assemblyversion sind in den Dateieigenschaften der Datei Microsoft.AnalysisServices.SharePoint.Integration.dll verfügbar, die in der globalen Assembly gespeichert ist.  
   
 |||  
@@ -75,7 +76,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-directtcpconnections-boolean"></a>– DirectTCPConnections \<booleschen >  
+### <a name="-directtcpconnections-boolean"></a>-DirectTCPConnections \<boolean>  
  Gibt an, dass Excel Services alle Abfragen direkt an die Instanz von SQL Server Analysis Services (POWERPIVOT) sendet, für die eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenbank geladen wurde. So wird der MSOLAP-Datenanbieter- und Kanaltransport umgangen, der andernfalls für alle Abfrageanforderungen verwendet wird, die an eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenbank gesendet werden.  
   
  Das Festlegen dieser Parameter verbessert die Leistung und Skalierbarkeit von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Abfragen, indem die Verbindungen mit geladenen Datenbanken effizienter gemacht werden. Beachten Sie, dass dieser Parameter nicht das Verhalten ändert, wie die anfängliche Ladeanforderung zugeordnet wird. Andere Parameter, z.B. –RoundRobinAllocation und –HealthBasedAllocation, die zum Zuordnen von Datenbankladeanforderungen für mehrere [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Instanzen in der Farm verwendet werden, sind nicht betroffen, da –DirectTCPConnections nur für Abfragen gilt, die nach dem Laden der Datenbank ausgegeben werden.  
@@ -90,7 +91,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="-confirm-switch"></a>-Bestätigen Sie \<wechseln >  
+### <a name="-confirm-switch"></a>-Confirm \<switch>  
  Fordert eine Bestätigung an, bevor der Befehl ausgeführt wird. Dieser Wert ist standardmäßig aktiviert. Geben Sie Confirm:$false für einen Befehl an, um die Bestätigungsantwort in einem Befehl zu umgehen.  
   
 |||  
@@ -101,7 +102,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |Pipelineeingabe akzeptieren?|false|  
 |Platzhalterzeichen akzeptieren?|false|  
   
-### <a name="commonparameters"></a>\<Allgemeine Parameter >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  Dieses Cmdlet unterstützt die folgenden allgemeinen Parameter: Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer und OutVariable. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825).  
   
 ## <a name="inputs-and-outputs"></a>Eingaben und Ausgaben  

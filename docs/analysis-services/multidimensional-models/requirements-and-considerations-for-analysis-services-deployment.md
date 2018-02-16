@@ -23,19 +23,20 @@ helpviewer_keywords:
 - system requirements [Analysis Services]
 - availability [Analysis Services]
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: cb9d445b33f7a9ab1dc81f32ea7db419c512f680
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Anforderungen und Überlegungen für die Bereitstellung von Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die Leistung und Verfügbarkeit einer Lösung hängt von vielen Faktoren ab, einschließlich der Funktionen der zugrunde liegenden Hardware, die Topologie der serverbereitstellung, die Merkmale der Projektmappe (z. B. mit der Verteilung von Partitionen auf mehrere Server oder mit dem ROLAP-Speicher, die direkten Zugriff auf das relationale Modul erfordert), Vereinbarungen zum Servicelevel und der Komplexität des Datenmodells.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Die Leistung und Verfügbarkeit einer Lösung hängt von vielen Faktoren ab, einschließlich der Funktionen der zugrunde liegenden Hardware, der Topologie der Serverbereitstellung, der Eigenschaften der Lösung (z. B. die Verteilung von Partitionen auf mehreren Servern oder die Verwendung von ROLAP-Speicher, der Direktzugriff auf das relationale Modul erfordert), der Vereinbarungen zum Servicelevel und der Komplexität des Datenmodells.  
   
 ## <a name="memory-and-processor-requirements"></a>Arbeitsspeicher- und Prozessoranforderungen  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] benötigt unter folgenden Umständen zusätzliche Arbeitsspeicher- und Prozessorressourcen:  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/08/2018
  Cubes  
  Cubes, die große Faktentabellen besitzen, verlangen mehr Speicherplatz als Cubes mit kleinen Faktentabellen. Entsprechend (wenn auch in geringerem Umfang) erfordern Cubes mit zahlreichen großen Dimensionen mehr Speicherplatz als Cubes mit einer geringeren Anzahl von Dimensionselementen. Im Allgemeinen können Sie erwarten, dass eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank ungefähr 20 Prozent des Speicherplatzes erfordert, der für die gleichen Daten benötigt wird, die in der zugrunde liegenden relationalen Datenbank gespeichert sind.  
   
- Aggregations  
+ Aggregationen  
  Aggregationen erfordern proportional zu den hinzugefügten Aggregationen zusätzlichen Speicherplatz – je mehr Aggregationen vorhanden sind, desto mehr Speicherplatz ist erforderlich. Wenn Sie das Erstellen nicht erforderlicher Aggregationen vermeiden, sollte der für Aggregationen benötigte Speicherplatz in der Regel ungefähr 10 Prozent der Größe der Daten nicht übersteigen, die in der zugrunde liegenden relationalen Datenbank gespeichert sind.  
   
  Data Mining  
