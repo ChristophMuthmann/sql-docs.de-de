@@ -8,28 +8,30 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - replication [SQL Server], database mirroring and
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3e4757ca79a259ac4d7ddbc554954d139828f0f9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 31e0e930a3ebc1d81d3182de30e8cb3ae5b4d701
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Datenbankspiegelung und Replikation (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Datenbankspiegelung kann in Verbindung mit der Replikation verwendet werden, um die Verfügbarkeit der Veröffentlichungsdatenbank zu verbessern. Bei der Datenbankspiegelung sind zwei Kopien einer einzigen Datenbank vorhanden, die normalerweise auf verschiedenen Computern gespeichert sind. Für die Clients ist immer nur eine Kopie der Datenbank verfügbar. Diese Kopie wird als Prinzipaldatenbank bezeichnet. Updates, die Clients an der Prinzipaldatenbank vornehmen, werden in der anderen Kopie der Datenbank angewendet, die als Spiegeldatenbank bezeichnet wird. Beim Spiegeln wird das Transaktionsprotokoll von jedem Einfüge-, Update- oder Löschvorgang, der an der Prinzipaldatenbank vorgenommen wird, auf die Spiegeldatenbank angewandt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Die Datenbankspiegelung kann in Verbindung mit der Replikation verwendet werden, um die Verfügbarkeit der Veröffentlichungsdatenbank zu verbessern. Bei der Datenbankspiegelung sind zwei Kopien einer einzigen Datenbank vorhanden, die normalerweise auf verschiedenen Computern gespeichert sind. Für die Clients ist immer nur eine Kopie der Datenbank verfügbar. Diese Kopie wird als Prinzipaldatenbank bezeichnet. Updates, die Clients an der Prinzipaldatenbank vornehmen, werden in der anderen Kopie der Datenbank angewendet, die als Spiegeldatenbank bezeichnet wird. Beim Spiegeln wird das Transaktionsprotokoll von jedem Einfüge-, Update- oder Löschvorgang, der an der Prinzipaldatenbank vorgenommen wird, auf die Spiegeldatenbank angewandt.  
   
- Ein Failover der Replikation zu einer Spiegeldatenbank wird vollständig für Veröffentlichungsdatenbanken unterstützt, und zwar mit einer eingeschränkten Unterstützung für Verteilungs- oder Abonnementdatenbanken. Die Datenbankspiegelung wird für die Verteilerdatenbank nicht unterstützt. Informationen zum Wiederherstellen einer Verteilungsdatenbank oder einer Abonnementdatenbank, ohne dass dazu die Replikation neu konfiguriert werden muss, finden Sie unter [Sichern und Wiederherstellen von replizierten Datenbanken](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md). Informationen zum Spiegeln der Abonnentendatenbank finden im entsprechenden Thema.  
+ Ein Failover der Replikation zu einer Spiegeldatenbank wird vollständig für Veröffentlichungsdatenbanken unterstützt, und zwar mit einer eingeschränkten Unterstützung für Verteilungs- oder Abonnementdatenbanken. Die Datenbankspiegelung wird für die Verteilerdatenbank nicht unterstützt. Informationen zum Wiederherstellen einer Verteilungsdatenbank oder einer Abonnementdatenbank, ohne dass dazu die Replikation neu konfiguriert werden muss, finden Sie unter [Sichern und Wiederherstellen von replizierten Datenbanken](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).   
   
 > [!NOTE]  
 >  Nach einem Failover wird die Spiegeldatenbank zur Prinzipaldatenbank. In diesem Thema bezeichnen die Begriffe "Prinzipal" und "Spiegel" immer die ursprüngliche Prinzipal- bzw. Spiegeldatenbank.  
