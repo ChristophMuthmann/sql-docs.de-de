@@ -1,5 +1,5 @@
 ---
-title: Transact-SQL-Referenz (Datenbankmodul) | Microsoft Docs
+title: Transact-SQL-Referenz (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/03/2017
 ms.prod: sql-non-specified
@@ -8,47 +8,50 @@ ms.service:
 ms.component: t-sql
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sql13.tsqlref.f1
 - devlang-tsql
-helpviewer_keywords: Transact-SQL
+helpviewer_keywords:
+- Transact-SQL
 ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: db6310309c694a856727672cd5d1e5ad80ae6b49
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 9bc588f23d4a78d035a46c7e5c1adcb600af1ce2
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL-Referenz (Datenbankmodul)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Dieses Thema enthält die Grundlagen zum Suchen und die Referenzthemen für Microsoft Transact-SQL (T-SQL) verwenden. T-SQL ist wesentlicher Bestandteil von Microsoft SQL-Produkte und Dienste. Alle Tools und Anwendungen, die mit einer SQL-Datenbank kommunizieren dazu T-SQL-Befehle gesendet werden.  
+In diesem Thema erfahren Sie die Grundlagen zum Suchen und Verwenden von Microsoft Transact-SQL-Referenzthemen (T-SQL). T-SQL ist wesentlich für die Verwendung von Microsoft SQL-Produkten und -Diensten. Alle Tools und Anwendungen, die mit einer SQL-Datenbank kommunizieren, erreichen diese Kommunikation durch das Senden von T-SQL-Befehlen.  
 
-## <a name="tools-that-use-t-sql"></a>Tools, DIE T-SQL verwenden.
+## <a name="tools-that-use-t-sql"></a>Tools, die T-SQL verwenden
 
-Einige der Microsoft-Tools, die T-SQL-Befehle sind:
+Zu den Microsoft-Tools, die T-SQL-Befehle verwenden, gehören u.a. folgende:
 
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)
 - [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md).  
-- [Sqlcmd](../tools/sqlcmd-utility.md).  
+- [sqlcmd](../tools/sqlcmd-utility.md).  
+- [SQL Operations Studio (Vorschau)](https://docs.microsoft.com/sql/sql-operations-studio/download).  
   
  
-## <a name="locate-the-transact-sql-reference-topics"></a>Suchen Sie die Transact-SQL-Referenzthemen  
+## <a name="locate-the-transact-sql-reference-topics"></a>Suchen der Referenzthemen zu Transact-SQL  
   
-Um T-SQL-Themen zu suchen, verwenden Sie die Suche oben rechts auf der diese Seite, oder verwenden Sie das Inhaltsverzeichnis auf der linken Seite der Seite. Sie können auch Geben Sie eine T-SQL-Schlüsselwort im Fenster Abfrage-Editor von Management Studio, und drücken Sie F1. 
+Um nach T-SQL-Themen zu suchen, verwenden Sie die Suche ganz oben rechts auf dieser Seite oder das Inhaltsverzeichnis auf der linken Seite. Sie können auch ein T-SQL-Schlüsselwort in das Fenster des Abfrage-Editors von Management Studio eingeben und F1 drücken. 
   
 
 ## <a name="find-system-views"></a>Suchen von Systemsichten
 
-Der Systemtabellen, Sichten, Funktionen und Prozeduren, finden Sie unter folgenden Links finden in der [mit relationalen Datenbanken](../relational-databases/database-features.md) Abschnitt der SQL-Dokumentation.
+Um nach den Systemtabellen, -sichten, -funktionen und -prozeduren zu suchen, verwenden Sie die folgenden Links aus dem [Leitfaden für die Verwendung von relationalen Microsoft SQL-Datenbanken](../relational-databases/database-features.md) der SQL-Dokumentation.
 
 - [Systemkatalogsichten](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 - [Systemkompatibilitätssichten](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)
@@ -59,27 +62,27 @@ Der Systemtabellen, Sichten, Funktionen und Prozeduren, finden Sie unter folgend
 - [Systemtabellen](../relational-databases/system-tables/system-tables-transact-sql.md)
 
  
-## <a name="applies-to-references"></a>"Applies to"-Verweise  
- Die T-SQL-Referenzthemen umfassen mehrere Versionen von SQL Server 2008 ab als auch die anderen SQL Azure-Dienste. Am oberen Rand jedes Thema ist ein Abschnitt, der angibt, welche Produkte und Dienste Betreff des Themas unterstützen. 
+## <a name="applies-to-references"></a>„Gilt für“-Verweise  
+ Die T-SQL-Referenzthemen gelten für mehrere Versionen von SQL Server (ab Version 2008) sowie für die anderen Azure SQL-Dienste. Am oberen Rand jedes Themas befindet sich ein Abschnitt, der angibt, für welche Produkte und Dienste das Thema gilt. 
 
-Beispielsweise in diesem Thema gilt für alle Versionen und verfügt über die folgenden Bezeichnung. 
+Dieses Thema gilt beispielsweise für alle Versionen und hat folgende Bezeichnung. 
   
  [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]   
 
-Ein weiteres Beispiel gibt die folgende Bezeichnung eines Themas, das gilt nur für Azure SQL Data Warehouse und Parallel Data Warehouse an.
+Ein weiteres Beispiel ist die folgende Bezeichnung für ein Thema, das nur für Azure SQL Data Warehouse und Parallel Data Warehouse gilt.
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   
-In einigen Fällen wird das Thema ein Produkt oder Dienst verwendet, aber alle Argumente werden nicht unterstützt. In diesem Fall werden zusätzliche **Applies to** -Abschnitte in den Beschreibungen der entsprechenden Arguments in den Text des Themas eingefügt.  
+In einigen Fällen wird das Thema von einem Produkt oder Dienst verwendet, jedoch werden nicht alle Argumente unterstützt. In diesem Fall werden zusätzliche **Applies to** -Abschnitte in den Beschreibungen der entsprechenden Arguments in den Text des Themas eingefügt.  
  
-## <a name="get-help-from-the-msdn-forum"></a>Abrufen von Hilfe aus dem MSDN-forum  
+## <a name="get-help-from-the-msdn-forum"></a>Hilfe im MSDN-Forum  
   
-Onlinehilfe, finden Sie unter der [MSDN-Forum zu Transact-SQL](http://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql).  
+Onlinehilfe finden Sie im [MSDN Transact-SQL-Forum](http://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql).  
  
-## <a name="see-other-language-references"></a>Finden Sie unter anderen Sprachreferenzen
+## <a name="see-other-language-references"></a>Weitere Sprachreferenzen
 
-SQL-Dokumente enthalten diese anderen Sprachreferenzen:
+Die SQL-Dokumentation enthält die folgenden weiteren Sprachreferenzen:
   
 - [XQuery-Sprachreferenz](../xquery/xquery-language-reference-sql-server.md)
 - [Integration Services-Sprachreferenz](../integration-services/integration-services-language-reference.md)
@@ -89,10 +92,10 @@ SQL-Dokumente enthalten diese anderen Sprachreferenzen:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nun wissen, wie die T-SQL-Referenzthemen zu finden können Sie:
+Nachdem Sie nun die Grundlagen zum Suchen der T-SQL-Referenzthemen kennen, sind Sie bereit für folgende Schritte:
 
-- Durchläuft ein kurzes Lernprogramm zum Schreiben von T-SQL, finden Sie unter [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](../t-sql/tutorial-writing-transact-sql-statements.md). 
-- Anzeigen der [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41; ](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+- Arbeiten Sie sich durch ein kurzes Tutorial zum Schreiben von T-SQL unter [Tutorial: Schreiben von Transact-SQL-Anweisungen](../t-sql/tutorial-writing-transact-sql-statements.md). 
+- Sehen Sie sich die [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) an.  
 
   
   

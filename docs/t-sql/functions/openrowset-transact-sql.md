@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OPENROWSET_TSQL
 - OPENROWSET
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data sources [SQL Server]
 - OPENROWSET function
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-caps.latest.revision: "130"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 68db78ede26c3e7f8c60ced655d89d0fc9a615ac
 ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/02/2018
 ---
@@ -189,22 +191,22 @@ Eine benannte externe Datenquelle auf den Azure-Blob-Speicherort der Fehlerdatei
  Spaltenaliase sind erforderlich, wenn ORDER verwendet wird. Die Spaltenaliasliste muss auf die abgeleitete Tabelle verweisen, auf die von der BULK-Klausel zugegriffen wird. Die Spaltennamen, die in der ORDER-Klausel angegeben sind, verweisen auf diese Spaltenaliasliste. Große Werttypen (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**, und **Xml**) und große Objekttypen (LOB) (**Text**, **Ntext**, und **Image**) können keine Spalten angegeben werden.  
   
  SINGLE_BLOB  
- Gibt den Inhalt der *Data_file* als einzeiliges, einspaltiges Rowset vom Typ **varbinary(max)**.  
+ Gibt den Inhalt von*data_file* als einzeiliges, einspaltiges Rowset vom Typ **varbinary(max)** zurück.  
   
 > [!IMPORTANT]  
->  Es wird empfohlen, XML-Daten anstelle von mit SINGLE_CLOB und SINGLE_NCLOB ausschließlich mithilfe der SINGLE_BLOB-Option zu importieren, da nur SINGLE_BLOB alle Windows-Codierungskonvertierungen unterstützt.  
+>  Es wird empfohlen, XML-Daten mit SINGLE_CLOB und SINGLE_NCLOB ausschließlich unter Verwendung der SINGLE_BLOB-Option zu importieren, da nur SINGLE_BLOB alle Windows-Codierungskonvertierungen unterstützt.  
   
  SINGLE_CLOB  
  Durch Lesen *Data_file* als ASCII-Daten, gibt Sie den Inhalt als einzeiliges, einspaltiges Rowset vom Typ **varchar(max)**, wobei die Sortierung der aktuellen Datenbank.  
   
  SINGLE_NCLOB  
- Durch Lesen *Data_file* als UNICODE, und gibt den Inhalt als einzeiliges, einspaltiges Rowset vom Typ zurück **nvarchar(max)**, wobei die Sortierung der aktuellen Datenbank.  
+ Gibt *data_file* als einzeiliges, einspaltiges Rowset vom Typ **nvarchar(max)** zurück, weil die Zeichen in data_file als UNICODE gelesen werden. Hierbei wird die Sortierung der aktuellen Datenbank verwendet.  
 
 ### <a name="input-file-format-options"></a>Format der Eingabedatei (Optionen)
   
 FORMAT  **=**  "CSV"   
 **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-Gibt eine Datei mit kommagetrennten Werten kompatibel ist die [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
+Gibt eine Datei mit kommagetrennten Werten an, die mit [RFC 4180](https://tools.ietf.org/html/rfc4180) kompatibel ist.
 
  FORMATFILE = "*Format_file_path*"  
  Gibt den vollständigen Pfad einer Formatdatei an. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt zwei Typen von Formatdateien: XML- und Nicht-XML-Formatdateien.  
