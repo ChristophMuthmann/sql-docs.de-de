@@ -12,6 +12,7 @@
 # [Oberflächenkonfiguration](surface-area-configuration.md)  
 # [Einschleusung von SQL-Befehlen](sql-injection.md)
 # [Sicherheitsrisikobewertung mit der SQL](sql-vulnerability-assessment.md)  
+# [SQL-Datenermittlung und -klassifizierung](sql-data-discovery-and-classification.md)  
 # [TRUSTWORTHY-Datenbankeigenschaft](trustworthy-database-property.md)  
 # [Berechtigungen](permissions-database-engine.md)  
 # [Berechtigungshierarchie](permissions-hierarchy-database-engine.md)  

@@ -43,14 +43,19 @@
 # [Tutorials für SQL Server](tutorials-for-sql-server-2016.md)
 
 # Ressourcen
+
 ## Blogs
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ### [SQL Server-Datenbankmodul](https://blogs.msdn.microsoft.com/sqlserverstorageengine/)
 ### [SQL Server-Sicherheit](https://blogs.msdn.microsoft.com/sqlsecurity/)
 ### [SQL Server Data Tools](https://blogs.msdn.microsoft.com/ssdt/)
 
+## Erlernen
+### [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/sql-server#!lang=1033)
+### [SQL auf Channel 9](https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year)
+
 ## Feedback und Hilfe
-### [Vorschläge für SQL Server](https://feedback.azure.com/forums/908035-sql-server)
+### [UserVoice – SQL Server-Verbesserungsvorschläge](https://feedback.azure.com/forums/908035-sql-server)
 ### [DBA Stack Exchange (DBA-Stapelaustausch)](https://dba.stackexchange.com/questions/tagged/sql-server)
 ### [Stack Overflow (Stapelüberlauf)](http://stackoverflow.com/questions/tagged/sql-server)
 ### [MSDN-Foren](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)

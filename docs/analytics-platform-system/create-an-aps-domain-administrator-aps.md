@@ -30,7 +30,7 @@ So konfigurieren Sie alle APS-Knoten, der Benutzer mit über ausreichende Berech
   
 #### <a name="to-add-a-user-to-the-domain-admins-group"></a>Zum Hinzufügen eines Benutzers zur Gruppe "Domänen-Admins"  
   
-1.  Melden Sie sich den aktiven Knoten des AD **(*Appliance_domain*-AD01** oder ***Appliance_domain *-AD02**) mit einer vorhandenen Appliance-Domänenadministratorkonto.  
+1.  Melden Sie sich den aktiven Knoten des AD **(*Appliance_domain*-AD01** oder ***Appliance_domain*-AD02**) mit einer vorhandenen Appliance-Domänenadministratorkonto.  
   
 2.  Klicken Sie im Startmenü auf **Ausführen**. In der **öffnen** geben **dsa.msc**. Klicken Sie auf **OK**.  
   
