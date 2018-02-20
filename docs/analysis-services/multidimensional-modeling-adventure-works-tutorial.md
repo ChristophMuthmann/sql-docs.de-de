@@ -1,7 +1,7 @@
 ---
 title: Mehrdimensionale Modellierung (Adventure Works-Lernprogramm) | Microsoft Docs
 ms.custom: 
-ms.date: 02/02/2018
+ms.date: 02/13/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -22,18 +22,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 1a6323632e17efab87ecf64358b5055288dfa5db
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: af9371e71223eedc44b7b7ec8cbeb3ab20423da8
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>Mehrdimensionale Modellierung (Adventure Works-Lernprogramm)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Willkommen beim [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Lernprogramm. In diesem Lernprogramm wird beschrieben, wie [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] zum Entwickeln und Bereitstellen eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekts verwendet wird, wobei das fiktive Unternehmen [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] für alle Beispiele verwendet wird.  
   
-## <a name="what-you-will-learn"></a>Lernziele  
+## <a name="what-you-learn"></a>Was Sie lernen  
 In diesem Lernprogramm lernen Sie Folgendes:  
   
 -   Definieren von Datenquellen, Datenquellensichten, Dimensionen, Attributen, Attributbeziehungen, Hierarchien und Cubes in einem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt innerhalb von [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
@@ -72,7 +72,7 @@ Dieses Lernprogramm umfasst die folgenden Lektionen:
 |[Lektion 10: Definieren von Administratorrollen](../analysis-services/lesson-10-defining-administrative-roles.md)|15 Minuten|  
   
 > [!NOTE]  
-> Die in diesem Lernprogramm erstellte Cubedatenbank ist eine vereinfachte Version des mehrdimensionalen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Modellprojekts, das Teil der Adventure Works-Beispieldatenbanken ist, die auf der Codeplex-Website zum Download verfügbar sind. Die Lernprogrammversion der mehrdimensionalen Adventure Works-Datenbank ist vereinfacht, um den Fokus auf die Fähigkeiten zu richten, die Sie vorrangig erwerben möchten. Nachdem Sie das Lernprogramm abgeschlossen haben, können Sie das mehrdimensionale Modellprojekt selbst untersuchen, um Ihr Verständnis der mehrdimensionalen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Modellierung zu vertiefen.  
+> Die Cubedatenbank, die Sie in diesem Lernprogramm erstellte Cubedatenbank ist eine vereinfachte Version von den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] mehrdimensionale Modellprojekt, die Teil der Adventure Works-Beispieldatenbanken, die zum Download auf GitHub verfügbar ist. Die Lernprogrammversion der mehrdimensionalen Adventure Works-Datenbank ist vereinfacht, um den Fokus auf die Fähigkeiten zu richten, die Sie vorrangig erwerben möchten. Nachdem Sie das Lernprogramm abgeschlossen haben, können Sie das mehrdimensionale Modellprojekt selbst untersuchen, um Ihr Verständnis der mehrdimensionalen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Modellierung zu vertiefen.  
   
 ## <a name="next-step"></a>Nächster Schritt  
 Um das Lernprogramm zu starten, gehen Sie zur ersten Lektion über: [Lesson 1: Defining a Data Source View within an Analysis Services Project](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
