@@ -8,24 +8,26 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SET @local_variable
 - variables [SQL Server], assigning
 - SET statement, @local_variable
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 56f38e166249f13bb50d1bf0188a5066da52ea78
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
@@ -103,19 +105,19 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  += Addition und Zuweisung  
   
- = Subtraktion und Zuweisung  
+ -= Subtraktion und Zuweisung  
   
- * = Multiplikation und Zuweisung  
+ *= Multiplikation und Zuweisung  
   
- / = Division und Zuweisung  
+ /= Division und Zuweisung  
   
- % = Modulo und Zuweisung  
+ %= Modulo und Zuweisung  
   
- &=              Bitweises AND und Zuweisung  
+ &= Bitweises AND und Zuweisung  
   
- ^ = Bitweises XOR und Zuweisung  
+ ^= Bitweises XOR und Zuweisung  
   
- | = Bitweises OR und Zuweisung  
+ |= Bitweises OR und Zuweisung  
   
  *expression*  
  Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
