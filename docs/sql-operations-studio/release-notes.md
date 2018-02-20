@@ -2,7 +2,7 @@
 title: "Versionshinweise für Microsoft SQL Operations Studio (Vorschau) | Microsoft Docs"
 description: "Versionshinweise für Microsoft SQL Operations Studio (Vorschau)"
 ms.custom: tools|sos
-ms.date: 01/17/2018
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,15 +14,39 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eded99dffd8029431a127e6cbf4b125ab5e0ac97
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 1b8c5e3cce8f84f0565c764a47d3f3b7c1709454
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Versionshinweise für SQL-Vorgänge Studio (Vorschau)
 
-**[Herunterladen der öffentlichen Vorschau Januar](download.md)**
+**[Herunterladen der öffentlichen Vorschau von Februar](download.md)**
+
+## <a name="february-2018-february-public-preview"></a>Februar 2018 (Februar öffentliche Vorschau)
+
+Veröffentlichungsdatum: 15-Version von Februar 2018  
+version: 0.26.7
+
+Die *Public Preview-Version von Februar* enthält einige neue Features vorschlagen und hoher Priorität Fehlerkorrekturen. Diese Version umfasst die folgenden Verbesserungen:
+
+- Einführung in die Installation automatisch aktualisiert, bereitstellt, der eine Benachrichtigung bei eine neue Version zum Herunterladen verfügbar ist 
+- Das Verbindungsdialogfeld "Database"-Feld ist jetzt eine dynamisch aufgefüllt Dropdown-Liste, die eine Liste der Datenbanken, die vom angegebenen Server aufgefüllt enthalten soll.
+- Beheben Sie [ausstellen 6](https://github.com/Microsoft/sqlopsstudio/issues/6): Verbindung und die ausgewählte Datenbank beibehalten, beim Öffnen der neuen abfrageregisterkarten.
+- Beheben Sie [ausstellen 22](https://github.com/Microsoft/sqlopsstudio/issues/22): "Servername" und "Datenbankname" – können Sie diese Dropdownfelder anstelle von Textfeldern werden?
+- Beheben Sie [ausstellen 549](https://github.com/Microsoft/sqlopsstudio/issues/549): Silent/sehr automatische Installation führt zur Anwendung, die nach der Installation öffnet.
+- Beheben Sie [ausstellen 481](https://github.com/Microsoft/sqlopsstudio/issues/481): Fügen Sie die Option "Nach Updates suchen".
+- SQL-Editor farbliche Kennzeichnung und automatische Vervollständigung Problembehebungen:
+   - Beheben Sie [ausstellen 584](https://github.com/Microsoft/sqlopsstudio/issues/584): Schlüsselwort "FULL", nicht hervorgehoben von IntelliSense.
+   - Beheben Sie [ausstellen 345](https://github.com/Microsoft/sqlopsstudio/issues/345): zur farblichen Kennzeichnung der SQL-Funktionen innerhalb des Editors.
+   - Beheben Sie [ausstellen 300](https://github.com/Microsoft/sqlopsstudio/issues/300): [#tempData] neuesten "]" wird grün angezeigt.
+   - Beheben Sie [ausstellen 225](https://github.com/Microsoft/sqlopsstudio/issues/225): Schlüsselwort Farben stimmen nicht überein.
+   - Beheben Sie [ausstellen 60](https://github.com/Microsoft/sqlopsstudio/issues/60): Ungültige Sql Farbe syntaxhervorhebung bei Verwendung der temporären Tabelle in from-Klausel.
+- Führen Sie die Verbindung-Erweiterbarkeits-API.
+- Visual Studio Code-Editor 1.19 Integration.
+- Aktualisieren Sie JustinPealing/html-Abfrageplan Komponente übernommen Abfrageplan Viewer verbessert.
+
 
 ## <a name="january-2018-january-public-preview"></a>Januar 2018 (Januar öffentliche Vorschau)
 

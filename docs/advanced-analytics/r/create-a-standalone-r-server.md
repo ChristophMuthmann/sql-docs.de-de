@@ -1,7 +1,7 @@
 ---
 title: "Installieren von Machine Learning einen eigenständigen Server oder einen eigenständigen R Server | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2017
+ms.date: 02/14/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 275bda79d9c8cb74d871a4d13612847dc58592e8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2ecb60bd02b3fc1ee7ac7101749fa7affc2523bd
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone"></a>Installieren von Machine Learning-Server (eigenständig) oder R Server (eigenständig)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ Dieser Artikel beschreibt, wie SQL Server-Setup verwenden, um die eigenständige
 + [Aktualisieren einer vorhandenen Instanz von Microsoft R Server](#bkmk_upgrade)
 + [Entscheidungshilfe für Elemente, die installiert](#bkmk_tips)
 
-##  <a name="bkmk_installMLServer"></a>Installieren von Machine Learning-Server (eigenständig)
+##  <a name="bkmk_installMLServer"></a> Installieren von Machine Learning-Server (eigenständig)
 
 Diese Funktion erfordert eine Enterprise-Lizenz oder eine entsprechende für **SQL Server-2017**.
 
@@ -114,7 +114,7 @@ Wenn Sie alle früheren Versionen von Revolution Analytics-Tools bzw. die Pakete
     
 5.  Überprüfen Sie Ihre Auswahl auf der Seite **Installationsbereit** , und klicken Sie anschließend auf **Installieren**.
 
-## <a name="bkmk_upgrade"></a>Aktualisieren einer vorhandenen Instanz von R-Server
+## <a name="bkmk_upgrade"></a> Aktualisieren einer vorhandenen Instanz von R-Server
 
 Wenn Sie eine frühere Version von Microsoft R Server (eigenständig) installiert haben, können Sie die Instanz, um neuere Versionen der R-Komponenten verwenden, aktualisieren. Das Upgrade ändert sich auch der Support-Richtlinie, um mithilfe der Gruppenrichtlinie moderne Software Lebenszyklus unterstützen. Dadurch wird die Instanz auf einem anderen Zeitplan häufiger aktualisiert werden, als die SQL Server-Versionen.
 
@@ -125,7 +125,7 @@ Wenn Sie eine frühere Version von Microsoft R Server (eigenständig) installier
 
 2. Führen Sie das Installationsprogramm, und befolgen Sie die Anweisungen. Wählen Sie auf der Seite, in dem Sie die zu installierenden Funktionen auswählen, jede Instanz des R-Server, die Sie aktualisieren möchten.
 
-## <a name ="bkmk_tips"></a>Tipps zur Installation und eine nachverfolgung erforderlich
+## <a name ="bkmk_tips"></a> Tipps zur Installation und eine nachverfolgung erforderlich
 
 Dieser Abschnitt enthält zusätzliche Informationen, die im Zusammenhang mit Setup.
 
@@ -151,11 +151,12 @@ Die folgende Tabelle enthält die Pfade für jede Installation.
 |----|----|----|
 |R-Server (eigenständig) |SQL Server 2016-Setup-Assistenten|`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |R-Server (eigenständig) |Eigenständiges Windows-Installationsprogramm|`C:\Program Files\Microsoft\R Server\R_SERVER`|
-|Machine Learning-Server (eigenständig) |  2017 von SQL Server-Setup-Assistenten |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
+|Machine Learning-Server (eigenständig) |  2017 von SQL Server-Setup-Assistenten, mit der Option für R-Sprache |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
+|Machine Learning-Server (eigenständig) |  2017 von SQL Server-Setup-Assistenten mit Python Standardsprache (Option) |`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Machine Learning-Server (eigenständig) |  Eigenständiges Windows-Installationsprogramm |`C:\Program Files\Microsoft\R Server\R_SERVER`|
 |R Services (In-Database) |SQL Server 2016-Setup-Assistenten|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
-|Machine Learning-Dienste (datenbankintern) |2017 von SQL Server-Setup-Assistenten|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`oder`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
-
+|Machine Learning-Dienste (datenbankintern) |2017 von SQL Server-Setup-Assistenten, mit der Option für R-Sprache|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  |
+|Machine Learning-Dienste (datenbankintern) |2017 von SQL Server-Setup-Assistenten mit Python Standardsprache (Option)| `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 ### <a name="development-tools"></a>Entwicklungstools
 
 Eine Entwicklungsaufgabe IDE ist nicht als Teil von Setup installiert. Zusätzliche Tools sind nicht erforderlich, da alle Standardtools eingeschlossen werden würde, die mit einer Verteilung von R oder Python angegeben werden.
@@ -182,7 +183,7 @@ In der RTM-Version von SQL Server 2016 lag ein bekanntes Problem beim Hinzufüge
 
 Wenn dieses Problem auftritt, können, wenden Sie das Update, die in beschriebenen [KB3164398](https://support.microsoft.com/kb/3164398) Feature "R" mit der vorhandenen Instanz unter Windows Server Core hinzu.   Weitere Informationen finden Sie unter [Microsoft R Server (eigenständig) kann nicht auf einem Windows Server Core-System installiert werden](https://support.microsoft.com/kb/3168691).
 
-###  <a name="bkmk_Uninstall"></a>Upgrade von einer älteren Version von Microsoft R Server
+###  <a name="bkmk_Uninstall"></a> Upgrade von einer älteren Version von Microsoft R Server
 
 Wenn Sie eine Vorabversion von Microsoft R Server installiert haben, müssen Sie diese deinstallieren, bevor Sie auf eine neuere Version aktualisieren können.
 

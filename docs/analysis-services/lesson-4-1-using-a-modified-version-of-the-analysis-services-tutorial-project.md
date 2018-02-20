@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d37f4c7e9c21231e99bf8cce8e588969d824b40b
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 90a1b92087d0f753fdd637830bc4dd4c86d601a3
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lektion 4-1: Verwenden einer geänderten Version des Analysis Services Tutorial-Projekts
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,15 +34,15 @@ Bevor Sie dieses Lernprogramm fortsetzen können, müssen Sie die erweiterte Ver
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Herunterladen und Extrahieren der Projektdatei  
   
-1.  [Klicken Sie hier](http://go.microsoft.com/fwlink/?LinkID=221866) , um die Downloadseite mit Beispielprojekten für dieses Lernprogramm aufzurufen. Die Lernprogrammprojekte sind im Download **Analysis Services Tutorial SQL Server 2012** enthalten.  
+1.  [Klicken Sie hier](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) , um die Downloadseite mit Beispielprojekten für dieses Lernprogramm aufzurufen. Die Lernprogrammprojekte sind in enthalten die **Adventure-Works – mehrdimensionale-Lernprogramm – projects.zip** herunterladen.  
   
-2.  Klicken Sie auf **Analysis Services Tutorial SQL Server 2012** , um das Paket herunterzuladen, in dem die Projekte für dieses Lernprogramm enthalten sind.  
+2.  Klicken Sie auf **Adventure-Works – mehrdimensionale-Lernprogramm – projects.zip** um das Paket herunterzuladen, die Projekte für dieses Lernprogramm enthält.  
   
     Standardmäßig wird eine ZIP-Datei im Ordner Downloads gespeichert. Sie müssen die ZIP-Datei an einen Ort mit einem kürzeren Pfadnamen verschieben (erstellen Sie z. B. einen Ordner C:\Tutorials, um die Dateien zu speichern).  Anschließend können Sie die in der ZIP-Datei enthaltenen Dateien extrahieren. Wenn Sie versuchen, die Dateien aus dem Ordner Downloads zu entzippen, der über einen längeren Pfad verfügt, wird nur Lektion 1 extrahiert.  
   
 3.  Erstellen Sie einen Unterordner auf oder nahe dem Stammlaufwerk, z. B. C:\Tutorial.  
   
-4.  Verschieben Sie die Datei **Analysis Services Tutorial SQL Server 2012.zip** in den Unterordner.  
+4.  Verschieben der **Adventure-Works – mehrdimensionale-Lernprogramm – projects.zip** Datei in den Unterordner.  
   
 5.  Klicken Sie mit der rechten Maustaste auf die Datei, und wählen Sie **Alle extrahieren**aus.  
   

@@ -20,11 +20,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: aec87866d4bf22b5e1f685ba5fdf41fd259fc6e3
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: d8bd3c158c40accf191c775f0fe8466c05c32203
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>Ein R-Modell zu erstellen und speichern in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,9 +51,7 @@ Das Modell erstellen ist eine binäre Klassifizierung, die vorhersagt, ob der Tr
 
      *Ergebnisse*
 
-     *Die logistische Regression Ergebnisse für: Geneigter ~ Passenger_count Trip_distance + Trip_time_in_secs +*
-     <br/>*direct_distance*
-     <br/>*Daten: FeatureDataSource (RxSqlServerData-Datenquelle)*
+     *Die logistische Regression Ergebnisse für: Geneigter ~ Passenger_count Trip_distance + Trip_time_in_secs +* Direct_distance *   <br/>*Daten: FeatureDataSource (RxSqlServerData-Datenquelle)*
      <br/>*Dependent variable(s): tipped*
      <br/>*Gesamtanzahl der unabhängigen Variablen: 5*
      <br/>*Anzahl der gültigen Beobachtungen: 17068*
@@ -64,7 +62,7 @@ Das Modell erstellen ist eine binäre Klassifizierung, die vorhersagt, ob der Tr
      <br/>*(Intercept) - 2.509e-03 3.223e-02-0.078 0.93793*
      <br/>*passenger_count   -5.753e-02  1.088e-02  -5.289 1.23e-07 \*\*\**
      <br/>*trip_distance     -3.896e-02  1.466e-02  -2.658  0.00786 \*\**
-     <br/>*Trip_time_in_secs 2.115e-4.336e 04-05 4.878 1.07e-06\*\*\**
+     <br/>*Trip_time_in_secs 2.115e-4.336e 04-05 4.878 1.07e-06 \*\*\**
      <br/>*direct_distance    6.156e-02  2.076e-02   2.966  0.00302 \*\**
      <br/>*---*
      <br/>*Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1*
@@ -210,7 +208,7 @@ In diesem Abschnitt erfahren Sie, wie das Modell beibehalten und zum Aufrufen, u
     Das Speichern eines Modells in einer Tabelle erfordert nur eine INSERT-Anweisung. Allerdings ist es einfacher, wenn in einer gespeicherten Prozedur, z. B. umschlossen _PersistModel_.
 
     > [!NOTE]
-    > Wenn Sie eine Fehlermeldung wie z. B. "die EXECUTE-Berechtigung wurde verweigert auf das Objekt PersistModel" Stellen Sie sicher, dass es sich bei Ihrer Anmeldung über die Berechtigung verfügt. Sie können explizite Berechtigungen für nur die gespeicherte Prozedur erteilen, indem Sie eine T-SQL-Anweisung wie folgt ausführen:`GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
+    > Wenn Sie eine Fehlermeldung wie z. B. "die EXECUTE-Berechtigung wurde verweigert auf das Objekt PersistModel" Stellen Sie sicher, dass es sich bei Ihrer Anmeldung über die Berechtigung verfügt. Sie können explizite Berechtigungen für nur die gespeicherte Prozedur erteilen, indem Sie eine T-SQL-Anweisung wie folgt ausführen: `GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
 
 4. Nachdem Sie ein Modell erstellt haben und in einer Datenbank gespeichert, Sie können diese aufrufen direkt aus [!INCLUDE[tsql](../../includes/tsql-md.md)] code mithilfe der gespeicherten Systemprozedur, [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 

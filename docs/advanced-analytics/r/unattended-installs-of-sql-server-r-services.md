@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 7d41bd73398c016b920fa67244ffea1af865bde2
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f1c7aaf35c0c58e9a7aab3c5b31725f586ffd2ac
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>Unbeaufsichtigte Installation von Machine Learning-Services (Datenbankintern)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -49,9 +49,9 @@ Für die unbeaufsichtigte Installation bedeutet, dass Sie nicht die interaktiven
 
 > [!IMPORTANT]
 > 
-> Nachdem Setup abgeschlossen ist, um das Feature zu aktivieren, sind zusätzliche Schritte erforderlich. Diese umfassen eine Neukonfiguration und Neustart der Instanz. Sie sicher, dass alle Elemente im Abschnitt [Schritte nach der Installation] überprüfen (#Bkmk_PostInstall), um zu bestimmen, Aktionen erforderlich nach Abschluss des Setups.
+> Nachdem Setup abgeschlossen ist, um das Feature zu aktivieren, sind zusätzliche Schritte erforderlich. Diese umfassen eine Neukonfiguration und Neustart der Instanz. Achten Sie darauf, dass Sie alle Elemente im Abschnitt überprüfen auf [Schritte nach der Installation](#bkmk_PostInstall) nach Abschluss des Setups die erforderlichen Aktionen bestimmt.
 
-## <a name="bkmk_NewInstall"></a>Installation für SQL Server-2017 über die Befehlszeile
+## <a name="bkmk_NewInstall"></a>  Installation für SQL Server-2017 über die Befehlszeile
 
 Im folgenden Beispiel enthalten die **minimale** erforderlichen Funktionen.
 
@@ -97,7 +97,7 @@ Das folgende Beispiel zeigt, dass die Argumente erforderlich, um ein automatisch
 Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR, SQL_INST_MPY /INSTANCENAME=MSSQLSERVER.ServerName /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONOPENLICENSETERMS
 ```
 
-## <a name="OldInstall"></a>Installation für SQL Server 2016 über die Befehlszeile
+## <a name="OldInstall"></a> Installation für SQL Server 2016 über die Befehlszeile
  
 Das folgende Beispiel zeigt, dass die Argumente erforderlich, um ein automatisches, unbeaufsichtigtes Ausführen von SQL Server 2016 installieren, mit der Sprache "R" hinzugefügt.
 
