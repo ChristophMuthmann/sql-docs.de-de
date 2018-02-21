@@ -8,22 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eae5931014a84ff1169412b830a20e217627918c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d582d7d9ca0bc90ca40ee34e946d49bf545024bd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>Führen Sie ein Upgrade von SQL Server 2005 aus?
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das Ende des erweiterten Supports für SQL Server 2005 ist ein guter Grund für das Upgrade auf eine neuere Version von SQL Server und der Azure SQL-Datenbank. Ein Upgrade ermöglicht es Ihnen, Sicherheit und Compliance beizubehalten, eine bahnbrechende Leistung zu erzielen, und die Infrastruktur Ihrer Datenplattform zu optimieren.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+ 
+ Das Ende des erweiterten Support für SQL Server 2005 ist ein guter Grund für das Upgrade auf eine neuere Version von SQL Server und der Azure SQL-Datenbank. Ein Upgrade ermöglicht es Ihnen, Sicherheit und Compliance beizubehalten, eine bahnbrechende Leistung zu erzielen, und die Infrastruktur Ihrer Datenplattform zu optimieren.  
   
  Weitere Informationen, Anleitungen und Tools zum Planen und Automatisieren Ihres Upgrades oder Ihrer Migration finden Sie unter [SQL Server 2005-Supportende](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  
   
@@ -64,10 +68,10 @@ Um eine umfassendere Analyse dieser Optionen anzuzeigen, [klicken Sie hier](http
   
 -   Lesen Sie, wie Sie das Upgrade durchführen können  
   
-    -   Gehen Sie die verfügbaren Upgrademethoden durch, und erfahren Sie im Thema [Aktualisieren des Datenbankmoduls](../../database-engine/install-windows/upgrade-database-engine.md), wie Sie sie planen und testen können.  
+    -   Gehen Sie die verfügbaren Upgrademethoden durch, und erfahren Sie im Artikel [Aktualisieren der Datenbank-Engine](../../database-engine/install-windows/upgrade-database-engine.md), wie Sie die Methoden planen und testen können.  
   
         > [!IMPORTANT]  
-        >  Sie können ein Upgrade einer SQL Server 2005-Instanz auf einen SQL Server 2017-Server nicht an Ort und Stelle ausführen. Sie müssen zuerst eine Instanz von SQL Server 2017 installieren und dann Ihre SQL Server 2005-Datenbanken zur neuen Installation migrieren. Weitere Informationen finden Sie im Abschnitt zum Upgrade von Neuinstallationen im Thema [Wählen einer Upgrademethode für das Datenbankmodul](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
+        >  Sie können ein Upgrade einer SQL Server 2005-Instanz auf einen SQL Server 2017-Server nicht an Ort und Stelle ausführen. Sie müssen zuerst eine Instanz von SQL Server 2017 installieren und dann Ihre SQL Server 2005-Datenbanken zur neuen Installation migrieren. Weitere Informationen finden Sie im Abschnitt zum Upgrade von Neuinstallationen im Thema [Wählen einer Upgrademethode für die Datenbank-Engine](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
    
   
 -   Weitere Informationen, Anleitungen und Tools zum Planen und Automatisieren Ihres Upgrades oder Ihrer Migration finden Sie unter [SQL Server 2005-Supportende](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  

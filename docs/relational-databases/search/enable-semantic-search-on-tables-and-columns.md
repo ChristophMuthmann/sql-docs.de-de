@@ -8,24 +8,27 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: semantic search [SQL Server], enabling
+helpviewer_keywords:
+- semantic search [SQL Server], enabling
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2064da501f20a9e27f6d06d018f91a1eda4cb1b0
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: 0de385730d9999a2943f9599202d717fa7049152
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Aktivieren der semantischen Suche in Tabellen und Spalten
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Beschreibt, wie die statistische semantische Indizierung für ausgewählte Spalten, die Dokumente oder Text enthalten, aktiviert bzw. deaktiviert wird.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Beschreibt, wie die statistische semantische Indizierung für ausgewählte Spalten, die Dokumente oder Text enthalten, aktiviert bzw. deaktiviert wird.  
   
  Die statistische semantische Suche verwendet die Indizes, die von der Volltextsuche erstellt werden, und erstellt zusätzliche Indizes. Als Ergebnis dieser Abhängigkeit von der Volltextsuche erstellen Sie einen neuen semantischen Index, wenn Sie einen neuen Volltextindex definieren oder einen vorhandenen Volltextindex ändern. Einen neuen semantischen Index können Sie mit [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen oder mit dem Volltextindizierungs-Assistenten und anderen Dialogfeldern in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]erstellen, wie in diesem Thema beschrieben.  
   
@@ -162,7 +165,7 @@ GO
 Sie können die semantische Indizierung löschen, wenn Sie einen vorhandenen Volltextindex mit der **ALTER FULLTEXT INDEX** -Anweisung ändern. Sie können die semantische Indizierung auch mithilfe verschiedener Dialogfelder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]löschen.  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Löschen eines semantischen Indexes mit Transact-SQL  
-Rufen Sie zum ausschließlichen Löschen der semantischen Indizierung aus Spalten die **ALTER FULLTEXT INDEX** -Anweisung mit der Option **ALTER COLUMN***Spaltenname***DROP STATISTICAL_SEMANTICS** auf. Sie können die Indizierung in einer einzigen **ALTER** -Anweisung aus mehreren Spalten löschen.  
+Rufen Sie zum ausschließlichen Löschen der semantischen Indizierung aus Spalten die **ALTER FULLTEXT INDEX**-Anweisung mit der Option **ALTER COLUMN***Spaltenname***DROP STATISTICAL_SEMANTICS** auf. Sie können die Indizierung in einer einzigen **ALTER** -Anweisung aus mehreren Spalten löschen.  
   
 ```sql  
 USE database_name  
@@ -174,7 +177,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-Rufen Sie zum Löschen der Volltextindizierung und der semantischen Indizierung aus einer Spalte die **ALTER FULLTEXT INDEX** -Anweisung mit der Option **ALTER COLUMN***Spaltenname***DROP** auf.  
+Rufen Sie zum Löschen der Volltextindizierung und der semantischen Indizierung aus einer Spalte die **ALTER FULLTEXT INDEX**-Anweisung mit der Option **ALTER COLUMN***Spaltenname***DROP** auf.  
   
 ```sql  
 USE database_name  

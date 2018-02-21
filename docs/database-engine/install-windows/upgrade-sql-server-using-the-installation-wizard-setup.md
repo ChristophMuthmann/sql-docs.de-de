@@ -8,25 +8,29 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07ad726c7ba7c4c51bc98881aafbb2dd15228f78
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c5f13e2dff76b3dc2b3033d4f68fe62602b245a4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Upgrade von SQL Server mithilfe des Installations-Assistenten (Setup)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installations-Assistent enthält eine Funktionsstruktur zum direkten Upgrade von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten auf die neueste Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installations-Assistent enthält eine Funktionsstruktur zum direkten Upgrade von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten auf die neueste Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 >[!WARNING]  
 >Wenn Sie auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisieren, wird die frühere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überschrieben und ist auf dem Computer folglich nicht mehr vorhanden. 
@@ -109,7 +113,7 @@ Sie müssen Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](
   
      **Installierte Instanzen**  – Im Raster werden Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angezeigt, die sich auf dem Computer befinden, auf dem Setup ausgeführt wird. Wenn bereits eine Standardinstanz auf dem Computer installiert ist, muss eine benannte Instanz von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]installiert werden.  
   
-13. Der Ablauf für die weiteren Vorgänge dieses Themas ist von den Funktionen abhängig, die Sie für die Installation angegeben haben. Je nach Auswahl werden möglicherweise nicht alle Seiten angezeigt.  
+13. Der Ablauf für die weiteren Vorgänge dieses Artikels richtet sich nach den Funktionen, die Sie für die Installation angegeben haben. Je nach Auswahl werden möglicherweise nicht alle Seiten angezeigt.  
   
 14. Auf der Seite "Serverkonfiguration – Dienstkonten" werden die Standarddienstkonten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste angezeigt. Welche Dienste tatsächlich auf dieser Seite konfiguriert werden, ist von den zu aktualisierenden Funktionen abhängig.  
   
@@ -129,7 +133,7 @@ Sie müssen Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](
   
 18. Während der Installation wird auf der Seite Installationsstatus der Status angezeigt, sodass Sie während der Installation den Installationsstatus überwachen können.  
   
-19. Nach der Installation bietet die Seite Abgeschlossen einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf **Schließen** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um die Installation von abzuschließen.  
+19. Nach der Installation bietet die Seite Abgeschlossen einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf **Schließen** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um die Installation von abzuschließen.  
   
 20. Starten Sie den Computer neu, falls Sie dazu aufgefordert werden. Wenn Sie den Setupvorgang abgeschlossen haben, sollten Sie unbedingt die vom Installations-Assistenten angezeigte Meldung lesen. Weitere Informationen zu Setupprotokolldateien finden Sie unter [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   

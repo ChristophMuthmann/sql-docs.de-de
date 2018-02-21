@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1ba94eb985130eb7e3f8ad020756c7387df297c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b6451f3d322ff92ee928e6a9ed98759df0bcc2e6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Server und Katalog von Integration Services (SSIS)
   Nachdem Sie Pakete und Konfigurationen in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]entworfen und getestet haben, können Sie die Projekte, die die Pakete enthalten, auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="high-availability"></a>Hohe Verfügbarkeit  
  Wie andere Benutzerdatenbanken unterstützt die Datenbank **SSISDB** die Datenbankspiegelung und Replikation. Weitere Informationen zur Spiegelung und Replikation finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
- Sie können auch die hohe Verfügbarkeit von SSISDB und die Inhalte bereitstellen, indem Sie die SSIS- und Always On-Verfügbarkeitsgruppen verwenden. Weitere Informationen finden Sie im folgenden Blogbeitrag von Matt Masson bei blogs.msdn.com: [SSIS with Always On](http://go.microsoft.com/fwlink/?LinkId=255873) (SSIS mit Always On).  
+ Sie können auch die hohe Verfügbarkeit von SSISDB und die Inhalte bereitstellen, indem Sie die SSIS- und Always On-Verfügbarkeitsgruppen verwenden. Weitere Informationen finden Sie unter [Always On für den SSIS-Katalog (SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb). Informationen finden Sie auch im folgenden Blogbeitrag von Matt Masson auf blogs.msdn.com: [SSIS with Always On](http://go.microsoft.com/fwlink/?LinkId=255873) (SSIS mit Always On).  
   
 ##  <a name="ssms"></a> Integration Services-Server in SQL Server Management Studio  
  Wenn Sie eine Verbindung mit einer Instanz des [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dar, die als Host für die **SSISDB** -Datenbank fungiert, werden die folgenden Objekte im Objekt-Explorer angezeigt:  

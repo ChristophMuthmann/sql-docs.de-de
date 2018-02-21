@@ -8,22 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 42f27ae342fdd30ac608e1071029eb2415c9b896
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d18fdc2c65408898ed5faacc255e74b7a6261d57
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-data-quality-services"></a>Aktualisieren von Data Quality Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieses Thema enthält Informationen dazu, wie Sie die vorhandene [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]-Data Quality Services-Installation (DQS) aktualisieren. Während des Upgrades des [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]-Data Quality-Servers muss auch das DQS-Datenbankschema aktualisiert werden.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Dieser Artikel enthält Informationen dazu, wie Sie ein Upgrade der vorhandenen Installation von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS) durchführen. Während des Upgrades des [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]-Data Quality-Servers muss auch das DQS-Datenbankschema aktualisiert werden.  
   
 > [!IMPORTANT]  
 >  -   Sie müssen die DQS-Datenbanken sichern, bevor Sie DQS aktualisieren, um versehentliche Datenverluste während des Schemaupgrades zu verhindern. Informationen zum Sichern von DQS-Datenbanken finden Sie unter [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  

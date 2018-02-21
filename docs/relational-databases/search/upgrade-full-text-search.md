@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - installing Full-Text Search
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-caps.latest.revision: "106"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e544e5cefe8b935086b93ac7f30acd033a8462aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74e12e9e4b1d6379a0dc8954b2c99d77c99faa55
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="upgrade-full-text-search"></a>Upgrade der Volltextsuche
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Das Aktualisieren der Volltextsuche auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erfolgt während des Setups und beim Anfügen, Wiederherstellen und Kopieren von Datenbankdateien und Volltextkatalogen aus einer älteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des Assistenten zum Kopieren von Datenbanken.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Das Aktualisieren der Volltextsuche auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erfolgt während des Setups und beim Anfügen, Wiederherstellen und Kopieren von Datenbankdateien und Volltextkatalogen aus einer älteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des Assistenten zum Kopieren von Datenbanken.  
   
   
 ##  <a name="Upgrade_Server"></a> Upgrade einer Serverinstanz  

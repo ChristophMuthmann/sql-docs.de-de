@@ -8,7 +8,8 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +24,21 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f1f07cf2c53676a37f2c26dfebfd3ed623ec7a8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a89bec1046eab92432ffa53a8de3618903f7ab6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="network-protocols-and-network-libraries"></a>Netzwerkprotokolle und Netzwerkbibliotheken
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ein Server kann gleichzeitig auf mehreren Netzwerkprotokollen lauschen bzw. diese überwachen. Jedes Protokoll muss jedoch konfiguriert sein. Wenn ein bestimmtes Protokoll nicht konfiguriert ist, kann der Server auf diesem Protokoll nicht lauschen. Nach der Installation können diese Protokollkonfigurationen mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers geändert werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  Ein Server kann gleichzeitig auf mehreren Netzwerkprotokollen lauschen bzw. diese überwachen. Jedes Protokoll muss jedoch konfiguriert sein. Wenn ein bestimmtes Protokoll nicht konfiguriert ist, kann der Server auf diesem Protokoll nicht lauschen. Nach der Installation können diese Protokollkonfigurationen mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers geändert werden.  
   
 ## <a name="default-sql-server-network-configuration"></a>Standardnetzwerkkonfiguration von SQL Server  
  Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz wird konfiguriert für TCP/IP, Port 1433 und die Named Pipe „ \\\\.\pipe\sql\query“. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden für dynamische TCP-Ports konfiguriert, wobei eine Portnummer vom Betriebssystem zugewiesen wird.  
@@ -87,11 +90,11 @@ ms.lasthandoff: 12/05/2017
   
  Weitere Informationen über Endpunkte finden Sie unter [Konfigurieren des Datenbankmoduls zum Überwachen mehrerer TCP-Ports](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) und [Endpunkte-Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md).  
   
- Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Netzwerkkonfigurationen finden Sie in den folgenden Themen in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation:  
+ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Netzwerkkonfigurationen finden Sie in den folgenden Artikeln der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation:  
   
 -   [Server-Netzwerkkonfiguration](../../database-engine/configure-windows/server-network-configuration.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Oberflächenkonfiguration](../../relational-databases/security/surface-area-configuration.md)   
  [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md)  

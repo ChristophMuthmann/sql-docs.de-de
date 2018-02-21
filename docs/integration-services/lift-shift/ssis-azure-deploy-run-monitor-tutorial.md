@@ -1,6 +1,6 @@
 ---
 title: "Bereitstellen, Ausführen und Überwachen von SSIS-Paketen in Azure | Microsoft-Dokumentation"
-ms.date: 09/25/2017
+ms.date: 02/05/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,21 +8,22 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bf9df198105549f481dda8472f7142533fa8f23
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: aa1cc5db91745fb7773856a8f66b03c82bba3e9a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Bereitstellen, Ausführen und Überwachen eines SSIS-Pakets in Azure
 Dieses Tutorial zeigt, wie ein SQL Server Integration Services-Projekt in der SSISDB-Katalogdatenbank auf einer Azure SQL-Datenbank bereitgestellt wird, ein Paket in Azure SSIS Integration Runtime ausgeführt wird und das ausgeführte Paket überwacht wird.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Prüfen Sie, ob Sie über die Version 17.2 oder höher von SQL Server Management Studio verfügen, bevor Sie beginnen. Die neueste Version von SSMS können Sie unter [Herunterladen von SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) herunterladen.
 
@@ -44,16 +45,16 @@ Verwenden Sie SQL Server Management Studio, um eine Verbindung mit dem SSIS-Kata
    | **Servertyp** | Datenbankmodul | Dieser Wert ist erforderlich. |
    | **Servername** | Der vollqualifizierte Servername | Der Name muss das folgende Format aufweisen: **mysqldbserver.database.windows.net**. Falls Sie den Servernamen benötigen, finden Sie ihn mithilfe der Anweisungen unter [Connect to the SSISDB Catalog database on Azure (Herstellen einer Verbindung mit der SSIS-Katalogdatenbank in Azure)](ssis-azure-connect-to-catalog-database.md). |
    | **Authentifizierung** | SQL Server-Authentifizierung | In diesem Schnellstart wird die SQL-Authentifizierung verwendet. |
-   | **Anmeldename** | Das Konto des Serveradministrators | Dabei handelt es sich um das Konto, das Sie beim Erstellen des Servers angegeben haben. |
-   | **Kennwort** | Das Kennwort für das Konto des Serveradministrators | Dabei handelt es sich um das Kennwort, das Sie beim Erstellen des Servers angegeben haben. |
+   | **Anmeldename** | Das Konto des Serveradministrators | Das Konto, das Sie beim Erstellen des Servers angegeben haben. |
+   | **Kennwort** | Das Kennwort für das Konto des Serveradministrators | Das Kennwort, das Sie beim Erstellen des Servers angegeben haben. |
 
 3. **Stellen Sie eine Verbindung mit der SSIS-Datenbank her**. Wählen Sie **Optionen**  aus, um das Dialogfeld **Mit Server verbinden** zu erweitern. Wählen Sie im erweiterten Dialogfeld **Mit Server verbinden** die Registerkarte **Verbindungseigenschaften** aus. Wählen Sie `SSISDB` im Feld **Mit Datenbank verbinden** aus, oder geben Sie es ein.
 
 4. Klicken Sie auf **Verbinden**. Das Fenster „Objekt-Explorer“ wird in SSMS geöffnet. 
 
-5. Erweitern Sie im Objekt-Explorer **Integration Services-Kataloge**, und erweitern Sie dann **SSISDB**, um die Objekte in der SSIS-Katalogdatenbank abzurufen.
+5. Erweitern Sie im Objekt-Explorer **Integration Services-Kataloge** und dann **SSISDB**, um die Objekte in der SSIS-Katalogdatenbank anzuzeigen.
 
-## <a name="deploy-a-project"></a>Bereitstellen eines Projekts
+## <a name="deploy-a-project-with-the-deployment-wizard"></a>Bereitstellen eines Projekts mit dem Bereitstellungs-Assistenten
 
 ### <a name="start-the-integration-services-deployment-wizard"></a>Starten des Bereitstellungs-Assistenten für Integration Services
 1. Erweitern Sie im Objekt-Explorer in SSMS einen Projektorder mit den Knoten **Integration Services-Kataloge** und dem erweiterten **SSISDB**-Knoten.
@@ -78,11 +79,75 @@ Verwenden Sie SQL Server Management Studio, um eine Verbindung mit dem SSIS-Kata
 4.  Überprüfen Sie auf der Seite **Überprüfen** die Einstellungen, die Sie ausgewählt haben.
     -   Sie können Ihre Auswahl ändern, indem Sie auf **Vorherige** klicken, oder indem Sie auf einen der Schritte im linken Bereich klicken.
     -   Klicken Sie auf **Bereitstellen**, um den Bereitstellungsprozess zu starten.
-  
+
+    > ![HINWEIS] Wenn Sie die Fehlermeldung **Es liegt kein aktiver Worker-Agent vor (.Net SqlClient-Datenanbieter)** erhalten, stellen Sie sicher, dass die Azure-SSIS Integration Runtime (Azure-SSIS IR) ausgeführt wird. Dieser Fehler tritt auf, wenn Sie versuchen, eine Bereitstellung durchzuführen, während die Azure-SSIS IR beendet ist.
+
 5.  Nachdem der Bereitstellungsvorgang abgeschlossen ist, wird die Seite **Ergebnisse** geöffnet. Diese Seite zeigt an, ob die einzelnen Aktionen erfolgreich ausgeführt wurden oder ob Fehler aufgetreten sind.
     -   Ist die Aktion fehlerhaft, klicken Sie in der Spalte **Ergebnis** auf **Fehlgeschlagen**, um eine Erklärung über den Fehler anzuzeigen.
     -   Sie können auf **Bericht speichern** klicken, um die Ergebnisse in einer XML-Datei zu speichern.
     -   Klicken Sie auf **Schließen**, um den Assistenten zu beenden.
+
+## <a name="deploy-a-project-with-powershell"></a>Bereitstellen eines Projekts mit PowerShell
+
+Um ein Projekt mit PowerShell für SSISDB in Azure SQL-Datenbank bereitzustellen, passen Sie das folgende Skript an Ihre Anforderungen an:
+
+```powershell
+# Variables
+$ProjectFilePath = "C:\<folder>"
+$SSISDBServerEndpoint = "<servername>.database.windows.net"
+$SSISDBServerAdminUserName = "<username>"
+$SSISDBServerAdminPassword = "<password>"
+
+# Load the IntegrationServices Assembly
+[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Management.IntegrationServices") | Out-Null;
+
+# Store the IntegrationServices Assembly namespace to avoid typing it every time
+$ISNamespace = "Microsoft.SqlServer.Management.IntegrationServices"
+
+Write-Host "Connecting to server ..."
+
+# Create a connection to the server
+$sqlConnectionString = "Data Source=" + $SSISDBServerEndpoint + ";User ID="+ $SSISDBServerAdminUserName +";Password="+ $SSISDBServerAdminPassword + ";Initial Catalog=SSISDB"
+$sqlConnection = New-Object System.Data.SqlClient.SqlConnection $sqlConnectionString
+
+# Create the Integration Services object
+$integrationServices = New-Object $ISNamespace".IntegrationServices" $sqlConnection
+
+# Get the catalog
+$catalog = $integrationServices.Catalogs['SSISDB']
+
+write-host "Enumerating all folders..."
+
+$folders = ls -Path $ProjectFilePath -Directory
+
+if ($folders.Count -gt 0)
+{
+    foreach ($filefolder in $folders)
+    {
+        Write-Host "Creating Folder " $filefolder.Name " ..."
+
+        # Create a new folder
+        $folder = New-Object $ISNamespace".CatalogFolder" ($catalog, $filefolder.Name, "Folder description")
+        $folder.Create()
+
+        $projects = ls -Path $filefolder.FullName -File -Filter *.ispac
+        if ($projects.Count -gt 0)
+        {
+            foreach($projectfile in $projects)
+            {
+                $projectfilename = $projectfile.Name.Replace(".ispac", "")
+                Write-Host "Deploying " $projectfilename " project ..."
+
+                # Read the project file, and deploy it to the folder
+                [byte[]] $projectFileContent = [System.IO.File]::ReadAllBytes($projectfile.FullName)
+                $folder.DeployProject($projectfilename, $projectFileContent)
+            }
+        }
+    }
+}
+
+Write-Host "All done." 
+```
 
 ## <a name="run-a-package"></a>Ausführen eines Pakets
 

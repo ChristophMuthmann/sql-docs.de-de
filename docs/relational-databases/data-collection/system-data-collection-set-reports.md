@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - query statistics reports [SQL Server]
 - disk usage reports [SQL Server]
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73dc17666d055ffbd4646befb43ff2a40ab77053
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a2395391111bcd8b21fd030d02bc4756aa98d1fc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="system-data-collection-set-reports"></a>Berichte der Systemdaten-Sammlungssätze
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Der Datensammler stellt einen Verlaufsbericht für jeden der Systemdaten-Sammlungssätze bereit. Jeder der folgenden Berichte verwendet Daten, die im Verwaltungs-Data Warehouse gespeichert werden:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Der Datensammler stellt einen Verlaufsbericht für jeden der Systemdaten-Sammlungssätze bereit. Jeder der folgenden Berichte verwendet Daten, die im Verwaltungs-Data Warehouse gespeichert werden:  
   
 -   [Zusammenfassung der Datenträgerverwendung](#Disk)  
   
@@ -62,13 +64,13 @@ ms.lasthandoff: 11/17/2017
  In der Tabelle unter dem Diagramm sind Datensammlungszeiten und zugehörige Nutzungsdaten aufgeführt.  
   
 #### <a name="disk-usage-for-database-databasename-subreport"></a>Unterbericht "Datenträgerverwendung für Datenbank: <Datenbankname>"  
- Der Unterbericht **Datenträgerverwendung für Datenbank:***<Datenbankname>* wird angezeigt, wenn Sie auf einen Datenbanknamen in der Zusammenfassungstabelle des Berichts über den Sammlungssatz für Datenträgerverwendung klicken. Dieser Bericht liefert eine numerische und grafische Aufschlüsselung der Speicherplatzverwendung durch die Daten- und Transaktionsprotokolldateien der Datenbank. Die Speicherplatzverwendung für Datendateien wird als Prozentsatz angegeben, kategorisiert nach dem prozentualen Anteil, der den Indexseiten, dem nicht zugeordneten Speicherplatz, den Datenseiten und dem nicht verwendeten Speicherplatz zugeordnet ist. Diese Kategorien sind folgendermaßen definiert:  
+ Der Unterbericht **Datenträgerverwendung für Datenbank:***<Datenbankname>* wird angezeigt, wenn Sie in der Zusammenfassungstabelle des Berichts zum Sammlungssatz für die Datenträgerverwendung auf einen Datenbanknamen klicken. Dieser Bericht liefert eine numerische und grafische Aufschlüsselung der Speicherplatzverwendung durch die Daten- und Transaktionsprotokolldateien der Datenbank. Die Speicherplatzverwendung für Datendateien wird als Prozentsatz angegeben, kategorisiert nach dem prozentualen Anteil, der den Indexseiten, dem nicht zugeordneten Speicherplatz, den Datenseiten und dem nicht verwendeten Speicherplatz zugeordnet ist. Diese Kategorien sind folgendermaßen definiert:  
   
 |Kategorie|Definition|  
 |--------------|----------------|  
 |Index|Der verwendete Speicherplatz für Indexseiten|  
 |Nicht zugeordnet|Der für die Datenbank verfügbare Speicherplatz, der jedoch noch keinem Objekt zugeordnet wurde|  
-|Daten|Der von Datenseiten verwendete Speicherplatz|  
+|data|Der von Datenseiten verwendete Speicherplatz|  
 |Nicht verwendet|Der Speicherplatz, der mindestens einem Objekt zugeordnet, jedoch noch nicht verwendet wurde|  
   
  Die Speicherplatzverwendung für die Transaktionsprotokolldatei ist als verwendeter und nicht verwendeter Speicherplatz kategorisiert.  
@@ -138,7 +140,7 @@ ms.lasthandoff: 11/17/2017
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Wartevorgänge|Das Diagramm für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Wartevorgänge zeigt Wartevorgänge in den Threads, die ausgeführt wurden, nach Kategorie an. Sie können auf einen ausführlichen Bericht zugreifen, indem Sie auf ein beliebiges Segment im Diagramm klicken. Neben der grafischen Darstellung von Statistikdaten zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Wartevorgängen während eines engeren Zeitrahmens liefert dieser Bericht Informationen über Wartevorgangskategorien im Tabellenformat. Für jede Kategorie, z. B. CPU und deren Unterkategorien, zeigt die Tabelle die Anzahl der Wartevorgänge, die Wartezeit und den Prozentsatz der Gesamtwartezeit an.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Aktivität|Verschiedene Aspekte der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Aktivität sind über das Diagramm zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Aktivität abrufbar. Sie können folgende Berichte durch Klicken auf einen Punkt auf der Diagrammlinie SQL-Kompilierungen/Sekunde abrufen:<br /><br /> <br /><br /> Verbindungen und Sitzungen<br /><br /> Anforderungen<br /><br /> Plancache-Trefferquote<br /><br /> tempdb-Eigenschaften|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)   
  [Anzeigen eines Sammlungssatzberichts &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)  
   

@@ -17,20 +17,23 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: bd176479745f786197782bc489b45ea2c1e74429
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: df0547a4e9665040cea0aff190586759d6a24cd4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Upgraden von PowerPivot für SharePoint
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema sind die Schritte zusammengefasst, die erforderlich sind, um eine Bereitstellung von [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] zu aktualisieren. Die jeweiligen Schritte hängen von der SharePoint-Version ab, unter der die Umgebung gerade ausgeführt wird, und umfassen das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Add-In (**spPowerPivot.msi**).  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  Dieser Artikel fasst die Schritte zusammen, die erforderlich sind, um ein Upgrade einer Bereitstellung von [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] durchzuführen. Die jeweiligen Schritte hängen von der SharePoint-Version ab, unter der die Umgebung gerade ausgeführt wird, und umfassen das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Add-In (**spPowerPivot.msi**).  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
   
  Versionsanmerkungen finden Sie unter [SQL Server 2016 Release Notes](http://go.microsoft.com/fwlink/?LinkID=398124)(Versionsanmerkungen zu SQL Server 2016).  
   
- **In diesem Thema:**  
+ **In diesem Artikel:**  
   
  [Erforderliche Komponenten](#bkmk_prereq)  
   
@@ -54,7 +57,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Wenn Sie eine SharePoint 2010-Multiserverfarm aktualisieren, die zwei oder mehrere [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Instanzen aufweist, müssen Sie jeden Server vollständig aktualisieren, **bevor** Sie mit dem nächsten Server fortfahren. Bei einem vollständigen Upgrade muss zunächst das SQL Server-Setup ausgeführt werden, um [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Programmdateien zu aktualisieren. Anschließend müssen die aktualisierten Dienste mit SharePoint-Upgradeaktionen konfiguriert werden. Die Serververfügbarkeit ist beschränkt, bis Sie Upgradeaktionen im entsprechenden [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool oder Windows PowerShell ausführen.  
   
--   Alle [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst- und Analysis Services-Instanzen in einer SharePoint 2010-Farm müssen die gleiche Version aufweisen. Weitere Informationen zum Überprüfen der Version finden Sie in diesem Thema im Abschnitt [Überprüfen der Versionen von Power Pivot-Komponenten und -Diensten](#bkmk_verify_versions) .  
+-   Alle [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst- und Analysis Services-Instanzen in einer SharePoint 2010-Farm müssen die gleiche Version aufweisen. Weitere Informationen zum Überprüfen der Version finden Sie in diesem Artikel im Abschnitt [Überprüfen der Versionen von PowerPivot-Komponenten und -Diensten](#bkmk_verify_versions) .  
   
 -   Die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstools gehören zu den freigegebenen Funktionen von SQL Server. Alle freigegebenen Funktionen führen gleichzeitig ein Upgrade durch. Wenn Sie während eines Upgradevorgangs andere SQL Server-Instanzen oder -Funktionen auswählen, die ein Upgrade für freigegebene Funktionen erfordern, wird für das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool ebenfalls ein Upgrade durchgeführt. Wenn für das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool ein Upgrade durchgeführt wird, für die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Instanz jedoch nicht, können Probleme auftreten. Weitere Informationen zu gemeinsamen Features von SQL Server finden Sie unter [Aktualisieren auf SQL Server 2016 mithilfe des Installations-Assistenten &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
@@ -139,7 +142,7 @@ ms.lasthandoff: 01/08/2018
   
     -   [PowerShell-Referenz für PowerPivot für SharePoint](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
-5.  Überprüfen Sie, ob das Upgrade erfolgreich ausgeführt wurde, indem Sie die Schritte nach dem Upgrade durchführen und die Version der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server in der Farm überprüfen. Weitere Informationen finden Sie unter [Überprüfungstasks nach dem Upgrade](#verify) in diesem Thema und im folgenden Abschnitt.  
+5.  Überprüfen Sie, ob das Upgrade erfolgreich ausgeführt wurde, indem Sie die Schritte nach dem Upgrade durchführen und die Version der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server in der Farm überprüfen. Weitere Informationen finden Sie unter [Überprüfungstasks nach dem Upgrade](#verify) in diesem Artikel und im folgenden Abschnitt.  
   
 ##  <a name="bkmk_uprgade_sharepoint2010"></a> Aktualisieren einer vorhandenen SharePoint 2010-Farm  
  Um ein Upgrade für eine [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Bereitstellung in SharePoint 2010 auszuführen, gehen Sie wie folgt vor:  
@@ -207,7 +210,7 @@ ms.lasthandoff: 01/08/2018
   
 8.  **Wiederholen Sie den Vorgang** für jeden SQL Server Analysis Services-Dienst ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) in der Farm: 1) Führen Sie SQL Server-Setup aus, 2) Führen Sie das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool aus.  
   
-9. Überprüfen Sie, ob das Upgrade erfolgreich ausgeführt wurde, indem Sie die Schritte nach dem Upgrade durchführen und die Version der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server in der Farm überprüfen. Weitere Informationen finden Sie unter [Überprüfungstasks nach dem Upgrade](#verify) in diesem Thema und im folgenden Abschnitt.  
+9. Überprüfen Sie, ob das Upgrade erfolgreich ausgeführt wurde, indem Sie die Schritte nach dem Upgrade durchführen und die Version der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server in der Farm überprüfen. Weitere Informationen finden Sie unter [Überprüfungstasks nach dem Upgrade](#verify) in diesem Artikel und im folgenden Abschnitt.  
   
 10. **Beheben von Fehlern**  
   
@@ -262,7 +265,7 @@ Get-PowerPivotSystemService
   
 3.  Klicken Sie auf **Details**.  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Dateiversion sollte 13.00.\<Hauptversion.>\<Nebenversion> lauten.  
+4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Dateiversion sollte 13.00.\<Hauptversion>.\<Nebenversion> lauten.  
   
 5.  Stellen Sie sicher, dass diese Zahl mit der Version der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Lösung und des Systemdiensts übereinstimmt.  
   
@@ -301,7 +304,7 @@ Get-PowerPivotSystemService
   
 3.  Klicken Sie auf **Vertrauenswürdige Dienstanbieter**. Daraufhin sollte MSOLAP.5 (Microsoft OLE DB-Anbieter für OLAP Services 11.0) angezeigt werden. Wenn Sie die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Installation aktualisiert haben, wird außerdem MSOLAP.4 der Vorgängerversion angezeigt.  
   
-4.  Weitere Informationen finden Sie unter [Hinzufügen von MSOLAP.5 als vertrauenswürdigen Datenanbieter in Excel Services](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md).  
+4.  Weitere Informationen finden Sie unter [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md).  
   
  MSOLAP.4 wird als Microsoft OLE DB-Anbieter für OLAP-Dienste 10.0 bezeichnet. Bei dieser Version handelt es sich möglicherweise um die mit Excel Services installierte Standardversion von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , oder es handelt sich um die [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] -Version. Die von SharePoint installierte Standardversion unterstützt keinen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenzugriff. Sie müssen die Version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder höher besitzen, um eine Verbindung mit [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen auf SharePoint herzustellen. Um sicherzustellen, dass Sie die [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] -Version installiert haben, befolgen Sie die im vorherigen Abschnitt beschriebenen Anweisungen. In diesen Anweisungen wird die Vorgehensweise zum Überprüfen der Version durch Anzeigen der Dateieigenschaften erläutert.  
   
@@ -319,7 +322,7 @@ Get-PowerPivotSystemService
   
  Nachdem Sie den ersten Server aktualisiert haben, sind zusätzliche Server, die noch nicht aktualisiert worden sind, **nicht mehr verfügbar**. Verfügbarkeit wird wiederhergestellt, wenn alle Server auf der gleichen Ebene laufen.  
   
- SQL Server-Setup upgradet die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Lösungsdateien auf dem physischen Computer. Um jedoch die in der Farm verwendeten Lösungen upzugraden, müssen Sie das in einem vorherigen Abschnitt dieses Themas beschriebene [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool verwenden.  
+ SQL Server-Setup führt ein Upgrade der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Lösungsdateien auf dem physischen Computer durch. Um jedoch ein Upgrade der von der Farm verwendeten Lösungen durchzuführen, müssen Sie das in einem vorherigen Abschnitt dieses Artikels beschriebene [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Konfigurationstool verwenden.  
   
 ##  <a name="qfe"></a> Anwenden eines QFEs auf eine PowerPivot-Instanz in der Farm  
  Durch das Patchen eines [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Server werden vorhandene Programmdateien auf eine neuere Version aktualisiert, die eine Lösung für ein bestimmtes Problem enthält. Wenn ein QFE für eine Topologie mit mehreren Servern übernommen wird, gibt es keinen primären Server, mit dem Sie beginnen müssen. Sie können mit jedem beliebigen Server beginnen, sofern das gleiche QFE auch für alle anderen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server in der Farm übernommen wird.  

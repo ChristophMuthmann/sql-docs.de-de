@@ -1,27 +1,28 @@
 ---
 title: 'Lektion 1: Herstellen einer Verbindung mit dem Datenbankmodul | Microsoft-Dokumentation'
 ms.custom: 
-ms.date: 08/05/2016
+ms.date: 02/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d58c2e12f7f25a067e643757afa4b86d2b47ff01
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: a7b0242b6c69f2ecb3b9ef077eae956d3f7d3f18
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lektion 1: Herstellen einer Verbindung mit dem Datenbankmodul
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ Diese Lektion enthält die folgenden Aufgaben:
  – Im Lieferumfang von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sind eine Vielzahl von Tools enthalten. In diesem Thema wird beschrieben, welche Tools Sie zuerst benötigen und wie das richtige Tool für den Auftrag ausgewählt wird. Auf alle Tools kann über das Menü **Start** zugegriffen werden. Einige Tools wie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]werden nicht standardmäßig installiert. Die Tools müssen als Teil der Clientkomponenten während der Ausführung des Setupprogramms installiert werden. Eine vollständige Beschreibung der unten aufgeführten Tools finden Sie, indem Sie in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation danach suchen. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] enthält nur eine Teilmenge der Tools.  
 
 ### <a name="basic-tools"></a>Haupttools
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) ist das Haupttool zum Verwalten von [!INCLUDE[ssDE](../includes/ssde-md.md)] und Schreiben von [!INCLUDE[tsql](../includes/tsql-md.md)] -Code. Es wird in der [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Shell gehostet. SSMS steht im [Microsoft Download Center](https://msdn.microsoft.com/library/mt238290.aspx)zum Herunterladen zur Verfügung. Die neueste Version kann mit älteren Versionen des [!INCLUDE[ssDE_md](../includes/ssde-md.md)]verwendet werden.  
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) ist das Haupttool zum Verwalten von [!INCLUDE[ssDE](../includes/ssde-md.md)] und Schreiben von [!INCLUDE[tsql](../includes/tsql-md.md)] -Code. Es wird in der [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Shell gehostet. SSMS steht im [Microsoft Download Center](https://msdn.microsoft.com/library/mt238290.aspx)zum Herunterladen zur Verfügung. Die neueste Version kann mit älteren Versionen des [!INCLUDE[ssDE_md](../includes/ssde-md.md)] verwendet werden.  
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager wird sowohl mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] als auch mit den Clienttools installiert. Sie können damit Serverprotokolle aktivieren, Protokolloptionen wie z. B. TCP-Ports konfigurieren, Serverdienste so konfigurieren, dass sie automatisch gestartet werden, und Clientcomputer so konfigurieren, dass sie mit dem von Ihnen bevorzugten Verfahren gestartet werden. Mit diesem Tool können erweiterte Konnektivitätselemente konfiguriert, aber keine Funktionen aktiviert werden.  
 
@@ -84,11 +85,12 @@ Mindestens ein Administratorkonto wurde ausgewählt, als [!INCLUDE[ssNoVersion_m
 
 ![Objekt-Explorer](../relational-databases/media/object-explorer.png)
 
-3.  Geben Sie im Feld **Servername** den Namen der Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)]ein. Bei der Standardinstanz von SQL Server ist der Servername der Name des Computers. Bei einer benannten Instanz von SQL Server ist der Servername *<computer_name>***\\***<instance_name>,*, wie z.B. **ACCTG_SRVR\SQLEXPRESS**. Der folgende Screenshot zeigt das Herstellen einer Verbindung mit der (unbenannten) Standardinstanz von [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] auf einem Computer namens „PracticeComputer“. Der Benutzer, der bei Windows angemeldet ist, ist Mary aus der Domain „Contoso“. Bei Verwendung der Windows-Authentifizierung können Sie den Benutzernamen nicht ändern. 
+3.  Geben Sie im Feld **Servername** den Namen der Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)]ein. Bei der Standardinstanz von SQL Server ist der Servername der Name des Computers. Bei einer benannten Instanz von SQL Server ist der Servername der *<Computername>***\\***<Instanzname>*, wie z.B. **ACCTG_SRVR\SQLEXPRESS**. Der folgende Screenshot zeigt das Herstellen einer Verbindung mit der (unbenannten) Standardinstanz von [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] auf einem Computer namens „PracticeComputer“. Der Benutzer, der bei Windows angemeldet ist, ist Mary aus der Domain „Contoso“. Bei Verwendung der Windows-Authentifizierung können Sie den Benutzernamen nicht ändern. 
 
 ![Verbindung-mit-Server-herstellen](../relational-databases/media/connect-to-server.png)
 
-4.  Klicken Sie auf **Verbinden**.  
+4.  Klicken Sie auf **Verbinden**.
+
 > [!NOTE]
 > In diesem Tutorial wird davon ausgegangen, dass Sie neu bei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sind und keine besonderen Probleme beim Herstellen einer Verbindung haben. Dies sollte für die meisten Benutzer ausreichen, und so wird das Tutorial einfach gehalten. Detaillierte Schritte zur Fehlerbehebung finden Sie unter [Beheben von Verbindungsfehlern mit dem SQL Server-Datenbankmodul](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md). 
 

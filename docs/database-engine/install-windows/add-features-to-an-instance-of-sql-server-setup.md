@@ -8,7 +8,8 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,23 +17,26 @@ helpviewer_keywords:
 - SQL Server, features
 - adding features to SQL Server
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9c95fa0d45f4d4734030e871e09acfe254ca2450
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5fa60413b2cb5440a92f00d31fee587dfac75c6a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Hinzufügen von Funktionen zu einer Instanz von SQL Server (Setup)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieses Thema bietet eine schrittweise Anleitung zum Hinzufügen von Funktionen zu einer Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Einige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten oder -Dienste gehören speziell zu einer bestimmten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie werden auch als instanzabhängig bezeichnet. Sie nutzen die gleiche Version wie ihre Hostinstanz und werden ausschließlich für diese Instanz verwendet. Sie können einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die instanzabhängigen Komponenten zusammen mit den freigegebenen Komponenten hinzufügen, wenn sie nicht bereits installiert sind. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+ Dieser Artikel bietet eine Schrittanleitung zum Hinzufügen von Funktionen zu einer Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Einige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten oder -Dienste gehören speziell zu einer bestimmten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie werden auch als instanzabhängig bezeichnet. Sie nutzen die gleiche Version wie ihre Hostinstanz und werden ausschließlich für diese Instanz verwendet. Sie können einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die instanzabhängigen Komponenten zusammen mit den freigegebenen Komponenten hinzufügen, wenn sie nicht bereits installiert sind. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  Informationen zum Hinzufügen einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über die Eingabeaufforderung finden Sie unter [Install SQL Server from the Command Prompt (Installieren von SQL Server über die Eingabeaufforderung)](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
- Bevor Sie den Vorgang fortsetzen, lesen Sie die Themen unter [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).  
+ Bevor Sie den Vorgang fortsetzen, lesen Sie die Artikel unter [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md).  
   
 > [!NOTE]  
 >  Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie auf der Remotefreigabe ein Domänenkonto mit Leseberechtigungen verwenden.  
@@ -58,17 +62,17 @@ ms.lasthandoff: 01/18/2018
   
 7.  Wählen Sie auf der Seite „Installationstyp“ die Option **Funktionen zu einer vorhandenen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Instanz hinzufügen**, und wählen Sie dann die Instanz aus, die Sie aktualisieren möchten.  
   
-8.  Wählen Sie auf der Seite Funktionsauswahl die Komponenten für die Installation aus. Nach Auswahl des Funktionsnamens wird im rechten Bereich eine Beschreibung für die einzelnen Komponentengruppen angezeigt. Sie können jede beliebige Kombination von Kontrollkästchen aktivieren. Weitere Informationen finden Sie unter [Editionen und unterstützte Funktionen von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md). Jede Komponente kann auf einer bestimmten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nur einmal installiert werden. Wenn Sie mehrere Komponenten installieren möchten, müssen Sie eine zusätzliche Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installieren.  
+8.  Wählen Sie auf der Seite Funktionsauswahl die Komponenten für die Installation aus. Nach Auswahl des Funktionsnamens wird im rechten Bereich eine Beschreibung für die einzelnen Komponentengruppen angezeigt. Sie können jede beliebige Kombination von Kontrollkästchen aktivieren. Weitere Informationen finden Sie unter [Editionen und unterstützte Funktionen von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md). Jede Komponente kann auf einer bestimmten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nur einmal installiert werden. Wenn Sie mehrere Komponenten installieren möchten, müssen Sie eine zusätzliche Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installieren.  
   
-     Die erforderlichen Komponenten für die ausgewählten Funktionen werden im rechten Bereich angezeigt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup installiert die erforderlichen Komponenten, die nicht bereits während des Installationsschritts installiert werden, der im weiteren Verlauf dieser Prozedur beschrieben wird.  
+     Die erforderlichen Komponenten für die ausgewählten Funktionen werden im rechten Bereich angezeigt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup installiert die erforderlichen Komponenten, die nicht bereits während des Installationsschritts installiert werden, der im weiteren Verlauf dieser Prozedur beschrieben wird.  
   
      Die Systemkonfigurationsprüfung überprüft den Systemstatus des Computers, bevor Setup fortgesetzt wird. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.  
   
 9. Auf der Seite Erforderlicher Speicherplatz wird der für die angegebenen Funktionen erforderliche Speicherplatz berechnet, und die Anforderungen werden mit dem Speicherplatz verglichen, der auf dem Computer verfügbar ist, auf dem Setup ausgeführt wird.  
   
-10. Der weitere Ablauf dieses Themas hängt von den Funktionen ab, die Sie für die Installation angegeben haben. Je nach Auswahl werden möglicherweise nicht alle Seiten angezeigt.  
+10. Der Ablauf für die weiteren Vorgänge in diesem Artikel richtet sich nach den Funktionen, die Sie für Ihre Installation angegeben haben. Je nach Auswahl werden möglicherweise nicht alle Seiten angezeigt.  
   
-11. Geben Sie auf der Seite Serverkonfiguration – Dienstkonten Anmeldekonten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste an. Welche Dienste tatsächlich auf dieser Seite konfiguriert werden, hängt von den Funktionen ab, die Sie für die Installation ausgewählt haben.  
+11. Geben Sie auf der Seite Serverkonfiguration – Dienstkonten Anmeldekonten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste an. Welche Dienste tatsächlich auf dieser Seite konfiguriert werden, hängt von den Funktionen ab, die Sie für die Installation ausgewählt haben.  
   
      Sie können allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensten dasselbe Anmeldekonto zuweisen, oder Sie können jedes Dienstkonto einzeln konfigurieren. Außerdem können Sie angeben, ob Dienste automatisch starten sollen, manuell gestartet werden oder deaktiviert sind. [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt, die Dienstkonten einzeln zu konfigurieren, um möglichst geringe Rechte für jeden Dienst bereitzustellen. Dabei erhalten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste die Berechtigungen, die mindestens erforderlich sind, um ihre Tasks auszuführen. Weitere Informationen finden Sie unter [Serverkonfiguration – Dienstkonten](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) und [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -140,7 +144,7 @@ ms.lasthandoff: 01/18/2018
   
 24. Während der Installation wird auf der Seite Installationsstatus der Status angegeben, sodass Sie während der Installation den Installationsstatus überwachen können.  
   
-25. Nach der Installation bietet die Seite Abgeschlossen einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf **Schließen** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um die Installation von abzuschließen.  
+25. Nach der Installation bietet die Seite Abgeschlossen einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf **Schließen** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um die Installation von abzuschließen.  
   
 26. Starten Sie den Computer neu, falls Sie dazu aufgefordert werden. Nachdem das Setup abgeschlossen ist, sollten Sie unbedingt die vom Installations-Assistenten ausgegebene Meldung lesen. Weitere Informationen finden Sie unter [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   

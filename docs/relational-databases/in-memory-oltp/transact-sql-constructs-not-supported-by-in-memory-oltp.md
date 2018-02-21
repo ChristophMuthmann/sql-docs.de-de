@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cf96fd29ed4e215739297281d3b0edd77654c3a6
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 572486311385af37057641e6f2371791bcfe70f8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,12 +59,12 @@ ms.lasthandoff: 11/22/2017
 |----------|----------|----------------|  
 |Funktion|ON|Speicheroptimierte Tabellen können nicht in einer Dateigruppe oder einem Partitionsschema platziert werden. Entfernen Sie die ON-Klausel aus der **CREATE TABLE** -Anweisung.<br /><br /> Alle speicheroptimierten Tabellen sind speicheroptimierten Dateigruppen zugeordnet.|  
 |Datentyp|*Datentypname*|Der angegebene Datentyp wird nicht unterstützt. Ersetzen Sie den Typ durch einen der unterstützten Datentypen. Weitere Informationen finden Sie unter [Unterstützte Datentypen für In-Memory OLTP](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).|  
-|Funktion|Berechnete Spalten|**Gilt für:**  [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] und [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Berechnete Spalten werden für speicheroptimierte Tabellen nicht unterstützt. Entfernen Sie die berechneten Spalten aus der **CREATE TABLE** -Anweisung.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] unterstützen berechnete Spalten in speicheroptimierten Tabellen und Indizes.|  
+|Funktion|Berechnete Spalten|**Gilt für:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] und [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Berechnete Spalten werden für speicheroptimierte Tabellen nicht unterstützt. Entfernen Sie die berechneten Spalten aus der **CREATE TABLE** -Anweisung.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] unterstützen berechnete Spalten in speicheroptimierten Tabellen und Indizes.|  
 |Funktion|Replikation|Replikation wird für speicheroptimierte Tabellen nicht unterstützt.|  
 |Funktion|FILESTREAM|Die FILESTREAM-Speicherung wird für Spalten von speicheroptimierten Tabellen nicht unterstützt. Entfernen Sie das **FILESTREAM** -Schlüsselwort aus der Spaltendefinition.|  
 |Funktion|SPARSE|Spalten aus speicheroptimierten Tabellen können nicht als SPARSE definiert werden. Entfernen Sie das **SPARSE** -Schlüsselwort aus der Spaltendefinition.|  
 |Funktion|ROWGUIDCOL|Die ROWGUIDCOL-Option wird für Spalten von speicheroptimierten Tabellen nicht unterstützt. Entfernen Sie das **ROWGUIDCOL** -Schlüsselwort aus der Spaltendefinition.|  
-|Funktion|FOREIGN KEY|**Gilt für:**  [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Für speicheroptimierte Tabellen werden FOREIGN KEY-Einschränkungen nur für die Fremdschlüssel unterstützt, die auf Primärschlüssel von anderen speicheroptimierten Tabellen verweisen. Entfernen Sie die Einschränkung aus der Tabellendefinition, wenn der Fremdschlüssel auf eine eindeutige Einschränkung verweist.<br/><br/>In [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] werden FOREIGN KEY-Einschränkungen nicht für speicheroptimierte Tabellen unterstützt.|  
+|Funktion|FOREIGN KEY|**Gilt für:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Für speicheroptimierte Tabellen werden FOREIGN KEY-Einschränkungen nur für die Fremdschlüssel unterstützt, die auf Primärschlüssel von anderen speicheroptimierten Tabellen verweisen. Entfernen Sie die Einschränkung aus der Tabellendefinition, wenn der Fremdschlüssel auf eine eindeutige Einschränkung verweist.<br/><br/>In [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] werden FOREIGN KEY-Einschränkungen nicht für speicheroptimierte Tabellen unterstützt.|  
 |Funktion|Gruppierter Index|Geben Sie einen nicht gruppierten Index an. Bei einem Primärschlüsselindex müssen Sie **PRIMARY KEY NONCLUSTERED** angeben.|  
 |Funktion|DDL innerhalb von Transaktionen|Speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren können nicht im Rahmen einer Benutzertransaktion erstellt oder gelöscht werden. Starten Sie keine Transaktion, und vergewissern Sie sich, dass die Sitzungseinstellung IMPLICIT_TRANSACTIONS auf OFF festgelegt ist, bevor Sie die CREATE-Anweisung oder die DROP-Anweisung ausführen.|  
 |Funktion|DDL-Trigger|Speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren können nicht erstellt oder gelöscht werden, wenn ein Server- oder Datenbanktrigger für den betreffenden DDL-Vorgang vorhanden ist. Entfernen Sie die Server- und Datenbanktrigger für CREATE/DROP TABLE und CREATE/DROP PROCEDURE.|  
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/22/2017
 |Vorgang|CREATE INDEX|Indizes zu speicheroptimierten Tabellen müssen inline mit der **CREATE TABLE** - oder der **ALTER TABLE** -Anweisung angegeben werden.|  
 |Vorgang|CREATE FULLTEXT INDEX|Volltextindizes werden für speicheroptimierte Tabellen nicht unterstützt.|  
 |Vorgang|Schemaänderung|Speicheroptimierte Tabellen und nativ kompilierte gespeicherte Prozeduren unterstützen folgende Schemaänderungen nicht:<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]: ALTER TABLE-, ALTER PROCEDURE- und sp_rename-Vorgänge werden unterstützt. Andere Schemaänderungen, z.B. das Hinzufügen von erweiterten Eigenschaften, werden nicht unterstützt.<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]: ALTER TABLE- und ALTER PROCEDURE-Vorgänge werden unterstützt. Andere Schemaänderungen, einschließlich sp_rename, werden nicht unterstützt.<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: Schemaänderungen werden nicht unterstützt. Löschen Sie das Objekt, und erstellen Sie es mit der gewünschten Definition neu, um die Definition einer speicheroptimierten Tabelle oder einer nativ kompilierten gespeicherten Prozedur zu ändern.| 
-|Vorgang|TRUNCATE TABLE|Der TRUNCATE-Vorgang wird für speicheroptimierte Tabellen nicht unterstützt. Löschen Sie alle Zeilen mit **DELETE FROM***Tabelle* , oder löschen Sie die Tabelle, und erstellen Sie sie neu, um alle Zeilen aus einer Tabelle zu entfernen.|  
+|Vorgang|TRUNCATE TABLE|Der TRUNCATE-Vorgang wird für speicheroptimierte Tabellen nicht unterstützt. Um alle Zeilen aus einer Tabelle zu entfernen, löschen Sie alle Zeilen mit **DELETE FROM***Tabelle*, oder löschen Sie die Tabelle und erstellen sie neu.|  
 |Vorgang|ALTER AUTHORIZATION|Das Ändern des Besitzers einer vorhandenen speicheroptimierten Tabelle oder systemintern kompilierten gespeicherten Prozedur wird nicht unterstützt. Löschen Sie die Tabelle oder die Prozedur, und erstellen Sie sie neu, um den Besitzer zu ändern.|  
 |Vorgang|ALTER SCHEMA|Das Übertragen einer vorhandenen Tabelle oder einer nativ kompilierten gespeicherten Prozedur in ein anderes Schema wird nicht unterstützt. Löschen Sie das Objekt, und erstellen Sie es neu, um eine Übertragung zwischen Schemas zu ermöglichen.|  
 |Vorgang|DBCC CHECKTABLE|DBCC CHECKTABLE wird für speicheroptimierte Tabellen nicht unterstützt. Führen Sie eine Sicherung der MEMORY_OPTIMIZED_DATA-Dateigruppe durch, um die Integrität der Prüfpunktdateien auf dem Datenträger zu überprüfen.|  
@@ -115,7 +116,7 @@ ms.lasthandoff: 11/22/2017
 |Funktion|SELECT INTO|Die **INTO** -Klausel wird mit der **SELECT** -Anweisung nicht unterstützt. Schreiben Sie die Abfrage als **INSERT INTO** *Tabelle* **SELECT** neu.|  
 |Funktion|Unvollständige Einfügespaltenliste|Generell müssen Werte in INSERT-Anweisungen für alle Spalten in der Tabelle angegeben werden.<br /><br /> Allerdings unterstützen wir DEFAULT-Einschränkungen und IDENTITY(1,1)-Spalten in speicheroptimierten Tabellen. Diese Spalten können in der INSERT-Spaltenliste ausgelassen werden. IDENTITY-Spalten müssen sogar ausgelassen werden.|  
 |Funktion|*Funktion*|Einige integrierte Funktionen werden in nativ kompilierten gespeicherten Prozeduren nicht unterstützt. Entfernen Sie die abgelehnte Funktion aus der gespeicherten Prozedur. Weitere Informationen zu unterstützten integrierten Funktionen finden Sie unter<br />[Unterstützte Funktionen für nativ kompilierte T-SQL-Module](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)oder<br />[Systemintern kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
-|Funktion|CASE|**Gilt für:**  [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] und SQL Server ab Version [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>**CASE**-Ausdrücke werden in Abfragen innerhalb von nativ kompilierten gespeicherten Prozeduren nicht unterstützt. Erstellen Sie Abfragen für jeden einzelnen Fall. Weitere Informationen finden Sie unter [Implementieren eines CASE-Ausdrucks in einer systemintern kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] unterstützen CASE-Ausdrücke.|  
+|Funktion|CASE|**Gilt für:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] und SQL Server ab Version [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>**CASE**-Ausdrücke werden in Abfragen innerhalb von nativ kompilierten gespeicherten Prozeduren nicht unterstützt. Erstellen Sie Abfragen für jeden einzelnen Fall. Weitere Informationen finden Sie unter [Implementieren eines CASE-Ausdrucks in einer systemintern kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] unterstützen CASE-Ausdrücke.|  
 |Funktion|INSERT EXECUTE|Entfernt den Verweis.|  
 |Funktion|Führen Sie|Nur unterstützt, um nativ kompilierte gespeicherte Prozeduren und benutzerdefinierte Funktionen auszuführen|  
 |Funktion|Benutzerdefinierte Aggregate|Benutzerdefinierte Aggregatfunktionen können nicht in systemintern kompilierten gespeicherten Prozeduren verwendet werden. Entfernen Sie den Verweis auf die Funktion aus der Prozedur.|  
@@ -143,7 +144,7 @@ ms.lasthandoff: 11/22/2017
 |Operator|OFFSET|Dieser Operator wird nicht unterstützt. Entfernen Sie **OFFSET** aus der systemintern kompilierten gespeicherten Prozedur.|  
 |Operator|INTERSECT|Dieser Operator wird nicht unterstützt. Entfernen Sie **INTERSECT** aus der systemintern kompilierten gespeicherten Prozedur. In einigen Fällen kann ein INNER JOIN verwendet werden, um dasselbe Ergebnis zu erhalten.|  
 |Operator|EXCEPT|Dieser Operator wird nicht unterstützt. Entfernen Sie **EXCEPT** aus der systemintern kompilierten gespeicherten Prozedur.|  
-|Operator|APPLY|**Gilt für:**  [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] und SQL Server ab Version [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Dieser Operator wird nicht unterstützt. Entfernen Sie **APPLY** aus der systemintern kompilierten gespeicherten Prozedur.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] unterstützen den APPLY-Operator in nativ kompilierten Modulen.|  
+|Operator|APPLY|**Gilt für:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] und SQL Server ab Version [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Dieser Operator wird nicht unterstützt. Entfernen Sie **APPLY** aus der systemintern kompilierten gespeicherten Prozedur.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] unterstützen den APPLY-Operator in nativ kompilierten Modulen.|  
 |Operator|PIVOT|Dieser Operator wird nicht unterstützt. Entfernen Sie **PIVOT** aus der systemintern kompilierten gespeicherten Prozedur.|  
 |Operator|UNPIVOT|Dieser Operator wird nicht unterstützt. Entfernen Sie **UNPIVOT** aus der systemintern kompilierten gespeicherten Prozedur.|  
 |Operator|CONTAINS|Dieser Operator wird nicht unterstützt. Entfernen Sie **CONTAINS** aus der systemintern kompilierten gespeicherten Prozedur.|  
@@ -161,7 +162,7 @@ ms.lasthandoff: 11/22/2017
 |Jointipp|HASH, MERGE|Systemintern kompilierte Prozeduren unterstützen nur den Nested Loops-Joins. Hash- und Zusammenführungsjoins werden nicht unterstützt. Entfernen Sie den Jointipp.|  
 |Abfragetipp|*Abfragetipp*|Dieser Abfragetipp befindet sich nicht in systemintern kompilierten gespeicherten Prozeduren. Unterstützte Abfragetipps finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).|  
 |Option|PERCENT|Diese Option wird nicht für **TOP** -Klauseln unterstützt. Entfernen Sie **PERCENT** aus der Abfrage in der systemintern kompilierten gespeicherten Prozedur.|  
-|Option|WITH TIES|**Gilt für:**  [!INCLUDE[ssSDS14_md](../../includes/sssql14-md.md)] und [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Diese Option wird nicht für **TOP** -Klauseln unterstützt. Entfernen Sie **WITH TIES** aus der Abfrage in der systemintern kompilierten gespeicherten Prozedur.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] unterstützen **TOP WITH TIES**.|  
+|Option|WITH TIES|**Gilt für:** [!INCLUDE[ssSDS14_md](../../includes/sssql14-md.md)] und [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Diese Option wird nicht für **TOP** -Klauseln unterstützt. Entfernen Sie **WITH TIES** aus der Abfrage in der systemintern kompilierten gespeicherten Prozedur.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] unterstützen **TOP WITH TIES**.|  
 |Aggregate-Funktion|*Aggregatfunktion*|Nicht alle Aggregatfunktionen werden unterstützt. Weitere Informationen zu den unterstützten Aggregatfunktionen in nativ kompilierten T-SQL-Modulen finden Sie unter [Unterstützte Funktionen für nativ kompilierte T-SQL-Module](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).|  
 |Rangfolgefunktion|*Rangfolgefunktion*|Rangfolgefunktionen werden nicht in systemintern kompilierten gespeicherten Prozeduren unterstützt. Entfernen Sie sie aus der Prozedurdefinition.|  
 |Funktion|*Funktion*|Diese Funktion wird nicht unterstützt. Weitere Informationen zu den unterstützten Funktionen in nativ kompilierten T-SQL-Modulen finden Sie unter [Unterstützte Funktionen für nativ kompilierte T-SQL-Module](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).|  
@@ -176,7 +177,7 @@ ms.lasthandoff: 11/22/2017
 |Funktion|Deklarationen von Inlinetabellenvariablen.|Tabellenvariablen müssen auf explizit definierte speicheroptimierte Tabellentypen verweisen. Sie sollten einen speicheroptimierten Tabellentyp erstellen und diesen Typ für die Variablendeklaration verwenden, statt den Typ inline anzugeben.|  
 |Funktion|Datenträgerbasierte Tabellen|Auf datenträgerbasierte Tabellen kann nicht von systemintern kompilierten gespeicherten Prozeduren zugegriffen werden. Entfernen Sie Verweise auf datenträgerbasierte Tabellen aus den systemintern kompilierten gespeicherten Prozeduren. Sie können auch datenträgerbasierte Tabellen zu speicheroptimierten Tabellen migrieren.|  
 |Funktion|Sichten|Auf Sichten kann nicht von systemintern kompilierten gespeicherten Prozeduren zugegriffen werden. Verweisen Sie nicht auf Sichten, sondern auf die zugrunde liegenden Basistabellen.|  
-|Funktion|Tabellenwertfunktionen|**Gilt für:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Auf Tabellenwertfunktionen mit mehreren Anweisungen kann nicht von nativ kompilierten T-SQL-Modulen aus zugegriffen werden. Inline-Tabellenwertfunktionen werden unterstützt. Diese müssen jedoch mit WITH NATIVE_COMPILATION erstellt werden.<br/><br/>**Gilt für:** [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)]<br/>Auf Tabellenwertfunktionen kann nicht aus nativ kompilierten T-SQL-Modulen verwiesen werden.|  
+|Funktion|Tabellenwertfunktionen|**Gilt für**: [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] und SQL Server ab Version [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Auf Tabellenwertfunktionen mit mehreren Anweisungen kann nicht von nativ kompilierten T-SQL-Modulen aus zugegriffen werden. Inline-Tabellenwertfunktionen werden unterstützt. Diese müssen jedoch mit WITH NATIVE_COMPILATION erstellt werden.<br/><br/>**Gilt für**: [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)]<br/>Auf Tabellenwertfunktionen kann nicht aus nativ kompilierten T-SQL-Modulen verwiesen werden.|  
 |Option|PRINT|Verweis entfernen|  
 |Funktion|DDL|DDL wird innerhalb von nativ kompilierten T-SQL-Modulen nicht unterstützt.|  
 |Option|STATISTICS XML|Wird nicht unterstützt. Beim Ausführen einer Abfrage, für die STATISTICS XML aktiviert ist, wird der XML-Inhalt ohne den Teil für die nativ kompilierte gespeicherte Prozedur zurückgegeben.|  
@@ -190,7 +191,7 @@ ms.lasthandoff: 11/22/2017
 |Funktion|Gebundene Transaktion|Gebundene Sitzungen können nicht an Transaktionen teilnehmen, die auf speicheroptimierte Tabellen zugreifen. Binden Sie die Sitzung nicht, bevor Sie die Prozedur ausführen.|  
 |Funktion|DTC|Transaktionen, die auf speicheroptimierte Tabellen zugreifen, können keine verteilten Transaktionen sein.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Migrieren zu In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

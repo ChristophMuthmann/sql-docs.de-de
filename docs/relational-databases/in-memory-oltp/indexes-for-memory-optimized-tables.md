@@ -8,20 +8,21 @@ ms.reviewer:
 ms.service: 
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a7c3e4fb4a7082a1874c9fc320ff67a1ce6031b0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 52c415b0c4c7f4913e8d675ce9fe86ad6051e233
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Indizes für speicheroptimierte Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ Für eine Deklaration mit dem Standard DURABILITY = SCHEMA\_AND_DATA muss die sp
             DURABILITY = SCHEMA\_AND_DATA);  
     ```
 > [!NOTE]  
-> Für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] besteht ein Limit von 8 Indizes pro speicheroptimierte Tabelle oder Tabellentyp. Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gibt es keine Begrenzung mehr für die spezifische Anzahl von Indizes für speicheroptimierte Tabellen und Tabellentypen.
+> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] haben ein Limit von 8 Indizes pro speicheroptimierter Tabelle oder speicheroptimiertem Tabellentyp. Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gibt es keine Begrenzung mehr für die spezifische Anzahl von Indizes für speicheroptimierte Tabellen und Tabellentypen.
   
 ### <a name="code-sample-for-syntax"></a>Codebeispiel für die Syntax  
   

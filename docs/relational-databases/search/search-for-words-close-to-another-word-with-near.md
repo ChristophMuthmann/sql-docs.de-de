@@ -8,10 +8,12 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - word searches [full-text search]
 - NEAR option [full-text search]
@@ -21,19 +23,20 @@ helpviewer_keywords:
 - full-text queries [SQL Server], proximity
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-caps.latest.revision: "65"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9c3e51c4507973ef0e4394aef1049fe0edadf94f
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 74732252ddb62adc02b532a23fdfe588fbbed2b9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Sie können in einem [CONTAINS](../../t-sql/queries/contains-transact-sql.md)-Prädikat oder in einer [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)-Funktion mithilfe des *Näherungsbegriffs* **NEAR** nach Wörtern oder Wendungen suchen, die nahe beieinander liegen. 
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Sie können in einem [CONTAINS](../../t-sql/queries/contains-transact-sql.md)-Prädikat oder in einer [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)-Funktion mithilfe des *Näherungsbegriffs* **NEAR** nach Wörtern oder Wendungen suchen, die nahe beieinander liegen. 
   
 ##  <a name="Custom_NEAR"></a> Übersicht über NEAR  
 **NEAR** umfasst die folgenden Funktionen:  
@@ -115,15 +118,15 @@ GO
 ## <a name="combine-near-with-other-terms"></a>Kombinieren von NEAR mit anderen Begriffen  
  Sie können NEAR mit einigen anderen Begriffen kombinieren. Sie können einen benutzerdefinierten NEAR-Begriff mit AND (&), OR (|) oder AND NOT (&!) mit einem anderen benutzerdefinierten NEAR-Begriff, einem einfachen Begriff oder einem Präfixbegriff kombinieren. Zum Beispiel:  
   
--   CONTAINS('NEAR((*Begriff1*,*Begriff2*),5) AND *Begriff3*')  
+-   CONTAINS('NEAR((*Begriff1*, *Begriff2*),5) AND *Begriff3*')  
   
--   CONTAINS('NEAR((*Begriff1*,*Begriff2*),5) OR *Begriff3*')  
+-   CONTAINS('NEAR((*Begriff1*, *Begriff2*),5) OR *Begriff3*')  
   
--   CONTAINS('NEAR((*Begriff1*,*Begriff2*),5) AND NOT *Begriff3*')  
+-   CONTAINS('NEAR((*Begriff1*, *Begriff2*),5) AND NOT *Begriff3*')  
   
--   CONTAINS('NEAR((*Begriff1*,*Begriff2*),5) AND NEAR((*Begriff3*,*Begriff4*),2)')  
+-   CONTAINS('NEAR((*Begriff1*, *Begriff2*),5) AND NEAR((*Begriff3*, *Begriff4*),2)')  
   
--   CONTAINS('NEAR((*Begriff1*,*Begriff2*),5) OR NEAR((*Begriff3*,*Begriff4*),2, TRUE)')  
+-   CONTAINS('NEAR((*Begriff1*, *Begriff2*),5) OR NEAR((*Begriff3*, *Begriff4*),2, TRUE)')  
   
  Beispiel:  
   

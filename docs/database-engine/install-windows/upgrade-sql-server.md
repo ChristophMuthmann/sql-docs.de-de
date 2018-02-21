@@ -8,30 +8,35 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords: upgrading SQL Server
+helpviewer_keywords:
+- upgrading SQL Server
 ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 63b740d38d52feb7e29b724560c0d6f29023057b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 7ea633debf8e726dfd8de81c0cfb57104ea1b3bc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-sql-server"></a>Aktualisieren von SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Sie können Instanzen von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder [!INCLUDE[ss2016](../../includes/sssql15-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisieren. Lesen Sie die folgenden Informationen zum Upgradeprozess und die Versionsanmerkungen, bevor Sie mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup ein Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ausführen.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+ 
+ Sie können Instanzen von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder [!INCLUDE[ss2016](../../includes/sssql15-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisieren. Lesen Sie die folgenden Artikel zum Upgradeprozess und die Versionsanmerkungen, bevor Sie mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setups ein Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ausführen.  
   
    - Weitere Informationen zu einem Upgrade von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]finden Sie unter [Are you upgrading from SQL Server 2005?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)(Führen Sie ein Upgrade von SQL Server 2005 aus?).  
    - [Versionsanmerkungen zu SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) 
    - [Versionsanmerkungen zu SQL Server 2017](../../sql-server/sql-server-2017-release-notes.md) 
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
-Dieser Abschnitt enthält die folgenden Themen:  
+Dieser Abschnitt enthält die folgenden Artikel:  
   
 -   [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
 -   [Vorbereiten der Aktualisierung durch Ausführen von Data Migration Assistant](../../database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md)  

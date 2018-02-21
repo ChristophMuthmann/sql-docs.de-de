@@ -8,26 +8,28 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - semantic search [SQL Server], installing
 - semantic search [SQL Server], configuring
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43cacfe1341c5cb412408696ed4ed136b59f3e8a
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: c3e5be07b316f2975a56181e6e58805e88023939
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="install-and-configure-semantic-search"></a>Installieren und Konfigurieren der semantischen Suche
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Beschreibt die erforderlichen Komponenten für die statistische semantische Suche und wie diese Komponenten installiert oder überprüft werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Beschreibt die erforderlichen Komponenten für die statistische semantische Suche und wie diese Komponenten installiert oder überprüft werden.  
   
 ## <a name="install-semantic-search"></a>Installieren der semantischen Suche  
   
@@ -150,6 +152,6 @@ GO
 ## <a name="install-optional-support-for-newer-document-types"></a>Installieren optionaler Unterstützung für neuere Dokumenttypen  
   
 ###  <a name="office"></a> Installieren der neuesten Filter für Microsoft Office und andere Microsoft-Dokumenttypen  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert die neuesten [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Wörtertrennungen und -Wortstammerkennungen, aber nicht die neuesten Filter für [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office-Dokumente und andere [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Dokumenttypen. Diese Filter sind zum Indizieren von Dokumenten erforderlich, die mit den neuen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office und anderen [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Anwendungen erstellt wurden. Die neuesten Filter können unter [Microsoft Office 2010-Filterpakete](http://go.microsoft.com/fwlink/?LinkId=218293)heruntergeladen werden. (Es scheint kein Filter Pack-Release für Office 2013 oder Office 2016 zu geben.)
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert die neuesten [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Wörtertrennungen und -Wortstammerkennungen, aber nicht die neuesten Filter für [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office-Dokumente und andere [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Dokumenttypen. Diese Filter sind zum Indizieren von Dokumenten erforderlich, die mit den neuen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office und anderen [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Anwendungen erstellt wurden. Die neuesten Filter können unter [Microsoft Office 2010-Filterpakete](http://go.microsoft.com/fwlink/?LinkId=218293)heruntergeladen werden. (Es scheint kein Filter Pack-Release für Office 2013 oder Office 2016 zu geben.)
   
   

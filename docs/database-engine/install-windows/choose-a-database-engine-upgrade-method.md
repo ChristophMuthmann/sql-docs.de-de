@@ -17,14 +17,17 @@ caps.latest.revision:
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 164c24f5cfd3c4120c75776764221560392ebd4d
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.openlocfilehash: 1cb3ad0fe1c3678799c557cf9c3b66286505276c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Wählen einer Upgrademethode für das Datenbankmodul
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Es gibt verschiedene zu prüfende Ansätze beim Planen des Upgrades von [!INCLUDE[ssDE](../../includes/ssde-md.md)] von einer früheren Version von SQL Server, um Ausfallzeiten und Risiken zu minimieren. Sie können ein direktes Upgrade ausführen, zu einer neuen Installation migrieren oder ein paralleles Upgrade vornehmen. Das folgende Diagramm hilft Ihnen, zwischen diesen Ansätzen auszuwählen. Jeder der Ansätze im Diagramm wird außerdem nachstehend erläutert. Informationen zu den Entscheidungskriterien im Diagramm finden Sie auch unter [Planen und Testen des Upgradeplans für das Datenbankmodul](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  Es gibt verschiedene zu prüfende Ansätze beim Planen des Upgrades von [!INCLUDE[ssDE](../../includes/ssde-md.md)] von einer früheren Version von SQL Server, um Ausfallzeiten und Risiken zu minimieren. Sie können ein direktes Upgrade ausführen, zu einer neuen Installation migrieren oder ein paralleles Upgrade vornehmen. Das folgende Diagramm hilft Ihnen, zwischen diesen Ansätzen auszuwählen. Jeder der Ansätze im Diagramm wird außerdem nachstehend erläutert. Informationen zu den Entscheidungskriterien im Diagramm finden Sie auch unter [Planen und Testen des Upgradeplans für das Datenbankmodul](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  ![Entscheidungsstruktur der Upgrademethode für das Datenbankmodul](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Database Engine Upgrade Method Decision Tree")  
   
@@ -35,7 +38,7 @@ ms.lasthandoff: 01/29/2018
 -   Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](http://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)**, um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition bereits installiert ist.  
   
 > [!NOTE]  
->  Sie können auch ein Upgrade auf Azure SQL-Datenbank erwägen oder Ihre SQL Server-Umgebung als Teil Ihres Upgradeplans virtualisieren. Diese Themen liegen für diese Thema außerhalb des Gültigkeitsbereich, jedoch haben wir hier einige Links bereitgestellt:
+>  Sie können auch ein Upgrade auf Azure SQL-Datenbank erwägen oder Ihre SQL Server-Umgebung als Teil Ihres Upgradeplans virtualisieren. Diese Themen liegen außerhalb des Rahmens dieses Artikels, hier finden Sie jedoch einige Links:
 >   - [SQL Server auf virtuellen Azure-Computern – Übersicht](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
 >   - [Azure SQL-Datenbank](https://azure.microsoft.com/en-us/services/sql-database/) 
 >   - [Selecting a SQL Server option in Azure (Auswählen einer SQL Server-Option in Azure)](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)  
@@ -105,7 +108,7 @@ ms.lasthandoff: 01/29/2018
      ![Neue Installationsupgrademethode mithilfe von Trennen und Anfügen für den SAN-Speicher](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "New installation upgrade method using detach and attach for SAN storage")  
   
 ##  <a name="RollingUpgrade"></a> parallelen Upgrade  
- Ein paralleles Update ist in Umgebungen mit SQL Server-Lösungen mit mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen erforderlich, die in einer bestimmten Reihenfolge aktualisiert werden müssen, um die Betriebszeit zu maximieren, Risiken zu minimieren und Funktionalität beizubehalten. Ein paralleles Upgrade ist im Wesentlichen die Aktualisierung mehrerer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen in einer bestimmten Reihenfolge, wobei entweder ein direktes Upgrade jeder vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz oder ein Upgrade auf eine neue Installation erfolgt, um die Aktualisierung von Hardware und/oder des Betriebssystems im Rahmen des Upgradeprojekts zu erleichtern. Es gibt eine Reihe von Szenarien, in denen der parallele Upgradeansatz befolgt werden muss. Diese Szenarien sind in den folgenden Themen dokumentiert:  
+ Ein paralleles Update ist in Umgebungen mit SQL Server-Lösungen mit mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen erforderlich, die in einer bestimmten Reihenfolge aktualisiert werden müssen, um die Betriebszeit zu maximieren, Risiken zu minimieren und Funktionalität beizubehalten. Ein paralleles Upgrade ist im Wesentlichen die Aktualisierung mehrerer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen in einer bestimmten Reihenfolge, wobei entweder ein direktes Upgrade jeder vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz oder ein Upgrade auf eine neue Installation erfolgt, um die Aktualisierung von Hardware und/oder des Betriebssystems im Rahmen des Upgradeprojekts zu erleichtern. Es gibt eine Reihe von Szenarien, in denen der parallele Upgradeansatz befolgt werden muss. Diese Szenarien sind in den folgenden Artikeln dokumentiert:  
   
 -   AlwaysOn-Verfügbarkeitsgruppen: Ausführliche Schritte zum Ausführen eines parallelen Upgrades in dieser Umgebung finden Sie unter [Upgraden von AlwaysOn-Verfügbarkeitsgruppen-Replikatsinstanzen](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).  
   

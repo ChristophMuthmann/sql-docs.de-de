@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - search property lists [SQL Server], about
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ade7dbffabb11419e8eeb43f50fa2ecf6d27dc9
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 24c1ffc5cc5f68271343a078cd02296b9d6b42c3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Der Inhalt von Dokumenteigenschaften konnte zuvor nicht vom Inhalt des Dokumenttexts unterschieden werden. Dadurch waren Volltextabfragen auf generische Suchvorgänge für ganze Dokumente beschränkt. Jetzt können Sie jedoch einen Volltextindex zur Unterstützung von Suchvorgängen mit Eigenschaftenbereich für bestimmte Eigenschaften wie „Author“ und „Title“ für unterstützte Dokumenttypen in einer **varbinary**-, **varbinary(max)** -Binärdatenspalte (einschließlich **FILESTREAM**) oder **image** -Binärdatenspalte konfigurieren. Diese Form der Suche wird als *Eigenschaftensuche*bezeichnet.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Der Inhalt von Dokumenteigenschaften konnte zuvor nicht vom Inhalt des Dokumenttexts unterschieden werden. Dadurch waren Volltextabfragen auf generische Suchvorgänge für ganze Dokumente beschränkt. Jetzt können Sie jedoch einen Volltextindex zur Unterstützung von Suchvorgängen mit Eigenschaftenbereich für bestimmte Eigenschaften wie „Author“ und „Title“ für unterstützte Dokumenttypen in einer **varbinary**-, **varbinary(max)** -Binärdatenspalte (einschließlich **FILESTREAM**) oder **image** -Binärdatenspalte konfigurieren. Diese Form der Suche wird als *Eigenschaftensuche*bezeichnet.  
   
  Der zugeordnete [Filter](../../relational-databases/search/configure-and-manage-filters-for-search.md) (IFilter) bestimmt, ob die Eigenschaftensuche für einen bestimmten Dokumenttyp möglich ist. Bei einigen Dokumenttypen extrahiert der zugeordnete IFilter einige oder alle für diesen Dokumenttyp definierten Eigenschaften und den Inhalt des Dokumenttextes. Sie können einen Volltextindex konfigurieren, um Eigenschaftensuchen nur für Eigenschaften zu unterstützen, die während der Volltextindizierung von einem IFilter extrahiert werden. Zu den IFilters, die Dokumenteigenschaften extrahieren, zählen die IFilters für Microsoft Office-Dokumenttypen (z. B. DOCX, XLSX und PPTX). Der XML-IFilter gibt dagegen keine Eigenschaften aus.  
   
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/02/2018
   
  Wenn eine Eigenschaft für eine Suchliste registriert wird, weist das Volltextmodul der Eigenschaft nach dem Zufallsprinzip eine *interne Eigenschaften-ID* zu. Die interne Eigenschaften-ID ist eine ganze Zahl, die die Eigenschaft in dieser Sucheigenschaftenliste eindeutig identifiziert.  
   
- Die folgende Abbildung zeigt eine logische Sicht einer Sucheigenschaftenliste, in der zwei Eigenschaften (Title und Keywords) angegeben werden. Der Eigenschaftenlistenname für Keywords ist "Tags". Diese Eigenschaften gehören zum selben Eigenschaftensatz, dessen GUID F29F85E0-4FF9-1068-AB91-08002B27B3D9 lautet. Die ganzzahligen Eigenschaftsbezeichner sind 2 für Title und 5 für Tags (Keywords). Das Volltextmodul ordnet jede Eigenschaft nach dem Zufallsprinzip einer internen Eigenschaften-ID zu, die für die Sucheigenschaftenliste eindeutig ist. Die interne Eigenschaften-ID für die Title-Eigenschaft ist 1, und die interne Eigenschaften-ID für die Tags-Eigenschaft ist 2.  
+ Die folgende Abbildung zeigt eine logische Sicht einer Sucheigenschaftenliste, in der zwei Eigenschaften (Title und Keywords) angegeben werden. Der Eigenschaftenlistenname für Keywords ist „Tags“. Diese Eigenschaften gehören zum selben Eigenschaftensatz, dessen GUID F29F85E0-4FF9-1068-AB91-08002B27B3D9 lautet. Die ganzzahligen Eigenschaftsbezeichner sind 2 für Title und 5 für Tags (Keywords). Das Volltextmodul ordnet jede Eigenschaft nach dem Zufallsprinzip einer internen Eigenschaften-ID zu, die für die Sucheigenschaftenliste eindeutig ist. Die interne Eigenschaften-ID für die Title-Eigenschaft ist 1, und die interne Eigenschaften-ID für die Tags-Eigenschaft ist 2.  
   
  ![Zuordnung der Sucheigenschaftenliste zur internen Tabelle](../../relational-databases/search/media/ifts-spl-w-title-and-keywords.gif "Mapping of search property list to internal table")  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 01/02/2018
   
  ![Volltextindex, der eine Sucheigenschaftenliste verwendet](../../relational-databases/search/media/ifts-spl-and-fti.gif "Full-text index that uses a search property list")  
   
- Suchbegriffe in der Title-Eigenschaft ("Favorite", "Biking" und "Trails") werden der internen Eigenschaften-ID 1 zugeordnet, die Title für diesen Index zugewiesen ist. Suchbegriffe in der Keywords-Eigenschaft ("biking" und "mountain") werden der internen Eigenschaften-ID 2 zugeordnet, die Tags für diesen Index zugewiesen ist. Für Suchbegriffe in der Author-Eigenschaft ("Jane" und "Doe") und Suchbegriffe im Dokumenttext ist die interne Eigenschaften-ID gleich 0 (null). Beachten Sie, dass der Begriff "biking" in der Title-Eigenschaft, in der Keywords-Eigenschaft (Tags) und im Dokumenttext vorkommt. Bei einer Eigenschaftensuche nach "biking" in der Title-Eigenschaft oder der Keywords-Eigenschaft (Tags) würde dieses Dokument in den Ergebnissen zurückgegeben werden. Von einer generischen Volltextabfrage nach "biking" würde dieses Dokument ebenfalls zurückgegeben werden, als ob der Index nicht für Eigenschaftensuchen konfiguriert wäre. Eine Eigenschaftensuche nach "biking" in der Author-Eigenschaft würde dieses Dokument nicht zurückgeben.  
+ Suchbegriffe in der Title-Eigenschaft ("Favorite", "Biking" und "Trails") werden der internen Eigenschaften-ID 1 zugeordnet, die Title für diesen Index zugewiesen ist. Suchbegriffe in der Keywords-Eigenschaft ("biking" und "mountain") werden der internen Eigenschaften-ID 2 zugeordnet, die Tags für diesen Index zugewiesen ist. Für Suchbegriffe in der Author-Eigenschaft ("Jane" und "Doe") und Suchbegriffe im Dokumenttext ist die interne Eigenschaften-ID gleich 0 (null). Der Begriff „biking“ kommt in der Title-Eigenschaft, in der Keywords-Eigenschaft (Tags) und im Dokumenttext vor. Bei einer Eigenschaftensuche nach "biking" in der Title-Eigenschaft oder der Keywords-Eigenschaft (Tags) würde dieses Dokument in den Ergebnissen zurückgegeben werden. Eine generische Volltextabfrage nach „biking“ würde dieses Dokument ebenfalls zurückgeben, so als ob der Index nicht für die Eigenschaftensuche konfiguriert wäre. Eine Eigenschaftensuche nach "biking" in der Author-Eigenschaft würde dieses Dokument nicht zurückgeben.  
   
  Eine Eigenschaftenbereich-Volltextabfrage verwendet die internen Eigenschaften-IDs, die für die aktuelle Sucheigenschaftenliste des Volltextindex registriert sind.  
   
@@ -105,7 +107,7 @@ ms.lasthandoff: 01/02/2018
   
 -   Ganzzahliger Eigenschaftsbezeichner  
   
-     Jede Sucheigenschaft besitzt einen Bezeichner, der innerhalb des Eigenschaftensatzes eindeutig ist. Beachten Sie, dass der Bezeichner für eine bestimmte Eigenschaft entweder eine ganze Zahl oder eine Zeichenfolge sein kann. Die Volltextsuche unterstützt jedoch nur ganzzahlige Bezeichner.  
+     Jede Sucheigenschaft besitzt einen Bezeichner, der innerhalb des Eigenschaftensatzes eindeutig ist. Der Bezeichner für eine bestimmte Eigenschaft kann entweder eine ganze Zahl oder eine Zeichenfolge sein. Die Volltextsuche unterstützt jedoch nur ganzzahlige Bezeichner.  
   
 -   Eigenschaftenname  
   
@@ -130,7 +132,7 @@ ms.lasthandoff: 01/02/2018
   
  **So fügen Sie einer Sucheigenschaftenliste mit Transact-SQL eine Eigenschaft hinzu**  
   
- Verwenden Sie die Anweisung [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) mit den Werten, die Sie mithilfe eines der im Thema [Suchen von Eigenschaftensatz-GUIDs und ganzzahligen Eigenschaft-IDs für Sucheigenschaften](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md) beschriebenen Verfahren erhalten haben.  
+ Verwenden Sie die Anweisung [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) mit den Werten, die Sie mithilfe eines der im Artikel [Suchen von Eigenschaftensatz-GUIDs und ganzzahligen Eigenschaft-IDs für Sucheigenschaften](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md) beschriebenen Verfahren abgerufen haben.  
   
  Das folgende Beispiel veranschaulicht die Verwendung dieser Werte beim Hinzufügen einer Eigenschaft zu einer Sucheigenschaftenliste:  
   

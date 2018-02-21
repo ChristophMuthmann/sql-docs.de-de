@@ -8,7 +8,8 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,22 @@ helpviewer_keywords:
 - upgrading SQL Server, upgrades supported
 - cross-language support
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
-caps.latest.revision: "148"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ef0e3215cccf5cbece0036c79f73a10c25119c4e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 7af72417c49f799dcb1aa9c36fa3bed8516e25d1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Unterstützte Versions- und Editionsupgrades
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Sie können ein Upgrade von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ausführen. In diesem Thema werden die unterstützten Upgradepfade von diesen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen sowie die unterstützten Editionsupgrades für [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]aufgeführt.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  Sie können ein Upgrade von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]und [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]ausführen. In diesem Artikel werden die unterstützten Upgradepfade von diesen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen sowie die unterstützten Editionsupgrades für [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] aufgeführt.  
   
 ## <a name="pre-upgrade-checklist"></a>Prüfliste vor dem Upgrade  
   
@@ -98,7 +102,7 @@ SQL Server 2016 unterstützt ein Upgrade von folgenden Versionen von SQL Server:
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 Business Intelligence|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 Evaluation|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Entwickler|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Entwickler|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Entwickler <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Entwickler|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Entwickler|  
@@ -166,7 +170,7 @@ SQL Server 2016 unterstützt ein Upgrade von folgenden Versionen von SQL Server:
   
  \* Gilt auch für [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express with Tools und [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express with Advanced Services.  
   
- ** Das Ändern der Edition eines [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] -Failoverclusters ist nur beschränkt möglich. Die folgenden Szenarien werden bei [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] -Failoverclustern nicht unterstützt:  
+ ** Das Ändern der Edition eines [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] -Failoverclusters ist nur beschränkt möglich. Die folgenden Szenarien werden bei [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]-Failoverclustern nicht unterstützt:  
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer, Standard oder Evaluation.  
   

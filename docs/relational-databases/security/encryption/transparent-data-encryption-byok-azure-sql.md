@@ -19,11 +19,11 @@ ms.devlang: na
 ms.topic: article
 ms.date: 01/31/2018
 ms.author: aliceku
-ms.openlocfilehash: 8c192f5d1114ddab7d75761b385e91c0f22e481b
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 1fdb7da4fe1276a66494873fc38aa15ae67bae27
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption mit Bring Your Own Key-Unterstützung (Vorschau) für Azure SQL-Datenbank und Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -59,9 +59,8 @@ Wenn TDE dafür konfiguriert wird, einen TDE Protector von Key Vault zu verwende
 
 ### <a name="general-guidelines"></a>Allgemeine Richtlinien
 - Vergewissern Sie sich, dass Azure Key Vault und Azure SQL-Datenbank in demselben Mandanten gespeichert werden.  Mandantenübergreifende Interaktionen von Key Vaults und Servern **werden nicht unterstützt**.
-
 - Legen Sie fest, welche Abonnements für die erforderlichen Ressourcen verwendet werden sollen. Wenn Sie dem Server später anderen Abonnements zuweisen, ist ein erneutes Setup von TDE mit BYOK erforderlich.
-- Konfigurieren Sie Azure Key Vault in einem Einzelabonnement, das sich nur auf TDE Protectors für SQL-Datenbank beschränkt.  Alle Datenbanken, die einem logischen Server zugewiesen sind, verwenden denselben TDE Protector. Denken Sie daher über die Gruppierung von Datenbanken auf einem logischen Server nach. 
+- Beim Konfigurieren von TDE mit BYOK müssen Sie die Last berücksichtigen, die durch wiederholte wrap-/unwrap-Vorgänge im Schlüsseltresor entsteht. Ein Beispiel: Da alle Datenbanken, die einem logischen Server zugeordnet sind, den gleichen TDE Protector verwenden, löst ein Failover dieses Servers so viele Schlüsselvorgänge im Tresor aus, wie Datenbanken auf dem Server vorhanden sind. Basierend auf unseren Erfahrungen und den dokumentierten [Grenzwerten des Key Vault-Diensts](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits) empfehlen wir, einer Azure Key Vault-Instanz in einem einzelnen Abonnement höchstens 500 Standard- oder 200-Premium-Datenbanken zuzuordnen, um beim Zugriff auf den TDE Protector im Tresor eine konsistent hohe Verfügbarkeit sicherzustellen. 
 - Empfehlung: Speichern Sie lokal eine Kopie des TDE Protectors.  Dafür benötigen Sie ein HSM-Gerät, um einen TDE Protector lokal zu erstellen, und ein Schlüsselhinterlegungssystem zum Speichern der lokalen Kopie des TDE Protectors.
 
 
@@ -86,7 +85,8 @@ Wenn TDE dafür konfiguriert wird, einen TDE Protector von Key Vault zu verwende
 - Hinterlegen Sie den Schlüssel in einem Schlüsselhinterlegungssystem.  
 - Importieren Sie die Datei für den Verschlüsselungsschlüssel (PFX, BYOK oder BACKUP) in Azure Key Vault. 
     
-    >[!NOTE] 
+
+>[!NOTE] 
     >Wenn Sie einen Test durchführen möchten, können Sie einen Schlüssel mit Azure Key Vault erstellen. Dieser Schlüssel kann dann allerdings nicht hinterlegt werden, da der private Schlüssel immer im Schlüsseltresor verbleiben muss.  Sichern und hinterlegen Sie immer die Schlüssel, die zum Verschlüsseln von Produktionsdaten verwendet werden, da es zu nicht wiederherstellbaren Datenverlusten kommen kann, wenn der Schlüssel verloren gehen sollte (z.B. wenn er aus Versehen aus dem Schlüsseltresor gelöscht wird oder abläuft).
     >
     
@@ -148,3 +148,5 @@ Führen Sie zur Umgehung dieses Fehlers das Cmdlet [Get-AzureRmSqlServerKeyVault
    -ResourceGroup <SQLDatabaseResourceGroupName>
    ```
 Weitere Informationen zum Wiederherstellen von Sicherungen für SQL-Datenbank finden Sie unter [Recover an Azure SQL database (Wiederherstellen von Azure SQL-Datenbank)](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups). Weitere Informationen zum Wiederherstellen von Sicherungen für SQL Data Warehouse finden Sie unter [Recover an Azure SQL Data Warehouse (Wiederherstellen von Azure SQL Data Warehouse)](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-restore-database-overview).
+
+Weitere Überlegungen für gesicherte Protokolldateien: Gesicherte Protokolldateien sind weiterhin mit dem ursprünglichen TDE Encryptor verschlüsselt, auch wenn der TDE Protector rotiert wurde und die Datenbank jetzt einen neuen TDE Protector verwendet.  Zur Wiederherstellungszeit werden beide Schlüssel benötigt, um die Datenbank wiederherzustellen.  Wenn die Protokolldatei einen in Azure Key Vault gespeicherten TDE Protector verwendet, wird dieser Schlüssel zur Wiederherstellungszeit benötigt, auch wenn die Datenbank in der Zwischenzeit geändert wurde und jetzt eine per Dienst verwaltete TDE verwendet.   

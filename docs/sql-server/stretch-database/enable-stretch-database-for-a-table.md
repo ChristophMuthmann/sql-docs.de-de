@@ -8,26 +8,28 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, enabling table
 - enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 931c88853bc5f2b0ecca65aa40cf5d4b4f29bd48
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6ebf0e74709450f3f6bcee076c6ac4921996c54b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Aktivieren von Stretch Database für eine Tabelle
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   Wählen Sie **Stretch &gt; Aktivieren** aus, um eine Tabelle für Stretch Database zu konfigurieren. So wird in SQL Server Management Studio für eine Tabelle der Assistent zum **Aktivieren der Tabelle für Stretch** geöffnet. Sie können auch Transact-SQL verwenden, um Stretch Database für eine vorhandene Tabelle zu aktivieren. Alternativ können Sie eine neue, für Stretch Database aktivierte Tabelle erstellen.  
   
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Wenn Ihre Tabelle sowohl heiße als auch kalte Daten enthält, können Sie eine Filterfunktion zum Auswählen der zu migrierenden Zeilen angeben.    
  
- **Voraussetzungen**. Wenn Sie **Stretch &gt; Aktivieren** für eine Tabelle auswählen und Stretch Database noch nicht für die Datenbank aktiviert haben, konfiguriert der Assistent zuerst die Datenbank für Stretch Database. Führen Sie die Schritte unter [Erste Schritte durch Ausführen des Assistenten zum Aktivieren von Stretch für eine Datenbank](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) anstelle der in diesem Thema aufgeführten Schritte durch.  
+ **Voraussetzungen**. Wenn Sie **Stretch &gt; Aktivieren** für eine Tabelle auswählen und Stretch Database noch nicht für die Datenbank aktiviert haben, konfiguriert der Assistent zuerst die Datenbank für Stretch Database. Führen Sie die Schritte unter [Erste Schritte durch Ausführen des Assistenten zum Aktivieren von Stretch für eine Datenbank](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) anstelle der in diesem Artikel aufgeführten Schritte durch.  
   
  **Berechtigungen**. Um Stretch Database für eine Datenbank oder eine Tabelle zu aktivieren, benötigen Sie "db_owner"-Berechtigungen. Um Stretch Database für eine Tabelle zu aktivieren, benötigen Sie außerdem ALTER-Berechtigungen für die Tabelle.  
 
@@ -61,7 +63,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Führen Sie die ALTER TABLE-Anweisung aus, um eine Filterfunktion anzugeben, nachdem Sie den Assistenten beendet haben. Die erforderlichen Schritte finden Sie unter [Hinzufügen einer Filterfunktion nach Ausführen des Assistenten](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz).  
   
- Die ALTER TABLE-Syntax wird im weiteren Verlauf dieses Themas beschrieben.  
+ Die ALTER TABLE-Syntax wird im weiteren Verlauf dieses Artikels beschrieben.  
   
  **Zusammenfassung**  
  Überprüfen Sie die im Assistenten eingegebenen Werte und ausgewählten Optionen. Wählen Sie dann **Fertig stellen** aus, um Stretch zu aktivieren.  
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/05/2017
             </a> Verwenden von Transact-SQL zum Aktivieren von Stretch Database für eine Tabelle  
  Sie können Stretch Database mithilfe von Transact-SQL für eine vorhandene Tabelle aktivieren oder damit eine neue, für Stretch Database aktivierte Tabelle erstellen.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  Verwenden Sie die folgenden Optionen, wenn Sie CREATE TABLE oder ALTER TABLE ausführen, um Stretch Database für eine Tabelle zu aktivieren.  
   
 -   Verwenden Sie optional die `FILTER_PREDICATE = <function>` -Klausel, um eine Funktion zum Auswählen der zu migrierenden Zeilen anzugeben, wenn die Tabelle sowohl heiße als auch kalte Daten enthält. Das Prädikat muss eine Inline-Tabellenwertfunktion aufrufen. Weitere Informationen hierzu finden Sie unter [Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Wenn Sie keine Filterfunktion angeben, wird die gesamte Tabelle migriert.  
@@ -139,7 +141,7 @@ GO
   
  Weitere Informationen hierzu finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
   

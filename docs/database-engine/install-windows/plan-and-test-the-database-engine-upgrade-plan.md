@@ -8,32 +8,36 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd45301f5ce4497a672ffd4a684f972b08ac8013
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a10e7d35aa5a72f9dcc7ba34b11b6486fb9ac1cf
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>Planen und Testen des Upgradeplans für das Datenbankmodul
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Für ein erfolgreiches Upgrade von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] ist unabhängig von der Herangehensweise eine angemessene Planung erforderlich.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+ Für eine erfolgreiches Upgrade von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] ist unabhängig von der Herangehensweise eine angemessene Planung erforderlich.  
   
 ## <a name="release-notes-and-known-upgrade-issues"></a>Anmerkungen zu dieser Version und bekannte Upgradeprobleme  
  Bevor Sie auf [!INCLUDE[ssDE](../../includes/ssde-md.md)] aktualisieren, sollten Sie sich folgende Artikel anschauen:
 
 - [Versionsanmerkungen zu SQL Server 2017](../../sql-server/sql-server-2017-release-notes.md) 
 - [Versionsanmerkungen zu SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) 
-- Thema [Abwärtskompatibilität des SQL Server-Datenbankmoduls](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
+- Artikel [Abwärtskompatibilität der SQL Server-Datenbank-Engine](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
 ## <a name="pre-upgrade-planning-checklist"></a>Planungsprüfliste zur Vorbereitung des Upgrades  
- Lesen Sie vor dem Upgrade von [!INCLUDE[ssDE](../../includes/ssde-md.md)]die folgende Prüfliste und die dazugehörigen Themen. Diese Themen gelten für alle Upgrades, unabhängig von der Upgrademethode, und werden Ihnen helfen, die am besten geeignete Upgrademethode zu ermitteln: entweder ein paralleles oder direktes Upgrade oder die Neuinstallation der aktuellen Programmversion auf neuer Hardware. So kann es beispielsweise geschehen, dass Sie kein direktes oder paralleles Upgrade durchführen können, wenn Sie das Betriebssystem, SQL Server 2005 oder eine 32-Bit-Version von SQL Server upgraden. Eine Entscheidungsstruktur finden Sie unter [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
+ Lesen Sie vor dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Upgrade die folgende Prüfliste und die dazugehörigen Artikel. Diese Artikel gelten für alle Upgrades, unabhängig von der Upgrademethode, und unterstützen Sie dabei, die am besten geeignete Upgrademethode zu ermitteln: entweder ein paralleles oder direktes Upgrade oder die Neuinstallation der aktuellen Programmversion. So kann es beispielsweise geschehen, dass Sie kein direktes oder paralleles Upgrade durchführen können, wenn Sie das Betriebssystem, SQL Server 2005 oder eine 32-Bit-Version von SQL Server upgraden. Eine Entscheidungsstruktur finden Sie unter [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
 -   **Hardware- und Softwareanforderungen:** Lesen Sie das Thema zu den Hardware- und Softwareanforderungen für die Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Diese Anforderungen finden Sie unter [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Es gehört zu jedem Upgradeplanungszyklus, ein Upgrade des Betriebssystems und der Hardware in Betracht zu ziehen, da neuere Hardware schneller ist und den Lizenzbedarf aufgrund der geringeren Anzahl von Prozessoren oder aufgrund der Datenbank- und Serverkonsolidierung reduzieren kann. Diese Art von Hardware- und Softwareänderungen wirken sich darauf aus, welche Upgrademethode Sie wählen.  
   
@@ -52,7 +56,7 @@ ms.lasthandoff: 01/18/2018
    >[!NOTE]
    >Die vorherige Liste gilt auch für [!INCLUDE[sscurrent](../../includes/sscurrent-md.md)].
   
--   **Komponenten von Drittanbietern:** Ermitteln Sie die Kompatibilität von Drittanbieterkomponenten, z.B. dem integrierten Backup.  
+-   **Komponenten von Drittanbietern:** Ermitteln Sie die Kompatibilität von Drittanbieterkomponenten, z.B. für eine integrierte Sicherung.  
   
 -   **Zielumgebung:** Stellen Sie sicher, dass Ihre Zielumgebung die Hardware- und Softwareanforderungen erfüllt und die Anforderungen des ursprünglichen Systems unterstützen kann. Ihr Upgrade kann z.B. die Konsolidierung mehrerer SQL Server-Instanzen in eine einzelne, neue [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Instanz bedeuten oder die Virtualisierung Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Umgebung zu einer privaten oder öffentlichen Cloud.  
   
@@ -61,7 +65,7 @@ ms.lasthandoff: 01/18/2018
     > [!NOTE]  
     >  Wenn Sie [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] von einer früheren Version der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise-Edition aktualisieren, wählen Sie zwischen „Enterprise Edition: Core-basierte Lizenzierung“ und „Enterprise Edition“ aus. Diese Enterprise Editionen unterscheiden sich nur im Hinblick auf den Lizenzierungsmodus. Weitere Informationen finden Sie unter [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
--   **Abwärtskompatibilität:** Lesen Sie das Thema zur Abwärtskompatibilität des [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] -Datenbankmoduls, um sich über Änderungen im Verhalten zwischen [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version zu informieren, von der Sie upgraden. Siehe [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
+-   **Abwärtskompatibilität:** Lesen Sie den Artikel zur Abwärtskompatibilität der [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]-Datenbank-Engine, um sich über Änderungen im Verhalten zwischen [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version zu informieren, für die Sie das Upgrade durchführen. Siehe [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
   
 -   **Aktualisierungsratgeber:**  Führen Sie den Aktualisierungsratgeber für [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] aus, um Hilfestellung bei Problemen zu erhalten, die den Upgradeprozess blockieren oder auf Grund besonders wichtiger Änderungen Modifikationen an Skripten oder Anwendungen erfordern. [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] enthält eine neue Version des Aktualisierungsratgebers, um Kunden beim Vorbereiten des Upgrades eines vorhandenen Systems zu unterstützen.  Mit diesem Tool können Sie außerdem prüfen, ob Ihre vorhandenen Datenbanken nach dem Upgrade neue Funktionen wie Stretch-Tabellen nutzen können.   
     Sie können den [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]Aktualisierungsratgeber  [hier](https://www.microsoft.com/en-us/download/details.aspx?id=48119)herunterladen.  

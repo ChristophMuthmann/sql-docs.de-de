@@ -8,23 +8,24 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
-caps.latest.revision: "106"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8ca8131b077c7c6b0e38be07cb037a17d42d2d08
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3403b3680edb3aa984def52b514d599c50852127
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (Arbeitsspeicheroptimierung)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ Eine detailliertere Übersicht über In-Memory-OLTP und die Szenarien, in denen 
 |[Übersicht und Verwendungsszenarien](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)|Übersicht über die Aufgaben von In-Memory-OLTP und die Szenarien, die hinsichtlich Leistung davon profitieren.|
 |[Anforderungen für die Verwendung speicheroptimierter Tabellen](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)|Erläutert Hardware- und Softwareanforderungen und Richtlinien zum Verwenden von speicheroptimierten Tabellen.|  
 |[Codebeispiele für In-Memory OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)|Enthält Codebeispiele, die das Erstellen und Verwenden einer speicheroptimierten Tabelle veranschaulichen.|  
-|[Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Bietet eine Einführung in speicheroptimierte Tabellen.|  
+|[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Bietet eine Einführung in speicheroptimierte Tabellen.|  
 |[Speicheroptimierte Tabellenvariablen](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|Ein Codebeispiel, das veranschaulicht, wie eine speicheroptimierte Tabellenvariable anstelle einer herkömmlichen Tabellenvariable verwendet wird, um die Verwendung von tempdb zu reduzieren.|  
 |[Indizes für speicheroptimierte Tabellen](http://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|Bietet eine Einführung in speicheroptimierte Indizes.|  
 |[Nativ kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)|Führt systemintern kompilierte gespeicherte Prozeduren ein.|  
@@ -91,7 +92,7 @@ Eine detailliertere Übersicht über In-Memory-OLTP und die Szenarien, in denen 
   
 -   [In-Memory-OLTP-Blog](http://go.microsoft.com/fwlink/?LinkId=311696)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbankfunktionen](../../relational-databases/database-features.md)  
   
   

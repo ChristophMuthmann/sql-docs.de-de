@@ -8,7 +8,8 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,23 +17,25 @@ helpviewer_keywords:
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
-caps.latest.revision: "91"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 41a4945a1d3a709e9fa105e3ebed4c7e010ee957
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0425515d7ffe6f912de76d12c8c64d9fbd938366
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installieren von SQL Server über den Installations-Assistenten (Setup)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > In diesem Artikel wird erläutert, wie SQL Server mit dem Installations-Assistenten installiert wird. Dies gilt für [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] und [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]. Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Installieren von SQL Server 2014 über den Installations-Assistenten (Setup)](http://msdn.microsoft.com/library/ms143219(SQL.120).aspx).
 
-Dieses Thema stellt Ihnen schrittweise die Installation einer neuen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Verwendung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup-Installations-Assistenten vor. Der Installations-Assistent für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält eine einzelne Funktionsstruktur für die Installation sämtlicher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten, sodass Sie diese nicht einzeln installieren müssen. Weitere Informationen zur individuellen Installation der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten finden Sie unter [Installieren von SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+ 
+In diesem Artikel wird erläutert, wie SQL Server mit dem Installations-Assistenten installiert wird. Dies gilt für [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] und [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]. Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Installieren von SQL Server 2014 über den Installations-Assistenten (Setup)](http://msdn.microsoft.com/library/ms143219(SQL.120).aspx).
 
- Die folgenden Themen dokumentieren weitere Möglichkeiten zur Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+Dieser Artikel stellt Ihnen schrittweise die Installation einer neuen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Verwendung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup-Installations-Assistenten vor. Der Installations-Assistent für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält eine einzelne Funktionsstruktur für die Installation sämtlicher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten, sodass Sie diese nicht einzeln installieren müssen. Weitere Informationen zur individuellen Installation der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten finden Sie unter [Installieren von SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  
+
+ Die folgenden Artikel dokumentieren weitere Möglichkeiten zur Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
 
 -   [Installieren von SQL Server von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
@@ -49,7 +52,7 @@ Dieses Thema stellt Ihnen schrittweise die Installation einer neuen Instanz von 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
   
 ## <a name="prerequisites"></a>Voraussetzungen  
- Bevor Sie die Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]durchführen, sollten Sie die Themen in [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md)lesen.  
+ Bevor Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installieren, sollten Sie die Artikel in [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md) lesen.  
   
 > [!NOTE]  
 > Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie ein Domänenkonto verwenden, das Lese- und Ausführungsberechtigungen auf der Remotefreigabe hat.  
@@ -187,7 +190,7 @@ Microsoft hat ein Problem bei der speziellen Version von Microsoft VC++ 2013 Run
   
 20. Während der Installation wird auf der Seite Installationsstatus der Status angezeigt, sodass Sie während der Installation den Installationsstatus überwachen können.  
   
-21. Nach der Installation bietet die Seite Abgeschlossen einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf **Schließen** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um die Installation von abzuschließen.  
+21. Nach der Installation bietet die Seite Abgeschlossen einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf **Schließen** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um die Installation von abzuschließen.  
   
 22. Starten Sie den Computer neu, falls Sie dazu aufgefordert werden. Wenn Sie den Setupvorgang abgeschlossen haben, sollten Sie unbedingt die vom Installations-Assistenten angezeigte Meldung lesen. Weitere Informationen finden Sie unter [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   

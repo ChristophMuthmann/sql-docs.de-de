@@ -24,11 +24,11 @@ caps.latest.revision:
 author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d291e4ab071aeafd6db43f48749e4e9ff9bcfd25
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: dc562d47b04c20a3878bc0e1b8c63bf5d1151e09
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-indexed-views"></a>Erstellen von indizierten Sichten
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,73 +37,73 @@ In diesem Thema wird beschrieben, wie Sie Indizes für eine Sicht erstellen. Der
 ##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
  Die folgenden Schritte sind zum Erstellen einer indizierten Sicht erforderlich und wichtig für eine erfolgreiche Implementierung der indizierten Sicht:  
   
-1.  Stellen Sie sicher, dass die SET-Optionen für alle vorhandenen Tabellen korrekt sind, auf die in der Sicht verwiesen wird.   
-2.  Stellen Sie sicher, dass die SET-Optionen für die Sitzung richtig festgelegt sind, bevor Sie Tabellen und die Sicht erstellen.  
-3.  Stellen Sie sicher, dass die Sichtdefinition deterministisch ist.  
-4.  Erstellen Sie die Sicht mithilfe der Option `WITH SCHEMABINDING`.  
-5.  Erstellen Sie den eindeutigen gruppierten Index für die Sicht.  
+1.  Stellen Sie sicher, dass die SET-Optionen für alle vorhandenen Tabellen korrekt sind, auf die in der Sicht verwiesen wird.    
+2.  Stellen Sie sicher, dass die SET-Optionen für die Sitzung richtig festgelegt sind, bevor Sie Tabellen und die Sicht erstellen.   
+3.  Stellen Sie sicher, dass die Sichtdefinition deterministisch ist.   
+4.  Erstellen Sie die Sicht mithilfe der Option `WITH SCHEMABINDING`.   
+5.  Erstellen Sie den eindeutigen gruppierten Index für die Sicht.   
 
 > [!IMPORTANT]
-> Wenn Sie DML<sup>1</sup> für eine Tabelle ausführen, auf die durch eine große Anzahl von indizierten Sichten oder durch wenige, jedoch sehr komplexe indizierte Sichten verwiesen wird, müssen diese indizierten Sichten ebenfalls aktualisiert werden. Als Folge daraus kann die DML-Abfrageleistung erheblich beeinträchtigt werden. In einigen Fällen kann kein Abfrageplan erstellt werden.
-> Testen Sie Ihre DML-Abfragen in solchen Fällen, bevor Sie diese für die Produktion verwenden, analysieren Sie den Abfrageplan, und optimieren bzw. vereinfachen Sie die DML-Anweisung.
->
-> <sup>1</sup> Beispielsweise UPDATE-, DELETE- oder INSERT-Vorgänge
+> Wenn Sie DML<sup>1</sup> für eine Tabelle ausführen, auf die durch eine große Anzahl von indizierten Sichten oder durch wenige, jedoch sehr komplexe indizierte Sichten verwiesen wird, müssen diese indizierten Sichten ebenfalls aktualisiert werden. Als Folge daraus kann die DML-Abfrageleistung erheblich beeinträchtigt werden. In einigen Fällen kann kein Abfrageplan erstellt werden.   
+> Testen Sie Ihre DML-Abfragen in solchen Fällen, bevor Sie diese für die Produktion verwenden, analysieren Sie den Abfrageplan, und optimieren bzw. vereinfachen Sie die DML-Anweisung.   
+>   
+> <sup>1</sup> Beispielsweise UPDATE-, DELETE- oder INSERT-Vorgänge   
   
 ###  <a name="Restrictions"></a> Erforderliche SET-Optionen für indizierte Sichten  
- Das Auswerten desselben Ausdrucks kann im [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu unterschiedlichen Ergebnissen führen, wenn bei der Ausführung der Abfrage unterschiedliche SET-Optionen aktiviert sind. Wenn die SET-Option `CONCAT_NULL_YIELDS_NULL` auf ON festgelegt ist, gibt beispielsweise der Ausdruck **'**abc**'** + NULL den Wert NULL zurück. Wenn die Option `CONCAT_NULL_YIEDS_NULL` allerdings auf OFF festgelegt ist, ergibt derselbe Ausdruck **'**abc**'**.  
+Das Auswerten desselben Ausdrucks kann im [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu unterschiedlichen Ergebnissen führen, wenn bei der Ausführung der Abfrage unterschiedliche SET-Optionen aktiviert sind. Wenn die SET-Option `CONCAT_NULL_YIELDS_NULL` auf ON festgelegt ist, gibt beispielsweise der Ausdruck `'abc' + NULL` den Wert `NULL` zurück. Wenn die Option `CONCAT_NULL_YIEDS_NULL` allerdings auf OFF festgelegt ist, ergibt derselbe Ausdruck `'abc'`.  
   
- Um sicherzustellen, dass die Sichten ordnungsgemäß verwaltet werden können und konsistente Ergebnisse zurückgeben, sind für indizierte Sichten feste Werte für mehrere SET-Optionen erforderlich. Die SET-Optionen in der folgenden Tabelle müssen auf die in der Spalte **Erforderlicher Wert** angezeigten Werte festgelegt werden, wenn eine der folgenden Bedingungen zutrifft:  
+Um sicherzustellen, dass die Sichten ordnungsgemäß verwaltet werden können und konsistente Ergebnisse zurückgeben, sind für indizierte Sichten feste Werte für mehrere SET-Optionen erforderlich. Die SET-Optionen in der folgenden Tabelle müssen auf die in der Spalte **Erforderlicher Wert** angezeigten Werte festgelegt werden, wenn eine der folgenden Bedingungen zutrifft:  
   
--   Die Sicht und nachfolgende Indizes für die Sicht werden erstellt.  
+-   Die Sicht und nachfolgende Indizes für die Sicht werden erstellt.    
   
--   Die Basistabellen, auf die beim Erstellen der Tabelle in der Sicht verwiesen wird.  
+-   Die Basistabellen, auf die beim Erstellen der Tabelle in der Sicht verwiesen wird.    
   
--   Für eine Tabelle, die Teil der indizierten Sicht ist, wird ein Einfüge-, Update- oder Löschvorgang durchgeführt. Dazu gehören Vorgänge wie Massenkopieren, Replikation und verteilte Abfragen.  
+-   Für eine Tabelle, die Teil der indizierten Sicht ist, wird ein Einfüge-, Update- oder Löschvorgang durchgeführt. Dazu gehören Vorgänge wie Massenkopieren, Replikation und verteilte Abfragen.    
   
--   Die indizierte Sicht wird vom Abfrageoptimierer verwendet, um den Abfrageplan zu erstellen.  
+-   Die indizierte Sicht wird vom Abfrageoptimierer verwendet, um den Abfrageplan zu erstellen.   
   
-    |SET-Optionen|Erforderlicher Wert|Standardserverwert|Default<br /><br /> OLE DB- und ODBC-Wert|Default<br /><br /> DB-Library-Wert|  
-    |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ON|ON|ON|OFF|  
-    |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|  
-    |ARITHABORT|ON|ON|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
-    |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+|SET-Optionen|Erforderlicher Wert|Standardserverwert|Default<br /><br /> OLE DB- und ODBC-Wert|Default<br /><br /> DB-Library-Wert|  
+|-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
+|ANSI_NULLS|ON|ON|ON|OFF|  
+|ANSI_PADDING|ON|ON|ON|OFF|  
+|ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|  
+|ARITHABORT|ON|ON|OFF|OFF|  
+|CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
+|NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
+|QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
   
-     <sup>1</sup> Durch das Festlegen von `ANSI_WARNINGS` auf ON wird `ARITHABORT` implizit auf ON festgelegt.  
+<sup>1</sup> Durch das Festlegen von `ANSI_WARNINGS` auf ON wird `ARITHABORT` implizit auf ON festgelegt.  
   
- Wenn Sie eine OLE DB- oder ODBC-Serververbindung verwenden, müssen Sie nur den Wert der `ARITHABORT`-Einstellung ändern. Alle DB-Library-Werte müssen entweder auf Serverebene mithilfe von **sp_configure** oder über die Anwendung mithilfe des SET-Befehls ordnungsgemäß festgelegt werden.  
+Wenn Sie eine OLE DB- oder ODBC-Serververbindung verwenden, müssen Sie nur den Wert der `ARITHABORT`-Einstellung ändern. Alle DB-Library-Werte müssen entweder auf Serverebene mithilfe von **sp_configure** oder über die Anwendung mithilfe des SET-Befehls ordnungsgemäß festgelegt werden.  
   
 > [!IMPORTANT]  
 > Es wird dringend empfohlen, die Benutzeroption `ARITHABORT` serverweit auf ON festzulegen, sobald in einer Datenbank auf dem Server die erste indizierte Sicht oder der erste Index für eine berechnete Spalte erstellt wird.  
   
 ### <a name="deterministic-views"></a>Deterministische Sichten  
- Die Definition einer indizierten Sicht muss deterministisch sein. Eine Sicht ist deterministisch, wenn alle Ausdrücke in der Auswahlliste sowie die `WHERE`-Klausel und die `GROUP BY`-Klausel deterministisch sind. Deterministische Ausdrücke geben stets dasselbe Ergebnis zurück, wenn sie mit einer bestimmten Gruppe von Eingabewerten ausgewertet werden. Nur deterministische Funktionen können Teil von deterministischen Ausdrücken sein. Beispielsweise ist die `DATEADD`-Funktion deterministisch, weil sie für eine bestimmte Gruppe von Argumentwerten immer das gleiche Ergebnis für die drei Parameter zurückgibt. `GETDATE` ist nicht deterministisch, da diese Funktion immer mit dem gleichen Argument aufgerufen wird, der zurückgegebene Wert jedoch bei jeder Ausführung unterschiedlich ist.  
+Die Definition einer indizierten Sicht muss deterministisch sein. Eine Sicht ist deterministisch, wenn alle Ausdrücke in der Auswahlliste sowie die `WHERE`-Klausel und die `GROUP BY`-Klausel deterministisch sind. Deterministische Ausdrücke geben stets dasselbe Ergebnis zurück, wenn sie mit einer bestimmten Gruppe von Eingabewerten ausgewertet werden. Nur deterministische Funktionen können Teil von deterministischen Ausdrücken sein. Beispielsweise ist die `DATEADD`-Funktion deterministisch, weil sie für eine bestimmte Gruppe von Argumentwerten immer das gleiche Ergebnis für die drei Parameter zurückgibt. `GETDATE` ist nicht deterministisch, da diese Funktion immer mit dem gleichen Argument aufgerufen wird, der zurückgegebene Wert jedoch bei jeder Ausführung unterschiedlich ist.  
   
- Um zu bestimmen, ob eine Sichtspalte deterministisch ist, verwenden Sie die **IsDeterministic** -Eigenschaft der [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) -Funktion. Mithilfe der **IsPrecise** -Eigenschaft der COLUMNPROPERTY-Funktion können Sie bestimmen, ob eine deterministische Spalte in einer Sicht mit Schemabindung präzise ist. COLUMNPROPERTY gibt den Wert 1 für TRUE, den Wert 0 für FALSE und NULL für ungültige Eingaben zurück. Dies bedeutet, dass die Spalte nicht deterministisch oder nicht präzise ist.  
+Um zu bestimmen, ob eine Sichtspalte deterministisch ist, verwenden Sie die **IsDeterministic** -Eigenschaft der [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) -Funktion. Mithilfe der **IsPrecise**-Eigenschaft der `COLUMNPROPERTY`-Funktion können Sie bestimmen, ob eine deterministische Spalte in einer Sicht mit Schemabindung präzise ist. `COLUMNPROPERTY` gibt den Wert 1 für TRUE, den Wert 0 für FALSE und NULL für ungültige Eingaben zurück. Dies bedeutet, dass die Spalte nicht deterministisch oder nicht präzise ist.  
   
- Auch wenn ein Ausdruck deterministisch ist, kann das exakte Ergebnis von der Prozessorarchitektur oder der Version des Microcodes abhängen, wenn dieser Ausdruck float-Ausdrücke enthält. Um die Datenintegrität sicherzustellen, können solche Ausdrücke nur als Nichtschlüsselspalten von indizierten Sichten verwendet werden. Deterministische Ausdrücke, die keine float-Ausdrücke enthalten, werden als präzise bezeichnet. Nur präzise deterministische Ausdrücke können in indizierten Sichten Teile von Schlüsselspalten und von WHERE-Klauseln oder GROUP BY-Klauseln sein.  
+Auch wenn ein Ausdruck deterministisch ist, kann das exakte Ergebnis von der Prozessorarchitektur oder der Version des Microcodes abhängen, wenn dieser Ausdruck float-Ausdrücke enthält. Um die Datenintegrität sicherzustellen, können solche Ausdrücke nur als Nichtschlüsselspalten von indizierten Sichten verwendet werden. Deterministische Ausdrücke, die keine float-Ausdrücke enthalten, werden als präzise bezeichnet. Nur präzise deterministische Ausdrücke können in indizierten Sichten Teile von Schlüsselspalten und `WHERE`- oder `GROUP BY`-Klauseln sein.  
 
 ### <a name="additional-requirements"></a>Zusätzliche Anforderungen  
- Zusätzlich zu den Anforderungen bzgl. SET-Optionen und deterministischen Funktionen müssen die folgenden Anforderungen erfüllt werden:  
+Zusätzlich zu den Anforderungen bzgl. SET-Optionen und deterministischen Funktionen müssen die folgenden Anforderungen erfüllt werden:  
   
--   Der Benutzer, der die `CREATE INDEX`-Anweisung ausführt, muss der Besitzer der Sicht sein.  
+-   Der Benutzer, der die `CREATE INDEX`-Anweisung ausführt, muss der Besitzer der Sicht sein.    
   
--   Wenn Sie den Index erstellen, muss die Option `IGNORE_DUP_KEY` auf OFF (Standardeinstellung) festgelegt sein.  
+-   Wenn Sie den Index erstellen, muss die Option `IGNORE_DUP_KEY` auf OFF (Standardeinstellung) festgelegt sein.    
   
--   Auf Tabellen muss in der Sichtdefinition mit dem zweiteiligen Namen *Schema***.***Tabellenname* verwiesen werden.  
+-   Auf Tabellen muss in der Sichtdefinition mit dem zweiteiligen Namen *Schema***.***Tabellenname* verwiesen werden.    
   
--   Benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, müssen mit der Option `WITH SCHEMABINDING` erstellt werden.  
+-   Benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, müssen mit der Option `WITH SCHEMABINDING` erstellt werden.    
   
--   Auf benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, muss mit dem zweiteiligen Namen *Schema***.***Funktion* verwiesen werden.  
+-   Beim Verweis auf benutzerdefinierte Funktionen in der Sicht müssen zweiteilige Namen verwendet werden: *\<Schema>***.***\<Funktion>*.   
   
--   Die Datenzugriffseigenschaft einer benutzerdefinierten Funktion muss `NO SQL` lauten, und die Eigenschaft für den externen Zugriff muss `NO` lauten.  
+-   Die Datenzugriffseigenschaft einer benutzerdefinierten Funktion muss `NO SQL` lauten, und die Eigenschaft für den externen Zugriff muss `NO` lauten.   
   
--   CLR-Funktionen (Common Language Runtime) können in der SELECT-Liste der Sicht angezeigt werden, können aber nicht Teil der Definition des gruppierten Indexschlüssels sein. CLR-Funktionen können nicht in der WHERE-Klausel der Sicht oder in der ON-Klausel einer JOIN-Operation in der Sicht auftreten.  
+-   CLR-Funktionen (Common Language Runtime) können in der SELECT-Liste der Sicht angezeigt werden, können aber nicht Teil der Definition des gruppierten Indexschlüssels sein. CLR-Funktionen können nicht in der WHERE-Klausel der Sicht oder in der ON-Klausel einer JOIN-Operation in der Sicht auftreten.   
   
--   Für CLR-Funktionen und -Methoden der CLR-benutzerdefinierten Typen, die in der Sichtdefinition verwendet werden, müssen die in der folgenden Tabelle dargestellten Eigenschaften festgelegt werden.  
+-   Für CLR-Funktionen und -Methoden der CLR-benutzerdefinierten Typen, die in der Sichtdefinition verwendet werden, müssen die in der folgenden Tabelle dargestellten Eigenschaften festgelegt werden.   
   
     |Eigenschaft|Hinweis|  
     |--------------|----------|  
@@ -143,7 +143,7 @@ In diesem Thema wird beschrieben, wie Sie Indizes für eine Sicht erstellen. Der
 ###  <a name="Recommendations"></a> Empfehlungen  
  Wenn Sie in indizierten Sichten auf **datetime** - und **smalldatetime** -Zeichenfolgenliterale verweisen, wird empfohlen, das Literal mithilfe eines deterministischen Datenformats explizit in den gewünschten Datentyp zu konvertieren. Eine Liste der deterministischen Datenformatstile finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Weitere Informationen zu deterministischen und nicht deterministischen Ausdrücken finden Sie im Abschnitt [Weitere Überlegungen](#nondeterministic) auf dieser Seite.
 
-Wenn Sie DML (z.B. UPDATE, DELETE oder INSERT) für eine Tabelle ausführen, auf die durch eine große Anzahl von indizierten Sichten oder durch wenige, jedoch sehr komplexe indizierte Sichten verwiesen wird, müssen diese indizierten Sichten während der DML-Ausführung ebenfalls aktualisiert werden. Als Folge daraus kann die DML-Abfrageleistung erheblich beeinträchtigt werden. In einigen Fällen kann kein Abfrageplan erstellt werden. Testen Sie Ihre DML-Abfragen in solchen Fällen, bevor Sie diese für die Produktion verwenden, analysieren Sie den Abfrageplan, und optimieren bzw. vereinfachen Sie die DML-Anweisung.
+Wenn Sie DML (z.B. `UPDATE`, `DELETE` oder `INSERT`) für eine Tabelle ausführen, auf die durch eine große Anzahl von indizierten Sichten oder durch wenige, jedoch sehr komplexe indizierte Sichten verwiesen wird, müssen diese indizierten Sichten während der DML-Ausführung ebenfalls aktualisiert werden. Als Folge daraus kann die DML-Abfrageleistung erheblich beeinträchtigt werden. In einigen Fällen kann kein Abfrageplan erstellt werden. Testen Sie Ihre DML-Abfragen in solchen Fällen, bevor Sie diese für die Produktion verwenden, analysieren Sie den Abfrageplan, und optimieren bzw. vereinfachen Sie die DML-Anweisung.
   
 ###  <a name="Considerations"></a> Weitere Überlegungen  
  Die Einstellung der Option **large_value_types_out_of_row** der Spalten in einer indizierten Sicht wird von der Einstellung für die entsprechende Spalte in der Basistabelle vererbt. Dieser Wert wird mithilfe von [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)festgelegt. Die Standardeinstellung für Spalten, die auf Grundlage von Ausdrücken erstellt werden, ist 0. Das bedeutet, dass umfangreiche Werte innerhalb der Zeile gespeichert werden.  
@@ -161,7 +161,7 @@ Wenn Sie DML (z.B. UPDATE, DELETE oder INSERT) für eine Tabelle ausführen, auf
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
- Erfordert die CREATE VIEW-Berechtigung in der Datenbank und die ALTER-Berechtigung für das Schema, in dem die Sicht erstellt wird.  
+ Erfordert die **CREATE VIEW**-Berechtigung in der Datenbank und die **ALTER**-Berechtigung in dem Schema, in dem die Sicht erstellt wird.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
@@ -220,7 +220,7 @@ Wenn Sie DML (z.B. UPDATE, DELETE oder INSERT) für eine Tabelle ausführen, auf
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
+Weitere Informationen finden Sie unter [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   

@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e9fcfd0dfb1171371a8b1ead7543ec14d67035d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e853ee12af38d0a48a448f8d0798fd4b192c110
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lektion 2: Herstellen einer Verbindung von einem anderen Computer
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Zum Erhöhen der Sicherheit ist der Zugriff auf [!INCLUDE[ssDE](../includes/ssde-md.md)] der Developer-, Express- und Evaluation-Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] von einem anderen Computer aus nach der Erstinstallation nicht möglich. In dieser Lektion erfahren Sie, wie Sie die Protokolle aktivieren, die Ports konfigurieren und die Windows-Firewall für das Herstellen von Verbindungen von anderen Computern konfigurieren.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Zum Erhöhen der Sicherheit ist der Zugriff auf [!INCLUDE[ssDE](../includes/ssde-md.md)] der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer, Express und Evaluation Edition von einem anderen Computer aus nach der Erstinstallation nicht möglich. In dieser Lektion erfahren Sie, wie Sie die Protokolle aktivieren, die Ports konfigurieren und die Windows-Firewall für das Herstellen von Verbindungen von anderen Computern konfigurieren.  
   
 Diese Lektion enthält die folgenden Aufgaben:  
   
@@ -129,7 +132,7 @@ Wenn der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Browser-Dienst 
   
 2.  Bestätigen Sie im Dialogfeld **Verbindung mit Server herstellen** in der Liste **Servertyp** die Option **Datenbankmodul** .  
   
-3.  Geben Sie im Feld **Servername** für das Protokoll **tcp:** ein, gefolgt vom Namen des Computers, einem Komma und der Portnummer. Beim Herstellen einer Verbindung mit der Standardinstanz wird automatisch Port 1433 angenommen und muss nicht angegeben werden. Geben Sie daher **tcp:***<Computername>* ein. Geben Sie in unserem Beispiel für eine benannte Instanz **tcp:***<Computername>***,49172** ein.  
+3.  Geben Sie im Feld **Servername** für das Protokoll **tcp:** ein, gefolgt vom Namen des Computers, einem Komma und der Portnummer. Beim Herstellen einer Verbindung mit der Standardinstanz wird automatisch Port 1433 angenommen und muss nicht angegeben werden. Geben Sie daher Folgendes ein: **tcp:***<Computername>*. In unserem Beispiel für eine benannte Instanz geben Sie Folgendes ein: **tcp:***<Computername>***,49172**.  
   
     > [!NOTE]  
     > Wenn Sie **tcp:** nicht im Feld **Servername** eingeben, testet der Client alle aktivierten Protokolle in der Reihenfolge, die in der Clientkonfiguration festgelegt ist.  

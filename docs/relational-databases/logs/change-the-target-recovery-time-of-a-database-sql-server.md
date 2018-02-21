@@ -8,23 +8,25 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ef7a5103a327739266689d45b058043d17fc1c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 520fc09bb08f2110ae6cc53b6a61d1305735601c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Ändern der Zielwiederherstellungszeit einer Datenbank (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie die Zielwiederherstellungszeit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] geändert wird. Standardmäßig beträgt die Zielwiederherstellungszeit 60 Sekunden, und die Datenbank verwendet *indirekte Prüfpunkte*. Die Zielwiederherstellungszeit richtet eine Obergrenze der Wiederherstellungszeit für diese Datenbank ein.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+In diesem Thema wird beschrieben, wie die Zielwiederherstellungszeit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]geändert wird. Standardmäßig beträgt die Zielwiederherstellungszeit 60 Sekunden, und die Datenbank verwendet *indirekte Prüfpunkte*. Die Zielwiederherstellungszeit richtet eine Obergrenze der Wiederherstellungszeit für diese Datenbank ein.  
   
 > [!NOTE]  
 >  Die Obergrenze, die für eine bestimmte Datenbank durch die Wiederherstellungszeiteinstellung für das Ziel angegeben wird, könnte überschritten werden, wenn eine Transaktion mit langer Laufzeit übermäßig lange UNDO-Zeiten verursacht.  
@@ -33,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **So ändern Sie die Zielwiederherstellungszeit mit:**  [SQL Server Management Studio](#SSMSProcedure) oder [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen 
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So ändern Sie die Zielwiederherstellungszeit**  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und erweitern Sie diese Instanz.  
@@ -63,7 +65,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Verwenden Sie die folgende [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md)-Anweisung wie folgt:  
   
-     TARGET_RECOVERY_TIME **=***Zielwiederherstellungszeit* {SECONDS | MINUTES}  
+     TARGET_RECOVERY_TIME **=***Zielwiederherstellungszeit* { SECONDS | MINUTES }  
   
      *target_recovery_time*  
      Ab [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]ist der Standardwert gleich 1 Minute. Gibt bei einem Wert größer als 0 (der Standardwert für ältere Versionen) die Obergrenze der Wiederherstellungszeit für die angegebene Datenbank im Fall eines Absturzes an.  
@@ -80,7 +82,7 @@ ms.lasthandoff: 11/17/2017
     ALTER DATABASE AdventureWorks2012 SET TARGET_RECOVERY_TIME = 60 SECONDS;  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbankprüfpunkte &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
  [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   

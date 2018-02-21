@@ -8,24 +8,27 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: full-text indexes [SQL Server], about
+helpviewer_keywords:
+- full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 90bd63c6177591fbc3a92bf88f11f72eca4b2e58
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 25599964a3e210e59fcbb2a1eade782e2109502b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Erstellen und Verwalten von Volltextindizes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Dieses Thema beschreibt das Erstellen, Auffüllen und Verwalten von Volltextindizes in SQL Server.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Dieses Thema beschreibt das Erstellen, Auffüllen und Verwalten von Volltextindizes in SQL Server.
   
 ## <a name="prerequisite---create-a-full-text-catalog"></a>Voraussetzung: Erstellen eines Volltextkatalogs
 Bevor Sie einen Volltextindex erstellen können, müssen Sie einen Volltextkatalog erstellen. Der Katalog ist ein virtueller Container für ein oder mehrere Volltextindizes. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Volltextkatalogen](../../relational-databases/search/create-and-manage-full-text-catalogs.md).
@@ -131,7 +134,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
   
 ### <a name="find-the-identifier-of-the-full-text-key-column"></a>Suchen des Bezeichners der Volltextschlüsselspalte  
   
-Jede volltextfähige Tabelle beinhaltet eine Spalte, über die die Eindeutigkeit aller Tabellenzeilen erzwungen wird (die *eindeutige**Schlüsselspalte*). Die **TableFulltextKeyColumn** -Eigenschaft, die mit der OBJECTPROPERTYEX-Funktion ermittelt werden kann, enthält die Spalten-ID der eindeutigen Schlüsselspalte.  
+Jede volltextfähige Tabelle beinhaltet eine Spalte, mit der die Eindeutigkeit aller Tabellenzeilen erzwungen wird (die *UNIQUE**KEY-Spalte*). Die **TableFulltextKeyColumn** -Eigenschaft, die mit der OBJECTPROPERTYEX-Funktion ermittelt werden kann, enthält die Spalten-ID der eindeutigen Schlüsselspalte.  
  
 Um diesen Bezeichner abzurufen, können Sie mit einer SELECT-Anweisung die OBJECTPROPERTYEX-Funktion aufrufen. Verwenden Sie die OBJECT_ID-Funktion, um den Namen der Tabelle (*table_name*) in die Tabellen-ID umzuwandeln, und geben Sie die **TableFulltextKeyColumn** -Eigenschaft wie folgt an:  
   

@@ -1,6 +1,6 @@
 ---
 title: Herstellen einer Verbindung mit Datenquellen und Dateifreigaben mit der Windows-Authentifizierung | Microsoft-Dokumentation
-ms.date: 01/12/2018
+ms.date: 02/05/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,16 +8,17 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8dc3c1f39ca65e9616372fee7995dfa41cd89a1
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: 87f8b79fd8e950038658c13b502f5f26ac9a8f87
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Herstellen einer Verbindung mit lokalen Datenquellen und Azure-Dateifreigaben mit der Windows-Authentifizierung
 In diesem Artikel wird beschrieben, wie Sie den SSIS-Katalog auf Azure SQL-Datenbank so konfigurieren, dass er Pakete ausführt, die die Windows-Authentifizierung verwenden, um eine Verbindung mit lokalen Datenquellen und Azure-Dateifreigaben herzustellen. Sie können sowohl lokal als auch auf Azure-VMs und in Azure Files die Windows-Authentifizierung verwenden, um eine Verbindung mit Datenquellen in demselben Netzwerk herzustellen, in dem Azure SSIS Integration Runtime ausgeführt wird.
@@ -25,7 +26,11 @@ In diesem Artikel wird beschrieben, wie Sie den SSIS-Katalog auf Azure SQL-Daten
 > [!WARNING]
 > Wenn Sie für die Windows-Authentifizierung keine gültigen Anmeldeinformationen für die Domäne angeben, indem Sie wie in diesem Artikel beschrieben `catalog`.`set_execution_credential` ausführen, können Pakte, die von der Windows-Authentifizierung abhängig sind, keine Verbindung mit Datenquellen herstellen und lösen zur Laufzeit Fehler aus.
 
-Die Anmeldeinformationen für die Domäne, die Sie beim Ausführen der in diesem Artikel dargestellten Schritte angeben, gelten solange für alle (interaktiven oder geplanten) Paketausführungen auf der SQL-Datenbank-Instanz, bis Sie die Anmeldeinformationen ändern oder entfernen.
+## <a name="you-can-only-use-one-set-of-credentials"></a>Sie können nur einen Satz Anmeldeinformationen verwenden
+
+Zurzeit können Sie in einem Paket nur einen Satz Anmeldeinformationen verwenden. Die Anmeldeinformationen für die Domäne, die Sie beim Ausführen der in diesem Artikel dargestellten Schritte angeben, gelten solange für alle (interaktiven oder geplanten) Paketausführungen auf der SQL-Datenbank-Instanz, bis Sie die Anmeldeinformationen ändern oder entfernen. Wenn Ihr Paket eine Verbindung mit mehreren Datenquellen mit verschiedenen Sätzen von Anmeldeinformationen herstellen muss, müssen Sie das Paket möglicherweise in mehrere Pakete unterteilen.
+
+Wenn Azure Files eine Ihrer Datenquelle ist, können Sie diese Einschränkung umgehen, indem Sie die Azure-Dateifreigabe zur Laufzeit des Pakets mit `net use` oder dem entsprechenden Befehl in einem Prozessausführungstask einbinden. Weitere Informationen finden Sie unter [Einbinden einer Azure-Dateifreigabe und Zugreifen auf die Freigabe unter Windows](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows).
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Angeben von Domänenanmeldeinformationen für die Windows-Authentifizierung
 Führen Sie die folgenden Schritte, um Anmeldeinformationen für die Domäne anzugeben, die es erlaubt, dass Pakete die Windows-Authentifizierung verwenden, um eine Verbindung mit lokalen Datenquellen herzustellen:

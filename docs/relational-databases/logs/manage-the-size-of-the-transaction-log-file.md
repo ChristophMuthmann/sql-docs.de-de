@@ -20,16 +20,17 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 58cbe590d16bba9d74f41dc7499b563a2e0b2499
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e9b13884c2c086265fa0a76dda9f98f4caba2abb
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Verwalten der Größe der Transaktionsprotokolldatei
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieses Thema enthält Informationen zum Überwachen der Größe eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Transaktionsprotokolls, Verkleinern des Transaktionsprotokolls, Hinzufügen zu oder Vergrößern einer Transaktionsprotokolldatei, Optimieren der Wachstumsrate des **tempdb**-Transaktionsprotokolls und Steuern des Wachstums einer Transaktionsprotokolldatei.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Dieses Thema enthält Informationen zum Überwachen der Größe eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Transaktionsprotokolls, Verkleinern des Transaktionsprotokolls, Hinzufügen zu oder Vergrößern einer Transaktionsprotokolldatei, Optimieren der Wachstumsrate des **tempdb**-Transaktionsprotokolls und Steuern der Vergrößerung einer Transaktionsprotokolldatei.  
 
 ##  <a name="MonitorSpaceUse"></a>Überwachen der Belegung des Protokollspeicherplatzes  
 Überwachen Sie mithilfe von [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) die Belegung des Protokollspeicherplatzes. Diese DMV gibt Informationen zum derzeit belegten Protokollspeicherplatz zurück und zeigt an, wann das Transaktionsprotokoll abgeschnitten werden muss. 
@@ -102,9 +103,9 @@ Es folgen einige allgemeine Empfehlungen für die Arbeit mit Transaktionsprotoko
   
       |Versionsoptionen|Standardwerte|  
       |-------------|--------------------|  
-      |Seit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Daten: 64 MB, Protokolldateien: 64 MB|  
-      |Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Daten: 1 MB, Protokolldateien: 10 %|  
-      |Vor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Daten: 10 %, Protokolldateien: 10 %|  
+      |Ab Version [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Daten: 64 MB, Protokolldateien: 64 MB|  
+      |Ab Version [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Daten: 1 MB, Protokolldateien: 10 %|  
+      |In Versionen vor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Daten: 10 %, Protokolldateien: 10 %|  
 
 -   Ein kleines Vergrößerungsinkrement könnte dazu führen, dass zu viele kleine [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) generiert werden und die Leistung beeinträchtigt wird. Informationen darüber, wie Sie die optimale VLF-Verteilung für die aktuelle Größe des Transaktionsprotokolls aller Datenbanken in einer bestimmten Instanz sowie die benötigten Wachstumsinkremente zum Erreichen der erforderlichen Größe ermitteln, finden Sie in [diesem Skript](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
 

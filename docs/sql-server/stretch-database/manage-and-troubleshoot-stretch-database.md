@@ -8,7 +8,8 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,21 +18,22 @@ helpviewer_keywords:
 - managing Stretch Database
 - troubleshooting Stretch Database
 ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4469fafe82f4b33b78c07fbbe440b05cd63c642
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 55c3cefee2008ed430e1af1fecc5162a3c165473
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Verwalten und Problembehandlung von Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Verwenden Sie die in diesem Thema beschriebenen Tools und Methoden, um Stretch Database zu verwalten und Probleme zu behandeln.  
+
+  Verwenden Sie die in diesem Artikel beschriebenen Tools und Methoden, um Stretch Database zu verwalten und Probleme zu behandeln.  
 ## <a name="manage-local-data"></a>Verwalten von lokalen Daten  
   
 ###  <a name="LocalInfo">
@@ -137,7 +139,7 @@ GO
    
  -   **STAGE_ONLY**. Aktualisieren oder löschen Sie nur die Daten in der Tabelle, für die Stretch Database für die Migration geeignete Zeilen bereitstellt und migrierte Zeilen für den angegebenen Zeitraum nach der Migration beibehält.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachung und Problembehandlung bei der Datenmigration &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)   
 [Sichern von Stretch-aktivierten Datenbanken (Stretch Database)](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
 [Wiederherstellen von Stretch-aktivierten Datenbanken (Stretch Database)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  

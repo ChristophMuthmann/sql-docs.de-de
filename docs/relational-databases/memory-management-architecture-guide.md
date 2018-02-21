@@ -8,23 +8,24 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e764d14059dbb4015c213fc9f35e75f529d4b10
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 06721e22794de1ed9e7661d8606759e2035f710f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="memory-management-architecture-guide"></a>Handbuch zur Architektur der Speicherverwaltung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +39,7 @@ Mit virtuellen Speichersystemen kann mehr physischer Arbeitsspeicher zugesichert
 
 ## <a name="includessnoversionincludesssnoversion-mdmd-memory-architecture"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Arbeitsspeicherarchitektur
 
-In[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird Arbeitsspeicher nach Bedarf dynamisch reserviert und freigegeben. Die Angabe des Arbeitsspeicherumfangs durch den Administrator, der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]zugeordnet werden soll, ist in der Regel nicht erforderlich, obwohl die Möglichkeit weiterhin besteht und in einigen Umgebungen erforderlich ist.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserviert Arbeitsspeicher dynamisch nach Bedarf und gibt ihn wieder frei. Die Angabe des Arbeitsspeicherumfangs durch den Administrator, der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]zugeordnet werden soll, ist in der Regel nicht erforderlich, obwohl die Möglichkeit weiterhin besteht und in einigen Umgebungen erforderlich ist.
 
 Eines der vorrangigen Ziele beim Entwurf jeder Datenbanksoftware ist die Minimierung der Datenträger-E/A, da Lese- und Schreibvorgänge auf dem Datenträger zu den ressourcenintensivsten Vorgängen zählen. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erstellt einen Pufferpool im Arbeitsspeicher, um Seiten aufzunehmen, die aus der Datenbank gelesen werden. Ein großer Teil des Codes in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dient dazu, die Anzahl von physischen Lese- und Schreibvorgängen zwischen dem Datenträger und dem Pufferpool zu minimieren. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versucht, ein Gleichgewicht zwischen den beiden folgenden Zielen herzustellen:
 
@@ -90,7 +91,7 @@ Seit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] sind alle Einzelseitenbelegu
 
 In der folgenden Tabelle ist aufgeführt, ob ein bestimmter Typ von Speicherbelegung durch die Konfigurationsoptionen *Max. Serverarbeitsspeicher (MB)* und *Min. Serverarbeitsspeicher (MB)* gesteuert wird:
 
-|Typ der Speicherbelegung| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Seit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
+|Typ der Speicherbelegung| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
 |Einzelseitenbelegungen|ja|Ja, in Seitenbelegungen beliebiger Größe konsolidiert|
 |Mehrseitenbelegungen|nein|Ja, in Seitenbelegungen beliebiger Größe konsolidiert|
@@ -118,7 +119,7 @@ Da seit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Speicherbelegungen oberha
 
 Der folgenden Tabelle können Sie entnehmen, ob ein bestimmter Typ Speicherbelegung in den Bereich *memory_to_reserve* des virtuellen Adressbereichs für den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Prozess fällt:
 
-|Typ der Speicherbelegung| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Seit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
+|Typ der Speicherbelegung| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
 |Einzelseitenbelegungen|nein|Nein, in Seitenbelegungen beliebiger Größe konsolidiert|
 |Mehrseitenbelegungen|ja|Nein, in Seitenbelegungen beliebiger Größe konsolidiert|
@@ -166,7 +167,7 @@ FROM sys.dm_os_process_memory;
 
 <sup>2</sup> CLR-Arbeitsspeicher wird seit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] unter max_server_memory-Belegungen verwaltet.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Mithilfe der für Speicherbenachrichtigungen verfügbaren API **QueryMemoryResourceNotification** ermittelt SQL Server, wann der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Speicher-Manager Speicher zuordnen oder freigeben kann.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet die Speicherbenachrichtigungs-API **QueryMemoryResourceNotification**, um zu ermitteln, wann der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Speicher-Manager Speicher zuordnen oder freigeben kann.  
 
 Beim Starten berechnet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Größe des virtuellen Adressraumes für den Pufferpool auf Grundlage verschiedener Parameter, z. B. der Größe des physischen Arbeitsspeichers des Systems, der Anzahl der Serverthreads und verschiedener Startparameter. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserviert die berechnete Größe des virtuellen Adressraumes für den Pufferpool, verwendet jedoch nur die für die aktuelle Last erforderliche Größe an physischem Arbeitsspeicher.
 
@@ -260,7 +261,7 @@ Isolierte lange E/A-Anforderungen, die nicht mit einer der vorherigen Bedingunge
 ### <a name="error-detection"></a>Fehlererkennung  
 Von Datenbankseiten kann einer von zwei möglichen optionalen Mechanismen verwendet werden, mit dem die Integrität der Seite ab dem Zeitpunkt sichergestellt werden kann, an dem die Datei auf den Datenträger geschrieben wird, bis zu dem Zeitpunkt, wenn sie erneut gelesen wird: Schutz vor zerrissenen Seiten und Prüfsummenschutz. Anhand dieser Mechanismen kann die richtige Funktionsweise des Datenspeichers, der Hardwarekomponenten (Controller, Treiber, Kabel) und des Betriebssystems unabhängig geprüft werden. Der Schutz wird der Seite hinzugefügt, bevor sie auf den Datenträger geschrieben wird, und überprüft, wenn die Seite vom Datenträger gelesen wird.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wiederholt Lesevorgänge, die wegen eines Prüfsummenfehlers, einer zerrissenen Seite oder eines anderen E/A-Fehlers fehlschlagen, vier Mal. Ist der Lesevorgang bei einem dieser Wiederholungsversuche erfolgreich, wird eine Meldung in das Fehlerprotokoll geschrieben, und der Befehl, der den Lesevorgang ausgelöst hat, wird fortgesetzt. Schlagen alle Wiederholungsversuche fehl, schlägt der Befehl mit Fehlermeldung 824 fehl. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wiederholt Lesevorgänge, die wegen eines Prüfsummenfehlers, einer zerrissenen Seite oder eines anderen E/A-Fehlers nicht ausgeführt werden können, 4-mal. Ist der Lesevorgang bei einem dieser Wiederholungsversuche erfolgreich, wird eine Meldung in das Fehlerprotokoll geschrieben, und der Befehl, der den Lesevorgang ausgelöst hat, wird fortgesetzt. Schlagen alle Wiederholungsversuche fehl, schlägt der Befehl mit Fehlermeldung 824 fehl. 
 
 Die Art des verwendeten Seitenschutzes stellt ein Attribut der Datenbank dar, in der die Seite enthalten ist. Der Prüfsummenschutz stellt den Standardschutz für Datenbanken dar, die in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] und höheren Versionen erstellt wurden. Der Seitenschutzmechanismus wird beim Erstellen der Datenbank angegeben; er kann mithilfe von ALTER DATABASE SET modifiziert werden. Sie können den aktuellen Seitenschutz bestimmen, indem Sie eine Abfrage an die Spalte *page_verify_option* in der Katalogsicht [sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md) oder die *IsTornPageDetectionEnabled*-Eigenschaft der [DATABASEPROPERTYEX](../t-sql/functions/databasepropertyex-transact-sql.md)-Funktion senden. 
 
@@ -279,7 +280,7 @@ Der Prüfsummenschutz, der in [!INCLUDE[ssVersion2005](../includes/ssversion2005
 
 ## <a name="understanding-non-uniform-memory-access"></a>Grundlegendes zu NUMA (Non-Uniform Memory Access)
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  ist NUMA-fähig (Non-Uniform Memory Access) und liefert hervorragende Leistungen auf NUMA-Hardware, ohne dass eine besondere Konfiguration notwendig wäre. Mit immer schnelleren Prozessoren und einer wachsenden Anzahl von Prozessoren wird es zunehmend schwieriger, die Speicherlatenzzeit zu verringern, die für die Verwendung dieser zusätzlichen Verarbeitungsleistung erforderlich ist. Für die Umgehung dieser Schwierigkeit stellen Hardwarehersteller große L3-Caches bereit; dies ist jedoch nur eine eingeschränkte Lösung. Die NUMA-Architektur bietet eine skalierbare Lösung für dieses Problem. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann die Vorteile NUMA-basierter Computer nutzen, ohne dass Anwendungsänderungen erforderlich sind. Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren von SQL Server für die Verwendung von Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ist NUMA-fähig (Non-Uniform Memory Access) und liefert hervorragende Leistungen auf NUMA-Hardware, ohne dass eine besondere Konfiguration notwendig wäre. Mit immer schnelleren Prozessoren und einer wachsenden Anzahl von Prozessoren wird es zunehmend schwieriger, die Speicherlatenzzeit zu verringern, die für die Verwendung dieser zusätzlichen Verarbeitungsleistung erforderlich ist. Für die Umgehung dieser Schwierigkeit stellen Hardwarehersteller große L3-Caches bereit; dies ist jedoch nur eine eingeschränkte Lösung. Die NUMA-Architektur bietet eine skalierbare Lösung für dieses Problem. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann die Vorteile NUMA-basierter Computer nutzen, ohne dass Anwendungsänderungen erforderlich sind. Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren von SQL Server für die Verwendung von Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter
 [Serverkonfigurationsoptionen für den Serverarbeitsspeicher](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

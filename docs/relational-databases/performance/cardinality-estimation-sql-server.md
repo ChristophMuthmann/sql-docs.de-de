@@ -8,7 +8,8 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a9b42e4a50685e79ebb88ceee62336eb30e1ae96
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c87819c3d2802e6ded39885e540b0a3fd050aae8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cardinality-estimation-sql-server"></a>Kardinalitätsschätzung (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -236,8 +237,8 @@ Angenommen, die Statistiken für OrderTable wurden zuletzt am 30.4.2016 erfasst 
   
 ```sql  
 SELECT CustomerId, OrderAddedDate  
-    FROM OrderTable  
-    WHERE OrderAddedDate >= '2016-05-01';  
+FROM OrderTable  
+WHERE OrderAddedDate >= '2016-05-01';  
 ```  
   
 ### <a name="example-b-ce-understands-that-filtered-predicates-on-the-same-table-are-often-correlated"></a>Beispiel B. Die Kardinalitätsschätzung berücksichtigt, dass gefilterte Prädikate in der gleichen Tabelle häufig korrelieren.  
@@ -248,30 +249,27 @@ Bei der Kardinalitätsschätzung mit Kompatibilitätsgrad 120 wird berücksichti
   
 ```sql  
 SELECT Model, Purchase_Price  
-    FROM dbo.Hardware  
-    WHERE  
-        Model  = 'Xbox'  AND  
-        ModelVariant = 'One';  
+FROM dbo.Hardware  
+WHERE Model  = 'Xbox'  AND  
+      ModelVariant = 'One';  
 ```  
   
-### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tablescc"></a>Beispiel C. Die Kardinalitätsschätzung geht nicht mehr von einer Korrelation zwischen gefilterten Prädikaten aus verschiedenen Tabellen aus. 
+### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tables"></a>Beispiel C. Die Kardinalitätsschätzung geht nicht mehr von einer Korrelation zwischen gefilterten Prädikaten aus verschiedenen Tabellen aus 
 Umfangreiche neue Untersuchungen moderner Arbeitslasten und tatsächlicher Geschäftsdaten haben ergeben, dass Prädikatfilter aus unterschiedlichen Tabellen üblicherweise nicht korrelieren. In der folgenden Abfrage nimmt die Kardinalitätsschätzung an, dass zwischen „s.type“ und „r.date“ kein Zusammenhang besteht. Daher wird die Anzahl der zurückgegebenen Zeilen niedriger eingeschätzt.  
   
 ```sql  
 SELECT s.ticket, s.customer, r.store  
-    FROM  
-                   dbo.Sales    AS s  
-        CROSS JOIN dbo.Returns  AS r  
-    WHERE  
-        s.ticket = r.ticket  AND  
-        s.type   = 'toy'     AND  
-        r.date   = '2016-05-11';  
+FROM dbo.Sales    AS s  
+CROSS JOIN dbo.Returns  AS r  
+WHERE s.ticket = r.ticket  AND  
+      s.type   = 'toy'     AND  
+      r.date   = '2016-05-11';  
 ```  
   
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
-  [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator (Optimieren Ihrer Abfragepläne mit der SQL Server 2014-Kardinalitätsschätzung)](http://msdn.microsoft.com/library/dn673537.aspx)  
- [Abfragehinweise](../../t-sql/queries/hints-transact-sql-query.md)  
- [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
- [Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md)
+ [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
+ [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator (Optimieren Ihrer Abfragepläne mit der SQL Server 2014-Kardinalitätsschätzung)](http://msdn.microsoft.com/library/dn673537.aspx)  
+ [Abfragehinweise](../../t-sql/queries/hints-transact-sql-query.md)    
+ [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
+ [Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md)   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,21 +18,22 @@ helpviewer_keywords:
 - Stretch Database, inline table-valued functions
 - inline table-valued functions for Stretch Database
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a898c757120d29a8c64de5623cec02c35c5b5ac1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: efb55816db5f692231b66ca53780ab26318da90c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Wenn Sie kalte Daten in einer separaten Tabelle speichern, können Sie Stretch-Datenbank zum Migrieren der gesamten Tabelle konfigurieren. Wenn Ihre Tabelle sowohl heiße als auch kalte Daten enthält, können Sie ein Filterprädikat zum Auswählen der zu migrierenden Zeilen angeben. Das Filterprädikat ist eine Inline-Tabellenwertfunktion. In diesem Thema wird beschrieben, wie Sie eine Inline-Tabellenwertfunktion schreiben, um die zu migrierenden Zeilen auszuwählen.  
+
+  Wenn Sie kalte Daten in einer separaten Tabelle speichern, können Sie Stretch-Datenbank zum Migrieren der gesamten Tabelle konfigurieren. Wenn Ihre Tabelle sowohl heiße als auch kalte Daten enthält, können Sie ein Filterprädikat zum Auswählen der zu migrierenden Zeilen angeben. Das Filterprädikat ist eine Inline-Tabellenwertfunktion. Dieser Artikel beschreibt, wie Sie eine Inline-Tabellenwertfunktion schreiben, um die zu migrierenden Zeilen auszuwählen.  
   
 > [!IMPORTANT]
 > Wenn Sie eine schwache Filterfunktion angeben, wird die Datenmigration ebenfalls unzureichend ausgeführt. Stretch-Datenbank wendet die Filterfunktion mithilfe des CROSS APPLY-Operators auf die Tabelle an.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Führen Sie die ALTER TABLE-Anweisung aus, um eine Filterfunktion anzugeben, nachdem Sie den Assistenten beendet haben.  
   
- Die ALTER TABLE-Syntax zum Hinzufügen einer Funktion wird weiter unten in diesem Thema beschrieben.  
+ Die ALTER TABLE-Syntax zum Hinzufügen einer Funktion wird weiter unten in diesem Artikel beschrieben.  
   
 ## <a name="basic-requirements-for-the-filter-function"></a>Grundlegende Anforderungen für die Filterfunktion  
  Die Inline-Tabellenwertfunktion, die für ein Filterprädikat einer Stretch-Datenbank erforderlich ist, sieht wie im folgenden Beispiel aus.  
@@ -159,7 +161,7 @@ RETURN  SELECT 1 AS is_eligible
  Sie können keine Unterabfragen oder nicht deterministische Funktionen wie RAND() oder GETDATE() verwenden.  
   
 ## <a name="add-a-filter-function-to-a-table"></a>Hinzufügen einer Filterfunktion zu einer Tabelle  
- Fügen Sie einer Tabelle eine Filterfunktion hinzu, indem Sie die **ALTER TABLE** -Anweisung ausführen und eine vorhandene Inline-Tabellenwertfunktion als Wert des Parameters **FILTER_PREDICATE** angeben. Beispiel:  
+ Fügen Sie einer Tabelle eine Filterfunktion hinzu, indem Sie die **ALTER TABLE** -Anweisung ausführen und eine vorhandene Inline-Tabellenwertfunktion als Wert des Parameters **FILTER_PREDICATE** angeben. Zum Beispiel:  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -491,7 +493,7 @@ COMMIT ;
     ```  
   
 ## <a name="how-stretch-database-applies-the-filter-function"></a>So wendet Stretch-Datenbank die Filterfunktion an  
- Stretch-Datenbank wendet die Filterfunktion mithilfe des CROSS APPLY-Operators auf die Tabelle an und bestimmt geeignete Zeilen. Beispiel:  
+ Stretch-Datenbank wendet die Filterfunktion mithilfe des CROSS APPLY-Operators auf die Tabelle an und bestimmt geeignete Zeilen. Zum Beispiel:  
   
 ```sql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  
@@ -500,7 +502,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
  Wenn die Funktion ein nicht leeres Ergebnis für die Zeile zurückgibt, ist die Zeile für die Migration geeignet.  
   
 ## <a name="replacePredicate"></a>Ersetzen einer vorhandenen Filterfunktion  
- Sie können eine zuvor angegebene Filterfunktion ersetzen, indem Sie die **ALTER TABLE** -Anweisung erneut ausführen und einen neuen Wert für den Parameter **FILTER_PREDICATE** angeben. Beispiel:  
+ Sie können eine zuvor angegebene Filterfunktion ersetzen, indem Sie die **ALTER TABLE** -Anweisung erneut ausführen und einen neuen Wert für den Parameter **FILTER_PREDICATE** angeben. Zum Beispiel:  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -595,7 +597,7 @@ GO
 ```  
   
 ## <a name="remove-a-filter-function-from-a-table"></a>Entfernen einer Filterfunktion von einer Tabelle  
- Entfernen Sie die vorhandene Funktion, indem Sie **FILTER_PREDICATE**  auf NULL festlegen, um anstelle ausgewählter Zeilen die gesamte Tabelle zu migrieren. Beispiel:  
+ Entfernen Sie die vorhandene Funktion, indem Sie **FILTER_PREDICATE**  auf NULL festlegen, um anstelle ausgewählter Zeilen die gesamte Tabelle zu migrieren. Zum Beispiel:  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -617,7 +619,7 @@ Ein kompromittiertes Konto mit db_owner-Berechtigungen kann folgende Aktionen au
   
 -   Erstellen und Anwenden einer Tabellenwertfunktion, die es ermöglicht, den Inhalt einer Tabelle abzuleiten, für die dem Benutzer explizit der Lesezugriff verweigert wurde.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   

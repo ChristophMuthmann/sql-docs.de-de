@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f21ea2afcf50beb80ec3cdfdc39c0d1f79d5adbe
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a7e5ed2cc2df42469baf3b28e36e6c1444d892a9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Listener, Clientkonnektivität, Anwendungsfailover
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieses Thema enthält Informationen zu Überlegungen hinsichtlich [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Clientkonnektivität und Anwendungsfailoverfunktionalität.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Dieses Thema enthält Informationen zu Überlegungen hinsichtlich [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Clientkonnektivität und Anwendungsfailoverfunktionalität.  
   
 > [!NOTE]  
 >  Für den Großteil der allgemeinen Listenerkonfigurationen können Sie einfach den ersten Verfügbarkeitsgruppenlistener mit [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisungen oder PowerShell-Cmdlets erstellen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Verwandte Aufgaben](#RelatedTasks).  
@@ -121,7 +123,9 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  *Schreibgeschütztes Routing* bezieht sich auf die Möglichkeit von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , eingehende Verbindungen für einen Verfügbarkeitsgruppenlistener an ein sekundäres Replikat weiterzuleiten, das für schreibgeschützte Arbeitslasten konfiguriert ist. Eine eingehende Verbindung, die auf den Namen eines Verfügbarkeitsgruppenlisteners verweist, kann automatisch an ein schreibgeschütztes Replikat weitergeleitet werden, wenn Folgendes zutrifft:  
   
 -   Mindestens ein sekundäres Replikat wird auf schreibgeschützten Zugriff festgelegt, und jedes schreibgeschützte sekundäre Replikat sowie das primäre Replikat werden konfiguriert, um schreibgeschütztes Routing zu unterstützen. Weitere Informationen finden Sie weiter unten in diesem Abschnitt unter [So konfigurieren Sie Verfügbarkeitsreplikate für das schreibgeschützte Routing](#ConfigureARsForROR).  
-  
+
+-   Die Verbindungszeichenfolge verweist auf eine Datenbank innerhalb der Verfügbarkeitsgruppe. Eine Alternative dazu ist es, für den Anmeldenamen, der für die Verbindung verwendet wird, die Datenbank als Standarddatenbank zu konfigurieren. Weitere Informationen dazu finden Sie in [diesem Blogbeitrag zur Funktionsweise des Algorithmus mit dem schreibgeschützten Routing](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/) (in englischer Sprache).
+
 -   Die Verbindungszeichenfolge verweist auf einen Verfügbarkeitsgruppenlistener, und die Anwendungsabsicht der eingehenden Verbindung wird auf schreibgeschützt festgelegt, z. B. mithilfe des Schlüsselworts **Application Intent=ReadOnly** in den ODBC- oder OLEBD-Verbindungszeichenfolgen, -Verbindungsattributen oder -Eigenschaften. Weitere Informationen finden Sie weiter unten in diesem Abschnitt unter [Schreibgeschützte Anwendungsabsicht und schreibgeschütztes Routing](#ReadOnlyAppIntent).  
   
 ###  <a name="ConfigureARsForROR"></a> So konfigurieren Sie Verfügbarkeitsreplikate für das schreibgeschützte Routing  
@@ -152,7 +156,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- In diesem Beispiel für eine Verbindungszeichenfolge versucht der Client, eine Verbindung mit dem Verfügbarkeitsgruppenlistener `AGListener` an Port 1433 herzustellen. Sie können den Port auch weglassen, wenn der Verfügbarkeitsgruppenlistener Port 1433 überwacht.  In der Verbindungszeichenfolge wurde die Eigenschaft **ApplicationIntent** auf **ReadOnly**festgelegt, was diese zu einer *Verbindungszeichenfolge für beabsichtige Lesevorgänge*macht.  Ohne diese Einstellung hätte der Server kein schreibgeschütztes Routing der Verbindung versucht.  
+ In diesem Beispiel für eine Verbindungszeichenfolge versucht der Client, über den Verfügbarkeitsgruppenlistener `AGListener` an Port 1433 eine Verbindung mit der AdventureWorks-Datenbank herzustellen (Sie können den Port auch weglassen, wenn der Verfügbarkeitsgruppenlistener an Port 1433 lauscht).  In der Verbindungszeichenfolge wurde die Eigenschaft **ApplicationIntent** auf **ReadOnly**festgelegt, was diese zu einer *Verbindungszeichenfolge für beabsichtige Lesevorgänge*macht.  Ohne diese Einstellung hätte der Server kein schreibgeschütztes Routing der Verbindung versucht.  
   
  Die primäre Datenbank der Verfügbarkeitsgruppe verarbeitet die eingehende Anforderung für schreibgeschütztes Routing und versucht, ein schreibgeschütztes Online-Replikat zu suchen, das mit dem primären Replikat verknüpft und für schreibgeschütztes Routing konfiguriert ist.  Der Client empfängt Verbindungsinformationen vom primären Replikatserver und stellt eine Verbindung mit dem ermittelten schreibgeschützten Replikat her.  
   

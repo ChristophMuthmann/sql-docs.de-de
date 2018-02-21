@@ -22,18 +22,21 @@ helpviewer_keywords:
 - installing Analysis Services, upgrading
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: 4286f2266d115d39ad97ff3f6255187e7a01d968
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: eb0bcf7a72e59e58bdd4f980c5be175c2a0affdd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-analysis-services"></a>Aktualisieren von Analysis Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Analysis Services-Instanzen können auf eine SQL Server-Version mit demselben Servermodus aktualisiert werden, um von den Funktionen zu profitieren, die in der aktuellen Version eingeführt wurden. Informationen zu diesen Funktionen finden Sie unter [What's New in Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md) (Neuigkeiten in Analysis Services).  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  Analysis Services-Instanzen können auf eine SQL Server-Version mit demselben Servermodus aktualisiert werden, um von den Funktionen zu profitieren, die in der aktuellen Version eingeführt wurden. Informationen zu diesen Funktionen finden Sie unter [What's New in Analysis Services (Neuigkeiten in Analysis Services)](../../analysis-services/what-s-new-in-analysis-services.md).  
   
  Sie können jede Instanz unabhängig von anderen Instanzen, die auf derselben Hardware ausgeführt werden, direkt aktualisieren. Die meisten Administratoren entscheiden sich für die Installation einer neuen Instanz der neuen Version zum Testen der Anwendung, ehe Produktionsarbeitsauslastungen auf den neuen Server übertragen werden. Doch für Entwicklungs- oder Testserver kann ein direktes Upgrade möglicherweise empfehlenswert sein.  
   
@@ -76,7 +79,7 @@ ms.lasthandoff: 01/08/2018
   
  Tabellarische und mehrdimensionale Datenbanken haben unterschiedliche Versionspfade. Es ist Zufall, dass mehrdimensionale und tabellarische Modelle über ähnlich nummerierte Kompatibilitätsgrade verfügen.  Die Modi werden sich mit unterschiedlichem Tempo entwickeln, sobald Änderungen an Features sich nur auf ein Modell auswirken.  
   
- Die folgende Tabelle enthält Hintergrundinformationen zu den Kompatibilitätsgraden, doch Sie sollten die Detailthemen lesen, um zu erfahren, was die einzelnen Grade zu bieten haben.  
+ Die folgende Tabelle enthält Hintergrundinformationen zu den Kompatibilitätsgraden, doch Sie sollten die Artikel mit detaillierten Informationen lesen, um zu erfahren, was die einzelnen Grade zu bieten haben.  
   
 ||||  
 |-|-|-|  

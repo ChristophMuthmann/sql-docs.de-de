@@ -8,20 +8,21 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 65aaaf68cd32204b7447807ebce247ba3e977459
-ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.openlocfilehash: 74b0f562bc50496df5fdbf88edac546e503d8718
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore-Indizes - Neuigkeiten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +61,7 @@ ms.lasthandoff: 01/03/2018
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] fügt diese neuen Funktionen hinzu.
 
 ### <a name="functional"></a>Funktionell
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] unterstützt nichtpersistierte berechnete Spalten in gruppierten Columnstore-Indexen. Persistent berechnete Spalten werden in gruppierten Indexen nicht unterstützt. Sie können einen nicht gruppierten Index auf einem Columnstore-Index erstellen, der über berechnete Spalten verfügt. 
+- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] unterstützt nicht persistierte berechnete Spalten in gruppierten Columnstore-Indizes. Persistent berechnete Spalten werden in gruppierten Indexen nicht unterstützt. Sie können einen nicht gruppierten Index auf einem Columnstore-Index erstellen, der über berechnete Spalten verfügt. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fügt wichtige Verbesserungen hinzu, um die Leistung und Flexibilität von Columnstore-Indizes zu erhöhen. Dies verbessert die Data Warehouse-Szenarios und ermöglicht operative Echtzeitanalysen.  
@@ -125,7 +126,7 @@ In-Memory-OLTP-basierte DMVs enthalten Updates für den Columnstore:
 -   Für In-Memory-Tabellen können Abfragen für Columnstore-Indizes nur im InterOP-Modus und nicht im einheitlichen In-Memory-Modus ausgeführt werden. Parallele Ausführung wird unterstützt.  
   
 ## [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] wurde der gruppierten Columnstore-Index als primäres Speicherformat eingeführt. Dieser ermöglichte reguläre Ladevorgänge sowie Aktualisierungs-, Lösch- und Einfügevorgänge.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] führte den gruppierten Columnstore-Index als primäres Speicherformat ein. Dieser ermöglichte reguläre Ladevorgänge sowie Aktualisierungs-, Lösch- und Einfügevorgänge.  
   
 -   Die Tabelle kann einen gruppierten Columnstore-Index als primären Tabellenspeicher verwenden. Für die Tabelle sind keine anderen Indizes zulässig, aber der gruppierte Columnstore-Index ist aktualisierbar, sodass Sie reguläre Ladevorgänge ausführen und Änderungen an einzelnen Zeilen vornehmen können.  
 -   Der nicht gruppierte Columnstore-Index weist weiterhin die gleiche Funktionalität wie in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] auf, ermöglicht nun jedoch die Ausführung zusätzlicher Operatoren im Batchmodus. Er ist weiterhin nur durch erneutes Erstellen und mithilfe eines Partitionswechsels aktualisierbar. Der nicht gruppierte Columnstore-Index wird nur in datenträgerbasierten Tabellen und nicht in In-Memory-Tabellen unterstützt.  
@@ -134,7 +135,7 @@ In-Memory-OLTP-basierte DMVs enthalten Updates für den Columnstore:
 -   Diese Operatoren werden für Multithread-Abfragen im Batchmodus ausgeführt: SCAN, FILTER, PROJECT, JOIN, GROUP BY und UNION ALL.  
   
 ## [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
- In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurden der nicht gruppierte Columnstore-Index als weiterer Indextyp für Rowstore-Tabellen sowie die Batchverarbeitung für Abfragen für Columnstore-Daten eingeführt.  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] führte den nicht gruppierten Columnstore-Index als weiteren Indextyp für Rowstore-Tabellen und die Batchverarbeitung für Abfragen für Columnstore-Daten ein.  
   
 -   Eine Rowstore-Tabelle kann über einen nicht gruppierten Columnstore-Index verfügen.  
 -   Der Columnstore-Index ist schreibgeschützt. Nachdem Sie den Columnstore-Index erstellt haben, können Sie die Tabelle nicht mehr mit `INSERT`-, `DELETE`- und `UPDATE`-Vorgängen aktualisieren. Um diese Vorgänge auszuführen, müssen Sie den Index löschen,die Tabelle aktualisieren und den Columnstore-Index neu erstellen. Sie können zusätzliche Daten mithilfe von Partitionswechseln in die Tabelle laden. Der Vorteil der Partitionswechsel besteht darin, dass Sie Daten laden können, ohne den Columnstore-Index löschen und neu erstellen zu müssen.  

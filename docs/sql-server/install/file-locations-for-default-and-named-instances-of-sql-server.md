@@ -8,22 +8,25 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 4209e4270df9c7af22e79fb3b8700db4be992524
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b5ce1eacf023848410bf41261072adf1cd56ee43
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>Dateispeicherorte für Standard- und benannte Instanzen von SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Eine Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] besteht aus einer oder mehreren separaten Instanzen. Eine Instanz (Standard- als auch benannte Instanz) besitzt eine Reihe eigener Programm- und Datendateien sowie mehrere freigegebene Dateien, die für alle Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Computer freigegeben werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  Eine Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] besteht aus einer oder mehreren separaten Instanzen. Eine Instanz (Standard- als auch benannte Instanz) besitzt eine Reihe eigener Programm- und Datendateien sowie mehrere freigegebene Dateien, die für alle Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Computer freigegeben werden.  
   
  Für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]umfasst, verfügt jede Komponente über einen vollständigen Satz an Daten- und ausführbaren Dateien sowie die für alle Komponenten freigegebenen Dateien.  
   
@@ -41,11 +44,11 @@ ms.lasthandoff: 12/05/2017
 ## <a name="shared-files-for-all-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Freigegebene Dateien für alle Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Dateien, die häufig von allen Instanzen auf einem Computer verwendet werden, werden im Ordner [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)] installiert. \<*Laufwerk*> ist der Laufwerkbuchstabe, auf dem die Komponenten installiert sind. Dies ist in der Regel Laufwerk „C:“. \<*nnn*> gibt die Version an. In der folgenden Tabelle werden die Versionen für die Pfade angezeigt. 
 
-|\<*nnn*>|Version
+|\<*nnn*>|Versionsoptionen
 |-----|-----
 |140|[!INCLUDE[ssqlv14](../../includes/sssqlv14-md.md)]
 |130|[!INCLUDE[ssqlv13](../../includes/sssql15-md.md)]
-|120|SQL Server 2014
+|120|SQLServer 2014
 |110|[!INCLUDE[sssql11](../../includes/sssql11-md.md)] 
   
 ## <a name="file-locations-and-registry-mapping"></a>Dateispeicherorte und Registrierungszuordnung  
@@ -83,7 +86,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] und Clientkomponenten sind nicht instanzabhängig und bekommen daher keine Instanz-ID zugewiesen. Standardmäßig werden nicht instanzabhängige Komponenten in einem einzelnen Verzeichnis installiert: [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]. Wenn der Installationspfad einer freigegebenen Komponente geändert wird, wirkt sich diese Änderung auch auf die anderen freigegebenen Komponenten aus. Bei allen zukünftigen Installationen werden die nicht instanzbezogenen Komponenten wieder im gleichen Verzeichnis installiert wie bei der ursprünglichen Installation.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ist die einzige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponente, die nach der Installation Instanzumbenennung unterstützt. Wenn eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] umbenannt wird, ändert sich die Instanz-ID nicht. Nach abgeschlossener Instanzumbenennung wird die während der Installation erstellte Instanz-ID von Verzeichnissen und Registrierungsschlüsseln weiterhin verwendet.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ist die einzige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponente, die nach der Installation Instanzumbenennung unterstützt. Wenn eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] umbenannt wird, ändert sich die Instanz-ID nicht. Nach abgeschlossener Instanzumbenennung wird die während der Installation erstellte Instanz-ID von Verzeichnissen und Registrierungsschlüsseln weiterhin verwendet.  
   
  Die Registrierungsstruktur wird für instanzabhängige Komponenten unter HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*Instanz_ID* erstellt. Beispiel:  
   
@@ -118,7 +121,7 @@ ms.lasthandoff: 12/05/2017
 |Clientkomponenten (außer bcp.exe und sqlcmd.exe)|\<Installationsverzeichnis>\140\Tools\\ <sup>1</sup> |Konfigurierbar |  
 |Clientkomponenten (bcp.exe und sqlcmd.exe)|\<Installationsverzeichnis>\Client SDK\ODBC\110\Tools\Binn|Fester Pfad|  
 |Replikations- und serverbasierte COM-Objekte|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\\ <sup>2</sup> |Fester Pfad|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Von Integration Services bereitgestellte DLLs für das Data Transformation Runtime-Modul, das Data Transformation Pipeline-Modul und das **dtexec** -Eingabeaufforderungshilfsprogramm|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|Fester Pfad|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Von Integration Services bereitgestellte DLLs für das Data Transformation Runtime-Modul, das Data Transformation Pipeline-Modul und das **dtexec**-Eingabeaufforderungshilfsprogramm|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|Fester Pfad|  
 |DLLs, die die Verbindungsunterstützung für Integration Services verwalten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Verbindungen|Fester Pfad|  
 |DLLs für alle Arten von Enumeratoren, die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt werden|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\ForEach-Enumeratoren|Fester Pfad|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser-Dienst, WMI-Anbieter|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Shared\ |Fester Pfad|  
@@ -145,7 +148,7 @@ Beachten Sie, dass das Standardlaufwerk für Dateispeicherorte *systemdrive*laut
 > [!NOTE]  
 >  Datendateien werden erwartungsgemäß immer in einem untergeordneten Verzeichnis mit dem Namen Data gesucht. Geben Sie beispielsweise beim Upgrade „C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MSSQL14.\<Instanzname>\“ als Stammpfad zum Datenverzeichnis der Systemdatenbanken an, wenn sich die Datendateien unter „C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MSSQL14.\<Instanzname>\MSSQL\Data“ befinden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Konfiguration des Datenbankmodells - Datenverzeichnisse](http://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)   
  [Konfigurationseigenschaften von Analysis Services – Datenverzeichnisse](http://msdn.microsoft.com/library/ef732855-b7af-4f40-a619-5573c1c354bb)  
   

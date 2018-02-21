@@ -14,22 +14,23 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 932ac3a8337af5871910c9aabd7a906508b1455d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a3ad97ccd909c55268cf2be050d913fdc931433a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Wiederherstellen der von der Suche verwendeten Wörtertrennungen auf die vorherige Version
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installiert und aktiviert eine Version der Wörtertrennung und Wortstammerkennung für alle von der Volltextsuche unterstützten Sprachen, mit Ausnahme von Koreanisch. In diesem Thema wird beschrieben, wie von der neuen Version dieser Komponenten zur früheren Version gewechselt bzw. von der früheren Version zu der neuen Version zurückgewechselt wird.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installiert und aktiviert eine Version der Wörtertrennung und Wortstammerkennung für alle von der Volltextsuche unterstützten Sprachen, mit Ausnahme von Koreanisch. Dieser Artikel beschreibt, wie Sie von der neuen Version dieser Komponenten zur früheren Version wechseln und von der früheren Version zur neuen Version zurückwechseln.  
   
- In diesem Thema werden die folgenden Sprachen nicht erläutert:  
+ Die folgenden Sprachen werden in diesem Artikel nicht berücksichtigt:  
   
--   **Englisch**. Informationen zum Wiederherstellen der englischen Komponenten finden Sie unter [Ändern der für Englisch (USA) und Englisch (Vereinigtes Königreich) verwendeten Wörtertrennung](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+-   **Englisch**. Informationen zum Wiederherstellen der englischen Komponenten finden Sie unter [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 -   **Dänisch, Polnisch und Türkisch**. Die Wörtertrennungen von Drittanbietern für Dänisch, Polnisch und Türkisch, die in vorherigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthalten waren, wurden durch [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Komponenten ersetzt.  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  Allgemeine Informationen zur Wörtertrennung und Wortstammerkennung finden Sie unter [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
 ##  <a name="overview"></a> Übersicht über das Wiederherstellen von Wörtertrennungen und Wortstammerkennungen  
- Die Anweisungen zum Wiederherstellen von Wörtertrennungen und Wortstammerkennungen hängen von der Sprache ab. In der folgenden Tabelle werden die 3 Sätze von Aktionen zusammengefasst, die möglicherweise erforderlich sind, um die frühere Version der Komponenten wiederherzustellen.  
+ Die Anweisungen zum Wiederherstellen von Wörtertrennungen und Wortstammerkennungen hängen von der Sprache ab. In der folgenden Tabelle werden die drei Sätze von Aktionen zusammengefasst, die möglicherweise erforderlich sind, um zur früheren Version der Komponenten zurückzuwechseln.  
   
 |Aktuelle Datei|Vorherige Datei|Anzahl betroffener Sprachen|Aktion für Dateien|Aktion für Registrierungseinträge|  
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 > [!WARNING]  
 >  Wenn Sie die aktuelle Version der Datei NaturalLanguage6.dll mit einer anderen Version ersetzen, dann ist das Verhalten aller Sprachen, die diese Datei verwenden, davon betroffen.  
   
- Bei den in diesem Thema beschriebenen Dateien handelt es sich um DLL-Dateien, die im `MSSQL\Binn` -Ordner für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz installiert sind. Der vollständige Pfad ist in der Regel der folgende Pfad:  
+ Bei den in diesem Artikel beschriebenen Dateien handelt es sich um DLL-Dateien, die im `MSSQL\Binn`-Ordner für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sind. Der vollständige Pfad ist in der Regel der folgende Pfad:  
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
@@ -219,8 +220,8 @@ ms.lasthandoff: 11/17/2017
 |---------------|------------------|-------------|  
 |Vorherige CLSID|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |Vorheriger Dateiname|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|Aktuelle CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|Keine|  
-|Aktueller Dateiname|MSWB7.dll|Keine|  
+|Aktuelle CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|InclusionThresholdSetting|  
+|Aktueller Dateiname|MSWB7.dll|InclusionThresholdSetting|  
   
  **Deutsch (deu), LCID 1031**  
   
@@ -229,7 +230,7 @@ ms.lasthandoff: 11/17/2017
 |Vorherige CLSID|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |Vorheriger Dateiname|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |Aktuelle CLSID|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|Aktueller Dateiname|MSWB7.dll|MSWB7.dll|  
+|Aktueller Dateiname|MsWb7.dll|MSWB7.dll|  
   
  **Japanisch (jpn), LCID 1041**  
   
@@ -237,8 +238,8 @@ ms.lasthandoff: 11/17/2017
 |---------------|------------------|-------------|  
 |Vorherige CLSID|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |Vorheriger Dateiname|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|Aktuelle CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|Keine|  
-|Aktueller Dateiname|MsWb70011.dll|Keine|  
+|Aktuelle CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|InclusionThresholdSetting|  
+|Aktueller Dateiname|MsWb70011.dll|InclusionThresholdSetting|  
   
  **Niederländisch (nld), LCID 1043**  
   
@@ -247,7 +248,7 @@ ms.lasthandoff: 11/17/2017
 |Vorherige CLSID|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |Vorheriger Dateiname|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |Aktuelle CLSID|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|Aktueller Dateiname|MSWB7.dll|MSWB7.dll|  
+|Aktueller Dateiname|MsWb7.dll|MSWB7.dll|  
   
  **Russisch (rus), LCID 1049**  
   
@@ -256,7 +257,7 @@ ms.lasthandoff: 11/17/2017
 |Vorherige CLSID|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |Vorheriger Dateiname|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |Aktuelle CLSID|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|Aktueller Dateiname|MSWB7.dll|MSWB7.dll|  
+|Aktueller Dateiname|MsWb7.dll|MSWB7.dll|  
   
 ##  <a name="newnew"></a> Sprachen, für die weder der vorherige noch der aktuelle Dateiname NaturalLanguage6.dll ist  
  Für die Sprachen in der folgenden Tabelle unterscheiden sich die Dateinamen der vorherigen Wörtertrennungen und Wortstammerkennungen von den Dateinamen der neuen Versionen. Weder der vorherige noch der aktuelle Dateiname ist NaturalLanguage6.dll. Sie müssen keine Dateien ersetzen, da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Setup sowohl die aktuellen als auch die früheren Versionen der Komponenten in den Ordner "Binn" kopiert. Sie müssen jedoch einen Satz von Registrierungseinträgen ändern, um die vorherige oder aktuelle Version der Komponenten anzugeben.  
@@ -353,8 +354,8 @@ ms.lasthandoff: 11/17/2017
 |---------------|------------------|-------------|  
 |Vorherige CLSID|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |Vorheriger Dateiname|Thawbrkr.dll|Thawbrkr.dll|  
-|Aktuelle CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|Keine|  
-|Aktueller Dateiname|MsWb7001e.dll|Keine|  
+|Aktuelle CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|InclusionThresholdSetting|  
+|Aktueller Dateiname|MsWb7001e.dll|InclusionThresholdSetting|  
   
  **Chinesisch traditionell (zh-hk), LCID 3076**  
   
@@ -383,8 +384,8 @@ ms.lasthandoff: 11/17/2017
 |Aktuelle CLSID|E0831C90-BAB0-4ca5-B9BD-EA254B538DAC|  
 |Aktueller Dateiname|MsWb70804.dll|  
   
-## <a name="see-also"></a>Siehe auch  
- [Ändern der für Englisch (USA) und Englisch (Vereinigtes Königreich) verwendeten Wörtertrennung](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [Verhaltensänderungen der Volltextsuche](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   

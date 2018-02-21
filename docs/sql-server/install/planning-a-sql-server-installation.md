@@ -8,23 +8,27 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords: installing SQL Server, planning
+helpviewer_keywords:
+- installing SQL Server, planning
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 5f45fe1c93f33f8f4666791c9014c1ca3f4a5aec
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6fa512799bf19e284b25b7f847d71d3f6e5aab7a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="planning-a-sql-server-installation"></a>Planen einer SQL Server-Installation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu installieren, führen Sie folgende Schritte aus:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  Um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu installieren, führen Sie folgende Schritte aus:  
   
 -   Überprüfen Sie die Installationsanforderungen, Systemkonfigurationsprüfungen und Sicherheitsaspekte für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation.  
   
@@ -41,25 +45,25 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Neuigkeiten in der SQL Server-Installation](../../sql-server/install/what-s-new-in-sql-server-installation.md)  
- In diesem Thema werden die Details zu den neuen oder verbesserten Installationsfunktionen in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beschrieben.  
+ Dieser Artikel beschreibt die Details zu den neuen oder verbesserten Installationsfunktionen in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
- In diesem Thema sind die Mindestanforderungen an die Hardware und Software aufgeführt, um eine Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]zu installieren und auszuführen.  
+ In diesem Artikel sind die Mindestanforderungen an die Hardware und Software aufgeführt, die zum Installieren und Ausführen einer Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erforderlich sind.  
   
  [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
- In diesem Thema werden einige bewährte Sicherheitsmethoden beschrieben, die Sie vor dem Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und nach dem Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]berücksichtigen sollten.  
+ Dieser Artikel beschreibt einige bewährte Sicherheitsmethoden, die Sie vor dem Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und nach dem Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berücksichtigen sollten.  
   
  [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
- In diesem Thema werden die Standardkonfiguration von Diensten in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]und die Konfigurationsoptionen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste beschrieben, die Sie während und nach der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation festlegen können.  
+ Dieser Artikel beschreibt die Standardkonfiguration von Diensten in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die Konfigurationsoptionen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste, die Sie während und nach der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation festlegen können.  
   
  [Netzwerkprotokolle und Netzwerkbibliotheken](../../sql-server/install/network-protocols-and-network-libraries.md)  
- In diesem Thema werden die Standardkonfiguration von Netzwerkprotokollen in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]und die verfügbaren Konfigurationsoptionen beschrieben.  
+ Dieser Artikel beschreibt die Standardkonfiguration von Netzwerkprotokollen in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die verfügbaren Konfigurationsoptionen.  
   
  [Verwenden mehrerer Versionen und Instanzen von SQL Server](../../sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
- In diesem Thema werden die Überlegungen zum Installieren mehrerer Versionen und Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beschrieben.  
+ Dieser Artikel beschreibt die Überlegungen zum Installieren mehrerer Versionen und Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Lokale Sprachversionen in SQL Server](../../sql-server/install/local-language-versions-in-sql-server.md)  
- In diesem Thema werden die lokalisierten Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erläutert.  
+ Dieser Artikel beschreibt die lokalisierten Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Installieren von SQL Server](../../database-engine/install-windows/install-sql-server.md)  
@@ -77,7 +81,7 @@ ms.lasthandoff: 12/05/2017
  [SQL Server-Failoverclusterinstallation](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
  In diesem Abschnitt der Dokumentation zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup wird die Installation und Konfiguration von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclustern beschrieben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Installieren von SQL Server von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Lösungen mit hoher Verfügbarkeit &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
  [Vor dem Installieren des Failoverclusterings](../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
