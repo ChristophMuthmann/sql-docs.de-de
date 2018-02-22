@@ -55,4 +55,8 @@
 ## [Löschen einer Planhinweisliste](delete-a-plan-guide.md)  
 ## [Aktivieren oder Deaktivieren einer Planhinweisliste](enable-or-disable-a-plan-guide.md)  
 
-#[Überwachen der Ressourcenverwendung (Systemmonitor)](../performance-monitor/monitor-resource-usage-system-monitor.md) 
+# [Überwachen der Ressourcenverwendung (Systemmonitor)](../performance-monitor/monitor-resource-usage-system-monitor.md)    
+
+# [Joins](joins.md)   
+
+# [Unterabfragen](subqueries.md)    

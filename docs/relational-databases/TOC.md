@@ -12,7 +12,7 @@
 ## [Query Processing Architecture (Architektur der Abfrageverarbeitung)](query-processing-architecture-guide.md)
 ## [Thread and Task Architecture (Thread- und Taskarchitektur)](thread-and-task-architecture-guide.md)
 ## [Transaction Log Architecture and Management (Architektur und Verwaltung von Transaktionsprotokollen)](sql-server-transaction-log-architecture-and-management-guide.md)
-## Handbuch zu Transaktionssperren und Zeilenversionsverwaltung
+## [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung](sql-server-transaction-locking-and-row-versioning-guide.md)
 
 # [Sichern und Wiederherstellen](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
 # [Blob](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
@@ -55,6 +55,7 @@
 ## [Datenbank-Lebenszyklusverwaltung](database-lifecycle-management.md)  
 ## [Verwalten mehrerer Server mithilfe von zentralen Verwaltungsservern](administer-multiple-servers-using-central-management-servers.md)  
 
+# [Joins](../relational-databases/performance/joins.md)
 # [Partitionen](../relational-databases/partitions/partitioned-tables-and-indexes.md)
 # [Leistung](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 # [Richtlinienbasierte Verwaltung](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)
@@ -63,7 +64,7 @@
 # [Ressourcenkontrolle](../relational-databases/resource-governor/resource-governor.md)
 # [Skripterstellung](../relational-databases/scripting/database-engine-scripting.md)
 # [Search](../relational-databases/search/full-text-search.md)
-# [Sicherheit](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)
+# [Security](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)
 # [Sequenznummern](../relational-databases/sequence-numbers/sequence-numbers.md)
 # [Service Broker](../relational-databases/service-broker/event-notifications.md)
 # [Showplan-Operatoren](showplan-logical-and-physical-operators-reference.md)  
@@ -71,6 +72,7 @@
 # [SQL-Ablaufverfolgung](../relational-databases/sql-trace/sql-trace.md)
 # [Statistik](../relational-databases/statistics/statistics.md)
 # [Gespeicherte Prozeduren](../relational-databases/stored-procedures/stored-procedures-database-engine.md)
+# [Unterabfragen](../relational-databases/performance/subqueries.md)
 # [Synonyme](../relational-databases/synonyms/synonyms-database-engine.md)
 # [Systemkatalogsichten](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 # [Systemkompatibilitätssichten](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)
