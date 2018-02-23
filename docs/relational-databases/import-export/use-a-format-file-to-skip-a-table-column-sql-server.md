@@ -1,7 +1,7 @@
 ---
 title: "Überspringen einer Tabellenspalte mithilfe einer Formatdatei (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 08/05/2016
+ms.date: 02/13/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -21,21 +21,24 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 78bc0fc216193e2187833584c80582c731e0ce10
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 8908c590ff97f09259635a407d1e37fc22956f20
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Überspringen einer Tabellenspalte mithilfe einer Formatdatei (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-In diesem Thema werden Formatdateien beschrieben. Mit einer Formatdatei können Sie das Importieren einer Tabellenspalte überspringen, wenn das zugehörige Feld in der Datendatei nicht vorhanden ist. Eine Datendatei kann nur dann weniger Felder enthalten, als Spalten in der Tabelle vorliegen, wenn die ausgelassenen Spalten NULL-Werte unterstützen und/oder einen Standardwert aufweisen.  
+
+In diesem Artikel wird beschrieben, wie eine Formatdatei zum Überspringen des Imports einer Tabellenspalte verwendet wird, wenn das Feld in der Quelldatendatei nicht vorhanden ist. Eine Datendatei kann weniger Felder enthalten als Spalten in der Zieltabelle vorhanden sind. Das bedeutet, dass Sie das Importieren einer Spalte überspringen können, aber nur wenn eine der folgenden zwei Bedingungen erfüllt ist.
+-   Für die übersprungene Spalte ist NULL zulässig.
+-   Die übersprungene Spalte besitzt einen Standardwert.  
   
 ## <a name="sample-table-and-data-file"></a>Beispieltabelle und Datendatei  
- Für die folgenden Beispiele muss in der `myTestSkipCol` -Beispieldatenbank unter dem [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] dbo **-Schema eine Tabelle mit der Bezeichnung** erstellt werden. Erstellen Sie diese Tabelle folgendermaßen  
+ Die Beispiele in diesem Artikel erwarten eine Tabelle mit der Bezeichnung `myTestSkipCol` unter dem **dbo**-Schema. Sie können diese Tabelle in einer Beispieldatenbank wie *WideWorldImporters* oder *AdventureWorks* oder einer anderen beliebigen Datenbank erstellen. Erstellen Sie diese Tabelle folgendermaßen  
   
 ```sql
-USE AdventureWorks2012;  
+USE WideWorldImporters;  
 GO  
 CREATE TABLE myTestSkipCol   
    (  
@@ -46,74 +49,89 @@ CREATE TABLE myTestSkipCol
 GO  
 ```  
   
- In den folgenden Beispielen wird die Beispieldatendatei `myTestSkipCol2.dat`verwendet, in der nur zwei Felder enthalten sind, obwohl die zugehörige Tabelle drei Spalten enthält:  
-  
+In den Beispielen in diesem Artikel wird auch eine Beispieldatendatei verwendet: `myTestSkipCol2.dat`. Diese Datendatei enthält nur zwei Felder, obwohl die Zieltabelle drei Spalten enthält.
+
 ```  
 1,DataForColumn3  
 1,DataForColumn3  
 1,DataForColumn3  
 ```  
   
- Damit ein Massenimport von Daten aus `myTestSkipCol2.dat` in die `myTestSkipCol` -Tabelle ausgeführt werden kann, muss `Col1`das erste Datenfeld von der Formatdatei zugeordnet werden, `Col3`muss das zweite Feld zugeordnet werden. `Col2`wird ausgelassen.  
+Damit ein Massenimport von Daten aus `myTestSkipCol2.dat` in die `myTestSkipCol`-Tabelle ausgeführt werden kann, muss die Formatdatei `Col1` das erste Datenfeld zuordnen und das zweite Feld `Col3` und `Col2` überspringen.  
   
-## <a name="using-a-non-xml-format-file"></a>Verwenden einer Nicht-XML-Formatdatei  
- Sie können eine Nicht-XML-Formatdatei ändern, um eine Tabellenspalte auszulassen. Im Allgemeinen ist das **bcp** -Hilfsprogramm erforderlich, um eine standardmäßige Nicht-XML-Formatdatei zu erstellen und die Standarddatei in einem Text-Editor zu ändern. Die vorhandenen Datenfelder müssen von der geänderten Formatdatei den entsprechenden Tabellenspalten zugeordnet werden, und es muss angegeben werden, welche Tabellenspalten ausgelassen werden. Für die Bearbeitung einer standardmäßigen Nicht-XML-Datendatei stehen zwei Alternativen zur Verfügung. Beide Alternativen zeigen, dass das Datenfeld in der Datendatei nicht vorhanden ist und dass keine Daten in die entsprechende Tabellenspalte eingefügt werden.  
+## <a name="option-1---use-a-non-xml-format-file"></a>Option 1: Verwenden einer Nicht-XML-Formatdatei  
+Sie können eine Nicht-XML-Formatdatei verwenden, um eine Tabellenspalte auszulassen. Dafür sind zwei Schritte nötig:
+
+1.   Verwenden Sie das **bcp**-Befehlszeilenhilfsprogramm, um eine Standarddatei zu erstellen, die nicht das XML-Format vorweist.
+
+2.   Ändern Sie die Standardformatdatei in einem Text-Editor.
+
+Die geänderte Formatdatei muss jedes vorhandene Feld der jeweiligen Spalte in der Zieltabelle zuordnen. Es muss ebenfalls angegeben werden, welche Tabellenspalte oder -spalten übersprungen werden sollen. 
   
-### <a name="creating-a-default-non-xml-format-file"></a>Erstellen einer standardmäßigen Nicht-XML-Formatdatei  
- In diesem Thema wird die standardmäßige Nicht-XML-Formatdatei verwendet, die mithilfe des folgenden `myTestSkipCol` bcp **-Befehls für die** -Beispieltabelle erstellt wurde:  
+### <a name="step-1---create-a-default-non-xml-format-file"></a>Schritt 1: Erstellen einer Nicht-XML-Standardformatdatei  
+Erstellen Sie eine Nicht-XML-Standardformatdatei für die Beispieltabelle `myTestSkipCol`, indem Sie den folgenden **bcp**-Befehl an der Eingabeaufforderung ausführen:  
   
 ```cmd
-bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c -T  
+bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c -T  
 ```  
   
- Mit dem zuvor angeführten Befehl wird die Nicht-XML-Formatdatei `myTestSkipCol_Default.fmt`erstellt: Diese Formatdatei wird auch als *Standardformatdatei* bezeichnet. Es handelt sich hierbei um die Form, in der Dateien von **bcp**generiert werden. Im Allgemeinen wird mit einer Standardformatdatei eine 1:1-Entsprechung zwischen den Feldern in der Datendatei und den Spalten in der Tabelle beschrieben.  
+Mit dem zuvor angeführten Befehl wird die Nicht-XML-Formatdatei `myTestSkipCol_Default.fmt`erstellt: Diese Formatdatei wird auch als *Standardformatdatei* bezeichnet. Es handelt sich hierbei um die Form, in der Dateien von **bcp**generiert werden. Mit einer Standardformatdatei wird eine 1:1-Entsprechung zwischen den Feldern in der Datendatei und den Spalten in der Tabelle beschrieben.  
   
 > [!IMPORTANT]  
->  Möglicherweise müssen Sie den Namen der Serverinstanz angeben, mit der Sie eine Verbindung herstellen. Außerdem kann es erforderlich sein, den Benutzernamen und das entsprechende Kennwort anzugeben. Weitere Informationen finden Sie unter [bcp Utility](../../tools/bcp-utility.md).  
+>  Möglicherweise müssen Sie mit dem `-S`-Argument den Namen der Serverinstanz angeben, mit der Sie eine Verbindung herstellen. Außerdem kann es erforderlich sein, den Benutzernamen und das entsprechende Kennwort mit den Argumenten `-U` und `-P` anzugeben. Weitere Informationen finden Sie unter [bcp Utility](../../tools/bcp-utility.md).  
   
- In der folgenden Abbildung werden Werte in diesen Beispiel-Standardformatdateien gezeigt. In der Abbildung werden außerdem die Namen der einzelnen Formatdateifelder angegeben.  
+ Im folgenden Screenshot werden Werte in diesen Beispiel-Standardformatzeichendateien gezeigt. 
   
  ![Standardmäßige Nicht-XML-Formatdatei für MyTextSkipCol](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.gif "default non-XML format file for myTestSkipCol")  
   
 > [!NOTE]  
 >  Weitere Informationen zu Formatdateifeldern finden Sie unter [Nicht-XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
-### <a name="methods-for-modifying-a-non-xml-format-file"></a>Methoden zum Ändern von Nicht-XML-Formatdateien  
- Sie können eine Tabellenspalte auslassen, indem Sie eine standardmäßige Nicht-XML-Formatdatei bearbeiten und die Datei mithilfe einer der folgenden alternativen Methoden ändern:  
+### <a name="step-2---modify-a-non-xml-format-file"></a>Schritt 2: Ändern einer Nicht-XML-Formatdatei  
+Für die Bearbeitung einer standardmäßigen Nicht-XML-Datendatei stehen zwei Alternativen zur Verfügung. Beide Alternativen zeigen, dass das Datenfeld in der Datendatei nicht vorhanden ist und dass keine Daten in die entsprechende Tabellenspalte eingefügt werden.
+
+Sie können eine Tabellenspalte auslassen, indem Sie eine standardmäßige Nicht-XML-Formatdatei bearbeiten und die Datei mithilfe einer der folgenden alternativen Methoden ändern:  
+
+#### <a name="option-1---remove-the-row"></a>Option 1: Entfernen der Zeile
+Die bevorzugte Methode zum Überspringen einer Spalte umfasst drei grundlegende Schritte.
+
+1.   Löschen Sie zuerst alle Formatdateizeilen, in denen Felder beschrieben werden, die in der Quelldatendatei fehlen.
+2.   Ändern Sie anschließend den Wert "Reihenfolge der Felder der Hostdatei" für die einzelnen Formatdateizeilen, die auf eine gelöschte Zeile folgen. Das Ziel besteht darin, mithilfe der „Host file field order“-Werte (Reihenfolge der Felder der Hostdatei) von 1 bis *n*die eigentliche Position der einzelnen Datenfelder in der Datendatei zu erhalten.
+3.   Abschließend muss der Wert im Feld "Spaltenanzahl" entsprechend der tatsächlichen Anzahl der Felder in der Datendatei verringert werden.  
   
--   Die bevorzugte Methode umfasst drei grundlegende Schritte. Löschen Sie zuerst alle Formatdateizeilen, in denen Felder beschrieben werden, die in der Datendatei fehlen. Ändern Sie anschließend den Wert "Reihenfolge der Felder der Hostdatei" für die einzelnen Formatdateizeilen, die auf eine gelöschte Zeile folgen. Das Ziel besteht darin, mithilfe der „Host file field order“-Werte (Reihenfolge der Felder der Hostdatei) von 1 bis *n*die eigentliche Position der einzelnen Datenfelder in der Datendatei zu erhalten. Abschließend muss der Wert im Feld "Spaltenanzahl" entsprechend der tatsächlichen Anzahl der Felder in der Datendatei verringert werden.  
+Das folgende Beispiel basiert auf der Standardformatdatei für die `myTestSkipCol`-Tabelle, die unter „Erstellen einer Nicht-XML-Standarformatdatei“ weiter oben in diesem Artikel erstellt wurde. In dieser geänderten Formatdatei wird `Col1`das erste Datenfeld zugeordnet, `Col2`wird ausgelassen, und das zweite Datenfeld wird `Col3`zugeordnet. Die Zeile für `Col2` wurde gelöscht. Das Trennzeichen nach dem ersten Feld wurde auch von `\t` in `,` geändert.
   
-     Das folgende Beispiel basiert auf der Standardformatdatei für die `myTestSkipCol` -Tabelle, die unter "Erstellen einer standardmäßigen Nicht-XML-Formatdatei" weiter oben in diesem Thema erstellt wurde. In dieser geänderten Formatdatei wird `Col1`das erste Datenfeld zugeordnet, `Col2`wird ausgelassen, und das zweite Datenfeld wird `Col3`zugeordnet. Die Zeile für `Col2` wurde gelöscht.  
+```  
+14.0  
+2  
+1       SQLCHAR       0       7       ","      1     Col1         ""  
+2       SQLCHAR       0       100     "\r\n"   3     Col3         SQL_Latin1_General_CP1_CI_AS  
+```  
   
-    ```  
-    9.0  
-    2  
-    1       SQLCHAR       0       7       "\t"     1     Col1         ""  
-    2       SQLCHAR       0       100     "\r\n"   3     Col3         SQL_Latin1_General_CP1_CI_AS  
-    ```  
+#### <a name="option-2---modify-the-row-definition"></a>Option 2: Ändern der Zeilendefinition
+
+Alternativ können Sie eine Tabellenspalte auslassen, indem Sie die Definition der Formatdateizeile ändern, die der Tabellenspalte entspricht. In dieser Formatdateizeile müssen die Werte "prefix length", "host file data length" und "server column order" auf 0 festgelegt werden. Außerdem müssen die Felder "terminator" und "column collation" auf "" (NULL) festgelegt werden.  
   
--   Alternativ können Sie eine Tabellenspalte auslassen, indem Sie die Definition der Formatdateizeile ändern, die der Tabellenspalte entspricht. In dieser Formatdateizeile müssen die Werte "prefix length", "host file data length" und "server column order" auf 0 festgelegt werden. Außerdem müssen die Felder "terminator" und "column collation" auf "" (NULL) festgelegt werden.  
+Für „server column name“ (Serverspaltenname)muss eine Zeichenfolge eingegeben werden, die nicht leer ist. Dabei muss es sich jedoch auch nicht um den tatsächlichen Spaltennamen handeln. Für die verbleibenden Formatfelder sind die entsprechenden Standardwerte erforderlich.  
   
-     Für "server column name" muss eine Zeichenfolge eingegeben werden, die nicht leer ist; dabei muss es sich jedoch auch nicht um den tatsächlichen Spaltennamen handeln. Für die verbleibenden Formatfelder sind die entsprechenden Standardwerte erforderlich.  
+Das folgende Beispiel wird ebenfalls von der Standardformatdatei der `myTestSkipCol` -Tabelle abgeleitet.  
   
-     Das folgende Beispiel wird ebenfalls von der Standardformatdatei der `myTestSkipCol` -Tabelle abgeleitet.  
+```  
+14.0  
+3  
+1       SQLCHAR       0       7       ","      1     Col1         ""  
+2       SQLCHAR       0       0       ""       0     Col2         ""  
+3       SQLCHAR       0       100     "\r\n"   3     Col3         SQL_Latin1_General_CP1_CI_AS  
+```  
   
-    ```  
-    9.0  
-    3  
-    1       SQLCHAR       0       7       "\t"     1     Col1         ""  
-    2       SQLCHAR       0       0       ""       0     Col2         ""  
-    3       SQLCHAR       0       100     "\r\n"   3     Col3         SQL_Latin1_General_CP1_CI_AS  
-    ```  
-  
-### <a name="examples"></a>Beispiele  
- Die folgenden Beispiele beruhen ebenfalls auf der `myTestSkipCol` -Beispieltabelle und der `myTestSkipCol2.dat` -Beispieldatendatei, die unter "Beispieltabelle und -datendatei" weiter oben in diesem Thema erstellt wurden.  
+### <a name="examples-with-a-non-xml-format-file"></a>Beispiele mit einer Nicht-XML-Formatdatei 
+Die folgenden Beispiele beruhen ebenfalls auf der `myTestSkipCol`-Beispieltabelle und der `myTestSkipCol2.dat`-Beispieldatendatei, die weiter oben in diesem Thema beschrieben wurden.  
   
 #### <a name="using-bulk-insert"></a>Verwenden von BULK INSERT  
- Für dieses Beispiel wird eine der geänderten Nicht-XML-Formatdateien verwendet, die weiter oben in diesem Thema unter "Methoden zum Ändern von Nicht-XML-Formatdateien" erstellt wurden. In diesem Beispiel lautet der Name der geänderten Formatdatei `C:\myTestSkipCol2.fmt`. Führen Sie im Abfrage-Editor von `BULK INSERT` den folgenden Code aus, um mithilfe von `myTestSkipCol2.dat` einen Massenimport der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Datendatei auszuführen:  
+Dieses Beispiel funktioniert wie im vorherigen Abschnitt beschrieben unter Verwendung einer geänderten erstellten Nicht-XML-Formatdateien. In diesem Beispiel lautet der Name der geänderten Formatdatei `myTestSkipCol2.fmt`. Führen Sie den folgenden Code in SSMS aus, um `BULK INSERT` zum Massenimport der `myTestSkipCol2.dat`-Datendatei zu verwenden. Aktualisieren Sie die Dateisystempfade für den Speicherort der Beispieldateien auf Ihrem Computer.
   
 ```sql  
-USE AdventureWorks2012;  
+USE WideWorldImporters;  
 GO  
 BULK INSERT myTestSkipCol   
    FROM 'C:\myTestSkipCol2.dat'   
@@ -123,65 +141,75 @@ SELECT * FROM myTestSkipCol;
 GO  
 ```  
   
-## <a name="using-an-xml-format-file"></a>Verwenden einer XML-Formatdatei  
- Bei einer XML-Formatdatei ist es nicht möglich, beim direkten Importieren in eine Tabelle mit dem Befehl **bcp** oder der BULK INSERT-Anweisung eine Spalte auszulassen. Sie können jedoch Daten in alle Spalten einer Tabelle mit Ausnahme der letzten Spalte importieren. Wenn Sie eine andere Spalte als die letzte auslassen müssen, müssen Sie eine Sicht der Zieltabelle erstellen, die nur die in der Datendatei enthaltenen Spalten enthält. Anschließend können Sie Daten aus dieser Datei in die Sicht massenimportieren.  
+## <a name="option-2---use-an-xml-format-file"></a>Option 2: Verwenden einer XML-Formatdatei  
+
+-   Mit `bcp` und `BULK INSERT`. Bei einer XML-Formatdatei ist es nicht möglich, beim direkten Importieren in eine Tabelle mit dem Befehl **bcp** oder der `BULK INSERT`-Anweisung eine Spalte auszulassen. Sie können jedoch Daten in alle Spalten einer Tabelle mit Ausnahme der letzten Spalte importieren. Wenn Sie eine andere Spalte als die letzte auslassen müssen, müssen Sie eine Sicht der Zieltabelle erstellen, die nur die in der Datendatei enthaltenen Spalten enthält. Anschließend können Sie Daten aus dieser Datei in die Sicht massenimportieren.  
   
- Um eine Tabellenspalte mithilfe von OPENROWSET(BULK...) mit einer XML-Formatdatei auszulassen, muss folgendermaßen eine explizite Liste von Spalten in der Auswahlliste und auch in der Zieltabelle angegeben werden:  
+-   Um mit `OPENROWSET(BULK...)` eine Tabellenspalte mithilfe von `OPENROWSET(BULK...)` mit einer XML-Formatdatei auszulassen, muss folgendermaßen eine explizite Liste von Spalten in der Auswahlliste und auch in der Zieltabelle angegeben werden:  
   
- INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...)  
+    ```sql
+    INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
+    ```
   
-### <a name="creating-a-default-xml-format-file"></a>Erstellen einer standardmäßigen XML-Formatdatei  
- Die Beispiele der geänderten Formatdateien beruhen auf der `myTestSkipCol` -Beispieltabelle und der Datendatei, die unter "Beispieltabelle und -datendatei" weiter oben in diesem Thema erstellt wurden. Mit dem folgenden **bcp** -Befehl wird eine standardmäßige XML-Formatdatei für die `myTestSkipCol` -Tabelle erstellt:  
+### <a name="step-1---create-a-default-non-xml-format-file"></a>Schritt 1: Erstellen einer Nicht-XML-Standardformatdatei   
+
+Diese Beispiele der geänderten XML-Formatdateien beruhen auf der `myTestSkipCol`-Beispieltabelle und der Datendatei, die unter „Beispieltabelle und -datendatei“ weiter oben in diesem Artikel erstellt wurden.
+
+Mit dem folgenden **bcp** -Befehl wird eine standardmäßige XML-Formatdatei für die `myTestSkipCol` -Tabelle erstellt:  
   
 ```cmd
-bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c -x -T  
+bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c -x -T  
 ```  
   
- In der erstellten standardmäßigen Nicht-XML-Formatdatei wird eine 1:1-Entsprechung zwischen den Feldern in der Datendatei und den Spalten in der Tabelle beschrieben. Dies erfolgt folgendermaßen:  
+In der erstellten standardmäßigen Nicht-XML-Formatdatei wird eine 1:1-Entsprechung zwischen den Feldern in der Datendatei und den Spalten in der Tabelle beschrieben. Dies erfolgt folgendermaßen:  
   
 ```xml
-\<?xml version="1.0"?>  
-\<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<?xml version="1.0"?>  
+<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
-  \<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="7"/>  
-  \<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
-  \<FIELD ID="3" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="7"/>  
+  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+  <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
  </RECORD>  
  <ROW>  
-  \<COLUMN SOURCE="1" NAME="Col1" xsi:type="SQLSMALLINT"/>  
-  \<COLUMN SOURCE="2" NAME="Col2" xsi:type="SQLNVARCHAR"/>  
-  \<COLUMN SOURCE="3" NAME="Col3" xsi:type="SQLNVARCHAR"/>  
+  <COLUMN SOURCE="1" NAME="Col1" xsi:type="SQLSMALLINT"/>  
+  <COLUMN SOURCE="2" NAME="Col2" xsi:type="SQLNVARCHAR"/>  
+  <COLUMN SOURCE="3" NAME="Col3" xsi:type="SQLNVARCHAR"/>  
  </ROW>  
 </BCPFORMAT>  
 ```  
   
 > [!NOTE]  
 >  Informationen zur Struktur von XML-Formatdateien finden Sie unter [XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
-  
-### <a name="examples"></a>Beispiele  
- Für die Beispiele in diesem Abschnitt werden die `myTestSkipCol` -Beispieltabelle und die `myTestSkipCol2.dat` -Beispieldatendatei verwendet, die unter "Beispieltabelle und -datendatei" weiter oben in diesem Thema erstellt wurden. Zum Importieren der Daten aus `myTestSkipCol2.dat` in die `myTestSkipCol` -Tabelle wird in den Beispielen die folgende geänderte XML-Formatdatei verwendet: `myTestSkipCol2-x.xml`. Diese Datei basiert auf der Formatdatei, die unter "Erstellen einer standardmäßigen XML-Formatdatei" weiter oben in diesem Thema erstellt wurde.  
-  
+
+### <a name="step-2---modify-an-xml-format-file"></a>Schritt 2: Ändern einer XML-Formatdatei
+
+Hier ist die geänderte XML-Formatdatei, `myTestSkipCol2.xml`, dargestellt, die `Col2` überspringt. Die Einträge `FIELD` und `ROW` für `Col2` wurden entfernt, und die Einträge wurden neu nummeriert. Das Trennzeichen nach dem ersten Feld wurde auch von `\t` in `,` geändert.
+
 ```xml
-\<?xml version="1.0"?>  
-\<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<?xml version="1.0"?>  
+<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
-  \<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
-  \<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
+  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
  </RECORD>  
  <ROW>  
-  \<COLUMN SOURCE="1" NAME="Col1" xsi:type="SQLSMALLINT"/>  
-  \<COLUMN SOURCE="2" NAME="Col3" xsi:type="SQLNVARCHAR"/>  
+  <COLUMN SOURCE="1" NAME="Col1" xsi:type="SQLSMALLINT"/>  
+  <COLUMN SOURCE="2" NAME="Col3" xsi:type="SQLNVARCHAR"/>  
  </ROW>  
 </BCPFORMAT>  
 ```  
+ 
+### <a name="examples-with-an-xml-format-file"></a>Beispiele für eine XML-Formatdatei   
+Für die Beispiele in diesem Abschnitt werden die `myTestSkipCol`-Beispieltabelle und die `myTestSkipCol2.dat`-Beispieldatendatei verwendet, die unter „Beispieltabelle und -datendatei“ weiter oben in diesem Artikel erstellt wurden. Zum Importieren der Daten aus `myTestSkipCol2.dat` in die `myTestSkipCol` -Tabelle wird in den Beispielen die folgende geänderte XML-Formatdatei verwendet: `myTestSkipCol2.xml`.   
   
 #### <a name="using-openrowsetbulk"></a>Verwenden von OPENROWSET(BULK...)  
- Im folgenden Beispiel werden der Massenrowsetanbieter `OPENROWSET` und die Formatdatei `myTestSkipCol2.xml` verwendet. Die Datendatei `myTestSkipCol2.dat` wird per Massenimport in die `myTestSkipCol` -Tabelle übertragen. Die Anweisung enthält anforderungsgemäß eine explizite Liste der Spalten in der Auswahlliste und in der Zieltabelle.  
+Im folgenden Beispiel werden der Massenrowsetanbieter `OPENROWSET` und die Formatdatei `myTestSkipCol2.xml` verwendet. Die Datendatei `myTestSkipCol2.dat` wird per Massenimport in die `myTestSkipCol` -Tabelle übertragen. Die Anweisung enthält anforderungsgemäß eine explizite Liste der Spalten in der Auswahlliste und in der Zieltabelle.  
   
- Führen Sie im Abfrage-Editor von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] folgenden Code aus:  
+Führen Sie den folgenden Code in SSMS aus: Aktualisieren Sie die Dateisystempfade für den Speicherort der Beispieldateien auf Ihrem Computer.
   
 ```sql  
-USE AdventureWorks2012;  
+USE WideWorldImporters;  
 GO  
 INSERT INTO myTestSkipCol  
   (Col1,Col3)  
@@ -192,19 +220,20 @@ INSERT INTO myTestSkipCol
 GO  
 ```  
   
-#### <a name="using-bulk-import-on-a-view"></a>Verwenden von BULK IMPORT für eine Sicht  
- Im folgenden Beispiel wird für die `v_myTestSkipCol` -Tabelle die Sicht `myTestSkipCol` erstellt. In dieser Sicht wird die zweite Tabellenspalte, `Col2`, ausgelassen. Anschließend wird mit `BULK INSERT` die Datendatei `myTestSkipCol2.dat` in die Sicht importiert.  
+#### <a name="using-bulk-import-with-a-view"></a>Verwenden von BULK IMPORT mit einer Sicht  
+Im folgenden Beispiel wird für die `myTestSkipCol`-Tabelle die Sicht `v_myTestSkipCol` erstellt. In dieser Sicht wird die zweite Tabellenspalte, `Col2`, ausgelassen. Anschließend wird mit `BULK INSERT` die Datendatei `myTestSkipCol2.dat` in die Sicht importiert.  
   
- Führen Sie im Abfrage-Editor von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] folgenden Code aus:  
+Führen Sie den folgenden Code in SSMS aus: Aktualisieren Sie die Dateisystempfade für den Speicherort der Beispieldateien auf Ihrem Computer. 
   
 ```sql  
+USE WideWorldImporters;  
+GO  
+
 CREATE VIEW v_myTestSkipCol AS  
     SELECT Col1,Col3  
     FROM myTestSkipCol;  
 GO  
   
-USE AdventureWorks2012;  
-GO  
 BULK INSERT v_myTestSkipCol  
 FROM 'C:\myTestSkipCol2.dat'  
 WITH (FORMATFILE='C:\myTestSkipCol2.xml');  

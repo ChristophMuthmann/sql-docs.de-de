@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5195d0dd1449a86402263921930d7679fab036f2
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 448f9f3f86dec25001be11f309718bd04a4d3f08
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>Herunterladen von SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ SSDT 15.5.2 ist eine eigenständige Webinstallation für SQL Server-Datenbank-, 
 
 | SSDT für Visual Studio 2017 | SSDT für Visual Studio 2015 | 
 |:--|:--|
-|[![Download](../ssdt/media/download.png) SSDT für Visual Studio 2017 (15.5.2) herunterladen](https://go.microsoft.com/fwlink/?LinkId=866452) | [![Download](../ssdt/media/download.png) SSDT für Visual Studio 2015 (17.4) herunterladen](https://go.microsoft.com/fwlink/?linkid=863440)|
+|[![Download](../ssdt/media/download.png) SSDT für Visual Studio 2017 (15.5.2) herunterladen](https://go.microsoft.com/fwlink/?LinkId=866452) | [![Download](../ssdt/media/download.png) Herunterladen von SSDT für Visual Studio 2015 (17.4)](https://go.microsoft.com/fwlink/?linkid=863440)|
 |||
 
 > [!IMPORTANT]

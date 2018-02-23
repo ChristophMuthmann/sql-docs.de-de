@@ -1,7 +1,7 @@
 ---
 title: Handbuch zur Architektur der Abfrageverarbeitung | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 11/07/2017
+ms.date: 02/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c55426d6723749d9edda2b6244ae7e75f47047b2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 625481946af508b626a6bc142113298298a7fca2
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,6 +35,40 @@ ms.lasthandoff: 02/09/2018
 ## <a name="sql-statement-processing"></a>Verarbeiten von SQL-Anweisungen
 
 Die Verarbeitung einer einzelnen SQL-Anweisung ist das grundlegendste Verfahren, nach dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SQL-Anweisungen ausführt. Die Schritte, die zur Verarbeitung einer einzelnen `SELECT` -Anweisung verwendet werden, die nur auf lokale Basistabellen verweist (keine Sichten oder Remotetabellen), sollen das zugrunde liegende Verfahren veranschaulichen.
+
+#### <a name="logical-operator-precedence"></a>Rangfolge logischer Operatoren
+
+Wenn mehr als ein logischer Operator in einer Anweisung verwendet wird, wird `NOT` zuerst ausgewertet, dann `AND` und schließlich `OR`. Arithmetische (und bitweise) Operatoren werden vor logischen Operatoren verarbeitet. Weitere Informationen finden Sie unter [Operator Precedence (Operatorrangfolge)](../t-sql/language-elements/operator-precedence-transact-sql.md).
+
+Im folgenden Beispiel ist die Color-Bedingung nur für ProductModel 21 anwendbar und nicht für ProductModel 20, weil `AND` Vorrang gegenüber `OR` hat.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
+```
+
+Sie können die Bedeutung der Abfrage ändern, indem Sie durch Hinzufügen von Klammern veranlassen, dass der Operator `OR` zuerst ausgewertet wird. Die folgende Abfrage findet nur Produkte unter den Modellen 20 und 21, deren Farbe „red“ (rot) ist.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+Die Verwendung von Klammern kann auch dann empfehlenswert sein, wenn diese nicht unbedingt erforderlich sind, da sie die Übersichtlichkeit von Abfragen verbessern und zudem die Wahrscheinlichkeit von Flüchtigkeitsfehlern verringern, die sich aus der Rangfolge der Operatorenauswertung ergeben. Die Leistung wird durch den Einsatz von Klammern nicht wesentlich beeinträchtigt. Das folgende Beispiel ist leichter zu lesen als das ursprüngliche Beispiel, obwohl sie syntaktisch übereinstimmen:
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
 
 #### <a name="optimizing-select-statements"></a>Optimieren von SELECT-Anweisungen
 
@@ -49,7 +83,6 @@ Eine `SELECT`-Anweisung definiert lediglich Folgendes:
 * Die Tabellen, die die Quelldaten enthalten. Dies wird in der `FROM` -Klausel angegeben.
 * Die logischen Beziehungen zwischen den Tabellen, die im Rahmen der `SELECT` -Anweisung relevant sind. Diese werden in den Joinspezifikationen definiert, die in der `WHERE` -Klausel oder in einer `ON` -Klausel, die auf `FROM`folgt, auftreten können.
 * Die Bedingungen, die die Zeilen in den Quelltabellen erfüllen müssen, um für die `SELECT` -Anweisung qualifiziert zu sein. Diese werden in den `WHERE` - und `HAVING` -Klauseln angegeben.
-
 
 In einem Abfrageausführungsplan wird Folgendes definiert: 
 
@@ -1045,4 +1078,5 @@ GO
  [Erweiterte Ereignisse](../relational-databases/extended-events/extended-events.md)  
  [Bewährte Methoden für den Abfragespeicher](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Kardinalitätsschätzung](../relational-databases/performance/cardinality-estimation-sql-server.md)  
- [Adaptive Abfrageverarbeitung](../relational-databases/performance/adaptive-query-processing.md)
+ [Adaptive Abfrageverarbeitung](../relational-databases/performance/adaptive-query-processing.md)   
+ [Operatorrangfolge](../t-sql/language-elements/operator-precedence-transact-sql.md)

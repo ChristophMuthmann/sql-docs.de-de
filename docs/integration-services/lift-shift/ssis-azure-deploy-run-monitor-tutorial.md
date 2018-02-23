@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa1cc5db91745fb7773856a8f66b03c82bba3e9a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0bfa4f23ea87d7429075d1039df56286b7d4785e
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Bereitstellen, Ausführen und Überwachen eines SSIS-Pakets in Azure
 Dieses Tutorial zeigt, wie ein SQL Server Integration Services-Projekt in der SSISDB-Katalogdatenbank auf einer Azure SQL-Datenbank bereitgestellt wird, ein Paket in Azure SSIS Integration Runtime ausgeführt wird und das ausgeführte Paket überwacht wird.
@@ -89,7 +89,9 @@ Verwenden Sie SQL Server Management Studio, um eine Verbindung mit dem SSIS-Kata
 
 ## <a name="deploy-a-project-with-powershell"></a>Bereitstellen eines Projekts mit PowerShell
 
-Um ein Projekt mit PowerShell für SSISDB in Azure SQL-Datenbank bereitzustellen, passen Sie das folgende Skript an Ihre Anforderungen an:
+Um ein Projekt mit PowerShell für SSISDB in Azure SQL-Datenbank bereitzustellen, passen Sie das folgende Skript an Ihre Anforderungen an. Das Skript zählt die untergeordneten Ordner unter `$ProjectFilePath` sowie die Projekte in jedem untergeordneten Ordner auf, erstellt daraufhin die gleichen Ordner in SSISDB und stellt die Projekte in diesen Ordnern bereit.
+
+Dieses Skript erfordert, dass SQL Server Data Tools Version 17.x oder SQL Server Management Studio auf dem Computer installiert ist, auf dem das Skript ausgeführt wird.
 
 ```powershell
 # Variables

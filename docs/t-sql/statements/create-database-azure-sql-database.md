@@ -1,14 +1,15 @@
 ---
-title: "CREATE DATABASE (Azure SQL­Datenbank) | Microsoft Docs"
+title: CREATE DATABASE (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 08/28/2017
+ms.date: 02/13/2018
 ms.prod: 
 ms.prod_service: sql-database
 ms.reviewer: 
 ms.service: sql-database
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,23 +21,24 @@ f1_keywords:
 - EDITION_TSQL
 - MAXSIZE
 - MAXSIZE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SERVICE_OBJECTIVE
 - ELASTIC_POOL
 - EDITION SQL Database
 - MAXSIZE SQL Database
 ms.assetid: 22b167f7-ae86-490b-adb3-ec02ca1c1508
-caps.latest.revision: "62"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c2a8612af978c6cd32056ff192e0eae8909b50cb
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.openlocfilehash: c61660015eb2f613148ad58b72386e42eb797db9
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -58,11 +60,10 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {  
 
       MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }    
-    | ( EDITION = {  'basic' | 'standard' | 'premium' | 'premiumrs'}   
+    | ( EDITION = {  'basic' | 'standard' | 'premium' }   
     | SERVICE_OBJECTIVE =   
           {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 
             | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'  
-            | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' 
             | { ELASTIC_POOL(name = <elastic_pool_name>) } }  ) 
 }  
 
@@ -78,7 +79,6 @@ CREATE DATABASE database_name
     [ ( SERVICE_OBJECTIVE =   
           {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |  
             | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'  
-            | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' 
             | { ELASTIC_POOL(name = <elastic_pool_name>) } } )  
     ]  
  [;] 
@@ -89,27 +89,27 @@ CREATE DATABASE database_name
  Das Syntaxdiagramm veranschaulicht die in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützten Argumente.  
   
  *database_name*  
- Der Name der neuen Datenbank. Dieser Name muss auf dem SQL-Server, die beide hosten können eindeutig sein [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Datenbanken und [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] -Datenbanken und entsprechen dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Regeln für Bezeichner entsprechen. Weitere Informationen finden Sie unter [Bezeichner](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+ Der Name der neuen Datenbank. Dieser Name muss auf dem SQL-Server eindeutig sein, der [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]- und [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]-Datenbanken hosten kann, und muss den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Regeln für Bezeichner entsprechen. Weitere Informationen finden Sie unter [Bezeichner](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
- *Sortierungsname*  
+ *Collation_name*  
  Gibt die Standardsortierung für die Datenbank an. Als Sortierungsname kann entweder der Name einer Windows-Sortierreihenfolge oder ein SQL-Sortierungsname verwendet werden. Wenn keine Angabe erfolgt, wird der Datenbank die Standardsortierung, SQL_Latin1_General_CP1_CI_AS, zugewiesen.  
   
- Weitere Informationen zu den Windows- und SQL-Sortierungsnamen [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+ Weitere Informationen zu den Windows- und SQL-Sortierungsnamen finden Sie unter [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
   
  *CATALOG_COLLATION*  
-Gibt die standardsortierung für den Metadatenkatalog an. *DATABASE_DEFAULT* gibt an, dass für die Metadatenkatalog verwendet Systemsichten und Systemtabellen, die die standardsortierung für die Datenbank entsprechend sortiert werden.  Dies ist das Verhalten in SQL Server gefunden. 
+Gibt die Standardsortierung für den Metadatenkatalog an. *DATABASE_DEFAULT* gibt an, dass der Metadatenkatalog sortiert werden muss, der für Systemansichten und Systemtabellen verwendet wird, um der Standardsortierung der Datenbank zu entsprechen.  SQL Server weist dieses Verhalten auf. 
 
-*SQL_Latin1_General_CP1_CI_AS* gibt an, dass für die Metadatenkatalog verwendet Systemsichten und-Tabellen in eine feste SQL_Latin1_General_CP1_CI_AS-Sortierung sortiert werden.  Dies ist die Standardeinstellung für Azure SQL-Datenbank, sofern nicht angegeben.
+*SQL_Latin1_General_CP1_CI_AS* gibt an, dass der Metadatenkatalog, der für Systemansichten und -tabellen verwendet wird, für die feste Sortierung „SQL_Latin1_General_CP1_CI_AS“ sortiert werden muss.  Sofern nichts anderes angegeben ist, entspricht dies der Standardeinstellung für Azure SQL-Datenbank.
 
  *EDITION*  
- Gibt die Dienstebene der Datenbank an. Die verfügbaren Werte sind: 'basic','standard', 'Premium' und 'Premiumrs'.  
+ Gibt die Dienstebene der Datenbank an. Die verfügbaren Werte sind „basic“, „standard“ und „premium“. Der Support für „premiumrs“ wurde entfernt. Wenn Sie Fragen haben, wenden Sie sich an den E-Mail-Alias premium-rs@microsoft.com.
   
- Wenn EDITION angegeben ist, aber MAXSIZE nicht angegeben ist, wird MAXSIZE auf die restriktivste Größe festgelegt, die die Edition unterstützt.  
+ Wenn EDITION angegeben ist, MAXSIZE jedoch nicht, wird MAXSIZE auf die restriktivste, von der Edition unterstützte Größe festgelegt.  
   
  *MAXSIZE*  
  Gibt die maximale Größe der Datenbank an. MAXSIZE muss für die angegebene EDITION (Dienstebene) gültig sein. Im Folgenden sind die unterstützten MAXSIZE-Werte und die Standardwerte (S) für die Dienstebenen aufgeführt.  
   
-|**MAXSIZE**|**Standard**|**S0 S2**|**S3-S12**|**P1-P6 und PRS1 PRS6**| **P11-P15** 
+|**MAXSIZE**|**Standard**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** 
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|  
@@ -131,37 +131,37 @@ Gibt die standardsortierung für den Metadatenkatalog an. *DATABASE_DEFAULT* gib
 |500 GB|–|–|√|√ (S)|√|
 |750 GB|–|–|√|√|√|
 |1024 GB|–|–|√|√|√ (S)|
-|Von 1024 GB bis zu 4096 GB in Inkrementen von 256 GB * |–|–|–|–|√|√|  
+|Von 1024 GB bis 4096 GB in Inkrementen von 256 GB* |–|–|–|–|√|√|  
   
- \*P11 und P15 können Sie MAXSIZE mit 1024 GB wird die standardmäßige Größe bis zu 4 TB.  P11 und P15 können bis zu 4 TB Speicher enthalten Aufpreis verwenden. In der Premium-Dienstebene MAXSIZE größer als 1 TB ist zurzeit in der folgenden Regionen verfügbar: uns East2, USA (Westen), uns Gov Virginia, Westeuropa, Deutschland zentralen, Süd Ostasien, Japan OST, Australien Osten, Kanada zentralen und Kanada Osten. Aktuelle Einschränkungen finden Sie unter [einzelner Datenbanken](https://docs.microsoft.com/azure/sql-database-single-database-resources).  
+ \* P11 und P15 ermöglichen, dass die Größe von MAXSIZE bis zu 4 TB beträgt, wobei 1024 GB die Standardgröße darstellt.  P11 und P15 können bis zu 4 TB des enthaltenen Speichers ohne Aufpreis verwenden. Im Premium-Tarif ist MAXSIZE von mehr als 1 TB derzeit in folgenden Regionen verfügbar: USA, Osten 2; USA, Westen; USA Gov Virginia; Europa, Westen; Deutschland, Mitte; Asien, Südosten; Australien, Osten; Kanada, Mitte; Kanada, Osten. Weitere Informationen zu derzeitigen Einschränkungen finden Sie unter [Single databases (Einzelne Datenbanken)](https://docs.microsoft.com/azure/sql-database-single-database-resources).  
   
  Die folgenden Regeln gelten für das MAXSIZE-Argument und das EDITION-Argument:  
   
 -   Falls angegeben, muss der MAXSIZE-Wert einem gültigen, in der Tabelle oben aufgeführten Wert entsprechen.  
   
--   Wenn EDITION angegeben ist, MAXSIZE jedoch nicht, wird der Standardwert für die Edition verwendet. Z. B. wenn die EDITION auf Standard festgelegt und MAXSIZE nicht angegeben ist, ist Klicken Sie dann der MaxSize-Wert automatisch auf 250 MB festgelegt.  
+-   Wenn EDITION angegeben ist, MAXSIZE jedoch nicht, wird der Standardwert für die Edition verwendet. Wenn EDITION beispielsweise auf „Standard“ festgelegt und MAXSIZE nicht angegeben ist, wird MAXSIZE automatisch auf 250 MB festgelegt.  
   
--   Wenn weder MAXSIZE noch EDITION angegeben ist, wird die EDITION, Standard (S0) festgelegt ist, und MAXSIZE auf 250 GB festgelegt.  
+-   Wenn weder MAXSIZE noch EDITION angegeben sind, wird EDITION auf „Standard“ (S0) und MAXSIZE auf 250 GB festgelegt.  
   
  SERVICE_OBJECTIVE  
- Gibt die Leistungsebene an. Dienst dienstzielbeschreibungen und Weitere Informationen über die Größe, Editionen und dienstzielkombinationen finden Sie unter [Azure SQL-Datenbank-Dienstebenen und Leistungsstufen](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) und [Ressource der SQL-Datenbank Grenzwerte](https://azure.microsoft.com/documentation/articles/sql-database-resource-limits). Wenn der angegebene SERVICE_OBJECTIVE von der EDITION nicht unterstützt wird, erhalten Sie eine Fehlermeldung.  
+ Gibt die Leistungsebene an. Dienstzielbeschreibungen und weitere Informationen zu Größe, Editionen und Dienstzielkombinationen finden Sie unter [Azure SQL Database Service Tiers and Performance Levels (Dienstebenen und Leistungsstufen von Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) und [SQL Database resource limits (Ressourcenlimits von SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-resource-limits). Wenn der angegebene SERVICE_OBJECTIVE von der EDITION nicht unterstützt wird, erhalten Sie eine Fehlermeldung.  
   
- ELASTIC_POOL (Name = \<Elastic_pool_name >) zum Erstellen einer neuen Datenbank in einem elastischen Pool die SERVICE_OBJECTIVE von der Datenbank auf ELASTIC_POOL festgelegt, und geben Sie den Namen des Pools. Weitere Informationen finden Sie unter [erstellen und verwalten Sie einen Pool für elastische Datenbanken SQL-Datenbank (Vorschau)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/).  
+ ELASTIC_POOL (name = \<elastic_pool_name>) Legen Sie zum Erstellen einer neuen Datenbank in einem Pool für elastische Datenbanken das Schlüsselwort SERVICE_OBJECTIVE der Datenbank auf ELASTIC_POOL fest, und stellen Sie den Namen des Pools bereit. Weitere Informationen finden Sie unter [Create and manage a SQL Database elastic database pool (preview) (Erstellen und Verwalten eines Pool für elastische Datenbanken von SQL-Datenbank (Vorschau))](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/).  
   
- *ALS COPY OF [Name des Quellservers.] Name der Quelldatenbank*  
+ *AS COPY OF [source_server_name.]source_database_name*  
  Zum Kopieren einer Datenbank auf demselben oder einem anderen [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server.  
   
- *Name des Quellservers*  
+ *source_server_name*  
  Der Name des [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Servers, auf dem sich die Quelldatenbank befindet. Dieser Parameter ist optional, wenn sich die Quell- und die Zieldatenbank auf demselben [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server befinden sollen.  
   
  Hinweis: Das `AS COPY OF`-Argument unterstützt nicht die vollqualifizierten eindeutigen Domänennamen. Das heißt, wenn der vollqualifizierte Domänenname des Servers `serverName.database.windows.net` ist, verwenden Sie `serverName` nur während des Datenbankkopiervorgangs.  
   
- *Name der Quelldatenbank*  
+ *source_database_name*  
  Der Name der zu kopierenden Datenbank.  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]unterstützt nicht die folgenden Argumente und Optionen bei Verwendung der `CREATE DATABASE` Anweisung:  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Folgende Argumente und Optionen werden nicht unterstützt, wenn die `CREATE DATABASE`-Anweisung verwendet wird:  
   
--   Parameter im Zusammenhang mit der physischen Platzierung der Datei, z. B. \<Filespec > und \<Dateigruppe >  
+-   Parameter im Zusammenhang mit der physischen Platzierung der Datei, z.B. \<filespec> und \<filegroup>  
   
 -   Externe Zugriffsoptionen wie DB_CHAINING und TRUSTWORTHY  
   
@@ -171,30 +171,30 @@ Gibt die standardsortierung für den Metadatenkatalog an. *DATABASE_DEFAULT* gib
   
 -   Datenbankmomentaufnahme  
   
- Weitere Informationen zu den Argumenten und der `CREATE DATABASE` -Anweisung finden Sie unter [CREATE DATABASE &#40; SQL Server Transact-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Weitere Informationen zu den Argumenten und der `CREATE DATABASE`-Anweisung finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
-## <a name="remarks"></a>Hinweise  
- Datenbanken in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] weisen einige Standardeinstellungen auf, die beim Erstellen der Datenbank festgelegt werden. Weitere Informationen zu diesen Standardeinstellungen finden Sie in der Liste der Werte in [DATABASEPROPERTYEX &#40; Transact-SQL &#41; ](../../t-sql/functions/databasepropertyex-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Datenbanken in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] weisen einige Standardeinstellungen auf, die beim Erstellen der Datenbank festgelegt werden. Weitere Informationen zu diesen Standardeinstellungen finden Sie in der Liste der Werte unter [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   
- MAXSIZE bietet die Möglichkeit, die Größe der Datenbank zu beschränken. Die Größe der Datenbank den Wert für MAXSIZE erreicht, wird der Fehlercode 40544. In diesem Fall können Sie keine Daten einfügen oder aktualisieren oder neue Objekte (wie Tabellen, gespeicherte Prozeduren. Sichten und Funktionen) erstellen. Sie können jedoch weiterhin Daten lesen und löschen, Tabellen abschneiden, Tabellen und Indizes löschen sowie Indizes neu erstellen. Anschließend können Sie MAXSIZE auf einen Wert aktualisieren, der größer als die aktuelle Datenbankgröße ist, oder Sie löschen einige Daten, um Speicherplatz freizugeben. Eine Verzögerung von bis zu fünfzehn Minuten ist möglich, bevor Sie neue Daten einfügen können.  
+ MAXSIZE bietet die Möglichkeit, die Größe der Datenbank zu beschränken. Wenn die Größe der Datenbank den Wert von MAXSIZE erreicht, erhalten Sie den Fehlercode 40544. In diesem Fall können Sie keine Daten einfügen oder aktualisieren oder neue Objekte (wie Tabellen, gespeicherte Prozeduren. Sichten und Funktionen) erstellen. Sie können jedoch weiterhin Daten lesen und löschen, Tabellen abschneiden, Tabellen und Indizes löschen sowie Indizes neu erstellen. Anschließend können Sie MAXSIZE auf einen Wert aktualisieren, der größer als die aktuelle Datenbankgröße ist, oder Sie löschen einige Daten, um Speicherplatz freizugeben. Eine Verzögerung von bis zu fünfzehn Minuten ist möglich, bevor Sie neue Daten einfügen können.  
   
 > [!IMPORTANT]  
 >  Die `CREATE DATABASE`-Anweisung muss die einzige Anweisung in einem [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batch sein. 
   
- Um die Größe, Edition oder dienstzielwerte später ändern, verwenden [ALTER DATABASE &#40; Azure SQL-Datenbank &#41; ](../../t-sql/statements/alter-database-azure-sql-database.md).  
+ Verwenden Sie [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md), um die Größe, Edition oder die Dienstzielwerte im Nachhinein zu ändern.  
 
-Das Argument CATALOG_COLLATION ist nur beim Erstellen der Datenbank verfügbar. 
+Das Argument CATALOG_COLLATION ist nur während der Erstellung der Datenbank verfügbar. 
   
 ## <a name="database-copies"></a>Datenbankkopien  
- Das Kopieren einer Datenbank mit der `CREATE DATABASE` Anweisung ist ein asynchroner Vorgang. Deshalb muss nicht für die volle Dauer des Kopiervorgangs eine Verbindung mit dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server bestehen. Die `CREATE DATABASE` Anweisung Steuerelement an den Benutzer zurückgegeben, nachdem der Eintrag in sys.databases erstellt, aber vor dem Kopieren der Datenbank abgeschlossen ist. Das heißt, die `CREATE DATABASE`-Anweisung wird erfolgreich ausgeführt, während der Datenbank-Kopiervorgang noch ausgeführt wird.  
+ Beim Kopieren einer Datenbank mit der `CREATE DATABASE`-Anweisung handelt es sich um einen asynchronen Vorgang. Deshalb muss nicht für die volle Dauer des Kopiervorgangs eine Verbindung mit dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server bestehen. Die `CREATE DATABASE`-Anweisung gibt die Steuerung an den Benutzer zurück, nachdem der Eintrag in „sys.databases“ erstellt, aber bevor der Kopiervorgang der Datenbank abgeschlossen wurde. Das heißt, die `CREATE DATABASE`-Anweisung wird erfolgreich ausgeführt, während der Datenbank-Kopiervorgang noch ausgeführt wird.  
   
--   Überwachung des Kopiervorgangs auf eine [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Server: Abfrage der `percentage_complete` oder `replication_state_desc` Spalten in der [Dm_database_copies](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md) oder `state` Spalte in der **sys.databases** Zeigen Sie an. Die [dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) Ansicht kann ebenfalls verwendet werden, wie er den Status von Datenbankvorgängen, wie die Datenbankkopie zurückgibt.  
+-   Überwachen Sie den Kopiervorgang auf einem [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]-Server, indem Sie die `percentage_complete`- oder `replication_state_desc`-Spalten von [dm_database_copies](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md) oder die `state`-Spalte in der Ansicht **sys.databases** abfragen. Die Ansicht [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) kann ebenfalls verwendet werden, da diese den Status von Datenbankvorgängen zurückgibt, z.B. den des Kopiervorgangs der Datenbank.  
   
  Sobald der Kopiervorgang erfolgreich abgeschlossen wurde, ist die Zieldatenbank im Hinblick auf Transaktionen mit der Quelldatenbank konsistent.  
   
  Die folgende Syntax und die folgenden semantischen Regeln gelten für die Verwendung des `AS COPY OF`-Arguments:  
   
--   Der Quellservername und der Servername für das Kopierziel können identisch oder unterschiedlich sein. Wenn sie identisch sind, wird dieser Parameter ist optional und standardmäßig der Serverkontext der aktuellen Sitzung verwendet wird.  
+-   Der Quellservername und der Servername für das Kopierziel können identisch oder unterschiedlich sein. Wenn diese identisch sind, ist dieser Parameter optional, und es wird standardmäßig der Serverkontext der aktuellen Sitzung verwendet.  
   
 -   Die Namen der Quell- und der Zieldatenbank müssen angegeben werden. Diese Namen müssen eindeutig sein und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Regeln für Bezeichner entsprechen. Weitere Informationen finden Sie unter [Bezeichner](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
@@ -204,31 +204,31 @@ Das Argument CATALOG_COLLATION ist nur beim Erstellen der Datenbank verfügbar.
   
 -   Der Zugriff auf die Quelldatenbank ist weiterhin möglich, solange der Datenbank-Kopiervorgang ausgeführt wird.  
   
- Weitere Informationen finden Sie unter [erstellen Sie eine Kopie einer Azure SQL-Datenbank mithilfe von Transact-SQL-](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/).  
+ Weitere Informationen finden Sie unter [Create a copy of an Azure SQL database using Transact-SQL (Erstellen einer Kopie einer Azure SQL-Datenbank mithilfe von Transact-SQL)](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Zum Erstellen einer Datenbank ein Anmeldename müssen eine der folgenden sein:  
+ Für das Erstellen einer Datenbank muss das Konto des Benutzers einem der Folgenden entsprechen:  
   
--   Der prinzipalanmeldung auf Serverebene  
+-   Dem Prinzipalkonto auf Serverebene  
   
--   Die Azure AD-Administrator für den lokalen Azure SQL-Server  
+-   Dem Azure AD-Administrator für den lokalen Azure SQL-Server  
   
--   Eine Anmeldung ein Mitglied der `dbmanager` -Datenbankrolle  
+-   Einem Konto, das Mitglied der `dbmanager`-Datenbankrolle ist  
   
- **Zusätzliche Anforderungen für die Verwendung von `CREATE DATABASE ... AS COPY OF` Syntax:** Anmeldenamens die Anweisung ausführt, auf dem lokalen Server zudem muss mindestens die `db_owner` auf dem Quellserver. Wenn die Anmeldung basiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung und die Anmeldung, die Ausführung der Anweisung auf dem lokalen Server benötigen kein entsprechenden Anmeldename für die Quelle [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Server, mit identischen Namen und Kennwort.  
+ **Zusätzliche Anforderungen für die Verwendung der `CREATE DATABASE ... AS COPY OF`-Syntax:** Der Benutzer, der die Anweisung auf dem lokalen Server ausführt, muss mindestens dem `db_owner` (Datenbankbesitzer) des Quellservers entsprechen. Wenn das Konto auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung basiert, muss der Benutzer, der die Anweisung auf dem lokalen Server ausführt, über passende Anmeldeinformationen (mit identischem Namen und Kennwort) für den Quellserver [!INCLUDE[ssSDS](../../includes/sssds-md.md)] besitzen.  
   
 ## <a name="examples"></a>Beispiele  
-Eine quick Start-Lernprogramm veranschaulicht, wie Sie mit einer Azure SQL-Datenbank mit SQL Server Management Studio eine Verbindung herstellen, finden Sie unter [Azure SQL-Datenbank: mit SQL Server Management Studio eine Verbindung herstellen und Daten Abfragen](/azure/sql-database/sql-database-connect-query-ssms).  
+Ein Tutorial für den Schnellstart, das das Herstellen einer Verbindung zu einer Datenbank von Azure SQL mithilfe von SQL Server Management Studio veranschaulicht, finden Sie unter [Azure SQL-Datenbank: Verwenden von SQL Server Management Studio zum Herstellen der Verbindung und Abfragen von Daten](/azure/sql-database/sql-database-connect-query-ssms).  
   
 ### <a name="simple-example"></a>Einfaches Beispiel  
- Ein einfaches Beispiel zum Erstellen einer Datenbank.  
+ Ein einfaches Beispiel für das Erstellen einer Datenbank.  
   
 ```sql  
 CREATE DATABASE TestDB1;  
 ```  
   
-### <a name="simple-example-with-edition"></a>Einfaches Beispiel mit der Edition  
- Ein einfaches Beispiel zum Erstellen einer standard-Datenbank.  
+### <a name="simple-example-with-edition"></a>Einfaches Beispiel mit „Edition“  
+ Ein einfaches Beispiel für das Erstellen einer Standarddatenbank.  
   
 ```sql  
 CREATE DATABASE TestDB2  
@@ -236,7 +236,7 @@ CREATE DATABASE TestDB2
 ```  
   
 ### <a name="example-with-additional-options"></a>Beispiel mit zusätzlichen Optionen  
- Ein Beispiel für mehrere Optionen.  
+ Ein Beispiel, bei dem mehrere Optionen verwendet werden.  
   
 ```sql  
 CREATE DATABASE hito   
@@ -244,8 +244,8 @@ COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS
 ( MAXSIZE = 500 MB, EDITION = 'standard', SERVICE_OBJECTIVE = 'S1' ) ;  
 ```  
   
-### <a name="creating-a-copy"></a>Eine Kopie erstellen  
- Beispiel für die Erstellung einer Kopie einer Datenbank.  
+### <a name="creating-a-copy"></a>Erstellen einer Kopie  
+ Ein Beispiel, in dem die Kopie einer Datenbank erstellt wird.  
   
 ```sql  
 CREATE DATABASE escuela   
@@ -253,21 +253,21 @@ AS COPY OF school;
 ```  
   
 ### <a name="creating-a-database-in-an-elastic-pool"></a>Erstellen einer Datenbank in einem elastischen Pool  
- Neue Datenbank erstellt mit dem Namen S3M100 Pool:  
+ Erstellt eine neue Datenbank in einem Pool namens „S3M100“:  
   
 ```sql  
 CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;  
 ```  
   
-### <a name="creating-a-copy-of-a-database-on-another-server"></a>Erstellen eine Kopie einer Datenbank auf einem anderen Server  
- Das folgende Beispiel erstellt eine Kopie der Db_original-Datenbank, in der Leistungsstufe P2 Db_copy für eine einzelne Datenbank.  Dies gilt unabhängig davon, ob Db_original in einem elastischen Pool oder eine Leistungsstufe für eine einzelne Datenbank.  
+### <a name="creating-a-copy-of-a-database-on-another-server"></a>Erstellen einer Kopie einer Datenbank auf einem anderen Server  
+ Im folgenden Beispiel wird eine Kopie der Datenbank „db_original“ namens „db_copy“ in der P2-Leistungsstufe für eine einzelne Datenbank erstellt.  Dies gilt unabhängig davon, ob „db_original“ sich in einem elastischen Pool oder in einer Leistungsstufe für eine einzelne Datenbank befindet.  
   
 ```sql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original ( SERVICE_OBJECTIVE = 'P2' )  ;  
 ```  
   
- Das folgende Beispiel erstellt eine Kopie der Db_original-Datenbank, in einem elastischen Pool mit dem Namen ep1 Db_copy.  Dies gilt unabhängig davon, ob Db_original in einem elastischen Pool oder eine Leistungsstufe für eine einzelne Datenbank.  Wenn Db_original in einem elastischen Pool mit einem anderen Namen befindet, wird Db_copy weiterhin in ep1 erstellt.  
+ Im folgenden Beispiel wird eine Kopie der Datenbank „db_original“ namens „db_copy“ in einem elastischen Pool namens „ep1“ erstellt.  Dies gilt unabhängig davon, ob „db_original“ sich in einem elastischen Pool oder in einer Leistungsstufe für eine einzelne Datenbank befindet.  Wenn es sich bei „db_original“ um einen elastischen Pool mit einem unterschiedlichen Namen handelt, wird „db_copy“ dennoch in „ep1“ erstellt.  
   
 ```sql  
 CREATE DATABASE db_copy   
@@ -275,9 +275,9 @@ CREATE DATABASE db_copy
     (SERVICE_OBJECTIVE = ELASTIC_POOL( name = ep1 ) ) ;  
 ```  
 
-### <a name="create-database-with-specified-catalog-collation-value"></a>Erstellen Sie die Datenbank mit dem Wert der angegebenen Katalog-Sortierung
+### <a name="create-database-with-specified-catalog-collation-value"></a>Erstellen einer Datenbank mit einem angegebenen Wert für die Katalogsortierung
 
-Im folgenden Beispiel wird die katalogsortierung zu DATABASE_DEFAULT, beim Erstellen der Datenbank, wodurch versetzt wird die katalogsortierung mit der Sortierung der Datenbank identisch sein.
+Im folgenden Beispiel wird die Katalogsortierung während der Erstellung der Datenbank auf DATABASE_DEFAULT festgelegt. Dadurch entspricht die Katalogsortierung der Datenbanksortierung.
 
 ```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = ‘basic’)  
@@ -286,9 +286,9 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
   
 ## <a name="see-also"></a>Siehe auch  
 
--  [Sys. dm_database_copies &#40; Azure SQL-Datenbank &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
+-  [sys.dm_database_copies &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 
--   [ALTER DATABASE &#40; Azure SQL-Datenbank &#41;](alter-database-azure-sql-database.md)   
+-   [ALTER DATABASE &#40;Azure SQL-Datenbank&#41;](alter-database-azure-sql-database.md)   
     
   
 
