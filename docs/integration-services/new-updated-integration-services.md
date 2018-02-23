@@ -1,25 +1,20 @@
 ---
 title: "Aktualisiert: Integration Services für SQL Server-Dokumentation | Microsoft-Dokumentation"
 description: "Sie können sich Ausschnitte der kürzlich aktualisierten Inhalte in der Dokumentation zu Integration Services für Microsoft SQL Server anzeigen lassen."
-services: na
-documentationcenter: 
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: 
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: integration-services
-ms.openlocfilehash: 9660fa7239c14c3adc963cc75ceb98de8316734c
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: ssis
+ms.date: 02/03/2018
+ms.openlocfilehash: 8bfcdc3fb1033620d351ecaee2c79910c475dd94
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-integration-services-for-sql-server"></a>Neu und kürzlich aktualisiert: Integration Services für SQL Server
 
@@ -33,7 +28,7 @@ Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeld
 
 
 
-- *Datumsbereich des Updates*: &nbsp; **28.09.2017** &nbsp; – bis – &nbsp; **02.12.2017**
+- *Datumsbereich des Updates:* &nbsp; **3.12.2017** &nbsp; bis &nbsp; **3.2.2018**
 - *Themenbereich:* &nbsp; **Integration Services für SQL Server**.
 
 
@@ -46,8 +41,18 @@ Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeld
 Die folgenden Links leiten Sie zu den neuen Artikeln weiter, die erst kürzlich erstellt wurden.
 
 
-1. [Speichern und Abrufen von Dateien auf lokalen Dateifreigaben und Dateifreigaben in Azure mit SSIS](lift-shift/ssis-azure-files-file-shares.md)
-2. [Überprüfen von in Azure bereitgestellten SSIS-Paketen](lift-shift/ssis-azure-validate-packages.md)
+1. [Alle Prinzipale durchsuchen (Dialogfeld)](catalog/browse-all-principals-dialog-box.md)
+2. [Konfigurieren (Dialogfeld)](catalog/configure-dialog-box.md)
+3. [Ordnereigenschaften (Dialogfeld)](catalog/folder-properties-dialog-box.md)
+4. [Transact-SQL-Referenz für Integration Services-Katalog (SSIS)](catalog/integration-services-ssis-catalog-transact-sql-reference.md)
+5. [Server und Katalog von Integration Services (SSIS)](catalog/integration-services-ssis-server-and-catalog.md)
+6. [Paketeigenschaften (Dialogfeld)](catalog/package-properties-dialog-box.md)
+7. [Projekteigenschaften (Dialogfeld)](catalog/project-properties-dialog-box.md)
+8. [Projektversionen (Dialogfeld)](catalog/project-versions-dialog-box.md)
+9. [Parameterwert festlegen (Dialogfeld)](catalog/set-parameter-value-dialog-box.md)
+10. [SSIS-Katalog](catalog/ssis-catalog.md)
+11. [Dialogfeld „Überprüfen“](catalog/validate-dialog-box.md)
+12. [Anzeigen der Liste der auf dem Integration Services-Server gespeicherten Pakete](catalog/view-the-list-of-packages-on-the-integration-services-server.md)
 
 
 
@@ -73,8 +78,7 @@ Kopieren Sie aus diesem und anderen Gründen auf gar keinen Fall Code aus diesen
 
 Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Abschnitt Auszüge aufgeführt sind.
 
-1. [Hadoop-Verbindungs-Manager](#TitleNum_1)
-2. [Herstellen einer Verbindung mit lokalen Datenquellen und Azure-Dateifreigaben mit der Windows-Authentifizierung](#TitleNum_2)
+1. [Planen der Ausführung eines SSIS-Pakets in Azure](#TitleNum_1)
 
 
 
@@ -85,141 +89,53 @@ Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Absch
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-hadoop-connection-managerconnection-managerhadoop-connection-managermd"></a>1. &nbsp; [Hadoop-Verbindungs-Manager](connection-manager/hadoop-connection-manager.md)
+### <a name="1-nbsp-schedule-the-execution-of-an-ssis-package-on-azurelift-shiftssis-azure-schedule-packagesmd"></a>1. &nbsp; [Planen der Ausführung eines SSIS-Pakets in Azure](lift-shift/ssis-azure-schedule-packages.md)
 
-*Aktualisiert: 28.11.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Weiter](#TitleNum_2))
+*Aktualisiert: 18.1.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 65.  ms.author= "douglasl".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 2d68f4e884304f1a28045b42b680c15cc6a41ec5 fb2429466ea4d545682975d8dbea47451ce98ec7  (PR=4113  ,  Filename=hadoop-connection-manager.md  ,  Dirpath=docs\integration-services\connection-manager\  ,  MergeCommitSha40=28cccac53767db70763e5e705b8cc59a83c77317) -->
-
-
-
-**Herstellen einer Verbindung mit der Kerberos-Authentifizierung**
-
-Es gibt zwei Möglichkeiten, um die lokale Umgebung so einzurichten, dass Sie die Kerberos-Authentifizierung mit dem Hadoop-Verbindungs-Manager verwenden können. Sie können die Option wählen, die besser auf Ihre Anforderungen zugeschnitten ist.
--   Option 1: [Einbinden des SSIS-Computers in den Kerberos-Bereich--#kerberos-join-realm)
--   Option 2: [Aktivieren von gegenseitiger Vertrauensstellung zwischen der Windows-Domäne und dem Kerberos-Bereich--#kerberos-mutual-trust)
-
-**<a name="kerberos-join-realm"></a>Option 1: Einbinden des SSIS-Computers in den Kerberos-Bereich**
-
-
-**Anforderungen:**
-
-
--   Der Gatewaycomputer muss in den Kerberos-Bereich eingebunden und kann nicht in Windows-Domänen eingebunden werden.
-
-**Vorgehensweise zur Konfiguration:**
-
-
-**Gehen Sie auf dem SSIS-Computer wie folgt vor:**
-
-1.  Führen Sie das **Ksetup**-Hilfsprogramm aus, um den Kerberos-KDC-Server (Key Distribution Center) und -Bereich zu konfigurieren.
-
-    Der Computer muss als Mitglied einer Arbeitsgruppe konfiguriert werden, da sich ein Kerberos-Bereich von einer Windows-Domäne unterscheidet. Legen Sie wie im folgenden Beispiel gezeigt den Kerberos-Bereich fest, und fügen Sie einen KDC-Server hinzu. Ersetzen Sie *REALM.COM* ggf. durch Ihren eigenen entsprechenden Bereich.
-
-```
-    C:> Ksetup /setdomain REALM.COM`
-    C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
-```
-
-    Restart the computer after executing these two commands.
-
-2.  Überprüfen Sie die Konfiguration mit dem **Ksetup**-Befehl. Die Ausgabe sollte wie im folgenden Beispiel aussehen:
-
-```
-    C:> Ksetup
-    default realm = REALM.COM (external)
-    REALM.com:
-        kdc = <your_kdc_server_address>
-```
-
-**<a name="kerberos-mutual-trust"></a>Option 2: Aktivieren von gegenseitiger Vertrauensstellung zwischen der Windows-Domäne und dem Kerberos-Bereich**
-
-
-**Anforderungen:**
-
--   Der Gatewaycomputer muss in eine Windows-Domäne eingebunden werden.
--   Sie benötigen die Berechtigung zum Aktualisieren der Einstellungen des Domänencontrollers.
-
-**Vorgehensweise zur Konfiguration:**
-
-
-> [!NOTE]
-> Ersetzen Sie REALM.COM und AD.COM im folgenden Tutorial ggf. durch Ihren eigenen Bereich und Domänencontroller.
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_2"/>
-
-### <a name="2-nbsp-connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authenticationlift-shiftssis-azure-connect-with-windows-authmd"></a>2. &nbsp; [Herstellen einer Verbindung mit lokalen Datenquellen und Azure-Dateifreigaben mit der Windows-Authentifizierung](lift-shift/ssis-azure-connect-with-windows-auth.md)
-
-*Aktualisiert: 27.11.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Zurück](#TitleNum_1))
-
-<!-- Source markdown line 66.  ms.author= "douglasl".  -->
+<!-- Source markdown line 28.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 673386fca53cb60b983e0cb3cd4b9e2ee1dee0de 65458b4dceb92d01184c5e9c6f68ec0e8f16ba08  (PR=4104  ,  Filename=ssis-azure-connect-with-windows-auth.md  ,  Dirpath=docs\integration-services\lift-shift\  ,  MergeCommitSha40=19e1c4067142d33e8485cb903a7a9beb7d894015) -->
+<!-- git diff --ignore-all-space --unified=0 be778f8096559da9b84670382deb11f56c129971 640dd3cb59a88ccbc4cf6eab363a45e284f6b873  (PR=4662  ,  Filename=ssis-azure-schedule-packages.md  ,  Dirpath=docs\integration-services\lift-shift\  ,  MergeCommitSha40=6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f) -->
 
 
 
-**Herstellen einer Verbindung mit einem lokalem SQL Server**
+Bevor Sie SQL Server-Agent lokal zum Planen der Ausführung von auf einem Azure SQL-Datenbankserver gespeicherten Paket verwenden können, müssen Sie SQL-Datenbankserver als Verbindungsserver zu Ihrem lokalen SQL Server hinzufügen.
 
-Führen Sie folgende Schritte aus, um zu überprüfen, ob Sie eine Verbindung mit einem lokalen SQL Server herstellen können:
+1.  **Einrichten des Verbindungsservers**
 
-1.  Suchen Sie einen Computer, der nicht in eine Domäne eingebunden ist, um diesen Test auszuführen.
+    ```
+    -- Add the SSISDB database on your Azure SQL Database as a linked server to your SQL Server on premises
+    EXEC sp_addlinkedserver
+        @server='myLinkedServer', -- Name your linked server
+        @srvproduct='',
+        @provider='sqlncli', -- Use SQL Server native client
+        @datasrc='<server_name>.database.windows.net', -- Add your Azure SQL Database server endpoint
+        @location='',
+        @provstr='',
+        @catalog='SSISDB'  -- Add SSISDB as the initial catalog
+    ```
 
-2.  Führen Sie auf dem Computer, der nicht in eine Domäne eingebunden ist, folgenden Befehl aus, um SQL Server Management Studio (SSMS) mit den Anmeldeinformationen für die Domäne zu starten, die Sie verwenden möchten:
+2.  **Einrichten der Anmeldeinformationen für den Verbindungsserver**
 
-```
-    runas.exe /netonly /user:<domain>\<username> SSMS.exe
-```
+    ```
+    -- Add your Azure SQL DB server admin credentials
+    EXEC sp_addlinkedsrvlogin
+        @rmtsrvname = 'myLinkedServer',
+        @useself = 'false',
+        @rmtuser = 'myUsername', -- Add your server admin username
+        @rmtpassword = 'myPassword' -- Add your server admin password
+    ```
 
-3.  Überprüfen Sie über SSMS, ob Sie eine Verbindung mit dem lokalen SQL Server herstellen können, den Sie verwenden möchten.
+3.  **Einrichten der Verbindungsserveroptionen**
 
-**Herstellen einer Verbindung mit einer lokalen Dateifreigabe**
+    ```
+    EXEC sp_serveroption 'myLinkedServer', 'rpc out', true;
+    ```
 
-Führen Sie die folgenden Schritte durch, um zu überprüfen, ob Sie eine Verbindung mit einer lokalen Dateifreigabe herstellen können:
-
-1.  Suchen Sie einen Computer, der nicht in eine Domäne eingebunden ist, um diesen Test auszuführen.
-
-2.  Führen Sie den folgenden Befehl auf dem Computer aus, der nicht in eine Domäne eingebunden ist. Über diesen Befehl öffnen Sie zunächst ein Eingabeaufforderungsfenster mit den Anmeldeinformationen der Domäne, die Sie verwenden möchten, und testen dann die Konnektivität mit der Dateifreigabe, indem Sie eine Verzeichnisliste abrufen.
-
-```
-    runas.exe /netonly /user:<domain>\<username> cmd.exe
-    dir \\fileshare
-```
-
-3.  Überprüfen Sie, ob die Verzeichnisliste für die lokale Dateifreigabe zurückgegeben wird, die Sie verwenden möchten.
-
-**Herstellen einer Verbindung mit einer Dateifreigabe auf einer Azure-VM**
-
-Führen Sie die folgenden Schritte durch, um eine Verbindung mit einer Dateifreigabe auf einer Azure-VM herzustellen:
-
-1.  Stellen Sie mit SQL Server Management Studio (SSMS) oder einem anderen Tool eine Verbindung mit der SQL-Datenbank her, die die SSIS-Katalogdatenbank (SSISDB) hostet.
-
-2.  Öffnen Sie ein Abfragefragefenster mit SSISDB als aktuelle Datenbank.
-
-3.  Führen Sie die gespeicherte Prozedur `catalog.set_execution_credential` aus, wie in den folgenden Optionen beschrieben:
-
-```
-    catalog.set_execution_credential @domain = N'.', @user = N'username of local account on Azure virtual machine', @password = N'password'
-```
-
-**Herstellen einer Verbindung mit einer Dateifreigabe in Azure Files**
-
-Weitere Informationen zu Azure Files finden Sie unter [Azure Files](https://azure.microsoft.com/services/storage/files/).
+Weitere Informationen finden Sie unter [Erstellen von Verbindungsservern](lift-shift/../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) und [Linked Servers (Verbindungsserver)](lift-shift/../../relational-databases/linked-servers/linked-servers-database-engine.md).
 
 
 
@@ -227,46 +143,45 @@ Weitere Informationen zu Azure Files finden Sie unter [Azure Files](https://azur
 
 
 
-## <a name="similar-articles"></a>Ähnliche Artikel
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>Ähnliche Artikel zu neuen oder aktualisierten Artikeln
 
 Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Artikel in anderen Themenbereichen innerhalb des gleichen GitHub-Repositorys: [MicrosoftDocs/sql-docs-pr](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Themenbereiche, die über neue oder kürzlich aktualisierte Artikel verfügen
 
-- [Neu + Aktualisiert (3+14): Dokumente zu **Advanced Analytics für SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (1+0): **Analysis Services for SQL** docs (Neu + Aktualisiert (1+0): Analysis Services für SQL-Dokumente)](../analysis-services/new-updated-analysis-services.md)
-- [Neu + Aktualisiert (87+0): Dokumente zu **Analyseplattformsystem für SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Neu + Aktualisiert (5+4): Dokumente zu **Herstellen einer Verbindung mit SQL**](../connect/new-updated-connect.md)
-- [Neu + Aktualisiert (0+1): Dokumente zum **Datenbankmodul für SQL**](../database-engine/new-updated-database-engine.md)
-- [Neu + Aktualisiert (2+2):Dokumente zu **Integration Services für SQL**](../integration-services/new-updated-integration-services.md)
-- [Neu + Aktualisiert (10+9): Dokumente zu **Linux für SQL**](../linux/new-updated-linux.md)
-- [Neu + Aktualisiert (2+4): Dokumente zu **Relationale Datenbanken für SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Neu + Aktualisiert (4+2): Dokumente zu **Reporting Services für SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Neu + Aktualisiert (0+1): Dokumente zu **Beispiele für SQL**](../sample/new-updated-sample.md)
-- [Neu + Aktualisiert (21+0): Dokumente zu **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Neu + Aktualisiert (5+1): Dokumente zu **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1): **SQL Server Data Tools (SSDT)** docs (Neu + Aktualisiert (0+1): SQL Server Data Tools-Dokumente (SSDT))](../ssdt/new-updated-ssdt.md)
-- [Neu + Aktualisiert (1+0): Dokumente zu **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
-- [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs (Neu + Aktualisiert (0+1): SQL Server Management Studio-Dokumente (SSMS))](../ssms/new-updated-ssms.md)
-- [Neu + Aktualisiert (0+2): Dokumente zu **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Themenbereiche, die *über* neue oder kürzlich aktualisierte Artikel verfügen
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Themenbereiche, die über keine neuen oder kürzlich aktualisierten Artikel verfügen
 
-- [Neu + Aktualisiert (0+0): Dokumente zu **Data Migration Assistant (DMA) für SQL**](../dma/new-updated-dma.md)
-- [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs (Neu + Aktualisiert (0+0): ActiveX Data Objects (ADO) für SQL-Dokumente)](../ado/new-updated-ado.md)
-- [New + Updated (0+0): **Data Quality Services for SQL** docs (Neu + Aktualisiert (0+0): Data Quality Services für SQL-Dokumente)](../data-quality-services/new-updated-data-quality-services.md)
-- [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs (Neu + Aktualisiert (0+0): Data Mining-Erweiterungen (DMX) für SQL)](../dmx/new-updated-dmx.md)
-- [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Master Data Services (MDS) für SQL)](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs (Neu + Aktualisiert (0+0): Mehrdimensionale Ausdrücke für SQL)](../mdx/new-updated-mdx.md)
-- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs (Neu + Aktualisiert (0+0): Open Database Connectivity für SQL-Dokumente)](../odbc/new-updated-odbc.md)
-- [New + Updated (0+0): **PowerShell for SQL** docs (Neu + Aktualisiert (0+0): PowerShell für SQL-Dokumente)](../powershell/new-updated-powershell.md)
-- [Neu + Aktualisiert (0+0): Dokumentation zu **Tools für SQL**](../tools/new-updated-tools.md)
-- [New + Updated (0+0): **XQuery for SQL** docs (Neu + Aktualisiert (0+0): XQuery für SQL-Dokumente)](../xquery/new-updated-xquery.md)
+- [Neu und aktualisiert (1+3):&nbsp;Dokumente zu **Advanced Analytics für SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Neu und aktualisiert (0+1):&nbsp;Dokumente zum **Analytics Platform System für SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Neu und aktualisiert (0+1):&nbsp;Dokumente zum **Herstellen einer Verbindung mit SQL**](../connect/new-updated-connect.md)
+- [Neu und aktualisiert (0+1):&nbsp;Dokumente zur **Datenbank-Engine für SQL**](../database-engine/new-updated-database-engine.md)
+- [Neu und aktualisiert (12+1): Dokumente zu **Integration Services für SQL**](../integration-services/new-updated-integration-services.md)
+- [Neu und aktualisiert (6+2):&nbsp;Dokumente zu **Linux für SQL**](../linux/new-updated-linux.md)
+- [Neu und aktualisiert (15+0): Dokumente zu **PowerShell für SQL**](../powershell/new-updated-powershell.md)
+- [Neu und aktualisiert (2+9):&nbsp;Dokumente zu **relationalen Datenbanken für SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Neu und aktualisiert (1+0):&nbsp;Dokumente zu **Reporting Services für SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Neu und aktualisiert (1+1):&nbsp;Dokumente zu **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Neu und aktualisiert (1+1):&nbsp;Dokumente zu **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Neu und aktualisiert (0+1):&nbsp;Dokumente zu **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Neu und aktualisiert (1+2):&nbsp;Dokumente zu **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Neu und aktualisiert (0+2):&nbsp;Dokumente zu **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Themenbereiche, die *nicht* über neue oder kürzlich aktualisierte Artikel verfügen
+
+
+- [Neu und aktualisiert (0+0): Dokumente zum **Data Migration Assistant (DMA) für SQL**](../dma/new-updated-dma.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **ActiveX Data Objects (ADO) für SQL**](../ado/new-updated-ado.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **Analysis Services für SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **Data Quality Services für SQL**](../data-quality-services/new-updated-data-quality-services.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **Data Mining-Erweiterungen (DMX) für SQL**](../dmx/new-updated-dmx.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **Master Data Services (MDS) für SQL**](../master-data-services/new-updated-master-data-services.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **mehrdimensionalen Ausdrücken für SQL**](../mdx/new-updated-mdx.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **ODBC (Open Database Connectivity) für SQL**](../odbc/new-updated-odbc.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **Beispielen für SQL**](../sample/new-updated-sample.md)
+- [Neu und aktualisiert (0+0): Dokumente zum **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **Tools für SQL**](../tools/new-updated-tools.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **XQuery für SQL**](../xquery/new-updated-xquery.md)
 
 

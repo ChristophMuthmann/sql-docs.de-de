@@ -9,18 +9,18 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: 7de515aa08ec73ff6c7b90e9a630e59ca6f71252
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 8644c6e061b0c1cdcd80d8c7cb25b8662eb7ae26
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>Active Directory-Authentifizierung mit SQLServer on Linux
 
@@ -157,7 +157,7 @@ Verwenden Sie die folgenden Schritte aus, um Verknüpfen einer [!INCLUDE[ssNoVer
   
 5. Stellen Sie sicher, dass Sie nun Informationen zu einem Benutzer aus der Domäne sammeln können, und ein Kerberos-Ticket als dieser Benutzer erhalten werden können.
 
-   We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
+   Im folgenden Beispiel wird **Id**,  **[Kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**, und  **[Klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)**  für diese Befehle.
 
    ```bash
    id user@contoso.com
@@ -182,7 +182,7 @@ Weitere Informationen finden Sie unter Red Hat-Dokumentation für [Ermitteln von
 ## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>Erstellen Sie AD-Benutzer für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und Festlegen des SPN
 
   > [!NOTE]
-  > In den nächsten Schritten verwenden wir Ihre [vollständig qualifizierten Domänennamen](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Bei **Azure**, müssen Sie  **[erstellen Sie eine](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  bevor Sie fortfahren.
+  > Die nächsten Schritte verwenden Ihre [vollständig qualifizierten Domänennamen](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Bei **Azure**, müssen Sie  **[erstellen Sie eine](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  bevor Sie fortfahren.
 
 1. Führen Sie auf dem Domänencontroller die [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell-Befehl, um einen neuen AD-Benutzer mit einem Kennwort zu erstellen, das nicht abläuft. In diesem Beispiel den Namen des Kontos "Mssql", aber der Kontoname kann alles gewünschte sein. Sie werden aufgefordert, ein neues Kennwort für das Konto einzugeben:
 
@@ -195,7 +195,7 @@ Weitere Informationen finden Sie unter Red Hat-Dokumentation für [Ermitteln von
    > [!NOTE]
    > Es ist eine bewährte Sicherheitsmethode, ein dediziertes AD-Konto für SQL Server zu verwenden, sodass SQL Server Anmeldeinformationen sind nicht mit anderen Diensten, die mit dem gleichen Konto gemeinsam verwendet. Jedoch können Sie ein vorhandenes AD-Konto wiederverwenden, wenn Sie dies bevorzugen, wenn Sie wissen, dass das Kennwort des Kontos (erforderlich, um eine Keytab-Datei im nächsten Schritt generieren).
 
-2. Legen Sie den ServicePrincipalName (SPN) für dieses Konto verwendet die `setspn.exe` Tool. Der SPN muss genau wie im folgenden Beispiel angegeben formatiert: finden Sie den vollqualifizierten Domänennamen des der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Hostcomputer durch Ausführen `hostname --all-fqdns` auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Host und den TCP-Port muss 1433, sofern Sie konfiguriert haben [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf eine andere Portnummer zu verwenden.
+2. Legen Sie den ServicePrincipalName (SPN) für dieses Konto verwendet die `setspn.exe` Tool. Der SPN muss genau wie im folgenden Beispiel angegeben formatiert werden. Finden Sie den vollqualifizierten Domänennamen des der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Hostcomputer Treiberdienst `hostname --all-fqdns` auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Host und den TCP-Port muss 1433, sofern Sie konfiguriert haben [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf eine andere Portnummer zu verwenden.
 
    ```PowerShell
    setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
@@ -218,7 +218,7 @@ Weitere Informationen finden Sie unter Red Hat-Dokumentation für [Ermitteln von
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. Erstellen Sie eine Keytab-Datei für den AD-Benutzer, den Sie im vorherigen Schritt erstellt haben. In diesem Fall werden wir verwenden  **[Ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**. Wenn Sie aufgefordert werden, geben Sie das Kennwort für das AD-Konto ein.
+2. Erstellen Sie eine Keytab-Datei mit  **[Ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**  für AD-Benutzer, die Sie im vorherigen Schritt erstellt haben. Wenn Sie aufgefordert werden, geben Sie das Kennwort für das AD-Konto ein.
 
    ```bash
    sudo ktutil
@@ -267,9 +267,9 @@ Weitere Informationen finden Sie unter Red Hat-Dokumentation für [Ermitteln von
 
 Melden Sie sich auf einen Clientcomputer über Ihre Domänenanmeldeinformationen an. Nachdem Sie eine Verbindung herstellen können [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ohne Ihr Kennwort mithilfe der AD-Authentifizierung her. Wenn Sie eine Anmeldung für eine AD-Gruppe erstellen, kann alle AD-Benutzer, die Mitglied dieser Gruppe ist auf die gleiche Weise verbinden.
 
-Die spezifische Verbindungszeichenfolgenparameter für Clients, die AD-Authentifizierung verwenden hängt ab, auf welcher Treiber verwenden. Einige Beispiele sind unten aufgeführt.
+Die spezifische Verbindungszeichenfolgenparameter für Clients, die AD-Authentifizierung verwenden hängt ab, auf welcher Treiber verwenden. Betrachten Sie die folgenden Beispiele:
 
-* `sqlcmd`auf einem Linux-Client Domäne
+* `sqlcmd` auf einem Linux-Client Domäne
 
    Melden Sie sich einer Domäne Linux-Client mit `ssh` und Anmeldeinformationen für die Domäne:
 

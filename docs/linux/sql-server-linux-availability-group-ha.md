@@ -1,11 +1,11 @@
 ---
 title: SQL Server AlwaysOn Availability Group-Bereitstellungsmuster | Microsoft Docs
-ms.custom: 
+ms.custom: sql-linux
 ms.date: 10/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d0f5fe75b65efbea49df143e573316b50675a93
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 25d20ff22474c8df65184cab9ddd0a9f1efb7a8c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen
 
@@ -70,7 +70,7 @@ Eine verfügbarkeitsgruppe mit drei synchroner Replikate bieten Skalieren von Le
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
 |Ausfall des primären Replikats | Manuelles Failover. Möglicherweise kommt es zu Datenverlusten. Neue primäre ist R / w. |Automatisches Failover. Neue primäre ist R / w. |Automatisches Failover. Neue primäre ist nicht verfügbar für Benutzertransaktionen, bis vorherigen primären wiederhergestellt und als sekundäre verfügbarkeitsgruppe verknüpft. 
 |Ausfall eines sekundären Replikats  | Ein Primärschlüssel ist R / w. Kein automatisches Failover, wenn das primäre schlägt fehl. |Ein Primärschlüssel ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Primäre ist nicht verfügbar für Benutzertransaktionen. 
-<sup>*</sup>Standardwert
+<sup>*</sup> Standardwert
 
 <a name="twoSynch"></a>
 
@@ -87,7 +87,7 @@ Eine verfügbarkeitsgruppe mit zwei synchronen Replikaten bietet Skalieren von L
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |Ausfall des primären Replikats | Manuelles Failover. Möglicherweise kommt es zu Datenverlusten. Neue primäre ist R / w.| Automatisches Failover. Neue primäre ist nicht verfügbar für Benutzertransaktionen, bis vorherigen primären wiederhergestellt und als sekundäre verfügbarkeitsgruppe verknüpft.
 |Ausfall eines sekundären Replikats  |Primäre ist R/W, läuft Sie ungeschützt zu Datenverlusten. |Primäre steht nicht für Benutzertransaktionen bis sekundären wiederhergestellt.
-<sup>*</sup>Standardwert
+<sup>*</sup> Standardwert
 
 >[!NOTE]
 >Die oben beschriebene Szenario ist das Verhalten vor SQL Server 2017 CU-1. 
@@ -117,7 +117,7 @@ Der Standardwert für `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` ist 0. In de
 |Ausfall des sekundären Replikats | Primäre ist R/W, läuft Sie ungeschützt zu Datenverlusten (falls der primäre schlägt fehl, und kann nicht wiederhergestellt werden). Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Primäre ist nicht verfügbar für Benutzertransaktionen. Kein Replikat für ein Failover, wenn das primäre schlägt auch fehl. 
 |Konfiguration nur Replikat Ausfall | Ein Primärschlüssel ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Ein Primärschlüssel ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. 
 |Synchrone sekundäre + -Konfiguration nur Replikat Ausfall| Primäre ist nicht verfügbar für Benutzertransaktionen. Kein automatisches Failover. | Primäre ist nicht verfügbar für Benutzertransaktionen. Kein Replikat für ein Failover aus, wenn auch primäre ein Fehler auftritt. 
-<sup>*</sup>Standardwert
+<sup>*</sup> Standardwert
 
 >[!NOTE]
 >Die Instanz von SQL Server, die die Konfiguration nur Replikat hostet, kann auch andere Datenbanken hosten. Sie können auch als eine einzige Konfigurationsdatenbank für mehr als eine verfügbarkeitsgruppe teilnehmen. 
@@ -142,7 +142,7 @@ Der Standardwert für `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` ist 0. In de
 
 ## <a name="understand-sql-server-resource-agent-for-pacemaker"></a>SQL Server-Agent-Ressource für Schrittmacher verstehen
 
-SQL Server 2017 CTP 1.4 hinzugefügt `sequence_number` auf `sys.availability_groups` ermöglichen Schrittmacher wie auf dem neuesten Stand sekundäre identifizieren Replikate, die mit dem primären Replikat sind. `sequence_number`ist eine monoton ansteigende "bigint", die Aktualität des lokalen verfügbarkeitsgruppenreplikats darstellt. Schrittmacher Updates der `sequence_number` mit jeder Availability Group-konfigurationsänderung. Beispiele für Änderungen an der Konfiguration sind Failover, Replikat hinzufügen oder entfernen. Die Anzahl der primären Datenbank aktualisiert, dann auf sekundäre Replikate repliziert. Daher hat ein sekundäres Replikat, das der aktuellen Konfiguration verfügt wie die primäre Datenbank die gleichen Sequenznummer. 
+SQL Server 2017 CTP 1.4 hinzugefügt `sequence_number` auf `sys.availability_groups` ermöglichen Schrittmacher wie auf dem neuesten Stand sekundäre identifizieren Replikate, die mit dem primären Replikat sind. `sequence_number` ist eine monoton ansteigende "bigint", die Aktualität des lokalen verfügbarkeitsgruppenreplikats darstellt. Schrittmacher Updates der `sequence_number` mit jeder Availability Group-konfigurationsänderung. Beispiele für Änderungen an der Konfiguration sind Failover, Replikat hinzufügen oder entfernen. Die Anzahl der primären Datenbank aktualisiert, dann auf sekundäre Replikate repliziert. Daher hat ein sekundäres Replikat, das der aktuellen Konfiguration verfügt wie die primäre Datenbank die gleichen Sequenznummer. 
 
 Wenn Schrittmacher entscheidet, die ein Replikat zur primären höher stufen, sendet er zuerst eine *vorab heraufstufen* Benachrichtigung an alle Replikate. Die Replikate zurück, die Sequenznummer. Als Nächstes Schrittmacher tatsächlich versucht, ein Replikat zur primären höher stufen, stuft das Replikat nur selbst wenn die Sequenznummer der höchsten die Sequenznummern ist. Wenn eine eigene Sequenznummer nicht mit die höchste Sequenznummer übereinstimmt, lehnt das Replikat den Promote-Vorgang ab. Auf diese Weise kann nur das Replikat mit der höchsten Sequenznummer zu einem primären heraufgestuft werden, sodass es nicht zu Datenverlust kommt. 
 
@@ -150,7 +150,7 @@ Dieser Prozess erfordert mindestens ein Replikat verfügbar, für die heraufstuf
 
 Z. B. eine verfügbarkeitsgruppe mit drei synchronen Replikaten - ein primäres Replikat und zwei synchrone sekundäre Replikate.
 
-- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`ist 1. (3 / 2-1 >).
+- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` ist 1. (3 / 2-1 >).
 
 - Die erforderliche Anzahl von Replikaten zu reagieren, um eine Aktion vorab zu erzielen, ist 2. (3: 1 = 2). 
 

@@ -1,6 +1,6 @@
 ---
 title: Installieren von SQL Server-Volltextsuche unter Linux | Microsoft Docs
-description: Dieses Thema beschreibt, wie SQL Server-Volltextsuche unter Linux zu installieren.
+description: Dieser Artikel beschreibt, wie SQL Server-Volltextsuche unter Linux zu installieren.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.workload: Inactive
-ms.openlocfilehash: 8b1f14ca454582ee85506cd68b07a38f17ada1b4
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 1ffb4caadffb8f292f6bd8e495a457fe86e9d641
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installieren von SQL Server-Volltextsuche unter Linux
 
@@ -36,7 +36,7 @@ Installieren Sie SQL Server-Volltextsuche für Ihre Plattform:
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-## <a name="RHEL">Installieren Sie auf dem RHEL</a>
+## <a name="RHEL">Installation unter RHEL</a>
 
 Verwenden Sie die folgenden Befehle zum Installieren der **Mssql-Server-Fts** unter Red Hat Enterprise Linux. 
 
@@ -51,7 +51,7 @@ sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-Eine offline-Installation, suchen Sie nach der Paketdownload "Volltextsuche" in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md). Verwenden Sie die gleichen Offlineinstallation Schritte in diesem Thema beschriebenen [Installieren von SQL Server](sql-server-linux-setup.md#offline).
+Eine offline-Installation, suchen Sie nach der Paketdownload "Volltextsuche" in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md). Verwenden Sie die gleichen Offlineinstallation Schritte, die im Artikel beschriebenen [Installieren von SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="ubuntu">Installieren Sie auf Ubuntu</a>
 
@@ -69,7 +69,7 @@ sudo apt-get update
 sudo apt-get install -y mssql-server-fts 
 ```
 
-Eine offline-Installation, suchen Sie nach der Paketdownload "Volltextsuche" in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md). Verwenden Sie die gleichen Offlineinstallation Schritte in diesem Thema beschriebenen [Installieren von SQL Server](sql-server-linux-setup.md#offline).
+Eine offline-Installation, suchen Sie nach der Paketdownload "Volltextsuche" in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md). Verwenden Sie die gleichen Offlineinstallation Schritte, die im Artikel beschriebenen [Installieren von SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="SLES">Installieren Sie auf SLES</a>
 
@@ -86,7 +86,7 @@ sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-Eine offline-Installation, suchen Sie nach der Paketdownload "Volltextsuche" in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md). Verwenden Sie die gleichen Offlineinstallation Schritte in diesem Thema beschriebenen [Installieren von SQL Server](sql-server-linux-setup.md#offline).
+Eine offline-Installation, suchen Sie nach der Paketdownload "Volltextsuche" in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md). Verwenden Sie die gleichen Offlineinstallation Schritte, die im Artikel beschriebenen [Installieren von SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="supported-languages"></a>Unterstützte Sprachen
 
@@ -148,7 +148,7 @@ Volltext-Suchdienst verwendet [wörtertrennungen](../relational-databases/search
 | Urdu | 1056 |
 | Vietnamesisch | 1066 |
 
-## <a id="filters"></a>Filter
+## <a id="filters"></a> Filter
 
 Volltextsuche funktioniert auch mit Text in binäre Dateien gespeichert. Aber in diesem Fall ein installierten Filter zum Verarbeiten der Datei erforderlich ist. Weitere Informationen zu Filtern finden Sie unter [konfigurieren und Verwalten von Filtern für die Suche](../relational-databases/search/configure-and-manage-filters-for-search.md).
 

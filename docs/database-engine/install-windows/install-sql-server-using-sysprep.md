@@ -17,15 +17,17 @@ caps.latest.revision:
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 87615ca4a3601ab92b37e97a8392b392accb1695
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e538fc7315661cf76dc807cb54cbd0d518cb8603
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-with-sysprep"></a>Installieren von SQL Server mit SysPrep
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Auf Aktionen zum Setup von 
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep können Sie über das Installationscenter zugreifen. Die Seite **Erweitert** des **Installationscenters** enthält zwei Optionen - **Vorbereiten eines Images von einer eigenständigen Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** und **Abschließen eines Images von einer vorbereiteten eigenständigen Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. In den Abschnitten zum [Vorbereiten](#prepare) und [Abschließen](#complete) wird der Installationsvorgang detailliert beschrieben. Weitere Informationen finden Sie unter [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep können Sie über das Installationscenter zugreifen. Die Seite **Erweitert** des **Installationscenters** enthält zwei Optionen - **Vorbereiten eines Images von einer eigenständigen Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** und **Abschließen eines Images von einer vorbereiteten eigenständigen Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. In den Abschnitten zum [Vorbereiten](#prepare) und [Abschließen](#complete) wird der Installationsvorgang detailliert beschrieben. Weitere Informationen finden Sie unter [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
   
 Sie können außerdem eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe der Eingabeaufforderung oder einer Konfigurationsdatei vorbereiten und abschließen. Weitere Informationen finden Sie in den folgenden Themen:  
   
@@ -34,7 +36,7 @@ Sie können außerdem eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssn
 - [Installieren von SQL Server mithilfe einer Konfigurationsdatei](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
-Bevor Sie die Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]durchführen, lesen Sie die Themen unter [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md). 
+Bevor Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installieren, lesen Sie die Artikel in [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md). 
   
 Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen sowie Hardware- und Softwareanforderungen finden Sie unter [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 
     
@@ -133,7 +135,7 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 15. Während der Installation wird auf der Seite **Status der Imagevorbereitung** der Status angezeigt, sodass Sie während der Ausführung von Setup den Installationsstatus überwachen können. 
   
-16. Nach der Installation bietet die Seite **Abgeschlossen** einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf Schließen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um die Installation von **abzuschließen**. 
+16. Nach der Installation bietet die Seite **Abgeschlossen** einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf **Schließen** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um die Installation von abzuschließen. 
   
 17. Starten Sie den Computer neu, falls Sie dazu aufgefordert werden. Wenn Sie den Setupvorgang abgeschlossen haben, sollten Sie unbedingt die vom Installations-Assistenten angezeigte Meldung lesen. Weitere Informationen finden Sie unter [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md). 
   
@@ -174,7 +176,7 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
      **Installierte Instanzen** – Im Raster werden Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angezeigt, die sich auf dem Computer befinden, auf dem Setup ausgeführt wird. 
   
-10. Der Ablauf für die weiteren Vorgänge dieses Themas ist von den Funktionen abhängig, die Sie während des Vorbereitungsschritts ausgewählt haben. Je nach Auswahl werden möglicherweise nicht alle Seiten angezeigt. 
+10. Der Ablauf für die weiteren Vorgänge in diesem Artikel richtet sich nach den Funktionen, die Sie während des Vorbereitungsschritts ausgewählt haben. Je nach Auswahl werden möglicherweise nicht alle Seiten angezeigt. 
   
 11. Geben Sie auf der Seite **Serverkonfiguration – Dienstkonten** Anmeldekonten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste an. Welche Dienste tatsächlich auf dieser Seite konfiguriert werden, ist von den Funktionen abhängig, die Sie für die Installation ausgewählt haben. 
   
@@ -302,7 +304,7 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 10. Wiederholen Sie die Schritte 1 bis 9, bis alle Komponenten von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] entfernt wurden. 
   
 ##  <a name="bk_Modifying_Uninstalling"></a> Ändern oder Deinstallieren einer abgeschlossenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
- Das Verfahren zum Hinzufügen oder Entfernen von Funktionen sowie zum Deinstallieren einer abgeschlossenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ähnelt dem Verfahren für eine installierte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie in folgenden Themen:  
+ Das Verfahren zum Hinzufügen oder Entfernen von Funktionen sowie zum Deinstallieren einer abgeschlossenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ähnelt dem Verfahren für eine installierte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie in den folgenden Artikeln:  
   
 - [Add Features to an Instance of SQL Server &#40;Setup&#41; (Hinzufügen von Funktionen zu einer Instanz von SQL Server &#40;Setup&#41;)](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  
   

@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
-ms.openlocfilehash: d3abecd450bbb734304c8c04909c38ae216595ad
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 36834e634f26e7918b6577379c24b9914d41f308
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Betreiben von Red Hat Enterprise Linux freigegebene Datenträgercluster für SQL Server
 
@@ -41,7 +41,7 @@ Das folgende Diagramm veranschaulicht die Komponenten in einem Linux-Cluster mit
 
 ![Red Hat Enterprise Linux 7 freigegebene Datenträgercluster für SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Weitere Informationen zur Clusterkonfiguration, Agents Ressourcenoptionen und Verwaltung, finden Sie auf [RHEL Referenzdokumentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Weitere Informationen zu Clusterkonfiguration, Optionen für Agents und Management finden Sie auf [RHEL Referenzdokumentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 ## <a name = "failManual"></a>Failovercluster manuell
 
@@ -73,7 +73,7 @@ Live Status der Cluster und Ressourcen anzeigen:
 sudo crm_mon 
 ```
 
-Die Ressource-Agent-Protokolle im anzeigen`/var/log/cluster/corosync.log`
+Die Ressource-Agent-Protokolle im anzeigen `/var/log/cluster/corosync.log`
 
 ## <a name="add-a-node-to-a-cluster"></a>Hinzufügen eines Knotens zu einem cluster
 
@@ -105,7 +105,7 @@ Die Ressource-Agent-Protokolle im anzeigen`/var/log/cluster/corosync.log`
 
 1. Führen Sie die Anweisungen, um das datenbankdateiverzeichnis auf den freigegebenen Speicherort bereitstellen:
 
-   Von den NFS-Server installieren`nfs-utils`
+   Von den NFS-Server installieren `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils 
@@ -224,7 +224,7 @@ PCSD muss ausgeführt werden, damit verwenden `pcs` Tools.
 
 ### <a name="current-cluster-status"></a>Aktueller Clusterstatus 
 
-`sudo pcs status`grundlegende Informationen zu den Cluster, Quorum-Knoten, Ressourcen und Daemon-Status für jeden Knoten zurückgegeben. 
+`sudo pcs status` grundlegende Informationen zu den Cluster, Quorum-Knoten, Ressourcen und Daemon-Status für jeden Knoten zurückgegeben. 
 
 Ein Beispiel für eine fehlerfreie Schrittmacher Quorum Ausgabe würde folgendermaßen lauten:
 
@@ -253,9 +253,9 @@ pacemaker: active/enabled
 
 Im Beispiel `partition with quorum` bedeutet, dass die meisten Quorums der Knoten online ist. Wenn der Cluster die Mehrheit Quorums der Knoten, verliert `pcs status` zurück `partition WITHOUT quorum` und alle Ressourcen beendet. 
 
-`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]`Gibt den Namen aller Knoten, die derzeit Teil des Clusters zurück. Wenn keine Knoten beteiligt sind, `pcs status` gibt `OFFLINE: [<nodename>]`.
+`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` Gibt den Namen aller Knoten, die derzeit Teil des Clusters zurück. Wenn keine Knoten beteiligt sind, `pcs status` gibt `OFFLINE: [<nodename>]`.
 
-`PCSD Status`Zeigt das Cluster den Status für jeden Knoten an.
+`PCSD Status` Zeigt das Cluster den Status für jeden Knoten an.
 
 ### <a name="reasons-why-a-node-may-be-offline"></a>Gründe, warum ein Knoten offline geschaltet werden kann
 

@@ -1,25 +1,20 @@
 ---
 title: "Aktualisiert – Dokumentation zu relationalen Datenbanken | Microsoft-Dokumentation"
 description: "Zeigen Sie Codeausschnitte von aktualisierten Inhalten in der zuletzt geänderten Dokumentation zu relationale Datenbanken an."
-services: na
-documentationcenter: 
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: BYHAM
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.workload: relational-databases
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
 ms.author: genemi
-ms.openlocfilehash: 1fbc7affa833eb34b6e13e28b229d47ac0b05a5c
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: relational-databases
+ms.date: 02/03/2018
+ms.openlocfilehash: 38f9ee55137c54adddb07fbe9f3b74dd43d51a3a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>Neu und zuletzt aktualisiert: Dokumentation zu relationalen Datenbanken
 
@@ -33,7 +28,7 @@ Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeld
 
 
 
-- *Datumsbereich des Updates*: &nbsp; **28.09.2017** &nbsp; – bis – &nbsp; **02.12.2017**
+- *Datumsbereich des Updates:* &nbsp; **3.12.2017** &nbsp; bis &nbsp; **3.2.2018**
 - *Themenbereich:* &nbsp; **Relationale Datenbanken**
 
 
@@ -46,8 +41,8 @@ Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeld
 Die folgenden Links leiten Sie zu den neuen Artikeln weiter, die erst kürzlich erstellt wurden.
 
 
-1. [Verwenden des SSMS XEvent Profilers](extended-events/use-the-ssms-xe-profiler.md)
-2. [Import Flat File to SQL Wizard (Assistent zum Importieren von Flatfiles in SQL)](import-export/import-flat-file-wizard.md)
+1. [Speichern von JSON-Dokumenten in SQL Server oder SQL-Datenbank](json/store-json-documents-in-sql-tables.md)
+2. [Sicherheitsrisikobewertung mit der SQL](security/sql-vulnerability-assessment.md)
 
 
 
@@ -73,10 +68,15 @@ Kopieren Sie aus diesem und anderen Gründen auf gar keinen Fall Code aus diesen
 
 Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Abschnitt Auszüge aufgeführt sind.
 
-1. [tempdb-Datenbank](#TitleNum_1)
-2. [Handbuch zur Architektur der Speicherverwaltung](#TitleNum_2)
-3. [Statistik](#TitleNum_3)
-4. [sp_server_diagnostics (Transact-SQL)](#TitleNum_4)
+1. [Datenbankdatei-Initialisierung](#TitleNum_1)
+2. [tempdb-Datenbank](#TitleNum_2)
+3. [JSON-Daten in SQL Server](#TitleNum_3)
+4. [Lektion 1: Herstellen einer Verbindung mit dem Datenbankmodul](#TitleNum_4)
+5. [Verwalten der Größe der Transaktionsprotokolldatei](#TitleNum_5)
+6. [bcp_bind](#TitleNum_6)
+7. [Handbuch zum SQL Server Indexentwurf](#TitleNum_7)
+8. [sp_execute_external_script (Transact-SQL)](#TitleNum_8)
+9. [Erstellen von Primärschlüsseln](#TitleNum_9)
 
 
 
@@ -87,39 +87,32 @@ Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Absch
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-tempdb-databasedatabasestempdb-databasemd"></a>1. &nbsp; [tempdb-Datenbank](databases/tempdb-database.md)
+### <a name="1-nbsp-database-file-initializationdatabasesdatabase-instant-file-initializationmd"></a>1. &nbsp; [Datenbankdatei-Initialisierung](databases/database-instant-file-initialization.md)
 
-*Aktualisiert: 20.11.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Weiter](#TitleNum_2))
+*Aktualisiert: 23.1.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Weiter](#TitleNum_2))
 
-<!-- Source markdown line 121.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 81.  ms.author= "sstein".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 5c8bb5f9c40625aaf955295e5b5d03e4257e6c6b 337555ea28f4c3fdd6b78f1bfb4d62607a6bf92d  (PR=4039  ,  Filename=tempdb-database.md  ,  Dirpath=docs\relational-databases\databases\  ,  MergeCommitSha40=ef1fa818beea435f58986af3379853dc28f5efd8) -->
+<!-- git diff --ignore-all-space --unified=0 c5f2aa53a8b43d4c43e0602cf945cb7c7028a27d 04c261c6588af1f53cda2fce3e9a86167c50b686  (PR=4702  ,  Filename=database-instant-file-initialization.md  ,  Dirpath=docs\relational-databases\databases\  ,  MergeCommitSha40=3206a31870f8febab7d1718fa59fe0590d4d45db) -->
 
 
 
-**Optimieren der Leistung von tempdb**
-
- Die Größe und die physische Platzierung der tempdb-Datenbank können sich auf die Leistung eines Systems auswirken. Wurde für tempdb beispielsweise eine zu kleine Größe definiert, muss bei jedem Neustart der ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)]-Instanz möglicherweise ein Teil der Verarbeitungslast des Systems dafür aufgewendet werden, die tempdb-Datenbank automatisch auf den Umfang zu vergrößern, der zum Unterstützen der anfallenden Arbeitsauslastung erforderlich ist.
-
- Verwenden Sie möglichst [database instant file initialization--../../relational-databases/databases/database-instant-file-initialization.md), um die Leistung der Vorgänge zur Datendateivergrößerung zu verbessern.
-
- Weisen Sie allen tempdb-Dateien im Voraus Speicherplatz zu, indem Sie die Dateigröße auf einen Wert festlegen, der hoch genug ist, um der typischen Arbeitsauslastung in der Umgebung gerecht zu werden. Dadurch verhindern Sie, dass die tempdb-Datenbank zu häufig vergrößert wird, was zu Leistungseinbußen führen kann. Für die tempdb-Datenbank sollte die automatische Vergrößerung festgelegt werden, jedoch nur für den Fall eines zusätzlichen Speicherplatzbedarfs für nicht geplante Ausnahmen.
-
- Datendateien sollten in jeder [filegroup--../../relational-databases/databases/database-files-and-filegroups.md#filegroups) die gleiche Größe haben, weil in ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] ein Algorithmus mit proportionalem Füllen verwendet wird, in dem Zuteilungen in Dateien mit mehr Platz bevorzugt werden. Ein Aufteilen von tempdb in mehrere Datendateien gleicher Größe bietet einen hohen Grad an paralleler Effizienz in Vorgängen, in denen tempdb verwendet wird.
-
- Legen Sie das Inkrement für die Dateivergrößerung auf eine sinnvolle Größe fest, sodass der Zuwachs der tempdb-Datenbank nicht zu gering ausfällt. Wenn der Dateizuwachs im Vergleich zur Anzahl der Daten, die in die tempdb-Datenbank geschrieben werden, zu gering ist, muss tempdb möglicherweise ständig vergrößert werden. Dies beeinträchtigt die Leistung.
-
- Um die aktuelle Größe von tempdb und die aktuellen Größenzuwachsparameter zu überprüfen, führen Sie die folgende Abfrage aus:
-```sql
- SELECT name AS FileName,
-    size*1.0/128 AS FileSizeinMB,
-    CASE max_size
-        WHEN 0 THEN 'Autogrowth is off.'
-        WHEN -1 THEN 'Autogrowth is on.'
 ```
+Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
+```
+
+**Gilt für:** SQL Server (ab SQL Server 2012 SP4, SQL Server 2014 SP2 und von SQL Server 2016 bis SQL Server 2017)
+
+**Überlegungen zur Sicherheit**
+
+Da bei Verwendung der schnellen Dateiinitialisierung (Instant File Initialization, IFI) der gelöschte Datenträgerinhalt nur überschrieben wird, wenn neue Daten in die Dateien geschrieben werden, kann ein nicht autorisierter Prinzipal möglicherweise so lange auf den gelöschten Inhalt zugreifen, bis andere Daten in diesen Bereich der Datendatei geschrieben werden. Während die Datenbankdatei an die Instanz von SQL Server angefügt ist, wird diese Gefahr einer Offenlegung von Informationen durch die besitzerverwaltete Zugriffssteuerungsliste (Discretionary Access Control List, DACL) in der Datei verringert. Diese DACL gewährt den Dateizugriff nur für das SQL Server-Dienstkonto und den lokalen Administrator. Wenn die Datei jedoch getrennt wird, kann möglicherweise ein Benutzer oder Dienst darauf zugreifen, der nicht über SE\_MANAGE\_VOLUME_NAME verfügt. Eine ähnliche Betrachtung ergibt sich bei der Sicherung der Datenbank: Der gelöschte Inhalt kann für einen nicht autorisierten Benutzer oder Dienst verfügbar werden, wenn die Sicherungsdatei nicht mit einer entsprechenden DACL geschützt wird.
+
+Außerdem kann es sein, dass ein SQL Server-Administrator Zugriff auf die grundlegenden Inhalte der Seite und bereits gelöschte Inhalte erhält, wenn eine Datei über die schnelle Dateiinitialisierung erstellt wird.
+
+Wenn die Datenbankdateien auf einem Storage Area Network gehostet werden, kann es außerdem sein, dass das Storage Area Network neue Seiten immer als vorinitialisiert anzeigt und die Vorinitialisierung der Seiten durch das Betriebssystem würde einen unnötigen zeitlichen Mehraufwand bedeuten.
 
 
 
@@ -131,27 +124,47 @@ Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Absch
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-memory-management-architecture-guidememory-management-architecture-guidemd"></a>2. &nbsp; [Handbuch zur Architektur der Speicherverwaltung](memory-management-architecture-guide.md)
+### <a name="2-nbsp-tempdb-databasedatabasestempdb-databasemd"></a>2. &nbsp; [tempdb-Datenbank](databases/tempdb-database.md)
 
-*Aktualisiert: 28.11.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Zurück](#TitleNum_1) | [Weiter](#TitleNum_3))
+*Aktualisiert: 17.1.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_1) | [Nächster](#TitleNum_3))
 
-<!-- Source markdown line 75.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 100.  ms.author= "sstein".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 dd47431ca47eab16af40e41adaeeaf3fc5fb7461 445f013af3bdad65dd3eaf837db7f744b43e8f97  (PR=4113  ,  Filename=memory-management-architecture-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=28cccac53767db70763e5e705b8cc59a83c77317) -->
+<!-- git diff --ignore-all-space --unified=0 337555ea28f4c3fdd6b78f1bfb4d62607a6bf92d 3257c92d6e2a88968fc44e5f6262c02cd0624635  (PR=0  ,  Filename=tempdb-database.md  ,  Dirpath=docs\relational-databases\databases\  ,  MergeCommitSha40=45e6082acc29ba306525e7c08d2c22cc2b86eec3) -->
 
 
 
-In früheren Versionen von SQL Server (..!NCLUDE-NotShown--ssVersion2005--../includes/ssversion2005-md.md)], ..!NCLUDE-NotShown--ssKatmai--../includes/ssKatmai-md.md)] und ..!NCLUDE-NotShown--ssKilimanjaro--../includes/ssKilimanjaro-md.md)]) gibt es fünf unterschiedliche Mechanismen zur Speicherbelegung:
--  **Einzelseitenbelegung (Single-page Allocator, SPA)**, die im ..!NCLUDE-NotShown--ssNoVersion--../includes/ssnoversion-md.md)]-Prozess nur Speicherbelegungen umfasst, die kleiner als oder gleich 8 KB sind. Die Konfigurationsoptionen *Max. Serverarbeitsspeicher (MB)* und *Min. Serverarbeitsspeicher (MB)* bestimmten die Grenzen des vom SPA verbrauchten physischen Arbeitsspeichers. Der Pufferpool bildete zugleich den Mechanismus für SPA und den größten Verbraucher für Einzelseitenbelegungen.
--  **Mehrseitenbelegung (Multi-Page Allocator, MPA)**, für Speicherbelegungen, die mehr als 8 KB erfordern.
--  **CLR-Belegung**, einschließlich des SQL CLR-Heaps und dessen globaler Belegungen, die während der CLR-Initialisierung erstellt werden.
--  Speicherbelegungen für **[thread stacks--../relational-databases/memory-management-architecture-guide.md#stacksizes)** im ..!NCLUDE-NotShown--ssNoVersion--../includes/ssnoversion-md.md)]-Prozess.
--  **Direkte Windows-Belegungen (Direct Windows allocations, DWA)** für Speicherbelegungsanforderungen, die direkt an Windows gerichtet sind. Dazu gehören die Windows-Heapnutzung und direkte virtuelle Belegungen von Modulen, die in den ..!NCLUDE-NotShown--ssNoVersion--../includes/ssnoversion-md.md)]-Prozess geladen werden. Beispiele für solche Speicherbelegungsanforderungen beinhalten Belegungen von DLLs erweiterter gespeicherter Prozeduren, Objekte, die mithilfe von Automatisierungsprozeduren (sp_OA-Aufrufen) erstellt werden, und Belegungen von verknüpften Serveranbietern.
+ Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE SET-Optionen (Transact-SQL)](databases/../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
-Seit ..!NCLUDE-NotShown--ssSQL11--../includes/sssql11-md.md)] sind alle Einzelseitenbelegungen, Mehrseitenbelegungen und CLR-Belegungen in einer **Seitenbelegung beliebiger Größe** konsolidiert, die in den Speichergrenzwerten enthalten ist, die durch die Konfigurationsoptionen *Max. Serverarbeitsspeicher (MB)* und *Min. Serverarbeitsspeicher (MB)* gesteuert werden. Diese Änderung ermöglichte eine genauere Dimensionierung für alle Arbeitsspeicheranforderungen, die vom ..!NCLUDE-NotShown--ssNoVersion--../includes/ssnoversion-md.md)]-Speicher-Manager verarbeitet werden.
+**tempdb-Datenbank in SQL-Datenbank**
+
+
+|SLO|Maximale Dateigröße für tempdb-Daten (MB)|Anzahl von tempdb-Datendateien|Maximale Datengröße für tempdb (MB)|
+|---|---:|---:|---:|
+|Standard|14,225|1|14,225|
+|S0|14,225|1|14,225|
+|S1|14,225|1|14,225|
+|S2|14,225| 1|14,225|
+|S3|32,768|1|32,768|
+|S4|32,768|2|65,536|
+|S6|32,768|3|98,304|
+|S7|32,768|6|196,608|
+|S9|32,768|12|393,216|
+|S12|32,768|12|393,216|
+|P1|32,768|12|393,216|
+|P2|32,768|12|393,216|
+|P4|32,768|12|393,216|
+|P6|32,768|12|393,216|
+|P11|32,768|12|393,216|
+|P15|32,768|12|393,216|
+|Elastischer Premium-Pool (alle DTU-Konfigurationen)|14,225|12|170,700|
+|Elastischer Standard-Pool (alle DTU-Konfigurationen)|14,225|12|170,700|
+|Elastischer Basic-Pool (alle DTU-Konfigurationen)|14,225|12|170,700|
+||||
+
 
 
 
@@ -163,28 +176,40 @@ Seit ..!NCLUDE-NotShown--ssSQL11--../includes/sssql11-md.md)] sind alle Einzelse
 
 <a name="TitleNum_3"/>
 
-### <a name="3-nbsp-statisticsstatisticsstatisticsmd"></a>3. &nbsp; [Statistik](statistics/statistics.md)
+### <a name="3-nbsp-json-data-in-sql-serverjsonjson-data-sql-servermd"></a>3. &nbsp; [JSON-Daten in SQL Server](json/json-data-sql-server.md)
 
-*Aktualisiert: 27.11.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Zurück](#TitleNum_2) | [Weiter](#TitleNum_4))
+*Aktualisiert: 1.2.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_2) | [Nächster](#TitleNum_4))
 
-<!-- Source markdown line 48.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 233.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 1dbe3bd6fdfcd27cf4a597cac5a4a09821b51ba7 971cfccf75fbc8842a0ef020a2bc93992c5f4ad9  (PR=4087  ,  Filename=statistics.md  ,  Dirpath=docs\relational-databases\statistics\  ,  MergeCommitSha40=9fbe5403e902eb996bab0b1285cdade281c1cb16) -->
+<!-- git diff --ignore-all-space --unified=0 62dd9c68d8cb72d6bf51b941a0731224514f0a7f 19e276637a463b412f2c29a84f9fb7d0b0f5fcc5  (PR=4783  ,  Filename=json-data-sql-server.md  ,  Dirpath=docs\relational-databases\json\  ,  MergeCommitSha40=73f18ae24a9a48234bf997ee9a2ef441bc4918b9) -->
 
 
 
-> [!NOTE]
-> Histogramme in ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] werden nur für eine einzelne Spalte oder die erste Spalte aus der Gruppe der Schlüsselspalten des Statistik-Objekts erstellt.
+-   [Load GeoJSON data into SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/loading-geojson-data-into-sql-server/)
 
-Zum Erstellen des Histogramms sortiert der Abfrageoptimierer die Spaltenwerte, berechnet die Anzahl der Werte, die den einzelnen unterschiedlichen Spaltenwerten entsprechen, und aggregiert die Spaltenwerte dann in maximal 200 zusammenhängenden Histogrammschritten. Jeder Histogrammschritt umfasst einen Bereich von Spaltenwerten gefolgt von einem oberen Spaltengrenzwert. Der Bereich enthält alle möglichen Spaltenwerte zwischen den Begrenzungswerten, ohne die Begrenzungswerte selbst. Der niedrigste der sortierten Spaltenwerte ist der obere Grenzwert für den ersten Histogrammschritt.
+**Analysieren von JSON-Daten mit SQL-Abfragen**
 
-Ausführlicher formuliert heißt das, ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] erstellt das **Histogramm** aus den sortierten Spaltenwerten in drei Schritten:
+Wenn Sie JSON-Daten für Berichtszwecke filtern oder aggregieren müssen, können Sie JSON mithilfe von **OPENJSON** in ein relationales Format transformieren. Sie können dann Standard-Transact-SQL-Funktionen oder integrierte Funktionen verwenden, um die Berichte vorzubereiten.
 
-- **Initialisierung des Histogramms:** Im ersten Schritt wird eine Wertesequenz verarbeitet, die am Anfang der sortierten Menge beginnt, und bis zu 200 Werte von *range_high_key*, *equal_rows*, *range_rows*, und *distinct_range_rows* werden erfasst (*range_rows* und *distinct_range_rows* sind während dieses Schritts immer 0). Der erste Schritt ist abgeschlossen, wenn alle Eingaben erschöpft sind oder 200 Werte gefunden wurden.
-- **Scannen mit Bucketzusammenführung:** Jeder zusätzliche Wert aus der führenden Spalte des Statistikschlüssels wird im zweiten Schritt in sortierter Reihenfolge verarbeitet. Jeder nachfolgende Wert wird entweder zum letzten Bereich hinzugefügt, oder es wird am Ende ein neuer Bereich erstellt (dies ist möglich, da die Eingabewerte sortiert sind). Wenn ein neuer Bereich erstellt wird, wird ein Paar der vorhandenen benachbarten Bereiche zu einem einzelnen Bereich reduziert. Dieses Bereichspaar wird ausgewählt, um den Verlust von Informationen zu minimieren. Diese Methode verwendet einen Algorithmus für die *maximale Differenz*, um die Anzahl von Schritten im Histogramm zu minimieren und gleichzeitig die Differenz zwischen den Begrenzungswerten zu maximieren. Die Anzahl von Schritten nach dem Reduzieren von Bereichen bleibt in diesem Schritt bei 200.
+```
+SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date
+FROM   SalesOrderRecord AS Tab
+          CROSS APPLY
+     OPENJSON (Tab.json, N'$.Orders.OrdersArray')
+           WITH (
+              Number   varchar(200) N'$.Order.Number',
+              Date     datetime     N'$.Order.Date',
+              Customer varchar(200) N'$.AccountNumber',
+              Quantity int          N'$.Item.Quantity'
+           )
+  AS SalesOrderJsonData
+WHERE JSON_VALUE(Tab.json, '$.Status') = N'Closed'
+ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
+```
 
 
 
@@ -196,54 +221,291 @@ Ausführlicher formuliert heißt das, ..!NCLUDE-NotShown--ssNoVersion--../../inc
 
 <a name="TitleNum_4"/>
 
-### <a name="4-nbsp-spserverdiagnostics-transact-sqlsystem-stored-proceduressp-server-diagnostics-transact-sqlmd"></a>4. &nbsp; [sp_server_diagnostics (Transact-SQL)](system-stored-procedures/sp-server-diagnostics-transact-sql.md)
+### <a name="4-nbsp-lesson-1-connecting-to-the-database-enginelesson-1-connecting-to-the-database-enginemd"></a>4. &nbsp; [Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine](lesson-1-connecting-to-the-database-engine.md)
 
-*Aktualisiert: 21.11.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Zurück](#TitleNum_3))
+*Aktualisiert: 13.12.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_3) | [Nächster](#TitleNum_5))
 
-<!-- Source markdown line 157.  ms.author= "edmaca".  -->
+<!-- Source markdown line 79.  ms.author= "rickbyh".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 d0d97efbb0b16638d0120af9ac5e66ec3bcfa391 b98735ec26a091f8c8c58ca1790243be7942e038  (PR=4052  ,  Filename=sp-server-diagnostics-transact-sql.md  ,  Dirpath=docs\relational-databases\system-stored-procedures\  ,  MergeCommitSha40=45e4efb7aa828578fe9eb7743a1a3526da719555) -->
+<!-- git diff --ignore-all-space --unified=0 3c070935895450fd2ea054e2be9e1c48f7dc2b6c 0c386e3d47fb7f8f1e63b9301f0cafec2bc88ab0  (PR=4282  ,  Filename=lesson-1-connecting-to-the-database-engine.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=6e016a4ffd28b09456008f40ff88aef3d911c7ba) -->
 
 
 
-Die nachstehende Beispielabfrage liest die Zusammenfassungsausgabe aus der Tabelle:
-```sql
-SELECT create_time,
-       component_name,
-       state_desc
-FROM SpServerDiagnosticsResult;
+2.  Wählen Sie **Datenbankmodul**aus.
+
+    ![Objekt-Explorer](../relational-databases/media/object-explorer.png)
+
+3.  Geben Sie im Feld **Servername** den Namen der Instanz der Datenbank-Engine ein. Bei der Standardinstanz von SQL Server ist der Servername der Name des Computers. Bei einer benannten Instanz von SQL Server ist der Servername der *<Computername>***\\***<Instanzname>*, wie z.B. **ACCTG_SRVR\SQLEXPRESS**. Der folgende Screenshot zeigt das Herstellen einer Verbindung mit der (unbenannten) Standardinstanz von SQL Server auf einem Computer namens „PracticeComputer“. Der Benutzer, der bei Windows angemeldet ist, ist Mary aus der Domain „Contoso“. Bei Verwendung der Windows-Authentifizierung können Sie den Benutzernamen nicht ändern.
+
+    ![Verbindung-mit-Server-herstellen](../relational-databases/media/connect-to-server.png)
+
+4.  Klicken Sie auf **Verbinden**.
+
+> [!NOTE]
+> In diesem Tutorial wird davon ausgegangen, dass Sie noch keine Vorkenntnisse zu SQL Server besitzen und keine besonderen Probleme beim Herstellen einer Verbindung haben. Dies sollte für die meisten Benutzer ausreichen, und so wird das Tutorial einfach gehalten. Detaillierte Schritte zur Fehlerbehebung finden Sie unter [Beheben von Verbindungsfehlern mit dem SQL Server-Datenbankmodul](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
+
+**<a name="additional"></a>Autorisieren zusätzlicher Verbindungen**
+
+Nachdem Sie als Administrator eine Verbindung mit SQL Server hergestellt haben, besteht eine Ihrer ersten Aufgaben darin, andere Benutzer zum Herstellen einer Verbindung zu autorisieren. Dazu erstellen Sie eine Anmeldung und erteilen dieser Anmeldung die Berechtigung, als Benutzer auf eine Datenbank zuzugreifen. Anmeldungen können über die Windows-Authentifizierung erfolgen, die Windows-Anmeldeinformationen verwendet, oder über die SQL Server-Authentifizierung, die Authentifizierungsinformationen in SQL Server speichert und von Ihren Windows-Anmeldeinformationen unabhängig ist. Verwenden Sie nach Möglichkeit immer Windows-Authentifizierung.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_5"/>
+
+### <a name="5-nbsp-manage-the-size-of-the-transaction-log-filelogsmanage-the-size-of-the-transaction-log-filemd"></a>5. &nbsp; [Verwalten der Größe der Transaktionsprotokolldatei](logs/manage-the-size-of-the-transaction-log-file.md)
+
+*Aktualisiert: 17.1.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_4) | [Nächster](#TitleNum_6))
+
+<!-- Source markdown line 105.  ms.author= "jhubbard".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 5847b31cf8f6003a380f0c8aaa289efdc55be678 84e45320d81db218cde17fbf8b9668a9ac3805a7  (PR=0  ,  Filename=manage-the-size-of-the-transaction-log-file.md  ,  Dirpath=docs\relational-databases\logs\  ,  MergeCommitSha40=45e6082acc29ba306525e7c08d2c22cc2b86eec3) -->
+
+
+
+-   Ein kleines Vergrößerungsinkrement könnte dazu führen, dass zu viele kleine [VLFs](logs/../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) generiert werden und die Leistung beeinträchtigt wird. Informationen darüber, wie Sie die optimale VLF-Verteilung für die aktuelle Größe des Transaktionsprotokolls aller Datenbanken in einer bestimmten Instanz sowie die benötigten Wachstumsinkremente zum Erreichen der erforderlichen Größe ermitteln, finden Sie in [diesem Skript](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+
+-   Ein großes Vergrößerungsinkrement könnte dazu führen, dass wenige große [VLFs](logs/../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) generiert werden und darüber hinaus die Leistung beeinträchtigt. Informationen darüber, wie Sie die optimale VLF-Verteilung für die aktuelle Größe des Transaktionsprotokolls aller Datenbanken in einer bestimmten Instanz sowie die benötigten Wachstumsinkremente zum Erreichen der erforderlichen Größe ermitteln, finden Sie in [diesem Skript](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+
+-   Auch bei aktiviertem autogrow-Inkrement können Sie eine Meldung erhalten, dass das Transaktionsprotokoll voll ist, wenn es nicht schnell genug wachsen kann, um die Anforderungen Ihrer Abfrage zu erfüllen. Weitere Informationen zum Ändern des Vergrößerungsinkrements finden Sie unter [ALTER DATABASE-Optionen FILE und FILEGROUP &#40;Transact-SQL&#41;](logs/../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+
+-   Durch die Verwaltung von mehreren Protokolldateien in einer Datenbank wird die Leistung in keiner Weise verbessert, da die Transaktionsprotokolldateien nicht wie Datendateien eine [proportionale Füllung](logs/../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill) in derselben Dateigruppe durchführen.
+
+-   Für Protokolldateien kann eine automatische Verkleinerung durchgeführt werden. Dies wird jedoch **nicht empfohlen**, und die Datenbankeigenschaft **auto_shrink** ist standardmäßig auf FALSE festgelegt. Wenn **auto_shrink** auf TRUE festgelegt ist, wird die Größe einer Datei nur dann automatisch verkleinert, wenn mehr als 25 Prozent des Speicherplatzes ungenutzt sind.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_6"/>
+
+### <a name="6-nbsp-bcpbindnative-client-odbc-extensions-bulk-copy-functionsbcp-bindmd"></a>6. &nbsp; [bcp_bind](native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)
+
+*Aktualisiert: 30.1.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_5) | [Nächster](#TitleNum_7))
+
+<!-- Source markdown line 127.  ms.author= "genemi".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 d50791cef948ce8b3066438e317ab4d34d535258 e6f70559e7237cfc86dfc5746d218c08bec52af6  (PR=4762  ,  Filename=bcp-bind.md  ,  Dirpath=docs\relational-databases\native-client-odbc-extensions-bulk-copy-functions\  ,  MergeCommitSha40=60006e90d03fdb75b282bbc0dad3d40571bacacc) -->
+
+
+
+ Die folgende Tabelle führt gültige enumerierte Datentypen und die entsprechenden ODBC-C-Datentypen auf.
+
+|eDataType|C-Typ|
+|-----------------------|------------|
+|SQLTEXT|char *|
+|SQLNTEXT|wchar_t *|
+|SQLCHARACTER|char *|
+|SQLBIGCHAR|char *|
+|SQLVARCHAR|char *|
+|SQLBIGVARCHAR|char *|
+|SQLNCHAR|wchar_t *|
+|SQLNVARCHAR|wchar_t *|
+|SQLBINARY|unsigned char *|
+|SQLBIGBINARY|unsigned char *|
+|SQLVARBINARY|unsigned char *|
+|SQLBIGVARBINARY|unsigned char *|
+|SQLBIT|char|
+|SQLBITN|char|
+|SQLINT1|char|
+|SQLINT2|short int|
+|SQLINT4|ssNoversion|
+|SQLINT8|_int64|
+|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|
+|SQLFLT4|FLOAT|
+|SQLFLT8|FLOAT|
+|SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|
+|SQLDECIMALN|SQL_NUMERIC_STRUCT|
+|SQLNUMERICN|SQL_NUMERIC_STRUCT|
+|SQLMONEY|DBMONEY|
+|SQLMONEY4|DBMONEY4|
+|SQLMONEYN|*cbIndicator*<br /> 4: SQLMONEY4<br /> 8: SQLMONEY|
+|SQLTIMEN|SQL_SS_TIME2_STRUCT|
+|SQLDATEN|SQL_DATE_STRUCT|
+|SQLDATETIM4|DBDATETIM4|
+|SQLDATETIME|DBDATETIME|
+|SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 8: SQLDATETIME|
+|SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|
+|SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|
+|SQLIMAGE|unsigned char *|
+|SQLUDT|unsigned char *|
+|SQLUNIQUEID|SQLGUID|
+|SQLVARIANT|*Jeder Datentyp außer:*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|
+|SQLXML|*Unterstützte C-Datentypen:*<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_7"/>
+
+### <a name="7-nbsp-sql-server-index-design-guidesql-server-index-design-guidemd"></a>7. &nbsp; [Handbuch zum SQL Server-Indexentwurf](sql-server-index-design-guide.md)
+
+*Aktualisiert: 2.1.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_6) | [Nächster](#TitleNum_8))
+
+<!-- Source markdown line 700.  ms.author= "rickbyh".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 bd09c9e66cd3cf5f3ebebe7ffa6e937978353169 8e5cbbf0063971676a8bafefba75aa5c7c28be61  (PR=0  ,  Filename=sql-server-index-design-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=74daee358fef75a25d75c69d971d08536c5bd2be) -->
+
+
+
+Ab SQL Server 2016 können Sie einen aktualisierbaren, **nicht gruppierten Columnstore-Index für eine Rowstore-Tabelle** erstellen. Der Columnstore-Index speichert eine Kopie der Daten, sodass Sie keinen zusätzlichen Speicher benötigen. Allerdings werden die Daten in den Columnstore-Index komprimiert, auf eine kleinere Größe als die Rowstore-Tabelle es erfordert.  Durch dieses Vorgehen können Sie Analysen mit dem Columnstore-Index und Transaktionen mit dem Rowstore-Index zur gleichen Zeit ausführen. Der Spaltenspeicher wird aktualisiert, wenn sich die Daten in der Rowstore-Tabelle ändern, daher arbeiten beide Indizes auf den gleichen Daten.
+
+Ab SQL Server 2016 können Sie über **mehrere nicht gruppierte Rowstore-Indizes in einem Columnstore-Index** verfügen. Auf diese Weise können effiziente Tabellensuchvorgänge im zugrundeliegenden Columnstore ausgeführt werden. Auch weitere Optionen werden dadurch verfügbar. Beispielsweise können Sie eine Primärschlüsseleinschränkung durchsetzen, indem Sie eine UNIQUE-Bedingung auf die Rowstore-Tabelle anwenden. Da ein nicht eindeutiger Wert nicht in die Rowstore-Tabelle eingefügt werden kann, kann SQL Server den Wert nicht in den Columnstore einfügen.
+
+**Überlegungen zur Leistung**
+
+
+-   Die Definition des nicht gruppierten Columnstore-Index unterstützt gefilterte Bedingungen. Um die Auswirkung auf die Leistung beim Hinzufügen eines Columnstore-Indexes in eine OLTP-Tabelle zu verringern, verwenden Sie eine gefilterte Bedingung, um einen nicht gruppierten Columnstore-Index anhand der kalten Daten Ihrer Betriebsworkload zu erstellen.
+
+-   Eine In-Memory-Tabelle kann nur über einen Columnstore-Index verfügen. Sie können ihn bei Erstellung der Tabelle generieren oder später mit [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md) hinzufügen. Vor SQL Server 2016 konnte nur eine datenträgerbasierte Tabelle über einen Columnstore-Index verfügen.
+
+Weitere Informationen finden Sie unter [Columnstore-Indizes: Abfrageleistung](../relational-databases/indexes/columnstore-indexes-query-performance.md).
+
+**Leitfaden zum Entwurf**
+
+
+-   Eine Rowstore-Tabelle kann über einen aktualisierbaren nicht gruppierten Columnstore-Index verfügen. Vor SQL Server 2014 war der nicht gruppierte Columnstore-Index schreibgeschützt.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_8"/>
+
+### <a name="8-nbsp-spexecuteexternalscript-transact-sqlsystem-stored-proceduressp-execute-external-script-transact-sqlmd"></a>8. &nbsp; [sp_execute_external_script (Transact-SQL)](system-stored-procedures/sp-execute-external-script-transact-sql.md)
+
+*Aktualisiert: 23.1.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_7) | [Nächster](#TitleNum_9))
+
+<!-- Source markdown line 207.  ms.author= "edmaca".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 0ee4d591ae9d9a5c015eec98aad9ccbb86268761 ac9b439c23ffae5fcc77639de6ff955763cf5844  (PR=4696  ,  Filename=sp-execute-external-script-transact-sql.md  ,  Dirpath=docs\relational-databases\system-stored-procedures\  ,  MergeCommitSha40=d7dcbcebbf416298f838a39dd5de6a46ca9f77aa) -->
+
+
+
+Um ein ähnliches Modell mithilfe von Python zu generieren, ändern Sie die Sprachen-ID von `@language=N'R'` zu `@language = N'Python'` und nehmen die notwendigen Änderungen im `@script`-Argument vor. Alle anderen Parameter funktionieren genauso wie bei R.
+
+**C. Erstellen eines Python-Modells und Generieren von Bewertungen daraus**
+
+
+Dieses Beispiel veranschaulicht, wie Sie „sp\_execute\_external\_script“ verwenden, um Bewertungen in einem einfachen Python-Modell zu generieren.
+
+```
+CREATE PROCEDURE [dbo].[py_generate_customer_scores]
+AS
+BEGIN
+
+**Input query to generate the customer data**
+
+DECLARE @input_query NVARCHAR(MAX) = N'SELECT customer, orders, items, cost FROM dbo.Sales.Orders`
+
+EXEC sp_execute_external_script @language = N'Python', @script = N'
+import pandas as pd
+from sklearn.cluster import KMeans
+
+**Get data from input query**
+
+customer_data = my_input_data
+
+**Define the model**
+
+n_clusters = 4
+est = KMeans(n_clusters=n_clusters, random_state=111).fit(customer_data[["orders","items","cost"]])
+clusters = est.labels_
+customer_data["cluster"] = clusters
+
+OutputDataSet = customer_data
+'
+, @input_data_1 = @input_query
+, @input_data_1_name = N'my_input_data'
+WITH RESULT SETS (("CustomerID" int, "Orders" float,"Items" float,"Cost" float,"ClusterResult" float));
+END;
+GO
 ```
 
-Die nachstehende Beispielabfrage liest einige Bestandteile der ausführlichen Ausgabe aus jeder Komponente in der Tabelle:
-```sql
--- system
-select data.value('(/system/@systemCpuUtilization)[1]','bigint') as 'System_CPU',
-   data.value('(/system/@sqlCpuUtilization)[1]','bigint') as 'SQL_CPU',
-   data.value('(/system/@nonYieldingTasksReported)[1]','bigint') as 'NonYielding_Tasks',
-   data.value('(/system/@pageFaults)[1]','bigint') as 'Page_Faults',
-   data.value('(/system/@latchWarnings)[1]','bigint') as 'Latch_Warnings',
-   data.value('(/system/@BadPagesDetected)[1]','bigint') as 'BadPages_Detected',
-   data.value('(/system/@BadPagesFixed)[1]','bigint') as 'BadPages_Fixed'
-from SpServerDiagnosticsResult
-where component_name like 'system'
-go
+In Python-Code verwendete Spaltenüberschriften werden nicht an SQL Server ausgegeben; geben Sie daher mit der WITH RESULTS-Anweisung die Spaltennamen und Datentypen an, die SQL verwenden soll.
 
--- Resource Monitor
-select data.value('(./Record/ResourceMonitor/Notification)[1]', 'VARCHAR(max)') AS [Notification],
-    data.value('(/resource/memoryReport/entry[@description=''Working Set'']/@value)[1]', 'bigint')/1024 AS [SQL_Mem_in_use_MB],
-    data.value('(/resource/memoryReport/entry[@description=''Available Paging File'']/@value)[1]', 'bigint')/1024 AS [Avail_Pagefile_MB],
-    data.value('(/resource/memoryReport/entry[@description=''Available Physical Memory'']/@value)[1]', 'bigint')/1024 AS [Avail_Physical_Mem_MB],
-    data.value('(/resource/memoryReport/entry[@description=''Available Virtual Memory'']/@value)[1]', 'bigint')/1024 AS [Avail_VAS_MB],
-    data.value('(/resource/@lastNotification)[1]','varchar(100)') as 'LastNotification',
-    data.value('(/resource/@outOfMemoryExceptions)[1]','bigint') as 'OOM_Exceptions'
-from SpServerDiagnosticsResult
-where component_name like 'resource'
-go
+Zur Bewertung können Sie auch die native [PREDICT](system-stored-procedures/../../t-sql/queries/predict-transact-sql.md)-Funktion verwenden, die in der Regel schneller ist, weil sie die Python- bzw. R-Laufzeit nicht aufrufen muss.
 
--- Nonpreemptive waits
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_9"/>
+
+### <a name="9-nbsp-create-primary-keystablescreate-primary-keysmd"></a>9. &nbsp; [Erstellen von Primärschlüsseln](tables/create-primary-keys.md)
+
+*Aktualisiert: 18.01.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Vorheriger](#TitleNum_8))
+
+<!-- Source markdown line 102.  ms.author= "sstein".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 d18b485f314cc005d624cab8a51650d3b8f55f89 9bd2e9453206e8940d30b0a01c43f9d8e1aed606  (PR=4652  ,  Filename=create-primary-keys.md  ,  Dirpath=docs\relational-databases\tables\  ,  MergeCommitSha40=6b4aae3706247ce9b311682774b13ac067f60a79) -->
+
+
+
+**So erstellen Sie einen Primärschlüssel mit einem nicht gruppierten Index in einer neuen Tabelle**
+
+
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz der Datenbank-Engine her.
+
+2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.
+
+3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Im Beispiel wird eine Tabelle erstellt sowie ein Primärschlüssel für die Spalte `CustomerID` und ein gruppierter Index für `TransactionID` definiert.
+
+```
+    USE AdventureWorks2012;
+    GO
+    CREATE TABLE Production.TransactionHistoryArchive1
+    (
+       CustomerID uniqueidentifier DEFAULT NEWSEQUENTIALID(),
+       TransactionID int IDENTITY (1,1) NOT NULL,
+       CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY NONCLUSTERED (uniqueidentifier)
+    );
+    GO
+
+    -- Now add the clustered index
+    CREATE CLUSTERED INDEX CIX_TransactionID ON Production.TransactionHistoryArchive1 (TransactionID);
+    GO
 ```
 
 
@@ -252,46 +514,45 @@ go
 
 
 
-## <a name="similar-articles"></a>Ähnliche Artikel
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>Ähnliche Artikel zu neuen oder aktualisierten Artikeln
 
 Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Artikel in anderen Themenbereichen innerhalb des gleichen GitHub-Repositorys: [MicrosoftDocs/sql-docs-pr](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Themenbereiche, die über neue oder kürzlich aktualisierte Artikel verfügen
 
-- [Neu + Aktualisiert (3+14): Dokumente zu **Advanced Analytics für SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (1+0): **Analysis Services for SQL** docs (Neu + Aktualisiert (1+0): Analysis Services für SQL-Dokumente)](../analysis-services/new-updated-analysis-services.md)
-- [Neu + Aktualisiert (87+0): Dokumente zu **Analyseplattformsystem für SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Neu + Aktualisiert (5+4): Dokumente zu **Herstellen einer Verbindung mit SQL**](../connect/new-updated-connect.md)
-- [Neu + Aktualisiert (0+1): Dokumente zum **Datenbankmodul für SQL**](../database-engine/new-updated-database-engine.md)
-- [Neu + Aktualisiert (2+2):Dokumente zu **Integration Services für SQL**](../integration-services/new-updated-integration-services.md)
-- [Neu + Aktualisiert (10+9): Dokumente zu **Linux für SQL**](../linux/new-updated-linux.md)
-- [Neu + Aktualisiert (2+4): Dokumente zu **Relationale Datenbanken für SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Neu + Aktualisiert (4+2): Dokumente zu **Reporting Services für SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Neu + Aktualisiert (0+1): Dokumente zu **Beispiele für SQL**](../sample/new-updated-sample.md)
-- [Neu + Aktualisiert (21+0): Dokumente zu **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Neu + Aktualisiert (5+1): Dokumente zu **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1): **SQL Server Data Tools (SSDT)** docs (Neu + Aktualisiert (0+1): SQL Server Data Tools-Dokumente (SSDT))](../ssdt/new-updated-ssdt.md)
-- [Neu + Aktualisiert (1+0): Dokumente zu **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
-- [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs (Neu + Aktualisiert (0+1): SQL Server Management Studio-Dokumente (SSMS))](../ssms/new-updated-ssms.md)
-- [Neu + Aktualisiert (0+2): Dokumente zu **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Themenbereiche, die *über* neue oder kürzlich aktualisierte Artikel verfügen
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Themenbereiche, die über keine neuen oder kürzlich aktualisierten Artikel verfügen
 
-- [Neu + Aktualisiert (0+0): Dokumente zu **Data Migration Assistant (DMA) für SQL**](../dma/new-updated-dma.md)
-- [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs (Neu + Aktualisiert (0+0): ActiveX Data Objects (ADO) für SQL-Dokumente)](../ado/new-updated-ado.md)
-- [New + Updated (0+0): **Data Quality Services for SQL** docs (Neu + Aktualisiert (0+0): Data Quality Services für SQL-Dokumente)](../data-quality-services/new-updated-data-quality-services.md)
-- [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs (Neu + Aktualisiert (0+0): Data Mining-Erweiterungen (DMX) für SQL)](../dmx/new-updated-dmx.md)
-- [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Master Data Services (MDS) für SQL)](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs (Neu + Aktualisiert (0+0): Mehrdimensionale Ausdrücke für SQL)](../mdx/new-updated-mdx.md)
-- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs (Neu + Aktualisiert (0+0): Open Database Connectivity für SQL-Dokumente)](../odbc/new-updated-odbc.md)
-- [New + Updated (0+0): **PowerShell for SQL** docs (Neu + Aktualisiert (0+0): PowerShell für SQL-Dokumente)](../powershell/new-updated-powershell.md)
-- [Neu + Aktualisiert (0+0): Dokumentation zu **Tools für SQL**](../tools/new-updated-tools.md)
-- [New + Updated (0+0): **XQuery for SQL** docs (Neu + Aktualisiert (0+0): XQuery für SQL-Dokumente)](../xquery/new-updated-xquery.md)
+- [Neu und aktualisiert (1+3):&nbsp;Dokumente zu **Advanced Analytics für SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Neu und aktualisiert (0+1):&nbsp;Dokumente zum **Analytics Platform System für SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Neu und aktualisiert (0+1):&nbsp;Dokumente zum **Herstellen einer Verbindung mit SQL**](../connect/new-updated-connect.md)
+- [Neu und aktualisiert (0+1):&nbsp;Dokumente zur **Datenbank-Engine für SQL**](../database-engine/new-updated-database-engine.md)
+- [Neu und aktualisiert (12+1): Dokumente zu **Integration Services für SQL**](../integration-services/new-updated-integration-services.md)
+- [Neu und aktualisiert (6+2):&nbsp;Dokumente zu **Linux für SQL**](../linux/new-updated-linux.md)
+- [Neu und aktualisiert (15+0): Dokumente zu **PowerShell für SQL**](../powershell/new-updated-powershell.md)
+- [Neu und aktualisiert (2+9):&nbsp;Dokumente zu **relationalen Datenbanken für SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Neu und aktualisiert (1+0):&nbsp;Dokumente zu **Reporting Services für SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Neu und aktualisiert (1+1):&nbsp;Dokumente zu **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Neu und aktualisiert (1+1):&nbsp;Dokumente zu **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Neu und aktualisiert (0+1):&nbsp;Dokumente zu **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Neu und aktualisiert (1+2):&nbsp;Dokumente zu **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Neu und aktualisiert (0+2):&nbsp;Dokumente zu **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Themenbereiche, die *nicht* über neue oder kürzlich aktualisierte Artikel verfügen
+
+
+- [Neu und aktualisiert (0+0): Dokumente zum **Data Migration Assistant (DMA) für SQL**](../dma/new-updated-dma.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **ActiveX Data Objects (ADO) für SQL**](../ado/new-updated-ado.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **Analysis Services für SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **Data Quality Services für SQL**](../data-quality-services/new-updated-data-quality-services.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **Data Mining-Erweiterungen (DMX) für SQL**](../dmx/new-updated-dmx.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **Master Data Services (MDS) für SQL**](../master-data-services/new-updated-master-data-services.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **mehrdimensionalen Ausdrücken (MDX) für SQL**](../mdx/new-updated-mdx.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **ODBC (Open Database Connectivity) für SQL**](../odbc/new-updated-odbc.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **Beispielen für SQL**](../sample/new-updated-sample.md)
+- [Neu und aktualisiert (0+0): Dokumente zum **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **Tools für SQL**](../tools/new-updated-tools.md)
+- [Neu und aktualisiert (0+0): Dokumente zu **XQuery für SQL**](../xquery/new-updated-xquery.md)
 
 
