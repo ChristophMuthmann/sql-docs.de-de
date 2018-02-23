@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5f7a99df396ecef55f0ba6a4529416354cdccda1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9ac94cfcd17842f118ea6bda19af830d8d737b94
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Importieren eines Data Mining-Projekts mithilfe des Analysis Services-Import-Assistenten
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -66,6 +66,6 @@ In diesem Thema wird beschrieben, wie ein neues Data Mining-Projekt erstellt wir
      Das neue Projekt wird automatisch mit [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]geöffnet.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Projekteigenschaften &#40; SSAS – tabellarisch &#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
+ [Projekteigenschaften](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   
   

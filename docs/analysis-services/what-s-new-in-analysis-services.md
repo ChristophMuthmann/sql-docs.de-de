@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f6645a2a5da1e63050c0d448bc1006c85d85f212
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6ec1299dc5e82e4af6093c914742d456e7897807
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>Was ist neu in Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -77,7 +77,7 @@ Neu in dieser Version ist eine integrierte Methode zum Aktivieren bidirektionale
  ### <a name="calculated-tables-in-ssdt"></a>Berechnete Tabellen in SSDT    
 Eine *berechnete Tabelle* ist eine reine Modellkonstruktion, die auf einem DAX-Ausdruck oder einer DAX-Abfrage in SSDT basiert. Wenn eine berechnete Tabelle in einer Datenbank bereitgestellt wird, kann sie nicht von regulären Tabellen unterschieden werden.    
 
- Es gibt verschiedene Verwendungsmöglichkeiten für berechnete Tabellen, einschließlich der Erstellung neuer Tabellen, um eine vorhandene Tabelle in einer bestimmten Rolle verfügbar zu machen. Das klassische Beispiel ist eine Datumstabelle, die in mehreren Kontexten (Bestelldatum, Versanddatum usw.) verwendet wird. Durch das Erstellen einer berechneten Tabelle für eine bestimmte Rolle können Sie jetzt eine Tabellenbeziehung aktivieren, um Abfragen oder Dateninteraktionen mit der berechneten Tabelle zu ermöglichen. Ein weiterer Verwendungszweck für berechnete Tabellen ist, Teile von vorhandenen Tabellen zu einer völlig neuen Tabelle zu kombinieren, die nur im Modell vorhanden ist.  Weitere Informationen finden Sie unter [Erstellen einer berechneten Tabelle &#40;SSAS – tabellarisch&#41;](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md).    
+ Es gibt verschiedene Verwendungsmöglichkeiten für berechnete Tabellen, einschließlich der Erstellung neuer Tabellen, um eine vorhandene Tabelle in einer bestimmten Rolle verfügbar zu machen. Das klassische Beispiel ist eine Datumstabelle, die in mehreren Kontexten (Bestelldatum, Versanddatum usw.) verwendet wird. Durch das Erstellen einer berechneten Tabelle für eine bestimmte Rolle können Sie jetzt eine Tabellenbeziehung aktivieren, um Abfragen oder Dateninteraktionen mit der berechneten Tabelle zu ermöglichen. Ein weiterer Verwendungszweck für berechnete Tabellen ist, Teile von vorhandenen Tabellen zu einer völlig neuen Tabelle zu kombinieren, die nur im Modell vorhanden ist.  Finden Sie unter [erstellen Sie eine Tabelle berechnet](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md) um mehr zu erfahren.    
  ### <a name="formula-fixup"></a>Formelkorrektur    
  Mit der Formelkorrektur in einem tabellarischen 1200-Modell aktualisiert SSDT automatisch alle Measures, die auf eine Spalte oder Tabelle verweisen, die umbenannt wurde.    
  ### <a name="support-for-visual-studio-configuration-manager"></a>Unterstützung für den Visual Studio-Konfigurations-Manager    
@@ -87,7 +87,7 @@ Eine *berechnete Tabelle* ist eine reine Modellkonstruktion, die auf einem DAX-A
  ### <a name="administer-tabular-1200-models-in-ssms"></a>Verwalten von tabellarischen 1200-Modellen in SSMS    
  In dieser Version kann eine Analysis Services-Instanz im tabellarischen Servermodus tabellarische Modelle mit jedem Kompatibilitätsgrad (1100, 1103, 1200) ausführen. Die neueste Version von [SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) wurde aktualisiert, um Eigenschaften anzuzeigen und die Verwaltung von Datenbankmodellen für tabellarische Modelle mit Kompatibilitätsgrad 1200 zu ermöglichen.    
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>Parallele Verarbeitung für mehrere Tabellenpartitionen in tabellarischen Modellen    
- Diese Version enthält neue Funktionen für die parallele Verarbeitung für Tabellen mit zwei oder mehr Partitionen, sodass die Verarbeitungsleistung erhöht wird. Es sind keine Konfigurationseinstellungen für diese Funktion vorhanden. Weitere Informationen zum Konfigurieren von Partitionen und zum Verarbeiten von Tabellen finden Sie unter [Tabellenmodellpartitionen &#40;SSAS – tabellarisch&#41;](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
+ Diese Version enthält neue Funktionen für die parallele Verarbeitung für Tabellen mit zwei oder mehr Partitionen, sodass die Verarbeitungsleistung erhöht wird. Es sind keine Konfigurationseinstellungen für diese Funktion vorhanden. Weitere Informationen zum Konfigurieren von Partitionen und Verarbeiten von Tabellen finden Sie unter [tabellarische Modell Partitionen](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>Hinzufügen von Computerkonten als Administratoren in SSMS    
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Administratoren können jetzt [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] zum Konfigurieren von Computerkonten als Mitglieder der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Administratorengruppe verwenden. Legen Sie im Dialogfeld **Benutzer oder Gruppen auswählen** die **Speicherorte** für die Computerdomäne fest, und fügen Sie dann den Objekttyp **Computer** hinzu. Weitere Informationen finden Sie unter [Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
  ### <a name="dbcc-for-analysis-services"></a>DBCC für Analysis Services    
@@ -206,7 +206,7 @@ In dieser Version wurde DirectQuery für tabellarische 1200-Modelle erheblich er
 ### <a name="new-data-sources-for-directquery-mode"></a>Neue Datenquellen für den DirectQuery-Modus    
  Jetzt für tabellarische 1200-Modelle im DirectQuery-Modus unterstützte Datenquellen umfassen, Oracle, Teradata und Microsoft Analytics Platform (ehemals Parallel Data Warehouse).    
     
-Weitere Informationen finden Sie unter [DirectQuery-Modus &#40;SSAS – tabellarisch&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).    
+Weitere Informationen finden Sie unter [DirectQuery-Modus](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).    
 
 ## <a name="see-also"></a>Siehe auch
 [Analysis Services-Teamblog](http://blogs.msdn.microsoft.com/analysisservices/)    

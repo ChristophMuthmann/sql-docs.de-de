@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 276211036c3d977ab0a0b6a61114e7fe58505b63
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 970d341ee8c07cfcc15cda52f8f28dff9fed3d76
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="multidimensional-modeling-ssas"></a>Mehrdimensionale Modellierung (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,9 +33,9 @@ Eine mehrdimensionale Analysis Services-Lösung verwendet Cubestrukturen zum Ana
  Ein anderer wichtiger Vorteil der Verwendung von mehrdimensionalen Analysis Services-Datenbanken ist die Integration in häufig verwendete BI-Berichtstools wie Excel, Reporting Services und PerformancePoint sowie in benutzerdefinierte Anwendungen und Lösungen von Drittanbietern.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Mehrdimensionale Modelllösungen &#40; SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)  
+ [Mehrdimensionale Modelllösungen ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)  
   
- [Mehrdimensionale Modelldatenbanken &#40; SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Mehrdimensionale Modelldatenbanken ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
  [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   

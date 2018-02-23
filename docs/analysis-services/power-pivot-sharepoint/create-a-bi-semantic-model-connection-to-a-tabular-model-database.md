@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae5acd43bb7d4bd4956cc5dae36e7dc15787a83f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0077f3a970f872329db9c30e16ae5653a4ccb13f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Erstellen einer BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -86,7 +86,7 @@ Verwenden Sie die Informationen in diesem Thema, um eine BI-Semantikmodellverbin
 ##  <a name="bkmk_BISM"></a> Erteilen von Leseberechtigungen für die Datenbank für tabellarische Modelle  
  Da die Datenbank auf einem Server außerhalb der Farm ausgeführt wird, müssen im Rahmen der Verbindungseinrichtung Datenbankbenutzerberechtigungen auf dem Analysis Services-Backend-Server erteilt werden. Analysis Services verwendet ein rollenbasiertes Berechtigungsmodell. Benutzer, die eine Verbindung mit Modelldatenbanken herstellen, müssen dazu Leseberechtigungen oder höher über eine Rolle verwenden, die Lesezugriff auf die Elemente gewährt.  
   
- Rollen und gelegentlich Rollenmitgliedschaft werden definiert, wenn das Modell in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt wird. Sie können Rollen nicht mithilfe von SQL Server Management Studio erstellen, aber Sie können einer Rolle, die bereits definiert ist, Mitglieder hinzufügen. Weitere Informationen zum Erstellen von Rollen finden Sie unter [Erstellen und Verwalten von Rollen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
+ Rollen und gelegentlich Rollenmitgliedschaft werden definiert, wenn das Modell in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt wird. Sie können Rollen nicht mithilfe von SQL Server Management Studio erstellen, aber Sie können einer Rolle, die bereits definiert ist, Mitglieder hinzufügen. Weitere Informationen zum Erstellen von Rollen finden Sie unter [erstellen und Verwalten von Rollen](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
   
 #### <a name="assign-role-membership"></a>Zuweisen der Rollenmitgliedschaft  
   
