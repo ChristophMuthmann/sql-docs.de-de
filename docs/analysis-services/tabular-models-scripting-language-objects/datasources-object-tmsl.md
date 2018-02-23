@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 1357ae7e-30a4-481a-831c-7b046fe15aa4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 07c2eb15addda49071fa962518eae322c014d8ad
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 13f647affa03844562f479223df57e1f8a2102f8
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="datasources-object-tmsl"></a>DataSources-Objekt (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Definiert eine Verbindung mit einer Datenquelle, die vom Modell entweder während des Imports zum Hinzufügen von Daten für das Modell oder in Pass-through-Abfragen über DirectQuery-Modus verwendet werden.  Modelle im DirectQuery-Modus können nur einen haben **DataSource** Objekt.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Definiert eine Verbindung mit einer Datenquelle, die vom Modell entweder während des Imports zum Hinzufügen von Daten für das Modell oder in Pass-through-Abfragen über DirectQuery-Modus verwendet werden.  Modelle im DirectQuery-Modus können nur einen haben **DataSource** Objekt.  
   
  Es sei denn, Sie erstellen, und Ersetzen Sie dabei, oder ändern das Datenquellenobjekt selbst, einer beliebigen Datenquelle verwiesen wird, in Ihrem Skript (z. B. in der Partition Skript) muss eine vorhandene **DataSource** Objekt in Ihrem Modell.  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/08/2018
  connectionString  
  Die Verbindungszeichenfolge, die minimal gibt den Server und die Datenbank, jedoch kann auch andere Eigenschaften, die von der externen RDBMS, z. B. eine Daten-Anbieter oder ein Benutzerkonto unterstützt einschließen. Dieser Wert ist erforderlich. Finden Sie unter ["SqlConnectionStringBuilder"-Klasse](https://msdn.microsoft.com/en-us/library/ms254500\(v=vs.110\).aspx) ausführliche Informationen zu SQL Server-Datenbank-Verbindungszeichenfolgen-Eigenschaften.  
   
- ImpersonationMode-Wert  
+ impersonationMode  
  Gibt an, ob Analysis Services die Identität des Benutzers, der die Abfrage anfordert Identitätswechsel verwenden soll. Diese Eigenschaft ist ein numerischer Wert, der angibt, die Anmeldeinformationen für den Identitätswechsel verwenden. Folgende Enumerationswerte sind möglich:  
   
 -   Standard (1) - Server verwendet die identitätswechselmethode, die es hält für den Kontext geeignet sein, in dem der Identitätswechsel verwendet wird.  
@@ -187,7 +188,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Siehe auch  
  [Tabular Model Scripting Language &#40;TMSL&#41; – Referenz](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [DirectQuery-Modus &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [DirectQuery Mode](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
+ [Konfigurieren der HTTP-Zugriff auf Analysis Services auf Internetinformationsdienste (IIS) &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   
