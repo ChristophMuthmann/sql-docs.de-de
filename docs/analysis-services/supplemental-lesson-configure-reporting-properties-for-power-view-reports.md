@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 04edc4aeea3123ad58775fddf3a821f65decd90b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bbc725ce1d2f5999486f46f4ab30f6e3fb98f42d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Ergänzende Lektion: Konfigurieren von Berichterstellungseigenschaften für Power View-Berichte
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +32,7 @@ In dieser ergänzenden Lektion legen Sie berichterstellungseigenschaften für da
   
 Geschätzte Zeit zum Bearbeiten dieser Lektion: **30 Minuten**  
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
 Diese ergänzende Lektion ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser ergänzenden Lektion alle vorherigen Lektionen abgeschlossen haben.  
 Zum Ausführen dieser ergänzenden Lektion benötigen Sie zusätzlich Folgendes:  
   
@@ -79,7 +80,7 @@ Es kann zeitweise erforderlich sein, mithilfe von DAX-Formeln neue Daten im Mode
 ## <a name="default-field-set"></a>Standardfeldsatz  
 Standardfeldsatz ist eine vordefinierte Liste von Spalten und Measures für eine Tabelle, die in einem Berichtsbereich automatisch hinzugefügt werden, wenn die Tabelle in der berichtsfeldliste geklickt wird. Im Wesentlichen können Sie die standardmäßigen Spalten und Measures sowie die Feldreihenfolge angeben, die Benutzer erwarten würden, wenn diese Tabelle in Power View-Berichten visuell dargestellt wird.  Für das Modell Internet Sales definieren Sie einen Standardfeldsatz und eine Standardreihenfolge für die Tabellen Customer, Geography und Product. Es werden nur die am häufigsten verwendeten Spalten aufgenommen, die Benutzer zum Analysieren der Daten in Adventure Works Internet Sales mithilfe von Power View-Berichten benötigen.  
   
-Ausführliche Informationen zum Standardfeldsatz finden Sie unter [Konfigurieren eines Standardfeldsatzes für Power View-Berichte &#40;SSAS – tabellarisch&#41;](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md) in der SQL Server-Onlinedokumentation.  
+Ausführliche Informationen zum Standardfeldsatz finden Sie unter [konfigurieren Standardfeldsatz für Power View-Berichte](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md) in SQL Server-Onlinedokumentation.  
   
 #### <a name="to-set-default-field-set-for-tables"></a>So legen Sie den Standardfeldsatz für Tabellen fest  
   
@@ -114,7 +115,7 @@ Ausführliche Informationen zum Standardfeldsatz finden Sie unter [Konfigurieren
 ## <a name="table-behavior"></a>Tabellenverhalten  
 Mit den Eigenschaften für das Tabellenverhalten können Sie das Standardverhalten für unterschiedliche Visualisierungstypen und das Gruppierungsverhalten für die in Power View-Berichten verwendeten Tabellen ändern. Auf diese Weise wird eine bessere Standardplatzierung von identifizierenden Informationen, wie Namen, Bildern oder Titeln, in Kachel-, Karten- und Diagrammlayouts erzielt.  
   
-Ausführliche Informationen zu-Tabellenverhaltenseigenschaften finden Sie unter [Konfigurieren von Tabellenverhaltenseigenschaften für Power View-Berichte &#40;SSAS – tabellarisch&#41;](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md) in der SQL Server-Onlinedokumentation.  
+Ausführliche Informationen zu tabellenverhaltenseigenschaften finden Sie unter [Konfigurieren von Tabellenverhaltenseigenschaften für Power View-Berichte](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md) in SQL Server-Onlinedokumentation.  
   
 #### <a name="to-set-table-behavior"></a>Tabellenverhalten festlegen 
   
@@ -139,7 +140,7 @@ Ausführliche Informationen zu-Tabellenverhaltenseigenschaften finden Sie unter 
 ## <a name="reporting-properties-for-columns"></a>Berichterstellungseigenschaften für Spalten  
 Für Spalten können eine Reihe grundlegender Spalteneigenschaften und bestimmte Berichterstellungseigenschaften festgelegt werden, mit deren Hilfe sich die Berichterstellung anhand von Modellen verbessern lässt. Es ist u. U. nicht erforderlich, dass Benutzer jede Spalte in jeder Tabelle sehen können. Genauso wie Sie zuvor die Tabellen Product Category und Product Subcategory ausgeblendet haben, können Sie mithilfe der Spalteneigenschaft Ausgeblendet bestimmte Spalten aus einer Tabelle ausblenden, die ansonsten angezeigt wird. Auch andere Eigenschaften, wie Datenformat und Nach Spalte sortieren, können die Darstellung von Spaltendaten in Berichten beeinflussen. Jetzt legen Sie einige Eigenschaften für bestimmten Spalten fest. Für andere Spalten ist keine Aktion erforderlich, daher werden sie unten nicht dargestellt.  
   
-Sie legen hier nur einige von zahlreichen Spalteneigenschaften fest. Ausführlichere Informationen zu Berichterstellungseigenschaften für Spalten finden Sie unter [Spalteneigenschaften &#40;SSAS – tabellarisch&#41;](../analysis-services/tabular-models/column-properties-ssas-tabular.md) in der SQL Server-Onlinedokumentation.  
+Sie legen hier nur einige von zahlreichen Spalteneigenschaften fest. Ausführlichere Informationen zu berichterstellungseigenschaften Spalte finden Sie unter [Spalteneigenschaften](../analysis-services/tabular-models/column-properties-ssas-tabular.md) in SQL Server-Onlinedokumentation.  
   
 #### <a name="to-set-properties-for-columns"></a>So legen Sie Eigenschaften für Spalten fest  
   
@@ -155,57 +156,57 @@ Sie legen hier nur einige von zahlreichen Spalteneigenschaften fest. Ausführlic
   
     **Customer**  
   
-    |Spalte|Eigenschaft|value|  
+    |Column|Eigenschaft|Wert|  
     |----------|------------|---------|  
-    |Geography Id|Ausgeblendet|Wahr|  
+    |Geography Id|Hidden|Wahr|  
     |Birth Date|Datenformat|Short Date|  
   
     **Date**  
   
     > [!NOTE]  
-    > Da die Tabelle Date mithilfe der Einstellung Als Datumstabelle markieren in "Lektion 7: Markieren als Datumstabelle" als Datumstabelle für das Modell ausgewählt wurde und die Spalte Date in der Tabelle Date als Spalte ausgewählt wurde, die als eindeutiger Bezeichner fungieren soll, wird die Eigenschaft Zeilenbezeichner für die Spalte Date automatisch auf True festgelegt und kann nicht geändert werden. Bei Verwendung von Zeitintelligenzfunktionen in DAX-Formeln müssen Sie eine Datumstabelle angeben. In diesem Modell haben Sie unter Verwendung von Zeitintelligenzfunktionen eine Reihe von Measures zur Berechnung von Umsatzdaten für verschiedene Zeiträume, z. B. das vorherige und aktuelle Quartal, sowie zur Verwendung in KPIs erstellt. Weitere Informationen zum Angeben einer Datumstabelle finden Sie unter [Angeben von „Als Datumstabelle markieren“ zur Verwendung mit Zeitintelligenz &#40;SSAS – tabellarisch&#41;](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) in der SQL Server-Onlinedokumentation.  
+    > Da die Tabelle Date mithilfe der Einstellung Als Datumstabelle markieren in "Lektion 7: Markieren als Datumstabelle" als Datumstabelle für das Modell ausgewählt wurde und die Spalte Date in der Tabelle Date als Spalte ausgewählt wurde, die als eindeutiger Bezeichner fungieren soll, wird die Eigenschaft Zeilenbezeichner für die Spalte Date automatisch auf True festgelegt und kann nicht geändert werden. Bei Verwendung von Zeitintelligenzfunktionen in DAX-Formeln müssen Sie eine Datumstabelle angeben. In diesem Modell haben Sie unter Verwendung von Zeitintelligenzfunktionen eine Reihe von Measures zur Berechnung von Umsatzdaten für verschiedene Zeiträume, z. B. das vorherige und aktuelle Quartal, sowie zur Verwendung in KPIs erstellt. Weitere Informationen zum Angeben einer Datumstabelle finden Sie unter [geben markieren als Date-Tabelle für die Verwendung mit Zeitintelligenz](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) in SQL Server-Onlinedokumentation.  
   
-    |Spalte|Eigenschaft|value|  
+    |Column|Eigenschaft|Wert|  
     |----------|------------|---------|  
-    |date|Datenformat|Short Date|  
-    |Day Number of Week|Ausgeblendet|Wahr|  
+    |Datum|Datenformat|Short Date|  
+    |Day Number of Week|Hidden|Wahr|  
     |Day Name|Nach Spalte sortieren|Day Number of Week|  
-    |Day of Week|Ausgeblendet|Wahr|  
-    |Day of Month|Ausgeblendet|Wahr|  
-    |Day of Year|Ausgeblendet|Wahr|  
+    |Day of Week|Hidden|Wahr|  
+    |Day of Month|Hidden|Wahr|  
+    |Day of Year|Hidden|Wahr|  
     |Month Name|Nach Spalte sortieren|Month|  
-    |Month|Ausgeblendet|Wahr|  
-    |Month Calendar|Ausgeblendet|Wahr|  
-    |Fiscal Quarter|Ausgeblendet|Wahr|  
-    |Fiscal Year|Ausgeblendet|Wahr|  
+    |Month|Hidden|Wahr|  
+    |Month Calendar|Hidden|Wahr|  
+    |Fiscal Quarter|Hidden|Wahr|  
+    |Fiscal Year|Hidden|Wahr|  
     |Fiscal Semester|Ausgeblendet|Wahr|  
   
     **Geography**  
   
-    |Spalte|Eigenschaft|value|  
+    |Column|Eigenschaft|Wert|  
     |----------|------------|---------|  
-    |Geography Id|Ausgeblendet|Wahr|  
-    |Sales Territory Id|Ausgeblendet|Wahr|  
+    |Geography Id|Hidden|Wahr|  
+    |Sales Territory Id|Hidden|Wahr|  
   
     **Product**  
   
-    |Spalte|Eigenschaft|value|  
+    |Column|Eigenschaft|Wert|  
     |----------|------------|---------|  
-    |Product Id|Ausgeblendet|Wahr|  
+    |Product Id|Hidden|Wahr|  
     |Product Alternate Id|Standardbeschriftung|Wahr|  
-    |Product Subcategory Id|Ausgeblendet|Wahr|  
+    |Product Subcategory Id|Hidden|Wahr|  
     |Product Start Date|Datenformat|Short Date|  
     |Product End Date|Datenformat|Short Date|  
   
     **Internet Sales**  
   
-    |Spalte|Eigenschaft|value|  
+    |Column|Eigenschaft|Wert|  
     |----------|------------|---------|  
-    |Product Id|Ausgeblendet|Wahr|  
-    |Customer Id|Ausgeblendet|Wahr|  
-    |Promotion Id|Ausgeblendet|Wahr|  
-    |Currency Id|Ausgeblendet|Wahr|  
-    |Sales Territory Id|Ausgeblendet|Wahr|  
+    |Product Id|Hidden|Wahr|  
+    |Customer Id|Hidden|Wahr|  
+    |Promotion Id|Hidden|Wahr|  
+    |Currency Id|Hidden|Wahr|  
+    |Sales Territory Id|Hidden|Wahr|  
     |Order Quantity|Datentyp<br /><br />Datenformat<br /><br />Dezimalstellen|Decimal Number<br /><br />Decimal Number<br /><br />0|  
     |Order Date|Datenformat|Short Date|  
     |Due Date|Datenformat|Short Date|  

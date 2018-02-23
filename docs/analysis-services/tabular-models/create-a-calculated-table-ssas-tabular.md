@@ -1,7 +1,7 @@
 ---
-title: "Erstellen einer berechneten Tabelle (SSAS – tabellarisch) | Microsoft Docs"
+title: Erstellen einer berechneten Tabelle | Microsoft Docs
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d7ff98a-82a9-4333-a7d3-7a95a6f2caf7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8278b8af21faf65640451d2557b1de19916b3327
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c34293f6fca5ebfb49ab4f19980e414f8bf056c0
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-a-calculated-table-ssas-tabular"></a>Erstellen einer berechneten Tabelle (SSAS – tabellarisch)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Ein *berechnete Tabelle* wird ein berechnetes Objekt, das basierend auf einer DAX-Abfrage oder Ausdruck, abgeleitet aus ganzen oder Teilen anderer Tabellen im gleichen Modell.  
+# <a name="create-a-calculated-table"></a>Erstellen einer berechneten Tabelle 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Eine *berechnete Tabelle* ist ein berechnetes Objekt, basierend entweder auf einer DAX-Abfrage oder einem -Ausdruck, abgeleitet aus ganzen oder Teilen anderer Tabellen im gleichen Modell.  
   
  Ein weit verbreitetes Entwurfsproblem, das berechnete Tabellen lösen können, ist das Hervorholen einer Dimension mit unterschiedlichen Rollen in einem bestimmten Kontext, damit Sie diese als eine Abfragestruktur in Clientanwendungen anzeigen können.  Möglicherweise erinnern Sie sich daran, dass eine Dimension mit unterschiedlichen Rollen einfach eine Tabelle ist, die in mehreren Kontexten aufgezeigt wird. Ein klassisches Beispiel ist Date-Tabelle, angezeigt als OrderDate, ShipDate, oder DueDate, je nach Fremdschlüsselbeziehung. Indem Sie explizit für „ShipDate“ eine berechnete Tabelle erstellen, erhalten Sie eine eigenständige Tabelle, die für Abfragen zur Verfügung steht und genauso vollständig ausgeführt werden kann wie jede andere Tabelle.  
   
@@ -45,7 +46,7 @@ Es gibt für jede, vom Ausdruck zurückgegebene Spalte eine CalculatedTableColum
   
 5.  Geben Sie der Tabelle einen Namen.  
   
-6.  Erstellen Sie Beziehungen zu anderen Tabellen im Modell. Wenn Sie Hilfe zu diesem Schritt benötigen, gehen Sie unter [Erstellen einer Beziehung zwischen zwei Tabellen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md).  
+6.  Erstellen Sie Beziehungen zu anderen Tabellen im Modell. Finden Sie unter [Erstellen einer Beziehung zwischen zwei Tabellen](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md) Wenn Sie Hilfe bei diesem Schritt benötigen.  
   
 7.  Verweisen Sie in Berechnungen oder Ausdrücken in Ihrem Modell auf die berechnete Tabelle, oder verwenden Sie **Analysieren in Excel** für das Ad-hoc-Durchsuchen von Daten.  
   
@@ -74,8 +75,8 @@ Es gibt für jede, vom Ausdruck zurückgegebene Spalte eine CalculatedTableColum
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
+ [Kompatibilitätsgrad](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Data Analysis Expressions &#40; DAX &#41; in Analysis Services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
- [Grundlegendes zu DAX in tabellarischen Modellen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  
+ [Grundlegendes zu DAX in tabellarischen Modellen](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  
   
   

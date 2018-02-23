@@ -4,7 +4,7 @@ description: Dieser Artikel beschreibt die Umgebungsvariablen zu verwenden, um b
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/21/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: c7a04b62625863d9f98521b1a408f572ac79a403
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: e6d21c8f2e7636ee787bbd735b3d69b71ac20671
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Konfigurieren von SQL Server mit Umgebungsvariablen unter Linux
 
@@ -39,7 +39,7 @@ Mehrere verschiedene Umgebungsvariablen können Sie SQL Server-2017 unter Linux 
 |-----|-----|
 | **ACCEPT_EULA** | Akzeptieren Sie den SQL Server-Lizenzvertrag bei Festlegung auf einen beliebigen Wert (z. B. "Y"). |
 | **MSSQL_SA_PASSWORD** | Konfigurieren Sie das SA-Kennwort ein. |
-| **MSSQL_PID** | Legen Sie die Edition oder Product Key für SQL Server. Zulässige Werte: </br></br>**Evaluation**</br>**Entwickler**</br>**Express**</br>Web</br>**Standard**</br>**Enterprise**</br>Einen Product key</br></br>Wenn Sie einen Product Key angeben, muss es in Form von ###-###-###-###-###, sein, wobei "#" eine Zahl oder ein Buchstabe ist.|
+| **MSSQL_PID** | Legen Sie die Edition oder Product Key für SQL Server. Zulässige Werte: </br></br>**Evaluation**</br>**Entwickler**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Einen Product key**</br></br>Wenn Sie einen Product Key angeben, muss es in Form von ###-###-###-###-###, sein, wobei "#" eine Zahl oder ein Buchstabe ist.|
 | **MSSQL_LCID** | Legt die Sprach-ID für SQL Server verwendet. 1036 befindet sich z. B. Französisch. |
 | **MSSQL_COLLATION** | Legt die standardsortierung für SQL Server fest. Dies überschreibt die standardzuordnung der Sprach-Id (LCID), Sortierung. |
 | **MSSQL_MEMORY_LIMIT_MB** | Legt die Höchstmenge an Arbeitsspeicher (in MB), die SQL Server verwenden können. Es ist standardmäßig 80 % des gesamten physischen Arbeitsspeichers. |
@@ -49,7 +49,11 @@ Mehrere verschiedene Umgebungsvariablen können Sie SQL Server-2017 unter Linux 
 | **MSSQL_DATA_DIR** | Ändern Sie das Verzeichnis, in dem die neuen SQL Server-Datenbank-Datendateien (MDF) erstellt werden. |
 | **MSSQL_LOG_DIR** | Ändern Sie das Verzeichnis, in dem die neue SQL Server-Protokolldateien (LDF) Datenbankdateien erstellt werden. |
 | **MSSQL_DUMP_DIR** | Ändern Sie das Verzeichnis, in dem SQL Server die Speicherabbilder und andere Dateien zur Problembehandlung in der Standardeinstellung ablegt. |
-| **MSSQL_ENABLE_HADR** | Aktivieren von Verfügbarkeitsgruppen. |
+| **MSSQL_ENABLE_HADR** | Aktivieren der Verfügbarkeitsgruppe. Beispielsweise "1" aktiviert ist, und "0" ist deaktiviert. |
+| **MSSQL_AGENT_ENABLED** | SQL Server-Agent zu aktivieren. Beispielsweise "true" aktiviert ist, und 'false' ist deaktiviert. Agent ist standardmäßig deaktiviert.  |
+| **MSSQL_MASTER_DATA_FILE** | Legt den Speicherort der master-Datenbank-Datendatei an. |
+| **MSSQL_MASTER_LOG_FILE** | Legt den Speicherort der master-Datenbank-Protokolldatei fest. |
+
 
 ## <a name="example-initial-setup"></a>Beispiel: Anfangssetup
 
@@ -86,7 +90,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 ```
 
 > [!NOTE]
-> Der Prozess zum Ausführen von Produktions-Editionen in Containern ist etwas anders. Weitere Informationen finden Sie unter [ausführen Produktion containerimages](sql-server-linux-configure-docker.md#production).
+> Die Vorgehensweise zum Ausführen von Produktionseditionen in Containern weicht hiervon minimal ab. Weitere Informationen finden Sie unter [Run production container images (Ausführen von Containerimages für Produktionsumgebungen)](sql-server-linux-configure-docker.md#production).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

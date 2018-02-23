@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 92b6d35f7ad2a4c32b7f9ba6d7dcb1e2fdc8e407
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7efb5e145bbc4b481f73624a4c0d08d9698dc24c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Einführung in die im tabellarischen Objektmodell (TOM) in Analysis Services AMO
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Im tabellarischen Objektmodell (TOM) ist eine Erweiterung von der Clientbibliothek des Analysis Services Management Object (AMO) erstellt zur Unterstützung von Programmierszenarien für tabellarische Modelle mit Kompatibilitätsgrad 1200 oder höher erstellt. Wie bei AMO, bietet TOM eine programmgesteuerte Möglichkeit zum Verarbeiten von Verwaltungsfunktionen wie das Erstellen von Modellen, importieren und Aktualisieren von Daten und Zuweisen von Rollen und Berechtigungen.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Im tabellarischen Objektmodell (TOM) ist eine Erweiterung von der Clientbibliothek des Analysis Services Management Object (AMO) erstellt zur Unterstützung von Programmierszenarien für tabellarische Modelle mit Kompatibilitätsgrad 1200 oder höher erstellt. Wie bei AMO, bietet TOM eine programmgesteuerte Möglichkeit zum Verarbeiten von Verwaltungsfunktionen wie das Erstellen von Modellen, importieren und Aktualisieren von Daten und Zuweisen von Rollen und Berechtigungen.  
   
 TOM macht native tabellarischen Metadaten, wie z. B. **Modell**, **Tabellen**, **Spalten**, und **Beziehungen** Objekte.  Ein allgemeinen Überblick über das Modell Objektstruktur unten veranschaulicht, wie die Komponententeile miteinander verknüpft sind.  
   
@@ -53,7 +54,7 @@ Im Gegensatz dazu bei der Verwaltung von Objekten, die Teil der tabellarischen M
 
 ### <a name="tom-and-xmla"></a>PETER und XMLA
 
-Bei der Übertragung verwendet TOM das XMLA-Protokoll aus, für die Kommunikation mit dem Analysis Services-Server und zum Verwalten von Objekten. Wenn Sie nicht tabellarische Objekte zu verwalten, die PETER verwendet [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), die Analysis Services Scripting Language-Erweiterung des XMLA. Wenn Sie tabellarische Objekte zu verwalten, verwendet dem tabellarische SSAS-Protokoll bei TOM auch die eine Erweiterung der XMLA. Finden Sie unter [MS-SSAS-T-SQL Server Analysis Services-Tabellendatenbank protokolldokumentation](https://msdn.microsoft.com/library/mt719260.aspx) für Weitere Informationen.
+Bei der Übertragung verwendet TOM das XMLA-Protokoll aus, für die Kommunikation mit dem Analysis Services-Server und zum Verwalten von Objekten. Wenn Sie nicht tabellarische Objekte zu verwalten, die PETER verwendet [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), die Analysis Services Scripting Language-Erweiterung des XMLA. Beim Verwalten von Tabellenobjekten verwendet TOM tabellarische MS-SSAS-Protokoll, auch eine Erweiterung des XMLA. Finden Sie unter [MS-SSAS-T-SQL Server Analysis Services-Tabellendatenbank protokolldokumentation](https://msdn.microsoft.com/library/mt719260.aspx) für Weitere Informationen.
 
 ### <a name="tom-and-json"></a>PETER und JSON
 

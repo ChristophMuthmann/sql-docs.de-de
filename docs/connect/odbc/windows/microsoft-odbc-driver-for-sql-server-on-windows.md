@@ -1,39 +1,41 @@
 ---
 title: Microsoft ODBC Driver for SQLServer on Windows | Microsoft Docs
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 02/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e32deba2343ac385175760685e50ab10a156017a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 990665bcb7091b61bc8579a1a33e30c3cc56874e
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Der Microsoft ODBC Driver 13.1, 13 und 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sind eigenständige ODBC-Treiber die eine Anwendungsprogrammierschnittstelle (API), der Implementieren der ODBC-Standardschnittstellen für Microsoft bereitstellen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
+Der Microsoft ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sind eigenständige ODBC-Treiber die eine Anwendungsprogrammierschnittstelle (API), der Implementieren der ODBC-Standardschnittstellen für Microsoft bereitstellen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
 
-Der Microsoft ODBC-Treiber für SQL Server kann verwendet werden, um neue Anwendungen zu erstellen. Sie können auch Ihre älteren Anwendungen aktualisieren, die zurzeit einen älteren ODBC-Treiber verwenden. Der ODBC-Treiber für SQL Server unterstützt Verbindungen mit Azure SQL-Datenbank, Azure SQL Data Warehouse, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 und SQL Server 2005.  
+Der Microsoft ODBC-Treiber für SQL Server kann verwendet werden, um neue Anwendungen zu erstellen. Sie können auch Ihre älteren Anwendungen aktualisieren, die zurzeit einen älteren ODBC-Treiber verwenden. Der ODBC-Treiber für SQL Server unterstützt Verbindungen mit Azure SQL-Datenbank, Azure SQL Data Warehouse, SQL Server-2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 und SQL Server 2005.  
 
 ## <a name="summary"></a>Zusammenfassung
 
 | Version       | Unterstützte Funktionen      |
 | ------------- |---------------| 
+| Microsoft ODBC Driver 17 für SQLServer | <ul><li>Always Encrypted-Unterstützung für BCP-API</li><li>Neues Verbindungszeichenfolgen-Attribut UseFMTONLY bewirkt, dass Treiber ältere Metadaten in besonderen Fällen, dass temporäre Tabellen verwendet werden.</li>
 | Microsoft ODBC Driver 13.1 for SQLServer     | <ul><li>Always Encrypted</li><li>Azure AD-Authentifizierung</li><li>Always On-Verfügbarkeitsgruppen (Availability Groups, AG)</li></ul>   | 
 | Microsoft ODBC Driver 13 for SQLServer      | <ul><li>Internationaler Domänenname (IDN)</li></ul> |
 | Microsoft ODBC Driver 11 for SQL Server | <ul><li>Treiberfähiges Verbindungspooling</li><li>Verbindungsstabilität</li><li>Asynchrone Ausführung (Abruf-Methode)</li></ul> |    

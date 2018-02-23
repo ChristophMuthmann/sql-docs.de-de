@@ -1,7 +1,7 @@
 ---
-title: "Arbeitsbereichsdatenbank (SSAS – tabellarisch) | Microsoft Docs"
+title: Arbeitsbereichsdatenbank | Microsoft Docs
 ms.custom: 
-ms.date: 07/24/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 73cbfa40573fcf08774a576aaa7f09bb1ea21195
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2ab6a38542e9c6702edcf98401db0796fc5e78e4
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="workspace-database-ssas-tabular"></a>Arbeitsbereichsdatenbank (SSAS – tabellarisch)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Arbeitsbereichsdatenbank für tabellarische Modelle, während der Modellerstellung verwendet wird erstellt, wenn Sie ein neues Projekt für tabellarische Modelle in erstellen [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
+# <a name="workspace-database"></a>Arbeitsbereichsdatenbank 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Die Arbeitsbereichsdatenbank für Tabellenmodelle, die während der Modellerstellung verwendet wird, wird erstellt, wenn Sie ein Projekt für Tabellenmodelle in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]anlegen.
   
 ## <a name="specifying-a-workspace-instance"></a>Angeben einer Arbeitsbereichinstanz  
   Beim Erstellen eines neuen Tabellenmodellprojekts mit SSDT können Sie eine Analysis Services-Instanz angeben, die beim Erstellen des Projekts verwendet werden soll. Mit dem [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]-Release vom September 2016 (14.0.60918.0) wurden für die Erstellung eines neuen Tabellenmodellprojekts zwei Modi zum Angeben einer Arbeitsbereichsinstanz eingeführt. 
@@ -32,8 +33,6 @@ ms.lasthandoff: 01/08/2018
 **Ein integrierter Arbeitsbereich:** Verwendet die SSDT-eigene Analysis Services-Instanz
 
 **Ein Arbeitsbereichsserver:** Eine Arbeitsbereichsdatenbank wird auf einer expliziten Analysis Services-Instanz erstellt, die sich häufig auf dem gleichen Computer wie SSDT oder auf einem anderen Computer im selben Netzwerk befindet.
-
-
   
 ### <a name="integrated-workspace"></a>Ein integrierter Arbeitsbereich:
 Bei einem integrierten Arbeitsbereich wird eine Arbeitsdatenbank speicherintern mithilfe der SSDT-eigenen, impliziten Analysis Services-Instanz erstellt. Der Modus „Integrierter Arbeitsbereich“ reduziert die Komplexität der Erstellung von tabellarischen Projekten in SSDT erheblich, da keine separate, explizite Installation von SQL Server Analysis Services erforderlich ist.
@@ -56,7 +55,7 @@ Sie können mithilfe der Eigenschaften „Arbeitsbereichsdatenbank“ und „Arb
   
  Nachdem Sie dem Modellprojekt mit dem Tabellenimport-Assistenten oder mit „Kopieren/Einfügen“ Daten hinzugefügt haben, zeigen Sie die Arbeitsbereichsdatenbank an, wenn Sie Tabellen, Spalten und Daten im Modell-Designer anzeigen. Wenn Sie weitere Tabellen, Spalten, Beziehungen usw. hinzufügen, ändern Sie die Arbeitsbereichsdatenbank.  
   
- Wenn Sie ein tabellarisches Modellprojekt bereitstellen, wird die bereitgestellte Modelldatenbank, die letztlich eine Kopie der Arbeitsbereichsdatenbank ist, auf der in der Bereitstellungsserver-Eigenschaft angegebenen Analysis Server-Instanz erstellt. Weitere Informationen zur Bereitstellungsserver-Eigenschaft finden Sie unter [Projekteigenschaften &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md).  
+ Wenn Sie ein tabellarisches Modellprojekt bereitstellen, wird die bereitgestellte Modelldatenbank, die letztlich eine Kopie der Arbeitsbereichsdatenbank ist, auf der in der Bereitstellungsserver-Eigenschaft angegebenen Analysis Server-Instanz erstellt. Weitere Informationen zu den Bereitstellungsserver-Eigenschaft, finden Sie unter [Projekteigenschaften](../../analysis-services/tabular-models/project-properties-ssas-tabular.md).  
   
  Die Arbeitsbereichsdatenbank des Modells befindet sich in der Regel auf "localhost" oder einer lokalen benannten Instanz eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Servers. Sie können die Arbeitsbereichsdatenbank mithilfe einer Remoteinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] hosten, diese Konfiguration wird jedoch aufgrund der Latenzzeit während Datenabfragen und anderer Einschränkungen nicht empfohlen. Im Idealfall werden die Arbeitsbereichsdatenbanken von der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz auf demselben Computer gehostet wie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Wenn Modellprojekte auf demselben Computer wie die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz erstellt werden, von der die Arbeitsbereichsdatenbank gehostet wird, kann sich dies leistungssteigernd auswirken.  
   
@@ -82,7 +81,7 @@ Sie können mithilfe der Eigenschaften „Arbeitsbereichsdatenbank“ und „Arb
  Die Eigenschaften von Arbeitsbereichsdatenbanken sind in den Modelleigenschaften enthalten. Um Modelleigenschaften in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]im **Projektmappen-Explorer**anzuzeigen, klicken Sie auf die Datei **Model.bim** . Modelleigenschaften können mit dem **Eigenschaftenfenster** konfiguriert werden. Die Eigenschaften von Arbeitsbereichsdatenbanken umfassen:  
   
 > [!NOTE]  
->  Auf die Eigenschaften **Modus „Integrierter Arbeitsbereich“**, **Arbeitsbereichsserver**, **Arbeitsbereich beibehalten** und **Datensicherung** werden beim Erstellen eines neuen Modellprojekts die Standardeinstellungen angewendet. Die Standardeinstellungen für neue Modellprojekte können auf der Seite **Datenmodellierung** in den Einstellungen für **Analysis-Server** im Dialogfeld „Extras/Optionen“ geändert werden. Diese und andere Eigenschaften können auch für jedes Modellprojekt im **Eigenschaftenfenster** festgelegt werden. Änderungen an den Standardeinstellungen wirken sich nicht auf bereits erstellte Modellprojekte aus. Weitere Informationen finden Sie unter [Konfigurieren von Standarddatenmodellierung und Bereitstellungseigenschaften &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
+>  Auf die Eigenschaften **Modus „Integrierter Arbeitsbereich“**, **Arbeitsbereichsserver**, **Arbeitsbereich beibehalten** und **Datensicherung** werden beim Erstellen eines neuen Modellprojekts die Standardeinstellungen angewendet. Die Standardeinstellungen für neue Modellprojekte können auf der Seite **Datenmodellierung** in den Einstellungen für **Analysis-Server** im Dialogfeld „Extras/Optionen“ geändert werden. Diese und andere Eigenschaften können auch für jedes Modellprojekt im **Eigenschaftenfenster** festgelegt werden. Änderungen an den Standardeinstellungen wirken sich nicht auf bereits erstellte Modellprojekte aus. Weitere Informationen finden Sie unter [modellierungs- und Bereitstellungseigenschaften Standardeigenschaften konfigurieren](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
   
 |Eigenschaft|Standardeinstellung|Description|  
 |--------------|---------------------|-----------------|  
@@ -95,6 +94,6 @@ Sie können mithilfe der Eigenschaften „Arbeitsbereichsdatenbank“ und „Arb
  Sie können SQL Server Management Studio (SSMS) zum Herstellen einer Verbindung zu einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server verwenden, der eine Arbeitsbereichsdatenbank hostet. In der Regel ist keine Verwaltung der Arbeitsbereichsdatenbank erforderlich. Eine Ausnahme liegt jedoch vor, wenn eine Arbeitsbereichsdatenbank getrennt oder gelöscht werden soll. Diese Schritte müssen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]vorgenommen werden. Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nicht, um die Arbeitsbereichsdatenbank zu verwalten, während das Projekt im Modell-Designer geöffnet ist. Dies kann zu Datenverlusten führen.
    
 ## <a name="see-also"></a>Siehe auch  
-[Modelleigenschaften &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
+[Modelleigenschaften](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
   
   

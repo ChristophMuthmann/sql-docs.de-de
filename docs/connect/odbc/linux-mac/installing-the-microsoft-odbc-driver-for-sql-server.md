@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e7f03a55e7be9bba83458b04d11208ed1a65b524
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 883c016829dcf5ba9b7d48f0356a4a6141550e7d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Installieren von Microsoft ODBC Driver for SQL Server unter Linux und macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -32,6 +32,8 @@ ms.lasthandoff: 02/11/2018
 In diesem Thema wird erläutert, wie zum Installieren der [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] für Linux und MacOS sowie die optionalen-Befehlszeilentools für SQL Server (`bcp` und `sqlcmd`) und den UnixODBC-Header-Entwicklung.
 
 ## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver 17 für SQLServer 
+
+**Wichtiger Hinweis:** Version 17 ODBC-Treiberpakete für Linux und Macintosh sind derzeit nicht verfügbar ist, aufgrund von Problemen, wenn vorhandene Installationen aktualisiert. Wir arbeiten zum Bereitstellen von aktualisierten Pakete so bald wie möglich. Installationsbefehle für 17-Version ausgeführt wird derzeit die Version 13.1 Treiber installieren.
 
 ### <a name="debian-8-and-9"></a>Debian 8 und 9
 ```

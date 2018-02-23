@@ -24,18 +24,21 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3bf21d3debd7c24ea7b2e5ddcea56392e0f33400
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d85d437ce17c04107d85cf444268eb26f1a460e8
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>Tabellenmodellierung (Kompatibilitätsgrad 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Dieses Lernprogramm enthält Lektionen zum Erstellen einer Analysis Services-Tabellenmodell an die [Kompatibilitätsgrad 1200](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) mit [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt), und die Bereitstellung Ihres Modells in einer Analysis Services Server lokal oder in Azure.  
  
-Wenn Sie 2017 von SQL Server oder Azure Analysis Services, und Sie verwenden möchten, Ihr Modell auf die Kompatibilität 1400 Ebene erstellen, verwenden die [Azure Analysis Services - Adventure Works-Lernprogramm](https://review.docs.microsoft.com/azure/analysis-services/tutorials/aas-adventure-works-tutorial?branch=master). Diese aktualisierte Version der neue, moderne Get Data-Funktion verwendet, um eine Verbindung herzustellen, und importieren die Quelldaten und die M-Sprache verwendet, um Partitionen zu konfigurieren.
+Wenn Sie SQL Server-2017 oder Azure Analysis Services verwenden, und Sie verwenden möchten, Ihr Modell auf die Kompatibilität 1400 Ebene erstellen, verwenden die [Tabellenmodellierung (Kompatibilitätsgrad 1400)](tutorial-tabular-1400/as-adventure-works-tutorial.md). Diese aktualisierte Version moderne Get Data-Funktion verwendet, um eine Verbindung herzustellen, und importieren die Quelldaten, die Sprache M verwendet, um Partitionen zu konfigurieren und umfasst zusätzliche ergänzende Lektionen.
+
+> [!IMPORTANT]
+> Sie sollten die tabellarische Modelle mit dem aktuellen, vom Server unterstützten Kompatibilitätsgrad erstellen. Höher Compatibility Level Modelle verbesserte Leistung, zusätzliche Funktionen bereitstellen und mehr nahtlos auf zukünftige Kompatibilitätsgrade aktualisiert.
  
   
 ## <a name="what-you-learn"></a>Was Sie lernen   
@@ -50,14 +53,14 @@ Wenn Sie 2017 von SQL Server oder Azure Analysis Services, und Sie verwenden mö
   
 -   Zum Erstellen und Verwalten von Perspektiven und Hierarchien, die Benutzern weitere einfacher Modelldaten durchsuchen, durch die Bereitstellung von Geschäfts- und anwendungsspezifischen Blickpunkten fehlschlagen.  
   
--   Erstellen von Partitionen, mit denen sich Tabellendaten in kleinere logische Teile aufteilen lassen, die unabhängig von anderen Partitionen verarbeitet werden können.  
+-   Erstellen von Partitionen Division Tabellendaten in kleinere logische Teile, die unabhängig von anderen Partitionen verarbeitet werden können.  
   
 -   Sichern von Modellobjekten und -daten durch die Erstellung von Rollen mit Benutzerelementen.  
   
 -   Wie Sie ein tabellarisches Modell in Analysis Services-Server lokal oder in Azure bereitstellen.  
   
 ## <a name="scenario"></a>Szenario  
-Dieses Lernprogramm basiert auf dem Adventure Works Cycles, einem fiktiven Unternehmen. Adventure Works ist ein großes, multinationales Herstellungsunternehmen, das produziert und vertreibt Fahrräder aus Metallene und Verbundwerkstoffen für kommerzielle Märkte in Nordamerika, Europa und Asien. Mit Hauptsitz in Bothell, Washington werden in das Unternehmen 500 Arbeiter beschäftigt. Darüber hinaus Verkaufsteams Adventure Works mehrere regionalen gesamte marktbasis.  
+Dieses Lernprogramm basiert auf dem Adventure Works Cycles, einem fiktiven Unternehmen. Adventure Works ist ein großes, multinationales Fertigungsunternehmen, die Fahrräder, Teilen und Zubehör für kommerzielle Märkte in Nordamerika, Europa und Asien produziert. Mit Hauptsitz in Bothell, Washington werden in das Unternehmen 500 Arbeiter beschäftigt. Darüber hinaus Verkaufsteams Adventure Works mehrere regionalen gesamte marktbasis.  
   
 Um die Datenanalyseanforderungen von Verkaufs- und Marketingteams sowie des Senior Managements besser zu unterstützen, werden Sie damit beauftragt, ein Tabellenmodell für Benutzer zu erstellen, um Internetumsatzdaten in der AdventureWorksDW-Beispieldatenbank zu analysieren.  
   

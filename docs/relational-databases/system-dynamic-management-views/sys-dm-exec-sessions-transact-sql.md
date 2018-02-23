@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: aa248e9733c17b734eb60095f65b462e42e8b0c7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f2cf9c01c280848403ca2998e550213f2de78ad6
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="permissions"></a>Berechtigungen  
 "Jeder" kann ihre eigenen Sitzungsinformationen zur sehen.  
 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** Erfordert `VIEW SERVER STATE` -Berechtigung für [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] zu allen Sitzungen auf dem Server finden Sie unter.  
-**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Erfordert `VIEW DATABASE STATE` alle Verbindungen mit der aktuellen Datenbank angezeigt. `VIEW DATABASE STATE`kann nicht gewährt werden, der `master` Datenbank. 
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Erfordert `VIEW DATABASE STATE` alle Verbindungen mit der aktuellen Datenbank angezeigt. `VIEW DATABASE STATE` kann nicht gewährt werden, der `master` Datenbank. 
   
   
 ## <a name="remarks"></a>Hinweise  
@@ -114,7 +114,7 @@ ms.lasthandoff: 02/03/2018
  Ist diese Option nicht aktiviert, geben diese Spalten NULL-Werte zurück. Weitere Informationen zum Festlegen dieser Serverkonfigurationsoption finden Sie unter [common Criteria-Kompatibilität aktiviert (Serverkonfigurationsoption)](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md).  
  
  
- Die Admin-Verbindungen auf Azure SQL-Datenbank werden eine Zeile pro authentifizierter Sitzung angezeigt, während die nichtadministrativen Verbindungen nur Informationen im Zusammenhang mit ihrer Datenbank benutzersitzungen angezeigt werden. 
+ Die Admin-Verbindungen auf Azure SQL-Datenbank werden eine Zeile pro authentifizierter Sitzung angezeigt. Die "sa"-Sitzungen, die in das Resultset angezeigt werden keine Auswirkungen auf das Benutzerkontingent für Sitzungen. Die nicht-Admin-Verbindungen werden nur Informationen im Zusammenhang mit ihrer Datenbank benutzersitzungen angezeigt.
  
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  

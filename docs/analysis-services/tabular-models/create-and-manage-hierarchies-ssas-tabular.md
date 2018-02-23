@@ -1,7 +1,7 @@
 ---
-title: "Erstellen und Verwalten von Hierarchien (SSAS – tabellarisch) | Microsoft Docs"
+title: Erstellen und Verwalten von Hierarchien | Microsoft Docs
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6a8646985a0d9eb8dbba35123c2c3b1d049e62a5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 96af188d39d583c53b2520d03f6fd0962092a90f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-hierarchies-ssas-tabular"></a>Erstellen und Verwalten von Hierarchien (SSAS – tabellarisch)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Hierarchien können erstellt und verwaltet, die im Modell-Designer in der Diagrammsicht angezeigt werden. Um den Modell-Designer in der Diagrammsicht in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]anzuzeigen, klicken Sie auf das Menü **Modell** , zeigen Sie dann auf **Modellansicht**, und klicken Sie dann auf **Diagrammsicht**.  
+# <a name="create-and-manage-hierarchies"></a>Erstellen und Verwalten von Hierarchien 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Hierarchien können in der Diagrammsicht des Modell-Designers erstellt und verwaltet werden. Um den Modell-Designer in der Diagrammsicht in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]anzuzeigen, klicken Sie auf das Menü **Modell** , zeigen Sie dann auf **Modellansicht**, und klicken Sie dann auf **Diagrammsicht**.  
   
- Dieses Thema umfasst folgende Aufgaben:  
+ Dieser Artikel umfasst die folgenden Aufgaben:  
   
 -   [Erstellen einer Hierarchie](#bkmk_create)  
   
@@ -100,8 +101,8 @@ ms.lasthandoff: 01/08/2018
 -   Klicken Sie auf die übergeordnete Hierarchieebene, und drücken Sie dann ENTF. Dadurch werden auch alle untergeordneten Ebenen entfernt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tabellen-Modell-Designer &#40;SSAS&#41;](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
- [Hierarchien &#40; SSAS – tabellarisch &#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
- [Measures &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
+ [Designer für tabellarische Modelle ](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
+ [Hierarchien](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
+ [Measures](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   
