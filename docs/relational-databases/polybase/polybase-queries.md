@@ -26,16 +26,16 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 439eb6561409ab10072f35013126e42bb5df2a41
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 332661e69cde4a1ca8ec55c4082e1b3a23077571
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="polybase-queries"></a>PolyBase-Abfragen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Dieser Artikel bietet Beispiele für Abfragen mit der [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)-Funktion von SQL Server 2016. Bevor Sie diese Beispiele verwenden können, müssen Sie zudem die T-SQL-Anweisungen zum Einrichten von PolyBase verstehen (siehe [PolyBase T-SQL objects](../../relational-databases/polybase/polybase-t-sql-objects.md) [PolyBase T-SQL-Objekte]).
+  Dieser Artikel bietet Beispiele für Abfragen mit dem [PolyBase](../../relational-databases/polybase/polybase-guide.md)-Feature von SQL Server 2016. Bevor Sie diese Beispiele verwenden können, müssen Sie zudem die T-SQL-Anweisungen zum Einrichten von PolyBase verstehen (siehe [PolyBase T-SQL objects](../../relational-databases/polybase/polybase-t-sql-objects.md) [PolyBase T-SQL-Objekte]).
   
 ## <a name="queries"></a>Abfragen  
  Führen Sie Transact-SQL-Anweisungen für externe Tabellen aus, oder verwenden Sie BI-Tools, um externe Tabellen abzufragen.

@@ -1,32 +1,34 @@
 ---
-title: ALTER DATABASE (Azure SQL Data Warehouse) | Microsoft Docs
+title: ALTER DATABASE (Azure SQL Data Warehouse) | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 03/03/2017
+ms.date: 02/15/2018
 ms.prod: 
 ms.prod_service: sql-data-warehouse
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: da712a46-5f8a-4888-9d33-773e828ba845
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
-ms.openlocfilehash: 71737beb817cfeebed195c90d056768aef678a3e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: b70750eebf7727348f9058bea2aecd0508d544bd
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="alter-database-azure-sql-data-warehouse"></a>ALTER DATABASE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Ändert den Namen, eine maximale Größe oder ein dienstziel für eine Datenbank.  
+Ändert den Namen, die maximale Größe oder das Dienstziel einer Datenbank.  
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,61 +57,61 @@ ALTER DATABASE database_name
   
 ## <a name="arguments"></a>Argumente  
 *database_name*  
-Gibt den Namen der Datenbank geändert werden.  
+Gibt den Namen der zu ändernden Datenbank an.  
 
-MODIFY NAME = *Name der neuen Datenbank*  
-Benennt die Datenbank mit dem angegebenen als Namen *Name der neuen Datenbank*.  
+MODIFY NAME = *new_database_name*  
+Benennt die Datenbank in den angegebenen Namen *new_database_name* um.  
   
 MAXSIZE  
-Der Standardwert ist 10.240 GB (10 TB).  
+Der Standardwert ist 245.760 GB (240 TB).  
 
-**Gilt für:** für Ebene von Elastizität Leistung optimiert
+**Gilt für:** Optimiert für Elastizitätsleistungsstufe
 
-Die maximal zulässige Größe für die Datenbank. Die Datenbank kann nicht über MaxSize-Wert zu vergrößern. 
+Der Wert für die maximal zulässige Größe der Datenbank Die Datenbank kann nicht größer sein als MAXSIZE. 
 
-**Gilt für:** für Leistung berechnungsschicht optimiert
+**Gilt für:** Optimiert für Computeleistungsstufe
 
-Die maximal zulässige Größe für Rowstore-Daten in der Datenbank. MAXSIZE können nicht in die Rowstore-Tabellen, Deltastore für einen columnstore-Index oder ein nicht gruppierter Index für einen gruppierten columnstore-Index gespeicherte Daten übersteigen.  Daten, die in den columnstore-Format komprimiert eine größenbeschränkung verfügt nicht über und werden von MAXSIZE nicht eingeschränkt. 
+Die maximal zulässige Größe für Rowstore-Daten in der Datenbank Daten, die in Rowstore-Tabellen, dem Deltastore eines Columnstore-Index oder einem nicht gruppierten Index für einen gruppierten Columnstore-Index gespeichert sind, können MAXSIZE nicht übersteigen.  Daten, die im Columnstore-Format komprimiert sind, haben kein Größenlimit und werden nicht durch MAXSIZE beschränkt. 
   
 SERVICE_OBJECTIVE  
-Gibt die Leistungsebene an. Weitere Informationen zu dienstziele für [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], finden Sie unter [Leistung Ebenen](https://azure.microsoft.com/documentation/articles/performance-tiers/).  
+Gibt die Leistungsebene an. Weitere Informationen zu Dienstzielen für [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] finden Sie unter [Leistungsstufen](https://azure.microsoft.com/documentation/articles/performance-tiers/).  
   
 ## <a name="permissions"></a>Berechtigungen  
-Diese Berechtigungen sind erforderlich:  
+Folgende Berechtigungen sind erforderlich:  
   
--   Prinzipalanmeldung auf Serverebene (die 1 im Rahmen des Bereitstellungsprozesses erstellt), oder  
+-   Der Prinzipalanmeldename auf Serverebene (der während des Bereitstellungsprozesses erstellt wurde) oder  
   
--   Mitglied der `dbmanager` -Datenbankrolle.  
+-   Mitgliedschaft in der `dbmanager`-Datenbankrolle  
   
-Der Besitzer der Datenbank kann nicht die Datenbank nicht geändert werden, es sei denn, der Besitzer Mitglied ist die `dbmanager` Rolle.  
+Der Datenbankbesitzer kann die Datenbank nur ändern, wenn er Mitglied der Rolle `dbmanager` ist.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
-Die aktuelle Datenbank muss auf einer anderen Datenbank als der Sie, daher ändern sind **ALTER muss ausgeführt werden, während mit der master-Datenbank verbunden**.  
+Bei der aktuellen Datenbank muss es sich um eine andere Datenbank als die handeln, die Sie ändern. Deshalb muss **ALTER ausgeführt werden, während eine Verbindung zur Masterdatenbank besteht**.  
   
-SQL Data Warehouse ist in "130" COMPATIBILITY_LEVEL festgelegt und kann nicht geändert werden. Weitere Informationen finden Sie unter [verbessert die Abfrageleistung mit Kompatibilität Ebene 130 in Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
+SQL Data Warehouse ist auf COMPATIBILITY_LEVEL 130 festgelegt und kann nicht verändert werden. Weitere Informationen finden Sie unter [Verbesserte Abfrageleistung mit Kompatibilitätsgrad 130 in Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
   
-Um die Größe einer Datenbank zu reduzieren, verwenden Sie [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
+Verwenden Sie [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md), um die Größe einer Datenbank zu reduzieren.  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
-Zum Ausführen von ALTER DATABASE, wird die Datenbank muss online sein und darf sich nicht in einem angehaltenen Zustand.  
+Für die Ausführung von ALTER DATABASE muss die Datenbank online sein und darf sich nicht im angehaltenen Zustand befinden.  
   
-ALTER DATABASE-Anweisung muss im Autocommit-Modus ausgeführt, das ist der Standardmodus zur transaktionsverwaltung. Dies wird in den Verbindungseinstellungen festgelegt.  
+Die ALTER DATABASE-Anweisung muss im Autocommitmodus ausgeführt werden. Dabei handelt es sich um den Standardmodus für die Transaktionsverwaltung. Dies wird in den Verbindungseinstellungen festgelegt.  
   
-ALTER DATABASE-Anweisung darf nicht Teil einer benutzerdefinierten Transaktion sein.
+Die ALTER DATABASE-Anweisung darf nicht Teil einer benutzerdefinierten Transaktion sein.
 
-Sie können die Sortierung der Datenbank nicht ändern.  
+Sie können die Datenbanksortierung nicht ändern.  
   
 ## <a name="examples"></a>Beispiele  
-Bevor Sie diese Beispiele ausführen, stellen Sie sicher, dass die Datenbank aus, die Sie ändern möchten, nicht der aktuellen Datenbank ist. Die aktuelle Datenbank muss auf einer anderen Datenbank als der Sie, daher ändern sind **ALTER muss ausgeführt werden, während mit der master-Datenbank verbunden**.  
+Stellen Sie vor dem Ausführen dieser Beispiele sicher, dass es sich bei der Datenbank, die Sie ändern, nicht um die aktuelle Datenbank handelt. Bei der aktuellen Datenbank muss es sich um eine andere Datenbank als die handeln, die Sie ändern. Deshalb muss **ALTER ausgeführt werden, während eine Verbindung zur Masterdatenbank besteht**.  
 
-### <a name="a-change-the-name-of-the-database"></a>A. Ändern Sie den Namen der Datenbank  
+### <a name="a-change-the-name-of-the-database"></a>A. Ändern des Datenbanknamens  
 
 ```  
 ALTER DATABASE AdventureWorks2012  
 MODIFY NAME = Northwind;  
 ```  
   
-### <a name="b-change-max-size-for-the-database"></a>B. Ändern Sie die maximale Größe für die Datenbank  
+### <a name="b-change-max-size-for-the-database"></a>B. Ändern der maximalen Datenbankgröße  
   
 ```  
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB );  
@@ -121,13 +123,13 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB );
 ALTER DATABASE dw1 MODIFY ( SERVICE_OBJECTIVE= 'DW1200' );  
 ```  
   
-### <a name="d-change-the-max-size-and-the-performance-level"></a>D. Ändern der maximalen Größe und Leistungsstufe  
+### <a name="d-change-the-max-size-and-the-performance-level"></a>D. Ändern der maximalen Größe und der Leistungsebene  
   
 ```  
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [CREATE DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/create-database-azure-sql-data-warehouse.md)
-[SQL Data Warehouse list of reference topics](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/)  
+[SQL Data Warehouse list of reference topics (Liste der SQL Data Warehouse-Referenzthemen)](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/)  
   

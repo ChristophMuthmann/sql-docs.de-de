@@ -8,7 +8,8 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-caps.latest.revision: "76"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e37b0da02e9608249c2283683324fee42fe9a8e3
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a1648f5ecd3170b2b60c157e4debb25d7c7f793a
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="permissions-database-engine"></a>Berechtigungen (Datenbankmodul)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,7 +115,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |Führen Sie|CLR-Typen, externe Skripts, Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR), Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR) und Synonyme|  
 |IMPERSONATE|Anmeldungen und Benutzer|  
 |INSERT|Synonyme, Tabellen und Spalten, Ansichten und Spalten. Eine Berechtigung kann auf Datenbank-, Schema- oder Objektebene erteilt werden.|  
-|RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen|  
+|RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] Warteschlangen|  
 |REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br />VIEW und<br />XML SCHEMA COLLECTION|  
 |SELECT|Synonyme, Tabellen und Spalten, Ansichten und Spalten. Eine Berechtigung kann auf Datenbank-, Schema- oder Objektebene erteilt werden.|  
 |TAKE OWNERSHIP|Alle Objektklassen außer DATABASE SCOPED CONFIGURATION, LOGIN, SERVER und USER.|  
@@ -421,7 +422,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
   
 7.  Die Berechtigungsprüfung ist bestanden, wenn die **erforderliche Berechtigung** nicht verweigert wurde, und die **erforderliche Berechtigung** für eine der Identitäten im **Sicherheitskontext** eines beliebigen Objekts im **Berechtigungsbereich**direkt oder implizit eine GRANT-Berechtigung oder GRANT WITH GRANT-Berechtigung enthält.  
 
-## <a name="secial-considerations-for-column-level-permissions"></a>Spezielle Aspekte für Berechtigungen auf Spaltenebene
+## <a name="special-considerations-for-column-level-permissions"></a>Spezielle Aspekte für Berechtigungen auf Spaltenebene
 
 Berechtigungen auf Spaltenebene werden mit der Syntax *<Tabellenname>(\<Spaltenname>)* gewährt. Zum Beispiel:
 ```sql

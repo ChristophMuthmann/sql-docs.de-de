@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6455a2881d11ccd10c7be65a437357b1d1431dda
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 169ad5455571c2b0e484fc0aa153e55141cdd1fd
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten
 Erfahren Sie, was Sie von dem Import/Export-Assistenten von SQL Server im Hinblick auf alltägliche Szenarios erwarten können. In diesem Artikel geht es um das Importieren von Daten aus einem Excel-Arbeitsblatt in eine SQL Server-Datenbank. Selbst wenn Sie planen, eine andere Quelle und ein anderes Ziel zu verwenden, werden Ihnen trotzdem in diesem Artikel nützliche Informationen zum Ausführen des Assistenten zur Verfügung gestellt.
@@ -118,7 +118,7 @@ Wenn das Dialogfeld **Spaltenzuordnungen** geöffnet ist, können Sie auf die Sc
 Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [Create Table SQL Statement (Erstellen einer SQL-Tabellenanweisung)](../../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md).
 
 ## <a name="optional-step-9---preview-the-data-to-copy"></a>Schritt 9 (optional): Überprüfen der Daten, die kopiert werden sollen
-Nachdem Sie auf **OK** geklickt haben, um das Dialogfeld **SQL-Anweisung CREATE TABLE** zu schließen, klicken Sie erneut auf **OK**, um das Dialogfeld **Spaltenzuordnungen** zu schließen. So gelangen Sie zurück auf die Seite **Quelltabellen und -sichten auswählen**. Sie können auf die Schaltfläche **Vorschau** klicken, damit eine Stichproben der Daten angezeigt wird, die der Assistent kopieren soll. In diesem Beispiel scheinen die Daten in Ordnung zu sein.
+Nachdem Sie auf **OK** geklickt haben, um das Dialogfeld **SQL-Anweisung CREATE TABLE** zu schließen, klicken Sie erneut auf **OK**, um das Dialogfeld **Spaltenzuordnungen** zu schließen. So gelangen Sie zurück auf die Seite **Quelltabellen und -sichten auswählen**. Sie können auf die Schaltfläche **Vorschau** klicken, damit ein Beispiel der Daten angezeigt wird, die vom Assistenten kopiert werden. In diesem Beispiel scheinen die Daten in Ordnung zu sein.
 
 ![Vorschau der Daten, die kopiert werden sollen](../../integration-services/import-export-data/media/preview-data-to-copy.jpg)
 
