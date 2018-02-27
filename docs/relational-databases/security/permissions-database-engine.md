@@ -409,7 +409,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
   
 2.  Erteilen des Zugriffs, wenn die Besitzverkettung anwendbar ist und die Zugriffsprüfung für das Objekt an früherer Stelle in der Kette die Sicherheitsprüfung erfolgreich war.  
   
-3.  Aggregieren der Identitäten, die dem Aufrufer zum Erstellen des **Sicherheitskontexts**zugeordnet sind, auf Server- und Datenbankebene sowie auf Ebene des signierten Moduls.  
+3.  Aggregieren der Identitäten, die dem Aufrufer zum Erstellen des **Sicherheitskontexts** zugeordnet sind, auf Server- und Datenbankebene sowie auf Ebene des signierten Moduls.  
   
 4.  Sammeln aller Berechtigungen, die für diesen **Berechtigungsbereich**erteilt oder verweigert wurden, in diesem **Sicherheitskontext**. Die Berechtigung kann explizit als GRANT, GRANT WITH GRANT oder DENY angegeben werden; oder die Berechtigungen können als implizite oder abdeckende GRANT-Berechtigung oder DENY-Berechtigung angegeben werden. Die CONTROL-Berechtigung für ein Schema impliziert z. B. CONTROL für eine Tabelle. CONTROL für eine Tabelle impliziert SELECT. Wenn CONTROL für das Schema erteilt wurde, wird folglich SELECT für die Tabelle erteilt. Wenn CONTROL für die Tabelle verweigert wurde, wird SELECT für die Tabelle verweigert.  
   
@@ -418,7 +418,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
   
 5.  Identifizieren Sie die **erforderliche Berechtigung**.  
   
-6.  Die Berechtigungsprüfung ist nicht bestanden, wenn die **erforderliche Berechtigung** für eine der Identitäten im **Sicherheitskontext** der Objekte im **Berechtigungsbereich**direkt oder implizit verweigert werden.  
+6.  Die Berechtigungsprüfung ist nicht bestanden, wenn die **erforderliche Berechtigung** für eine der Identitäten im **Sicherheitskontext** der Objekte im **Berechtigungsbereich** direkt oder implizit verweigert werden.  
   
 7.  Die Berechtigungsprüfung ist bestanden, wenn die **erforderliche Berechtigung** nicht verweigert wurde, und die **erforderliche Berechtigung** für eine der Identitäten im **Sicherheitskontext** eines beliebigen Objekts im **Berechtigungsbereich**direkt oder implizit eine GRANT-Berechtigung oder GRANT WITH GRANT-Berechtigung enthält.  
 

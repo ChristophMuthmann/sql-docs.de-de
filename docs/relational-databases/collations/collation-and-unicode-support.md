@@ -47,7 +47,7 @@ Sortierungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bieten
     
  Wenn Sie eine Sortierung für den Server, die Datenbank, die Spalte oder den Ausdruck auswählen, weisen Sie den Daten bestimmte Merkmale zu, die Auswirkungen auf die Ergebnisse vieler Datenbankvorgänge haben. Wenn Sie beispielsweise eine Abfrage mit ORDER BY erstellen, kann die Sortierreihenfolge des Resultsets von der Sortierung abhängen, die für die Datenbank gilt oder die in einer COLLATE-Klausel auf Ausdrucksebene der Abfrage vorgegeben ist.    
     
- Zur optimalen Verwendung der Sortierungsunterstützung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist es erforderlich, die in diesem Thema beschriebenen Begriffe zu verstehen und zu wissen, wie sie mit den Eigenschaften der Daten in Zusammenhang stehen.    
+ Zur optimalen Verwendung der Sortierungsunterstützung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist es erforderlich, die in diesem Thema beschriebenen Begriffe zu verstehen und zu wissen, wie sie mit den Eigenschaften der Daten in Zusammenhang stehen.    
     
 ##  <a name="Terms"></a> Sortierungsbegriffe    
     

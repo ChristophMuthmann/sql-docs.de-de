@@ -79,7 +79,7 @@ ms.lasthandoff: 02/03/2018
   
 3.  Geben Sie unter **Verbindungen**im Feld **Maximum der gleichzeitigen Benutzerverbindungen** einen Wert zwischen 0 und 32.767 ein, oder wählen Sie einen Wert aus, um für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die maximale Anzahl gleichzeitig zulässiger Benutzerverbindungen festzulegen.  
   
-4.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]neu.  
+4.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
