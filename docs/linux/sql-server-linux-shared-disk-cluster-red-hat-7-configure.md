@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: 519728819aa79534a1c8cc3a079164d276924a44
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 5263a40e37388ea9a884cafeffe2302f56f0043e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Konfigurieren Sie Red Hat Enterprise Linux freigegebene Datenträgercluster für SQL Server
 
@@ -30,22 +30,22 @@ Dieses Handbuch enthält Anweisungen zum Erstellen eines freigegebenen Datenträ
 > [!NOTE] 
 > Zugriff auf Red Hat-HA-Add-On und Dokumentation erfordert ein Abonnement. 
 
-Speicher wird als im nachfolgenden Diagramm veranschaulicht zwei Servern angezeigt. Komponenten - Corosync "und" Schrittmacher - Kommunikation und ressourcenverwaltung koordiniert werden. Einer der Server hat die aktive Verbindung mit der Speicherressourcen und SQL Server. Wenn Schrittmacher einen Fehler erkennt verwalten die Clusterkomponenten, die Ressourcen auf den anderen Knoten verschoben.  
+Wie das folgende Diagramm zeigt, wird der Speicher auf zwei Servern angezeigt. Komponenten - Corosync "und" Schrittmacher - Kommunikation und ressourcenverwaltung koordiniert werden. Einer der Server hat die aktive Verbindung mit der Speicherressourcen und SQL Server. Wenn Schrittmacher einen Fehler erkennt verwalten die Clusterkomponenten, die Ressourcen auf den anderen Knoten verschoben.  
 
 ![Red Hat Enterprise Linux 7 freigegebene Datenträgercluster für SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Weitere Informationen zur Clusterkonfiguration, Agents Ressourcenoptionen und Verwaltung, finden Sie auf [RHEL Referenzdokumentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Weitere Informationen zu Clusterkonfiguration, Optionen für Agents und Management finden Sie auf [RHEL Referenzdokumentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 
 > [!NOTE] 
 > SQL Server Integration in Schrittmacher ist an diesem Punkt nicht als gekoppelten als mit WSFC unter Windows. Aus SQL, besteht keine Kenntnisse über das Vorhandensein des Clusters, alle Orchestrierung befindet sich im außerhalb und der Dienst wird als eigenständige Instanz von Schrittmacher gesteuert. Außerdem ist z. B. Cluster Dmvs Sys. dm_os_cluster_nodes und dm_os_cluster_properties keine Datensätze.
-Zum Verwenden einer Verbindungszeichenfolge, die auf einem Zeichenfolgennamen für den Server verweist, und die IP-Adresse verwenden, müssen sie in ihrer DNS-Server die IP-Adresse verwendet, um die virtuelle IP-Adressressource erstellen (wie nachstehend beschrieben) mit den ausgewählten Servernamen registrieren.
+Zum Verwenden einer Verbindungszeichenfolge, die auf einem Zeichenfolgennamen für den Server verweist, und die IP-Adresse verwenden, müssen sie in ihrer DNS-Server die IP-Adresse verwendet, um die virtuelle IP-Adressressource erstellen (wie in den folgenden Abschnitten erläutert wird) mit dem ausgewählten Server registrieren.
 
 In den folgenden Abschnitten exemplarisch die Schritte zum Einrichten einer Lösung mit Failovercluster. 
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Zum Abschließen der End-to-End-Szenarios unten benötigen Sie zwei Computer, der zwei Knoten-Cluster und einem anderen Server so konfigurieren Sie die NFS-Server bereitstellen. Unten aufgeführten Schritten dargestellt, wie diesen Servern konfiguriert werden kann.
+Um das folgende End-to-End-Szenario abzuschließen, benötigen Sie zwei Computer, der zwei Knoten-Cluster und einem anderen Server so konfigurieren Sie die NFS-Server bereitstellen. Unten aufgeführten Schritten dargestellt, wie diesen Servern konfiguriert werden kann.
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Richten Sie ein und konfigurieren Sie des Betriebssystems auf allen Clusterknoten
 
@@ -68,7 +68,7 @@ Der erste Schritt ist so konfigurieren Sie das Betriebssystem auf den Clusterkno
 > [!NOTE] 
 > Beim Setup eine Server-Hauptschlüssel für die SQL Server-Instanz generiert und an platziert `/var/opt/mssql/secrets/machine-key`. Unter Linux wird SQL Server immer ausgeführt, als ein lokales Konto Mssql aufgerufen werden. Da es sich um ein lokales Konto handelt, wird nicht seine Identität Knoten gemeinsam verwendet. Aus diesem Grund müssen Sie den Verschlüsselungsschlüssel primären Knoten für jeden sekundären Knoten kopieren, damit jedes lokale Mssql-Konto, um den Server-Hauptschlüssel entschlüsseln zugreifen kann. 
 
-1. Klicken Sie auf dem primären Knoten, erstellen Sie eine SQL Server-Anmeldung für Schrittmacher, und erteilen Sie die Login-Berechtigung zum Ausführen `sp_server_diagnostics`. Schrittmacher wird dieses Konto verwendet, um zu überprüfen, welcher Knoten auf SQL Server ausgeführt wird. 
+1. Klicken Sie auf dem primären Knoten, erstellen Sie eine SQL Server-Anmeldung für Schrittmacher, und erteilen Sie die Login-Berechtigung zum Ausführen `sp_server_diagnostics`. Dieses Konto wird von Schrittmacher verwendet, um zu überprüfen, welcher Knoten auf SQL Server ausgeführt wird. 
 
    ```bash
    sudo systemctl start mssql-server
@@ -125,25 +125,25 @@ Es gibt eine Vielzahl von Lösungen für das Bereitstellen von freigegebenen Spe
 
 Führen Sie folgende Schritte aus, auf dem NFS-Server:
 
-1. Installieren`nfs-utils`
+1. Installieren `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils
    ```
 
-1. Aktivieren und starten`rpcbind`
+1. Aktivieren und starten `rpcbind`
 
    ```bash
    sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
-1. Aktivieren und starten`nfs-server`
+1. Aktivieren und starten `nfs-server`
  
    ```bash
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  Bearbeiten Sie `/etc/exports` auf das Verzeichnis exportieren Sie freigeben möchten. Sie benötigen 1 Zeile für jede Freigabe gewünschten. Beispiel: 
+1.  Bearbeiten Sie `/etc/exports` auf das Verzeichnis exportieren Sie freigeben möchten. Sie benötigen 1 Zeile für jede gewünschte Freigabe. Beispiel: 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -180,7 +180,7 @@ Führen Sie folgende Schritte aus, auf dem NFS-Server:
 
 Führen Sie die folgenden Schritte auf allen Knoten im Cluster.
 
-1.  Installieren`nfs-utils`
+1.  Installieren `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils
@@ -233,7 +233,7 @@ Weitere Informationen zum Verwenden von NFS finden Sie unter den folgenden Resso
    10.8.8.0:/mnt/nfs /var/opt/mssql/data nfs timeo=14,intr 
    ``` 
 > [!NOTE] 
->Wenn eine Ressource Datei System (FS) verwenden, wie im folgenden empfohlen, besteht keine Notwendigkeit, den Befehl bereitstellen in/etc/fstab beizubehalten. Schrittmacher übernimmt das Einbinden des Ordners beim Starten der FS gruppierte Ressource. Wird mit der Hilfe von Fencing Ensurethe FS nie zweimal bereitgestellt wird. 
+>Wenn eine Datei System (FS) Ressource wie empfohlen hier verwenden, besteht keine Notwendigkeit, den Befehl bereitstellen in/etc/fstab beizubehalten. Schrittmacher übernimmt das Einbinden des Ordners beim Starten der FS gruppierte Ressource. Mithilfe von Fencing wird es sichergestellt, dass das FS nie zweimal bereitgestellt wird. 
 
 1.  Führen Sie `mount -a` Befehl für das System zum Aktualisieren der bereitgestellten Pfade.  
 
@@ -332,7 +332,7 @@ Zu diesem Zeitpunkt sind beide SQL Server-Instanzen mit Datenbankdateien auf den
    sudo pcs property set start-failure-is-fatal=false
    ```
 
-2. Konfigurieren Sie die Clusterressourcen für SQL Server, Dateisystem und virtuellen IP-Ressourcen, und drücken Sie die Konfiguration für den Cluster. Sie benötigen die folgende Informationen:
+2. Konfigurieren Sie die Clusterressourcen für SQL Server, Dateisystem und virtuellen IP-Ressourcen, und drücken Sie die Konfiguration für den Cluster. Sie benötigen die folgenden Informationen:
 
    - **SQL Server-Ressourcenname**: einen Namen für die SQL Server-Clusterressource. 
    - **Floating IP-Ressourcenname**: einen Namen für die virtuelle IP-Adressressource.
@@ -342,7 +342,7 @@ Zu diesem Zeitpunkt sind beide SQL Server-Instanzen mit Datenbankdateien auf den
    - **Gerät**: der lokale Pfad, dass er auf die Freigabe bereitgestellt wurde
    - **FsType**: Freigabe Dateityp (d. h. Nfs)
 
-   Aktualisieren Sie die Werte aus dem Skript unten für Ihre Umgebung. Führen Sie auf einem Knoten zu konfigurieren und starten Sie den Clusterdienst.  
+   Aktualisieren Sie die Werte aus dem folgenden Skript für Ihre Umgebung. Führen Sie auf einem Knoten zu konfigurieren und starten Sie den Clusterdienst.  
 
    ```bash
    sudo pcs cluster cib cfg 

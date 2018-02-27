@@ -1,7 +1,7 @@
 ---
 title: DirectQuery-Modus | Microsoft Docs
 ms.custom: 
-ms.date: 07/06/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.realtime.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.realtime.f1
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e1eae96e5152fa9d16dd20cf1333c03bf2160db4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 13c60b58664d87cf23ea76069a6c68eb00870927
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="directquery-mode"></a>DirectQuery-Modus
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In diesem Thema wird beschrieben, *DirectQuery-Modus* für tabellarische Analysis Services-Modelle mit dem Kompatibilitätsgrad 1200 oder höher. Der DirectQuery-Modus kann für Modelle aktiviert werden, die Sie in SSDT entwerfen. Sie können auch tabellarische Modelle, die bereits bereitgestellt wurden, in SSMS in den DirectQuery-Modus ändern. Bevor Sie die DirectQuery-Modus auswählen, sollten Sie dessen Vorteile und die Einschränkungen verstehen.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Dieser Artikel beschreibt *DirectQuery-Modus* für tabellarische Analysis Services-Modelle mit dem Kompatibilitätsgrad 1200 oder höher. Der DirectQuery-Modus kann für Modelle aktiviert werden, die Sie in SSDT entwerfen. Sie können auch tabellarische Modelle, die bereits bereitgestellt wurden, in SSMS in den DirectQuery-Modus ändern. Bevor Sie die DirectQuery-Modus auswählen, sollten Sie dessen Vorteile und die Einschränkungen verstehen.
   
 ##  <a name="bkmk_Benefits"></a> Vorteile
  Standardmäßig verwenden Tabellenmodelle einen Cache im Arbeitsspeicher, um Daten zu speichern und abzufragen. Wenn Tabellenmodelle Daten aus dem Arbeitsspeicher abfragen, können selbst komplexe Abfragen äußerst schnell ausgeführt werden. Trotzdem hat die Verwendung von zwischengespeicherten Daten auch Einschränkungen. Große Datasets können nämlich den verfügbaren Arbeitsspeicher übersteigen, und die Anforderungen an die Datenaktualität können innerhalb eines regulären Verarbeitungszeitplans nur schwer oder überhaupt nicht erfüllt werden.  
@@ -56,8 +58,8 @@ Für tabellarische Modelle im DirectQuery-Modus gelten einige Einschränkungen. 
 |**Gespeicherte SQL-Prozeduren**|Gespeicherte Prozeduren können für DirectQuery-Modelle nicht als SQL-Anweisung angegeben werden, um Tabellen bei Verwendung des Assistenten zum Importieren von Daten zu definieren. |   
 |**Berechnete Tabellen**|Berechnete Tabellen werden in DirectQuery-Tabellenmodellen nicht unterstützt, berechnete Spalten hingegen schon. Wenn Sie versuchen, ein Tabellenmodell zu konvertieren, das eine berechnete Tabelle enthält, tritt eine Fehlermeldung auf, die besagt, dass das Modell keine eingefügten Daten enthalten darf.|  
 |**Abfragelimits**|Das standardmäßige Zeilenlimit liegt bei einer Million Zeilen, welches Sie durch Angabe von **MaxIntermediateRowSize** in der Datei „msmdsrv.ini“ erhöhen können. Weitere Informationen finden Sie unter [DAX Eigenschaften](../../analysis-services/server-properties/dax-properties.md) .
-|**DAX-Formeln**|Bei einer Abfrage eines tabellarischen Modells im DirectQuery-Modus konvertiert [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] alle DAX-Formeln und Measuredefinitionen in SQL-Anweisungen. DAX-Formeln mit Elementen, die nicht in SQL-Syntax konvertiert werden können, lösen Überprüfungsfehler für das Modell aus.<br /><br /> Diese Einschränkung ist größtenteils auf bestimmte DAX-Funktionen beschränkt. Bei Measures werden DAX-Formeln mit dem relationalen Datenspeicher in setbasierte Vorgänge konvertiert. Das bedeutet, dass alle implizit erstellten Measures unterstützt werden. <br /><br /> Wenn ein Überprüfungsfehler auftritt, müssen Sie die Formel neu schreiben, durch eine andere Funktion ersetzen oder dieses Problem umgehen, indem Sie in der Datenquelle mit abgeleiteten Spalten arbeiten.  Wenn ein tabellarisches Modell Formeln enthält, die nicht kompatible Funktionen enthalten, werden diese beim Wechsel in den DirectQuery-Modus im Designer gemeldet. <br /><br />**Hinweis:**  Einige Formeln im Modell führen möglicherweise eine Überprüfung aus, wenn das Modell auf den DirectQuery-Modus umgestellt wird, geben jedoch andere Ergebnisse zurück, wenn sie für den Cache und nicht den relationalen Datenspeicher ausgeführt werden. Dies liegt daran, dass bei Berechnungen für den Cache die Semantik der In-Memory-Analyse verwendet wird. Dabei handelt es sich um ein Modul mit Funktionen, die das Verhalten von Excel emulieren sollen. Abfragen von in der relationalen Datenquelle gespeicherten Daten verwenden hingegen die Semantik von SQL Server.<br /><br /> SQL Gespeichert  <br /><br /> Weitere Informationen finden Sie unter [DAX-Formelkompatibilität im DirectQuery-Modus](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md).|  
-|**Formelkonsistenz**|In bestimmten Fällen gibt dieselbe Formel in einem zwischengespeicherten Modell andere Ergebnisse zurück als in einem DirectQuery-Modell, in dem nur der relationale Datenspeicher verwendet wird. Diese Unterschiede sind eine Folge der semantischen Unterschiede zwischen dem In-Memory-Analysemodul und SQL Server.<br /><br /> Eine vollständige Liste der Kompatibilitätsprobleme, einschließlich der Funktionen, die bei der Bereitstellung eines Modells in Echtzeit möglicherweise andere Ergebnisse zurückgeben, finden Sie unter [DAX-Formelkompatibilität im DirectQuery-Modus (SSAS 2016)](http://msdn.microsoft.com/en-us/981b6a68-434d-4db6-964e-d92f8eb3ee3e).|  
+|**DAX-Formeln**|Bei einer Abfrage eines tabellarischen Modells im DirectQuery-Modus konvertiert [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] alle DAX-Formeln und Measuredefinitionen in SQL-Anweisungen. DAX-Formeln mit Elementen, die nicht in SQL-Syntax konvertiert werden können, lösen Überprüfungsfehler für das Modell aus.<br /><br /> Diese Einschränkung ist größtenteils auf bestimmte DAX-Funktionen beschränkt. Bei Measures werden DAX-Formeln mit dem relationalen Datenspeicher in setbasierte Vorgänge konvertiert. Das bedeutet, dass alle implizit erstellten Measures unterstützt werden. <br /><br /> Wenn ein Überprüfungsfehler auftritt, müssen Sie die Formel neu schreiben, durch eine andere Funktion ersetzen oder dieses Problem umgehen, indem Sie in der Datenquelle mit abgeleiteten Spalten arbeiten.  Wenn ein tabellarisches Modell Formeln enthält, die nicht kompatible Funktionen enthalten, werden diese beim Wechsel in den DirectQuery-Modus im Designer gemeldet. <br /><br />**Hinweis:**  Einige Formeln im Modell führen möglicherweise eine Überprüfung aus, wenn das Modell auf den DirectQuery-Modus umgestellt wird, geben jedoch andere Ergebnisse zurück, wenn sie für den Cache und nicht den relationalen Datenspeicher ausgeführt werden. Dies liegt daran, dass bei Berechnungen für den Cache die Semantik der In-Memory-Analyse verwendet wird. Dabei handelt es sich um ein Modul mit Funktionen, die das Verhalten von Excel emulieren sollen. Abfragen von in der relationalen Datenquelle gespeicherten Daten verwenden hingegen die Semantik von SQL Server.<br /><br /> SQL Gespeichert  <br /><br /> Weitere Informationen finden Sie unter [DAX-formelkompatibilität im DirectQuery-Modus](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md).|  
+|**Formelkonsistenz**|In bestimmten Fällen gibt dieselbe Formel in einem zwischengespeicherten Modell andere Ergebnisse zurück als in einem DirectQuery-Modell, in dem nur der relationale Datenspeicher verwendet wird. Diese Unterschiede sind eine Folge der semantischen Unterschiede zwischen dem In-Memory-Analysemodul und SQL Server.<br /><br /> Eine vollständige Liste der Kompatibilitätsprobleme, einschließlich Funktionen, die möglicherweise andere Ergebnisse zurückgeben, wenn das Modell bereitgestellt wird in Echtzeit finden Sie unter [DAX-formelkompatibilität im DirectQuery-Modus (SQL Server Analysis Services)](http://msdn.microsoft.com/en-us/981b6a68-434d-4db6-964e-d92f8eb3ee3e).|  
 |**MDX-Einschränkungen**|Keine relativen Objektnamen. Alle Objektnamen müssen vollqualifiziert sein.<br /><br /> MDX-Anweisungen auf Sitzungsebene (benannte Mengen, berechnete Elemente, berechnete Zellen, sichtbare Gesamtwerte, Standardelemente usw.). Allerdings können Sie abfragebasierte Konstrukte wie die „WITH“-Klausel verwenden.<br /><br /> Kein Tupel mit Elementen aus verschiedenen Ebenen in einzeln ausgewählten MDX-Klauseln für Unterauswahl.<br /><br /> Keine benutzerdefinierten Hierarchien.<br /><br /> Keine nativen SQL-Abfragen (normalerweise unterstützt Analysis Services eine Teilmenge von T-SQL, allerdings nicht bei DirectQuery-Modellen).|  
 
 ## <a name="data-sources-supported-for-directquery"></a>Für DirectQuery unterstützte Datenquellen
@@ -66,9 +68,9 @@ Tabellarische DirectQuery-Modelle mit Kompatibilitätsgrad 1200 oder höher sind
 Datenquelle   |Versionen  |Anbieter
 ---------|---------|---------
 Microsoft SQL Server    |  2008 und höher      |       OLE DB-Anbieter für SQL Server, OLE DB-Anbieter für SQL Server Native Client, .NET Framework-Datenanbieter für SQL Client  
-Microsoft Azure SQL-Datenbank    |   All      |  OLE DB-Anbieter für SQL Server, OLE DB-Anbieter für SQL Server Native Client, .NET Framework-Datenanbieter für SQL Client            
-Microsoft Azure SQL Data Warehouse     |   All     |  .NET Framework-Datenanbieter für SQL Client       
-Microsoft SQL Analytics Platform System (APS)     |   All      |  OLE DB-Anbieter für SQL Server, OLE DB-Anbieter für SQL Server Native Client, .NET Framework-Datenanbieter für SQL Client       
+Microsoft Azure SQL-Datenbank    |   Alle      |  OLE DB-Anbieter für SQL Server, OLE DB-Anbieter für SQL Server Native Client, .NET Framework-Datenanbieter für SQL Client            
+Microsoft Azure SQL Data Warehouse     |   Alle     |  .NET Framework-Datenanbieter für SQL Client       
+Microsoft SQL Analytics Platform System (APS)     |   Alle      |  OLE DB-Anbieter für SQL Server, OLE DB-Anbieter für SQL Server Native Client, .NET Framework-Datenanbieter für SQL Client       
 Relationale Oracle-Datenbanken     |  Oracle 9i und höher       |  OLE DB-Anbieter für Oracle       
 Relationale Teradata-Datenbanken    |  Teradata V2R6 und höher     | .NET-Datenanbieter für Teradata        
 
@@ -82,7 +84,7 @@ Wenn Sie DirectQuery bereits aktiviert, aber noch keine Verbindung mit einer Dat
 Wenn Sie bereits den Tabellenimport-Assistenten zum Importieren von Daten verwendet, den DirectQuery-Modus aber noch nicht aktiviert haben, wird der In-Memory-Cache gelöscht, wenn Sie den DirectQuery-Modus aktivieren.
 
   
-## <a name="additional-topics-in-this-section"></a>Weitere Themen in diesem Abschnitt:
+## <a name="additional-articles-in-this-section"></a>Zusätzliche Artikel in diesem Abschnitt
 [Aktivieren des DirectQuery-Modus in SSDT](../../analysis-services/tabular-models/enable-directquery-mode-in-ssdt.md)
 
 [Aktivieren des DirectQuery-Modus in SSMS](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md)
@@ -93,5 +95,5 @@ Wenn Sie bereits den Tabellenimport-Assistenten zum Importieren von Daten verwen
   
 [Testen eines Modells im DirectQuery-Modus](../../analysis-services/tabular-models/test-a-model-in-directquery-mode.md)
 
-[DAX-Formelkompatibilität im DirectQuery-Modus](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md)
+[DAX-formelkompatibilität im DirectQuery-Modus](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md)
   

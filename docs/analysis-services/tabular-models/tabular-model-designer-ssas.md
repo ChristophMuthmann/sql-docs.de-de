@@ -11,28 +11,30 @@ ms.custom:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
+f1_keywords:
+- sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1d0894a7718907bcbfa26565f80494cdce719287
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 98eb6a35d2dba7c71dcd857ffdfbe08c6e8bd17c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-designer-ssas"></a>Tabellen-Modell-Designer (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Der Designer für tabellarische Modelle ist Bestandteil des [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], integriert in Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], zusätzliche Projekttypvorlagen speziell für die Entwicklung von Projektmappen für professionelle tabellarische Modelle.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] wird als kostenloser Webdownload installiert. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).    
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Der Designer für tabellarische Modelle ist Bestandteil von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]und in Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]integriert. Der Designer bietet zusätzliche Projekttypvorlagen speziell für die Entwicklung von Projektmappen für professionelle tabellarische Modelle.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] wird als kostenloser Webdownload installiert. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).    
   
 ##  <a name="bkmk_benefits"></a> Vorteile  
  Wenn Sie [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]installieren, werden den verfügbaren Projekttypen neue Projektvorlagen zum Erstellen tabellarischer Modelle hinzugefügt. Nachdem ein neues Projekt für tabellarische Modelle auf der Grundlage einer der Vorlagen erstellt wurde, können Sie mit der Erstellung von Modellen beginnen. Dazu verwenden Sie die Designer-Tools und Assistenten für tabellarische Modelle.  
   
  Zusätzlich zu neuen Vorlagen und Tools zum Erstellen professioneller Projektmappen für mehrdimensionale und tabellarische Modelle stellt die [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] -Umgebung Debugging- und Projektlebenszyklusfunktionen bereit, mit denen Sie immer die leistungsstärksten BI-Lösungen für Ihre Organisation erstellen können. Weitere Informationen zu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]finden Sie unter [Erste Schritte mit Visual Studio](http://go.microsoft.com/fwlink/?LinkId=206389).  
   
-##  <a name="bkmk_proj_temp"></a>Projektvorlagen  
+##  <a name="bkmk_proj_temp"></a> Projektvorlagen  
  Wenn Sie [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]installieren, werden den Business Intelligence-Projekttypen die folgenden Projektvorlagen für tabellarische Modelle hinzugefügt:  
   
  **Analysis Services-Projekt für tabellarische Modelle**  
@@ -92,11 +94,11 @@ ms.lasthandoff: 01/08/2018
   
 -   Tabelle  
   
--   Spalte  
+-   Column  
   
 -   Measure  
   
- Die Projekteigenschaften im Eigenschaftenfenster enthalten nur den Projektnamen und den Projektordner. Projekte verfügen außerdem über zusätzliche Einstellungen für Bereitstellungsoptionen und den Bereitstellungsserver, die Sie über ein Dialogfeld für modale Eigenschaften festlegen können. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, und klicken Sie anschließend auf **Eigenschaften**, um diese Eigenschaften anzuzeigen.  
+ Projekteigenschaften werden nur den Projektnamen und den Projektordner im Eigenschaftenfenster angezeigt. Projekte verfügen außerdem über zusätzliche Einstellungen für Bereitstellungsoptionen und den Bereitstellungsserver, die Sie über ein Dialogfeld für modale Eigenschaften festlegen können. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, und klicken Sie anschließend auf **Eigenschaften**, um diese Eigenschaften anzuzeigen.  
   
  In die Felder des Eigenschaftenfensters sind Steuerelemente eingebettet, die geöffnet werden, wenn Sie darauf klicken. Der Typ des Bearbeitungssteuerelements hängt von der bestimmten Eigenschaft ab. Die Steuerelemente umfassen Bearbeitungsfelder, Dropdownlisten und Links zu benutzerdefinierten Dialogfeldern. Die in grau angezeigten Eigenschaften sind schreibgeschützt.  
   
@@ -126,7 +128,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="toolbar"></a>Symbolleiste  
  Die Analysis Services-Symbolleiste ermöglicht den schnellen und einfachen Zugriff auf die am häufigsten verwendeten Befehle für die Modellerstellung.  
   
-##  <a name="bkmk_vsint"></a>Visual Studio-integration  
+##  <a name="bkmk_vsint"></a> Visual Studio-integration  
  **Quellcodeverwaltung**  
  Analysis Services-Projekte werden mit dem ausgewählten Plug-In für die Quellcodeverwaltung integriert. Wenn Sie Visual Studio für die Verwendung der Quellcodeverwaltung konfiguriert haben, können Sie die Funktionen zum Ein-/Auschecken im Projektmappen-Explorer verwenden. Weitere Informationen zum Konfigurieren von Team Foundation Server finden Sie unter [Konfigurieren von Visual Studio für die Verwendung der Team Foundation-Versionskontrolle](http://msdn.microsoft.com/library/ms253064.aspx). Viele Drittanbieter-Plug-Ins für die Quellcodeverwaltung werden ebenfalls unterstützt.  
   
@@ -137,7 +139,7 @@ ms.lasthandoff: 01/08/2018
  Die Analysis Services-Tastenkombinationen können über das Dialogfeld Tools->Optionen->Tastatur konfiguriert bzw. neu zugeordnet werden. Einige globale [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Verknüpfungen, wie z.B. „Erstellen“, „Speichern“, „Debuggen“, „neues Projekt“ usw., werden im Kontext des Designers für tabellarische Modelle unterstützt. Andere spezifische Tastenkombinationen des Designers für tabellarische Modelle sind im Analysis Services-Kontext verfügbar.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tabellenmodellprojekte &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
- [Eigenschaften &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
+ [Projekte für tabellarische Modelle](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
+ [Eigenschaften](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   

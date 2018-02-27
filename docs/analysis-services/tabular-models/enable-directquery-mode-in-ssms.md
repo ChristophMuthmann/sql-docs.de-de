@@ -1,7 +1,7 @@
 ---
 title: Aktivieren des DirectQuery-Modus in SSMS | Microsoft Docs
 ms.custom: 
-ms.date: 07/06/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,23 +12,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2779e5f09f447e0499e2eeb87ec89ba698cc8628
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 544725a89521eb86f61fcfd3194c3d56be9da606
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Aktivieren des DirectQuery-Modus in SSMS
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Sie können die Daten Zugriffseigenschaften Ändern eines tabellarischen Modells, das bereits bereitgestellt wurde, aktivieren DirectQuery-Modus, in denen Abfragen ausführen für eine relationale Back-End-Datenquelle, anstatt Daten verbleiben im Arbeitsspeicher zwischengespeichert.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Sie können die Datenzugriffseigenschaften eines tabellarischen Modells ändern, das bereits bereitgestellt wurde, und den DirectQuery-Modus aktivieren, bei dem Abfragen auf eine relationale Datenquelle im Back-End anstatt auf im Arbeitsspeicher zwischengespeicherte Daten angewendet werden.  
   
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterscheiden sich die für die DirectQuery-Konfiguration erforderlichen Schritte je nach Kompatibilitätsgrad des Modells. Nachstehend finden Sie Schritte, die für alle Kompatibilitätsgrade funktionieren.  
   
- In diesem Thema wird davon ausgegangen, dass Sie erstellt und eine in-Memory-tabellarische Modelle auf Kompatibilitätsgrad 1200 oder höher und nur erforderlich überprüft, die DirectQuery-Zugriff aktivieren und Verbindungszeichenfolgen aktualisieren. Wenn Sie mit einem niedrigeren Kompatibilitätsgrad beginnen, müssen Sie ihn zunächst manuell upgraden. Eine Anleitung finden Sie unter [Upgraden von Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) .  
+ In diesem Artikel wird davon ausgegangen, dass Sie erstellt und eine in-Memory-tabellarische Modelle auf Kompatibilitätsgrad 1200 oder höher und nur erforderlich überprüft, die DirectQuery-Zugriff aktivieren und Verbindungszeichenfolgen aktualisieren. Wenn Sie mit einem niedrigeren Kompatibilitätsgrad beginnen, müssen Sie ihn zunächst manuell upgraden. Eine Anleitung finden Sie unter [Upgraden von Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) .  
   
 > [!IMPORTANT]  
 >  Wir empfehlen die Verwendung von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] anstelle von Management Studio zum Ändern des Datenspeichermodus. Wenn Sie  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] zum Ändern des Modells verwenden und anschließend mit der Bereitstellung auf dem Server fortfahren, bleiben Modell und Datenbank synchronisiert. Darüber hinaus können Sie bei einer Änderung des Speichermodus im Modell überprüfen, ob Validierungsfehler auftreten. Wenn [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] wie in diesem Artikel beschrieben verwendet wird, werden Validierungsfehler nicht gemeldet.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Stellen Sie sicher, dass das Modell keine Features aufweist, die im DirectQuery-Modus Validierungsfehler verursachen, und ändern Sie dann den Datenspeichermodus des Modells von „InMemory“ in „DirectQuery“.  
   
-     Eine Liste der Funktionseinschränkungen finden Sie unter [DirectQuery-Modus &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
+     Eine Liste der Einschränkungen von Features finden Sie unter [DirectQuery-Modus](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
   
 -   Überprüfen Sie die Verbindungszeichenfolge und die Anmeldeinformationen, die von der bereitgestellten Datenbank verwendet werden, um Daten aus der externen Datenbank im Back-End abzurufen. Stellen Sie sicher, dass es nur eine Verbindung gibt, und dass die Einstellungen für die Ausführung von Abfragen geeignet sind.  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Wenn sowohl der Cache als auch die relationale Datenquelle verfügbar sind, können Sie die bevorzugte Verbindungsmethode festlegen, doch letztlich wird die zu verwendende Quelle vom Client bestimmt. Dafür wird die DirectQueryMode-Eigenschaft der Verbindungszeichenfolge verwendet.  
   
--   Sie können Partitionen im Cache so konfigurieren, dass die primäre Partition, die für den DirectQuery-Modus verwendet wird, niemals verarbeitet wird und immer auf die relationale Quelle verweisen muss. Es gibt viele Möglichkeiten, mithilfe von Partitionen den Modellentwurf und die Berichtsfunktionen zu optimieren. Weitere Informationen finden Sie unter [Definieren von Partitionen im DirectQuery-Modellen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md).  
+-   Sie können Partitionen im Cache so konfigurieren, dass die primäre Partition, die für den DirectQuery-Modus verwendet wird, niemals verarbeitet wird und immer auf die relationale Quelle verweisen muss. Es gibt viele Möglichkeiten, mithilfe von Partitionen den Modellentwurf und die Berichtsfunktionen zu optimieren. Weitere Informationen finden Sie unter [Definieren von Partitionen im DirectQuery-Modelle](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md).  
   
 -   Nach der Bereitstellung des Modells können Sie die bevorzugte Verbindungsmethode ändern. Sie können zum Beispiel einen Hybridmodus für Tests verwenden und den Modus **Nur DirectQuery** für das Modell erst nach gründlichen Tests von Berichten oder Abfragen, für die das Modell verwendet wird, festlegen. Weitere Informationen finden Sie unter [Festlegen oder Ändern der bevorzugten Verbindungsmethode für DirectQuery](http://msdn.microsoft.com/library/f10d5678-d678-4251-8cce-4e30cfe15751).  
   
@@ -106,7 +107,7 @@ ms.lasthandoff: 01/08/2018
   
 1.  Klappen Sie im Objekt-Explorer **Verbindungen** auf, und doppelklicken Sie auf eine Verbindung, um ihre Eigenschaften anzuzeigen.  
   
-     Für DirectQuery-Modelle darf es nur eine für die Datenbank definierte Verbindung geben. Außerdem muss die Datenquelle relational sein und einen unterstützten Datenbanktyp haben. Eine Anleitung finden Sie unter [Unterstützte Datenquellen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
+     Für DirectQuery-Modelle darf es nur eine für die Datenbank definierte Verbindung geben. Außerdem muss die Datenquelle relational sein und einen unterstützten Datenbanktyp haben. Finden Sie unter [unterstützte Datenquellen](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
   
 2.  Die**Verbindungszeichenfolge** muss den Server, Datenbanknamen und die Authentifizierungsmethode angeben, die für DirectQuery-Vorgänge verwendet werden. Wenn Sie die SQL Server-Authentifizierung verwenden, können Sie hier die Datenbankanmeldung angeben.  
   
@@ -131,8 +132,8 @@ ms.lasthandoff: 01/08/2018
 3.  Die Ablaufverfolgung sollte zeigen, dass die Abfrage auf die relationale Datenbank angewendet wurde.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
- [Unterstützte Datenquellen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Kompatibilitätsgrad](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
+ [Unterstützte Datenquellen](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)   
  [Überwachen einer Instanz von Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   

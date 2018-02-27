@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d343f693-c800-42fe-bb4f-2c38a10919f1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 30122388bc5e1c82f26bbaa37452330b97a77077
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c7e1ec3e7ef85cb567d70e96d5c9f3bdd6655f3d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>Tabellarische Programmiermodell für die Kompatibilität auf 1200 und höher
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Beginnen mit dem Kompatibilitätsgrad 1200, tabellarischer Metadaten dient zum Beschreiben der Model-Konstrukten Verlaufsdaten mehrdimensionale Metadaten als Deskriptoren für tabellenmodellobjekte ersetzen. Metadaten für Tabellen, Spalten und Beziehungen werden die Tabelle, Spalte und Beziehung, anstatt die mehrdimensionale Entsprechungen (Dimensionen und Attributtypen).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Beginnen mit dem Kompatibilitätsgrad 1200, tabellarischer Metadaten dient zum Beschreiben der Model-Konstrukten Verlaufsdaten mehrdimensionale Metadaten als Deskriptoren für tabellenmodellobjekte ersetzen. Metadaten für Tabellen, Spalten und Beziehungen werden die Tabelle, Spalte und Beziehung, anstatt die mehrdimensionale Entsprechungen (Dimensionen und Attributtypen).  
   
 Sie können Erstellen neuer Modelle mit Kompatibilitätsgrad 1200 oder höher mithilfe der Microsoft.AnalysisServices.Tabular-APIs, die neueste Version von SQL Server Data Tools (SSDT) oder durch Ändern der **CompatibilityLevel** einem vorhandenen tabellarischen Modell zu aktualisieren (auch in SSDT erfolgt). Auf diese Weise bindet das Modell auf neuere Versionen des Servers, Tools und Programmierschnittstellen.   
   
@@ -57,7 +58,7 @@ Aktualisieren einer vorhandenen tabellarischen Lösung wird empfohlen, jedoch ni
 ## <a name="see-also"></a>Siehe auch  
  [Entwicklerhandbuch (Analysis Services)](../../analysis-services/analysis-services-developer-documentation.md)   
  [Programmierung von tabellarischen Modellen aus Kompatibilitätsgründen Ebenen 1050 bis 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [Technische Referenz &#40; SSAS &#41; ](../../analysis-services/powershell/technical-reference-ssas.md) [Aktualisieren von Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
+ [Technische Referenz ](../../analysis-services/powershell/technical-reference-ssas.md) [Aktualisieren von Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
  [Kompatibilitätsgrade für tabellarische Modelle und Datenbanken](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
   
   

@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e004604829a9b7701744d41df53c4bf00afa432d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4c1fa9b4e4f9003b193628d114ad6832436a7c8f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-data-access"></a>Zugriff auf Daten im tabellarischen Modell
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Tabellarische modelldatenbanken in Analysis Services können zugegriffen werden, indem Sie die meisten Clients, Schnittstellen und Sprachen, die Sie verwenden, um Daten oder Metadaten aus einem mehrdimensionalen Modell abrufen. Weitere Informationen finden Sie unter [Datenzugriff auf mehrdimensionale Modelle &#40;Analysis Services – mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Auf tabellarische Modelldatenbanken in Analysis Services kann mit den meisten Clients, Schnittstellen und Sprachen zugegriffen werden, mit denen Sie auch Daten oder Metadaten aus einem mehrdimensionalen Modell abrufen. Weitere Informationen finden Sie unter [Datenzugriff auf mehrdimensionale Modelle &#40;Analysis Services – mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
   
- In diesem Thema werden die Clients, Abfragesprachen und befehlsorientierten Benutzerschnittstellen beschrieben, die mit tabellarischen Modellen verwendet werden können.  
+ Dieser Artikel beschreibt die Clients, Abfragesprachen und befehlsorientierten Benutzerschnittstellen, die mit tabellarischen Modellen arbeiten.  
   
 ## <a name="clients"></a>Clients  
  Die folgenden Microsoft-Clientanwendungen unterstützen systemeigene Verbindungen mit tabellarischen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modelldatenbanken.  
@@ -37,7 +38,7 @@ Sie können eine Verbindung zu einer lokalen Datenbank für ein tabellarisches A
 ### <a name="excel"></a>Excel  
  Sie können in Excel eine Verbindung mit tabellarischen Modelldatenbanken herstellen und die Datenvisualisierungs- und Analysefunktionen in Excel verwenden, um mit den Daten zu arbeiten. Um auf die Daten zuzugreifen, definieren Sie eine Analysis Services-Datenverbindung, geben einen Server an, der im tabellarischen Servermodus ausgeführt wird, und wählen dann die gewünschte Datenbank aus. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit oder Importieren von Daten aus SQL Server Analysis Services](http://go.microsoft.com/fwlink/?linkID=215150).  
   
- Excel ist auch die empfohlene Anwendung zum Durchsuchen von tabellarischen Modellen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Das Tool beinhaltet eine Option **In Excel analysieren** , die eine neue Instanz von Excel startet, eine Excel-Arbeitsmappe erstellt und in der Arbeitsmappe eine Datenverbindung mit der Arbeitsbereichsdatenbank des Modells öffnet. Beim Durchsuchen von tabellarischen Modelldaten in Excel ist zu beachten, dass Excel Abfragen für das Modell mit dem Excel PivotTable-Client ausgibt. Entsprechend führen Vorgänge innerhalb der Excel-Arbeitsmappe zu MDX-Abfragen, die an die Arbeitsbereichsdatenbank gesendet werden. DAX-Abfragen werden nicht erstellt. Wenn Sie Abfragen mit SQL-Profiler oder einem anderen Überwachungstool überwachen, wird in der Profiler-Ablaufverfolgung voraussichtlich MDX angezeigt und nicht DAX. Weitere Informationen zur Funktion „In Excel analysieren“ finden Sie unter [In Excel analysieren &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
+ Excel ist auch die empfohlene Anwendung zum Durchsuchen von tabellarischen Modellen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Das Tool beinhaltet eine Option **In Excel analysieren** , die eine neue Instanz von Excel startet, eine Excel-Arbeitsmappe erstellt und in der Arbeitsmappe eine Datenverbindung mit der Arbeitsbereichsdatenbank des Modells öffnet. Beim Durchsuchen von tabellarischen Modelldaten in Excel ist zu beachten, dass Excel Abfragen für das Modell mit dem Excel PivotTable-Client ausgibt. Entsprechend führen Vorgänge innerhalb der Excel-Arbeitsmappe zu MDX-Abfragen, die an die Arbeitsbereichsdatenbank gesendet werden. DAX-Abfragen werden nicht erstellt. Wenn Sie Abfragen mit SQL-Profiler oder einem anderen Überwachungstool überwachen, wird in der Profiler-Ablaufverfolgung voraussichtlich MDX angezeigt und nicht DAX. Weitere Informationen zu der Funktion in Excel analysieren, finden Sie unter [in Excel analysieren](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
   
 ### <a name="power-view"></a>Power View  
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] ist eine Reporting Services-Clientanwendung zur Berichtserstellung, die in einer SharePoint 2010-Umgebung ausgeführt wird. Sie kombiniert das Durchsuchen von Daten, den Abfrageentwurf und das Präsentationslayout in einer integrierten Ad-hoc-Berichtsumgebung. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] kann tabellarische Modelle als Datenquellen verwenden, und zwar unabhängig davon, ob das Modell auf einer im tabellarischen Modus ausgeführten Analysis Services-Instanz gehostet wird oder Daten im DirectQuery-Modus aus einem relationalen Datenspeicher abgerufen werden. Um in [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]eine Verbindung mit einem tabellarischen Modell herzustellen, müssen Sie eine Verbindungsdatei erstellen, die den Serverspeicherort und den Datenbanknamen enthält. Sie können eine freigegebene Reporting Services-Datenquelle oder eine BI-Semantikmodell-Verbindungsdatei in SharePoint erstellen. Weitere Informationen zu BI-Semantikmodellverbindungen finden Sie unter [PowerPivot-BI-Semantikmodell-Verbindung &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md).  
@@ -46,7 +47,7 @@ Sie können eine Verbindung zu einer lokalen Datenbank für ein tabellarisches A
   
  Die Abfragen, die vom [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Client an das Modell gesendet werden, werden als DAX-Anweisungen ausgegeben, die Sie überwachen können, indem Sie eine Ablaufverfolgung auf dem Modell festlegen.  Der Client gibt auch eine Anforderung an den Server für die ursprüngliche Schemadefinition aus, die entsprechend der konzeptionellen Schemadefinitionssprache (CSDL) präsentiert wird. Weitere Informationen finden Sie unter [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
-### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
+### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie Instanzen verwalten, die tabellarische Modelle hosten, sowie die darin enthaltenen Metadaten und Daten abfragen. Sie können die Modelle oder die Objekte in einem Modell verarbeiten, Partitionen erstellen und verwalten sowie die Sicherheit festlegen, die zum Verwalten des Datenzugriffs verwendet werden kann. Weitere Informationen finden Sie in folgenden Themen:  
   
 -   [Bestimmen des Servermodus einer Analysis Services-Instanz](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
@@ -90,7 +91,7 @@ Sie können eine Verbindung zu einer lokalen Datenbank für ein tabellarisches A
 ### <a name="data-and-metadata"></a>Daten und Metadaten  
  Sie können Daten und Metadaten von tabellarischen Modellen in verwalteten Anwendungen mit ADOMD.NET abrufen. 
   
--   [Verwenden von dynamischen Verwaltungssichten &#40;DMVs&#41; zum Überwachen von Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [Verwenden Sie dynamische Verwaltungssichten &#40; DMVs &#41; zum Überwachen von Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  In nicht verwalteten Clientanwendungen können Sie den OLE DB-Anbieter für Analysis Services 9.0 zur Unterstützung des OLE DB-Zugriffs auf tabellarische Modelle verwenden. Eine aktualisierte Version des OLE DB-Anbieters für Analysis Services ist erforderlich, um den Zugriff auf tabellarische Modelle zu aktivieren. Weitere Informationen zu Anbietern, die mit tabellarischen Modellen verwendet werden, finden Sie unter [Installieren des OLE DB-Anbieters für Analysis Services auf SharePoint-Servern](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) .  
   
@@ -123,7 +124,7 @@ Sie können eine Verbindung zu einer lokalen Datenbank für ein tabellarisches A
   
 -   [MDSCHEMA_HIERARCHIES-Rowset](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
   
-     Die neue **STRUCTURE_TYPE** -Enumeration unterstützt die Identifikation benutzerdefinierter Hierarchien, die in tabellarischen Modellen erstellt wurden. Weitere Informationen finden Sie unter [Hierarchien &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
+     Die neue **STRUCTURE_TYPE** -Enumeration unterstützt die Identifikation benutzerdefinierter Hierarchien, die in tabellarischen Modellen erstellt wurden. Weitere Informationen finden Sie unter [Hierarchien](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
   
  Es gibt keine Updates zum OLE DB für Data Mining-Schemarowsets in dieser Version.  
   
@@ -131,7 +132,7 @@ Sie können eine Verbindung zu einer lokalen Datenbank für ein tabellarisches A
 >  Sie können MDX oder DMX-Abfragen nicht in einer Datenbank verwenden, die im DirectQuery-Modus bereitgestellt wurde. Wenn Sie in einem DirectQuery-Modell mithilfe des Schemarowsets eine Abfrage ausführen müssen, sollten Sie XMLA und nicht die zugeordnete DMV verwenden. Für DMVs, die Ergebnisse für den Server als Ganzes zurückgeben, z. B. SELECT * von $system.DBSCHEMA_CATALOGS oder DISCOVER_TRACES, können Sie die Abfrage im Inhalt einer Datenbank ausführen, die in einem Modus mit Zwischenspeicherung bereitgestellt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank &#40;SSAS&#41;](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)   
+ [Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank ](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)   
  [PowerPivot-Datenzugriff](../../analysis-services/power-pivot-sharepoint/power-pivot-data-access.md)   
  [Verbindung mit Analysis Services herstellen](../../analysis-services/instances/connect-to-analysis-services.md)  
   

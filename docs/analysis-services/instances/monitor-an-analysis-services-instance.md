@@ -22,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 24a56699bbdb79f811ce0282aee0f1d93a5d43f0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5c583616f8ba9a7ae1f4104e22cf5dd3a4ec5d87
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Überwachen einer Instanz von Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,6 +46,6 @@ Sie können die Leistung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversi
   
  [Verwenden Sie dynamische Verwaltungssichten &#40; DMVs &#41; zum Überwachen von Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
- [Leistungsindikatoren &#40; SSAS &#41;](../../analysis-services/instances/performance-counters-ssas.md)  
+ [Leistungsindikatoren ](../../analysis-services/instances/performance-counters-ssas.md)  
   
   
