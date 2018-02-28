@@ -23,13 +23,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2c3a0745ab34f997bd614b091cb8d2c6a0b1aa80
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Speichern von Datenbankdiagrammen (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Beim Speichern eines Datenbankdiagramms werden alle daran vorgenommenen Änderungen gespeichert, einschließlich der Änderungen an Tabellen, Spalten und anderen Datenbankobjekten.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Beim Speichern eines Datenbankdiagramms werden alle daran vorgenommenen Änderungen gespeichert, einschließlich der Änderungen an Tabellen, Spalten und anderen Datenbankobjekten.  
   
 ### <a name="to-save-the-database-diagram"></a>So speichern Sie das Datenbankdiagramm  
   
