@@ -31,7 +31,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="logical-functions---choose-transact-sql"></a>Logische Funktionen - auswählen (Transact-SQL)
+# <a name="logical-functions---choose-transact-sql"></a>Logische Funktionen - CHOOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Gibt das Element am angegebenen Index aus einer Liste von Werten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
