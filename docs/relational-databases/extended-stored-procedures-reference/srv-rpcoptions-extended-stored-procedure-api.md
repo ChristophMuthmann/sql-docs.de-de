@@ -57,7 +57,7 @@ srvproc
 ## <a name="returns"></a>Rückgabewert  
  Eine Bitmap mit den in einer logischen Darstellung ODER für die derzeit remote gespeicherte Prozedur verbundenen Laufzeitflags. Wenn keine aktuelle remote gespeicherte Prozedur vorhanden ist, wird 0 zurückgegeben und eine Meldung generiert.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  In der folgenden Tabelle werden die einzelnen Laufzeitflags beschrieben.  
   
 |Laufzeitflag|Description|  

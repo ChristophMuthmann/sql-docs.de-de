@@ -64,7 +64,7 @@ ms.lasthandoff: 02/03/2018
   
 #### <a name="to-configure-the-scan-for-startup-procs-option"></a>So konfigurieren Sie die Option "Startprozeduren suchen"  
   
-1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, und wählen Sie **Eigenschaften**aus.  
+1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, und wählen Sie **Eigenschaften** aus.  
   
 2.  Klicken Sie auf den **Erweitert** -Knoten.  
   

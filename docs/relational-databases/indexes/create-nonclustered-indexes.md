@@ -25,10 +25,10 @@ ms.author: barbkess
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: fa2f52d326ae38533c2c493db91e4b6a1597f491
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-nonclustered-indexes"></a>Erstellen nicht gruppierter Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ ms.lasthandoff: 02/12/2018
   
 #### <a name="to-create-a-nonclustered-index-on-a-table"></a>So erstellen Sie einen nicht gruppierten Index für eine Tabelle  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

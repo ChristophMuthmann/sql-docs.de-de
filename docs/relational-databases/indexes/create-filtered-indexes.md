@@ -25,10 +25,10 @@ ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: a82b906e15ced291ab440f8c4f87bc307dc6b624
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-filtered-indexes"></a>Erstellen gefilterter Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

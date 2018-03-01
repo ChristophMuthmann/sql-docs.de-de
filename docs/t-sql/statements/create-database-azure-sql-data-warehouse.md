@@ -88,7 +88,7 @@ Erforderliche Berechtigungen:
   
 -   Im Rahmen des Bereitstellungsprozesses erstellte Prinzipalanmeldung auf Serverebene oder  
   
--   Mitglied der `dbmanager`-Datenbankrolle  
+-   Mitgliedschaft in der `dbmanager`-Datenbankrolle  
   
 ## <a name="error-handling"></a>Fehlerbehandlung  
 Wenn die Größe der Datenbank den Wert von MAXSIZE erreicht, erhalten Sie den Fehlercode 40544. In diesem Fall können Sie keine Daten einfügen oder aktualisieren und keine neuen Objekte (wie Tabellen, gespeicherte Prozeduren, Ansichten und Funktionen) erstellen. Sie können jedoch weiterhin Daten lesen und löschen, Tabellen abschneiden, Tabellen und Indizes löschen, sowie Indizes neu erstellen. Anschließend können Sie MAXSIZE auf einen Wert aktualisieren, der größer als die aktuelle Datenbankgröße ist, oder Sie löschen einige Daten, um Speicherplatz freizugeben. Eine Verzögerung von bis zu fünfzehn Minuten ist möglich, bevor Sie neue Daten einfügen können.  

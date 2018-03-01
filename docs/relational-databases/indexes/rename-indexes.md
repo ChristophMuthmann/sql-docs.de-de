@@ -23,10 +23,10 @@ ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 712ffccb5285f2d5339c41327e28fc1d983658b2
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="rename-indexes"></a>Umbenennen von Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
