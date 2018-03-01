@@ -52,15 +52,15 @@ ms.lasthandoff: 02/09/2018
 |SRVDECIMALN|**decimal null**|**decimal**-Datentyp, NULL-Werte sind zulässig.|  
 |SRVFLT4|**real**|**real**-Datentyp mit einer Länge von 4 Byte|  
 |SRVFLT8|**float**|**float**-Datentyp mit einer Länge von 8 Byte|  
-|SRVFLTN|**real** &#124; **float Null**|**real**- oder **float**-Datentyp, NULL-Werte sind zulässig.|  
+|SRVFLTN|**real** | **float null**|**real**- oder **float**-Datentyp, NULL-Werte sind zulässig.|  
 |SRVIMAGE|**image**|**image**-Datentyp|  
 |SRVINT1|**tinyint**|**tinyint**-Datentyp mit einer Länge von einem Byte|  
 |SRVINT2|**smallint**|**smallint**-Datentyp mit einer Länge von 2 Byte|  
 |SRVINT4|**int**|**int**-Datentyp mit einer Länge von 4 Byte|  
-|SRVINTN|**"tinyint"** &#124; **"smallint"** &#124; **Int null**|**tinyint**-, **smallint**-, oder **int**-Datentyp, NULL-Werte sind zulässig.|  
+|SRVINTN|**tinyint** | **smallint** | **int null**|**tinyint**-, **smallint**-, oder **int**-Datentyp, NULL-Werte sind zulässig.|  
 |SRVMONEY4|**smallmoney**|**smallmoney**-Datentyp mit einer Länge von 4 Byte|  
 |SRVMONEY|**money**|**money**-Datentyp mit einer Länge von 8 Byte|  
-|SRVMONEYN|**Money** &#124; **Smallmoney null**|**smallmoney**- oder **money**-Datentyp, NULL-Werte sind zulässig.|  
+|SRVMONEYN|**money** | **smallmoney null**|**smallmoney**- oder **money**-Datentyp, NULL-Werte sind zulässig.|  
 |SRVNCHAR|**nchar**|**character**-Unicode-Datentyp|  
 |SRVNTEXT|**ntext**|**text**-Unicode-Datentyp|  
 |SRVNUMERIC|**numeric**|**numeric**-Datentyp|  
