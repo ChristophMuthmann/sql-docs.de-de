@@ -92,10 +92,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6c925a8f624143a5a6b3270716635a2863f8c1ba
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Installieren von SQL Server von der Eingabeaufforderung
 

@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 78d4b5e927ac53e0a76ef758f9acb0028fc818e7
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7e3d82475509a6707001787ff1c08ab66636292c
+ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,6 +81,7 @@ Mit der Hash Warning-Ereignisklasse können Sie überwachen, ob während eines H
 |XactSequence|**bigint**|Das Token, das die aktuelle Transaktion beschreibt.|50|ja|  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)    
+ [Joins](../../relational-databases/performance/joins.md)    
   
   

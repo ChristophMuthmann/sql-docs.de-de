@@ -59,10 +59,10 @@ ms.author: MikeRayMSFT
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 32412d70d3dcf52fb467c5c4854526feb2fafe9d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Konfigurieren von Windows-Dienstkonten und -Berechtigungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
