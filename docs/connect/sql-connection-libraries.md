@@ -13,11 +13,11 @@ ms.workload: data-management
 ms.topic: article
 ms.date: 08/09/2017
 ms.author: genemi
-ms.openlocfilehash: d289af96467634c144c7d0bc5ee362968c646333
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9c85a5e40ca7d3b6e35cdb09fc4becbe5c9c65c3
+ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Verbindung von Modulen für Microsoft SQL-Datenbanken
 
@@ -30,7 +30,7 @@ Dieser Artikel bietet Downloadlinks für Verbindung Module oder *Treiber* , die 
 
 #### <a name="oop-to-relational-mismatch"></a>OOP-relationale Konflikt
 
-*Relationale*: Clientprogramme, die in einer objektorientierten Programmierung (OOP) Sprache, oft geschrieben werden verwenden SQL-Treiber die abgefragte Daten in einem Format zurückgeben, die mehr als objektorientierte relational ist. C# mithilfe von ADO.NET ist ein Beispiel. Der OOP-relationalen Format Konflikt erschwert manchmal den OOP-Code zu schreiben und zu verstehen.
+*Relationale*: Clientprogramme, die in einer objektorientierten Programmierung (OOP) Sprache, oft geschrieben werden verwenden SQL-Treiber, die abgefragte Daten in einem Format zurückgeben, die mehr als objektorientierte relational ist. C# mithilfe von ADO.NET ist ein Beispiel. Der OOP-relationalen Format Konflikt erschwert manchmal den OOP-Code zu schreiben und zu verstehen.
 
 *Verwendung von ORM*: andere Treiber oder Frameworks abgefragte Daten zurückgeben, in der OOP-Format, das den Konflikt zu vermeiden. Diese Treiber funktionieren erwartet, dass die Klassen entsprechend die Datenspalten von bestimmten SQL-Tabellen definiert wurden. Der Treiber führt dann die *objektrelationales Mapping* (ORM), um die abgefragte Daten als eine Instanz einer Klasse zurückgeben. Microsofts Entity Framework (EF) für C#- und Ruhezustand für Java, sind zwei Beispiele.
 
@@ -57,11 +57,11 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | Sprache | Herunterladen des SQL-Treibers |
 | :------- | :---------------------- |
 | C#       | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET Core, für Linux – Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET Core, für Mac OS](https://www.microsoft.com/net/core#macos)<br />[.NET Core für Windows](https://www.microsoft.com/net/core) |
-| C++      | [ODBC 13.1](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
+| C++      | [ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Java     | [JDBC](http://www.microsoft.com/download/details.aspx?id=55539) |
 | Node.js  | [Node.js-Treiber installationsanweisungen](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
 | PHP      | *Betriebssystem:*<br /><br />[Windows-PHP-Treiber](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Ubuntu oder MacOS PHP-Treiber von Github](http://github.com/Microsoft/msphpsql/tree/dev#install-unix) |
-| Python   | [Pyodbc installationsanweisungen](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[ODBC 13.1 herunterladen](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
+| Python   | [Pyodbc installationsanweisungen](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[Herunterladen von ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Ruby     | [Ruby-Treiber installationsanweisungen](https://docs.microsoft.com/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[Ruby-Downloadseite](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
 
@@ -90,9 +90,9 @@ Die folgende Tabelle enthält Beispiele für Objekt Relational Mapping (ORM)-Fra
 ## <a name="build-an-app-webpages"></a>Erstellen eines app-Webseiten
 
 
-[http://AKA.ms/sqldev](http://aka.ms/sqldev) gelangen Sie auf einen Satz von unseren *Build eine app* Webseiten. Die Webseiten Aufschluss darüber geben zahlreiche Kombinationen von programming Language, Betriebssystem und Treiber für SQL-Verbindung. Die folgenden Elemente sind, zwischen den Informationen, die von der Build ein app-Webseiten bereitgestellt:
+[http://AKA.ms/sqldev](http://aka.ms/sqldev) gelangen Sie auf einen Satz von *Build eine app* Webseiten. Die Webseiten Aufschluss darüber geben zahlreiche Kombinationen von programming Language, Betriebssystem und Treiber für SQL-Verbindung. Die folgenden Elemente sind, zwischen den Informationen, die von der Build ein app-Webseiten bereitgestellt:
 
-- Ausführliche Informationen zum Einstieg ganz von vorn, für jede Kombination aus Sprache, Sys Operator + -Treiber.
+- Ausführliche Informationen zum ganz von vorn, für jede Kombination aus Sprache, Betriebssystem + Treiber beginnen.
     - Anweisungen zum Installieren der neuesten Treiber von SQL-Verbindung.
 - Codebeispiele für jede der folgenden Elemente:
     - Objektrelationales Codebeispiele.

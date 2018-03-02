@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: a93be0508eff85d4e653a1e0d0790c71ceaaeb44
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: c686e97bd3d06b99fcbb847c23ac7e174e85dd6b
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>-Installationsleitfaden für SQL Server on Linux
 
@@ -29,6 +29,8 @@ In diesem Artikel erläutert, wie zum Installieren, aktualisieren und Deinstalli
 
 > [!TIP]
 > Wechseln Sie zum schnellen Einstieg in eines der Schnellstarts für [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), oder [Docker](quickstart-install-connect-docker.md).
+
+Antworten auf häufig gestellte Fragen, finden Sie unter der [SQL Server on Linux – häufig gestellte Fragen](../linux/sql-server-linux-faq.md).
 
 ## <a id="supportedplatforms"></a> Unterstützte Plattformen
 
@@ -40,6 +42,9 @@ SQL Server-2017 wird auf den folgenden Linux-Plattformen unterstützt:
 | **SUSE Linux Enterprise Server** | v12 SP2 | [SLES v12 SP2 abrufen](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Ubuntu 16.04 abrufen](http://www.ubuntu.com/download/server)
 | **Docker Engine** | 1.8+ | [Abrufen von Docker](http://www.docker.com/products/overview)
+
+> [!NOTE]
+> Es ist manchmal möglich, installieren und Ausführen von SQL Server auf andere Linux-Plattformen eng miteinander verknüpft, aber nur SQL Server getestet und für die in der obigen Tabelle aufgeführten Plattformen unterstützt.
 
 Microsoft unterstützt die Bereitstellung und Verwaltung von SQL Server-Container mithilfe von OpenShift und Kubernetes.
 
@@ -53,7 +58,7 @@ SQL Server-2017 hat die folgenden Systemanforderungen für Linux:
 |-----|-----|
 | **Speicher** | 2 GB |
 | **Dateisystem** | **XFS** oder **EXT4** (andere Dateisysteme, z. B. **BTRFS**, werden nicht unterstützt) |
-| Speicherplatz | 6 GB |
+| **Speicherplatz** | 6 GB |
 | **Taktfrequenz des Prozessors** | 2 GHz |
 | **Prozessorkerne** | 2 Kerne |
 | **Prozessortyp** | X64-kompatiblen |

@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: a661da062d65ca699627bc2b5bf0683e5fe08806
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
-ms.translationtype: HT
+ms.openlocfilehash: 23f93527aa295815304f76676f2efc3506fd9878
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Versionshinweise für SQL Server-2017 unter Linux
 
@@ -39,13 +39,9 @@ Die folgenden Anmerkungen gelten für SQL Server-2017 auf Linux ausgeführt wird
 > [!TIP]
 > Weitere Informationen finden Sie in der [Systemanforderungen](sql-server-linux-setup.md#system) für SQL Server on Linux. Die neuesten Supportrichtlinie für SQL Server-2017, finden Sie unter der [technischen Support-Richtlinie für Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
-## <a name="supported-client-tools"></a>Unterstützte-Clienttools
+## <a name="tools"></a>Tools
 
-| Tool | Mindestversion |
-|-----|-----|
-| [SQL Server Management Studio (SSMS) für Windows](https://go.microsoft.com/fwlink/?linkid=847722) | 17.0 |
-| [SQL Server Data Tools für Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
-| [Visual Studio-Code](https://code.visualstudio.com) mit der [Mssql-Erweiterung](https://aka.ms/mssql-marketplace) | neueste |
+Die meisten vorhandenen Clienttools für SQL Server können die SQL Server auf Linux laufende nahtlos abzielen. Einige Tools möglicherweise eine bestimmte Version Anforderung auch bei Linux ordnungsgemäß funktionieren. Eine vollständige Liste der SQL Server-Tools finden Sie unter [SQL Tools und Hilfsprogramme für SQL Server](../tools/overview-sql-tools.md).
 
 ## <a name="release-history"></a>Revisionsverlauf
 
@@ -180,6 +176,7 @@ Die folgenden Features und Dienste sind zum Zeitpunkt der GA-Version nicht verf�
 | &nbsp; | Reporting Services |
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
+| &nbsp; | Distributed Transaction Coordinator (DTC) |
 
 ## <a name="known-issues"></a>Bekannte Probleme
 
@@ -332,3 +329,5 @@ Um zu beginnen, finden Sie in der folgenden Schnellstarts:
 - [Führen Sie auf Docker](quickstart-install-connect-ubuntu.md)
 - [Provision a SQL VM in Azure (Bereitstellen einer SQL-VM in Azure)](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 - [Ausführen und Verbinden – Cloud](quickstart-install-connect-clouds.md)
+
+Antworten auf häufig gestellte Fragen, finden Sie unter der [SQL Server on Linux – häufig gestellte Fragen](sql-server-linux-faq.md).

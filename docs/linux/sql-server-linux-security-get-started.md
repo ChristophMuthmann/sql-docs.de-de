@@ -15,11 +15,11 @@ ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: 00c222c601cdf314f04db3cb9e3b818d9ea3a65f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 8000ee26dd5118d4380f4e2ab33d39aa96967466
+ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Exemplarische Vorgehensweise für die Sicherheitsfeatures von SQL Server on Linux
 
@@ -66,7 +66,7 @@ GRANT ALTER ANY USER TO Jerry;
 GO   
 ```
 
-Jetzt die Anmeldung Jerry können weitere Anmeldungen erstellen, und der Benutzer Jerry kann weitere Benutzer erstellen.
+Die Anmeldung Larry kann weitere Anmeldungen erstellen können, und der Benutzer Jerry kann weitere Benutzer erstellen.
 
 
 ## <a name="granting-access-with-least-privileges"></a>Erteilen des Zugriffs mit den geringsten Privilegien

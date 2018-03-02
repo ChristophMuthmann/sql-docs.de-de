@@ -4,7 +4,7 @@ description: "In diesem Artikel wird beschrieben, wie SQL Server auf dem Linux a
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: 71efe59db9de4b60389f40ee6718627817ecee37
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: faa2898017347f59d415f7f5bf5bd6795a3f9de6
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sql-server-on-linux"></a>SQL Server unter Linux
 
@@ -54,12 +54,9 @@ Verbinden Sie nach der Installation mit SQL Server-Instanz auf dem Linux-Compute
 
 SQL Server-2017 weist das gleiche zugrunde liegende Datenbankmodul auf allen unterstützten Plattformen, einschließlich Linux. So viele vorhandene Features und Funktionen sind aus funktionaler Sicht denselben unter Linux. Dieser Teil der Dokumentation macht einige dieser Funktionen im Hinblick auf Linux verfügbar. Er ruft auch bestimmte Bereiche, die unter Linux besondere Anforderungen verfügen.
 
-Wenn Sie bereits mit SQL Server vertraut sind, überprüfen Sie die [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md) für allgemeine Richtlinien und bekannten Probleme für diese Version. Sehen Sie sich [für SQL Server on Linux Neuigkeiten](sql-server-linux-whats-new.md) sowie [für SQL Server-2017 insgesamt Neuigkeiten](../sql-server/what-s-new-in-sql-server-2017.md). Antworten auf häufig gestellte Fragen, finden Sie unter der [SQL Server on Linux – häufig gestellte Fragen](sql-server-linux-faq.md).
+Wenn Sie bereits mit SQL Server vertraut sind, überprüfen Sie die [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md) für allgemeine Richtlinien und bekannten Probleme für diese Version. Sehen Sie sich [für SQL Server on Linux Neuigkeiten](sql-server-linux-whats-new.md) sowie [für SQL Server-2017 insgesamt Neuigkeiten](../sql-server/what-s-new-in-sql-server-2017.md). 
 
-##  <a name="infotipmediageneralinfotippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](./media/general/info_tip.png) Kontaktaufnahme mit dem SQL Server-Entwicklungsteam
+> [!TIP]
+> Antworten auf häufig gestellte Fragen, finden Sie unter der [SQL Server on Linux – häufig gestellte Fragen](sql-server-linux-faq.md).
 
-- [DBA-Stapel Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): Datenbank-Verwaltung Fragen
-- [Stapelüberlauf](http://stackoverflow.com/questions/tagged/sql-server): Fragen für die Entwicklung
-- [MSDN-Foren](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): technische Fragen
-- [Übermitteln von Feedback](https://feedback.azure.com/forums/908035-sql-server): Melden von Fehlern und Anforderung-Funktion
-- [Reddit](https://www.reddit.com/r/SQLServer/): Besprechen Sie SQLServer
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlcmd
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,22 +29,23 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: "155"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 78bad0a1dfd518bb29c8bbdc5f04d0c173756e9f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 66a5e1f8b450fcc6d7cb13ba8e3d6bff36c46f4a
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > SQL Server 2014 und untere finden Sie unter [Hilfsprogramms "Sqlcmd"](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx).
 
+ > Verwenden von Sqlcmd unter Linux, finden Sie unter [Sqlcmd und Bcp unter Linux installieren](../linux/sql-server-linux-setup-tools.md).
 
   Die **Sqlcmd** -Hilfsprogramm können Sie die Transact-SQL-Anweisungen, Systemprozeduren und Skriptdateien an der Befehlszeile aus, geben Sie **-abfrageeditor** im SQLCMD-Modus, in einer Windows-Skriptdatei oder in einem Auftragsschritt Betriebssystems (Cmd.exe) eines SQL Server-Agent-Auftrags. Dieses Hilfsprogramm verwendet ODBC, um Transact-SQL-Batches ausgeführt werden. 
   
@@ -55,14 +57,14 @@ In Azure-Cloud-Verwaltungsshell mit dem Hilfsprogramm Sqlcmd können Sie versuch
   Um sqlcmd-Anweisungen in SSMS auszuführen, wählen Sie in der Navigations-Dropdownliste oben im Menü „Abfrage“ den Befehl „SQLCMD-Modus“ aus.  
   
 > [!IMPORTANT] 
-> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)](SSMS) verwendet Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient zur Ausführung im regulären und im SQLCMD-Modus **Abfrage-Editor**. Beim Ausführen von **sqlcmd** über die Befehlszeile verwendet **sqlcmd** den ODBC-Treiber. Da unterschiedliche Standardoptionen gelten können, führt die Ausführung derselben Abfrage im SQLCMD-Modus von [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] und im Hilfsprogramm **sqlcmd** möglicherweise zu unterschiedlichen Ergebnissen.  
+> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) verwendet Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient zur Ausführung im regulären und im SQLCMD-Modus **Abfrage-Editor**. Beim Ausführen von **sqlcmd** über die Befehlszeile verwendet **sqlcmd** den ODBC-Treiber. Da unterschiedliche Standardoptionen gelten können, führt die Ausführung derselben Abfrage im SQLCMD-Modus von [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] und im Hilfsprogramm **sqlcmd** möglicherweise zu unterschiedlichen Ergebnissen.  
 >   
   
  Aktuell ist für **sqlcmd** kein Leerzeichen zwischen der Befehlszeilenoption und dem Wert erforderlich. In einer zukünftigen Version kann jedoch ein Leerzeichen zwischen der Befehlszeilenoption und dem Wert erforderlich sein.  
  
  Weitere Themen:
 - [Starten des Hilfsprogramms „sqlcmd“](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
--  [Verwenden des Hilfsprogramms „sqlcmd“](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [Verwenden des Hilfsprogramms „sqlcmd“](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
   
 ## <a name="syntax"></a>Syntax  
   
@@ -400,15 +402,15 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
  **-Y** *feste_Länge_Typ_Anzeigebreite*  
  Dadurch wird die **sqlcmd** -Skriptvariable `SQLCMDMAXFIXEDTYPEWIDTH`festgelegt. Der Standardwert ist 0 (unbegrenzt). Er begrenzt die Anzahl der zurückgegebenen Zeichen für die folgenden Datentypen:  
   
--   **char(** *n* **)**, where 1<=n<=8000  
+-   **Char (**  *n*  **)**, wobei 1 < = n < = 8000  
   
--   **nchar(n** *n* **)**, where 1<=n<=4000  
+-   **NCHAR (n**  *n*  **)**, wobei 1 < = n < = 4000  
   
--   **varchar(n** *n* **)**, where 1<=n<=8000  
+-   **Varchar (n**  *n*  **)**, wobei 1 < = n < = 8000  
   
--   **nvarchar(n** *n* **)**, where 1<=n<=4000  
+-   **Nvarchar (n**  *n*  **)**, wobei 1 < = n < = 4000  
   
--   **varbinary(n** *n* **)**, where 1<=n\<=4000  
+-   **Varbinary (n**  *n*  **)**, wobei 1 < = n\<= 4000  
   
 -   **variant**  
   
@@ -452,7 +454,7 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
   
  Erläuterungen:  
   
- `x`= Anzahl der Transaktionen, die von SQL Server verarbeitet werden.  
+ `x` = Anzahl der Transaktionen, die von SQL Server verarbeitet werden.  
   
  `t1` = Gesamtdauer aller Transaktionen.  
   
@@ -688,7 +690,7 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
  GO signalisiert sowohl das Ende eines Batches und die Ausführung aller zwischengespeicherten Transact-SQL-Anweisungen. Der Batch wird als separate Batches mehrere Male ausgeführt; eine Variable kann nicht mehr als einmal in einem einzigen Batch deklariert werden.
   
  **Sonstige Befehle**  
-  **:r \<** *filename***>**  
+  **: R \<**  *Dateiname* **>**  
  Weitere Transact-SQL-Anweisungen analysiert und **Sqlcmd** Befehle aus der Datei, die vom angegebenen  **\< ***Filename***>**in die Anweisung der Cache.  
   
  Wenn die Datei Transact-SQL-Anweisungen enthält, die durch nicht eingehalten werden **wechseln**, geben Sie **GO** auf der ersten Zeile nach **: R**.  
@@ -704,7 +706,7 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
  **:Serverlist**  
  Listet die lokal konfigurierten Server sowie die Namen der Server auf, die Nachrichten über das Netzwerk senden.  
   
- **: Verbinden***Server_name*[**\\*** Instance_name*] [-l *Timeout*] [-U *User_name* [-P *Kennwort*]]  
+ **: Verbinden***Server_name*[**\\*** Instance_name*] [-l *Timeout*] [-U *User_name* [-P *Kennwort*]]    
  Eine Verbindung mit einer Instanz von SQL Server. Schließt außerdem die aktuelle Verbindung.  
   
  Timeoutoptionen:  

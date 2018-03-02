@@ -4,7 +4,7 @@ description: "Untersuchen Sie verschiedene Arten der Verwendung von und Interakt
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/15/2018
+ms.date: 02/26/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: 70ed897c26211945987b81c179f7310a1437b482
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
-ms.translationtype: HT
+ms.openlocfilehash: c0e602345be28c9740cae9cd610899b8b2d372f6
+ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Konfigurieren von SQL Server-2017 Container Bilder auf Docker
 
@@ -60,14 +60,14 @@ Quickstart im vorherigen Abschnitt führt die kostenlose Developer Edition von S
 
       ```bash
       docker run --name sqlenterprise \
-         -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
+         -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
          -e 'MSSQL_PID=Enterprise' -p 1433:1433 \
          -d store/microsoft/mssql-server-linux:2017-latest
       ```
 
       ```PowerShell
       docker run --name sqlenterprise `
-         -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+         -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
          -e "MSSQL_PID=Enterprise" -p 1433:1433 `
          -d "store/microsoft/mssql-server-linux:2017-latest"
       ```
