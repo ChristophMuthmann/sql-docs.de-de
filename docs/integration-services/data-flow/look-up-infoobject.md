@@ -51,7 +51,7 @@ ms.lasthandoff: 02/15/2018
  Sie können das Dialogfeld **InfoObject suchen** auch öffnen, indem Sie im Abschnitt **Attribute** des Dialogfelds **Neues InfoObject erstellen** auf **Hinzufügen** klicken.  
   
 ## <a name="lookup-options"></a>Suchoptionen  
- In den Suchtextfeldern können Sie Ergebnisse filtern, indem Sie das Platzhalterzeichen (*) oder eine Teilzeichenfolge in Kombination mit dem Platzhalterzeichen (*) verwenden. Wenn Sie ein Suchfeld jedoch leer lassen, werden beim Suchvorgang nur leere Zeichenfolgen in diesem Feld abgeglichen.  
+ In den Suchtextfeldern können Sie Ergebnisse filtern, indem Sie das Platzhalterzeichen (*) oder eine Teilzeichenfolge in Kombination mit dem Platzhalterzeichen verwenden. Wenn Sie ein Suchfeld jedoch leer lassen, werden beim Suchvorgang nur leere Zeichenfolgen in diesem Feld abgeglichen.  
   
  **Merkmale**  
  Suchen Sie die InfoObjects, die die Eigenschaften darstellen.  
@@ -66,10 +66,10 @@ ms.lasthandoff: 02/15/2018
  Suchen Sie die InfoObjects, die die Zeitmerkmale darstellen.  
   
  **Name**  
- Geben Sie den Namen des InfoObject ein, das Sie suchen möchten, oder geben Sie einen Teilnamen mit dem Platzhalterzeichen (*) ein. Alternativ können Sie das Platzhalterzeichen (*) alleine verwenden, um alle InfoObjects einzuschließen.  
+ Geben Sie den Namen des InfoObject ein, das Sie suchen möchten, oder geben Sie einen Teilnamen mit dem Platzhalterzeichen (*) ein. Alternativ können Sie das Platzhalterzeichen alleine verwenden, um alle InfoObjects einzuschließen.  
   
  **Beschreibung**  
- Geben Sie die Beschreibung oder eine teilweise Beschreibung mit dem Platzhalterzeichen (*) ein. Alternativ können Sie das Platzhalterzeichen (*) alleine verwenden, um alle InfoObjects unabhängig von der Beschreibung einzuschließen.  
+ Geben Sie die Beschreibung oder eine teilweise Beschreibung mit dem Platzhalterzeichen (*) ein. Alternativ können Sie das Platzhalterzeichen alleine verwenden, um alle InfoObjects unabhängig von der Beschreibung einzuschließen.  
   
  **Suchen**  
  Suchen Sie übereinstimmende InfoObjects, die im SAP NetWeaver BW-System definiert sind.  

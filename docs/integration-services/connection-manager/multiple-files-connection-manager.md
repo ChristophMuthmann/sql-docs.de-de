@@ -66,7 +66,7 @@ ms.lasthandoff: 02/15/2018
   
  \<*Pfad*>|\<*Pfad*>  
   
- Mehrere Dateien oder Ordner können Sie auch mithilfe von Platzhalterzeichen angeben. Wenn z.B. auf alle Textdateien auf Laufwerk C verwiesen werden soll, kann der Wert der **ConnectionString** -Eigenschaft auf C:\\*.txt festgelegt werden.  
+ Mehrere Dateien oder Ordner können Sie auch mithilfe von Platzhalterzeichen angeben. Wenn z.B. auf alle Textdateien auf Laufwerk C verwiesen werden soll, kann der Wert der **ConnectionString** -Eigenschaft auf C:\\\*.txt festgelegt werden.  
   
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
