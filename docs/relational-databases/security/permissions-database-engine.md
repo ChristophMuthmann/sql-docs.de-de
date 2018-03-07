@@ -369,7 +369,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
 ##  <a name="_algorithm"></a> Zusammenfassung des Algorithmus zur Berechtigungsprüfung  
- Die Prüfung von Berechtigungen kann sehr komplex sein. Der Algorithmus für die Berechtigungsprüfung umfasst überlappende Gruppenmitgliedschaften und Besitzverkettung, explizite und implizite Berechtigungen und kann von den Berechtigungen für sicherungsfähige Klassen, in denen die sicherungsfähige Entität enthalten ist, beeinflusst werden. Die allgemeine Vorgehensweise des Algorithmus besteht darin, alle relevanten Berechtigungen zu sammeln. Wenn keine blockierende DENY-Anweisung gefunden wird, sucht der Algorithmus nach einer GRANT-Anweisung mit ausreichenden Zugriffsberechtigungen. Der Algorithmus enthält drei wesentliche Elemente, den **Sicherheitskontext**, den **Berechtigungsbereich**und die **erforderliche Berechtigung**.  
+ Die Prüfung von Berechtigungen kann sehr komplex sein. Der Algorithmus für die Berechtigungsprüfung umfasst überlappende Gruppenmitgliedschaften und Besitzverkettung, explizite und implizite Berechtigungen und kann von den Berechtigungen für sicherungsfähige Klassen, in denen die sicherungsfähige Entität enthalten ist, beeinflusst werden. Die allgemeine Vorgehensweise des Algorithmus besteht darin, alle relevanten Berechtigungen zu sammeln. Wenn keine blockierende DENY-Anweisung gefunden wird, sucht der Algorithmus nach einer GRANT-Anweisung mit ausreichenden Zugriffsberechtigungen. Der Algorithmus enthält drei wesentliche Elemente, den **Sicherheitskontext**, den **Berechtigungsbereich**und die **erforderlichen Berechtigung**.  
   
 > [!NOTE]  
 >  Berechtigungen können nicht für sa, dbo, den Entitätsbesitzer, information_schema, sys oder für den Benutzer selbst erteilt, verweigert oder aufgehoben werden.  
@@ -392,7 +392,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
   
      Dies sind die sicherungsfähige Entität und alle sicherungsfähigen Klassen, in denen das sicherungsfähige Element enthalten ist. Eine Tabelle (eine sicherungsfähige Entität) ist z. B. in der sicherungsfähigen Klasse des Schemas und in der sicherungsfähigen Klasse der Datenbank enthalten. Berechtigungen auf Tabellen-, Schema-, Datenbank- und Serverebene können sich auf den Zugriff auswirken. Weitere Informationen finden Sie unter [Berechtigungshierarchie &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   
--   **Erforderliche Berechtigung**  
+-   **erforderlichen Berechtigung**  
   
      Die Art der erforderlichen Berechtigung. Beispielsweise INSERT, UPDATE, DELETE, SELECT, EXECUTE, ALTER, CONTROL usw.  
   
@@ -416,11 +416,11 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
     > [!NOTE]  
     >  Durch eine GRANT-Berechtigung auf Spaltenebene wird eine DENY-Berechtigung auf Objektebene überschrieben.  
   
-5.  Identifizieren Sie die **erforderliche Berechtigung**.  
+5.  Identifizieren Sie die **erforderlichen Berechtigung**.  
   
-6.  Die Berechtigungsprüfung ist nicht bestanden, wenn die **erforderliche Berechtigung** für eine der Identitäten im **Sicherheitskontext** der Objekte im **Berechtigungsbereich** direkt oder implizit verweigert werden.  
+6.  Die Berechtigungsprüfung ist nicht bestanden, wenn die **erforderlichen Berechtigung** für eine der Identitäten im **Sicherheitskontext** der Objekte im **Berechtigungsbereich** direkt oder implizit verweigert werden.  
   
-7.  Die Berechtigungsprüfung ist bestanden, wenn die **erforderliche Berechtigung** nicht verweigert wurde, und die **erforderliche Berechtigung** für eine der Identitäten im **Sicherheitskontext** eines beliebigen Objekts im **Berechtigungsbereich**direkt oder implizit eine GRANT-Berechtigung oder GRANT WITH GRANT-Berechtigung enthält.  
+7.  Die Berechtigungsprüfung ist bestanden, wenn die **erforderlichen Berechtigung** nicht verweigert wurde, und die **erforderlichen Berechtigung** für eine der Identitäten im **Sicherheitskontext** eines beliebigen Objekts im **Berechtigungsbereich**direkt oder implizit eine GRANT-Berechtigung oder GRANT WITH GRANT-Berechtigung enthält.  
 
 ## <a name="special-considerations-for-column-level-permissions"></a>Spezielle Aspekte für Berechtigungen auf Spaltenebene
 

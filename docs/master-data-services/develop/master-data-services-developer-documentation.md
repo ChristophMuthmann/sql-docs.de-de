@@ -11,18 +11,19 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76dd2b0dd77061e029dc5b7092a21d484ac7f7ed
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 21898c90044ec62c1a7d55fbcfa0cf03d46ba7ce
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-developer-documentation"></a>Master Data Services Developer Documentation
   Hier finden Sie Informationen zum Schreiben von Code, um anzupassen, wie Sie und Ihre Benutzer mit [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] interagieren. Vorgehensweise:  
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/08/2018
  Anweisungen zum Erstellen einer Workflowhandlerassembly, zum Konfigurieren und Starten des SQL Server MDS Workflow Integration Service sowie zum Erstellen einer Geschäftsregel in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] für den Start eines benutzerdefinierten Workflows.  
   
 ## <a name="web-server-namespaces"></a>Webserver-Namespaces  
- Durch [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] wird eine Reihe von Assemblys auf dem Webservercomputer installiert. Diese Assemblys enthalten Namespaces, die für erweiterte Szenarien verwendet werden können, in denen das Verhalten des Webservercomputers angepasst wird. In der folgenden Tabelle werden diese Namespaces beschrieben.  
+ [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] wird eine Reihe von Assemblys auf dem Webservercomputer installiert. Diese Assemblys enthalten Namespaces, die für erweiterte Szenarien verwendet werden können, in denen das Verhalten des Webservercomputers angepasst wird. In der folgenden Tabelle werden diese Namespaces beschrieben.  
   
 |Namespace|Description|  
 |---------------|-----------------|  

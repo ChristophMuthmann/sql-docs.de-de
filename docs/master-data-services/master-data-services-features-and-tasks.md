@@ -8,20 +8,21 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b563882777ac6ca62665a66e7aed497bdacdccdd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a64d484a0739e17e947370d2760886bcbac7dd90
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services - Features und Tasks
   Erfahren Sie, wie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] verwendet wird, um die Masterdaten Ihrer Organisation zu verwalten. Erfahren Sie, wie Modellobjekte zu erstellen und zu bearbeiten sind, die als Container für Daten dienen. Erfahren Sie, wie die Masterdaten an sich organisiert und verwaltet werden. Erfahren Sie, wie Masterdaten zu importieren und exportieren sind und wie sich Modelle zwischen Test- und Produktionsumgebungen freigeben lassen. Abschließend erfahren Sie, wie sich benutzerdefinierte Anwendungen, die auf den [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Webdienst zugreifen, entwickeln lassen.  

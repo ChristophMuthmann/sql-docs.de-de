@@ -8,23 +8,24 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - versions [Master Data Services], copying
 - copying versions [Master Data Services]
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
-caps.latest.revision: "6"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 263e0dacf2862d93499fbce91aeb344e85143df9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fa146f0fc88beece06d5f6ae49f8d7eeac4565c7
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="copy-a-version-master-data-services"></a>Kopieren einer Version (Master Data Services)
   Kopieren Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eine Version des Modells, um eine neue Version zu erstellen.  

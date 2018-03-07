@@ -8,20 +8,21 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
-caps.latest.revision: "7"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5dd3875aaef8ed922f3566c4b2961d477c97ee11
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c4d7bcf296cc602a7a543e9af6a1f91ff9a00d8d
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Funktionsbereich "Benutzer- und Gruppenberechtigungen" (Master Data Manager)
   Im Funktionsbereich "Benutzer- und Gruppenberechtigungen" können Administratoren die Berechtigung für Funktionsbereiche, Attribute (auf der Registerkarte "Modelle") und Elemente (auf der Registerkarte "Hierarchieelemente") gewähren. Überlappende Berechtigungen werden aufgelöst, um die Berechtigung eines Benutzers für jeden einzelnen Attributwert zu bestimmen.  

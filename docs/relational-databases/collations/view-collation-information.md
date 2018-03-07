@@ -16,20 +16,20 @@ helpviewer_keywords:
 - collations [SQL Server], view
 ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
+author: stevestein
+ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 349830726079ebdcd820d2c76bc1c5f76c74c7c7
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 4095965899da005d767bb124806fbb116379a1f6
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="view-collation-information"></a>Anzeigen von Sortierungsinformationen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
     
-##  <a name="Top"></a> Sie können die Sortierung eines Servers, einer Datenbank oder Spalte in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mithilfe der Menüoptionen des Objekt-Explorers oder mit [!INCLUDE[tsql](../../includes/tsql-md.md)] anzeigen.  
+##  <a name="Top"></a> Sie können die Sortierung eines Servers, einer Datenbank oder Spalte in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mithilfe der Menüoptionen des Objekt-Explorers oder mit [!INCLUDE[tsql](../../includes/tsql-md.md)]anzeigen.  
   
 ##  <a name="Procedures"></a> So zeigen Sie eine Sortierungseinstellung an  
  Sie können eine der folgenden Anwendungen verwenden:  
@@ -41,11 +41,11 @@ ms.lasthandoff: 02/12/2018
 ###  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So zeigen Sie eine Sortierungseinstellung für einen Server (Instanz von SQL Server) im Objekt-Explorer an**  
   
-1.  Stellen Sie mithilfe des Objekt-Explorers eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
+1.  Stellen Sie mithilfe im Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
 2.  Klicken Sie mit der rechten Maustaste auf die Spalte, und wählen Sie **Eigenschaften**aus.  
   
- **Wenn die Sortierungseigenschaft leer ist, ist die Spalte kein Zeichendatentyp.**   
+ **So zeigen Sie eine Sortierungseinstellung für eine Datenbank im Objekt-Explorer an**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 02/12/2018
     EXECUTE sp_helpsort;  
     ```  
   
- **So zeigen Sie alle von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützten Sortierreihenfolgen an**  
+ **So zeigen Sie alle von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und klicken Sie auf der Symbolleiste auf **Neue Abfrage**.  
   

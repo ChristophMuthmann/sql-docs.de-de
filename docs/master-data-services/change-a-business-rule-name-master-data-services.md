@@ -8,21 +8,23 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: business rules [Master Data Services], changing name
+helpviewer_keywords:
+- business rules [Master Data Services], changing name
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
-caps.latest.revision: "7"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c3b0c9f59c539f30f3cd560966a02a477890f73
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0b3b46c9c8c78f239314ece2b776bd941369429d
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>Ändern des Namens einer Geschäftsregel (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie den Namen einer Geschäftsregel ändern, wenn der zugewiesene Name nicht Ihren Geschäftsanforderungen entspricht.  

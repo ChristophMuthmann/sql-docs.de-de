@@ -8,21 +8,23 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: users [Master Data Services], changing e-mail address
+helpviewer_keywords:
+- users [Master Data Services], changing e-mail address
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
-caps.latest.revision: "7"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 651629a606111a3af1394baacacee15fcc514282
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 273ece50ab2d35a7d54b1d8910aaa832bb488d0a
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>Ändern einer Benutzer-E-Mail-Adresse (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie die E-Mail-Adresse ändern, an die Benachrichtigungen gesendet werden, sowie das Standardformat von Benachrichtigungs-E-Mails.  

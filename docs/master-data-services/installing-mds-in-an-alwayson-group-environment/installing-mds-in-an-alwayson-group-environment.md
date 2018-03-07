@@ -8,20 +8,21 @@ ms.service:
 ms.component: installing-mds-in-an-alwayson-group-environment
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
 caps.latest.revision: 
-author: smartysanthosh
-ms.author: nagavo
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2caabcb53e4386927b4103764c8abce34ccdefcd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f8cd77bb7366fb1bb09d8f119a1b740bd8456344
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Hochverfügbarkeit und Notfallwiederherstellung für Master Data Services
 
@@ -96,7 +97,7 @@ Wie in Abbildung 1 im vorherigen Abschnitt gezeigt, enthält die in diesem Artik
 
 WSFC ist ein Feature, das die Hochverfügbarkeit von Anwendungen und Diensten verbessert. Es besteht aus einer Gruppe unabhängiger Windows Server-Instanzen, auf denen der Microsoft-Failoverclusterdienst ausgeführt wird. Die Windows Server-Instanzen (oder Knoten, wie sie manchmal genannt werden) sind miteinander verbunden, sodass sie kommunizieren können und so die Fehlererkennung möglich machen. Der WSFC stellt die Fehlererkennung und Failoverfunktionen bereit. Wenn ein Knoten oder Dienst im Cluster einen Fehler ausgibt, wird der Fehler erkannt, und ein anderer Knoten stellt automatisch oder manuell die auf dem fehlgeschlagenen Knoten gehosteten Dienste bereit. So erfahren Benutzer nur eine minimale Unterbrechung des Diensts, und die Verfügbarkeit des Diensts wird verbessert.  
 
-### <a name="prerequisites"></a>Erforderliche Komponenten
+### <a name="prerequisites"></a>Voraussetzungen
 
 Das Windows Server-Betriebssystem wird auf allen Instanzen installiert, und alle Updates werden gepatcht.
 
@@ -215,7 +216,7 @@ Verfügbarkeitsgruppen verbessern die hohe Verfügbarkeit auf Datenbankebene. Di
 Failoverclusterinstanzen verbessern die Hochverfügbarkeit auf Instanzebene. Der SQL Server-Dienst sowie die damit verbundenen Dienste sind als Ressourcen im WSFC registriert. Die Failoverclusterinstanz-Lösung erfordert zudem symmetrischen freigegebenen Festplattenspeicher, z.B. SAN- oder SMB-Dateifreigaben, die für alle Knoten im WFC-Cluster verfügbar sein müssen.
 
 
-### <a name="prerequisites"></a>Erforderliche Komponenten
+### <a name="prerequisites"></a>Voraussetzungen
 
 -   Installieren Sie SQL Server auf allen Knoten. Weitere Informationen finden Sie unter [Installieren von SQL Server 2016](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server).
 
@@ -319,9 +320,9 @@ Die Verfügbarkeitsgruppe kann nur auf vorhandenen Datenbanken erstellt werden. 
 
 8.  Klicken Sie auf der Seite **Replikate angeben** auf die Registerkarte **Listener** und tun Sie Folgendes: Weitere Informationen in Abbildung 18.
 
-    a.  Klicken Sie auf **Verfügbarkeitsgruppenlistener erstellen**, um einen Verfügbarkeitsgruppenlistener für die MDS-Datenbankverbindung einzurichten.
+    A.  Klicken Sie auf **Verfügbarkeitsgruppenlistener erstellen**, um einen Verfügbarkeitsgruppenlistener für die MDS-Datenbankverbindung einzurichten.
 
-    b.  Geben Sie einen **DNS-Namen des Listeners** ein, z.B. MDSSQLServer.
+    B.  Geben Sie einen **DNS-Namen des Listeners** ein, z.B. MDSSQLServer.
 
     c.  Geben Sie den Standard-SQL-Port „1433“ im Textfeld **Port** ein.
 

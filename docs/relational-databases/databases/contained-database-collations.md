@@ -8,12 +8,14 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: contained database, collations
+helpviewer_keywords:
+- contained database, collations
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -63,7 +65,7 @@ mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS
 mycolumn2       Frisian_100_CS_AS  
 ```  
   
- Dies erscheint relativ einfach, es treten jedoch mehrere Probleme auf. Da die Sortierung für eine Spalte von der Datenbank abhängt, in der die Tabelle erstellt wurde, treten Probleme mit der Verwendung von temporären Tabellen auf, die in **tempdb**gespeichert werden. Die Sortierung von **tempdb** entspricht normalerweise der Sortierung für die Instanz. Diese muss nicht unbedingt der Datenbanksortierung entsprechen.  
+ Dies erscheint relativ einfach, es treten jedoch mehrere Probleme auf. Da die Sortierung für eine Spalte von der Datenbank abhängt, in der die Tabelle erstellt wurde, treten Probleme mit der Verwendung von temporären Tabellen auf, die in **tempdb** gespeichert werden. Die Sortierung von **tempdb** entspricht normalerweise der Sortierung für die Instanz. Diese muss nicht unbedingt der Datenbanksortierung entsprechen.  
   
 ### <a name="example-2"></a>Beispiel 2  
  Betrachten Sie beispielsweise die obige (chinesische) Datenbank, wenn diese in einer Instanz mit der Sortierung **Latin1_General** verwendet wird:  

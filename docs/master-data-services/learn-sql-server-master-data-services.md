@@ -8,21 +8,23 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-keywords: Erlernen von SQL
+keywords:
+- Erlernen von SQL
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
-caps.latest.revision: "19"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 43f8d61e24597efa46e0452466449e73cbbc8888
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 34d9c876e8fab97fcce0f81421d918af4741a47f
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="learn-sql-server-master-data-services"></a>Erlernen von SQL Server Master Data Services
   

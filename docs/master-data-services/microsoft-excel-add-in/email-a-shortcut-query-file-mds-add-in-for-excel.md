@@ -8,25 +8,26 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
-caps.latest.revision: "7"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db3ca1fcbc3fd431cd9abdfb316026401024b79a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dbc5fe44566779dae76d3bb314c97a126630fd87
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Senden einer Shortcutabfragedatei (MDS-Add-In für Excel)
   Senden Sie in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]per E-Mail eine Shortcutabfragedatei an jemanden, wenn Sie sicherstellen möchten, dass diese Person mit den gleichen Daten wie Sie arbeitet. Sie sollten Abfragen freigeben, statt das Arbeitsblatt zu speichern und zu senden.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Outlook 2010 oder höher muss installiert sein.  
@@ -39,11 +40,11 @@ ms.lasthandoff: 11/20/2017
   
 2.  Klicken Sie in der Gruppe **Speichern und senden** auf **Abfrage senden**. Eine E-Mail wird geöffnet, und die Shortcutabfragedatei wird angefügt.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
   
 -   Um die Shortcutabfragedatei zu öffnen, muss beim Empfänger der E-Mail MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] installiert sein. Der Empfänger kann auf die Datei doppelklicken, um sie zu öffnen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Shortcutabfragedateien &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
   

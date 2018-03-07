@@ -8,20 +8,21 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
-caps.latest.revision: "30"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 965902950f4b49d9923f3e92f5954393c044e359
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8f1e34eb5bb7992661f79e2c524b660442a6df35
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Master Data Services-Add-In für Microsoft Excel
   Mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] können Sie gefilterte Listen der Daten von MDS in Excel laden, wo Sie damit genauso arbeiten können, wie Sie es mit beliebigen anderen Daten auch tun würden. Wenn Sie fertig sind, können Sie die Daten in MDS veröffentlichen, wo sie zentral gespeichert werden. Mit Sicherheit wird festgelegt, welche Daten Sie anzeigen und aktualisieren können.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Ein *attribute* ist eine Spalte mit Daten. Jedes Element verfügt über Attribute. Das Attrribut **Code** für das Element **Blau** ist z.B. **B**. Weitere Informationen zu Attributen finden Sie unter [Attribute &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  

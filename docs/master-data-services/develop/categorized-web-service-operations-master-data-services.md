@@ -11,18 +11,19 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
-caps.latest.revision: "7"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c43a3121179b8317c94c81a3b9aaf623459ce01d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2ae71d17925d069a8bf7211b0692b6787467dbea
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Kategorisierte Webdienstvorgänge (Master Data Services)
   Der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Webdienst enthält einen vollständigen Satz an Vorgängen, mit dem Sie Code zum Steuern aller Funktionen schreiben können, die von [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] über die zugehörige Benutzeroberfläche ausgeführt werden. Die Webdienstvorgänge werden von der <xref:Microsoft.MasterDataServices.IService>-Schnittstelle definiert und als Methoden in der <xref:Microsoft.MasterDataServices.ServiceClient>-Klasse implementiert. Dieses Thema gruppiert die Webdienstvorgänge in konzeptionelle Kategorien, sodass Sie einen besseren Einblick in die Verwendung der Webdienst-API erhalten.  

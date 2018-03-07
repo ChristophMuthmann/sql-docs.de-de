@@ -31,15 +31,15 @@ helpviewer_keywords:
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
+author: stevestein
+ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d1fd84b774ee2ea2a7af3db4f1cd015dfbd3176d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9c7e1e6997db9f93ea0145169a1f40b79ca93ea1
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ Sortierungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bieten
     
  Wenn Sie eine Sortierung für den Server, die Datenbank, die Spalte oder den Ausdruck auswählen, weisen Sie den Daten bestimmte Merkmale zu, die Auswirkungen auf die Ergebnisse vieler Datenbankvorgänge haben. Wenn Sie beispielsweise eine Abfrage mit ORDER BY erstellen, kann die Sortierreihenfolge des Resultsets von der Sortierung abhängen, die für die Datenbank gilt oder die in einer COLLATE-Klausel auf Ausdrucksebene der Abfrage vorgegeben ist.    
     
- Zur optimalen Verwendung der Sortierungsunterstützung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist es erforderlich, die in diesem Thema beschriebenen Begriffe zu verstehen und zu wissen, wie sie mit den Eigenschaften der Daten in Zusammenhang stehen.    
+ Zur optimalen Verwendung der Sortierungsunterstützung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist es erforderlich, die in diesem Thema beschriebenen Begriffe zu verstehen und zu wissen, wie sie mit den Eigenschaften der Daten in Zusammenhang stehen.    
     
 ##  <a name="Terms"></a> Sortierungsbegriffe    
     

@@ -8,20 +8,21 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54865b00-563a-4932-ad4d-cbfd36b1e6c5
-caps.latest.revision: "12"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6a57a09f7615eae83c3ad7be4522a2daa3d0636
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6b1db97422c0b39f78dc3a59e2e6d44c41f7695f
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="technical-reference-master-data-services"></a>Technische Referenz (Master Data Services)
   Erhalten Sie technische Referenzinformationen zu [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Komponenten.  

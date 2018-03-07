@@ -8,20 +8,21 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
-caps.latest.revision: "32"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d26d76d4f363a5ae77c9c10cedd85afac56ffd81
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9a0b5d444d3f1f28d4453a8c266b19beaf080440
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="installation-tasks-for-master-data-services"></a>Installationsaufgaben für Master Data Services
   Dieser Artikel enthält eine Übersicht über die Installationsaufgaben sowie Links zu Anweisungen. Eine exemplarische Vorgehensweise zum Installieren und Konfigurieren von Master Data Services finden Sie unter [Master Data Services – Installation und Konfiguration](../../master-data-services/master-data-services-installation-and-configuration.md). 
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/20/2017
   
  Wenn Sie [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] auf einem Computer nicht mehr benötigen, können Sie [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] deinstallieren und bei Bedarf die Elemente entfernen, die vom Deinstallationsvorgang nicht betroffen sind. Weitere Informationen finden Sie unter [Deinstallieren und Entfernen von Master Data Services](../../sql-server/install/uninstall-and-remove-master-data-services.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Installieren von SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
   
   

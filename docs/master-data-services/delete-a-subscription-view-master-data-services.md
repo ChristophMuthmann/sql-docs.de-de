@@ -8,23 +8,24 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deleting subscription views [Master Data Services]
 - subscription views [Master Data Services], deleting
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
-caps.latest.revision: "6"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 51571555a7c0e308fda3748c8972f25406311891
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8ecf4d1e0ebe3d083f4ad3b48efca2b1af176311
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>Löschen einer Abonnementsicht (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie eine Abonnementsicht löschen, die Sie nicht mehr benötigen. Wenn Sie eine Abonnementsicht in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] löschen, wird die Sicht aus der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank entfernt. Sie können eine Abonnementsicht auch bearbeiten.  

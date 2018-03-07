@@ -90,7 +90,7 @@ ms.lasthandoff: 02/19/2018
  Außerhalb der Datenbankbegrenzung befindet sich das *Verwaltungsmodell*, das sich auf Funktionen auf Instanzebene und auf die Verwaltung bezieht. Beispiele für Entitäten, die sich außerhalb der Datenbankbegrenzung befinden, sind Systemtabellen wie **sys.endpoints**, zu Anmeldungen zugeordnete Benutzer und Benutzertabellen in einer anderen Datenbank, auf die mit einem dreiteiligen Namen verwiesen wird.  
   
 ##  <a name="containment"></a> Eigenständigkeit  
- Benutzerentitäten, die sich vollständig innerhalb der Datenbank befinden, werden als *enthalten*angesehen. Alle Benutzerentitäten, die sich außerhalb der Datenbank befinden oder sich auf die Interaktion mit Funktionen außerhalb der Datenbank stützen, werden als *nicht enthalten*angesehen.  
+ Benutzerentitäten, die sich vollständig innerhalb der Datenbank befinden, werden als *enthalten* angesehen. Alle Benutzerentitäten, die sich außerhalb der Datenbank befinden oder sich auf die Interaktion mit Funktionen außerhalb der Datenbank stützen, werden als *nicht enthalten* angesehen.  
   
  Im Allgemeinen sind Benutzerentitäten folgenden Kapselungskategorien zuzuordnen:  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 02/19/2018
  Geben Sie Informationen zu nicht eigenständigen Objekten und Funktionen mithilfe von [sys.dm_db_uncontained_entities](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) und [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) zurück. Durch Bestimmen des Kapselungsstatus der Elemente von Datenbanken können Sie ermitteln, welche Objekte und Funktionen ersetzt oder geändert werden müssen, um eine Kapselung zu erzielen.  
   
 > [!IMPORTANT]  
->  Da bestimmte Objekte bei der Eigenständigkeit die Standardeinstellung **NONE**aufweisen, werden von dieser Sicht möglicherweise falsch positive Ergebnisse zurückgegeben.  
+>  Da bestimmte Objekte bei der Eigenständigkeit die Standardeinstellung **NONE** aufweisen, werden von dieser Sicht möglicherweise falsch positive Ergebnisse zurückgegeben.  
   
  Das Verhalten teilweise eigenständiger Datenbanken unterscheidet sich von dem abhängiger Datenbanken am deutlichsten hinsichtlich der Sortierung. Weitere Informationen zu Sortierungsaspekten finden Sie unter [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md).  
   

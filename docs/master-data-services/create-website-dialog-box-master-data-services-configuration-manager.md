@@ -8,21 +8,23 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.mds.configmanager.createsite.f1
+f1_keywords:
+- sql13.mds.configmanager.createsite.f1
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
-caps.latest.revision: "10"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4da374ba8805fe07bf3d155f2f0910d944ac78d9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0cbb31101e60f32070abdde870fb7dfcd2c497b9
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>Website erstellen (Dialogfeld im Konfigurations-Manager für Master Data Services)
   Verwenden Sie das Dialogfeld **Website erstellen** , um eine neue Website auf dem lokalen Computer zu erstellen. Wenn Sie in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]eine Website erstellen, wird diese den Internetinformationsdiensten (IIS) auf dem lokalen Computer mit einer Stammanwendung hinzugefügt, die als die [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung konfiguriert ist. Darüber hinaus wird ein neuer Anwendungspool erstellt und die Webanwendung in diesen Anwendungspool eingefügt.  
