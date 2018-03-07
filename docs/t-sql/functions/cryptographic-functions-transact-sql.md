@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - functions [SQL Server], cryptographic
 - crypto functions
@@ -20,14 +22,14 @@ helpviewer_keywords:
 - security functions
 - encryption [SQL Server], functions
 ms.assetid: 0be5626b-5a25-4d8c-9f44-7abbfccf816c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 2faf87a86ea633ba996436448ce83daca4e38e2b
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

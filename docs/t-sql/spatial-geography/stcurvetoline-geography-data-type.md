@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STCurveToLine_TSQL
 - STCurveToLine
-dev_langs: TSQL
-helpviewer_keywords: STCurveToLine method (geography)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STCurveToLine method (geography)
 ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d503d7c7ad67e56ddfd38495f40e8960daa13561
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

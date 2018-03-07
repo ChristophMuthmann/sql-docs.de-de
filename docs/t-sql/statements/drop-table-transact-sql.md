@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP_TABLE_TSQL
 - DROP TABLE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - removing indexes
 - table removal [SQL Server]
@@ -37,14 +39,14 @@ helpviewer_keywords:
 - dropping constraints
 - dropping permissions
 ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: df9843e4b72c6a8092756725d1d4b3f96eefec74
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - QUOTENAME_TSQL
 - QUOTENAME
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - delimited identifiers [SQL Server]
 - input strings [SQL Server]
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - QUOTENAME function
 - valid identifiers [SQL Server]
 ms.assetid: 34d47f1e-2ac7-4890-8c9c-5f60f115e076
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 701d229ae745cee4a237f35b69cd00e899d5c6a5
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/18/2018
 ---

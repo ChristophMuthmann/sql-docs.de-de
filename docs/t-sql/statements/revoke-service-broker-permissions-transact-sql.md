@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - routes [Service Broker], permissions
 - Service Broker, permissions
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - services [Service Broker], permissions
 - REVOKE statement, Service Broker
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 897da4d05bcd9a2cfbb88ce5383ba7a71867edcc
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

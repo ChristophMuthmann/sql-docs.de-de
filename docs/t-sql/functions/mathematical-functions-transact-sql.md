@@ -8,23 +8,25 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - calculations [SQL Server]
 - mathematical functions [SQL Server]
 - functions [SQL Server], mathematical
 ms.assetid: 46495a2e-81d0-4677-9d72-9db083cd1023
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 9f9bd6a0c54df1833aff6ac53bafc1570d6aa649
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

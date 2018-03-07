@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - LOG
 - LOG_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - float expressions
 - logarithm of expression
 - LOG function
 ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: ab2d021e583c3f4bec009e7959ea4fccfea8c5a3
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

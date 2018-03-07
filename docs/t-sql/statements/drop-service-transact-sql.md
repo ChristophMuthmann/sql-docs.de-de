@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP_SERVICE_TSQL
 - DROP SERVICE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - deleting services
 - services [Service Broker], removing
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - DROP SERVICE statement
 - removing services
 ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 17d968946d57293f147483833e58c1d1a2395b7b
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

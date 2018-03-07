@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_TSQL
 - UPDATE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DML [SQL Server], UPDATE statement
 - data updates [SQL Server], UPDATE statement
@@ -38,14 +40,14 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: "91"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 227cafdd68eddac2ff6a515853f0fcded0c07f63
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

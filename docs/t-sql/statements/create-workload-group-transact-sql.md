@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,17 +17,19 @@ f1_keywords:
 - WORKLOAD_GROUP_TSQL
 - CREATE WORKLOAD GROUP
 - CREATE_WORKLOAD_GROUP_TSQL
-dev_langs: TSQL
-helpviewer_keywords: CREATE WORKLOAD GROUP statement
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CREATE WORKLOAD GROUP statement
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: cec1360259d78679fab31a45a074d5fbbf3779b5
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

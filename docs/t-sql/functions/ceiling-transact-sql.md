@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CEILING_TSQL
 - CEILING
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - smallest integer great than or equal to expression
 - integers [SQL Server]
 - CEILING function [Transact-SQL]
 ms.assetid: e736b43a-9457-4781-95a4-4bcf9d4fc46a
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 8859077710b51556a9c61c546b91f37795afd8d1
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

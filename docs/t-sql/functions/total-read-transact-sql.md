@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@TOTAL_READ_TSQL'
 - '@@TOTAL_READ'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - number of disk reads
 - disks [SQL Server], number of disk reads
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - total read [SQL Server]
 - read activity since last started
 ms.assetid: b505fbe9-9569-4f3d-80b9-b64b5109ac98
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a062d6e9fab425ead0db82542baeca2c54861aae
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

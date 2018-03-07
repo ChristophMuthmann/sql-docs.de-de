@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - uniqueidentifier data type
 - bit data type
@@ -32,14 +34,14 @@ helpviewer_keywords:
 - real data type
 - negative values
 ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: aae955a177f637e3c359eabf02679025cbecdb3a
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

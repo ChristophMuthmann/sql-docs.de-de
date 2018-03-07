@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - USE_TSQL
 - USE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - USE statement
 - database context [SQL Server]
 - context changes [SQL Server]
 - modifying database context
 ms.assetid: c05acac8-c063-4770-8e36-d7f71d500b10
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 1de8ddd8d109e7ba2b83dd6c940487c6aa3fd155
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

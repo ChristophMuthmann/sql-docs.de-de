@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STPolyFromWKB_TSQL
 - STPolyFromWKB (geography Data Type)
-dev_langs: TSQL
-helpviewer_keywords: STPolyFromWKB method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STPolyFromWKB method
 ms.assetid: d236e0ea-dabe-4341-a6eb-ecc210d1f056
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 901ef4c168a8d7f7d2edcb87a742bc1ab2c359d4
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

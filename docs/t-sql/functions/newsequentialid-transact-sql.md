@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - NEWSEQUENTIALID
 - NEWSEQUENTIALID_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - NEWSEQUENTIALID function
 - GUIDs [SQL Server]
 ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 6993a36f0c1c67ffcfbb9897bcd36354088c8c5c
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

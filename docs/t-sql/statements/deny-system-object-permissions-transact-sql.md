@@ -8,24 +8,26 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DENY statement, system objects
 - encryption [SQL Server], system objects
 - system objects [SQL Server]
 - cryptography [SQL Server], system objects
 ms.assetid: 4e43f954-0982-470b-a239-08a13c61563a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8d584aa3c7329b8f81e445f612e7041cd14e0747
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

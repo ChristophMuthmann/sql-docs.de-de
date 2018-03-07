@@ -8,24 +8,26 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - endpoints [SQL Server], permissions
 - DENY statement, endpoints
 - denying permissions [SQL Server], endpoints
 - permissions [SQL Server], endpoints
 ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 93f438a2d3d546c6cb15672b5b617b4e35cee9a3
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

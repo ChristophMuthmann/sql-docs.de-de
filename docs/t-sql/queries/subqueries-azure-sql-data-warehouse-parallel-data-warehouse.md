@@ -8,18 +8,19 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5b30ff820d9a9003a1832c8b4226adf20072fceb
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

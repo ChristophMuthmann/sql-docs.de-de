@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STCentroid_TSQL
 - STCentroid (geometry Data Type)
-dev_langs: TSQL
-helpviewer_keywords: STCentroid (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STCentroid (geometry Data Type)
 ms.assetid: 4dc5a004-7a53-4cce-81dd-9f5e1dd0db78
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7b818474bff0f7f233eb3ee06ba1b2a8dfb8c567
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

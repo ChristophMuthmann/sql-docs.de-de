@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - AsBinaryZM
 - AsBinaryZM_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - AsBinaryZM, geography
 - AsBinaryZM
 ms.assetid: 37246adb-814d-4113-9983-4d336de8182c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 99981d95095b97dd599787578f891a39e60098ac
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

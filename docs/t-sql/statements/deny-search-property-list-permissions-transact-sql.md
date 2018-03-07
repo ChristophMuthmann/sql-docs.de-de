@@ -8,24 +8,26 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - full-text search [SQL Server], permissions
 - DENY statement, search property list permissions
 - denying permissions [SQL Server], search property lists
 - search property lists [SQL Server], permissions
 ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7c48a5b2b82fd052d6a854eb8b0496b0c730644a
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

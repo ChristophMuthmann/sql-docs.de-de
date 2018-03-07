@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STUFF
 - STUFF_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - deleting characters
 - STUFF function
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - characters [SQL Server], replacing
 - inserting data
 ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 10edb8b1b1e3008321bc03e2e65419dca8956f86
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/18/2018
 ---

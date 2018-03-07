@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - ROWCOUNT_TSQL
 - SET ROWCOUNT
 - ROWCOUNT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - row return limitations [SQL Server]
 - SET ROWCOUNT statement
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - limiting rows returned
 - queries [SQL Server], stopping
 ms.assetid: c6966fb7-6421-47ef-98f3-82351f2f6bdc
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 1e27fcb521763eb38d7aec4a89d8a9e13d7e520f
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,21 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: ToString (geometry Data Type)
-dev_langs: TSQL
-helpviewer_keywords: ToString (geometry Data Type)
+f1_keywords:
+- ToString (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- ToString (geometry Data Type)
 ms.assetid: 2e55fa98-aa22-4baa-a516-7c233a33e212
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 614ecad2f669fed40ac5fd7ca30b994bedb0ac6e
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

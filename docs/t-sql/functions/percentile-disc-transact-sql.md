@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - PERCENTILE_DISC
 - PERCENTILE_DISC_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PERCENTILE_DISC function
 - analytic functions,PERCENTILE_DISC
 ms.assetid: b545413d-c4f7-4c8e-8617-607599a26680
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: a1e7ebdd2303108fbf63578a288d95eb2f3f7fe4
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

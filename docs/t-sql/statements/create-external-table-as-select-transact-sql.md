@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,14 +22,14 @@ helpviewer_keywords:
 - External, table create as select
 - PolyBase, create table as select
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: f2ca379cf30fe2e7d359a294a18804f0b5e6faeb
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - expressions [SQL Server], testing
 - operators [Transact-SQL], comparison
@@ -21,14 +23,14 @@ helpviewer_keywords:
 - comparing expressions
 - comparison operators [SQL Server]
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: cd8dcf23064d6caae62d10065c9aa3731823e99b
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

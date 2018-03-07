@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,20 +19,21 @@ f1_keywords:
 - NOTIFICATION
 - CREATE EVENT NOTIFICATION
 - EVENT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CREATE EVENT NOTIFICATION statement
 - events [SQL Server], notifications
 - event notifications [SQL Server], creating
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: e171027878b85c0df5ce25756f2a223675d21feb
 ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/02/2018
 ---

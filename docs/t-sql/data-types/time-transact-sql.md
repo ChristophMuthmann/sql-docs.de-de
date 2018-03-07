@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - time_TSQL
 - time
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - time [SQL Server], data types
 - time [SQL Server]
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - time data type [SQL Server]
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 4a5a46eee481e9da3f388f88e982d705dbe150ea
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

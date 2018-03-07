@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-json
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - JSON, extracting
 - JSON, querying
 ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: ab4c14769dc51c6d5b97a6ad2fe6f0cb06fad4e0
 ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/28/2017
 ---

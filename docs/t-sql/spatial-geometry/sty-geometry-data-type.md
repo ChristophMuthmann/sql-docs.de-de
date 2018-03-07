@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STY_TSQL
 - STY (geometry Data Type)
-dev_langs: TSQL
-helpviewer_keywords: STY (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STY (geometry Data Type)
 ms.assetid: f72e0eaa-7d1d-4052-88fd-a172d8cb0d71
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 372455a5c5a989cc5451fe3d99b7ef95dc263fe8
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

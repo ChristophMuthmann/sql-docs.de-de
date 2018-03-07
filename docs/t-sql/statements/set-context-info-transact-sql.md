@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SET_CONTEXT_INFO_TSQL
 - SET CONTEXT_INFO
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - context information [SQL Server]
 - CONTEXT_INFO option
 - SET CONTEXT_INFO statement
 ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 4a93e9f40690f37c0c161c635aea95589d47ef1e
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

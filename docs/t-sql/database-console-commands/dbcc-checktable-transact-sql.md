@@ -8,7 +8,8 @@ ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC_CHECKTABLE_TSQL
 - DBCC CHECKTABLE
 - CHECKTABLE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - indexed views [SQL Server], DBCC CHECKTABLE
 - page integrity checks [SQL Server]
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - low overhead checks
 - table integrity checks [SQL Server]
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
-caps.latest.revision: "89"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 495a31fc5f95cd5e3a81e5c14dd6dc469de66d6a
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

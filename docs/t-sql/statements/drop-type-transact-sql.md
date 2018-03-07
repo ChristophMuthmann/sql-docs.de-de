@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP TYPE
 - DROP_TYPE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - user-defined types [SQL Server], deleting
 - UDTs [SQL Server], deleting
 - alias data types [SQL Server], removing
 - DROP TYPE statement
 ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: f19e21b60429d04e4af8c615db79302519e5a507
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DECLARE
 - DECLARE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - table-valued parameters
 - variables [SQL Server], declaring
 - DECLARE statement
 - declaring variables
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
-caps.latest.revision: "76"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 6e56a4895dc5ec1ba03489ffc60e9f9e7b441d18
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - ANSI_PADDING
 - SET_ANSI_PADDING_TSQL
 - SET ANSI_PADDING
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data types [SQL Server], short values
 - ANSI_PADDING option
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - SET ANSI_PADDING statement
 - trailing blanks
 ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 532df95a03b15d545c682d30b3b4d68e10ea5913
 ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2017
 ---

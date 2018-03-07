@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STATS_DATE_TSQL
 - STATS_DATE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - statistical information [SQL Server], last time updated
 - STATS_DATE function
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - last time statistics updated
 - stats update date
 ms.assetid: f9ec3101-1e41-489d-b519-496a0d6089fb
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: de308046d069b6efa6115cf1efae33af7c07128c
 ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/02/2018
 ---

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,20 @@ f1_keywords:
 - TRACEON
 - DBCC TRACEON
 - TRACEON_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DBCC TRACEON statement
 - trace flags [SQL Server], enabling
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 8c173779833562123c9ba3820fef76bf23b80a43
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

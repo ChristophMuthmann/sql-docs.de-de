@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DATABASEPROPERTYEX
 - DATABASEPROPERTYEX_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DATABASEPROPERTYEX function
 - displaying database properties
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-caps.latest.revision: "84"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: a67b74ad595fdf7b6f3a63dbd2ea2c9e5793f54f
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

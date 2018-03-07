@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STPointFromWKB (geometry Data Type)
 - STPointFromWKB_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STPointFromWKB (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STPointFromWKB (geometry Data Type)
 ms.assetid: 1157c172-2dc7-4393-bae6-b85406171a34
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: cbc2b0ece517930a19c6d99aa1220b2294aaf77d
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

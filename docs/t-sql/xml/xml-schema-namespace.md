@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - xml_schema_namespace_TSQL
 - xml_schema_namespace
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - XML schema collections [SQL Server], reconstructing schemas
 - xml_schema_namespace function
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - schemas [SQL Server], XML
 - schema collections [SQL Server], reconstructing schemas
 ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 19f4701bc26e115c7f6b78d01feef876665763df
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

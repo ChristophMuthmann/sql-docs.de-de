@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - Reduce_TSQL
 - Reduce
-dev_langs: TSQL
-helpviewer_keywords: Reduce method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Reduce method
 ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a4ac2e0f44ee4d6361f0f91c47f4472de7c23756
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

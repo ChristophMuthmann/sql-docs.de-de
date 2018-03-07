@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP DATABASE ENCRYPTION KEY
 - DROP_DATABASE_ENCRYPTION_KEY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - database encryption key, drop
 - DROP DATABASE ENCRYPTION KEY statement
 ms.assetid: 9231bd89-75e1-45c4-b4c8-13f08695af68
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: ff97d0217b7d172c66cd47cb2f33d8920ff86ef6
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

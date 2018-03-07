@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - MakeValid
 - MakeValid_TSQL
-dev_langs: TSQL
-helpviewer_keywords: MakeValid (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MakeValid (geometry Data Type)
 ms.assetid: 38673010-ab77-4ebb-9c4d-b26b79e3b7ea
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 0694b49b23d87d30e7134c822de295ec5b840544
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

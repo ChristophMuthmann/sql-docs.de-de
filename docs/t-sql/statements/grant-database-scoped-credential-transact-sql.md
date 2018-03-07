@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - GRANT DATABASE SCOPED CREDENTIAL
 - GRANT_DATABASE_SCOPED_CREDENTIAL_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - granting permissions [SQL Server], database scoped credential
 - permissions [SQL Server], database scoped credential
 - database scoped credential [SQL Server], permissions
 - GRANT statement, database scoped credentials
 ms.assetid: 501f2c8a-6aeb-41af-bf0b-974d17af33c0
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 6dbd261334e580904e9c6ad3b12ff761d8c909ab
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

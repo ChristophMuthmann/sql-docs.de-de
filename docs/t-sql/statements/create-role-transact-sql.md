@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,21 +21,22 @@ f1_keywords:
 - CREATE DATABASE ROLE
 - ROLE
 - CREATE_DATABASE_ROLE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - database roles [SQL Server], creating
 - CREATE DATABASE ROLE statement
 - roles [SQL Server], creating
 - CREATE ROLE statement
 ms.assetid: b0cd54ad-e81d-4d71-acec-8a6d7261ca08
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: cccfc9f6f9810d8f674ea32858e08683160b2ef1
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

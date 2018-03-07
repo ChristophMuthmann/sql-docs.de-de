@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,20 +17,21 @@ f1_keywords:
 - FMTONLY
 - SET FMTONLY
 - SET_FMTONLY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - metadata [SQL Server], only metadata returned
 - SET FMTONLY statement
 - FMTONLY option
 ms.assetid: 02a1d9ac-2e58-433c-9a07-2c5a4a2214e1
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 38625e3079956032513bb0e26c5d37b9a7071fea
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

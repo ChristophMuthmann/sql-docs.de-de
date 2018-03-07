@@ -8,24 +8,26 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ODBC function calls
 - keywords [SQL Server], reserved
 - reserved words [SQL Server]
 - keywords [SQL Server]
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 65ef776b119b40bbeb4bbdddcfe0a4a99379a833
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

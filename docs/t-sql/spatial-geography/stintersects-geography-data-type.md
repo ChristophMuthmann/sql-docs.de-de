@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STIntersects (geography Data Type)
 - STIntersects_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STIntersects method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STIntersects method
 ms.assetid: c9db8b42-83c7-48c6-8963-fce54eb34c05
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 6acb41e5fe2d391c226bba97e10b977c6ba99940
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

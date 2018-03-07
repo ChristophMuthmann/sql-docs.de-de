@@ -8,19 +8,21 @@ ms.service:
 ms.component: t-sql
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 53bfe761519a6c497f384b7f2541b88c18df70a6
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - POWER_TSQL
 - POWER
-dev_langs: TSQL
-helpviewer_keywords: POWER function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- POWER function
 ms.assetid: 0fd34494-90b9-4559-8011-a8c1b9f40239
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 749be659f84e6f2bad04863477bbcd5923e8a216
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

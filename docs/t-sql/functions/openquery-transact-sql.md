@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OPENQUERY_TSQL
 - OPENQUERY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DELETE statement [SQL Server], OPENQUERY function
 - OPENQUERY function
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - pass-through queries [SQL Server]
 - INSERT statement [SQL Server], OPENQUERY function
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 5b302ea6346c33431d87e1923156253411170ea5
 ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/02/2018
 ---

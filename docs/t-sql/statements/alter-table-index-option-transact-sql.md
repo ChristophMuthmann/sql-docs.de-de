@@ -8,20 +8,23 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: index_option
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- index_option
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
-caps.latest.revision: "68"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 646b46501abd345a35c0e90547391e5181105a00
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

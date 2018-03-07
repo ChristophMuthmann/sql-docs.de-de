@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER PARTITION SCHEME
 - ALTER_PARTITION_SCHEME_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ALTER PARTITION SCHEME statement
 - partition schemes [SQL Server], modifying
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - adding filegroups
 - NEXT USED filegroups
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: f339a83559e565d5046c721657becd6cf6a5940d
 ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/07/2017
 ---

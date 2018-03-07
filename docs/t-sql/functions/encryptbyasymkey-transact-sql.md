@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ENCRYPTBYASYMKEY
 - ENCRYPTBYASYMKEY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ENCRYPTBYASYMKEY function
 - encryption [SQL Server], asymmetric keys
 - asymmetric keys [SQL Server], ENCRYPTBYASYMKEY function
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 6ef212d976ca8f84881695d85e56f5ab1cbca020
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - CREATE SPATIAL INDEX
 - CREATE_SPATIAL_INDEX_TSQL
 - SPATIAL_INDEX_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - spatial indexes [SQL Server], creating
 - index creation [SQL Server], spatial indexes
 - CREATE SPATIAL INDEX statement
 - CREATE INDEX statement
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
-caps.latest.revision: "89"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 301896001cb79b9065436ecff044fdce92e7d576
 ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/22/2017
 ---

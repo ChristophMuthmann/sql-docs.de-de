@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - BEGIN TRANSACTION
 - BEGIN TRAN
 - BEGIN_TRAN_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - transaction logs [SQL Server], BEGIN TRANSACTION statement
 - marked transactions [SQL Server], BEGIN TRANSACTION statement
@@ -30,14 +32,14 @@ helpviewer_keywords:
 - starting point marked for transactions
 - starting transactions
 ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 260399c0964afeeafc0f8a221de13169ef277496
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

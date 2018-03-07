@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -25,7 +26,8 @@ f1_keywords:
 - NOLOCK_TSQL
 - MAXDOP_TSQL
 - USE_HINT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - REPORT PLAN query hint
 - FORCE ORDER query hint
@@ -55,14 +57,14 @@ helpviewer_keywords:
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: "136"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 0a3c74aa7b1da86c6d0ac54025d337700019465d
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

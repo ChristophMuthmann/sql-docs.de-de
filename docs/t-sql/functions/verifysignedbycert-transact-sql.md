@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - VERIFYSIGNEDBYCERT
 - VERIFYSIGNEDBYCERT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - digitally signed data for changes [SQL Server]
 - verifying digitally signed data for changes
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - signatures [SQL Server]
 - digital signatures [SQL Server]
 ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 6267b5ca34c3e69af9611c2cdb4a607a7d539f00
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

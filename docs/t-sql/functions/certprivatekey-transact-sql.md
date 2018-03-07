@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CERTPRIVATEKEY
 - CERTPRIVATEKEY_TSQL
-dev_langs: TSQL
-helpviewer_keywords: CERTPRIVATEKEY
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CERTPRIVATEKEY
 ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: df513e6ce63ff49e31ad05e5a4dca0372de69c83
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

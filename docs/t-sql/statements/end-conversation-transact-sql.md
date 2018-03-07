@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - END CONVERSATION
 - END_DIALOG_TSQL
 - END_CONVERSATION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - errors [Service Broker], conversations
 - dialogs [Service Broker], ending
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - conversations [Service Broker], ending
 - ending conversations [SQL Server]
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: d68dcecf84cb24b0c06876d40742c8f5ffe8124d
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - Read_TSQL
 - Read
-dev_langs: TSQL
-helpviewer_keywords: Read [Database Engine]
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Read [Database Engine]
 ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 72ebda7a9bd00b44983d29db2ef433c9f7d43f94
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RESTORE_REWINDONLY_TSQL
 - RESTORE REWINDONLY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - closing backup devices
 - backup devices [SQL Server], rewinding
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - rewinding backup devices
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: bf67d54e58f08296878c0781158e7b878b0b2a49
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

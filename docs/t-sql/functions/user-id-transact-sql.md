@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - USER_ID
 - USER_ID_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - USER_ID function
 - identification numbers [SQL Server]
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - database IDs [SQL Server]
 - identification numbers [SQL Server], databases
 ms.assetid: 67fd29bc-eda9-4d4d-b148-5d3659181a43
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c8c8e07d6d58b6615ff5e4528556bf08e0b72c13
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

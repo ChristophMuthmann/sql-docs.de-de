@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP_EVENT_SESSION_TSQL
 - DROP EVENT SESSION
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - event sessions [SQL Server]
 - DROP EVENT SESSION statement
 ms.assetid: 92eabe4b-24e2-43b1-978c-31a199964b90
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: eae376013e7522036fab53ea1eb7745cd19b6c7a
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CONNECTIONPROPERTY_TSQL
 - CONNECTIONPROPERTY
-dev_langs: TSQL
-helpviewer_keywords: CONNECTIONPROPERTY statement
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CONNECTIONPROPERTY statement
 ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9ab513c11d86ca5d7496ad1fca2ff7527d69bba6
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

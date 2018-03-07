@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - Key_ID
 - Key_ID_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - identification numbers [SQL Server], symmetric keys
 - KEY_ID function
 - symmetric keys [SQL Server], IDs
 - IDs [SQL Server], symmetric keys
 ms.assetid: d7309542-dbbe-41dc-b42e-5d9a1c8b4838
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: fb01508366558f7d5f755db50efb4a5a5b0d937d
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

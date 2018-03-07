@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - M (geography Data Type)
 - M_TSQL
-dev_langs: TSQL
-helpviewer_keywords: M method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- M method
 ms.assetid: cdba04f0-4e17-48f6-bafb-b1f918c5a501
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5db0fc032ce961d7c7b45f2a7542c6afb7747284
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

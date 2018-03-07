@@ -8,24 +8,26 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - operators [Transact-SQL], precedence
 - operator precedence [Transact-SQL]
 - order of operator execution [Transact-SQL]
 - precedence [SQL Server], operators
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c9de4447c5918edbc33ec67c783272f724883e81
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

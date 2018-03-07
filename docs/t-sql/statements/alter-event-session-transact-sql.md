@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER EVENT SESSION
 - ALTER_EVENT_SESSION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - event sessions [SQL Server]
 - extended events [SQL Server], Transact-SQL
 - ALTER EVENT SESSION statement
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 593be40520403888b5ad2584515820f1935bb270
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

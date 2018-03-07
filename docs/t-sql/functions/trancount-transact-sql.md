@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@TRANCOUNT_TSQL'
 - '@@TRANCOUNT'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - '@@TRANCOUNT function'
 - number of active transactions
 - connections [SQL Server], active transactions
 - active transactions
 ms.assetid: b2638410-e410-4bd0-9b54-90096182b2b6
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: d9b10f8a7a8f14745765f611bc9ae33f36e7ff0a
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

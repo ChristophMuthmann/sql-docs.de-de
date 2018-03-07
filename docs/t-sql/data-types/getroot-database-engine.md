@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - GetRoot
 - GetRoot_TSQL
-dev_langs: TSQL
-helpviewer_keywords: GetRoot [Database Engine]
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- GetRoot [Database Engine]
 ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 643eb8274a47220a1dd8c6cc76f822c18dbcf849
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

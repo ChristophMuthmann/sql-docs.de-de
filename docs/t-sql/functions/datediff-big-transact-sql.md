@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -22,14 +23,14 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 6c8228f0db3e37fe3bf6425d60fd4f9067e92220
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

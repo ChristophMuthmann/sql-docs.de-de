@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC_CHECKFILEGROUP_TSQL
 - DBCC CHECKFILEGROUP
 - CHECKFILEGROUP
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DBCC CHECKFILEGROUP statement
 - database objects [SQL Server], checking
@@ -26,14 +28,14 @@ helpviewer_keywords:
 - table integrity checks [SQL Server]
 - checking database objects
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: fc36aa0cfddcceefda1aefc6f4e7dc040f9a4b5f
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

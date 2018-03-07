@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CHECKSUM_TSQL
 - CHECKSUM
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - hash indexes
 - CHECKSUM function
 - checksum values
 ms.assetid: e26d3339-845c-49c2-9d89-243376874c13
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: d41736f6ac216de0ecf755cbf7ca73ba34a697b8
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

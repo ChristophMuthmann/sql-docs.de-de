@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FILE_NAME_TSQL
 - FILE_NAME
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - viewing file names
 - file names [SQL Server], FILE_NAME
@@ -26,13 +28,13 @@ helpviewer_keywords:
 - FILE_NAME function
 - logical file names [SQL Server]
 ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 35b7f2b516227e00af629cadb5c1dccadad2b092
 ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/02/2018
 ---

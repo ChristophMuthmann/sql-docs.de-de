@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - LEAD_TSQL
 - LEAD
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - LEAD function
 - analytic functions, LEAD
 ms.assetid: 21f66bbf-d1ea-4f75-a3c4-20dc7fc1c69e
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: b736272f07e8767840076fc69cbd5ac3d86d377d
 ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/02/2018
 ---

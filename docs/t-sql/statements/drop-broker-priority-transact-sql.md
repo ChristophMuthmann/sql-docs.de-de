@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP_BROKER_PRIORITY_TSQL
 - DROP BROKER PRIORITY
-dev_langs: TSQL
-helpviewer_keywords: DROP BROKER PRIORITY statement
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- DROP BROKER PRIORITY statement
 ms.assetid: 09ee6c5b-af94-4a4b-a0e2-f9eac50e43aa
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f21953a8d36499d97bf229720bb8faf8ea678087
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

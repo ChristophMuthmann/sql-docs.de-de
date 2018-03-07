@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ROW_NUMBER
 - ROW_NUMBER_TSQL
 - ROW_NUMBER()_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ROW_NUMBER function
 - row numbers [SQL Server]
 - sequential row numbers [SQL Server]
 ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 6ddb3472f19ce2fda8bc368cd07f7ea602d74a02
 ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/02/2018
 ---

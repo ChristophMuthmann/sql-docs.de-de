@@ -8,23 +8,25 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - REVOKE statement, XML schema collections
 - XML schema collections [SQL Server], permissions
 - schema collections [SQL Server], permissions
 ms.assetid: 8ca0973c-30b2-4633-a165-c09b13cc81ae
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7a8ffbc542c9a9490f497ff590f6bcf995979ed4
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

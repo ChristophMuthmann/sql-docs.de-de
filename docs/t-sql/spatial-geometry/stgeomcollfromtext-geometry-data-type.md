@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STGeomCollFromText_TSQL
 - STGeomCollFromText (geometry Data Type)
-dev_langs: TSQL
-helpviewer_keywords: STGeomCollFromText (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STGeomCollFromText (geometry Data Type)
 ms.assetid: 19e757b3-cb2e-4852-87b9-40a815ab707e
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 934e50a3cba2b291590d2247f4c5a9992add8d5c
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

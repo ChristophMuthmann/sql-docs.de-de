@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - SET_IDENTITY_INSERT_TSQL
 - IDENTITY_INSERT_TSQL
 - IDENTITY_INSERT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - IDENTITY_INSERT option
 - SET IDENTITY_INSERT statement
 - identity values [SQL Server], explicit values
 - identity columns [SQL Server], explicit values
 ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: fb788c885cee9f082c18ebd315d05a4a961e88b3
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

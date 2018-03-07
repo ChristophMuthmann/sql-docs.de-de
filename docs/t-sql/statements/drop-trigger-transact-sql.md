@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP TRIGGER
 - DROP_TRIGGER_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - renaming triggers
 - triggers [SQL Server], removing
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - removing triggers
 - DML triggers, removing
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 98f871f47674aeb4c5c3d2b0f55a3e7f8aebb4d7
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OBJECT_NAME
 - OBJECT_NAME_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - OBJECT_NAME function
 - viewing database object names
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - database objects [SQL Server]
 - names [SQL Server], database objects
 ms.assetid: 7d5b923f-0c3e-4af9-b39b-132807a6d5b3
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 0e6f583fb5fa20c8686343ee4d87e9f4b369183c
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

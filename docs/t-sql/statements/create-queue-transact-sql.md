@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CREATE QUEUE
 - QUEUE
 - CREATE_QUEUE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CREATE QUEUE statement
 - internal activation [Service Broker]
@@ -26,14 +28,14 @@ helpviewer_keywords:
 - activation stored procedures [Service Broker]
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
-caps.latest.revision: "67"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7bd20267a78f9a0fcaf2d854b6e94553b7c80167
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

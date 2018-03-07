@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - functions [SQL Server], security
 - security functions
@@ -19,14 +21,14 @@ helpviewer_keywords:
 - users [SQL Server], security functions
 - security [SQL Server], functions
 ms.assetid: 7773a87d-2f1b-4951-a225-baf159a7291b
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: f7539b13d9f1c6a39aa2273ad75f5a25a78b5c2b
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP CREDENTIAL
 - DROP_CREDENTIAL_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - removing credentials
 - DROP CREDENTIAL statement
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - deleting credentials
 - dropping credentials
 ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 376d04088502467e0638790ec43ffe6f535c47f0
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

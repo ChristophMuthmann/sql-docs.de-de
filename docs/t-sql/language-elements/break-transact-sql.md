@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - BREAK
 - BREAK_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - exiting innermost loop [SQL Server]
 - END keyword
 - ignored statements
 - BREAK keyword
 ms.assetid: 67c30b8d-3f15-41ad-b9a9-a4ced3b2af9f
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 9fe4eb7310113a124bee8e1a0f9c4cad3ac45b12
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

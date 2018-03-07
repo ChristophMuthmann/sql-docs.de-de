@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SET
 - SET_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ISO SET statements
 - queries [SQL Server], executing
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - statistical information [SQL Server], SET statements
 - locking [SQL Server], SET statements
 ms.assetid: f7e107f8-0fcf-408b-b30f-da2323eeb714
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 3832a2be6952354122c999d3c88c7ad1610b623d
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

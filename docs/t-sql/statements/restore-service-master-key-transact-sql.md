@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - RESTORE_SERVICE_MASTER_KEY_TSQL
 - LOAD SERVICE MASTER KEY
 - LOAD_SERVICE_MASTER_KEY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - importing Service Master Keys
 - copying Service Master Keys
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - RESTORE SERVICE MASTER KEY statement
 - transferring Service Master Keys
 ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f88ab43c6e452bbbb3b6cfa32e858ee1f091e366
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

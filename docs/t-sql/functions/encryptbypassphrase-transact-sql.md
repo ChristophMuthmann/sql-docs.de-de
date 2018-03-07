@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ENCRYPTBYPASSPHRASE
 - ENCRYPTBYPASSPHRASE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ENCRYPTBYPASSPHRASE function
 - encryption [SQL Server], symmetric keys
 - symmetric keys [SQL Server], ENCRYPTBYPASSPHRASE function
 ms.assetid: f8dbb9e6-94d6-40d7-8b38-6833a409d597
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 0fa00253d9f707e844baca9dc1baa807533ba2ed
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

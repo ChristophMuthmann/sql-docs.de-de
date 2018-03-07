@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,17 +17,19 @@ f1_keywords:
 - ALTER DATABASE AUDIT SPECIFICATION
 - ALTER_DATABASE_AUDIT_TSQL
 - ALTER DATABASE AUDIT
-dev_langs: TSQL
-helpviewer_keywords: ALTER DATABASE AUDIT SPECIFICATION statement
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- ALTER DATABASE AUDIT SPECIFICATION statement
 ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 1fc9148b05ca5b7b77d149e19e937502450ea0d3
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

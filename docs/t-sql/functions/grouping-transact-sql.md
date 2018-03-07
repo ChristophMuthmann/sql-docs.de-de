@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - GROUPING
 - GROUPING_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - null values [SQL Server], GROUPING function
 - grouping columns
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - GROUPING function
 - CUBE operator
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: cb9c9e7f4e5fe4a82c6f7a451614fde82e730e08
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

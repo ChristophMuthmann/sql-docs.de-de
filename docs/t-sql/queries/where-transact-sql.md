@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - WHERE_TSQL
 - WHERE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - retrieving rows
 - clauses [SQL Server], WHERE
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - row retrieval [SQL Server], WHERE clause
 - WHERE clause
 ms.assetid: a8430421-7bce-4fab-a2d2-56c00a3c6fa4
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: c91187d506ab994c654159da24ff0904b0b8b96a
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC SHOW_STATISTICS
 - SHOW_STATISTICS
 - DBCC_SHOW_STATISTICS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - query optimization statistics [SQL Server], densities
 - histograms [SQL Server]
@@ -33,14 +35,14 @@ helpviewer_keywords:
 - densities [SQL Server]
 - displaying distribution statistics
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
-caps.latest.revision: "75"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 66f00526254a3592c3bb980ecf22c390b88cb687
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

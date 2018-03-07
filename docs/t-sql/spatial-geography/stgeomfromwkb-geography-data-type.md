@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STGeomFromWKB_TSQL
 - STGeomFromWKB (geography Data Type)
-dev_langs: TSQL
-helpviewer_keywords: STGeomFromWKB method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STGeomFromWKB method
 ms.assetid: 79d39d88-5440-49a7-9247-190eafce3f4f
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9f04ae71af072f1fac08141da284a463baaff27c
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

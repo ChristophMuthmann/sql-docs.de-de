@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SYSDATETIME_TSQL
 - SYSDATETIME
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - date and time [SQL Server], SYSDATETIME
@@ -29,14 +31,14 @@ helpviewer_keywords:
 - dates [SQL Server], system date and time
 - time [SQL Server], system
 ms.assetid: cba4999e-a9d4-4742-abc9-4a4f109206b6
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 4e0f33419d2ea3986ebeab02399066cb8efa6487
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

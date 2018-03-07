@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SUM
 - SUM_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - values [SQL Server], sum of all
 - SUM function [Transact-SQL]
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - totals [SQL Server], SUM
 - summary values [SQL Server]
 ms.assetid: 9af94d0f-55d4-428f-a840-ec530160f379
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 017a85b8fbf69715045a0d784fe85b689b99260d
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

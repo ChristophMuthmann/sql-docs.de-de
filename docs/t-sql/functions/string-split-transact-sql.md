@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STRING_SPLIT
 - STRING_SPLIT_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STRING_SPLIT function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STRING_SPLIT function
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 00debf90f1b79a0e38cb883f31479ae5731f40d3
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/18/2018
 ---

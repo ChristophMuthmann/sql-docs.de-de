@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@LANGID'
 - '@@LANGID_TSQL'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - languages [SQL Server], current in use
 - '@@LANGID function'
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - ID for language in use
 - local language IDs [SQL Server]
 ms.assetid: 7a0fc089-2a48-4a81-9d78-2aaedb540d37
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c356a305f7e8cd6aea41f97b0ff9d61171a58c91
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

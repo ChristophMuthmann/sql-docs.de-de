@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - TAN_TSQL
 - TAN
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - TAN function
 - tangent
 ms.assetid: f679fa6a-5739-484b-9450-fb3400d4f30c
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ed751407c2274d7c9152fd7a4354acc61e613935
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

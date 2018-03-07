@@ -8,21 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: IsNull (geography Data Type)
-dev_langs: TSQL
-helpviewer_keywords: IsNull method
+f1_keywords:
+- IsNull (geography Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- IsNull method
 ms.assetid: c031074f-bfda-4584-a3bf-4e7c324f237f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c07ddb41209c507845da7e790035ab54ed1044f1
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

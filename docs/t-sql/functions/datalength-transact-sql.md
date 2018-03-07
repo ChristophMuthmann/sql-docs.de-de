@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DATALENGTH_TSQL
 - DATALENGTH
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - number of bytes representing expression
 - data types [SQL Server], length
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - expressions [SQL Server], length
 - lengths [SQL Server], data
 ms.assetid: 00f377f1-cc3e-4eac-be47-b3e3f80267c9
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 9d9b60d82ad4a711ed7cf67a015491b6ebafa264
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

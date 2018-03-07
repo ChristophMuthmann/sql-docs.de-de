@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ROUND_TSQL
 - ROUND
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - rounding expressions
 - ROUND function [Transact-SQL]
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 9dbfe719e4216e778a28f1a9afb8a1995c09acb1
 ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/15/2017
 ---

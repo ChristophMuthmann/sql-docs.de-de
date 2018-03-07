@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - MinDbCompatibilityLevel
 - MinDbCompatibilityLevel_TSQL
-dev_langs: TSQL
-helpviewer_keywords: MinDbCompatibilityLevel method (geography)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- MinDbCompatibilityLevel method (geography)
 ms.assetid: a9e44748-4a9e-4179-abc4-7631597be5a7
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 76ee741885646f8df0a84f93bb41f0de0f027e79
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

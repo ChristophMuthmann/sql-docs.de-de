@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - PRINT_TSQL
 - PRINT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PRINT statement
 - user-defined messages [SQL Server]
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - viewing user-defined messages
 - conditionally returning messages [SQL Server]
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 9f78f85fc8697062c628a22736a7ae0d31d53792
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

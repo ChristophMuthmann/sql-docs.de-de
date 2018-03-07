@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CURRENT_TIMESTAMP
 - CURRENT_TIMESTAMP_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - niladic functions
@@ -31,14 +33,14 @@ helpviewer_keywords:
 - CURRENT_TIMESTAMP function [SQL Server]
 - time [SQL Server], system
 ms.assetid: c724d9cc-7b1f-4c71-bdf5-08bc52b33afc
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 5248e50bbcfeef5b57b220899f85800af98f9877
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

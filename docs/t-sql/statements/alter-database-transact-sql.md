@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_DATABASE_TSQL
 - ALTER DATABASE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - databases [SQL Server], modifying
 - ALTER DATABASE statement
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - collations [SQL Server], modifying
 - database mirroring [SQL Server], Transact-SQL
 ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
-caps.latest.revision: "282"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: b8e96cad90ff94b1f4e8f110d13b87668809606f
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

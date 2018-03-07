@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,20 +17,21 @@ f1_keywords:
 - DBCC_PROCCACHE_TSQL
 - PROCCACHE_TSQL
 - PROCCACHE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - procedure cache [SQL Server]
 - displaying procedure cache information
 - DBCC PROCCACHE statement
 ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 27a247f0900ad39ef77d96a54d68c795dc8f6f07
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

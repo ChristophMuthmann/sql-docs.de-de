@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP SERVER ROLE
 - DROP_SERVER_ROLE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SERVER ROLE, DROP
 - DROP SERVER ROLE statement
 ms.assetid: a2a1e6e6-e40c-4d6a-81be-d197b80bf226
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f76deca0b9f6247a004bfac6e6dfe9c995e896ed
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

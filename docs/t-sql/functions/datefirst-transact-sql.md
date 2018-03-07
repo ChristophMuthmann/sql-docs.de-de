@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DATE FORMAT
 - '@@DATEFIRST_TSQL'
 - '@@DATEFIRST'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - date and time [SQL Server], SET DATEFIRST
@@ -32,14 +34,14 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - options [SQL Server], date
 ms.assetid: a178868e-49d5-4bd5-a5e2-1283409c8ce6
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: fc8cff9f51841d085314f8100550aa35a80a4463
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

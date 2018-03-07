@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CONTINUE_TSQL
 - CONTINUE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - restarting WHILE loop
 - CONTINUE keyword
 - WHILE keyword
 ms.assetid: 0f1def4e-b0ca-4175-ad58-7c8c9153dab7
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: bb6163c2c72acc54bd632dce9296fefd113d0ef8
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

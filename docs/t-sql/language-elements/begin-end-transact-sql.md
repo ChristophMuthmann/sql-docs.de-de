@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - BEGIN
 - BEGIN_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - enclosing statements [SQL Server]
 - BEGIN statement
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - executing Transact-SQL statements together [SQL Server]
 - statements [SQL Server], grouping
 ms.assetid: fc2c7f76-f1f9-4f91-beef-bc8ef0da2feb
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 7b14d9586895a2bdf713314f8ed18f28175b6b46
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

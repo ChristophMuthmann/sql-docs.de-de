@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,17 +17,19 @@ f1_keywords:
 - DROP_COLUMN_MASTER_KEY_TSQL
 - DROP COLUMN MASTER
 - DROP_COLUMN_MASTER_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.column_master_keys catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.column_master_keys catalog view
 ms.assetid: fd5e77c8-a3ae-4795-bb46-b322c0500041
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 207fd618b0381f69a74bee00bf92b7df248b8aed
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

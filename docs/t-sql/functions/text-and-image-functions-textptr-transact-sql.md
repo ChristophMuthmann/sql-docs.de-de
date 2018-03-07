@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - TEXTPTR_TSQL
 - TEXTPTR
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - TEXTPTR function
 - viewing text pointer values
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 109f9bdd06bf27928450c89ad06dc6d93247b881
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

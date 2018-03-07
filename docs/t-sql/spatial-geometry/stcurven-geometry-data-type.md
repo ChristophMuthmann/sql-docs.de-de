@@ -8,20 +8,23 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: STCurveN method (geometry)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STCurveN method (geometry)
 ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 496934186af543eb5a7263245c90ce7309112d10
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

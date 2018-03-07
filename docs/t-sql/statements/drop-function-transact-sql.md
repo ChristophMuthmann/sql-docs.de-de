@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP_FUNCTION_TSQL
 - DROP FUNCTION
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - user-defined functions [SQL Server], removing
 - removing user-defined functions
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - dropping user-defined functions
 - deleting user-defined functions
 ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c0768b2a24a939bc2e646fb4cc7173762eae7679
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

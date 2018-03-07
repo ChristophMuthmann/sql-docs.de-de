@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - PWDENCRYPT
 - PWDENCRYPT_TSQL
-dev_langs: TSQL
-helpviewer_keywords: PWDENCRYPT function [Transact-SQL]
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- PWDENCRYPT function [Transact-SQL]
 ms.assetid: 333e9a43-1099-4b9b-b941-4b0b016f47f3
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 06b080d784d9a8737c1fe524e6634517ca0c97f5
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

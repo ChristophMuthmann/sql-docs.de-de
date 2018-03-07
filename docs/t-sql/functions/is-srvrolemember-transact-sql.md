@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - IS_SRVROLEMEMBER_TSQL
 - IS_SRVROLEMEMBER
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - roles [SQL Server], members
 - IS_SRVROLEMEMBER function
 - members [SQL Server], verifying
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 342eadd8e537611cc292c95ebfa41b98c222c920
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

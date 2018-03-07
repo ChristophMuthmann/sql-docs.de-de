@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CREATE ENDPOINT
 - ENDPOINT_TSQL
 - CREATE_ENDPOINT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - database mirroring [SQL Server], endpoint
 - HTTP SOAP support [SQL Server]
@@ -32,14 +34,14 @@ helpviewer_keywords:
 - SERVICE_BROKER option
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
-caps.latest.revision: "135"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c1d87ac5214da9a3458cdffd41bdd457a433afab
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

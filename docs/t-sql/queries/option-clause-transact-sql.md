@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,20 @@ f1_keywords:
 - OPTION_TSQL
 - OPTION
 - OPTION_clause_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - clauses [SQL Server], OPTION
 - OPTION clause
 ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: cf74a87408ca73229636f3e4ad341838c861bc43
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

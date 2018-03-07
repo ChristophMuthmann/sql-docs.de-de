@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - operators [Transact-SQL], logical
 - testing truth
@@ -20,14 +22,14 @@ helpviewer_keywords:
 - FALSE
 - logical operators [SQL Server], Transact-SQL
 ms.assetid: edd92f08-76fb-4fd7-a4b6-8520d6a81df1
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 1c012e6105f4cbdbb12659c840ebe3c1da6156e2
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

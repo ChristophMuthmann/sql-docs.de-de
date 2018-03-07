@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP_INDEX_TSQL
 - DROP INDEX
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - nonclustered indexes [SQL Server], removing
 - MAXDOP index option, DROP INDEX statement
@@ -32,14 +34,14 @@ helpviewer_keywords:
 - XML indexes [SQL Server], dropping
 - DROP INDEX statement
 ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
-caps.latest.revision: "99"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 821782102f7c9c6014c3ec46c5e9f9223eca98a0
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

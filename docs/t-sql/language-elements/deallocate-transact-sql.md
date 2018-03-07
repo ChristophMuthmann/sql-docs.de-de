@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DEALLOCATE
 - DEALLOCATE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - locking [SQL Server], cursors
 - DEALLOCATE statement
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - deleting cursor references
 - removing cursor references
 ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: fb05fdd9da2f4f724976092bf027f5dde5edd412
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

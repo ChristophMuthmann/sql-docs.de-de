@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OPEN SYMMETRIC KEY
 - OPEN_SYMMETRIC_KEY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - symmetric keys [SQL Server], opening
 - OPEN SYMMETRIC KEY statement
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 64ae9cd8f03e31959d433377af368b675f5eeb63
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

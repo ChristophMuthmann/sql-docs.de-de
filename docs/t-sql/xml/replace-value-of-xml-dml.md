@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - XML DML [SQL Server]
 - update keyword
@@ -19,14 +21,14 @@ helpviewer_keywords:
 - updating node values
 - replace value of XML DML statement
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 236e919d1817e100c043e29de94c25442aac776f
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

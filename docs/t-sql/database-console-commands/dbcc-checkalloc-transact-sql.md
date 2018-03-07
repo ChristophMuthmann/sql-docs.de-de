@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC CHECKALLOC
 - DBCC_CHECKALLOC_TSQL
 - CHECKALLOC
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DBCC CHECKALLOC statement
 - checking database space allocation
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - disk space [SQL Server], allocation consistency checks
 - space allocation [SQL Server], checking
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
-caps.latest.revision: "76"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 69a22a7e7b3859ba2232fe7c60f5b0b885af8b17
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

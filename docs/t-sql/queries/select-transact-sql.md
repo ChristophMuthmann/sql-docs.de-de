@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT_TSQL
 - SELECT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - retrieving rows
 - SELECT statement [SQL Server]
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - row retrieval [SQL Server]
 - queries [SQL Server], results
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: b8cca7419cce15dcbb83b4aa72dc551e5eb89eb1
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

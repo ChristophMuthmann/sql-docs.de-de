@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - SET_NOEXEC_TSQL
 - SET NOEXEC
 - NOEXEC
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - queries [SQL Server], compiling
 - SET NOEXEC statement
 - compiling queries [SQL Server]
 - NOEXEC option
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: cf9d59e47fd7d8ebcfe9782ef7469e6348076f9f
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

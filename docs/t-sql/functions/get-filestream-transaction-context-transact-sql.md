@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - GET_FILESTREAM_TRANSACTION_CONTEXT_TSQL
 - GET_FILESTREAM_TRANSACTION_CONTEXT
-dev_langs: TSQL
-helpviewer_keywords: GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 1bab9267495b6e5f41507bf058f84ca571f9728e
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

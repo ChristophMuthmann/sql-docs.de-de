@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - EXCEPT_TSQL
 - INTERSECT
 - EXCEPT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - EXCEPT operator [Transact-SQL]
 - queries [SQL Server], comparing
 - comparing queries
 - INTERSECT operator
 ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 3b78bf6f0c70b3c522c18ada72cacdec8de8c099
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@OPTIONS'
 - '@@OPTIONS_TSQL'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SET statement, current SET options
 - '@@OPTIONS function'
 - current SET options
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 75919b6d27b2a81a9aba3575d3a9f3c54f0e0850
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

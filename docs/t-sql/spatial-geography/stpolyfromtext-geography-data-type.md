@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STPolyFromText_TSQL
 - STPolyFromText (geography Data Type)
-dev_langs: TSQL
-helpviewer_keywords: STPolyFromText method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STPolyFromText method
 ms.assetid: d7e6a2bb-d301-49fb-9202-c70a9d169b4d
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 523923276b499fb1be3af1e61066ac323b3e90d2
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

@@ -8,14 +8,16 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - search
 - Search Condition
 - condition
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - OR operator [Transact-SQL]
 - CONTAINS predicate (Transact-SQL)
@@ -37,14 +39,14 @@ helpviewer_keywords:
 - logical operators [SQL Server], precedence
 - LIKE comparisons
 ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: aff1f4010182b601111ed2ba892bb06b6e82b71d
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

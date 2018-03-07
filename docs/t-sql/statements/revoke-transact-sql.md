@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - REVOKE_TSQL
 - REVOKE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - schema-level securables [SQL Server]
 - REVOKE statement, Transact-SQL syntax
@@ -29,14 +31,14 @@ helpviewer_keywords:
 - permissions [SQL Server], revoking
 - dropping permissions
 ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 3f96892b5671d9616a3c809aa6b83fbcaa071b6d
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

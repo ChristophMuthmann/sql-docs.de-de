@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - WAITFOR
 - WAITFOR_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - TIME option
 - delaying executions [SQL Server]
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - WAITFOR statement
 - timing executions
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 2a1453c5d7beaf9d4ab9d140a0414e730c9d651a
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

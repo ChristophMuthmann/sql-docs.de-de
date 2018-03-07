@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,20 +17,21 @@ f1_keywords:
 - SERVICE
 - CREATE SERVICE
 - SERVICE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - services [Service Broker], creating
 - CREATE SERVICE statement
 - contracts [Service Broker], service creation
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5298494b6c3be0685df771f6d86e11c7b788d002
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

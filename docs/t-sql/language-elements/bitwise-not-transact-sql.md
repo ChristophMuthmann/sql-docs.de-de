@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,20 +18,21 @@ f1_keywords:
 - NOT
 - ~
 - Bitwise NOT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - NOT keyword
 - bitwise NOT (~)
 - ~ (bitwise NOT)
 ms.assetid: 02da8016-f6c0-41ae-8d59-33eaa02bfc95
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: bc129a0a62c393cb8aee03edca3e0c2b567f9488
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

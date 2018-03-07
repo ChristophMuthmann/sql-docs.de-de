@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STBuffer (geometry Data Type)
 - STBuffer_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STBuffer (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STBuffer (geometry Data Type)
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ff65df2a1216a29b15a0458e9e4537c748140714
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

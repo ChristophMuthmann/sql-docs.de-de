@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,20 +17,21 @@ f1_keywords:
 - TRACEOFF
 - DBCC TRACEOFF
 - DBCC_TRACEOFF_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - trace flags [SQL Server], disabling
 - DBCC TRACEOFF statement
 - disabling trace flags
 ms.assetid: 1379afba-6480-454b-9c65-5e64cb4f3415
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 122726669eddfaa36480116dc53f615c910dbad6
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,19 +19,20 @@ f1_keywords:
 - <=_TSQL
 - Less Than
 - Equal
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - <= (less than or equal to operator)
 - less than or equal to operator (<=)
 ms.assetid: 1f05474c-0377-48cb-b567-9d85d0c40479
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: d249ae27e162c09b5538b75468e5a3d04de980a9
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

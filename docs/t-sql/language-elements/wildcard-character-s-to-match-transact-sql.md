@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,20 @@ f1_keywords:
 - wildcard
 - '[ ]'
 - '[_]_TSQL'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - wildcard characters [SQL Server]
 - '[ ] (wildcard - character(s) to match)'
 ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 04fcf0d9e76db380430bfbf4c4ed6e5fadf14afb
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

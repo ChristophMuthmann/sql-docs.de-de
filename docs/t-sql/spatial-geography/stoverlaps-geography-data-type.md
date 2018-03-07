@@ -8,20 +8,23 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: STOverlaps method (geography)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STOverlaps method (geography)
 ms.assetid: 2babbb9c-59ef-4494-9e6b-528cf296cbd7
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 1a70088ef45b2cf8f5682e3779f5a9011d502c61
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

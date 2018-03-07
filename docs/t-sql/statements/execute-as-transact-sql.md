@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - EXECUTE AS
 - EXECUTE_AS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - REVERT statement
 - WITH NO REVERT clause
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - execution context [SQL Server]
 - switching execution context
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: b89c78d286feaace6ec6bb2c85e854cb0ddbb5e0
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

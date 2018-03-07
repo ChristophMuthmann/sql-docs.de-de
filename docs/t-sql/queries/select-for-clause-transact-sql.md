@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,20 +17,21 @@ f1_keywords:
 - FOR CLAUSE
 - FOR_TSQL
 - FOR_CLAUSE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - XML option [SQL Server]
 - BROWSE option
 - FOR clause [Transact-SQL]
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 085a9c7f6422c70cc43086d2174a5c7aa485040e
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

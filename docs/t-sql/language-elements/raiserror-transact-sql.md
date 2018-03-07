@@ -8,14 +8,16 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RAISERROR
 - RAISERROR_TSQL
 - RAISEERROR_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sysmessages system table
 - errors [SQL Server], RAISERROR statement
@@ -29,14 +31,14 @@ helpviewer_keywords:
 - CATCH block
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-caps.latest.revision: "73"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: af9f82f9b550ecd366c10562199c606bf8ff0c9c
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

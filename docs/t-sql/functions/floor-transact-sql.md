@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FLOOR_TSQL
 - FLOOR
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - integers [SQL Server]
 - largest integers
 - FLOOR function [Transact-SQL]
 ms.assetid: 4f26c784-9240-491f-b854-754be3fccae4
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 1ca177e0b168b5091a251157df5d4ece616f1323
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

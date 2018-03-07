@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ASIN_TSQL
 - ASIN
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ASIN function
 - sine
 - arcsine
 ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 687c8bfde3b2f78d0136044ebe75c7206cb31d90
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

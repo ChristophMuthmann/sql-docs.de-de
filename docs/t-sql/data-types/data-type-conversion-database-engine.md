@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CAST function
 - converting data types [SQL Server]
@@ -21,14 +23,14 @@ helpviewer_keywords:
 - explicit data type conversions [SQL Server]
 - converting data types [SQL Server], about converting data types
 ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 811eacd3dc0cbbd622fc6eac6ad91a6e740554f4
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

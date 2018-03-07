@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@TOTAL_ERRORS'
 - '@@TOTAL_ERRORS_TSQL'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - '@@TOTAL_ERRORS function'
 - total errors [SQL Server]
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - write errors [SQL Server]
 - read/write errors
 ms.assetid: 09e62428-ee0e-4ef5-b969-da9d255f1199
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 53065810884eaae4513f5f8a2725f136daaaa5e4
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

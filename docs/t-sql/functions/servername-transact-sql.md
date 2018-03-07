@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@SERVERNAME'
 - '@@SERVERNAME_TSQL'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - '@@SERVERNAME function'
 - local servers [SQL Server]
 ms.assetid: b0ef33fb-954a-4294-b05b-a87c14ce25a3
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 5f1e7dbd47562368653ce75eee9d2a412164a9c9
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

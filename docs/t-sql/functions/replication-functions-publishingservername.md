@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - PUBLISHINGSERVERNAME_TSQL
 - PUBLISHINGSERVERNAME
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PUBLISHINGSERVERNAME function
 - Publishers [SQL Server replication], names
 ms.assetid: e7c278e5-ab23-419e-ab3e-3bb20b0636df
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 256cdbcb82e257b1157c329a5e20e605d53d6f14
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_LOGIN_TSQL
 - ALTER LOGIN
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ALTER LOGIN statement
 - change password
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - names [SQL Server], logins
 - modifying login accounts
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
-caps.latest.revision: "68"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: fc5c2a17e3d75cb743c6c0e3a335d911e102de0e
 ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/02/2018
 ---

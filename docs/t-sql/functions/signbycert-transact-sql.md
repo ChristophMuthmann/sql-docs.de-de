@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SIGNBYCERT
 - SIGNBYCERT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - text signing [SQL Server]
 - encryption [SQL Server], certificates
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - SIGNBYCERT function
 - cryptography [SQL Server], certificates
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: cd5940957c3a75555db9032097a99f73639f89bb
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

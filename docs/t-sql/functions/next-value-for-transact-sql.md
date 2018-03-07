@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,19 +19,20 @@ f1_keywords:
 - NEXT VALUE FOR
 - NEXT_TSQL
 - NEXT_VALUE_FOR_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - NEXT VALUE FOR function
 - sequence number object, NEXT VALUE FOR function
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: a4e6ca2ce4c89e1e608d9762d1562a78f7908c23
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STPointFromText (geography Data Type)
 - STPointFromText_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STPointFromText method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STPointFromText method
 ms.assetid: e5fe54dc-0007-4631-8dde-7ae4d4c41f6e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7eea56848843175848a4d21cf1fa93fae4594439
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

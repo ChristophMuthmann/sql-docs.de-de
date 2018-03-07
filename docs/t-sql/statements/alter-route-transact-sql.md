@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_ROUTE_TSQL
 - ALTER ROUTE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ALTER ROUTE statement
 - dropping routes
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - removing routes
 - routes [Service Broker], modifying
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e9ae2ef58b234919dab8057b00afd64efa0cc89b
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

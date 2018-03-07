@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@ERROR'
 - '@@ERROR_TSQL'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - '@@ERROR function'
 - errors [SQL Server], Transact-SQL
 - error numbers [SQL Server]
 ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 9ce2b79b12af1ae4894cd33867bccc27b2354185
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/18/2018
 ---

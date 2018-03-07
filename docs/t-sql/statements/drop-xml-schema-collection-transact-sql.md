@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP XML SCHEMA COLLECTION
 - DROP_XML_SCHEMA_COLLECTION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - deleting XML schema collections
 - XML schema collections [SQL Server], removing
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - dropping XML schema collections
 - DROP XML SCHEMA COLLECTION statement
 ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 01ee022bf8d9cb03b6f3fb47451c969955b5c255
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

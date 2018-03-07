@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,20 @@ f1_keywords:
 - ANSI_DEFAULTS
 - SET_ANSI_DEFAULTS_TSQL
 - ANSI_DEFAULTS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ANSI_DEFAULTS option
 - SET ANSI_DEFAULTS statement
 ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 53cf9bcaa8ca044ea53becea4d1bf0bb701f62f5
 ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2017
 ---

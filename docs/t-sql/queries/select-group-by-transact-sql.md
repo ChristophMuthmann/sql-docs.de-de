@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -22,7 +23,8 @@ f1_keywords:
 - GROUP_TSQL
 - CUBE_TSQL
 - ROLLUP_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - GROUP BY clause, about GROUP BY clause
 - dividing tables into groups
@@ -32,14 +34,14 @@ helpviewer_keywords:
 - groups [SQL Server], tables divided into groups
 - summary values [SQL Server]
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
-caps.latest.revision: "80"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 5e99efe49620003de40659dd4bfd959dacef986c
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

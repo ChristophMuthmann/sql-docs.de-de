@@ -8,20 +8,23 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: STNumCurves method (geometry)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STNumCurves method (geometry)
 ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 92cf7af65b64c412aff37311ccf1e9b44484968b
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

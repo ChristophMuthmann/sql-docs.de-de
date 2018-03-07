@@ -8,24 +8,26 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Windows collations [SQL Server]
 - names [SQL Server], collations
 - collations [SQL Server], Windows collations
 - Collation Designator
 ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: f0f99bd7b467ddae5362b8d806a43098c849c314
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

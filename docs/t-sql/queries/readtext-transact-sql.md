@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - READTEXT_TSQL
 - READTEXT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - column reading [SQL Server]
 - READTEXT statement
 - reading columns
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c1659dfcc9ca8908ce756eb41b32fd30649decfa
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

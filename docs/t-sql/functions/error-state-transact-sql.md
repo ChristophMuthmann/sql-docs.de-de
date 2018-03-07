@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ERROR_STATE_TSQL
 - ERROR_STATE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - messages [SQL Server], state
 - ERROR_STATE function
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - CATCH block
 - states [SQL Server], error numbers
 ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 07caa8a60512f507c9ad1003c864680e82d48870
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

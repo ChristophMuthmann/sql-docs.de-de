@@ -8,23 +8,25 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - statistical functions [SQL Server]
 - system statistical functions [SQL Server]
 - functions [SQL Server], statistical
 ms.assetid: 45828c67-1b9a-4653-bb24-86246084d8ba
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c5b437038aa63c4e0ae1a5d5f0a8ef2b435cde66
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

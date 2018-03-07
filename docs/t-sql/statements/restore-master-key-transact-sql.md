@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - RESTORE MASTER KEY
 - LOAD_MASTER_KEY_TSQL
 - LOAD MASTER KEY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - database master key [SQL Server], importing
 - encryption [SQL Server], Database Master Key
@@ -26,14 +28,14 @@ helpviewer_keywords:
 - transferring Database Master Keys
 - RESTORE MASTER KEY statement
 ms.assetid: 70ceb951-31a2-4fc4-a0c1-e6c18eeb3ae7
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 63c0d492da379f3cb0d982e5f35a2a110a3a6dda
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

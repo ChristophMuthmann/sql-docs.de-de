@@ -8,20 +8,23 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: Aggregate Geometry Methods [SQL Server]
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Aggregate Geometry Methods [SQL Server]
 ms.assetid: 4e19f582-ef8f-40f7-8ad1-4f08591cdd1a
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 900a6a71ea545bfbb433671760174ec241b89de7
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

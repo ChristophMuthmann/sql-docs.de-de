@@ -8,20 +8,23 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: OGC Static Geometry Methods [SQL Server]
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- OGC Static Geometry Methods [SQL Server]
 ms.assetid: 74960d25-83c2-4ad6-9318-098c348ea977
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9c3af49dd670fcda87916b3471c1d682dd381dba
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

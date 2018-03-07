@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - M (geometry Data Type)
 - M_TSQL
-dev_langs: TSQL
-helpviewer_keywords: M (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- M (geometry Data Type)
 ms.assetid: 443ae2ea-739b-41ef-96cc-ac5dfd65e10b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 39f6677b10632363f91c2572c4a0856a67e436c3
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

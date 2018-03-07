@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - COLLATIONPROPERTY_TSQL
 - COLLATIONPROPERTY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - collations [SQL Server], properties
 - COLLATIONPROPERTY function
 ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: f47c45f892618120b06a17f45f5d3155e092987a
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

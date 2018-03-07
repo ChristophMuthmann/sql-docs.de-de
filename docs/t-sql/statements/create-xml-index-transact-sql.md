@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -21,21 +22,22 @@ f1_keywords:
 - CREATE XML INDEX
 - XML_INDEX_TSQL
 - FOR_XML_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CREATE XML INDEX statement
 - CREATE INDEX statement
 - index creation [SQL Server], XML indexes
 - XML indexes [SQL Server], creating
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 133c957937d1c05cd108eeb2deb0847cd7944771
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

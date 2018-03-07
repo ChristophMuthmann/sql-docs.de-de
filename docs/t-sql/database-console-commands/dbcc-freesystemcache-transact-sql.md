@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC_FREESYSTEMCACHE_TSQL
 - DBCC FREESYSTEMCACHE
 - FREESYSTEMCACHE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - clearing unused cache entries
 - DBCC FREESYSTEMCACHE statement
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - freeing unused cache entries
 - cleaning unused cache entries
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: d5c6924da3ef9ac85683c857c786337b9d9b978b
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

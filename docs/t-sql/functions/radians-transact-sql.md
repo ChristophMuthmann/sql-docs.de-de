@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RADIANS
 - RADIANS_TSQL
-dev_langs: TSQL
-helpviewer_keywords: RADIANS function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- RADIANS function
 ms.assetid: e9f69951-ecda-45d9-8909-dcb716b1b1c0
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c36e42ad7cb28ae752809015fc90541d7530a807
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

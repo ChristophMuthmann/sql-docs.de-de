@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - BEGIN_DISTRIBUTED_TRANSACTION_TSQL
 - DISTRIBUTED_TSQL
 - BEGIN DISTRIBUTED TRANSACTION
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - BEGIN DISTRIBUTED TRANSACTION statement
 - distributed transactions [SQL Server], starting
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - remote servers [SQL Server], distributed transactions
 - starting transactions
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: ba68a3a1a4cde26a94acd47000f46d1a0ceb40ef
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

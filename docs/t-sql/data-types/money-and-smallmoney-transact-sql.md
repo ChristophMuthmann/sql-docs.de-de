@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - money
 - smallmoney
 - smallmoney_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - money data type, about money data type
 - money data type
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - values [SQL Server], monetary
 - currency [SQL Server]
 ms.assetid: 57861137-89ea-4b89-b361-390597d7bccc
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: c9c66d9934618b1b8b21b0d4dcb0a234ff94731f
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - CREATE_XML_SCHEMA_TSQL
 - COLLECTION
 - COLLECTION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CREATE XML SCHEMA COLLECTION statement
 - importing schema components
@@ -26,14 +28,14 @@ helpviewer_keywords:
 - multiple schema namespaces
 - XML schema collections [SQL Server], creating
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 6941e48f344db354902d6475382fa39e5541bd9e
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

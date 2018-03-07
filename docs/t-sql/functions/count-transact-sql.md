@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - COUNT_TSQL
 - COUNT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - totals [SQL Server], COUNT function
 - totals [SQL Server]
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - number of group items
 - COUNT function [Transact-SQL]
 ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 0342e593b0bf13b5e5a9b53600aae5f3c39ae59d
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

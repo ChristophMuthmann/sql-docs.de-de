@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - MATCH
 - MATCH_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - MATCH statement [SQL Server], SQL graph
 - SQL graph, MATCH statement
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: cbfa524cb9957ba557cfd239dae16a93aed919bf
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

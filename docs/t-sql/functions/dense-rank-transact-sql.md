@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DENSE_RANK_TSQL
 - DENSE_RANK
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - row ranking [SQL Server]
 - DENSE_RANK function
 - tied rows [SQL Server]
 - ranking rows
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: fd11621293a410a4ac5adb71b0c1fd62f07e03a8
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

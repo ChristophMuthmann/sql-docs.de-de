@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_ASYMMETRIC_KEY_TSQL
 - ALTER ASYMMETRIC KEY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ENCRYPTION BY PASSWORD option
 - passwords [SQL Server], asymmetric keys
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - ALTER ASYMMETRIC KEY statement
 - asymmetric keys [SQL Server], modifying
 ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 13acb5d893188d08d8855d755c89cf9672eee066
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

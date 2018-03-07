@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - XACT_STATE
 - XACT_STATE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - states [SQL Server], transactions
 - uncommittable transactions
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - transactions [SQL Server], state
 - active transactions
 ms.assetid: e9300827-e793-4eb6-9042-ffa0204aeb50
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 81d8b98cf6f7ddd80e3952b82ae13cea75a81abd
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

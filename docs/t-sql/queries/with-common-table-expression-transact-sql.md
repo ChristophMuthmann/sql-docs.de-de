@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - WITH_TSQL
 - WITH
 - common table expression
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - WITH common_table_expression clause
 - CTEs
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - MAXRECURSION hint
 - clauses [SQL Server], WITH common_table_expression
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 8c77e9c97fd3d31b63e6e3938cbdab134554dd1c
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

@@ -8,20 +8,23 @@ ms.service:
 ms.component: t-sql
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: reading data in a table
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- reading data in a table
 ms.assetid: 532232c9-3d41-45cd-9150-de67a1cbfcf5
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 37d35412e052c6b47ef08ece1f861fcd3c44b88e
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

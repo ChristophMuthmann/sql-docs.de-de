@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - precedence [SQL Server]
 - data types [SQL Server], converting
@@ -19,14 +21,14 @@ helpviewer_keywords:
 - converting data types [SQL Server], precedence
 - precedence [SQL Server], data types
 ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: e61ec1dec12552219279370f01fe0dd494a22cbe
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

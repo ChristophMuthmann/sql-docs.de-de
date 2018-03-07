@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - CERTIFICATE_TSQL
 - CREATE CERTIFICATE
 - sql13.swb.certificateproperties.f1
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - encryption [SQL Server], certificates
 - certificates [SQL Server], adding
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - cryptography [SQL Server], certificates
 - CREATE CERTIFICATE statement
 ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
-caps.latest.revision: "74"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: b77ff590d36f866c8679bfbc16e605565d9d8d1d
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

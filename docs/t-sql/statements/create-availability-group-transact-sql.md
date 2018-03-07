@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,21 +19,22 @@ f1_keywords:
 - CREATE AVAILABILITY GROUP
 - CREATE AVAILABILITY
 - AVAILABILITY_GROUP_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - CREATE AVAILABILITY GROUP statement
 - Availability Groups [SQL Server], creating
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
-caps.latest.revision: "196"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: e0a4792974ec9aa78678aec74dc390e992471e64
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

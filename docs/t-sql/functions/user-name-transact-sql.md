@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - USER_NAME
 - USER_NAME_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - usernames [SQL Server]
 - IDs [SQL Server], databases
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - identification numbers [SQL Server], databases
 - database usernames [SQL Server]
 ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 74040ef26d016301cb861c1f1b8e395fe897196d
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

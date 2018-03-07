@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RIGHT_TSQL
 - RIGHT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - rightmost character of expression
 - RIGHT function
 - character strings [SQL Server], RIGHT
 ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: b6680078aff2e103655a94ec157371a0d09f79be
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/18/2018
 ---

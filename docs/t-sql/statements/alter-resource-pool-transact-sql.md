@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_RESOURCE_POOL_TSQL
 - ALTER RESOURCE POOL
-dev_langs: TSQL
-helpviewer_keywords: ALTER RESOURCE POOL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- ALTER RESOURCE POOL
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 4edf3d8f20cc3705a6303d55f471dfa74c250f74
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

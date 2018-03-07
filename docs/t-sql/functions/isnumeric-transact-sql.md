@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ISNUMERIC
 - ISNUMERIC_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - expressions [SQL Server], valid numeric type
 - numeric data
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - valid numeric type [SQL Server]
 - checking valid numeric type
 ms.assetid: 7aa816de-529a-4f6c-a99f-4d5a9ef599eb
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 15ef4648daf6489a1224536acf5ee71250afe469
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

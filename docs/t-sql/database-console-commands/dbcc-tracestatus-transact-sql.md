@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC TRACESTATUS
 - TRACESTATUS_TSQL
 - TRACESTATUS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - global trace flags [SQL Server]
 - status information [SQL Server], trace flags
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - session trace flags [SQL Server]
 - displaying trace flag status
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 4f373d7cf31a4dbc53318245b8ba2800ab9e90b8
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

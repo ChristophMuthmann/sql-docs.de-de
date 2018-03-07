@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - INDEXKEY_PROPERTY_TSQL
 - INDEXKEY_PROPERTY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - index keys [SQL Server]
 - INDEXKEY_PROPERTY function
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - displaying index keys
 - keys [SQL Server], index
 ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 39223c0b83e3c79bede3e25ed6f5f8e70f34750b
 ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/02/2018
 ---

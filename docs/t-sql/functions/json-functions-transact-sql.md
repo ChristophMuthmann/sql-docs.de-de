@@ -8,19 +8,21 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-json
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: JSON functions
+helpviewer_keywords:
+- JSON functions
 ms.assetid: ec97d451-06af-44a3-8304-305d410cfc8e
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 4606234eb9e7fae8a6ef95746f333c9a4bb28e0d
 ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/17/2017
 ---

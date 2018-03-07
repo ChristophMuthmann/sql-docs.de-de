@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - HOST_NAME_TSQL
 - HOST_NAME
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - HOST_NAME function
 - workstation names [SQL Server]
 ms.assetid: 4b8b0705-c083-4b07-b954-c83ee73b2ebb
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 403dc48bcc04845429ed85cbe69759d96c6a66f4
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

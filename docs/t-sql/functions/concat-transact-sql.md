@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CONCAT
 - CONCAT_TSQL
-dev_langs: TSQL
-helpviewer_keywords: CONCAT function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CONCAT function
 ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 1f3a1ef2b55b2f67b6b2e01ceb1965a5076e8476
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/18/2018
 ---

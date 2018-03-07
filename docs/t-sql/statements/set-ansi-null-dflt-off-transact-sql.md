@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - ANSI_NULL_DFLT_OFF
 - SET ANSI_NULL_DFLT_OFF
 - SET_ANSI_NULL_DFLT_OFF_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - default nullability
 - ANSI_NULL_DFLT_OFF option
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - overriding default nullability
 - SET ANSI_NULL_DFLT_OFF statement
 ms.assetid: 8ed5c512-f5de-4741-a18a-de85a3041295
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 93677ffee0b86f342d07b8a129b6a1e0b2676d28
 ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2017
 ---

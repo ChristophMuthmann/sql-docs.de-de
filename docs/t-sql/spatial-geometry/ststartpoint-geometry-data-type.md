@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STStartPoint_TSQL
 - STStartPoint (geometry Data Type)
-dev_langs: TSQL
-helpviewer_keywords: STStartPoint (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STStartPoint (geometry Data Type)
 ms.assetid: 049917db-3f76-4053-8cd2-bc54158e89bc
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 69a5ba5720f54c4d6641925565fed835f8c0f225
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

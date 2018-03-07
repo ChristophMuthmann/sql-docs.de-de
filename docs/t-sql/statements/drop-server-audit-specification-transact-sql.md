@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP_SERVER_AUDIT_SPECIFICATION_TSQL
 - DROP SERVER AUDIT SPECIFICATION
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - server audit [SQL Server]
 - audits [SQL Server], specification
 - DROP SERVER AUDIT SPECIFICATION statement
 ms.assetid: 76635b80-5c05-4d01-a4e2-8277cd09251b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b15592eeb2698ed4cfa879b4c5dc05613977d90a
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

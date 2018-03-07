@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - PARSENAME_TSQL
 - PARSENAME
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PARSENAME function
 - parsing [SQL Server], PARSENAME function
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - objects [SQL Server], names
 - part of object names [SQL Server]
 ms.assetid: abf34f99-9ee9-460b-85b2-930ca5c4b5ae
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 908eb510f3916717065ff7d61f8162b222c1552e
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/18/2018
 ---

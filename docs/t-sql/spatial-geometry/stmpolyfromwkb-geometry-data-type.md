@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STMPolyFromWKB (geometry Data Type)
 - STMPolyFromWKB_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STMPolyFromWKB (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STMPolyFromWKB (geometry Data Type)
 ms.assetid: cac25868-08ef-46fc-9c3d-a15e43794a7a
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c36780e823c67469b72cdaebda8e2e877daaee8d
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

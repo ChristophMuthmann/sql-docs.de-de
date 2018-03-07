@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP SYNONYM
 - DROP_SYNONYM_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - deleting synonyms
 - synonyms [SQL Server], removing
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - DROP SYNONYM statement
 - dropping synonyms
 ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 25af262ddc5655bc42e4893daecefe0cd8fb85d9
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

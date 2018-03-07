@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - char_TSQL
 - char
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - converting int ACSII code to character
 - control characters
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - line feed
 - printing ASCII values
 ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 5dd3a4f8b6fd308560ddcf2db3c6940625dc6ee3
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/18/2018
 ---

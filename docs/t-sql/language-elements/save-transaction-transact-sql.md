@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - SAVE_TSQL
 - SAVE_TRANSACTION_TSQL
 - SAVE TRANSACTION
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - rolling back transactions, SAVE TRANSACTION
 - SAVE TRANSACTION statement
@@ -26,14 +28,14 @@ helpviewer_keywords:
 - marked transactions [SQL Server], SAVE TRANSACTION statement
 - duplicate savepoints
 ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 4acf3a47b6c023320caad72764dae20f3e16d460
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

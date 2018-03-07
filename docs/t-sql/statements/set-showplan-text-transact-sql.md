@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - SET_SHOWPLAN_TEXT_TSQL
 - SET SHOWPLAN_TEXT
 - SHOWPLAN_TEXT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - statements [SQL Server], estimates
 - execution information and estimates [SQL Server]
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - stopping statement execution
 - estimated execution information [SQL Server]
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: e0fd12594c0b2a4c5df3a616aeaa48746f781977
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

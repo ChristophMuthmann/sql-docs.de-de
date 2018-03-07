@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SUSER_SID
 - SUSER_SID_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - logins [SQL Server], users
 - SIDs [SQL Server]
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - identification numbers [SQL Server], logins
 - SUSER_SID function
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 77c7ab84b6fe936722f0b0c18ca889922485f1fd
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

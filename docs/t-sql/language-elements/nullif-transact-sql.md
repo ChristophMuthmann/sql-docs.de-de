@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - NULLIF
 - NULLIF_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - null values [SQL Server], equivalent expressions
 - expressions [SQL Server], null values
 - NULLIF function
 - equivalent expressions [SQL Server]
 ms.assetid: 44c7b67e-74c7-4bb9-93a4-7a3016bd2feb
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 91037a9e07ade78f3c37dcb11d315d6e88d330ef
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

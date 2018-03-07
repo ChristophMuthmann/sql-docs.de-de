@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CONTEXT_INFO_TSQL
 - CONTEXT_INFO
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CONTEXT_INFO function
 - Multiple Active Result Sets
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - MARS [SQL Server]
 - session context information [SQL Server]
 ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: a647bc7ced2188a45183200f08400f5507f7b328
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
 - SQL Server (starting with 2008)
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - denying permissions [SQL Server], XML schema collections
 - XML schema collections [SQL Server], permissions
 - DENY statement, XML schema collections
 - schema collections [SQL Server], permissions
 ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a2851147a37d9a99ab2f1fee8c1e3083e7a5f4fd
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

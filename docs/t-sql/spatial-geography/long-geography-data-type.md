@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - Long_TSQL
 - Long
-dev_langs: TSQL
-helpviewer_keywords: Long method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Long method
 ms.assetid: bedbeced-70b8-4569-84f3-f86bfb04ce50
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5993c081a4366338981f7bf6f86c577a8e8a189e
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

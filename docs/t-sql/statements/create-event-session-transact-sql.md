@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,19 +19,20 @@ f1_keywords:
 - SESSION_TSQL
 - EVENT_SESSION_TSQL
 - CREATE_EVENT_SESSION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - event sessions [SQL Server]
 - CREATE EVENT SESSION statement
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: ede0fb6715067bba3bafb1e77863483590d5f6a7
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

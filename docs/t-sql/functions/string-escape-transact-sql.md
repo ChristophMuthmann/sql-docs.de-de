@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STRING_ESCAPE
 - STRING_ESCAPE_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STRING_ESCAPE function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STRING_ESCAPE function
 ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: f850839d54f5a1e4d58277524b1f2d35b56c7b4e
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/18/2018
 ---

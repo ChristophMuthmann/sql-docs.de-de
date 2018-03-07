@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CASE_TSQL
 - CASE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CASE expression [Transact-SQL]
 - simple CASE expression
 - comparing expressions
 - searched CASE expression
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 0036e0ddf54eeef950bf81da2bf4a8997b4bef3c
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

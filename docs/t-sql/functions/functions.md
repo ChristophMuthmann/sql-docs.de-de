@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - built-in functions [SQL Server]
 - function [SQL Server] See functions [SQL Server]
@@ -20,14 +22,14 @@ helpviewer_keywords:
 - scalar functions
 - functions [SQL Server]
 ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: fa55a0b066db617ef0d6f2f0471ad6866cac2d73
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

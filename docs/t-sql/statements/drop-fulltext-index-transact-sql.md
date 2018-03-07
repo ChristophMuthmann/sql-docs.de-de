@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP_FULLTEXT_INDEX_TSQL
 - DROP FULLTEXT INDEX
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - deleting full-text indexes
 - removing full-text indexes
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - DROP FULLTEXT INDEX statement
 - dropping full-text indexes
 ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 24fdad5b47230cf22dd8d19c1ea269dffa2705b9
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

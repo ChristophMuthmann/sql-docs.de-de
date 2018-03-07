@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STDisjoint (geography Data Type)
 - STDisjoint_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STDisjoint
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STDisjoint
 ms.assetid: 98328a02-e018-47d6-aa93-de162b8aef62
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a81d42abbc9a15068e1d58d5bb7222defbfc8042
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

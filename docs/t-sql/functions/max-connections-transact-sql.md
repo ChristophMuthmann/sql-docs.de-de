@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@MAX_CONNECTIONS'
 - '@@MAX_CONNECTIONS_TSQL'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - simultaneous connections [SQL Server]
 - maximum number of simultaneous user connections
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - connections [SQL Server], simultaneous
 - number of simultaneous user connections
 ms.assetid: 57eb9f4b-548f-4212-9684-a11d831c4732
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: de4460e3f5dbc0ff2aba83f4c3794528f9100a2e
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

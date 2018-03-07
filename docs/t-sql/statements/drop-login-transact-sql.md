@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP LOGIN
 - DROP_LOGIN_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - deleting login accounts
 - logins [SQL Server], removing
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - removing login accounts
 - dropping login accounts
 ms.assetid: acb5c3dc-7aa2-49f6-9330-573227ba9b1a
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: e43f37e0aa24cf6ab1ac7b01b378e461e5dea706
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

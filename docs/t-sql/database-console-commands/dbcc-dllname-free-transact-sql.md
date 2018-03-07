@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,21 +21,22 @@ f1_keywords:
 - FREE_TSQL
 - dllname_TSQL
 - dbcc dllname(FREE)
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DLL unloading [SQL Server]
 - DBCC dllname (FREE)
 - freeing DLLs
 - unloading DLLs
 ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0ad6b900d45ef1c87c0aca0d961685c68a72a33d
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SQL_VARIANT_PROPERTY_TSQL
 - SQL_VARIANT_PROPERTY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SQL_VARIANT_PROPERTY function
 - sql_variant data type
 ms.assetid: 50e5c1d9-4e95-4ed0-9c92-435c872a399e
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 5947528f4e8959de1b8b4ee3679d4e3e058476d5
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

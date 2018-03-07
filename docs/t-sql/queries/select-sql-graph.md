@@ -8,22 +8,24 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SELECT statement [SQL Server], SQL graph
 - SQL graph, SELECT statement
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d9beaa00df61e0d0cbe17a343fb306b938e1a356
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

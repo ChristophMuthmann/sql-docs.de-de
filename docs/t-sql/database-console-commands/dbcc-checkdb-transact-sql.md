@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC_CHECKDB_TSQL
 - DBCC CHECKDB
 - CHECKDB
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CHECKDB [DBCC statement]
 - database objects [SQL Server], checking
@@ -35,14 +37,14 @@ helpviewer_keywords:
 - checking database objects
 - page count accuracy [SQL Server]
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
-caps.latest.revision: "144"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: d2d28362462825c1e39d0a7a41f6a57f810c107e
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

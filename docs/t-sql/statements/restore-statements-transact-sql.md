@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - RESTORE
 - RESTORE_LOG_TSQL
 - RESTORE LOG
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - RESTORE DATABASE, see RESTORE statement
 - full backups [SQL Server]
@@ -40,14 +42,14 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], RESTORE statement
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-caps.latest.revision: "248"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: edafff7cc70224c67ef970ca4c13e47cce113f23
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

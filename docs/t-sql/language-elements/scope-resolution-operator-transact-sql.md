@@ -8,20 +8,23 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2008)
-dev_langs: TSQL
+applies_to:
+- SQL Server (starting with 2008)
+dev_langs:
+- TSQL
 ms.assetid: 764d8f91-957b-4037-997b-a9b6b533c504
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a08432ae682cea4156b2090837e2f7b4d85c42b3
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

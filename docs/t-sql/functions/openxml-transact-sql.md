@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OPENXML_TSQL
 - OPENXML
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - OPENXML statement
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: f5b32c99393bb5b7f31423df840f7f0069dd3518
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

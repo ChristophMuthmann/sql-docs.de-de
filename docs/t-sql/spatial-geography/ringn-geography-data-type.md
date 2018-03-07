@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RingN
 - RingN_TSQL
-dev_langs: TSQL
-helpviewer_keywords: RingN method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- RingN method
 ms.assetid: 30f47275-2727-4d22-bbec-c0c54bcb3ac2
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e08cc4d2a3359362b0e5bff28c2e18459863b120
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

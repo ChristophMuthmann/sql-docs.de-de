@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SERVICE_MASTER_KEY_TSQL
 - ALTER SERVICE MASTER KEY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - REGENERATE phrase
 - FORCE option
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - encryption [SQL Server], Service Master Key
 - service master key [SQL Server], modifying
 ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c4469bcbd22e0b0a74c8b891dfe3020c566a644a
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

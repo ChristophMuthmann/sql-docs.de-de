@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_CERTIFICATE_TSQL
 - ALTER CERTIFICATE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ENCRYPTION BY PASSWORD option
 - encryption [SQL Server], certificates
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - ALTER CERTIFICATE statement
 - certificates [SQL Server], modifying
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 39ab165b0587e31384c03235889bc9d7d6a240a9
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

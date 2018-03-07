@@ -8,20 +8,23 @@ ms.service:
 ms.component: t-sql
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: granting access to database objects
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- granting access to database objects
 ms.assetid: a44d9bbf-f58e-4734-b7f4-eb3b492b777b
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 5ccbacfe52541c59e12b992220f40806cae46bca
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

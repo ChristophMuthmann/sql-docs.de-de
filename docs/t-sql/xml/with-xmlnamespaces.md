@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - WITH_XMLNAMESPACES_TSQL
 - WITH XMLNAMESPACES
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - adding XML namespaces
 - XML namespace declarations [SQL Server]
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - WITH XMLNAMESPACES clause
 - declaring XML namespaces
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 2ac45cd469430bd6fd9852ca6eb6b58831b29fef
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

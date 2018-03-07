@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@CONNECTIONS'
 - '@@CONNECTIONS_TSQL'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - '@@CONNECTIONS function'
 - connections [SQL Server], number of
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - number of connection attempts
 - attempted connections
 ms.assetid: c59836a8-443c-4b9a-8b96-8863ada97ac7
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8422da0d4e550c99fac6c9659f771ab98196cb4a
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

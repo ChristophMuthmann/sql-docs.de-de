@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@MAX_PRECISION_TSQL'
 - '@@MAX_PRECISION'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - precision [SQL Server], @@MAX_PRECISION
 - numeric data type, precision level
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - '@@MAX_PRECISION function'
 - data types [SQL Server], precision
 ms.assetid: 9e7158a1-e503-422a-b326-3c9b06e181b2
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5878ad726e9070ec0df628d09090740d12f98722
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

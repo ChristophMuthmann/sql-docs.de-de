@@ -8,20 +8,23 @@ ms.service:
 ms.component: t-sql
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: creating views and stored procedures
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- creating views and stored procedures
 ms.assetid: 53a0426d-07d8-4b7c-aa21-22632753bad8
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: b246171441ba9eedb213fd2baef55d8dc7668d26
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

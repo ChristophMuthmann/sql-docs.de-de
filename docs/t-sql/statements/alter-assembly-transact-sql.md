@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_ASSEMBLY_TSQL
 - ALTER ASSEMBLY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - assemblies [CLR integration], modifying
 - refreshing assemblies
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - adding files
 - ALTER ASSEMBLY statement
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
-caps.latest.revision: "76"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 8b8918d653d6d9ff5f26588ad1626bfc62e3679d
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

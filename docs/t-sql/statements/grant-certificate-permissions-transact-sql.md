@@ -8,24 +8,26 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - granting permissions [SQL Server], certificates
 - certificates [SQL Server], permissions
 - permissions [SQL Server], certificates
 - GRANT statement, certificates
 ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 968e67e85dba6766fb3ddf80517bc69702475fac
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

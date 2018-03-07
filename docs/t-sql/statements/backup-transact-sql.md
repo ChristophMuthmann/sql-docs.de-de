@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - BACKUP_LOG_TSQL
 - BACKUP LOG
 - BACKUP DATABASE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backup media [SQL Server], BACKUP statement
 - backing up filegroups [SQL Server]
@@ -46,14 +48,14 @@ helpviewer_keywords:
 - stripe sets [SQL Server]
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-caps.latest.revision: "275"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 506cda0644c6e3d144d5b02ff208d78e7305dfcc
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

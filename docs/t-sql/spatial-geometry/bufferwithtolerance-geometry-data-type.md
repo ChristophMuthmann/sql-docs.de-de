@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - BufferWithTolerance_TSQL
 - BufferWithTolerance
-dev_langs: TSQL
-helpviewer_keywords: BufferWithTolerance (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- BufferWithTolerance (geometry Data Type)
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 1cb8520351369dad761862132211b5222c52e3ae
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

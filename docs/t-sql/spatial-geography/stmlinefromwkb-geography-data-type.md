@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STMLineFromWKB_TSQL
 - STMLineFromWKB (geography Data Type)
-dev_langs: TSQL
-helpviewer_keywords: STMLineFromWKB method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STMLineFromWKB method
 ms.assetid: 05ca6d65-4799-4b9a-9672-cfebae95f23e
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 3130c8b4b20e4d3c1cd65637693ef0c141cb3f9f
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

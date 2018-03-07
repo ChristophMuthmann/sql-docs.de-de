@@ -12,7 +12,7 @@ ms.component: t-sql
 ms.date: 02/03/2018
 ms.openlocfilehash: c1f1ce751bd4bca781644e7e2f5282320c8c88a8
 ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/09/2018
 ---

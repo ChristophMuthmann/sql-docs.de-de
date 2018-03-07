@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,20 @@ f1_keywords:
 - RESTORE_LABELONLY_TSQL
 - LABELONLY_TSQL
 - RESTORE LABELONLY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - RESTORE LABELONLY statement
 - backup media [SQL Server], content information
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c5cbf694abdf86a5e5e13f2799f5b1f4b808a498
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

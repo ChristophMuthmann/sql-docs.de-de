@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - CREATE_PARTITION_SCHEME_TSQL
 - SCHEME_TSQL
 - PARTITION_SCHEME_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - partitioned indexes [SQL Server], schemes
 - partitioned tables [SQL Server], schemes
@@ -29,14 +31,14 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], filegroups
 - mapping partitions [SQL Server]
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 98abb06746c88d7876505033f5b209c30812fc5d
 ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/07/2017
 ---

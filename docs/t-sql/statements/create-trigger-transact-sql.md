@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - TRIGGER
 - CREATE_TRIGGER_TSQL
 - TRIGGER_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - recursive DML triggers [SQL Server]
 - CREATE TRIGGER statement
@@ -29,14 +31,14 @@ helpviewer_keywords:
 - triggers [SQL Server], creating
 - database-scoped triggers [SQL Server]
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
-caps.latest.revision: "140"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 21d9fd7428af28eec0d739da212887973592401c
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

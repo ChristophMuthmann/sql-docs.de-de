@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - Key_GUID_TSQL
 - Key_GUID
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - symmetric keys [SQL Server], GUIDs
 - KEY_GUID function
 - GUIDs [SQL Server]
 ms.assetid: 9246c7b2-7098-42c4-a222-cbf30267c46a
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 723186a0489186baa1afeda87d53a71c4d303423
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

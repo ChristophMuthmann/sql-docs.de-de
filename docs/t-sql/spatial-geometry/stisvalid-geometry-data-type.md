@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STIsValid (geometry Data Type)
 - STIsValid_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STIsValid (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STIsValid (geometry Data Type)
 ms.assetid: 6da39bea-0f67-4660-98fc-d7214f9b2138
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 436cab211eceff9eb286b4e44e90aa3f64b9d03c
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

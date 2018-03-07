@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC SHOWCONTIG
 - SHOWCONTIG
 - SHOWCONTIG_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - displaying defragmentation information
 - DBCC SHOWCONTIG statement
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - fragmentation [SQL Server]
 - index defragmenting [SQL Server]
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
-caps.latest.revision: "78"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: fb7faf36132e131c0fd771480e89318492c71372
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

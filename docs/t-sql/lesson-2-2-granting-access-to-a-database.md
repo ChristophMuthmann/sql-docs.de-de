@@ -8,20 +8,23 @@ ms.service:
 ms.component: t-sql
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: database access
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- database access
 ms.assetid: 686edfe2-3650-48a6-a2da-9d46fa211ad8
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 50badd521bde0d30021f7097040beb8492cb1d2e
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

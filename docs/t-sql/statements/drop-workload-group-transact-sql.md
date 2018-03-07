@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP_WORKLOAD_GROUP_TSQL
 - DROP WORKLOAD GROUP
-dev_langs: TSQL
-helpviewer_keywords: DROP WORKLOAD GROUP statement
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- DROP WORKLOAD GROUP statement
 ms.assetid: 1cd68450-5b58-4106-a2bc-54197ced8616
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b5211e91f9bd1e6dc8dd49676c024b3356163538
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

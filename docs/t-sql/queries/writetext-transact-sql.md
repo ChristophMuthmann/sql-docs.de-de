@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - WRITETEXT_TSQL
 - WRITETEXT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - replacing data
 - WRITETEXT statement
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - overwriting data
 - data updates [SQL Server], WRITETEXT statement
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: fda340750c555d7e6e858ddac1a87401e215891e
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

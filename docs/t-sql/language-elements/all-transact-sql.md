@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
@@ -17,19 +18,20 @@ applies_to:
 f1_keywords:
 - ALL_TSQL
 - ALL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - single-column set of values [SQL Server]
 - ALL (Transact-SQL)
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 142fbd5b352a73e382f89a61f60fba6373902172
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

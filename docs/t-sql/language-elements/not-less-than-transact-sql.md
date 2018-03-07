@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,19 +18,20 @@ f1_keywords:
 - '!<_TSQL'
 - Not Less Than
 - Less Than
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - '!< (not less than)'
 - not less than operator (!<)
 ms.assetid: ecbb598e-58a2-4b6c-90b4-3ad5bdfcae39
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2bd79083902b27a5588587e246182fe061312805
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

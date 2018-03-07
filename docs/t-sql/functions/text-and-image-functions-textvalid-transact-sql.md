@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - TEXTVALID_TSQL
 - TEXTVALID
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - invalid text pointers [SQL Server]
 - valid text pointers [SQL Server]
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - text-pointer values
 - verifying text pointers
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d64916b441c65dc00e0e387e08c2967124721514
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

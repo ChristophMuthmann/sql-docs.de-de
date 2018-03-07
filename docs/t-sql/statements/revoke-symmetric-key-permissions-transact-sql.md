@@ -8,23 +8,25 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - symmetric keys [SQL Server], permissions
 - permissions [SQL Server], symmetric keys
 - REVOKE statement, symmetric keys
 ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8a700868c11a26597509fe675f7de675084b5ecc
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

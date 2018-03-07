@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - ALTER_PROC_TSQL
 - ALTER PROC
 - ALTER PROCEDURE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ALTER PROCEDURE statement
 - stored procedure modifications [SQL Server]
 - modifying stored procedures
 - stored procedures [SQL Server], modifying
 ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: e37551d9e5a2d33a7b5ab3a4ab29c028cce0d2c4
 ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/02/2018
 ---

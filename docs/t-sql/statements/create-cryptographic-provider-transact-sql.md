@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,20 +21,21 @@ f1_keywords:
 - CRYPTOGRAPHIC_PROVIDER_TSQL
 - CREATE_CRYPTOGRAPHIC_PROVIDER_TSQL
 - PROVIDER
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - 33085 (Database Engine error)
 - CREATE CRYPTOGRAPHIC PROVIDER statement
 - 33032 (Database Engine error)
 ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: bedc5441c8119101a209de42358b38d20c288b8d
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

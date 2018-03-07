@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - BEGIN TRY
 - TRY_TSQL
 - BEGIN CATCH
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - BEGIN CATCH statement
 - uncommittable transactions
@@ -29,14 +31,14 @@ helpviewer_keywords:
 - BEGIN TRY statement
 - CATCH block
 ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 4278a699e1624521fb781e9eda6ffab40e221d8e
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

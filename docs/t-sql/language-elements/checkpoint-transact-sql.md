@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CHECKPOINT_TSQL
 - CHECKPOINT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - events [SQL Server], checkpoints
 - automatic checkpoints
@@ -28,14 +30,14 @@ helpviewer_keywords:
 - manual checkpoints [SQL Server]
 - pages [SQL Server], checkpoints
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 6353bd534827ff9066bd7b184a09d67b5867c3cb
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

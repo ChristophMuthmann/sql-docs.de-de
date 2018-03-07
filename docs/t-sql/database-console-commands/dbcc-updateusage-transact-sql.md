@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - UPDATEUSAGE_TSQL
 - DBCC_UPDATEUSAGE_TSQL
 - DBCC UPDATEUSAGE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - inaccurate page or row counts [SQL Server]
 - space [SQL Server], usage reports
@@ -34,14 +36,14 @@ helpviewer_keywords:
 - row count accuracy [SQL Server]
 - page count accuracy [SQL Server]
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 12a05d112f55fd4323b5f6e4278c6134f581f4ae
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

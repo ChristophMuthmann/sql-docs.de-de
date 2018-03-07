@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - AND_TSQL
 - AND
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - values [SQL Server], TRUE
 - TRUE
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - AND
 - combining expressions
 ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 340905e1f4ed4917fa4485278e43c6dc754f6164
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

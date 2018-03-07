@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - SET DATEFORMAT
 - SET_DATEFORMAT_TSQL
 - DATEFORMAT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dates [SQL Server], formats
 - dates [SQL Server], ordering date parts
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - date and time [SQL Server], DATEFORMAT
 - dateparts [SQL Server], dateformat
 ms.assetid: da217878-7ec4-477e-aa13-604073c948f8
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 3b1e233508eaedab627b57a3ce6938b90a9e196d
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

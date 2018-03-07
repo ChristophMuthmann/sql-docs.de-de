@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER SYMMETRIC KEY
 - ALTER_SYMMETRIC_KEY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - modifying symmetric keys
 - encryption [SQL Server], symmetric keys
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - cryptography [SQL Server], symmetric keys
 - ALTER SYMMETRIC KEY statement
 ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: db9fc587fcc855e73ca82820d78f2aa7001c78db
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

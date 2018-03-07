@@ -8,18 +8,20 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|database-console-commands
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-caps.latest.revision: "12"
+dev_langs:
+- TSQL
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: af6b466df18df3df0535a2de8f582f57484255aa
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

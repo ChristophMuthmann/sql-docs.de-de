@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - SET CURSOR_CLOSE_ON_COMMIT
 - CURSOR_CLOSE_ON_COMMIT_TSQL
 - SET_CURSOR_CLOSE_ON_COMMIT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CURSOR_CLOSE_ON_COMMIT option
 - transactions [SQL Server], cursors
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - cursors [SQL Server], closing
 - SET CURSOR_CLOSE_ON_COMMIT statement
 ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 49e829a63d87485a2834094327195cffcec9a53c
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STTouches (geometry Data Type)
 - STTouches_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STTouches (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STTouches (geometry Data Type)
 ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5be445ecd219fa681a8c2fcc97ab80c4bb12c2f2
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

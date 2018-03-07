@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - GRANT_TSQL
 - GRANT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - granting permissions [SQL Server], GRANT statement
 - schema-level securables [SQL Server]
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - database-level securables [SQL Server]
 - permissions [SQL Server], granting
 ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 618e2068c1b1e9b99a68d0216c17c66e9b2cf3d1
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - smalldatetime_TSQL
 - smalldatetime
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - time [SQL Server], data types
 - smalldatetime data type [SQL Server]
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - date and time [SQL Server], smalldatetime
 - data types [SQL Server], date and time
 ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 07ab6616d91d0508c2c52f7e3b8be4e03127ecaa
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

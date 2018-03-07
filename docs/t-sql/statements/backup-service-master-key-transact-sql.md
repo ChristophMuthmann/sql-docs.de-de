@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DUMP_SERVICE_MASTER_KEY_TSQL
 - DUMP SERVICE MASTER KEY
 - BACKUP_SERVICE_MASTER_KEY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backing up service master keys [SQL Server]
 - BACKUP SERVICE MASTER KEY statement
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - encryption [SQL Server], Service Master Key
 - service master key [SQL Server], exporting
 ms.assetid: f8356683-6680-4f1c-9eaf-5c29a9a9020d
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 427b2a7c0faff9f00d37e3d85c79c5bd2c15a2f4
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

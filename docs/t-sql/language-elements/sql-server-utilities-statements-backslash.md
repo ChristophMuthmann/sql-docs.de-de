@@ -8,14 +8,17 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2008)
+applies_to:
+- SQL Server (starting with 2008)
 f1_keywords:
 - '\_TSQL'
 - '\'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backwhack
 - backslash
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - line continuation character
 - reverse solidus
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 6cc27da58953985a2fa4910583bde2dd31d67405
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

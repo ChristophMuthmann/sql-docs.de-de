@@ -8,20 +8,23 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: Extended Methods on Geometry Instances [SQLServer]
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Extended Methods on Geometry Instances [SQLServer]
 ms.assetid: 6472c5e1-d37f-4919-a903-177e90cbfe1b
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 4f8900e8643a8e24d5d3d9d463fdf654991ce974
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

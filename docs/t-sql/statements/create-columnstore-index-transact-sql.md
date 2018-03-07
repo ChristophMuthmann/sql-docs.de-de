@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -22,21 +23,22 @@ f1_keywords:
 - CREATE COLUMNSTORE INDEX
 - CREATE_CLUSTERED_COLUMNSTORE_INDEX_TSQL
 - COLUMNSTORE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - index creation [SQL Server], columnstore indexes
 - columnstore index, creating
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: "76"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: ccf03c6b2d3d7798f3bad65b340657bf2b21b751
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

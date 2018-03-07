@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - IS_OBJECTSIGNED
 - IS_OBJECTSIGNED_TSQL
-dev_langs: TSQL
-helpviewer_keywords: IS_OBJECTSIGNED function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- IS_OBJECTSIGNED function
 ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e3cdcdfec27373a437af6895cbd68a1ceb609c7c
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

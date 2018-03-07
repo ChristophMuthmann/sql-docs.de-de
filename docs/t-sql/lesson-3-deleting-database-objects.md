@@ -8,20 +8,23 @@ ms.service:
 ms.component: t-sql
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: deleting database objects
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- deleting database objects
 ms.assetid: ecf26dd5-4535-4ed6-86fc-c73f9d9dedec
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 9cf4ee2807a9a62a215a16862d50959884047a7c
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

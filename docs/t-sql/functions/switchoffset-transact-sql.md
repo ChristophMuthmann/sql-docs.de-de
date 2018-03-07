@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SWITCHTZ
 - SWITCHTZ_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - functions [SQL Server], time
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - date and time [SQL Server], SWITCHOFFSET
 - time zones [SQL Server]
 ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 56708a638f47aa926228d2d98e4fce5c3de7754b
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

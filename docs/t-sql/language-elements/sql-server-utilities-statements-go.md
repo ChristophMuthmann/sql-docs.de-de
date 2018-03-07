@@ -8,27 +8,30 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2008)
+applies_to:
+- SQL Server (starting with 2008)
 f1_keywords:
 - GO
 - GO_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - batches [SQL Server], ending
 - ending batches [SQL Server]
 - GO command
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 63fe775455df2b9b25ec3abc8bb0208aa6b5dd0e
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

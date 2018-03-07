@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,20 +17,21 @@ f1_keywords:
 - RESTORE_FILELISTONLY_TSQL
 - FILELISTONLY
 - FILELISTONLY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backups [SQL Server], file lists
 - RESTORE FILELISTONLY statement
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
-caps.latest.revision: "83"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: e6776115033e6e7222abc610673dd8b0aaff81dc
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

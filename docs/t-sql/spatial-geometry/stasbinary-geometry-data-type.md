@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STAsBinary_TSQL
 - STAsBinary (geometry Data Type)
-dev_langs: TSQL
-helpviewer_keywords: STAsBinary (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STAsBinary (geometry Data Type)
 ms.assetid: 65353777-e3e6-461c-9504-ea4d83312692
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f9bd5de3f4edac322a01a51eb9798109ea138767
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

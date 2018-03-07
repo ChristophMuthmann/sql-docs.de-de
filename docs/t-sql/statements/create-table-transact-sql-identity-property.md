@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - IDENTITY_TSQL
 - IDENTITY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - IDENTITY property
 - columns [SQL Server], creating
 - identity columns [SQL Server], IDENTITY property
 - autonumbers, identity numbers
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: c8ed5f2b2dd8daaf244f9e12ea17a69ff489ae3b
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

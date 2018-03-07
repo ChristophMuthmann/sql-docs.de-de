@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP RESOURCE POOL
 - DROP_RESOURCE_POOL_TSQL
-dev_langs: TSQL
-helpviewer_keywords: DROP RESOURCE POOL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- DROP RESOURCE POOL
 ms.assetid: 18cd6dd9-7a6d-4a08-b9d5-649af23583d5
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2de7fc519df43bce5666eb0421fea5a9c2f5f787
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

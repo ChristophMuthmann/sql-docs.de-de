@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SYSDATETIMEOFFSET_TSQL
 - SYSDATETIMEOFFSET
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - date and time [SQL Server], SYSDATETIMEOFFSET
 - dates [SQL Server], functions
@@ -30,14 +32,14 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - time [SQL Server], system
 ms.assetid: 8423c753-cebe-4edd-871d-0138e092199f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: fedd2c31623fc9df2afbab7897e3de446f98a960
 ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/16/2017
 ---

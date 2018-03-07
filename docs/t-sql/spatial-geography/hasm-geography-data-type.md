@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - HasM_TSQL
 - HasM
-dev_langs: TSQL
-helpviewer_keywords: HasM geography
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- HasM geography
 ms.assetid: e752e97f-1619-437d-b962-48c188b4e94c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: bad79780c74f3fe512eb394c7fc997d962594e12
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

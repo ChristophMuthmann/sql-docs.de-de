@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - ROUTE
 - CREATE ROUTE
 - ROUTE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - lifetimes [Service Broker]
 - routes [Service Broker], creating
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - activating routes
 - CREATE ROUTE statement
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 767be5069d65c11dad849a8fc32f5b15296a4eda
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

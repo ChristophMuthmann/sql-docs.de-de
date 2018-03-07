@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ToString
 - ToString_TSQL
-dev_langs: TSQL
-helpviewer_keywords: ToString [Database Engine]
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- ToString [Database Engine]
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 0bee6e9a6e06cdab3bdd54cadda7a1a7d3f66a28
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

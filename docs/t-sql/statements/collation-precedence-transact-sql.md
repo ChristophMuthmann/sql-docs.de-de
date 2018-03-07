@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - coercible-default collation label
 - precedence [SQL Server], collations
@@ -26,14 +28,14 @@ helpviewer_keywords:
 - collation coercion rules
 - rules [SQL Server], collations
 ms.assetid: 58c4e64b-5634-4c29-aa22-33193282dd27
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: d80966502f5538989f3615658e3766e8c3e718f2
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

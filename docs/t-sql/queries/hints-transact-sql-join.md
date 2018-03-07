@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - Join Hint
 - Join_Hint_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - HASH join hint
 - REMOTE join hint
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - MERGE join hint
 - hints [SQL Server], join
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 9e0652286a1f9da56df54ec2e00eee5bea20e1be
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

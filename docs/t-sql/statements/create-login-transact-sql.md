@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CREATE LOGIN
 - LOGIN_TSQL
 - LOGIN
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - passwords [SQL Server], logins
 - mapping logins [SQL Server]
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - re-hashing passwords
 - certificates [SQL Server], logins
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
-caps.latest.revision: "101"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 2e94847ca10923bba05e228f36a25e5caa8c2027
 ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/09/2018
 ---

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP_ENDPOINT_TSQL
 - DROP ENDPOINT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - removing endpoints
 - endpoints [SQL Server], removing
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - DROP ENDPOINT statement
 - dropping endpoints
 ms.assetid: 6aca7412-66a5-4fa4-86b2-061512ff2080
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c38c6079ccb165a7b1bd4c7182c103cc076bdcfa
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

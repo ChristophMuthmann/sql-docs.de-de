@@ -8,24 +8,26 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - GRANT statement, XML schema collections
 - XML schema collections [SQL Server], permissions
 - granting permissions [SQL Server], XML schema collections
 - schema collections [SQL Server], permissions
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9bd3cf031a884da51cd15b0e78c8d2c242c3f9e4
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

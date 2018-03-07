@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CREATE RULE
 - CREATE_RULE_TSQL
 - RULE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - list rules [SQL Server]
 - unbinding rules
@@ -30,14 +32,14 @@ helpviewer_keywords:
 - binding rules [SQL Server]
 - rules [SQL Server], creating
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 69cbf3b35533d0a77ae303c79040da7cb0883a4b
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

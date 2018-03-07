@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - BETWEEN
 - BETWEEN_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - inclusive ranges
 - testing range
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - BETWEEN operator
 - range to test [SQL Server]
 ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: b2e5f028fdc431ebd52302cc0b62dcf456d1d79f
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

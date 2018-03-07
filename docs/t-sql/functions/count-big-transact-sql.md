@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - COUNT_BIG_TSQL
 - COUNT_BIG
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - totals [SQL Server], COUNT_BIG function
 - counting items in group
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - number of group items
 - COUNT_BIG function
 ms.assetid: f2e3601f-487e-4917-bb01-47b1047908cd
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: ad2b7e5343547bb65c6d81de8c6586ef5209e52a
 ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/22/2017
 ---

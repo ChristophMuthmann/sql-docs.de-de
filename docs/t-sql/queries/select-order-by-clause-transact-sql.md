@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - BY_TSQL
 - ORDER
 - ORDER BY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ad-hoc query paging
 - OFFSET clause
@@ -39,14 +41,14 @@ helpviewer_keywords:
 - sort orders [SQL Server], ORDER BY clause
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-caps.latest.revision: "68"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 08805ce7f01b11d9b87c587e543f5dae91734e68
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,7 +20,8 @@ f1_keywords:
 - ALTER TABLE
 - WAIT_AT_LOW_PRIORITY_TSQL
 - ALTER_COLUMN_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - columns [SQL Server], resizing
 - changing column size
@@ -59,14 +61,14 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: "281"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 62bb3df1044b6acc580daefc75ace88bca441e53
 ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/22/2018
 ---

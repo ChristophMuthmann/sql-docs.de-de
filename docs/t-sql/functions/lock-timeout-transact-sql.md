@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@LOCK_TIMEOUT'
 - '@@LOCK_TIMEOUT_TSQL'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - timeout options [SQL Server], locks
 - '@@LOCK_TIMEOUT function'
 - current lock time-out setting
 - locking [SQL Server], time-outs
 ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 84b885d21e5d940e3c532eef43040ba29c2b45ea
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

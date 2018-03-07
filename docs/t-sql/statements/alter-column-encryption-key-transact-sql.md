@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,20 @@ f1_keywords:
 - ALTER_COLUMN_ENCRYPTION_TSQL
 - ALTER COLUMN ENCRYPTION KEY
 - ALTER_COLUMN_ENCRYPTION_KEY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - column encryption key, alter
 - ALTER COLUMN ENCRYPTION KEY statement
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a6bc70a7cafdbf69549435b44099b903cfc60327
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

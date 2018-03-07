@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - WHILE_TSQL
 - WHILE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - statements [SQL Server], repeated executions
 - statement blocks [SQL Server]
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - nested WHILE loops
 - WHILE keyword
 ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 62f346d7a32e6c1aa55e42666ad39f426e1ed8a5
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

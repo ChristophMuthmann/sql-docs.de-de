@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - tutorials [Transact-SQL]
 ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 22ddf6026a91dbbc2f7f1919497fa796b76ecc34
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

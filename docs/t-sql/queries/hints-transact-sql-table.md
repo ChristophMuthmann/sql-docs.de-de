@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - TABLE_HINT_TSQL
 - Table Hint
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SERIALIZABLE table hint
 - UPDLOCK table hint
@@ -37,14 +39,14 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: "174"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: ea3f60e74aeb855a0d168646c341a1f6a8d7104c
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

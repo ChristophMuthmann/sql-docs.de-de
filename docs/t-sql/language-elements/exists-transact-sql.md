@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - EXISTS_TSQL
 - EXISTS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - existence testing [SQL Server]
 - testing existence
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - NOT EXISTS keyword
 - row existence testing [SQL Server]
 ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 40abe8ec35a89a51ecfb3d2100ffb47a40c58f23
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

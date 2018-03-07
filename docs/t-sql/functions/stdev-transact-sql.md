@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STDEV_TSQL
 - STDEV
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - expressions [SQL Server], statistical standard deviation
 - STDEV function [Transact-SQL]
 - statistical standard deviation
 ms.assetid: ff41b4fc-4f71-4f18-bf78-96614ea908cc
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 6783b223e217093ed957a98139a220bd0ea4f832
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

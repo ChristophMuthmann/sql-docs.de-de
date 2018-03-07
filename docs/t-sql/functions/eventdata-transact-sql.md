@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - fn_event_data
 - EVENTDATA_TSQL
 - fn_event_data_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - server instance event data [SQL Server]
 - event notifications [SQL Server], event status
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - status information [SQL Server], events
 - DDL triggers, returning event data
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 45f9d434e5833180320dcb3184fdcceec56c715c
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

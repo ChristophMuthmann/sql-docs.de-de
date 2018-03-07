@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - PERCENTILE_CONT_TSQL
 - PERCENTILE_CONT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - analytic functions, PERCENTILE_CONT
 - PERCENTILE_CONT function
 ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: d55a4036849fb1dfccb281956b8f9f3313a95e72
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

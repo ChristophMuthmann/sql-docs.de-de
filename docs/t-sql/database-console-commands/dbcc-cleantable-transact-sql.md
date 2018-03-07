@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC_CLEANTABLE_TSQL
 - DBCC CLEANTABLE
 - CLEANTABLE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - disk space [SQL Server], reclaiming
 - reclaiming space
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - deleting columns
 - dropping columns
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: dbc034e7ed5dd1d6f4704376adf73d517d3b5c47
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

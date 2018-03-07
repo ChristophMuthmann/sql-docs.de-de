@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - IDENT_SEED_TSQL
 - IDENT_SEED
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - identity columns [SQL Server], IDENT_SEED function
 - seed values [SQL Server]
 - IDENT_SEED function
 ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: ba9da1edad9a97dcb0adf406e3454c352f1ce927
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

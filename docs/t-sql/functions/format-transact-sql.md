@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FORMAT_TSQL
 - FORMAT
-dev_langs: TSQL
-helpviewer_keywords: FORMAT function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- FORMAT function
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 46c7becb151b1942b411aefe337717172f207bb9
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/18/2018
 ---

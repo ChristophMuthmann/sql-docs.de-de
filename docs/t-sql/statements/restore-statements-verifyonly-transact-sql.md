@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - RESTORE VERIFYONLY
 - VERIFYONLY_TSQL
 - RESTORE_VERIFYONLY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - RESTORE VERIFYONLY statement
 - backups [SQL Server], verifying
 - verifying backups
 - checking backups
 ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: b5cd93baf9fc13bd5333f5589dbb56413091671a
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

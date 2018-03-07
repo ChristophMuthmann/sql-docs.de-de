@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - TRIM
 - TRIM_TSQL
-dev_langs: TSQL
-helpviewer_keywords: TRIM function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- TRIM function
 ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 88ba00513a8f76ae560ed717801150aa9b80046e
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/18/2018
 ---

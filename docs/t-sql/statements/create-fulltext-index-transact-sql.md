@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,20 +17,21 @@ f1_keywords:
 - CREATE_FULLTEXT_INDEX_TSQL
 - CREATE FULLTEXT INDEX
 - FULLTEXT INDEX
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - full-text indexes [SQL Server], creating
 - index creation [SQL Server], CREATE FULLTEXT INDEX statement
 - CREATE FULLTEXT INDEX statement
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
-caps.latest.revision: "110"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 47808b1214157b393cae5cfcc193f5b482b53601
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

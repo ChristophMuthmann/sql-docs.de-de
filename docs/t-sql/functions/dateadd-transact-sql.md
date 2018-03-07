@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DATEADD
 - DATEADD_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - add interval to date or time [SQL Server]
@@ -26,14 +28,14 @@ helpviewer_keywords:
 - date and time [SQL Server], DATEADD
 - DATEADD function [SQL Server]
 ms.assetid: 89c5ae32-89c6-47e1-979e-15d97908b9f1
-caps.latest.revision: "71"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: f3aa417b85782fa806961b107658403e51f7afe6
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/18/2018
 ---

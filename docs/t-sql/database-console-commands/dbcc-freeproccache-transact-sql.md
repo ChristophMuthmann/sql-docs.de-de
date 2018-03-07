@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - FREEPROCCACHE
 - DBCC_FREEPROCCACHE_TSQL
 - DBCC FREEPROCCACHE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - freeing procedure cache
 - removing procedure cache elements
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - procedure cache [SQL Server]
 - clearing procedure cache
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: b5fd65fa2a764d87d2c5481a7c20560551ca3311
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

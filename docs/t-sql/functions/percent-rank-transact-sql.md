@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - PERCENT_RANK_TSQL
 - PERCENT_RANK
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PERCENT_RANK function
 - analytic functions, PERCENT_RANK
 ms.assetid: e361c2d4-c01f-4da4-8e89-1ddc724a2629
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: f506b8f3007157f9e1757da76442af848d023494
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

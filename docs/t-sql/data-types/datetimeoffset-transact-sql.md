@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - datetimeoffset_TSQL
 - datetimeoffset
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - time [SQL Server], data types
 - date and time [SQL Server], datetimeoffset
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - time zones [SQL Server]
 ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: b1b8fba166243143cd9ab8c03303fcfd7448e7a3
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

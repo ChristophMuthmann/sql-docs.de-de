@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,7 +21,8 @@ f1_keywords:
 - MESSAGE TYPE
 - MESSAGE_TYPE_TSQL
 - CREATE MESSAGE TYPE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - XML [Service Broker]
 - validation [Service Broker]
@@ -29,14 +31,14 @@ helpviewer_keywords:
 - binary [SQL Server], message types
 - CREATE MESSAGE TYPE statement
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ab3cf42da615c6ec303abb80b3a5d3f961edf888
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP_SEARCH_PROPERTY_LIST_TSQL
 - DROP SEARCH PROPERTY LIST
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - DROP SEARCH PROPERTY LIST statement
 - search property lists [SQL Server], dropping
 - search property lists [SQL Server], deleting
 ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 94a86720e49809e56aefeef1b3264c511f30f6be
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

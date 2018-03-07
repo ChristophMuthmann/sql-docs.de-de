@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OPENDATASOURCE
 - OPENDATASOURCE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data sources [SQL Server]
 - OPENDATASOURCE function
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: e2ddb99a84c910c89aedaa086eb10e3f9de7abb9
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

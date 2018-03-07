@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - TRY_CAST_TSQL
 - TRY_CAST
-dev_langs: TSQL
-helpviewer_keywords: TRY_CAST function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- TRY_CAST function
 ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 38958007757b3bc2d4016946a918982eba91251b
 ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/02/2018
 ---

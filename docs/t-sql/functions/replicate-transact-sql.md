@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - REPLICATE_TSQL
 - REPLICATE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - expressions [SQL Server], repeating
 - REPLICATE function
 - repeating character expressions
 ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 574f4d115708075ddb8f2a4c2987f97508ae24cb
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/18/2018
 ---

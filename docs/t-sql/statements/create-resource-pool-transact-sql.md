@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,17 +17,19 @@ f1_keywords:
 - RESOURCE POOL
 - CREATE_RESOURCE_POOL_TSQL
 - RESOURCE_POOL_TSQL
-dev_langs: TSQL
-helpviewer_keywords: CREATE RESOURCE POOL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CREATE RESOURCE POOL
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 6da47e346606170b29798b0301c10c5adeeed055
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

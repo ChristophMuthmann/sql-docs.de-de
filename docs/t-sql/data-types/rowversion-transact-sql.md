@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - timestamp_TSQL
 - timestamp
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - rowversion data type
 - size [SQL Server], rowversion
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - timestamp columns
 - size [SQL Server], timestamp
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 4a8a9c6a9ea076ec1727bfa5422a3dfbda58386c
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

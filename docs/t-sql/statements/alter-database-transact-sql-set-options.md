@@ -9,10 +9,12 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - online database state [SQL Server]
 - database options [SQL Server]
@@ -29,14 +31,14 @@ helpviewer_keywords:
 - auto_create_statistics
 - auto_update_statistics
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-caps.latest.revision: "159"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: de5b72bd7e890c2b7375448119af832f0e79d075
 ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/21/2017
 ---

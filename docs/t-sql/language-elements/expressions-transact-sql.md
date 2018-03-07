@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Boolean expressions
 - expressions [SQL Server], about expressions
@@ -21,14 +23,14 @@ helpviewer_keywords:
 - simple expressions [SQL Server]
 - complex expressions [SQL Server]
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 49efa9c940ff4428747942c88259bdd58b96a658
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

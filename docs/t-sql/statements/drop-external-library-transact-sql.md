@@ -14,14 +14,16 @@ ms.topic: language-reference
 f1_keywords:
 - DROP EXTERNAL LIBRARY
 - DROP_EXTERNAL_LIBRARY_TSQL
-dev_langs: TSQL
-helpviewer_keywords: DROP EXTERNAL LIBRARY
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- DROP EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
 manager: craigg
 ms.openlocfilehash: 8c45da28bf795fca50454fde21eb7d2c3c798296
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

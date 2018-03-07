@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - HAS_DBACCESS_TSQL
 - HAS_DBACCESS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - permissions [SQL Server], verifying
 - permissions [SQL Server], user access status
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - testing permissions
 - status information [SQL Server], user access
 ms.assetid: 99b43a72-0722-4a7b-a493-bdee1c74c7b9
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 6f0463463a489e7a0e2a252aad80fd3e1ce60679
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

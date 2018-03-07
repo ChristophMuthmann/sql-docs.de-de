@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STBoundary (geometry Data Type)
 - STBoundary_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STBoundary (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STBoundary (geometry Data Type)
 ms.assetid: f0551674-e6e8-4926-9038-df03f2c807d7
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9c7db74c44bd314d23c7452722159b769def5777
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

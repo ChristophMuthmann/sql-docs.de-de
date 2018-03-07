@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - $partition_TSQL
 - $partition
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - $PARTITION function
 - partitions [SQL Server], numbers
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7fb60ef43ba359bef366a113704a784ce0f73902
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -22,20 +23,21 @@ f1_keywords:
 - sql13.swb.dbencryptionkeyg.f1
 - CREATE DATABASE ENCRYPTION
 - CREATE_DATABASE_ENCRYPTION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - database encryption key
 - CREATE DATABASE ENCRYPTION KEY statement
 - database encryption key, create
 ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: b108a5cddba7052d177760374d8c5047b28fb25c
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

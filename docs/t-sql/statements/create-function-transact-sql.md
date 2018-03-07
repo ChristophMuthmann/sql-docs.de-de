@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CREATE FUNCTION
 - CREATE_FUNCTION_TSQL
 - FUNCTION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - invoking functions
 - extended stored procedures [SQL Server], functions
@@ -36,14 +38,14 @@ helpviewer_keywords:
 - scalar-valued functions
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-caps.latest.revision: "162"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 76b25e852e94ff6a511d8b18adb31f9da883a7fe
 ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/02/2018
 ---

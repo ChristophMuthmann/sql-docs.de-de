@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,20 +19,21 @@ f1_keywords:
 - CREATE_SEARCH_PROPERTY_TSQL
 - CREATE SEARCH PROPERTY
 - CREATE SEARCH PROPERTY LIST
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], creating
 - CREATE SEARCH PROPERTY LIST statement
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 71432baf23daeae2a1f60384dcbe98db7b708e91
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - EnvelopeAngle
 - EnvelopeAngle_TSQL
-dev_langs: TSQL
-helpviewer_keywords: EnvelopeAngle method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- EnvelopeAngle method
 ms.assetid: 14a7ba15-168c-4b08-ba3d-951d73092ac7
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 692287aee372bf349cfa795e3b52c6e84c8e4f42
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

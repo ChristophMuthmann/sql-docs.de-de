@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -28,19 +29,20 @@ f1_keywords:
 - BadPasswordTime
 - IsLockedIsMustChange_TSQL
 - LOGINPROPERTY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - default database
 - LOGINPROPERTY function
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c5aa0f30058bdd2e6fc13121e4a849d4496b667d
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

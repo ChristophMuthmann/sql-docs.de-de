@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - SET CONCAT_NULL_YIELDS_NULL
 - CONCAT_NULL_YIELDS_NULL
 - SET_CONCAT_NULL_YIELDS_NULL_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CONCAT_NULL_YIELDS_NULL option
 - null values [SQL Server], concatenation results
 - concatenation [SQL Server]
 - SET CONCAT_NULL_YIELDS_NULL statement
 ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 9660aa9492b25c106f1ee0bbe7c8fb9d2ed061ee
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

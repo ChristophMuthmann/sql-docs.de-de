@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ORIGINAL_LOGIN_TSQL
 - ORIGINAL_LOGIN
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - logins [SQL Server], context switches
 - context switching [SQL Server], login names
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - ORIGINAL_LOGIN function
 - names [SQL Server], logins
 ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c49c887b85ae6c5314420f8ba93e6b1f11604818
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC_CHECKCONSTRAINTS_TSQL
 - CHECKCONSTRAINTS
 - CHECKCONSTRAINTS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DBCC CHECKCONSTRAINTS statement
 - consistency [SQL Server], constraints
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - constraints [SQL Server], consistency checks
 - integrity [SQL Server], constraints
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 2ff75ba3c32d138d9124eba5cfe170cf146d5778
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

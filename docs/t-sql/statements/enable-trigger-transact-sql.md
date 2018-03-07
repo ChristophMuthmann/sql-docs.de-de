@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - ENABLE_TSQL
 - ENABLE_TRIGGER_TSQL
 - ENABLE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DDL triggers, enabling
 - triggers [SQL Server], enabling
 - DML triggers, enabling
 - ENABLE TRIGGER statement
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7627fdb66a091d5add30a8384861d9b6b03b82b5
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,24 +8,26 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - witness [SQL Server], establishing
 - manual failover [SQL Server]
 - ALTER DATABASE statement, database mirroring
 - database mirroring [SQL Server], Transact-SQL
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 54396925abb0e8eb2d6006ffdd4048551792d6db
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

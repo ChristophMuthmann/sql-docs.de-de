@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DecryptByCert_TSQL
 - DECRYPTBYCERT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - certificates [SQL Server], decryption
 - decryption [SQL Server], certificates
 - DECRYPTBYCERT function
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b49bdceb3d27af9c252739938ca9ec309f1510ec
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

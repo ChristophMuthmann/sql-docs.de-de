@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,17 +17,19 @@ f1_keywords:
 - ALTER SECURITY POLICY
 - ALTER_SECURITY_TSQL
 - ALTER SECURITY
-dev_langs: TSQL
-helpviewer_keywords: ALTER SECURITY POLICY statement
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- ALTER SECURITY POLICY statement
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f5ce90660a43e5285735a74a01b560ec210ba3f0
 ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/02/2018
 ---

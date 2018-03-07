@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@TEXTSIZE'
 - '@@TEXTSIZE_TSQL'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SET statement, TEXTSIZE option
 - SELECT statement [SQL Server], text size returned
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - '@@TEXTSIZE function'
 - text size returned [SQL Server]
 ms.assetid: 4308a7b9-8e8f-49e9-8246-8224e32f4953
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 38f8444a2b078335b4f1bcfce89da966c55b04dc
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

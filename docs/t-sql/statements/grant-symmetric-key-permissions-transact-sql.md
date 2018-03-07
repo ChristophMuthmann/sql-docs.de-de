@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - symmetric keys [SQL Server], permissions
 - permissions [SQL Server], symmetric keys
@@ -20,14 +22,14 @@ helpviewer_keywords:
 - cryptography [SQL Server], symmetric keys
 - granting permissions [SQL Server], symmetric keys
 ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a80cd14f583074fa4d4d605c9f38b3df671d436d
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

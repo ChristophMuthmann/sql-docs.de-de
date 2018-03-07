@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - granting permissions [SQL Server], Service Broker
 - routes [Service Broker], permissions
@@ -21,14 +23,14 @@ helpviewer_keywords:
 - message types [Service Broker], permissions
 - contracts [Service Broker], permissions
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0383e0b5446537b77e02ce4b8e4d3e54c850bdd1
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

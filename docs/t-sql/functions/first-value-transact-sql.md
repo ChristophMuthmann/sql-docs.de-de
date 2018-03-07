@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FIRST_VALUE_TSQL
 - FIRST_VALUE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - FIRST_VALUE function
 - analytic functions, FIRST_VALUE
 ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 57c3f22adbc1073fc15e72e3228c1b65101bdbbc
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

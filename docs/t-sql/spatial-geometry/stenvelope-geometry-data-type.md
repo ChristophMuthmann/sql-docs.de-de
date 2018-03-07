@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STEnvelope_TSQL
 - STEnvelope (geometry Data Type)
-dev_langs: TSQL
-helpviewer_keywords: STEnvelope (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STEnvelope (geometry Data Type)
 ms.assetid: 781d22e9-38df-4c23-836f-6dd0bdef49c5
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e94de0d672001801d74ed16775b3c1684a822605
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

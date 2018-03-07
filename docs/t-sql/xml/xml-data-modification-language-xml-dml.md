@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - modifying data [SQL Server], XML DML
 - XML [SQL Server], DML
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - XQuery, XML DML
 - xml data type [SQL Server], XML DML
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 74f591801b50df0bacf3c873f73d6cc9ee28f4d8
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

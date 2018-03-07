@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DATEPART_TSQL
 - DATEPART
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - date and time [SQL Server], DATEPART
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: a972e0646d68620b915fe441e35ebfb617d06859
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

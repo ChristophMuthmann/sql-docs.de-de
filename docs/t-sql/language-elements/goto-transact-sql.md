@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - GOTO
 - GOTO_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - skipping statements
 - Transact-SQL statements, skipping
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - statements [SQL Server], skipping
 - GOTO statement
 ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: e4420f83c9cb36ea9c8dfb2f9cae6586d7089047
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

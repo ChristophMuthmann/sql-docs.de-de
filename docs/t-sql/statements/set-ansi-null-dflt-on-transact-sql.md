@@ -8,16 +8,19 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - ANSI_NULL_DFLT_ON
 - ANSI_NULL_DFLT_ON_TSQL
 - SET ANSI_NULL_DFLT_ON
 - SET_ANSI_NULL_DFLT_ON_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SET ANSI_NULL_DFLT_ON statement
 - ANSI_NULL_DFLT_ON option
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - null values [SQL Server], overriding
 - overriding default nullability
 ms.assetid: 8c925924-a466-4c8b-aeb2-7e0d341f32db
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 82532accfe14729a0e3ccbfa7bd3f1b55d2aaa01
 ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2017
 ---

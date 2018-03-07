@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP PARTITION SCHEME
 - DROP_PARTITION_SCHEME_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DROP PARTITION SCHEME statement
 - deleting partition schemes
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - removing partition schemes
 - partition schemes [SQL Server], removing
 ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c410a37aca0ad2b7c8ca662f76d9af8d9fc6d75a
 ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/06/2017
 ---

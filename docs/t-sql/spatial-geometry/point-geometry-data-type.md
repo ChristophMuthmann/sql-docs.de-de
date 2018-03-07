@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - Point
 - Point_TSQL
-dev_langs: TSQL
-helpviewer_keywords: Point (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Point (geometry Data Type)
 ms.assetid: 7a2e593a-4d4c-4214-b0c5-02d1ac46bc66
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 89f1a91310ea7ccbc6d4ab8724022c3463e4ea8d
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

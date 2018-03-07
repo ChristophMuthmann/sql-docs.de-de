@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ERROR_SEVERITY_TSQL
 - ERROR_SEVERITY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - errors [SQL Server], severity
 - messages [SQL Server], severity
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - CATCH block
 - ERROR_SEVERITY function
 ms.assetid: 50228f2f-6949-4d2e-8e43-fad11bf973ab
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: d5c8b4aa0a53a39ed6773fdf90ff42dc6128b2f3
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

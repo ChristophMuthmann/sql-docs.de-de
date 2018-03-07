@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - NumRings_TSQL
 - NumRings
-dev_langs: TSQL
-helpviewer_keywords: NumRings method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- NumRings method
 ms.assetid: 0e4e4fa2-b608-4cc4-98ba-0845ddb4214c
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 1dbcf68cd55f123ea0b9ff8b3a774207b347218d
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

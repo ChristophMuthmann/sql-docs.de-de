@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,19 +20,20 @@ f1_keywords:
 - <>(Not Equal To)
 - NOT
 - Equal
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - not equal to operator (<>)
 - <> (not equal to operator)
 ms.assetid: 34cf9b38-d589-4be9-925a-116e224609a0
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: ffacad3e57cd9c9ab1331e0dbe52335ae1d6ddf1
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

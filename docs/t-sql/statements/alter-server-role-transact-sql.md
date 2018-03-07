@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SERVER_ROLE_TSQL
 - ALTER SERVER ROLE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SERVER ROLE, ALTER
 - ALTER SERVER ROLE statement
 ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7ce5b5223f5c755c89cb3e105ceb6517087d699f
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

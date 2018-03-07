@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - ISOLATION
 - ISOLATION_TSQL
 - SET_TRANSACTION_ISOLATION_LEVEL_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SET TRANSACTION ISOLATION LEVEL statement
 - row versioning [SQL Server], isolation levels
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - locking [SQL Server], isolation levels
 - transactions [SQL Server], isolation levels
 ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
-caps.latest.revision: "80"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: cde588fed7aad439e90c97de99ba89633a1df2c5
 ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2017
 ---

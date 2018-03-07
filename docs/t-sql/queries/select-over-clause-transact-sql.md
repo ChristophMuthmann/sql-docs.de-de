@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OVER_TSQL
 - OVER
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - order of rowsets [SQL Server]
 - rowsets [SQL Server], windowing
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - rowsets [SQL Server], ordering
 - OVER clause
 ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
-caps.latest.revision: "75"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 1144e82253c5e9d2988ec9ff4a8aa47bb3cb2fb1
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

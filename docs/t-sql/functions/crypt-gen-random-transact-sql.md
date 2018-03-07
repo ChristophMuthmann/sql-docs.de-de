@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CRYPT_GEN_RANDOM_TSQL
 - CRYPT_GEN_RANDOM
-dev_langs: TSQL
-helpviewer_keywords: CRYPT_GEN_RANDOM function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CRYPT_GEN_RANDOM function
 ms.assetid: b74bd9d4-758e-4b94-89a0-76dcda6d8c42
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 695af04a3ee411392cf00be6b6483c9338a4c989
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SIGNBYASYMKEY_TSQL
 - SIGNBYASYMKEY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - text signing [SQL Server]
 - encryption [SQL Server], asymmetric keys
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - cryptography [SQL Server], asymmetric keys
 - clear text signing
 ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: dd32b46481866acb59c7c94a18a66507171fb36c
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

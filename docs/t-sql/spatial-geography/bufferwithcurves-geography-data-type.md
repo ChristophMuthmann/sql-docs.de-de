@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - BufferWithCurves
 - BufferWithCurves_TSQL
-dev_langs: TSQL
-helpviewer_keywords: BufferWithCurves method (geography)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- BufferWithCurves method (geography)
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0978418fe682728d02f7c65b5bff581154ae231c
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,7 +21,8 @@ f1_keywords:
 - CONTAINS_FILESTREAM_TSQL
 - CONTAINS FILESTREAM
 - CONTAINMENT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - snapshots [SQL Server database snapshots], creating
 - databases [SQL Server], creating
@@ -36,14 +38,14 @@ helpviewer_keywords:
 - moving databases
 - attaching databases [SQL Server], CREATE DATABASE...FOR ATTACH
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
-caps.latest.revision: "212"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 7c6e52f8e36ed40e18c2aeab162a75c39f186c97
 ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/22/2018
 ---

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - ALTER_AVAILABILITY_TSQL
 - ALTER AVAILABILITY GROUP
 - ALTER AVAILABILITY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - ALTER AVAILABILITY GROUP statement
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
-caps.latest.revision: "152"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: d9f18ee709fde7c9f239b08f553eaf43fad6e9d2
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

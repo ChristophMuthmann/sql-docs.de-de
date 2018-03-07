@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - HAVING clause, predicates
 - FROM clause, predicates
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - predicates [full-text search]
 - expressions [SQL Server], predicates
 ms.assetid: ddbc530c-f44d-4551-9ca3-3430258eb6c0
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 598e7c6cfe94f8f74f65257c2a0a0aebf701a7cf
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@CPU_BUSY_TSQL'
 - '@@CPU_BUSY'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CPU [SQL Server]
 - status information [SQL Server], CPU
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - statistical information [SQL Server], CPU
 - CPU [SQL Server], activity
 ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 337682a73ae351536af64afca77959cbe6297d7f
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

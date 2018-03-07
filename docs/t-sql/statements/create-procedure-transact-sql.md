@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,7 +21,8 @@ f1_keywords:
 - CREATE PROC
 - PROC_TSQL
 - CREATE_PROCEDURE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - parameters [SQL Server], stored procedures
 - table-valued parameters
@@ -46,14 +48,14 @@ helpviewer_keywords:
 - automatic stored procedure execution
 - creating stored procedures
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
-caps.latest.revision: "180"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 086151e2916335ae0d7cda3eef11a79363d3ce53
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

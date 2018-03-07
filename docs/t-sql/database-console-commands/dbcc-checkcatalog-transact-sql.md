@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC CHECKCATALOG
 - CHECKCATALOG_TSQL
 - CHECKCATALOG
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - catalogs [SQL Server], consistency checks
 - checking catalog consistency
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - integrity [SQL Server], catalogs
 - consistency [SQL Server], catalogs
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7c8b73259e599e0001706cfaf09dca30d7d31a5b
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

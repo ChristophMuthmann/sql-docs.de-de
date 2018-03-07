@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - KILL QUERY NOTIFICATION SUBSCRIPTION
 - KILL_QUERY_NOTIFICATION_SUBSCRIPTION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - KILL QUERY NOTIFICATION SUBSCRIPTION statement
 - removing subscriptions
 - subscriptions [SQL Server query notifications], stopping
 - query notifications [SQL Server], subscriptions
 ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9cec802ec4402716a8d24f7720664e4db856ca1a
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

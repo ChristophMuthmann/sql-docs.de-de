@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - SET_NUMERIC_ROUNDABORT_TSQL
 - SET NUMERIC_ROUNDABORT
 - NUMERIC_ROUNDABORT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - rounding expressions
 - precision [SQL Server], rounded expressions
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - NUMERIC_ROUNDABORT
 - SET NUMERIC_ROUNDABORT statement
 ms.assetid: d20e74f1-b8da-466c-b180-9d8a8b851a77
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a4f5a5369321999a980835a502a730bfe383aefd
 ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2017
 ---

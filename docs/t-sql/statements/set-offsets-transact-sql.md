@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - OFFSETS_TSQL
 - SET OFFSETS
 - OFFSETS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - position relative to start of statement [SQL Server]
 - OFFSETS option
 - offsets [SQL Server]
 - SET OFFSETS statement
 ms.assetid: c7bcc697-0930-4630-acae-d8ccbfa4414c
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 232550be5756505082b615a84ccbd35ef84b1477
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

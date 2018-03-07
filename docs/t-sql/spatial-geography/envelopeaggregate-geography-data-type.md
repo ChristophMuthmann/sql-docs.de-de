@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - EnvelopeAggregate_TSQL
 - EnvelopeAggregate
-dev_langs: TSQL
-helpviewer_keywords: EnvelopeAggregate method (geography)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- EnvelopeAggregate method (geography)
 ms.assetid: 4947797f-edb8-490f-beca-37df9ec06954
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 62e288175b4c8f6f33e3996046fa24ffccaa8b2c
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@IO_BUSY'
 - '@@IO_BUSY_TSQL'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ticks [SQL Server]
 - I/O [SQL Server], time spent performing operations
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - input operations [SQL Server]
 - time [SQL Server], I/O operations
 ms.assetid: 3c26770c-41ae-4e34-8c82-7bef920ffbca
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d42b1961a8e2c4b6feb43f415f43968fbf68fd8a
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

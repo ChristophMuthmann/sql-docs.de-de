@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
 - SQL Server (starting with 2008)
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - compound operators
 - compound operators, described
 ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 38aa65b196288c120dea5766fe29c64d58af0216
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

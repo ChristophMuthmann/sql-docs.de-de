@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER EXTERNAL DATA SOURCE
 - ALTER_EXTERNAL_DATA_SOURCE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - polybase, alter external data source statement
 - ALTER EXTERNAL DATA SOURCE statement
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 16ea77011039c1b48ab83bfd335028c83c6f3c3e
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

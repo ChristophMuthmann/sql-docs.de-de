@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: PIVOT_TSQL
+f1_keywords:
+- PIVOT_TSQL
 helpviewer_keywords:
 - FROM clause, UNPIVOT operator
 - unpivoting tables
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - FROM clause, PIVOT operator
 - rotating columns
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 1feee91c251b5c1f326e8e69569186c049007d9e
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

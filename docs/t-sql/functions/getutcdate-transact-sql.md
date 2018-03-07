@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - GETUTCDATE
 - GETUTCDATE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - time [SQL Server], UTC time
 - dates [SQL Server], functions
@@ -35,14 +37,14 @@ helpviewer_keywords:
 - dates [SQL Server], system date and time
 - time [SQL Server], system
 ms.assetid: 48a5b230-102e-4a89-bb2a-fcf0cac862bb
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 4993d384fda5327fb00222245e8847caa8c100ec
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

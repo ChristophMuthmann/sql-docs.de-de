@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CERTENCODED
 - CERTENCODED_TSQL
-dev_langs: TSQL
-helpviewer_keywords: CERTENCODED
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CERTENCODED
 ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 635720f8ed9c3d2aa48d2f5cbf03438171b1fe78
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

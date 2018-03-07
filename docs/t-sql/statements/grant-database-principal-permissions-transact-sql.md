@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - database roles [SQL Server], permissions
 - permissions [SQL Server], database roles
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - GRANT statement, roles
 - application roles [SQL Server], permissions
 ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 58f66a871299d85c8ee9bce59b696cec2668ae9f
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

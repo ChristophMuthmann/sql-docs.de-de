@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FILE_ID
 - FILE_ID_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - IDs [SQL Server], files
 - file IDs [SQL Server]
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - identification numbers [SQL Server], files
 - file names [SQL Server], FILE_ID
 ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f1b2025ee9fdc5ca0aaf4967305db40cb65d038c
 ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/02/2018
 ---

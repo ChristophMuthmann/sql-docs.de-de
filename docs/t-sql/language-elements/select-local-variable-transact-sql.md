@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,21 +19,22 @@ f1_keywords:
 - variable
 - '@loca_variable_TSQL'
 - '@local_TSQL'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - variables [SQL Server], assigning
 - SELECT statement [SQL Server], @local_variable
 - '@local_variable'
 - local variables [SQL Server]
 ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 44fd55346e8a4a27f1d3301d6cb3c6bdf7bdf548
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

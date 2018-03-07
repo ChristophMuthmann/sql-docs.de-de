@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - INTO
 - INTO clause
 - INTO_clause_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - copying data [SQL Server], into a new table
 - INTO clause
@@ -29,14 +31,14 @@ helpviewer_keywords:
 - clauses [SQL Server], INTO
 - row additions [SQL Server], INTO clause
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 410e71466944f1744d0c8092f0ad030ffa1da29b
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,21 +18,22 @@ f1_keywords:
 - CREATE CREDENTIAL
 - CREATE_CREDENTIAL_TSQL
 - CREDENTIAL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SECRET clause
 - authentication [SQL Server], credentials
 - CREATE CREDENTIAL statement
 - credentials [SQL Server], CREATE CREDENTIAL statement
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: f0e46404d775da09f4aaeb7b9640dd2a35d3cfa2
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

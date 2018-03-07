@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP_DEFAULT_TSQL
 - DROP DEFAULT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DROP DEFAULT statement
 - defaults [SQL Server], removing
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 271155983d1fe6b1315235846f72e38d812b349c
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

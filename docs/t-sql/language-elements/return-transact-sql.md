@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RETURN_TSQL
 - RETURN
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - unconditionally exiting program
 - stored procedures [SQL Server], exiting
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - exiting procedures [SQL Server]
 - RETURN statement
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: e7584bdee4d9b07706bc961db23e0090e28cc581
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

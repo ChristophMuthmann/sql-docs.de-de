@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CONVERT_TSQL
 - CAST
 - CONVERT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CAST function
 - automatic data type conversion
@@ -35,14 +37,14 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-caps.latest.revision: "136"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 56326d7862c004ac056e329e6cc05f7bbe056aea
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/18/2018
 ---

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DELETE
 - DELETE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - row removal [SQL Server]
 - DELETE statement [SQL Server], about DELETE statement
@@ -26,14 +28,14 @@ helpviewer_keywords:
 - row removal [SQL Server], DELETE statement
 - deleting data
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
-caps.latest.revision: "78"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: f0741ba08adf5299e8a4f5a3021f533d44988459
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

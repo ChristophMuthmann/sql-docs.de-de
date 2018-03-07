@@ -8,20 +8,23 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: OGC Methods on Geometry Instances [SQL Server]
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- OGC Methods on Geometry Instances [SQL Server]
 ms.assetid: c0c0f441-bf33-410c-9df0-544e3d05b944
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 20fa50164b41c825d275f82805b801d1e4590dc3
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

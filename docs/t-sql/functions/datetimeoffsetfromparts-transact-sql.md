@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DATETIMEOFFSETFROMPARTS_TSQL
 - DATETIMEOFFSETFROMPARTS
-dev_langs: TSQL
-helpviewer_keywords: DATETIMEOFFSETFROMPARTS function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- DATETIMEOFFSETFROMPARTS function
 ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 1c8a5f8bea3bf6ca97e0f7b4a35f8f78315716df
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

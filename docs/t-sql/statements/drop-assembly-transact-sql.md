@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP ASSEMBLY
 - DROP_ASSEMBLY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - removing assemblies
 - DROP ASSEMBLY statement
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - dropping assemblies
 - WITH NO DEPENDENTS option
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9c6156ff11476e91f13285c1db7d4cc545d5e8e5
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

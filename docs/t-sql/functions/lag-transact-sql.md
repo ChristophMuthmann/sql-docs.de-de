@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - LAG_TSQL
 - LAG
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - LAG function
 - analytic functions, LAG
 ms.assetid: a9a90bdb-3f80-4c97-baca-b7407bcdc7f0
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 5a6942ecfcf189716e0829eadcb0d94c6d731650
 ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/02/2018
 ---

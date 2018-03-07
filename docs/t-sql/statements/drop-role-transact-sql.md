@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP ROLE
 - DROP_ROLE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - deleting roles
 - database roles [SQL Server], removing
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - roles [SQL Server], removing
 - dropping roles
 ms.assetid: 1f6f13ae-56a2-4ef1-93f5-8e6151b83e1d
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: d3ab74cca51d7fc52edb134d29887bb30abb4499
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STOverlaps (geometry Data Type)
 - STOverlaps_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STOverlaps (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STOverlaps (geometry Data Type)
 ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 523630ab4f18acff7c046d914493d6d5dfae97a4
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

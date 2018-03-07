@@ -8,20 +8,23 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: CollectionAggregate method (geometry)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CollectionAggregate method (geometry)
 ms.assetid: b7c85d59-c841-4b7f-9d46-8b4b7f2a3afe
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5beba14806fb387c9004ec0b7992e2869d88d4dc
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

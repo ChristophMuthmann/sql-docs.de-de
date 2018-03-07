@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FETCH
 - FETCH_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - FETCH statement
 - cursors [SQL Server], fetching
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - SCROLL option
 - row fetching [SQL Server]
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: fae1e085c26c2bcbc6b2605187b4554dba414642
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

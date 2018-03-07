@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - Reparent_TSQL
 - Reparent
-dev_langs: TSQL
-helpviewer_keywords: Reparent [Database Engine]
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Reparent [Database Engine]
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e0b054e9651cce9a486d4acf9e997a601114e98a
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

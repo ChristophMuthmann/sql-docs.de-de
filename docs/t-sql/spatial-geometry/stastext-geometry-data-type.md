@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STAsText_TSQL
 - STAsText (geometry Data Type)
-dev_langs: TSQL
-helpviewer_keywords: STAsText (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STAsText (geometry Data Type)
 ms.assetid: e0decf5e-2858-4c56-b61a-6123f47fb51c
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 860af386f1be8070aa60aeed80727b45fc81ac1d
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

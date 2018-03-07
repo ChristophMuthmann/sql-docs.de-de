@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OBJECT_ID
 - OBJECT_ID_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - objects [SQL Server], IDs
 - identification numbers [SQL Server], database objects
@@ -26,14 +28,14 @@ helpviewer_keywords:
 - viewing object IDs
 - verifying object exists
 ms.assetid: f89286db-440f-4218-a828-30881ce3077a
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 4978a07401fa33e0244a61181e29cfd6146b695e
 ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/09/2018
 ---

@@ -8,24 +8,27 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: negative
-dev_langs: TSQL
+f1_keywords:
+- negative
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - '- (negative)'
 - negative operator (-)
 - negative values
 ms.assetid: d6c14d14-d379-403b-82db-c197ad58c896
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c2d561099b6208ad0057489efd27942e48882df9
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

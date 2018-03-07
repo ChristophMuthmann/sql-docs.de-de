@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STUnion (geography Data Type)
 - STUnion_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STUnion method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STUnion method
 ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 644eda08517d3c627b16e6f5ad1c4c6339a8783c
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

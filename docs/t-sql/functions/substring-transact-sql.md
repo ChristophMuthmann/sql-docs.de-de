@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SUBSTRING
 - SUBSTRING_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - portion of expression returned [SQL Server]
 - part of expression returned [SQL Server]
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - expressions [SQL Server], part returned
 - characters [SQL Server], returning part of
 ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 2c78c77953dc60bdcd73ec29ba542a12478783fb
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/18/2018
 ---

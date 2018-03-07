@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STLength (geography Data Type)
 - STLength_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STLength method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STLength method
 ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2f5b7a075d562731f986c0f85db505c81315acbd
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

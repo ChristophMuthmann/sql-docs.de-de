@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - KEY_NAME_TSQL
 - KEY_NAME
-dev_langs: TSQL
-helpviewer_keywords: KEY_NAME function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- KEY_NAME function
 ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: db0ea5d34aae0bd3486bd6a143df187b9d5d7899
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

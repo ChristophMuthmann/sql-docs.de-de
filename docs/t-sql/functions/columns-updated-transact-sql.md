@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - COLUMNS_UPDATED_TSQL
 - COLUMNS_UPDATED
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - COLUMNS_UPDATED function
 - testing columns
 - column testing [SQL Server]
 - updated columns
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: a64b20ce0d429ccd257c178abdb7c04630e409ec
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

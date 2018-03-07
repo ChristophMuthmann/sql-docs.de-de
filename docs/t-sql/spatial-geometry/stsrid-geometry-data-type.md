@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STSrid (geometry Data Type)
 - STSrid_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STSrid (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STSrid (geometry Data Type)
 ms.assetid: 5e0de983-a0fe-48b7-9e08-30588d7271e2
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 3cfb23d05284f5e4788d0f3be4b34600f09c1df1
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

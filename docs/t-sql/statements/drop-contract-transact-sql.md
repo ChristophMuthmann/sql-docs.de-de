@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP_CONTRACT_TSQL
 - DROP CONTRACT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dropping contracts
 - removing contracts
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - contracts [Service Broker], dropping
 - DROP CONTRACT statement
 ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 26d986a502dfa4436d44ff733a1cd6ff50355788
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

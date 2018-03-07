@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,7 +21,8 @@ f1_keywords:
 - DIALOG_TSQL
 - BEGIN DIALOG
 - BEGIN DIALOG CONVERSATION
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - conversations [Service Broker]
 - beginning dialogs
@@ -31,14 +33,14 @@ helpviewer_keywords:
 - encryption [SQL Server], conversations
 - starting conversations
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: a2ece31010207b6044504f099c11443a2fec0fa2
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

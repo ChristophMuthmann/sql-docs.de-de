@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DENY
 - DENY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - schema-level securables [SQL Server]
 - security [SQL Server], denying access
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - database-level securables [SQL Server]
 - denying permissions [SQL Server]
 ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 78bf8698ac1b567abdf4ec0d340d972e2e33002f
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SCHEMA_ID
 - SCHEMA_ID_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - identification numbers [SQL Server], schemas
 - schemas [SQL Server], IDs
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - IDs [SQL Server], schemas
 - default schema IDs
 ms.assetid: c8e34df5-3eea-459f-ae40-050909ce9fda
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 8ff63abb8b74497b05045a2892067d7b4e49140a
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

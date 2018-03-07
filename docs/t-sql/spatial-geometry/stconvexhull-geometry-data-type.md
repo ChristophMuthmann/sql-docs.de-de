@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STConvexHull (geometry Data Type)
 - STConvexHull_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STConvexHull (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STConvexHull (geometry Data Type)
 ms.assetid: 60a520a6-1a7c-486b-8d91-34401edf6233
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f9ef8ba324571a8546dfe6ebdcdcdc8234509d3e
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

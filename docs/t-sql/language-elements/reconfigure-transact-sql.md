@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RECONFIGURE
 - RECONFIGURE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - reconfiguring configuration options
 - configuration options [SQL Server], reconfiguring
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - RECONFIGURE
 - RECONFIGURE, WITH OVERRIDE statement
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 432e5157969a10f36273db3bbd8990fa9e332b68
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

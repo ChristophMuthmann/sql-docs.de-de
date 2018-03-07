@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DATEFROMPARTS_TSQL
 - DATEFROMPARTS
-dev_langs: TSQL
-helpviewer_keywords: DATEFROMPARTS function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- DATEFROMPARTS function
 ms.assetid: 5b885376-87aa-41f1-9e18-04987aead250
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 73d2edfd6f0d19c4383b0bdbe1271d74a0ef2b6f
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

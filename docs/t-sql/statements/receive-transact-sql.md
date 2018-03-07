@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RECEIVE_TSQL
 - RECEIVE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - queues [Service Broker], message retrieval
 - messages [Service Broker], retrieving
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - receiving messages
 - retrieving messages
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: ed6bfbd57bda9c2c3e7649be91ded91605af153f
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

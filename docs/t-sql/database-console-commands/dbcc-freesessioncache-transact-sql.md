@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - FREESESSIONCACHE_TSQL
 - DBCC_FREESESSIONCACHE_TSQL
 - DBCC FREESESSIONCACHE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DBCC FREESESSIONCACHE statement
 - distributed queries [SQL Server], cache
 - clearing distributed query cache
 - flushing distributed query cache
 ms.assetid: a256ba63-7e11-4d5e-abc0-1fa4ed072e63
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 25690ece853aa6c4cc3564ce5adad4e9c692972e
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

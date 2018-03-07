@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - COLLATE
 - COLLATE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - collations [SQL Server], COLLATE clause
 - COLLATE clause
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 7a206f638b78a5e4311ab7889a7902aa39a17413
 ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/24/2018
 ---

@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STPointN_TSQL
 - STPointN (geometry Data Type)
-dev_langs: TSQL
-helpviewer_keywords: STPointN (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STPointN (geometry Data Type)
 ms.assetid: 8f0bb3b7-5cd9-42c2-b9f8-f04628653bd0
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 123ce8f5775bff59ff917bf0916f8e37108b9245
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

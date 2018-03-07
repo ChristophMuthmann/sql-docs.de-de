@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - TEXTSIZE
 - SET_TEXTSIZE_TSQL
 - SET TEXTSIZE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SET TEXTSIZE statement
 - SELECT statement [SQL Server], text size returned
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - TEXTSIZE option
 - text size returned [SQL Server]
 ms.assetid: 787154a6-39a6-4dd6-a6d0-67b4364f95d5
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 5ecffd26c600d3a224824aa9a64ce347cd2f9fbc
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

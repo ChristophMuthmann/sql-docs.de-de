@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - UPDATE STATISTICS
 - UPDATE_STATISTICS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - updating statistics
 - query optimization statistics [SQL Server], updating
 - UPDATE STATISTICS statement
 - statistical information [SQL Server], updating
 ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
-caps.latest.revision: "74"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 7c69949773ff1dae533c98d087780a2f4b436b62
 ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/05/2018
 ---

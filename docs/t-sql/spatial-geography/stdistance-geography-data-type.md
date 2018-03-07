@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STDistance_TSQL
 - STDistance (geography Data Type)
-dev_langs: TSQL
-helpviewer_keywords: STDistance method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STDistance method
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: cf72157a0168fb2bbf8aeb7ef6ec6381a0cab748
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

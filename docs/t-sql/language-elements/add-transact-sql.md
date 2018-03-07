@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - +
 - +_TSQL
 - + (Add)
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - addition (+)
 - adding numbers
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - plus sign (+)
 - add operator (+)
 ms.assetid: 4ba8baac-5f07-432c-87c5-d23e7011da55
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 0c9aca952ab6853a2456b95dab912092d7708668
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

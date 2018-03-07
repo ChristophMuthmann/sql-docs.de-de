@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - database roles [SQL Server], permissions
 - denying permissions [SQL Server], database roles
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - denying permissions [SQL Server], application roles
 - application roles [SQL Server], permissions
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5f2934637cf18a1188de37c0aba40dac171cd0e9
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

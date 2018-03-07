@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SERVER_AUDIT_TSQL
 - ALTER SERVER AUDIT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - server audit [SQL Server]
 - audits [SQL Server], specification
 - ALTER SERVER AUDIT statement
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 992919d80e0f82393af0a6aa4c2c5564d3ec6189
 ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/02/2018
 ---

@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DECRYPTBYKEYAUTOCERT
 - DECRYPTBYKEYAUTOCERT_TSQL
-dev_langs: TSQL
-helpviewer_keywords: DECRYPTBYKEYAUTOCERT function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- DECRYPTBYKEYAUTOCERT function
 ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9aca90f988ae2d12d9a7c26f01673530b1a07f4b
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

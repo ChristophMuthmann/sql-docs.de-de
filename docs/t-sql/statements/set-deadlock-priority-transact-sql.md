@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DEADLOCK_PRIORITY_TSQL
 - SET_DEADLOCK_PRIORITY_TSQL
 - DEADLOCK_PRIORITY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - deadlocks [SQL Server], priority settings
 - DEADLOCK_PRIORITY option
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - priority deadlock settings [SQL Server]
 - SET DEADLOCK_PRIORITY statement
 ms.assetid: 810a3a8e-3da3-4bf9-bb15-7b069685a1b6
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: b80f18cb5440560b34924cad619af1f195f49a47
 ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/22/2017
 ---

@@ -8,21 +8,25 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: ALTER_EXTERNAL_RESOURCE_POOL_TSQL
-dev_langs: TSQL
-helpviewer_keywords: ALTER EXTERNAL RESOURCE POOL statement
+f1_keywords:
+- ALTER_EXTERNAL_RESOURCE_POOL_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- ALTER EXTERNAL RESOURCE POOL statement
 ms.assetid: 634c327d-971b-49ba-b8a2-e243a04040db
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: jeannt
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: cb4073a8114e953dc9df87614a63e074ab8c9683
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

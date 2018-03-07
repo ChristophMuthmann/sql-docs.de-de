@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE_SERVER_AUDIT_SPECIFICATION_TSQL
 - CREATE SERVER AUDIT SPECIFICATION
-dev_langs: TSQL
-helpviewer_keywords: CREATE SERVER AUDIT SPECIFICATION statement
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CREATE SERVER AUDIT SPECIFICATION statement
 ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 06457f549575de83fc93c53d204a79061f4f4254
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

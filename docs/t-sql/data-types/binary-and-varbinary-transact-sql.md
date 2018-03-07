@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,20 @@ f1_keywords:
 - varbinary_TSQL
 - binary
 - varbinary
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - varbinary data type
 - binary [SQL Server], about binary data type
 ms.assetid: bcce65f9-10db-4b3e-bfaf-dfc06c6f820f
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 4ad5bce3cacc0f892f7087df785da8cedcb4e932
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

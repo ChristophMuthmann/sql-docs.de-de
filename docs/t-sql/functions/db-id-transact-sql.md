@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DB_ID_TSQL
 - DB_ID
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - viewing database ID numbers
 - IDs [SQL Server], databases
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - displaying database ID numbers
 - DB_ID function
 ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 152e471cf63efa09b0fc6dcb65acd28a191699b0
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

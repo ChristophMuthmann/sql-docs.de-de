@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ASCII_TSQL
 - ASCII
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ASCII function
 - characters [SQL Server], ASCII
 - code [SQL Server], ASCII
 - leftmost character of expression
 ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: b933f33b8eb6b3909eaf7cb0afcd8bfe19862dee
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/18/2018
 ---

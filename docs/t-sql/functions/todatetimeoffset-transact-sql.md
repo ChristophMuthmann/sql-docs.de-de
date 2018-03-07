@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - SWITCH_TZ_TSQL
 - SWITCH_TZ
 - TO_DATETIMEOFFSET
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - date and time [SQL Server], TODATETIMEOFFSET
 - TODATETIMEOFFSET function
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: b5fafc08-efd4-4a3b-a0b3-068981a0a685
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: b6a8e329f2dc0db17bfb7e0e1a99657f7d436365
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

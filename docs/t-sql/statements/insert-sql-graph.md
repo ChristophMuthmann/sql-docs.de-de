@@ -9,22 +9,24 @@ ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - INSERT statement [SQL Server], SQL graph
 - SQL graph, INSERT statement
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 6bac7f1d7da67f319a9c84425b370bb61a35ca19
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

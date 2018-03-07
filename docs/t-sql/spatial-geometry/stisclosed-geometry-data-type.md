@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STIsClosed_TSQL
 - STIsClosed (geometry Data Type)
-dev_langs: TSQL
-helpviewer_keywords: STIsClosed (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STIsClosed (geometry Data Type)
 ms.assetid: 14edbb22-df7b-4b8a-b16c-ac477a5d32c1
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c3296ce000cbcd2b78ee6a01e8c57499fb9686c2
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

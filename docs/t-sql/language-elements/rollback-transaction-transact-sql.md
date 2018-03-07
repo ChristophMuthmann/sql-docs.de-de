@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - ROLLBACK
 - ROLLBACK_TSQL
 - ROLLBACK_TRANSACTION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - transaction rollbacks [SQL Server]
 - ROLLBACK TRANSACTION statement
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - roll back transactions [SQL Server]
 - savepoints [SQL Server]
 ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 0df2fdf3d3e4aa7915fbfef3ff921d12b2851044
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - LIKE
 - ESCAPE_TSQL
 - LIKE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ESCAPE keyword
 - '% (wildcard - character(s) to match)'
@@ -31,14 +33,14 @@ helpviewer_keywords:
 - matching patterns [SQL Server]
 - NOT LIKE keyword
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 4fa2299a1efade9f44de85d02c60286a25aad8d0
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

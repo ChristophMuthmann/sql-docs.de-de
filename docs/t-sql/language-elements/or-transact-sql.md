@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OR_TSQL
 - OR
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - conditions [SQL Server], combining
 - combining conditions
 - OR operator
 ms.assetid: b730a256-4a63-4880-9906-65b05cd9caf2
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 32e93a12ed79b6cbb2f2796e6362ba97f69abc21
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

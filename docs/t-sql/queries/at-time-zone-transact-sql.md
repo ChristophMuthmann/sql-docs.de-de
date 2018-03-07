@@ -8,22 +8,24 @@ ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - AT TIME ZONE
 - AT_TIME_ZONE_TSQL
-helpviewer_keywords: AT TIME ZONE function
+helpviewer_keywords:
+- AT TIME ZONE function
 ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 8b77aeb47515f4140f78a70288e9e25d2acc52d1
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

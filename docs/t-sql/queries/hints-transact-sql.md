@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - query optimizer [SQL Server], hints
 - hints [SQL Server], about hints
@@ -21,14 +23,14 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], hints
 - DELETE statement [SQL Server], hints
 ms.assetid: 99412475-b0df-4264-9938-33a0b302b41a
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: bddb86e431c252a45e68a52a4e7192d9fcbc5006
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

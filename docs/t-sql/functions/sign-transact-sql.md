@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SIGN_TSQL
 - SIGN
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - '- (negative)'
 - + (positive sign)
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - 0 (zero)
 - negative values
 ms.assetid: c3a98b52-6fbe-4127-a5c9-8a4922e83e28
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 883c0b862c0ab0b01f84a3089266cfb3fdedcede
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

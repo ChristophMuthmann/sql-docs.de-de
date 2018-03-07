@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - SET_DATEFIRST_TSQL
 - DATEFIRST_TSQL
 - DATEFIRST
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - first day of week [SQL Server]
 - day of week [SQL Server]
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - weekdays [SQL Server]
 - options [SQL Server], date
 ms.assetid: 6b0d0e52-8ac1-4f88-b091-f98d6fb8574a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 17fbbb901467fd0e35d9dad343184d37a74e64a6
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

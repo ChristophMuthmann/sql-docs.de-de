@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CLOSE_TSQL
 - CLOSE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - closing cursors
 - cursors [SQL Server], closing
 - CLOSE statement
 ms.assetid: 21546874-97e3-4b93-970f-87c27f6b78c7
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: d056ab67537c6b0646f58242bc8d3d7ab445f73f
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

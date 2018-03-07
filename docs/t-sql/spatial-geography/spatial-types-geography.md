@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: geography
-dev_langs: TSQL
+f1_keywords:
+- geography
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - geography data type [SQL Server], Transact-SQL
 - spatial data types [SQL Server]
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 2f9a5b86f49e2d5e9b07908cd3c866999ff2f646
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

@@ -8,22 +8,24 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DECOMPRESS
 - DECOMPRESS_TSQL
-helpviewer_keywords: DECOMPRESS function
+helpviewer_keywords:
+- DECOMPRESS function
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2988959b7ec3f9eccad74b752e7643f1e6675590
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - MONTH_TSQL
 - MONTH
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - values [SQL Server], date and time
 - dates [SQL Server], functions
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - dates [SQL Server], MONTH
 - MONTH function [SQL Server]
 ms.assetid: 9dd8aff7-b0fc-45df-b316-ead14ee9b8b7
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 9fff55128e9e5eda2d78646826ddeca2a25e6b56
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

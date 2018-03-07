@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,14 +24,14 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: f9eb68c07f9e163dfba699627e41ea825b041540
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

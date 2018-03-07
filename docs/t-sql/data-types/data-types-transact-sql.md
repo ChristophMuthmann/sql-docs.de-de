@@ -11,20 +11,21 @@ ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - system data types [SQL Server]
 - data types [SQL Server]
 - data types [SQL Server], about data types
 ms.assetid: a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 397d96212851ed52020a0ac0e951e282edf6c087
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

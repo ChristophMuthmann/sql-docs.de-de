@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - IO
 - IO_TSQL
 - SET STATISTICS IO
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - disk I/O statistics [SQL Server]
 - I/O [SQL Server], disk activity information
@@ -26,14 +28,14 @@ helpviewer_keywords:
 - SET STATISTICS IO statement
 - statistical information [SQL Server], disk activity
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 3b2aad11610a23c3686e279daa60c57bf7c8154f
 ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/23/2018
 ---

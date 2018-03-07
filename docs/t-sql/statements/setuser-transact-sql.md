@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SETUSER_TSQL
 - SETUSER
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - delegation [SQL Server]
 - impersonation [SQL Server]
 - SETUSER statement
 - user impersonation [SQL Server]
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: a511e0337201c9b4501b5274fa8270fbebf7da50
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

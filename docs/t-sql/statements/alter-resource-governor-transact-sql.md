@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,20 @@ f1_keywords:
 - ALTER_RESOURCE_GOVERNOR_TSQL
 - ALTER RESOURCE GOVERNOR RECONFIGURE
 - ALTER_RESOURCE_GOVERNOR_RECONFIGURE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ALTER RESOURCE GOVERNOR
 - RECONFIGURE, ALTER RESOURCE GOVERNOR
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7650a9eec60108a5dbd228b21a27573cc72ca4fc
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OPEN_TSQL
 - OPEN
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - opening cursors
 - cursors [SQL Server], opening
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - OPEN statement
 - Transact-SQL cursors, opening
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: b636b9b57f06f52a7e6535c9c5f06e2164c6d212
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

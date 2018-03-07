@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STEquals (geometry Data Type)
 - STEquals_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STEquals (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STEquals (geometry Data Type)
 ms.assetid: 808f0e25-9e68-4ba7-9329-07ec950698f3
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8e7aadcdf5d0527fe46337f56c5e98017afc4dd7
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

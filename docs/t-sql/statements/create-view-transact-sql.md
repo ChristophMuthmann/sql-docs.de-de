@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,7 +18,8 @@ f1_keywords:
 - VIEW
 - CREATE_VIEW_TSQL
 - SCHEMABINDING_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - table creation [SQL Server], CREATE VIEW
 - views [SQL Server], creating
@@ -37,14 +39,14 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 - maximum number of columns per view
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-caps.latest.revision: "85"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 633179d7540ba4a6515c3614724a4849f40de391
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

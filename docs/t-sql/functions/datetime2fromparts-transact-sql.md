@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DATETIME2FROMPARTS_TSQL
 - DATETIME2FROMPARTS
-dev_langs: TSQL
-helpviewer_keywords: DATETIME2FROMPARTS function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- DATETIME2FROMPARTS function
 ms.assetid: 632b757d-d2d1-43a5-b870-792a779ae204
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: ce109671228e82bc0f02e9920b2ef98c9bbcdb83
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

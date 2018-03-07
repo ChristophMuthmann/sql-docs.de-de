@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - DBCC_SQLPERF_TSQL
 - SQLPERF_TSQL
 - DBCC SQLPERF
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - statistical information [SQL Server], transaction logs
 - transaction logs [SQL Server], space usage
 - space [SQL Server], transaction logs
 - DBCC SQLPERF statement
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: cd615cd56860138d2e9afa7e2d7090ed27ba8e3a
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

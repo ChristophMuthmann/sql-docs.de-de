@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ADD FILE
 - ADD_FILE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - deleting files
 - removing files
@@ -42,14 +44,14 @@ helpviewer_keywords:
 - files [SQL Server], adding
 - databases [SQL Server], moving
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 826b8a5abb14ee677f89f1c77956215ec72f90c6
 ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/08/2018
 ---

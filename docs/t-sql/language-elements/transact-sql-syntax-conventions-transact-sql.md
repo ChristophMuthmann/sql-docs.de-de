@@ -8,11 +8,14 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: sql13.TSQLExpandPortal.f1
-dev_langs: TSQL
+f1_keywords:
+- sql13.TSQLExpandPortal.f1
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - conventions [SQL Server]
 - Applies to section in Transact-SQL topics
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 7c4eb67190b5123296fbcffb3fac3f09e9ec2000
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

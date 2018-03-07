@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STArea (geography Data Type)
 - STArea_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STArea method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STArea method
 ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2082c36f483e1ebe6d532abb6d3335db127b21b1
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

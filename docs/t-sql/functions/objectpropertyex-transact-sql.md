@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OBJECTPROPERTYEX
 - OBJECTPROPERTYEX_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - displaying schema-scoped object information
 - viewing schema-scoped object information
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - schema-scoped objects [SQL Server]
 - objects [SQL Server], schema-scoped
 ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
-caps.latest.revision: "76"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 63854d22cf1285fee6758ee0e78da0c13bb21dc6
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

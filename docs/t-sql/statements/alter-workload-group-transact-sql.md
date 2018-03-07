@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_WORKLOAD_GROUP_TSQL
 - ALTER WORKLOAD GROUP
-dev_langs: TSQL
-helpviewer_keywords: ALTER WORKLOAD GROUP statement
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d48a892ef00610cc0d69ff8d2a36e0fce4be7704
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

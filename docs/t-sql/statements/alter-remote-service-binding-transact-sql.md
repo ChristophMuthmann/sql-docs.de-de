@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER REMOTE SERVICE BINDING
 - ALTER_REMOTE_SERVICE_BINDING_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - remote service bindings [Service Broker], modifying
 - ALTER REMOTE SERVICE BINDING statement
 - modifying remote service bindings
 ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 1b9f6a49e18234d5728a3e1dc9856e72272400fc
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - APPLOCK_MODE_TSQL
 - APPLOCK_MODE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - locking [SQL Server], applications
 - applications [SQL Server], locks
 - sessions [SQL Server], application locks
 - APPLOCK_MODE function
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b6b5c0a0879580e5c1e084259b61ff206d49c896
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

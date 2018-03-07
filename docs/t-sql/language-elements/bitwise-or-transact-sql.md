@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,20 +18,21 @@ f1_keywords:
 - Bitwise OR
 - bitwise
 - OR
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - OR operator
 - bitwise OR (|)
 - '| (bitwise OR operator)'
 ms.assetid: 86a3b87f-9688-4eaf-a552-29f1b01d880a
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: bb22a18a1d61857afbbc17cc82f444d6551083be
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

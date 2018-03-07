@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_ROLE_TSQL
 - ALTER ROLE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - modifying database roles
 - ALTER ROLE statement
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - database roles [SQL Server], modifying
 - names [SQL Server], database roles
 ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 897e8017965e71f345a93550e9af0c138d80b3b7
 ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/02/2018
 ---

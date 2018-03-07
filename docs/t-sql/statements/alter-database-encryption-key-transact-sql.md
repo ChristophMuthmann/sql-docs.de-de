@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,20 @@ f1_keywords:
 - ALTER DATABASE ENCRYPTION
 - ALTER_DATABASE_ENCRYPTION_TSQL
 - ALTER DATABASE ENCRYPTION KEY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - database encryption key, alter
 - ALTER DATABASE ENCRYPTION KEY
 ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: bafdb9f6abbf6b51262ce977d155416c9bb183ac
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

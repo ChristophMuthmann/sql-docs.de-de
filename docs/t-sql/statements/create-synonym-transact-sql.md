@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - SYNONYM_TSQL
 - SYNONYM
 - CREATE SYNONYM
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - alternate names [SQL Server]
 - names [SQL Server], synonyms
 - CREATE SYNONYM statement
 - synonyms [SQL Server], creating
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 5dd9893a3832a2fc1bd40d56b119096718b2cf42
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

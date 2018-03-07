@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FILEGROUPPROPERTY_TSQL
 - FILEGROUPPROPERTY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - filegroups [SQL Server], property values
 - FILEGROUPPROPERTY function
 - viewing filegroup properties
 - displaying filegroup properties
 ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 06a63d753f2f38864889dc78b24e7ff47e78c331
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

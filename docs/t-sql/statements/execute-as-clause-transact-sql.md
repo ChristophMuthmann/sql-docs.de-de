@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - AS
 - AS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - permission sets [SQL Server]
 - queues [SQL Server]
@@ -26,14 +28,14 @@ helpviewer_keywords:
 - switching execution context
 - functions [SQL Server], execution context
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
-caps.latest.revision: "70"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: baf3fdc592265f1c2117ef3358820ae94ce8536c
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

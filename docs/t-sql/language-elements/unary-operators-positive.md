@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
@@ -18,20 +19,21 @@ f1_keywords:
 - + (positive)
 - +
 - positive
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - + (positive operator)
 - positive operator (+)
 - positive values [SQL Server]
 ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: a6e211c1159d3f78e37226e8ad170ce84a7ce476
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

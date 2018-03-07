@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - STATISTICS_TSQL
 - CREATE STATISTICS
 - CREATE_STATISTICS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - query optimization statistics [SQL Server], creating
 - indexed views [SQL Server], statistics
@@ -26,14 +28,14 @@ helpviewer_keywords:
 - creating statistics [SQL Server]
 - NORECOMPUTE clause
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
-caps.latest.revision: "105"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 088b79e73be6258afc5c664aaf14ba3cad9d2f5f
 ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/05/2018
 ---

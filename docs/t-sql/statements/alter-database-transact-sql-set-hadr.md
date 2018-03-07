@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - SET_HADR_TSQL
 - HADR_TSQL
 - HADR
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ALTER DATABASE statement, AlwaysOn Availability Group
 - ALTER DATABASE statement, SET HADR options
@@ -24,14 +26,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], Transact-SQL statements
 - Availability Groups [SQL Server], databases
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: a601a5f93f7a922228232c8ef4a91b5775eded91
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

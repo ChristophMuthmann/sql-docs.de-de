@@ -8,18 +8,19 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 3c08b4d991717d877ca33cd2d136d0dbf0d30483
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

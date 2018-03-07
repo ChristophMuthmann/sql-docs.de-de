@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - ANSI_WARNINGS_TSQL
 - ANSI_WARNINGS
 - SET_ANSI_WARNINGS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - errors [SQL Server], ISO standard behavior
 - warnings [SQL Server]
 - SET ANSI_WARNINGS statement
 - ANSI_WARNINGS option
 ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 5fc4de151ed526d8019dcdd048e369a034a0536b
 ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2017
 ---

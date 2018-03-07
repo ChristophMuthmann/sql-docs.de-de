@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STContains (geometry Data Type)
 - STContains_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STContains (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STContains (geometry Data Type)
 ms.assetid: 865ceca1-9200-45ed-a7d8-e286e2679fdc
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 369893addea2994e3f807d4191bebe2181decfd5
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

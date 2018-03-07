@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP_AGGREGATE_TSQL
 - DROP AGGREGATE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - aggregate functions [SQL Server], removing
 - removing user-defined functions
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - deleting user-defined functions
 - DROP AGGREGATE statement
 ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8f01299f0a5db2ed47975a964104e720cb7c8c52
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

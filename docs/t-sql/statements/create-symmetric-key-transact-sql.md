@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - SYMMETRIC KEP
 - CREATE_SYMMETRIC_KEY_TSQL
 - SYMMETRIC_KEY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CREATE SYMMETRIC KEY statement
 - temporary symmetric keys [SQL Server]
 - symmetric keys [SQL Server], creating
 - symmetric keys [SQL Server]
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
-caps.latest.revision: "72"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: f5604a0c32049d274610a600ebf1a2174c40d088
 ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/03/2018
 ---

@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - Parse
 - Parse_TSQL
-dev_langs: TSQL
-helpviewer_keywords: Parse [Database Engine]
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Parse [Database Engine]
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e80c29d1a13e0b77792ec6d3533d4d80cf355b40
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

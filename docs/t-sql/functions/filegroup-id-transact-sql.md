@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FILEGROUP_ID_TSQL
 - FILEGROUP_ID
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - FILEGROUP_ID function
 - identification numbers [SQL Server], filegroups
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - IDs [SQL Server], filegroups
 - names [SQL Server], filegroups
 ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 62b561d476debacc5f76be8f465b2f14f178ffd9
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

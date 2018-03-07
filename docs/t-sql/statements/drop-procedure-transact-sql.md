@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP PROCEDURE
 - DROP_PROCEDURE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - removing stored procedures
 - dropping procedure groups
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - stored procedures [SQL Server], removing
 - removing procedure groups
 ms.assetid: 1c2d7235-7b9b-4336-8f17-429e7d82c2c3
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: aef67c09e34bf23fa1185cc10b12ff3fb88e6a6c
 ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/02/2018
 ---

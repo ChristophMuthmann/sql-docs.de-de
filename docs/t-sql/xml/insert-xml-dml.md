@@ -8,24 +8,26 @@ ms.service:
 ms.component: t-sql|xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - XML DML [SQL Server]
 - inserting nodes
 - insert keyword [XML DML]
 - insert XML DML statement
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: d3acf76573d2c9c2b84e54acf9ebd43e0a42271d
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

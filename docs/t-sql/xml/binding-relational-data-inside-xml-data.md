@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - relational data binding [SQL Server]
 - XML [SQL Server], binding relational data
@@ -20,14 +22,14 @@ helpviewer_keywords:
 - variables [XML in SQL Server], relational data binding
 - columns [XML in SQL Server], relational data binding
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 87dca9b5bcd70335a6121b1be1e49f4cc352826e
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

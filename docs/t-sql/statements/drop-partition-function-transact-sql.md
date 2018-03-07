@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP PARTITION FUNCTION
 - DROP_PARTITION_FUNCTION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - deleting partition functions
 - DROP PARTITION FUNCTION statement
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - dropping partition functions
 - removing partition functions
 ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 127a240e1619200f758e528acc363a733d33da53
 ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/06/2017
 ---

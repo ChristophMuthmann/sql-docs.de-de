@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,7 +18,8 @@ f1_keywords:
 - TYPE_TSQL
 - TYPE
 - CREATE_TYPE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - UDTs [SQL Server], creating
 - CLR user-defined types [SQL Server]
@@ -27,14 +29,14 @@ helpviewer_keywords:
 - alias data types [SQL Server], creating
 - data types [SQL Server], creating
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
-caps.latest.revision: "92"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 145f60bcec81e8a29761a44146df025f66a21b80
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

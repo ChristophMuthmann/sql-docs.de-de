@@ -8,22 +8,24 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - STRING_AGG
 - STRING_AGG_TSQL
-helpviewer_keywords: STRING_AGG function
+helpviewer_keywords:
+- STRING_AGG function
 ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: f2bcc8b02b0228dc403fffc4ef1c6b82557872a4
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/18/2018
 ---

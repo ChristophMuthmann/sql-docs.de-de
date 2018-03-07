@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STWithin_TSQL
 - STWithin (geometry Data Type)
-dev_langs: TSQL
-helpviewer_keywords: STWithin (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STWithin (geometry Data Type)
 ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 77ecf242b0a29cb9129dce2d648f52daae03cbb7
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

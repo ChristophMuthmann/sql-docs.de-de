@@ -8,25 +8,27 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - DENY DATABASE SCOPED CREDENTIAL
 - DENY_DATABASE_SCOPED_CREDENTIAL_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DENY statement, database scoped credentials
 - denying permissions [SQL Server], database scoped credential
 ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: adcbe36f2ffabfc63521fe905933295402178977
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---

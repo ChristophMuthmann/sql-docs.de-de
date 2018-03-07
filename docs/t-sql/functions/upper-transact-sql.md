@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - UPPER_TSQL
 - UPPER
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - UPPER function
 - characters [SQL Server], lowercase
@@ -23,14 +25,14 @@ helpviewer_keywords:
 - characters [SQL Server], uppercase
 - lowercase characters
 ms.assetid: 5ced55f7-ac89-4cf2-9465-f63f4dc480db
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 7fc98d515cef0d4a1f11e44ada8ff45174b8c95e
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/18/2018
 ---

@@ -8,23 +8,26 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STLineFromText (geometry Data Type)
 - STLineFromText_TSQL
-dev_langs: TSQL
-helpviewer_keywords: STLineFromText (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STLineFromText (geometry Data Type)
 ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 89381b7f6db8400d66ec65753e0d03afb890cbf1
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---

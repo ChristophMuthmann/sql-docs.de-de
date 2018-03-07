@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - REPLACE_TSQL
 - REPLACE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - first string expression [SQL Server]
 - replacing string expression
@@ -22,14 +24,14 @@ helpviewer_keywords:
 - second string expressions [SQL Server]
 - REPLACE function
 ms.assetid: 8a7aaaf2-62e3-46c0-8e44-fa22290dd86b
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 330a3d79893bd24e3253eced054fa029b7f8d1d9
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/18/2018
 ---
