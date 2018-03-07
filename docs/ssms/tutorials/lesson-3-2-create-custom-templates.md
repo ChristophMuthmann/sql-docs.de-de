@@ -24,15 +24,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 757a6b2aebe68dc32ddc493c3e6649a8b589be3e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 770b33f7fb7fa22d1a2e86d4b5c7a9d3f8c84b35
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-3-2---create-custom-templates"></a>Lektion 3-2: Erstellen von benutzerdefinierten Vorlagen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] kommt mit einer Reihe von Vorlagen für viele häufig ausgeführte Aufgaben. Der größte Vorteil von Vorlagen besteht jedoch darin, dass Sie für ein komplexes Skript, das Sie häufig erstellen müssen, eine benutzerdefinierte Vorlage anlegen können. Sie werden nun ein einfaches Skript mit wenigen Parametern erstellen. Vorlagen sind jedoch auch bei umfangreichen Skripts mit vielen Wiederholungen nützlich.  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] kommt mit einer Reihe von Vorlagen für viele häufig ausgeführten Aufgaben. Der größte Vorteil von Vorlagen besteht jedoch darin, dass Sie für ein komplexes Skript, das Sie häufig erstellen müssen, eine benutzerdefinierte Vorlage anlegen können. Sie werden nun ein einfaches Skript mit wenigen Parametern erstellen. Vorlagen sind jedoch auch bei umfangreichen Skripts mit vielen Wiederholungen nützlich.  
   
 ## <a name="using-custom-templates"></a>Verwenden benutzerdefinierter Vorlagen  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/17/2018
 7.  Geben Sie im Abfrage-Editor das folgende Skript ein, um eine gespeicherte Prozedur zu erstellen, über die Bestellungen für ein bestimmtes Teil gesucht werden. In diesem Fall handelt es sich um Klingen (Blade). (Sie können den Code im Fenster des Lernprogramms kopieren und dann einfügen.)  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   
@@ -73,11 +73,11 @@ ms.lasthandoff: 01/17/2018
   
 8.  Drücken Sie F5, um das Skript auszuführen. Damit wird die Prozedur **WorkOrdersForBlade** erstellt.  
   
-9. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf Ihren Server und anschließend auf **Neue Abfrage**. Ein neues Abfrage-Editorfenster wird geöffnet.  
+9. Klicken Sie im Objekt-Explorer auf die Datenbank **AdventureWorks2012** und klicken Sie anschließend auf **Neue Abfrage**. Ein neues Abfrage-Editorfenster wird geöffnet.  
   
 10. Geben Sie im Abfrage-Editor **EXECUTE dbo.WorkOrdersForBlade**ein, und drücken Sie anschließend F5, um die Abfrage auszuführen. Überprüfen Sie, ob im Bereich **Ergebnisse** eine Liste mit Bestellungen für Klingen zurückgegeben wird.  
   
-11. Bearbeiten Sie das Vorlagenskript (das Skript von Schritt 7), und ersetzen Sie dabei den Produktnamen „Blade“ an vier Stellen durch den Parameter ***\<*product_name**, **nvarchar(50)**, **name*>***.  
+11. Bearbeiten Sie das Vorlagenskript (aus Schritt 7), und ersetzen Sie dabei den Produktnamen „Blade“ an vier Stellen durch den Parameter **\<product_name, nvarchar(50), name>**.  
   
     > [!NOTE]  
     > Für Parameter sind drei Elemente erforderlich: der Name des zu ersetzenden Parameters, der Datentyp des Parameters und ein Standardwert für den Parameter.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 01/17/2018
 12. Das Skript sollte nun wie folgt aussehen:  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   
