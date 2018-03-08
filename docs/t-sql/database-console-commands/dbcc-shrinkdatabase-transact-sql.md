@@ -1,4 +1,4 @@
----
+﻿---
 title: DBCC SHRINKDATABASE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/17/2017

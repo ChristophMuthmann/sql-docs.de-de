@@ -1,4 +1,4 @@
----
+﻿---
 title: "Angeben der Präfixlänge in Datendateien mittels bcp (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 07/28/2016

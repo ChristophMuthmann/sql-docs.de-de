@@ -1,4 +1,4 @@
----
+﻿---
 title: Prinzipale (Datenbankmodul) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/09/2017

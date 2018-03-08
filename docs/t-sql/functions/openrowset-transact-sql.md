@@ -1,4 +1,4 @@
----
+﻿---
 title: OPENROWSET (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/09/2017
@@ -41,9 +41,11 @@ ms.lasthandoff: 01/02/2018
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
+
   Enthält alle für einen Zugriff auf Remotedaten von einer OLE DB-Datenquelle notwendigen Verbindungsinformationen. Diese Methode ist eine Alternative zum Zugriff auf Tabellen eines Verbindungsservers. Sie ist eine einmalig verwendete Ad-hoc-Methode zum Verbinden und Zugreifen auf Remotedaten mithilfe von OLE DB. Für häufigere Verweise auf OLE DB-Datenquellen verwenden Sie stattdessen Verbindungsserver. Weitere Informationen finden Sie unter [Verbindungsserver &#40;Datenbankmodul&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md). Die `OPENROWSET` Funktion kann in der FROM-Klausel einer Abfrage verwiesen werden, als handele es sich um einen Tabellennamen an. Die `OPENROWSET` -Funktion kann auch als Zieltabelle verwiesen werden ein `INSERT`, `UPDATE`, oder `DELETE` unterliegen den Funktionen des OLE DB-Provider-Anweisung. Obwohl die Abfrage mehrere Resultsets zurückgeben könnte `OPENROWSET` nur der erste Entitätencontainer zurückgegeben.  
   
  `OPENROWSET`unterstützt auch Massenvorgänge über einen integrierten BULK-Anbieter, der Daten aus einer Datei gelesen und als Rowset zurückgegeben werden können.  
+
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -191,16 +193,18 @@ Eine benannte externe Datenquelle auf den Azure-Blob-Speicherort der Fehlerdatei
  Spaltenaliase sind erforderlich, wenn ORDER verwendet wird. Die Spaltenaliasliste muss auf die abgeleitete Tabelle verweisen, auf die von der BULK-Klausel zugegriffen wird. Die Spaltennamen, die in der ORDER-Klausel angegeben sind, verweisen auf diese Spaltenaliasliste. Große Werttypen (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**, und **Xml**) und große Objekttypen (LOB) (**Text**, **Ntext**, und **Image**) können keine Spalten angegeben werden.  
   
  SINGLE_BLOB  
- Gibt den Inhalt von*data_file* als einzeiliges, einspaltiges Rowset vom Typ **varbinary(max)** zurück.  
+
+ Gibt den Inhalt von *data_file* als einzeiliges, einspaltiges Rowset vom Typ **varbinary(max)** zurück.  
   
 > [!IMPORTANT]  
 >  Es wird empfohlen, XML-Daten mit SINGLE_CLOB und SINGLE_NCLOB ausschließlich unter Verwendung der SINGLE_BLOB-Option zu importieren, da nur SINGLE_BLOB alle Windows-Codierungskonvertierungen unterstützt.  
   
- SINGLE_CLOB  
+ SINGLE_CLOB
  Durch Lesen *Data_file* als ASCII-Daten, gibt Sie den Inhalt als einzeiliges, einspaltiges Rowset vom Typ **varchar(max)**, wobei die Sortierung der aktuellen Datenbank.  
   
  SINGLE_NCLOB  
  Gibt *data_file* als einzeiliges, einspaltiges Rowset vom Typ **nvarchar(max)** zurück, weil die Zeichen in data_file als UNICODE gelesen werden. Hierbei wird die Sortierung der aktuellen Datenbank verwendet.  
+
 
 ### <a name="input-file-format-options"></a>Format der Eingabedatei (Optionen)
   

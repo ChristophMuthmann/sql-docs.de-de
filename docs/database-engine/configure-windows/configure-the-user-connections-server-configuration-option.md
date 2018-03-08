@@ -1,4 +1,4 @@
----
+﻿---
 title: "Konfigurieren der Serverkonfigurationsoption „Benutzerverbindungen“ | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/02/2017
