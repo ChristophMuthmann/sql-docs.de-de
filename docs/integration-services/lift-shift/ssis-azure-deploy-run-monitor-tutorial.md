@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0bfa4f23ea87d7429075d1039df56286b7d4785e
-ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.openlocfilehash: bde92101af0b761df9f37171b35952fa3ab9d25b
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Bereitstellen, Ausführen und Überwachen eines SSIS-Pakets in Azure
 Dieses Tutorial zeigt, wie ein SQL Server Integration Services-Projekt in der SSISDB-Katalogdatenbank auf einer Azure SQL-Datenbank bereitgestellt wird, ein Paket in Azure SSIS Integration Runtime ausgeführt wird und das ausgeführte Paket überwacht wird.
@@ -27,7 +27,7 @@ Dieses Tutorial zeigt, wie ein SQL Server Integration Services-Projekt in der SS
 
 Prüfen Sie, ob Sie über die Version 17.2 oder höher von SQL Server Management Studio verfügen, bevor Sie beginnen. Die neueste Version von SSMS können Sie unter [Herunterladen von SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) herunterladen.
 
-Vergewissern Sie sich auch, dass Sie die SSIS-Datenbank eingerichtet und eine Azure SSIS Integration Runtime bereitgestellt haben. Informationen dazu, wie SSIS in Azure bereitgestellt wird, finden Sie unter [Bereitstellen von SQL Server Integration Services-Paketen in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+Vergewissern Sie sich auch, dass Sie die SSIS-Datenbank eingerichtet und eine Azure SSIS Integration Runtime bereitgestellt haben. Informationen zur Bereitstellung von SSIS unter Azure finden Sie unter [Bereitstellen von SQL Server Integration Services-Paketen in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
 ## <a name="connect-to-the-ssisdb-database"></a>Herstellen einer Verbindung mit SSISDB
 
