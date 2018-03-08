@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: report servers [Reporting Services], network load balancing
+helpviewer_keywords:
+- report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3576aec75cab9961b6d7423b65c66e885834ff88
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0512371abbf0f958b065363c7b145da0bd915489
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Konfigurieren eines Berichtsservers in einem NLB-Cluster (Network Load Balancing, Netzwerklastenausgleich)
   Wenn Sie einen Berichtsserver für horizontales Skalieren für die Ausführung in einem NLB-Cluster (Network Load Balancing, Netzwerklastenausgleich) konfigurieren möchten, müssen Sie folgende Schritte ausführen:  
@@ -49,27 +50,24 @@ ms.lasthandoff: 01/09/2018
 |7|Überprüfen Sie, ob der Zugriff auf die Server mit dem angegebenen Hostnamen möglich ist.|[Überprüfen des Zugriffs auf Berichtsserver](#Verify) in diesem Thema.|  
   
 ##  <a name="ViewState"></a> Vorgehensweise: Konfigurieren der Anzeigestatusüberprüfung  
- Zum Ausführen einer Bereitstellung für horizontales Skalieren in einem NLB-Cluster müssen Sie die Anzeigestatusüberprüfung konfigurieren, sodass Benutzer interaktive HTML-Berichte anzeigen können. Sie müssen dies für den Berichtsserver und den Berichts-Manager ausführen.  
+ Zum Ausführen einer Bereitstellung für horizontales Skalieren in einem NLB-Cluster müssen Sie die Anzeigestatusüberprüfung konfigurieren, sodass Benutzer interaktive HTML-Berichte anzeigen können.
   
  Die Anzeigestatusüberprüfung wird von ASP.NET gesteuert. Sie ist standardmäßig aktiviert und verwendet die Identitätsinformationen des Webdiensts zum Ausführen der Überprüfung. In einem Szenario mit NLB-Cluster sind jedoch mehrere Dienstinstanzen und Webdienstidentitäten, die auf unterschiedlichen Computern ausgeführt werden, vorhanden. Da die Dienstidentität von Knoten zu Knoten variiert, können Sie die Überprüfung nicht nur anhand einer einzigen Prozessidentität ausführen.  
   
  Zum Umgehen dieses Problems können Sie einen willkürlichen Validierungsschlüssel generieren, um die Anzeigestatusüberprüfung zu unterstützen, und anschließend jeden Berichtsserverknoten zum Verwenden desselben Schlüssels manuell konfigurieren. Sie können eine beliebige nach dem Zufallsprinzip generierte hexadezimale Sequenz verwenden. Der Überprüfungsalgorithmus (z. B. SHA1) bestimmt, wie lang die hexadezimale Sequenz sein muss.  
+
+1.  Generieren Sie mithilfe der von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]bereitgestellten Funktionalität zum automatischen Generieren einen Überprüfungsschlüssel und einen Entschlüsselungsschlüssel. Letztlich benötigen Sie einen einzigen \<**MachineKey**>-Eintrag, den Sie für jede Berichtsserverinstanz in der Bereitstellung für horizontales Skalieren in die Datei „RSReportServer.config“ einfügen können.
   
-1.  Generieren Sie mithilfe der von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]bereitgestellten Funktionalität zum automatischen Generieren einen Überprüfungsschlüssel und einen Entschlüsselungsschlüssel. Letztlich benötigen Sie einen einzigen \<**machineKey**>-Eintrag, den Sie für jede Berichts-Manager-Instanz in der Bereitstellung für horizontales Skalieren in die Datei „Web.config“ einfügen können.  
-  
-     Das folgende Beispiel zeigt den Wert, den Sie benötigen. Kopieren Sie das Beispiel nicht in die Konfigurationsdateien, denn die Schlüsselwerte sind ungültig.  
+     Das folgende Beispiel zeigt den Wert, den Sie benötigen. Kopieren Sie das Beispiel nicht in die Konfigurationsdateien, denn die Schlüsselwerte sind ungültig. Der Berichtsserver erfordert korrekte Groß- und Kleinschreibung.
   
     ```  
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
-    ```  
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    ```   
+2.  Speichern Sie die Datei.  
   
-2.  Öffnen Sie die Datei „Web.config“ für den Berichts-Manager, und fügen Sie im Abschnitt \<**system.web**> das \<**machineKey**>-Element ein, das Sie generiert haben. Standardmäßig befindet sich die Datei Web.config für den Berichts-Manager unter \Programme\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config.  
+3.  Wiederholen Sie den vorherigen Schritt für alle Berichtsserver in der Bereitstellung für horizontales Skalieren.  
   
-3.  Speichern Sie die Datei.  
-  
-4.  Wiederholen Sie den vorherigen Schritt für alle Berichtsserver in der Bereitstellung für horizontales Skalieren.  
-  
-5.  Überprüfen Sie, ob alle „Web.Config“-Dateien in den \Reporting Services\Report Manager-Ordnern identische \<**machineKey**>-Elemente im Abschnitt \<**system.web**> enthalten.  
+4.  Überprüfen Sie, ob alle „RSReportServer.config“-Dateien in den \Reporting Services\Berichtsserver-Ordnern identische \<**MachineKey**>-Elemente enthalten.  
   
 ##  <a name="SpecifyingVirtualServerName"></a> So konfigurieren Sie HostName und UrlRoot  
  Wenn Sie eine Berichtsserverbereitstellung für horizontales Skalieren in einem NLB-Cluster konfigurieren möchten, müssen Sie den Namen eines einzelnen virtuellen Servers definieren, der einen einzelnen Zugriffspunkt für den Servercluster bietet. Registrieren Sie den Namen dieses virtuellen Servers dann beim DNS-Server in der Umgebung.  

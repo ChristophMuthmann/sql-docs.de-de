@@ -8,24 +8,26 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: Was ist Master Data
+keywords:
+- Was ist Master Data
 helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-caps.latest.revision: "28"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 60127dd894485c979e0c79dcde0091119d88ed9a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a60fddbc00fa808590a06bc3263dfe6bc966f18b
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-overview-mds"></a>Übersicht über Master Data Services (MDS)
   In diesem Thema werden die Organisations- und Verwaltungsfunktionen von Schlüsseldaten in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]beschrieben. 

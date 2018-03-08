@@ -8,16 +8,17 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d534f3118cbc8d9516d7db6033c490a9ab59dd1c
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 96384f918239772c3c6a859f523c04a4d53ec4d0
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migration von SQL Server Integration Services-Workloads in die Cloud per Lift & Shift
 Sie können Ihre SQL Server Integration Services-Pakete und -Workloads (SSIS) nun in die Azure-Cloud verschieben.
@@ -64,7 +65,7 @@ Diese Funktionen erfordern die folgenden Versionen von SQL Server Data Tools (SS
 > [!NOTE]
 > Wenn Sie Pakete in Azure bereitstellen, aktualisiert der Assistent für die Paketbereitstellung die Pakete immer auf das aktuelle Paketformat.
 
-Weitere Informationen zu den Voraussetzungen in Azure finden Sie unter [Bereitstellen von SQL Server Integration Services-Paketen in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+Weitere Informationen zu Voraussetzungen für Azure finden Sie unter [Bereitstellen von SQL Server Integration Services-Paketen in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
 ## <a name="ssis-features-on-azure"></a>SSIS-Features in Azure
 
@@ -81,7 +82,7 @@ Weitere Informationen zur Verbindung mit **lokalen Datenquellen** aus der Cloud 
 ## <a name="common-tasks"></a>Allgemeine Aufgaben
 
 ### <a name="provision"></a>Bereitstellen
-Bevor Sie SSIS-Pakete in Azure bereitstellen und ausführen können, müssen Sie die SSIS-Katalogdatenbank und Azure SSIS Integration Runtime bereitstellen. Führen Sie die Bereitstellungsschritte in diesem Artikel aus: [Bereitstellen von SQL Server Integration Services-Paketen in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+Bevor Sie SSIS-Pakete in Azure bereitstellen und ausführen können, müssen Sie die SSIS-Katalogdatenbank und Azure SSIS Integration Runtime bereitstellen. Befolgen Sie die Schritte zur Bereitstellung im folgenden Artikel: [Bereitstellen von SQL Server Integration Services-Paketen in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
 ### <a name="deploy-and-run-packages"></a>Bereitstellen und Ausführen von Paketen
 Sie können diese vertrauten Tools und Skriptoptionen verwenden, um Projekte bereitzustellen und Pakete in SQL-Datenbank auszuführen:
@@ -105,5 +106,5 @@ Weitere Informationen finden Sie unter [Schedule SSIS package execution on Azure
 
 ## <a name="next-steps"></a>Nächste Schritte
 Weitere Informationen zu den ersten Schritten mit SSIS-Workloads in Azure finden Sie in folgenden Artikeln:
--   [Bereitstellen von SQL Server Integration Services-Paketen in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)
--   [Deploy, run, and monitor an SSIS package on Azure (Bereitstellen, Ausführen und Überwachen von SSIS-Paketen in Azure)](ssis-azure-deploy-run-monitor-tutorial.md)
+-   [Bereitstellen von SQL Server Integration Services-Paketen in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)
+-   [Bereitstellen, Ausführen und Überwachen eines SSIS-Pakets in Azure](ssis-azure-deploy-run-monitor-tutorial.md)

@@ -15,11 +15,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 2f09b475d42657c8c9ce8ef60d6b5b7c36b30cc2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d3f53de12e07925af838b5188e9b889ae44eb090
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>Installieren von SQL Server Reporting Services (2017 und höher)
 
