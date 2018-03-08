@@ -1,4 +1,4 @@
----
+﻿---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/04/2017

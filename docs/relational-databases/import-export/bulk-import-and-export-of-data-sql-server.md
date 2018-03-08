@@ -1,4 +1,4 @@
----
+﻿---
 title: Massenimport und -export von Daten (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/20/2017

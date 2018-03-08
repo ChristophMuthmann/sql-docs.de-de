@@ -1,4 +1,4 @@
----
+﻿---
 title: "Eigenständige Datenbanken | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/24/2016
@@ -83,7 +83,7 @@ ms.lasthandoff: 02/19/2018
 >  Das Aktivieren von teilweise eigenständigen Datenbanken delegiert die Steuerung über den Zugriff auf die Instanz der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an die Besitzer der Datenbank. Weitere Informationen finden Sie unter [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
  Datenbankbegrenzung  
- Da teilweise eigenständige Datenbanken Datenbankfunktionen von den Funktionen der Instanz trennen, besteht eine eindeutig definierte Trennlinie zwischen diesen beiden Elementen. Diese wird als *Datenbankbegrenzung*bezeichnet.  
+ Da teilweise eigenständige Datenbanken Datenbankfunktionen von den Funktionen der Instanz trennen, besteht eine eindeutig definierte Trennlinie zwischen diesen beiden Elementen. Diese wird als *Datenbankbegrenzung* bezeichnet.  
   
  Innerhalb der Datenbankbegrenzung befindet sich das *Datenbankmodell*, in dem die Datenbanken entwickelt und verwaltet werden. Beispiele für Entitäten, die sich innerhalb der Datenbank befinden, sind Systemtabellen (z.B. **sys.tables**), eigenständige Datenbankbenutzer mit Kennwörtern sowie Benutzertabellen in der aktuellen Datenbank, auf die mit einem zweiteiligen Namen verwiesen wird.  
   
@@ -111,8 +111,8 @@ ms.lasthandoff: 02/19/2018
 ##  <a name="benefits"></a> Vorteile des Verwendens von teilweise enthaltenen Datenbanken  
  Im Zusammenhang mit abhängigen Datenbanken treten Probleme und Schwierigkeiten auf, die mithilfe einer teilweise eigenständigen Datenbank behoben werden können.  
   
-### <a name="database-movement"></a>Verschiebung von Datenbanken  
- Eines der Probleme, das beim Verschieben von Datenbanken auftritt, besteht darin, dass einige wichtige Informationen beim Verschieben der Datenbank von einer Instanz zu einer anderen möglicherweise nicht verfügbar ist. Beispielsweise werden Anmeldeinformationen innerhalb der Instanz gespeichert und nicht in der Datenbank. Wenn Sie eine abhängige Datenbank von einer Instanz in eine andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verschieben, bleiben diese Daten zurück. Sie müssen die fehlenden Daten bestimmen und zusammen mit der Datenbank in die neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verschieben. Dieser Vorgang kann schwierig und zeitaufwendig sein.  
+### <a name="database-movement"></a>Verschiebung von Datenbanken   
+ Eines der Probleme, das beim Verschieben von Datenbanken auftritt, besteht darin, dass einige wichtige Informationen beim Verschieben der Datenbank von einer Instanz zu einer anderen möglicherweise nicht verfügbar sind. Beispielsweise werden Anmeldeinformationen innerhalb der Instanz gespeichert und nicht in der Datenbank. Wenn Sie eine abhängige Datenbank von einer Instanz in eine andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verschieben, bleiben diese Daten zurück. Sie müssen die fehlenden Daten bestimmen und zusammen mit der Datenbank in die neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verschieben. Dieser Vorgang kann schwierig und zeitaufwendig sein.  
   
  Die teilweise eigenständige Datenbank kann wichtige Daten in der Datenbank speichern. Demnach verfügt die Datenbank auch nach dem Verschieben weiterhin über die Daten.  
   

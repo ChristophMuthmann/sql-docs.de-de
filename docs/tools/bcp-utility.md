@@ -1,4 +1,4 @@
----
+﻿---
 title: Bcp (Hilfsprogramm) | Microsoft Docs
 ms.custom: 
 ms.date: 02/12/2018

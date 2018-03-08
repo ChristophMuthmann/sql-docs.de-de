@@ -1,4 +1,4 @@
----
+﻿---
 title: Anzeigen von Kollokations Informationen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
@@ -29,7 +29,7 @@ ms.lasthandoff: 03/02/2018
 # <a name="view-collation-information"></a>Anzeigen von Sortierungsinformationen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
     
-##  <a name="Top"></a> Sie können die Sortierung eines Servers, einer Datenbank oder Spalte in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mithilfe der Menüoptionen des Objekt-Explorers oder mit [!INCLUDE[tsql](../../includes/tsql-md.md)]anzeigen.  
+##  <a name="Top"></a> Sie können die Sortierung eines Servers, einer Datenbank oder Spalte in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mithilfe der Menüoptionen des Objekt-Explorers oder mit [!INCLUDE[tsql](../../includes/tsql-md.md)] anzeigen.  
   
 ##  <a name="Procedures"></a> So zeigen Sie eine Sortierungseinstellung an  
  Sie können eine der folgenden Anwendungen verwenden:  
@@ -41,7 +41,7 @@ ms.lasthandoff: 03/02/2018
 ###  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So zeigen Sie eine Sortierungseinstellung für einen Server (Instanz von SQL Server) im Objekt-Explorer an**  
   
-1.  Stellen Sie mithilfe im Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
+1.  Stellen Sie mithilfe des Objekt-Explorers eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her. 
   
 2.  Klicken Sie mit der rechten Maustaste auf die Spalte, und wählen Sie **Eigenschaften**aus.  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/02/2018
   
 3.  Erweitern Sie die Tabelle, die die Spalte enthält, und erweitern Sie dann **Spalten**.  
   
-4.  Klicken Sie mit der rechten Maustaste auf die Spalte, und wählen Sie **Eigenschaften**aus. Wenn die Sortierungseigenschaft leer ist, ist die Spalte nicht vom Zeichendatentyp.  
+4.  Klicken Sie mit der rechten Maustaste auf die Spalte, und wählen Sie **Eigenschaften** aus. Wenn die Sortierungseigenschaft leer ist, ist die Spalte kein Zeichendatentyp.  
   
 ###  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So zeigen Sie die Sortierungseinstellung eines Servers an**  
@@ -77,8 +77,8 @@ ms.lasthandoff: 03/02/2018
     ```  
     EXECUTE sp_helpsort;  
     ```  
-  
- **So zeigen Sie alle von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**  
+ 
+ **So zeigen Sie alle von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützten Sortierreihenfolgen an** 
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und klicken Sie auf der Symbolleiste auf **Neue Abfrage**.  
   

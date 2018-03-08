@@ -1,4 +1,4 @@
----
+﻿---
 title: Verwalten von FileTables | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/23/2017

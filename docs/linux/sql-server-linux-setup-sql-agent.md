@@ -1,4 +1,4 @@
----
+﻿---
 title: "Installieren von SQL Server-Agent für Linux | Microsoft Docs"
 description: Dieser Artikel beschreibt, wie der SQL Server-Agent unter Linux zu installieren.
 author: rothja

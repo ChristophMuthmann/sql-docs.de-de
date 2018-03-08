@@ -1,4 +1,4 @@
----
+﻿---
 title: Neuorganisieren und Neuerstellen von Indizes | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/24/2017
