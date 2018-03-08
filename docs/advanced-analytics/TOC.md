@@ -84,7 +84,10 @@
 ## [Python-Tutorials](tutorials/sql-server-python-tutorials.md)
 
 ### [Python: Ausführen von Python mit T-SQL](tutorials/run-python-using-t-sql.md)
-### [Python: Erstellen eines Modells mithilfe von revoscalepy](tutorials/use-python-revoscalepy-to-create-model.md)
+#### [Umschließen von Python in einer gespeicherten Prozedur](tutorials/wrap-python-in-tsql-stored-procedure.md)
+#### [Trainieren und Bewerten über ein Python-Modell in SQL Server](tutorials/train-score-using-python-in-tsql.md)
+#### [Erstellen eines Modells in einem SQL Server-Computekontext mithilfe von Revoscalepy](tutorials/use-python-revoscalepy-to-create-model.md)
+
 ### [Python: Datenbankinterne Analysen für SQL-Entwickler](tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 #### [Herunterladen von Beispieldaten](tutorials/sqldev-py1-download-the-sample-data.md)
@@ -94,7 +97,7 @@
 #### [Trainieren und Speichern des Modells](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [Operationalisieren des Modells](tutorials/sqldev-py6-operationalize-the-model.md)
 
-### [Python: Bereitstellen und Verarbeiten von Modellen](../advanced-analytics/python/publish-consume-python-code.md)
+### [Python: Bereitstellen und Nutzen von Modellen mit einem eigenständigen Server](../advanced-analytics/python/publish-consume-python-code.md)
 
 # [Machine Learning Server – eigenständig](r/r-server-standalone.md)
 ## [Erste Schritte](r/getting-started-with-microsoft-r-server-standalone.md)
@@ -163,7 +166,7 @@
 ### [Ressourcenkontrolle bei Machine Learning Services](r/resource-governance-for-r-services.md)
 ### [Erstellen eines Ressourcenpools für Machine Learning](r/how-to-create-a-resource-pool-for-r.md)
 ### [Erweiterte Ereignisse bei Machine Learning Services](r/extended-events-for-sql-server-r-services.md)
-
+### [Erweiterte Ereignisse für die Überwachung von PREDICT-Anweisungen](xe-event-predict-tsql.md)
 ### [DMVs für Machine Learning Services](r/dmvs-for-sql-server-r-services.md)
 ### [Verwenden von R-Code-Profilerstellungsfunktionen](r/using-r-code-profiling-functions.md)
 ### [Überwachung von Machine Learning Services mithilfe von benutzerdefinierten Berichten in Management Studio](r/monitor-r-services-using-custom-reports-in-management-studio.md)
